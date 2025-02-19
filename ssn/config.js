@@ -113,16 +113,9 @@ var respecConfig = {
       date: "2024"
     },
     "SAREF": {
-      href: "https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/03.02.01_60/ts_103264v030201p.pdf",
+      href: "https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/04.01.01_60/ts_103264v040101p.pdf",
       title: "SmartM2M; Smart Applications; Reference Ontology and oneM2M Mapping",
-      id: "ETSI TS 103 264 (V3.2.1)",
-      publisher: "ETSI",
-      date: "2024"
-    },
-    "SmartM2M": {
-      href: "https://www.etsi.org/deliver/etsi_ts/103500_103599/103548/01.02.01_60/ts_103548v010201p.pdf",
-      title: "SmartM2M; Smart Applications; Reference Ontology and oneM2M Mapping",
-      id: "ETSI TS 103 264 (V3.2.1)",
+      id: "ETSI TS 103 264 (V4.1.1)",
       publisher: "ETSI",
       date: "2024"
     },
