@@ -73,7 +73,8 @@ sosa:Actuator
   a owl:Class ;
   rdfs:label "Actuator"@en ;
   skos:definition """
-  A device or system that is used by, or implements, an (Actuation) Procedure that changes the value of an Actuatable Property.
+  An entity that implements a (Actuation) Procedure in the context of an Actuation to change the value of a (actuatable) Property. 
+  This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
   """@en ;
   skos:example "A window actuator for automatic window control, i.e., opening or closing the window."@en ;
   rdfs:isDefinedBy sosa-act: .

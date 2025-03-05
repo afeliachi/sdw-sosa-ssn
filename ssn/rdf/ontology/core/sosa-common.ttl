@@ -508,10 +508,12 @@ sosa:System
   a owl:Class ;
   rdfs:label "System"@en ;
   skos:definition """
-  A piece of infrastructure that implements a Procedure.
+  An entity that implements a Procedure in the context of an Execution.
+  This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
 
   A System may have components, its sub-systems, which are other systems.
   """@en ; 
+  skos:note "Different Systems can implement the same (reusable) Procedure for different Executions."@en ;
   skos:scopeNote """
   System generalizes the Actuator, Sensor, and Sampler classes. 
   It appears in the ontology to support the description of a common pattern for executions and their properties. 
@@ -526,6 +528,10 @@ sosa:System
   """@en ;
   skos:scopeNote """
   The association of a System (Actuator, Sensor, and Sampler) with a FeatureOfInterest is usually in the context of an Execution or a Deployment. 
+
+  A System can be hosted by a Platform. 
+
+  A System can be deployed for a specified time interval as part of a Deployment.
   """@en ;
   rdfs:isDefinedBy sosa-common: .
 
