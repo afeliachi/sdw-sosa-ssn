@@ -108,7 +108,7 @@ var respecConfig = {
     "SAREF_Patterns": {
       href: "https://www.etsi.org/deliver/etsi_ts/103500_103599/103548/01.02.01_60/ts_103548v010201p.pdf",
       title: "SmartM2M; SAREF reference ontology patterns",
-      id: "ETSI TS 103 548 ",
+      id: "ETSI TS 103 548 (V1.2.1)",
       publisher: "ETSI",
       date: "2024"
     },
@@ -117,7 +117,7 @@ var respecConfig = {
       title: "SmartM2M; Smart Applications; Reference Ontology and oneM2M Mapping",
       id: "ETSI TS 103 264 (V4.1.1)",
       publisher: "ETSI",
-      date: "2024"
+      date: "2025"
     },
     "SWE": {
       href: "https://www.ogc.org/about-ogc/domains/swe/",
