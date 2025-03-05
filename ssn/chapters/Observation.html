@@ -6,10 +6,10 @@
         and properties that are specifically related to modeling Observations.
     </p>
     <div>
-        <figure>
+        <figure id="Observation">
             <embed
                 alt="Observation diagram; showing Observation, ObservationCollection, Procedure, Sensor, ObservableProperty, FeatureOfInterest"
-                src="images/Observation.svg">
+                src="images/Observation.svg" style="width:100%" />
             <figcaption>
                 Classes and relationships involved in Observation.
                 <br>
@@ -329,7 +329,8 @@
             <br><br>
         </p>
         <p class="note">
-            See <a href="#time-series">Time series</a> and <a href="#observation-collection">Homogeneous observation
+            See <a href="#ModelTimeSeries">Time series</a> and <a href="#ModelObservationCollection">Homogeneous
+                observation
                 collection</a> for examples.</p>
         <table>
             <tbody>
@@ -1403,7 +1404,8 @@
         </p>
         <p class="note">
             resultQuality added in 2025 edition.
-            This term is non-normative, pending further implementation experience</p>
+            This term is non-normative, pending further implementation experience
+        </p>
         <p>
             <em property="rdfs:label">observation result quality</em> -
             <span property="skos:definition">Information pertaining to the data quality of the result.</span>
@@ -1415,13 +1417,15 @@
                     <td>
                         <span property="skos:scopeNote">This instance-specific description complements the description
                             of the observation Procedure, which provides information concerning the quality of all
-                            observations using this procedure. </span>
+                            observations using this procedure. 
+                            Multiple measures can be provided. </span>
+                        <br><br>
                         <span property="skos:note">The quality of a result can be assessed following the procedures in
-                            the ISO 19157 series.
-                            Multiple measures can be provided.</span>
+                            the ISO 19157 series [[iso-19157-1]].</span>
+                        <br><br>
                         <span property="skos:note"><a
                                 href="https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement">dqv:hasQualityMeasurement</a>
-                            from the Data Quality Vocabulary is equivalent</span>
+                            from the Data Quality Vocabulary [[vocab-dqv]] is equivalent</span>
                     </td>
                 </tr>
                 <tr>
@@ -1467,7 +1471,8 @@
 
         <p class="note">
             wasObservedBy added in 2025 edition.
-            This term is non-normative, pending further implementation experience</p>
+            This term is non-normative, pending further implementation experience
+        </p>
         <p>
             <em property="rdfs:label">was observed by</em> -
             <span property="skos:definition">Relation between a <a href="#SOSAProperty">Property</a>
@@ -1539,7 +1544,7 @@
                     <th>Inverse property of</th>
                     <td>
                         <span rel="owl:inverseOf" resource="sosa:originated"><a
-                                href="#SOSoriginated">sosa:originated</a></span>
+                                href="#SOSAoriginated">sosa:originated</a></span>
                     </td>
                 </tr>
                 <tr>
