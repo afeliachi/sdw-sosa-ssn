@@ -47,7 +47,8 @@ sosa:saref a owl:Ontology ;
   rdfs:comment "Alignment of the the W3C/OGC SOSA Ontology with the ETSI Smart Applications REFerence Ontology (SAREF)"@en ;
   rdfs:label "Alignment of SOSA with SAREF Core V3.2.1"@en ;
   owl:imports <https://saref.etsi.org/core/v3.2.1> ;
-  owl:imports <https://saref.etsi.org/saref4syst/v1.1.2> .
+  owl:imports <https://saref.etsi.org/saref4syst/v1.1.2> ;
+  owl:imports sosa: .
 
 # Alignment sosa-common and SAREF Core and SAREF4SYST
 
