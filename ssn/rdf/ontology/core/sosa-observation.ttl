@@ -82,7 +82,7 @@ sosa:Sensor
   An entity that implements a (Observation) Procedure in the context of an Observation in order to determine the value of a (observable) Property. 
   This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
 
-  A Sensor responds to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, to generate a result.
+  A Sensor responds to a stimulus (e.g., a change in the environment, or input data composed from the results of prior Observations) to generate a result.
   """@en ;
   skos:example "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smartphone (which acts as Host or Platform). Other examples of Sensors include the human eyes."@en ;
   skos:note "The UML class 'Observer' from ISO 19156:2023 is implemented in SOSA by the OWL/RDFS class 'Sensor'. The class name 'Sensor' is preferred for backward compatibility with existing SOSA deployments. " ;
