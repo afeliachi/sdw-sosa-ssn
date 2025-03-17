@@ -30,7 +30,7 @@ sosa:Actuation
   a owl:Class ;
   rdfs:label "Actuation"@en ;
   skos:definition """
-  An Actuation carries out an (Actuation) Procedure to change the value of a Property using an Actuator. 
+  Act of carrying out an actuating Procedure using an Actuator in order to change the value of an actuatable Property of a FeatureOfInterest.  
   
   In this context hasResult shall indicate the expected value of the Property at the completion of the Actuation
   """@en ;
@@ -73,9 +73,8 @@ sosa:Actuator
   a owl:Class ;
   rdfs:label "Actuator"@en ;
   skos:definition """
-  An entity that implements a (Actuation) Procedure in the context of an Actuation to change the value of a (actuatable) Property. 
-  This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
-  """@en ;
+  An entity that implements an actuating Procedure to change the value of a actuatable Property. 
+  This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation)."""@en ;
   skos:example "A window actuator for automatic window control, i.e., opening or closing the window."@en ;
   rdfs:isDefinedBy sosa-act: .
 

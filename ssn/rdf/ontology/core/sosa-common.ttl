@@ -223,7 +223,7 @@ sosa:Execution
   a owl:Class ;
   rdfs:label "Execution of a Procedure"@en ;
   skos:definition """
-  Act of carrying out a Procedure. 
+  Act of carrying out a Procedure using a System concerning a FeatureOfInterest  
   """@en ;
   skos:scopeNote """
   Execution generalizes the Actuation, Observation, and Sampling classes. 
@@ -508,7 +508,7 @@ sosa:System
   a owl:Class ;
   rdfs:label "System"@en ;
   skos:definition """
-  An entity that implements a Procedure in the context of an Execution.
+  An entity that implements a Procedure in the context of an Execution. 
   This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
 
   A System may have components, its sub-systems, which are other systems.
