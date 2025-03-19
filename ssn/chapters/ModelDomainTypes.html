@@ -19,9 +19,9 @@
     RDF and OWL entailments do not work that way.
 </p>
 <p>
-    The way the SSN Ontology addresses this is described here.
-    There are different implications depending on whether you are using the
-    <a href="#sosa-module">SOSA</a> or <a href="ssn-module">SSN</a> module.
+    The way the SSN Ontology addresses this is described in the following sub-sections.
+    There are different implications depending on whether you are using the simple
+    <a href="#sosa-module">SOSA</a> module, or the more expressive <a href="ssn-module">SSN</a> module.
 </p>
 
 <h4>FeatureOfInterest in SOSA</h4>
@@ -37,7 +37,7 @@ sosa:hasFeatureOfInterest
   schema:rangeIncludes sosa:FeatureOfInterest ;
 .
 </pre>
-<p>Note that</p>
+<p>Note:</p>
 <ol>
     <li>these have no formal entailments, they are just hints</li>
     <li>'Includes' means these types are non-exclusive, so any other type is acceptable, including types from
@@ -46,7 +46,8 @@ sosa:hasFeatureOfInterest
 <p>
     So the 'domain and range' indications in SOSA are functionally harmless.
     The fact that
-<pre>sosa:hasFeatureOfInterest schema:rangeIncludes sosa:FeatureOfInterest .</pre> merely says that things of type
+<pre>sosa:hasFeatureOfInterest schema:rangeIncludes sosa:FeatureOfInterest .</pre> 
+merely says that things of type
 <a href="#SOSAFeatureOfInterest"><code>sosa:FeatureOfInterest</code></a> might be found as the object of
 hasFeatureOfInterest statements.
 No more, no less.
@@ -91,9 +92,8 @@ sosa:Execution
         href="#SOSAFeatureOfInterest"><code>sosa:FeatureOfInterest</code></a>
     <em>in addition to</em> any other information that was already available about it, including any pre-existing type.
 </p>
-<p>Note that <b>this does not require you to derive domain types as sub-classes of
+<p><b>This does not require you to derive domain types as sub-classes of
         <a href="#SOSAFeatureOfInterest"><code>sosa:FeatureOfInterest</code></a></b>.
-    It could be argued that would be an error.
     It merely says that when a domain individual participates in an Execution (e.g., an Observation)
     it becomes a member of the class <a href="#SOSAFeatureOfInterest"><code>sosa:FeatureOfInterest</code></a>
     <b>in addition to</b> any pre-existing domain class.

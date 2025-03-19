@@ -28,16 +28,10 @@ ex:ts159i
   sosa:hasSimpleResult """2017-04-15T20:00:00+00:00,3.24
   2017-04-15T20:01:00+00:00,3.21
   2017-04-15T20:02:00+00:00,3.15
-  2017-04-15T20:03:00+00:00,3.15"""^^ex:CSV ;
+  2017-04-15T20:03:00+00:00,3.15"""^^ex:SpeedObservationRecord ;
   rdfs:comment """The result of the observation is encoded as a CSV literal.  
   In this example, the CSV has four rows each representing a member of the time-series.  
   Each member value is composed of a timestamp, and a quantity in metres per second."""@en ;
-.
-ex:CSV a rdfs:DataType ;
-  skos:definition """An N-D vector, each row representing a 
-  member composed of N comma-separated values."""@en ;
-  rdfs:comment """This datatype is an informative example only, 
-  and is not part of the SSN Ontology."""@en ;
 .
 ex:station223 a sosa:FeatureOfInterest .
 ex:p1 a sosa:Property .

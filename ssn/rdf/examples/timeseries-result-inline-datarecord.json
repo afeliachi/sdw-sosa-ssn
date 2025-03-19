@@ -1,0 +1,27 @@
+{
+    "type": "DataRecord",
+    "label": "Speed Observation",
+    "@id" : "http://example.org/data/SpeedObservationRecord",
+    "fields": [
+        {
+            "name": "time",
+            "type": "Time",
+            "definition": "http://www.opengis.net/def/property/OGC/0/SamplingTime",
+            "referenceFrame": "http://www.opengis.net/def/trs/BIPM/0/UTC",
+            "label": "Sampling Time",
+            "uom": {
+                "href": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+            }
+        },
+        {
+            "name": "speed",
+            "type": "Quantity",
+            "definition": "http://qudt.org/vocab/quantitykind/Speed",
+            "label": "Vehicle Speed",
+            "uom": {
+                "code": "m/s",
+                "href": "https://qudt.org/vocab/unit/M-PER-SEC"
+            }
+        }
+    ]
+}

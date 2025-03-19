@@ -136,6 +136,27 @@ var respecConfig = {
       title: "OGC SensorThings API (STA)",
       publisher: "Open Geospatial Consortium"
     },
+    "SWE-Common": {
+      authors: ["Alex Robin"],
+      href: "https://portal.ogc.org/files/?artifact_id=41157",
+      title: "OGC® SWE Common Data Model Encoding Standard",
+      publisher: "Open Geospatial Consortium",
+      date: "January 2011"
+    },
+    "SWE-Common-JSON": {
+      authors: ["Alex Robin"],
+      href: "https://docs.ogc.org/bp/17-011r2/17-011r2.html",
+      title: "JSON Encoding Rules SWE Common / SensorML",
+      publisher: "Open Geospatial Consortium",
+      date: "January 2018"
+    },
+    "CoverageJSON": {
+      authors: ["Chris Little", "Jon Blower", "Maik Reichert"],
+      href: "https://docs.ogc.org/cs/21-069r2/21-069r2.html",
+      title: "OGC CoverageJSON Community Standard",
+      publisher: "Open Geospatial Consortium",
+      date: "August 2023"
+    },
     "SSNX": {
       authors: ["Michael Compton", "Payam Barnaghi", "Luis Bermudez", "Raúl García-Castro", "Oscar Corcho", "Simon Cox", "John Graybeal", "Manfred Hauswirth", "Cory Henson", "Arthur Herzog", "Vincent Huang", "Krzysztof Janowicz", "W. David Kelsey", "Danh Le Phuoc", "Laurent Lefort", "Myriam Leggieri", "Holger Neuhaus", "Andriy Nikolov", "Kevin Page", "Alexandre Passant", "Amit Sheth", "Kerry Taylor"],
       title: "The SSN ontology of the W3C semantic sensor network incubator group",

@@ -7,23 +7,27 @@
 <p>
     It is out of the scope of this specification to recommend a particular way of representing quantitative results.
     Several external vocabularies are available for expressing quantities as OWL individuals, or as datatypes.
-    Examples include
-    the Quantities, Units, Dimensions and Data Types Ontologies (QUDT, [[QUDT]])
-    , and the St Etienne School of Mines <i>Custom Datatypes</i> (CDT, [[CDT]]).
+    Examples include the Quantities, Units, Dimensions and Data Types Ontologies [[QUDT]]
+    , and the St Etienne School of Mines <i>Custom Datatypes</i> [[CDT]].
 </p>
 <p>
-    With QUDT, a quantitative result can be a <a href="http://qudt.org/"><code>qudt:QuantityValue</code></a>.
-    In the following example, its unit of measure <a href="http://qudt.org/vocab/unit/DEG_C">unit:DEG_C</a> is an
-    individual from the QUDT catalogue of units of measure.
+    The following examples show alternative encodings of the data shown in <a href="#UOM-general"></a>.
 </p>
 <figure id="UOM-general">
-    <embed alt="A simple Observation with a scaled number (Quantity) as its result" src="./images/UOM-general.svg" style="width:80%" />
+    <embed alt="A simple Observation with a scaled number (Quantity) as its result" src="./images/UOM-general.svg"
+        style="width:80%" />
     <figcaption>
-        A simple Observation with a scaled number (Quantity) as its result. 
+        A simple Observation with a scaled number (Quantity) as its result.
         <br>
         <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
     </figcaption>
 </figure>
+<p>
+    With QUDT, a quantitative result can be represented as a <a
+        href="http://qudt.org/"><code>qudt:QuantityValue</code></a>.
+    In the following example, its unit of measure <a href="http://qudt.org/vocab/unit/DEG_C">unit:DEG_C</a> is an
+    individual from the QUDT catalogue of units of measure.
+</p>
 <pre class="example" data-include="./rdf/examples/UOM-qudt-object.ttl" data-include-format="text"></pre>
 <p>
     Alternatively, an IRI from the <a href="">QUDT catalogue of units of measure</a> might be used as the
