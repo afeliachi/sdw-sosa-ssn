@@ -20,11 +20,11 @@
 @base <https://data.grandlyon.com/> .
 
 ex:Organization_1 a prov:Organization ;
-    owl:sameAs <http://dbpedia.org/page/Metropolis_of_Lyon> ;
+    skos:exactMatch <http://dbpedia.org/page/Metropolis_of_Lyon> ;
 .
 ex:Air a sosa:FeatureOfInterest ;
   rdfs:label "The air."@en ;
-  owl:sameAs <https://www.wikidata.org/wiki/Q3230> . 
+  skos:exactMatch <https://www.wikidata.org/wiki/Q3230> . 
 
 ex:IP68_Outdoor_Temperature_Sensor a owl:Class , gr:ProductOrServiceModel ;
   rdfs:label "IP68 Outdoor Temperature Sensor"@en ;

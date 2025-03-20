@@ -16,7 +16,7 @@
 @base <https://data.grandlyon.com/> .
 
 <Organization/1> a org:Organization ;
-    owl:sameAs <http://dbpedia.org/page/Metropolis_of_Lyon> .
+    skos:exactMatch <http://dbpedia.org/page/Metropolis_of_Lyon> .
 
 <Air> a sosa:FeatureOfInterest ;
   rdfs:label "The air."@en .

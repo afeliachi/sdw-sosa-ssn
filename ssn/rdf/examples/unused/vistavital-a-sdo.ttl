@@ -95,7 +95,7 @@ vistavital-a:Observation_1_ex
   rdfs:seeAlso <https://github.com/vistadataproject/documents/blob/master/Background/presentations/pdf/2014-Linked_Vitals-Linked_Data_Linked_FHIR.pdf> ;
   prov:atLocation <https://example.org/HOSPITAL-LOCATION/4-SOUTH-MED> ;
   sosa:hasFeatureOfInterest <https://example.org/patient/jones-christopher> ;
-  sosa:hasResult "150/10" ;
+  sosa:hasSimpleResult "150/10" ;
   sosa:observedProperty <VA:4500634> ;
   sosa:observedProperty <https://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
   sosa:phenomenonTime [
@@ -129,7 +129,7 @@ vistavital-a:Observation_1_prov
         ] ;
     ] ;
   sosa:hasFeatureOfInterest <https://example.org/patient/jones-christopher> ;
-  sosa:hasResult "150/10" ;
+  sosa:hasSimpleResult "150/10" ;
   sosa:observedProperty <VA:4500634> ;
   sosa:observedProperty <https://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
   sosa:phenomenonTime [
@@ -149,7 +149,7 @@ vistavital-a:Observation_1_sdo
   rdfs:label "Example BP measurement" ;
   rdfs:seeAlso <https://github.com/vistadataproject/documents/blob/master/Background/presentations/pdf/2014-Linked_Vitals-Linked_Data_Linked_FHIR.pdf> ;
   sosa:hasFeatureOfInterest <https://example.org/patient/jones-christopher> ;
-  sosa:hasResult "150/10" ;
+  sosa:hasSimpleResult "150/10" ;
   sosa:observedProperty <VA:4500634> ;
   sosa:observedProperty <https://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
   sosa:phenomenonTime [

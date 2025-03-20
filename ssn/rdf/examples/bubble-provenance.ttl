@@ -37,8 +37,8 @@ ex:CoreEx1923 a sosa:Sampling ;
   sosa:hasUltimateFeatureOfInterest ex:Antarctic_ice_sheet ;
 .
 ex:Antarctic_ice_sheet a sosa:FeatureOfInterest ;
-  owl:sameAs <https://www.wikidata.org/wiki/Q571430> ;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q571430> ;
 . 
 ex:EarthAtmosphere a sosa:FeatureOfInterest ;
-  owl:sameAs <https://www.wikidata.org/wiki/Q3230> ;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q3230> ;
 . 

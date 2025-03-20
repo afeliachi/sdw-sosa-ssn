@@ -30,7 +30,7 @@ ex:airTemperature a sosa:Property ;
   skos:broader qk:Temperature ;
 .
 ex:EarthAtmosphere a sosa:FeatureOfInterest ;
-  owl:sameAs <https://www.wikidata.org/wiki/Q3230> ;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q3230> ;
 . 
 ex:SHW_T_1872-04-04T15 a sosa:Observation ;
   sosa:madeBySensor ex:T99 ; 

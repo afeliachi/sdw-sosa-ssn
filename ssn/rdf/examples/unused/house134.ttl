@@ -131,11 +131,7 @@
 	sosa:resultTime "2017-11-15T15:35:13Z"^^xsd:dateTime ;
 	sosa:hasResult [
 		a qudt:QuantityValue ;
-<<<<<<< HEAD
 		qudt:hasUnit unit:DEG_C ;
-=======
-		qudt:unit unit:DegreeCelsius ;
->>>>>>> 234-link-to-patterns
 		qudt:value "22.9"^^xsd:decimal
 	] .
 
