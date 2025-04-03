@@ -94,7 +94,7 @@ sosa:Sampler
   a owl:Class ;
   rdfs:label "Sampler"@en ;
   skos:definition """
-  An entity that implements a sampling Procedure in the context of an Sampling in order to generate a Sample.   
+  An entity that implements a sampling Procedure in the context of a Sampling to generate a Sample.   
   This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
   """@en ;
   skos:example "A ball mill, diamond drill, hammer, hypodermic syringe and needle, image Sensor or a soil auger can all act as sampling devices (i.e., be Samplers). Sometimes, however, the distinction between the Sampler and the Sensor is not evident, as they are packaged as a unit. A Sampler need not be a physical device."@en ;
