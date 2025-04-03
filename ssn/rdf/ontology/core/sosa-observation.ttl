@@ -79,7 +79,7 @@ sosa:Sensor
   skos:altLabel "Observer"@en ;
   skos:prefLabel "Sensor"@en ;
   skos:definition """
-  An entity that that implements an observing Procedure in the context of an Observation in order to determine the value of an observable Property. 
+  An entity that implements an observing Procedure in the context of an Observation to determine the value of an observable Property. 
   This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
 
   A Sensor responds to a stimulus (e.g., a change in the environment, or input data composed from the results of prior Observations) to generate a result.
