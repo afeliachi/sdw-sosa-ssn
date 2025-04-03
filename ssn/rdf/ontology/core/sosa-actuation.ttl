@@ -30,7 +30,7 @@ sosa:Actuation
   a owl:Class ;
   rdfs:label "Actuation"@en ;
   skos:definition """
-  Act of carrying out an actuating Procedure using an Actuator in order to change the value of an actuatable Property of a FeatureOfInterest.  
+  Act of carrying out an actuating Procedure using an Actuator to change the value of an actuatable Property of a FeatureOfInterest.  
   
   In this context hasResult shall indicate the expected value of the Property at the completion of the Actuation
   """@en ;
