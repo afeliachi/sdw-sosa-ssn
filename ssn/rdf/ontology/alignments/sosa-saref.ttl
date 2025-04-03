@@ -270,7 +270,7 @@ sosa:Platform
 ### Systems
 
 # In SOSA/SSN, `sosa:System` is a generalization of `sosa:Sensor`, `sosa:Actuator` and `sosa:Sampler`, where `sosa:Sensor` covers devices, agents (including humans), or softwares (simulations). 
-# In SAREF, a `saref:Device` is "a tangible object designed to accomplish a particular task. In order to accomplish this task, the device performs one or more functions. An instance of saref:Device represents one specific real world entity.".
+# In SAREF, a `saref:Device` is "a tangible object designed to accomplish a particular task. To accomplish this task, the device performs one or more functions. An instance of saref:Device represents one specific real world entity.".
 # `sosa:System` is positionned in the middle of the hierarchy:
 # `saref:Device` < `sosa:System`  < `s4syst:System`
 #                                 < `saref:FeatureOfInterest` 
