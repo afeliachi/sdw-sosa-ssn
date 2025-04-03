@@ -33,7 +33,7 @@ sosa:Observation
   An act of carrying out an observing Procedure using a Sensor to estimate or calculate a value of an observable Property of a FeatureOfInterest.  
   """@en ;
   skos:note """
-  When the feature of interest cannot be observed directly, a sample of it might be used in Observations as a proxy for it. In such a case the Sample is the proximate Feature of Interest of the Observation, while the (ultimate) Feature of Interest of the act of Sampling (i.e. the entity that the Sample is ultimately 'isSampleOf') is the ultimate Feature of Interest of the Observation.
+  When the feature of interest cannot be observed directly, a sample of it might be used in Observations as a proxy for it. In such case, the Sample is the proximate Feature of Interest of the Observation, while the (ultimate) Feature of Interest of the act of Sampling (i.e., the entity that the Sample is ultimately 'isSampleOf') is the ultimate Feature of Interest of the Observation.
   """ ;
   skos:scopeNote """
   An Observation concerns a single Property of a single FeatureOfInterest. 
