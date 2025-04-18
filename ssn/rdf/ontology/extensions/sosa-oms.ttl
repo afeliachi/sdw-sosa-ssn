@@ -145,10 +145,11 @@ sosa-oms:ObservingProcedure
   a owl:Class ;
   rdfs:label "Observing Procedure"@en ;
   skos:definition """
-  The description of steps performed in order to determine the value of a Property by an Observer (Sensor).
+  A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation. 
+  An Observing Procedure is re-usable, and might be involved in many Observations. 
+  It explains the steps to be carried out to arrive at reproducible results.
   """@en ;
   skos:example "A workflow, protocol, plan, algorithm, or computational method specifying how to make an observation; the description of the process utilized by an observer. This could be a chemical analysis method, a protocol for measuring an object, but could also be a checklist utilized by a human observer during a biodiversity campaign."@en ;
-  skos:scopeNote "The observing procedure cannot describe a sensor instance, but it can describe the sensor type."@en ;
   rdfs:isDefinedBy sosa-oms: .
 
 sosa-oms:SamplingProcedure  
@@ -156,7 +157,9 @@ sosa-oms:SamplingProcedure
   a owl:Class ;
   rdfs:label "Sampling Procedure"@en ;
   skos:definition """
-  The description of steps performed by a Sampler in order to extract a Sample from its sampled Feature in the frame of a Sampling.
+  A workflow, protocol, plan, algorithm, or computational method specifying how to make a Sampling. 
+  A Sampling Procedure is re-usable, and might be involved in many Samplings. 
+  It explains the steps to be carried out to arrive at reproducible results.
   """@en ;
   rdfs:isDefinedBy sosa-oms: .
 
@@ -164,7 +167,11 @@ sosa-oms:PreparationProcedure
   a owl:Class ;
   ogc-ms:implements <http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationProcedure> ;
   rdfs:label "Preparation Procedure"@en ;
-  skos:definition "The description of preparation steps performed on a Sample."@en ;
+  skos:definition """
+  A workflow, protocol, plan, algorithm, or computational method specifying a step in preparing a Sample. 
+  A Preparation Procedure is re-usable, and might be involved in many preparations. 
+  It explains the steps to be carried out to arrive at reproducible results.
+  """@en ;
   rdfs:isDefinedBy sosa-oms: .
 
 

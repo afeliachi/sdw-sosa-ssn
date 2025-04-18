@@ -147,11 +147,11 @@
     </p>
     <p>
       <em property="rdfs:label">Observing Procedure</em> -
-      <span property="skos:definition">The description of steps performed in order to determine the value of an
-        Property by an Observer.</span>
-      <br><br>
-      <span property="skos:scopeNote">The observing procedure cannot describe a sensor instance, but it can
-        describe the sensor type.</span>
+      <span property="skos:definition"> A workflow, protocol, plan, algorithm, or computational method specifying how to
+        make an Observation.
+        An Observing Procedure is re-usable, and might be involved in many Observations.
+        It explains the steps to be carried out to arrive at reproducible results.
+      </span>
     </p>
     <table>
       <tbody>
@@ -164,14 +164,6 @@
         <tr class="ssn">
           <th class="restrictions">Restriction</th>
           <td>
-            <span about="sosa-oms:ObservingProcedure" rel="rdfs:subClassOf"
-              resource="[_:OMSObservingProcedure1]"></span>
-            <span about="[_:OMSObservingProcedure1]" typeof="owl:Restriction"></span>
-            <span about="[_:OMSObservingProcedure1]" rel="owl:onProperty" resource="sosa:forProperty"><a
-                href="#SOSAforProperty">sosa:forProperty</a></span>
-            <span about="[_:OMSObservingProcedure1]" property="owl:allValuesFrom"
-              resource="sosa:Property"><em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a></span>
-            <br>
             <span about="sosa-oms:ObservingProcedure" rel="rdfs:subClassOf"
               resource="[_:OMSObservingProcedure2]"></span>
             <span about="[_:OMSObservingProcedure2]" typeof="owl:Restriction"></span>
@@ -234,8 +226,10 @@
     </p>
     <p>
       <em property="rdfs:label">Preparation Procedure</em> -
-      <span property="rdfs:comment skos:definition">The description of preparation steps performed on a
-        Sample.</span>
+      <span property="rdfs:comment skos:definition">A workflow, protocol, plan, algorithm, or computational method
+        specifying a step in preparing a Sample.
+        A Preparation Procedure is re-usable, and might be involved in many preparations.
+        It explains the steps to be carried out to arrive at reproducible results.</span>
     </p>
     <table>
       <tbody>
@@ -311,10 +305,10 @@
     </p>
     <p>
       <em property="rdfs:label">Sampling Procedure</em> -
-      <span property="skos:definition">The description of steps performed by a <a href="#SOSASampler">Sampler</a>
-        in order to
-        extract a <a href="#SOSASample">Sample</a> from its sampled Feature in the frame of a <a
-          href="#SOSASampling">Sampling</a>.</span>
+      <span property="skos:definition">A workflow, protocol, plan, algorithm, or computational method specifying how to
+        make a Sampling.
+        A Sampling Procedure is re-usable, and might be involved in many Samplings.
+        It explains the steps to be carried out to arrive at reproducible results.</span>
     </p>
     <table>
       <tbody>
