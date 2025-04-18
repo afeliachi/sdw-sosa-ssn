@@ -153,7 +153,7 @@ saref:hasStateOfInterest
 
 ### Procedures
 
-# In SAREF, a `saref:Command` represent the lowest-level directives a device supports and exposes to some network. A saref:CommandOfInterest is a directive actually supported by a device and exposed to some network. A `saref:Operation` is the means of a service to communicate in a procedure-type manner over the network (i.e., transmit data to/from other devices). It is the -machine interpretable- exposure of a -human understandable- command to a network.
+# In SAREF, a `saref:Command` represent the lowest-level directives a device supports and exposes to some network. A `saref:CommandOfInterest` is a directive actually supported by a device and exposed to some network. A `saref:Operation` is the means of a service to communicate in a procedure-type manner over the network (i.e., transmit data to/from other devices). It is the -machine interpretable- exposure of a -human understandable- command to a network.
 # These classes map to sosa:Procedure.
 
 saref:Command
