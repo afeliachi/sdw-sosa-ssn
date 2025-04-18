@@ -13,7 +13,7 @@
 
 <Observation/7536> rdf:type sosa:Observation ;
   sosa:observedProperty  ex:sunspotCount ;
-  sosa:hasFeatureOfInterest <https://www.wikidata.org/wiki/Q525> ;
+  sosa:hasFeatureOfInterest ex:Sun ;
   sosa:hasSimpleResult 66 ;
   sosa:phenomenonTime [
     rdf:type time:Instant ;
@@ -23,6 +23,7 @@
 ex:sunspotCount rdf:type sosa:Property ;
   skos:broader qk:Count ;
 .
-<https://www.wikidata.org/wiki/Q525> a sosa:FeatureOfInterest ;
+ex:Sun a sosa:FeatureOfInterest ;
+  owl:sameAs <https://www.wikidata.org/wiki/Q525> .
   rdfs:label "Sun" ;
 .
