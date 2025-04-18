@@ -25,9 +25,10 @@ ex:VCAB-DP1-BP-40_location a sosa:Sample ;
     a geo:Point ;
     geo:asWKT "POINT (-120.6195831 35.8648067)"^^geo:WktLiteral ;
   ] ;
-  sosa:isSampleOf <https://www.wikidata.org/wiki/Q2> ;
+  sosa:isSampleOf ex:Earth ;
 .
-<https://www.wikidata.org/wiki/Q2> a sosa:FeatureOfInterest ;
+ex:Earth a sosa:FeatureOfInterest ;
+  owl:sameAs <https://www.wikidata.org/wiki/Q2> ;
   rdfs:label "Earth" ;
 .
 ex:groundDisplacementSpeed a sosa:Property ;

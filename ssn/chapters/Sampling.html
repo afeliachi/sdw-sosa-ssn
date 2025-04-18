@@ -565,8 +565,11 @@
         </p>
         <p>
             <em property="rdfs:label">Sampler</em> -
-            <span property="skos:definition">A device that implements a (Sampling)
-                <a href="#SOSAProcedure">Procedure</a> to create or transform one or more samples.</span>
+            <span property="skos:definition">An entity that implements a sampling
+                <a href="#SOSAProcedure">Procedure</a> in the context of an <a href="#SOSASampling">Sampling</a>
+                to generate a <a href="#SOSASample">Sample</a>.
+                This may be a device, a piece of infrastructure, an agent (including humans), or software
+                (simulation).</span>
         </p>
         <p class="note">
             A Sampler may have a geographic location.
@@ -650,9 +653,9 @@
         </p>
         <p>
             <em property="rdfs:label">Sampling</em> -
-            <span property="skos:definition">An act of <a href="#SOSASampling">Sampling</a> carries out a
-                (Sampling) <a href="#SOSAProcedure">Procedure</a> to create one or more <a
-                    href="#SOSASample">Samples</a>.</span>
+            <span property="skos:definition">Act of carrying out a sampling <a href="#SOSAProcedure">Procedure</a> using
+                a <a href="#SOSASampler">Sampler</a> to create one or more <a href="#SOSASample">Samples</a> of the
+                <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.</span>
         </p>
         <p class="note">
             The different time-properties on a <a href="#SOSASampling">sosa:Sampling</a> support
@@ -774,7 +777,7 @@
         <p>
             <strong>an OWL Class</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             SamplingCollection added in 2025 edition.
             This term is non-normative pending further implementation experience</p>
         <p>
@@ -933,7 +936,7 @@
         <p>
             <strong>an OWL Object Property</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             featureSampledBy added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
@@ -992,7 +995,7 @@
         <p>
             <strong>an OWL Object Property</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             hasOriginalSample added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
@@ -1002,7 +1005,7 @@
                 collected from the ultimate feature of interest.</span>
         </p>
         <p class="note">Some examples of relationships between samples and features of interest within chains are
-            illustrated in <a href="#ModelSampleChains">Common Patterns</a>.</p>
+            illustrated in <a href="#ModelSampleChains">Sample chains</a>.</p>
         <table>
             <tbody>
                 <tr>
@@ -1108,7 +1111,7 @@
         <p>
             <strong>an OWL Object Property</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             hasSampledFeature added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
@@ -1168,7 +1171,7 @@
         <p>
             <strong>an OWL Object Property</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             isOriginalSampleOf added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
@@ -1228,7 +1231,7 @@
             <strong>an OWL Object Property</strong>
         </p>
 
-        <p class="note">
+        <p class="warning">
             isResultOfMadeBySampler added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
@@ -1305,7 +1308,7 @@
         <p>
             <strong>an OWL Object Property</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             isResultOfUsedProcedure added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
@@ -1561,7 +1564,7 @@
         <p>
             <strong>an OWL Object Property</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             madeSamplingHasResult added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
@@ -1643,7 +1646,7 @@
         <p>
             <strong>an OWL Object Property</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             usedForExecutionHasResult added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>

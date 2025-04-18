@@ -11,6 +11,7 @@
 @prefix time: <http://www.w3.org/2006/time#>.
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ssn-system: <http://www.w3.org/ns/ssn-system/> .
 @prefix system: <http://www.w3.org/ns/ssn/systems/> .
 @prefix rdfp: <https://w3id.org/rdfp/>.
 @prefix gr: <http://purl.org/goodrelations/v1#> .
@@ -35,6 +36,8 @@ ex:IP68_Outdoor_Temperature_Sensor a owl:Class , gr:ProductOrServiceModel ;
     owl:onProperty system:hasSystemCapability ;
     owl:hasValue ex:IP68_Outdoor_Temperature_Sensor_systemCapability ] ;
 .
+ex:Sensor_SL-T-P1_battery a ssn-system:Battery;
+ rdfs:label "The battery powering the IP68 Outdoor Temperature Sensor"@en .
 ex:IP68_Outdoor_Temperature_Sensor_operatingRange a system:OperatingRange , sosa:Property ;
   system:inCondition ex:IP68_Outdoor_Temperature_Sensor_normalOperatingCondition ;
 .
