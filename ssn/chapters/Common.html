@@ -1163,7 +1163,8 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em property="rdfs:label">Execution</em> -
-                <span property="skos:definition">Act of carrying out a <a href="#SOSAProcedure">Procedure</a>.
+                <span property="skos:definition">Act of carrying out a <a href="#SOSAProcedure">Procedure</a> using a
+                    <a href="#SOSASystem">System</a> concerning a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
                 </span>
             </p>
             <p class="note">The different time-properties on a <a href="#SOSAExecution">sosa:Execution</a> support
@@ -2765,10 +2766,15 @@ sosa:phenomenonTime [
             <p>
                 <em property="rdfs:label">System</em> -
                 <span property="skos:definition">
-                    A piece of infrastructure that implements a <a href="#SOSAProcedure">Procedure</a>.
+                    An entity that implements a <a href="#SOSAProcedure">Procedure</a> in the context of an <a
+                        href="#SOSAExecution">Execution</a>.
+                    This may be a device, a piece of infrastructure, an agent (including humans), or software
+                    (simulation).
                     <br><br>
                     A System may have components, its sub-systems, which are other systems.
                 </span>
+                <span property="skos:note">
+                    Different Systems can implement the same (reusable) Procedure for different Executions. </span>
             </p>
             <p class="note">
                 See <a href="#ModelSystemType">Systems Types and Individuals</a> for guidance on
@@ -2806,8 +2812,13 @@ sosa:phenomenonTime [
                                 The association of a System (<a href="#SOSAActuator">Actuator</a>,
                                 <a href="#SOSASensor">Sensor</a>, or <a href="#SOSASampler">Sampler</a>) with a
                                 <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> is usually in the context of an
-                                <a href="#SOSAExecution">Execution</a> or a <a href="#SOSADeployment">Deployment</a> .
+                                <a href="#SOSAExecution">Execution</a> or a <a href="#SOSADeployment">Deployment</a>.
                                 <br><br>
+                                A <a href="#SOSASystem">sosa:System</a> can be hosted by a <a
+                                    href="#SOSAPlatform">sosa:Platform</a>.
+                                <br><br>
+                                A <a href="#SOSASystem">sosa:System</a> can be deployed for a specified time interval as
+                                part of a <a href="#SOSADeployment">sosa:Deployment</a>.
                             </span>
                         </td>
                     </tr>
