@@ -35,12 +35,17 @@ sosa:Property
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty [ owl:inverseOf sosa:actsOnProperty ] ; owl:allValuesFrom sosa:Actuation ] ;
   rdfs:isDefinedBy sosa-common: .
 
+sosa:ActuatingProcedure  
+  rdfs:subClassOf sosa:Procedure ;
+  rdfs:isDefinedBy sosa-act: .
+
 sosa:Actuation 
   rdfs:subClassOf sosa:Execution ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeByActuator ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeByActuator ; owl:allValuesFrom sosa:Actuator ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:actsOnProperty ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:actsOnProperty ; owl:allValuesFrom sosa:Property ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:usedProcedure; owl:allValuesFrom sosa:ActuatingProcedure ] ;
   rdfs:isDefinedBy sosa-act: .
 
 sosa:ActuationCollection 
@@ -64,6 +69,7 @@ sosa:Actuator
   rdfs:subClassOf sosa:System ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeActuation ; owl:allValuesFrom sosa:Actuation ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:actsOn ; owl:allValuesFrom sosa:Property ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:implements ; owl:allValuesFrom sosa:ActuatingProcedure ] ;
   rdfs:isDefinedBy sosa-act: .
 
 sosa:actsOn 

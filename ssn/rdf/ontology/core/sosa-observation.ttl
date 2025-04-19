@@ -73,6 +73,18 @@ sosa:ObservationCollection
             This broadly corresponds with the class Dataset from DCAT."""@en ;
   rdfs:isDefinedBy sosa-obs: .
 
+sosa:ObservingProcedure 
+  a owl:Class ;
+  rdfs:label "Observing Procedure"@en ;
+  skos:definition """
+  A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation. 
+  An Observing Procedure is re-usable, and might be involved in many Observations. 
+  It explains the steps to be carried out to arrive at reproducible results.
+  """@en ;
+  skos:example """A workflow, protocol, plan, algorithm, or computational method specifying how to make an observation; the description of the process utilized by an observer. This could be a chemical analysis method, a protocol for measuring an object, but could also be a checklist utilized by a human observer during a biodiversity campaign."""@en ;
+  rdfs:isDefinedBy sosa-obs: .
+
+
 sosa:Sensor 
   a owl:Class ;
   rdfs:label "Sensor or Observer"@en ;
@@ -378,6 +390,7 @@ sosa:Execution
 sosa:usedProcedure 
   schema:domainIncludes sosa:Observation ;
   schema:domainIncludes sosa:ObservationCollection ;
+  schema:rangeIncludes sosa:ObservingProcedure ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:startTime 
@@ -445,6 +458,7 @@ sosa:System
 
 sosa:implements 
   schema:domainIncludes sosa:Sensor ;
+  schema:rangeIncludes sosa:ObservingProcedure ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasSubSystem 

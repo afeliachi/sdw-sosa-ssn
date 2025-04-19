@@ -26,6 +26,16 @@ sosa-act:
   owl:imports sosa-common: ;
   .
 
+sosa:ActuatingProcedure  
+  a owl:Class ;
+  rdfs:label "Actuating Procedure"@en ;
+  skos:definition """
+  A workflow, protocol, plan, algorithm, or computational method specifying how to make an Actuation. 
+  An Actuating Procedure is re-usable, and might be involved in many Actuations. 
+  It explains the steps to be carried out to arrive at reproducible results.
+  """@en ;
+  rdfs:isDefinedBy sosa-act: .
+
 sosa:Actuation 
   a owl:Class ;
   rdfs:label "Actuation"@en ;
@@ -237,6 +247,7 @@ sosa:Execution
 sosa:usedProcedure 
   schema:domainIncludes sosa:Actuation ;
   schema:domainIncludes sosa:ActuationCollection ;
+  schema:rangeIncludes sosa:ActuatingProcedure ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:startTime 
@@ -303,6 +314,7 @@ sosa:System
 
 sosa:implements 
   schema:domainIncludes sosa:Actuator ;
+  schema:rangeIncludes sosa:ActuatingProcedure ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasSubSystem 
