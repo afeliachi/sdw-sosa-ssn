@@ -143,7 +143,7 @@ sosa:Procedure
 sosa:ObservingProcedure 
   ogc-ms:implements <http://www.opengis.net/spec/om/3.0/req/obs-cpt/ObservingProcedure> ;
   skos:definition """[ISO 19156:2023] An ObservingProcedure shall be defined as the description of steps performed in order to determine the value of an observableProperty by an Observer.""" ;
-  skos:example """[ISO 19156:2023] An instance of Procedure is a description of the process utilized by an observer. This could be a chemical analysis method, a protocol for measuring an object, but could also be a checklist utilized by a human observer during a biodiversity campaign. Procedure could further describe the algorithms behind simulators or models used to generate a result from other inputs."""@en ;
+  skos:example """[ISO 19156:2023] An instance of Procedure is a description of the process used by an observer. This could be a chemical analysis method, a protocol for measuring an object, or even a checklist used by a human observer during a biodiversity campaign. Procedure could further describe the algorithms behind simulators or models used to generate a result from other inputs."""@en ;
   rdfs:isDefinedBy sosa-obs: .
 
 sosa:SamplingProcedure  
