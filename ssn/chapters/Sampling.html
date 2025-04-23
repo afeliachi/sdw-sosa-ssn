@@ -945,6 +945,10 @@
         <p>
             <strong>an OWL Class</strong>
         </p>
+        <p class="warning">
+            SamplingProcedure added in the 2025 edition
+            This term is non-normative, pending further implementation experience
+        </p>
         <p>
             <em property="rdfs:label">Sampling Procedure</em> -
             <span property="skos:definition">A workflow, protocol, plan, algorithm, or computational method specifying
@@ -969,6 +973,19 @@
                     <th>Sub class of</th>
                     <td>
                         <span rel="rdfs:subClassOf" resource="sosa:Procedure">sosa:Procedure</span>
+                    </td>
+                </tr>
+                <tr class="ssn">
+                    <th class="restrictions">Restriction</th>
+                    <td>
+                        <span about="sosa:SamplingProcedure" rel="rdfs:subClassOf"
+                            resource="[_:SOSASamplingProcedure2]"></span>
+                        <span about="[_:SOSASamplingProcedure2]" typeof="owl:Restriction"></span>
+                        <span about="[_:SOSASamplingProcedure2]" rel="owl:onProperty" resource="sosa:implementedBy"><a
+                                href="#SOSAimplementedBy">sosa:implementedBy</a></span>
+                        <span about="[_:SOSASamplingProcedure2]" property="owl:allValuesFrom"
+                            resource="sosa:Sampler"><em><b>ONLY</b></em> <a href="#SOSASampler">sosa:Sampler</a></span>
+
                     </td>
                 </tr>
                 <tr>

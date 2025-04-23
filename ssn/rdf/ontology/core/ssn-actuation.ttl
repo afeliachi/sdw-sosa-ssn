@@ -37,6 +37,7 @@ sosa:Property
 
 sosa:ActuatingProcedure  
   rdfs:subClassOf sosa:Procedure ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:implementedBy ; owl:allValuesFrom sosa:Actuator ] ;
   rdfs:isDefinedBy sosa-act: .
 
 sosa:Actuation 

@@ -66,6 +66,7 @@ sosa:ObservationCollection
 
 sosa:ObservingProcedure  
   rdfs:subClassOf sosa:Procedure ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:implementedBy ; owl:allValuesFrom sosa:Sensor ] ;
   rdfs:isDefinedBy sosa-obs: .
 
 sosa:Sensor 

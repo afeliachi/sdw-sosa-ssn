@@ -88,6 +88,7 @@ sosa:SamplingCollection
 
 sosa:SamplingProcedure  
   rdfs:subClassOf sosa:Procedure ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:implementedBy ; owl:allValuesFrom sosa:Sampler ] ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:SpatialSample 

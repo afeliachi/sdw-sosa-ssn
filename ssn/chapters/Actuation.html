@@ -36,7 +36,7 @@
         </p>
     </div>
 
-    <section class="informative specterm sosa" id="SOSAActuatingProcedure" about="sosa:ActuatingProcedure"
+    <section class="specterm sosa" id="SOSAActuatingProcedure" about="sosa:ActuatingProcedure"
         typeof="owl:Class">
         <h6><a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a></h6>
         <p class="crossreference">
@@ -44,6 +44,10 @@
         </p>
         <p>
             <strong>an OWL Class</strong>
+        </p>
+        <p class="warning">
+            ActuatingProcedure added in the 2025 edition
+            This term is non-normative, pending further implementation experience
         </p>
         <p>
             <em property="rdfs:label">Actuating Procedure</em> -
@@ -58,6 +62,19 @@
                     <th>Sub class of</th>
                     <td>
                         <span rel="rdfs:subClassOf" resource="sosa:Procedure">sosa:Procedure</span>
+                    </td>
+                </tr>
+                <tr class="ssn">
+                    <th class="restrictions">Restriction</th>
+                    <td>
+                        <span about="sosa:ActuatingProcedure" rel="rdfs:subClassOf"
+                            resource="[_:SOSAActuatingProcedure2]"></span>
+                        <span about="[_:SOSAActuatingProcedure2]" typeof="owl:Restriction"></span>
+                        <span about="[_:SOSAActuatingProcedure2]" rel="owl:onProperty" resource="sosa:implementedBy"><a
+                                href="#SOSAimplementedBy">sosa:implementedBy</a></span>
+                        <span about="[_:SOSAActuatingProcedure2]" property="owl:allValuesFrom"
+                            resource="sosa:Actuator"><em><b>ONLY</b></em> <a href="#SOSAActuator">sosa:Actuator</a></span>
+
                     </td>
                 </tr>
                 <tr>
