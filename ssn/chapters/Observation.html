@@ -63,15 +63,10 @@
         </p>
         <p>
             <em property="rdfs:label">Observation</em> -
-            <span property="skos:definition">Act of carrying out an (Observation)
-                <a href="#SOSAProcedure">Procedure</a> to estimate or calculate a value of a property of a
-                <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
-                Links to a <a href="#SOSASensor">Sensor</a> to describe what made the
-                <a href="#SOSAObservation">Observation</a> and how; links to an
-                <a href="#SOSAProperty">Property</a> to describe what the result is an
-                estimate of, and to a
-                <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> to detail what that property was
-                associated with.</span>
+            <span property="skos:definition">An act of carrying out an observing <a href="#SOSAProcedure">Procedure</a>
+                using a <a href="#SOSASensor">Sensor</a> to estimate or calculate a value of an observable
+                <a href="#SOSAProperty">Property</a> of a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
+            </span>
         </p>
         <p>
             <span property="skos:scopeNote">An <a href="#SOSAObservation">Observation</a> concerns a single
@@ -79,12 +74,10 @@
                 <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
                 Observations of multiple properties, or other combinations of Observations, may be described in an
                 <a href="#SOSAObservationCollection">ObservationCollection</a>.
-                <br>
-                <br>
+                <br><br>
                 Alternatively, applications may choose to encapsulate complexity by defining a complex property with
-                multiple individual components, and a corresponding complex result (e.g., a vector). This approach is
-                not
-                prohibited by the SSN Ontology, but the details are beyond the scope of SSN.</span>
+                multiple individual components, and a corresponding complex result (e.g., a vector).
+                This approach is not prohibited by the SSN Ontology, but the details are beyond the scope of SSN.</span>
         </p>
         <p>
             <span property="skos:scopeNote">
@@ -262,7 +255,7 @@
         <p>
             <strong>an OWL Class</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             ObservationCollection added in the 2025 edition
             This term is non-normative, pending further implementation experience
         </p>
@@ -332,9 +325,9 @@
             <br><br>
         </p>
         <p class="note">
-            See <a href="#ModelTimeSeries">Time series</a> and <a href="#ModelObservationCollection">Homogeneous
-                observation
-                collection</a> for examples.</p>
+            See <a href="#ModelTimeSeries">Time series</a> and
+            <a href="#ModelObservationCollection">Homogeneous observation collection</a> for examples.
+        </p>
         <table>
             <tbody>
                 <tr class="ssn">
@@ -537,14 +530,15 @@
         </p>
         <p>
             <em property="rdfs:label">Sensor</em> -
-            <span property="skos:definition">An identifiable entity that can generate <a
-                    href="#SOSAObservation">Observations</a> pertaining to an <a href="#SOSAProperty">Property</a> by
-                implementing a <a href="#SOSAProcedure">Procedure</a>.
-                Device, agent (including humans), or software (simulation)
-                involved in, or implementing, a <a href="#SOSAProcedure">Procedure</a>.
-                <a href="#SOSASensor">Sensors</a> respond to a
-                <a href="#SOSAStimulus">Stimulus</a>, e.g., a change in the environment,
-                or input data composed from the results of prior <a href="#SOSAObservation">Observations</a>
+            <span property="skos:definition">An entity that implements an observing
+                <a href="#SOSAProcedure">Procedure</a> in the context of an Observation to determine the value
+                of an observable <a href="#SOSAProperty">Property</a>.
+                This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
+                <br><br>
+                A <a href="#SOSASensor">Sensor</a> responds to a <a href="#SOSAStimulus">Stimulus</a>,
+                e.g., a change in the environment, or input data composed from the results of prior
+                <a href="#SOSAObservation">Observations</a>.
+                This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
             </span>
         </p>
 
@@ -1121,7 +1115,7 @@
         <p>
             <strong>an OWL Object Property</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             observationRelatedTo added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
 
@@ -1378,7 +1372,7 @@
         <p>
             <strong>an OWL Object Property</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             qualityOf added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
@@ -1429,7 +1423,7 @@
             <strong>an OWL Object Property</strong>
         </p>
 
-        <p class="note">
+        <p class="warning">
             relatedObservation added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
@@ -1498,7 +1492,7 @@
         <p>
             <strong>an OWL Object Property</strong>
         </p>
-        <p class="note">
+        <p class="warning">
             resultQuality added in 2025 edition.
             This term is non-normative, pending further implementation experience
         </p>
@@ -1565,7 +1559,7 @@
             <strong>an OWL Object Property</strong>
         </p>
 
-        <p class="note">
+        <p class="warning">
             wasObservedBy added in 2025 edition.
             This term is non-normative, pending further implementation experience
         </p>

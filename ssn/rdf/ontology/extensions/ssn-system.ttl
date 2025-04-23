@@ -20,13 +20,13 @@ ssn-system: a owl:Ontology , voaf:Vocabulary ;
   dcterms:title "System capabilities, operating ranges, and survival ranges ontology"@en ;
   dcterms:description "This ontology describes system capabilities, operating ranges, and survival ranges."@en ;
   dcterms:creator [ a foaf:Agent ; foaf:name "W3C/OGC Spatial Data on the Web Working Group"@en ] ;
-  dcterms:rights "Copyright 2017, 2024 W3C/OGC." ;
+  dcterms:rights "Copyright 2017, 2025 W3C/OGC." ;
   dcterms:license <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
   dcterms:license <http://www.opengeospatial.org/ogc/Software> ;
   rdfs:comment "Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org"@en ;
   rdfs:seeAlso <https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology> ;
   dcterms:created "2017-05-14"^^xsd:date ;
-  dcterms:modified "2024-06-04"^^xsd:date ;
+  dcterms:modified "2025-04-07"^^xsd:date ;
   vann:preferredNamespacePrefix "ssn-system" ;
   vann:preferredNamespaceUri "http://www.w3.org/ns/ssn/systems/" ;
   owl:imports ssn: .
@@ -357,4 +357,14 @@ ssn-system:hasSurvivalRange a owl:ObjectProperty ;
       skos:definition "Total useful life of a System's battery in the specified Conditions."@en ;
       rdfs:comment "Total useful life of a System's battery in the specified Conditions."@en ;
       rdfs:subClassOf ssn-system:SurvivalProperty ;
+      rdfs:isDefinedBy ssn-system: .
+
+    ssn-system:Battery a owl:Class ;
+      rdfs:label "Battery"@en ;
+      skos:definition "A class representing a Battery powering a System."@en ;
+      rdfs:comment "A class representing a Battery powering a System."@en ;
+      skos:definition "Une classe représentant une batterie alimentant un système."@fr ;
+      rdfs:comment "Une classe représentant une batterie alimentant un système."@fr ;
+      skos:definition "Eine Klasse, die eine Batterie darstellt, die ein System mit Strom versorgt."@de ;
+      rdfs:comment "Eine Klasse, die eine Batterie darstellt, die ein System mit Strom versorgt."@de ;
       rdfs:isDefinedBy ssn-system: .
