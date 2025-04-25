@@ -59,12 +59,6 @@ sosa:forProperty
   schema:domainIncludes sosa:Procedure ;
   schema:domainIncludes sosa:System ;
   schema:rangeIncludes sosa:Property ;
-  owl:inverseOf [
-      owl:unionOf (
-          sosa:hasProcedure
-          sosa:propertyFor
-        ) ;
-    ] ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasProperty 
