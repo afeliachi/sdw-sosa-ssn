@@ -7,35 +7,8 @@
   <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c"></script>
   <script class="remove" src="config.js"></script>
   <script src="https://www.w3.org/2007/OWL/toggles.js"></script>
+  <script type="application/ld+json">TODO: ADD HERE JSON-LD VERSION OF THE ONTOLOGY</script>
   <script>
-
-    function hide_ssn(hide, element) {
-      var scrollY = window.scrollY;
-      var scrollX = window.scrollX;
-      var posY = element.getBoundingClientRect().top;
-      if (hide) {
-        set_display_by_class('*', 'ssn', 'none');
-        set_display_by_class('span', 'ssn', 'none');
-        set_display_by_class('div', 'specterm.ssn', 'none');
-        set_display_by_class('button', 'hide-ssn', 'none');
-        set_display_by_class('button', 'show-ssn', '');
-
-        set_display_by_class('*', 'sosa', '');
-        set_display_by_class('span', 'sosa', '');
-      } else {
-        set_display_by_class('*', 'ssn', '');
-        set_display_by_class('span', 'ssn', '');
-        set_display_by_class('div', 'specterm.ssn', '');
-        set_display_by_class('button', 'hide-ssn', '');
-        set_display_by_class('button', 'show-ssn', 'none');
-
-        set_display_by_class('*', 'sosa', 'none');
-        set_display_by_class('span', 'sosa', 'none');
-      }
-      var newPosY = element.getBoundingClientRect().top;
-      var newScrollY = window.scrollY;
-      window.scrollTo(scrollX, newPosY + newScrollY - posY);
-    }
     addEventListener('load', () => {
       document.respec.ready.then(() => {
 
@@ -104,8 +77,7 @@
   <link rel="stylesheet" type="text/css" href="small.css" media="only all and (max-width: 649px)">
 </head>
 
-<body
-  prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# skos: http://www.w3.org/2004/02/skos/core# dcterms: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/>. vann: http://purl.org/vocab/vann/ voaf: http://purl.org/vocommons/voaf# time: http://www.w3.org/2006/time# sosa: http://www.w3.org/ns/sosa/ sosa-oms: http://www.w3.org/ns/sosa/oms/ ssn: http://www.w3.org/ns/ssn/ ssn-oms: http://www.w3.org/ns/ssn/oms/ ssn-system: http://www.w3.org/ns/ssn/systems/  sampling: http://www.w3.org/ns/sosa/sampling/ vs: http://www.w3.org/2003/06/sw-vocab-status/ns#">
+<body>
 
   <p class='copyright'><a href='https://www.w3.org/Consortium/Legal/ipr-notice#Copyright'>Copyright</a> © 2024 <a
       href='http://www.opengeospatial.org/'>OGC</a> &amp; <a href='https://www.w3.org/'> <abbr
