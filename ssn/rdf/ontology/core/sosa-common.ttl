@@ -77,9 +77,7 @@ sosa:isFeatureOfInterestOf
   a owl:ObjectProperty ;
   rdfs:label "is feature of interest of"@en ;
   skos:definition """
-  A relation between a FeatureOfInterest and an Execution concerning it, i.e. an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it.
-  
-  A relation between a specific FeatureOfInterest and a System operating on it, i.e. the entity whose property is modified by an Actuator, or the entity whose quality is observed by a Sensor, or the entity that is sampled by a Sampler.
+  A relation between a FeatureOfInterest and an Execution or Deployment operating on it, i.e. an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it, or a Deployment for which it is the subject.
 """@en ;
   schema:domainIncludes sosa:FeatureOfInterest ;
   schema:rangeIncludes sosa:Deployment ;
@@ -103,9 +101,10 @@ sosa:isUltimateFeatureOfInterestOf
   a owl:ObjectProperty ;
   rdfs:label "is ultimate feature of interest of"@en ;
   skos:definition """
-  A relation between a FeatureOfInterest and an Execution that it is the Ultimate subject of. 
+  A relation between a FeatureOfInterest and an Execution or Deployment that it is the ultimate subject of.
   """@en ;
   schema:domainIncludes sosa:FeatureOfInterest ;
+  schema:rangeIncludes sosa:Deployment ;
   schema:rangeIncludes sosa:Execution ;
   schema:rangeIncludes sosa:ExecutionCollection ;
   owl:inverseOf sosa:hasUltimateFeatureOfInterest ;
