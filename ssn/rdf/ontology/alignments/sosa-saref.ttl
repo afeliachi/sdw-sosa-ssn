@@ -55,32 +55,33 @@ sosa:saref a owl:Ontology ;
 
 # This part of the file can be read side-by-side with the file sosa-common.ttl 
 
-sosa:FeatureOfInterest
-  rdfs:subClassOf saref:FeatureOfInterest ;
-  rdfs:comment """
+### FeatureOfInterest
+
 # In SOSA/SSN, `sosa:FeatureOfInterest` is the class of things that are the target of an execution. 
 # In SAREF, `saref:FeatureOfInterest` is the class of real world entities from which a property or a state may be acted upon, such as observed and controlled.
 # So `saref:FeatureOfInterest` is more general than `sosa:FeatureOfInterest`. An entity can be a `saref:FeatureOfInterest` even if no execution has been done about it (yet).
-  """ ; 
-  rdfs:comment """
+
+sosa:FeatureOfInterest
+  rdfs:subClassOf saref:FeatureOfInterest .
+
 ### FeatureKind
 
 # In SAREF, class `saref:FeatureKind` allows to describe kinds of features of interest, with common properties and common states having the same value. An instance of `saref:FeatureKind` represents an archetype of real world entities, for example to populate product catalogs.
 # In SOSA/SSN, feature _types_ are expected to be represented as OWL Classes (sub-classes of SOSA classes where appropriate), and OWL `ObjectHasValue` or `DataHasValue` axioms must be used to bind values to any individuals populating these classes. See [#107](https://github.com/w3c/sdw-sosa-ssn/issues/107) and [#114](https://github.com/w3c/sdw-sosa-ssn/issues/114), 
 # Thus, there is no equivalent in SOSA/SSN to `saref:FeatureKind`.
-""" ; 
-.
 
-saref:Property
-  rdfs:subClassOf sosa:Property ;
-  rdfs:comment """
+
+
+### Property
+
 # In SOSA/SSN, a `sosa:Property` can apply to different features of interest. Section 8.8.3 "Feature-specific properties" states that a property may be made specific to a single feature of interest using sosa:isPropertyOf.
 # In SAREF, an instance of `saref:Property` can apply to different features of interest, while an instance of `saref:PropertyOfInterest` is specific to a feature of interest. It is inherent to and cannot exist without that feature of interest.
 # SAREF also defines states, that refer to the identifiable conditions that features of interest are or may be in, and that can be acted upon by devices, such as observed and controlled. States and Properties are parallel, distinct, but not disjoint. Users can chose whichever seems to best fit their needs. 
 # While states can apply to different features of interest, states of interest are specific to a feature of interest.
 # Thus, `saref:Property`, `saref:PropertyOfInterest`, `saref:State`, `saref:StateOfInterest` are all sub-classes of `sosa:Property`.
-  """ ;
-  .
+
+saref:Property
+  rdfs:subClassOf sosa:Property .
 
 saref:PropertyOfInterest
   rdfs:subClassOf sosa:Property .
@@ -94,10 +95,7 @@ saref:StateOfInterest
 
 ### hasFeatureOfInterest, forProperty, observes, observedProperty, actsOn, actsOnProperty
 
-# In SAREF, a device can act upon (OP `saref:actsUpon`) features, properties, or states. 
-# SAREF Core defines `saref:observes` and `saref:controls` as sub-properties of `saref:actsUpon`. 
-# Property `saref:actsUpon` also applies to functions, commands, and procedure executions.
-#
+# In SAREF, a device can act upon (OP `saref:actsUpon`) features, properties, or states. SAREF Core defines `saref:observes` and `saref:controls` as sub-properties of `saref:actsUpon`. Property `saref:actsUpon` also applies to functions, commands, and procedure executions.
 # In SOSA/SSN, different object properties are used depending on the context. It would be:
 #
 # - `sosa:hasFeatureOfInterest` from execution to feature of interest
@@ -107,29 +105,21 @@ saref:StateOfInterest
 # Thus, all these properties are sub-properties of the SAREF properties.
 
 sosa:hasFeatureOfInterest
-  rdfs:subPropertyOf saref:actsUpon ;
-  rdfs:comment "# this also covers sosa:isFeatureOfInterestOf" ;
-  .
+  rdfs:subPropertyOf saref:actsUpon . # this also covers sosa:isFeatureOfInterestOf
 
 sosa:hasUltimateFeatureOfInterest
-  rdfs:subPropertyOf saref:actsUpon ;
-  rdfs:comment "# this also covers sosa:isUltimateFeatureOfInterestOf" ;
-  .
+  rdfs:subPropertyOf saref:actsUpon . # this also covers sosa:isUltimateFeatureOfInterestOf
 
 sosa:forProperty
   rdfs:subPropertyOf saref:actsUpon .
 
 
-# `sosa:hasProcedure` links a Property and a Procedure that can observe or act on it. 
-# This corresponds to a restrictive application of `saref:isActedUponBy` in SAREF, which is defined as "Links a feature, property, or state, to the device, function, command, or procedure execution, that acts on it.". 
+# `sosa:hasProcedure` links a Property and a Procedure that can observe or act on it. This corresponds to a restrictive application of `saref:isActedUponBy` in SAREF, which is defined as "Links a feature, property, or state, to the device, function, command, or procedure execution, that acts on it.". 
 
 sosa:hasProcedure 
   rdfs:subPropertyOf saref:isActedUponBy .
 
-# `sosa:propertyFor` is defined as "A relation between a Property and some entity.". 
-# Three examples are given: from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a SystemCapability to the Property the capability is described for. 
-# In the two first examples, SAREF would offer as equivalent `saref:isActedUponBy`, which is defined as "Links a feature, property, or state, to the device, function, command, or procedure execution, that acts on it.". 
-# In the third example, it is less clear what would be the equivalent in SAREF.
+# `sosa:propertyFor` is defined as "A relation between a Property and some entity.". Three examples are given: from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a SystemCapability to the Property the capability is described for. In the two first examples, SAREF would offer as equivalent `saref:isActedUponBy`, which is defined as "Links a feature, property, or state, to the device, function, command, or procedure execution, that acts on it.". In the third example, it is less clear what would be the equivalent in SAREF.
 
 sosa:propertyFor
   rdfs:subPropertyOf saref:isActedUponBy . 
@@ -163,10 +153,7 @@ saref:hasStateOfInterest
 
 ### Procedures
 
-# In SAREF, a `saref:Command` represents the lowest-level directives a device supports and exposes to some network. 
-# A `saref:CommandOfInterest` is a directive actually supported by a device and exposed to some network. 
-# A `saref:Operation` is the means of a service to communicate in a procedure-type manner over the network (i.e., transmit data to/from other devices). 
-# It is the -machine interpretable- exposure of a -human understandable- command to a network.
+# In SAREF, a `saref:Command` represents the lowest-level directives a device supports and exposes to some network. A `saref:CommandOfInterest` is a directive actually supported by a device and exposed to some network. A `saref:Operation` is the means of a service to communicate in a procedure-type manner over the network (i.e., transmit data to/from other devices). It is the -machine interpretable- exposure of a -human understandable- command to a network.
 # These classes map to sosa:Procedure.
 
 saref:Command
@@ -181,8 +168,7 @@ saref:Operation
 
 ### inputs and outputs
 
-# in SAREF, commands and operations can be described in terms of their inputs and outputs using OP `saref:hasInput` and `saref:hasOutput`. 
-# A procedure execution may be linked to its inputs using OP `saref:hasInput`.
+# in SAREF, commands and operations can be described in terms of their inputs and outputs using OP `saref:hasInput` and `saref:hasOutput`. A procedure execution may be linked to its inputs using OP `saref:hasInput`.
 # In SOSA/SSN, different properties are used depending on the context. It would be:
 # 
 # - `sosa:hasInput` and `sosa:hasOuput` applied on a procedure
@@ -203,9 +189,7 @@ sosa:hasOutput # this also covers sosa:outputFor
 ### sosa:implements 
 
 # SOSA/SSN defines `sosa:implements` as "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).". 
-# SAREF imposes an indirection. A device or device kind has some functions, and these functions have some commands. 
-# Functions are defined as "logical groups of commands that devices support to accomplish their tasks". 
-# Parallel to this, a device or device kind offers some services, and these services have some operations.
+# SAREF imposes an indirection. A device or device kind has some functions, and these functions have some commands. Functions are defined as "logical groups of commands that devices support to accomplish their tasks". Parallel to this, a device or device kind offers some services, and these services have some operations.
 # Although there is no direct alignment between SOSA/SSN and SAREF here, one can define two property chain axioms that allow to infer `sosa:implements`
 # This alignment also covers sosa:implementedBy
 
@@ -216,15 +200,13 @@ sosa:implements owl:propertyChainAxiom ( saref:offers saref:hasOperation ) .
 
 ### procedure executions
 
-# SAREF adopted the term `saref:ProcedureExecution` from the [Procedure Execution ontology (2016)](https://w3id.org/pep/). 
-# This term was suggested to SOSA/SSN in [#109](https://github.com/w3c/sdw-sosa-ssn/issues/109), added, and then renamed to `sosa:Execution` in [#173](https://github.com/w3c/sdw-sosa-ssn/pull/173).
+# SAREF adopted the term `saref:ProcedureExecution` from the [Procedure Execution ontology (2016)](https://w3id.org/pep/). This term was suggested to SOSA/SSN in [#109](https://github.com/w3c/sdw-sosa-ssn/issues/109), added, and then renamed to `sosa:Execution` in [#173](https://github.com/w3c/sdw-sosa-ssn/pull/173).
 
 saref:ProcedureExecution
   owl:equivalentClass sosa:Execution .
 
 # SOSA/SSN defines `sosa:usedProcedure` (inverse: `sosa:usedForExecution`) to link an execution to the procedure that was used in making it.
-# SAREF does not have the notion of procedure, so it defines `saref:isExecutionOf` instead, as "Links a command execution to the command or command of interest that was executed. 
-# Also liks an operation execution to the operation that was executed".
+# SAREF does not have the notion of procedure, so it defines `saref:isExecutionOf` instead, as "Links a command execution to the command or command of interest that was executed. Also liks an operation execution to the operation that was executed".
 
 sosa:usedProcedure owl:equivalentProperty saref:isExecutionOf . # this also covers sosa:usedForExecution
 
