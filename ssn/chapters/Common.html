@@ -68,11 +68,12 @@
             </p>
             <p>
                 <em>Feature Of Interest</em> -
-                The thing that is the target of the <a href="#SOSAExecution">Execution</a>,
+                The thing that is the target of an <a href="#SOSAExecution">Execution</a> or <a href="#SOSADeployment">Deployment</a>,
                 i.e., whose property is being estimated or
                 calculated in the course of an <a href="#SOSAObservation">Observation</a> to arrive at a
                 result, or whose property is being manipulated by an <a href="#SOSAActuator">Actuator</a>,
-                or which is being sampled or transformed in an act of <a href="#SOSASampling">Sampling</a>.
+                or which is being sampled or transformed in an act of <a href="#SOSASampling">Sampling</a>, 
+                or which is the target of <a href="#SOSAExecution">Executions</a> planned as part of a <a href="#SOSADeployment">Deployment</a>.
             </p>
             <p class="note">
                 The relationship between <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>,
@@ -1243,10 +1244,8 @@
                 <a href="#SOSAExecution">Execution</a> and its target entity
                 i.e., an <a href="#SOSAActuation">Actuation</a> and the entity whose property was modified,
                 or an <a href="#SOSAObservation">Observation</a> and the entity whose quality was observed,
-                or an act of <a href="#SOSASampling">Sampling</a> and the entity that was sampled.
-                <br>
-                <br>
-                A relation between a <a href="#SOSADeployment">Deployment</a> and its specific target entity.
+                or an act of <a href="#SOSASampling">Sampling</a> and the entity that was sampled,
+                or a <a href="#SOSADeployment">Deployment</a> and its specific target entity.
 
             </p>
             <p class="note">
@@ -1285,6 +1284,11 @@
                             , <a href="#SOSASampling">sosa:Sampling</a>),
                             <br>
                             <a href="#SOSADeployment">sosa:Deployment</a>
+                            <br>
+                            , <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
+                            (i.e., <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
+                            , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+                            , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>),
                         </td>
                     </tr>
                     <tr>
@@ -1582,12 +1586,16 @@
                         <th>Domain Includes</th>
                         <td>
                             <a href="#SOSAExecution">sosa:Execution</a>
-                            , <a href="#SOSAActuation">sosa:Actuation</a>
+                            (i.e., <a href="#SOSAActuation">sosa:Actuation</a>
                             , <a href="#SOSAObservation">sosa:Observation</a>
-                            , <a href="#SOSASampling">sosa:Sampling</a>
-                            , <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
+                            , <a href="#SOSASampling">sosa:Sampling</a>),
+                            <br>
+                            <a href="#SOSADeployment">sosa:Deployment</a>
+                            <br>
+                            , <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
+                            (i.e., <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
                             , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
-                            , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
+                            , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>),
                         </td>
                     </tr>
                     <tr>
