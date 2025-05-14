@@ -70,11 +70,14 @@
             </p>
             <p>
                 <em>Feature Of Interest</em> -
-                The thing that is the target of the <a href="#SOSAExecution">Execution</a>,
+                The thing that is the target of an <a href="#SOSAExecution">Execution</a> or <a
+                    href="#SOSADeployment">Deployment</a>,
                 i.e., whose property is being estimated or
                 calculated in the course of an <a href="#SOSAObservation">Observation</a> to arrive at a
                 result, or whose property is being manipulated by an <a href="#SOSAActuator">Actuator</a>,
-                or which is being sampled or transformed in an act of <a href="#SOSASampling">Sampling</a>.
+                or which is being sampled or transformed in an act of <a href="#SOSASampling">Sampling</a>,
+                or which is the target of <a href="#SOSAExecution">Executions</a> planned as part of a <a
+                    href="#SOSADeployment">Deployment</a>.
             </p>
             <p class="note">
                 The relationship between <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>,
@@ -322,13 +325,10 @@
             </p>
             <p>
                 <em>is feature of interest of</em> -
-                A relation between a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>
-                and an <a href="#SOSAExecution">Execution</a> concerning it.
+                A relation between a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> and an
+                <a href="#SOSAExecution">Execution</a> or <a href="#SOSADeployment">Deployment</a> operating on it,
                 <br>
-                <br>
-                A relation between a specific <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> and a <a
-                    href="#SOSADeployment">Deployment</a> operating on it.
-
+                i.e. an Observation about it, an Actuation acting on it, an act of Sampling that sampled it, or a Deployment for which it is the subject.
             </p>
             <table>
                 <tbody>
@@ -339,12 +339,16 @@
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a href="#SOSAExecution">sosa:Execution</a>,
-                            <a href="#SOSAActuation">sosa:Actuation</a>,
-                            <a href="#SOSAObservation">sosa:Observation</a>,
-                            <a href="#SOSASampling">sosa:Sampling</a>,
-                            <br>
+                        <td>
                             <a href="#SOSADeployment">sosa:Deployment</a>
+                            , <a href="#SOSAExecution">sosa:Execution</a>
+                            (i.e., <a href="#SOSAActuation">sosa:Actuation</a>
+                            , <a href="#SOSAObservation">sosa:Observation</a>
+                            , <a href="#SOSASampling">sosa:Sampling</a>)
+                            , <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
+                            (i.e., <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
+                            , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+                            , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>),
                         </td>
                     </tr>
                     <tr>
@@ -414,6 +418,64 @@
             </div>
         </section>
 
+        <section class="informative specterm sosa" id="SOSAisUltimateFeatureOfInterestOf">
+            <h6><a href="#SOSAisUltimateFeatureOfInterestOf">sosa:isUltimateFeatureOfInterestOf</a></h6>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/sosa/isUltimateFeatureOfInterestOf
+            </p>
+            <p>
+                <strong>an OWL Object Property</strong>
+            </p>
+
+            <p class="warning">isUltimateFeatureOfInterestOf added in 2025 edition.
+                This term is non-normative, pending further implementation experience</p>
+            <p>
+                <em>is ultimate feature of interest of</em> -
+                A relation between an ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> and an 
+                <a href="#SOSAExecution">Execution</a> or <a href="#SOSADeployment">Deployment</a> that it is the ultimate subject of.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Domain Includes</th>
+                        <td>
+                            <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Range Includes</th>
+                        <td>
+                            <a href="#SOSADeployment">sosa:Deployment</a>
+                            , <a href="#SOSAExecution">sosa:Execution</a>
+                            (i.e., <a href="#SOSAActuation">sosa:Actuation</a>
+                            , <a href="#SOSAObservation">sosa:Observation</a>
+                            , <a href="#SOSASampling">sosa:Sampling</a>)
+                            , <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
+                            (i.e., <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
+                            , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+                            , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>),
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Inverse property of</th>
+                        <td>
+                            <a href="#SOSAhasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/common/">http://www.w3.org/ns/sosa/common/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#Common-overview">Back to module overview</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
+            </div>
+        </section>
+
         <section class="specterm" id="SOSApropertyFor">
             <h6><a href="#SOSApropertyFor">sosa:propertyFor</a></h6>
             <p class="crossreference">
@@ -448,64 +510,6 @@
                         <th>Inverse property of</th>
                         <td>
                             <a href="#SOSAforProperty">sosa:forProperty</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>is Defined By</th>
-                        <td>
-                            <a href="http://www.w3.org/ns/sosa/common/">http://www.w3.org/ns/sosa/common/</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="buttonpanel">
-                <span class="back">[<a href="#Common-overview">Back to module overview</a>]</span>
-                <span class="back">[<a href="#Overview">Back to top</a>]</span>
-            </div>
-        </section>
-
-        <section class="informative specterm sosa" id="SOSAisUltimateFeatureOfInterestOf">
-            <h6><a href="#SOSAisUltimateFeatureOfInterestOf">sosa:isUltimateFeatureOfInterestOf</a></h6>
-            <p class="crossreference">
-                <strong>IRI:</strong> http://www.w3.org/ns/sosa/isUltimateFeatureOfInterestOf
-            </p>
-            <p>
-                <strong>an OWL Object Property</strong>
-            </p>
-
-            <p class="warning">isUltimateFeatureOfInterestOf added in 2025 edition.
-                This term is non-normative, pending further implementation experience</p>
-            <p>
-                <em>is ultimate feature of interest of</em> -
-                A relation between an ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> whose property
-                was modified, observed, or that was sampled, and the
-                <a href="#SOSAExecution">Execution</a> that executed it.
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Domain Includes</th>
-                        <td>
-                            <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Range Includes</th>
-                        <td>
-                            <a href="#SOSAExecution">sosa:Execution</a>
-                            , <a href="#SOSAActuation">sosa:Actuation</a>
-                            , <a href="#SOSAObservation">sosa:Observation</a>
-                            , <a href="#SOSASampling">sosa:Sampling</a>
-                            , <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
-                            , <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
-                            , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
-                            , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Inverse property of</th>
-                        <td>
-                            <a href="#SOSAhasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a>
                         </td>
                     </tr>
                     <tr>
@@ -1271,11 +1275,9 @@
                 A relation between an
                 <a href="#SOSAExecution">Execution</a> and its target entity
                 i.e., an <a href="#SOSAActuation">Actuation</a> and the entity whose property was modified,
-                or an <a href="#SOSAObservation">Observation</a> and the entity whose quality was observed,
-                or an act of <a href="#SOSASampling">Sampling</a> and the entity that was sampled.
-                <br>
-                <br>
-                A relation between a <a href="#SOSADeployment">Deployment</a> and its specific target entity.
+                an <a href="#SOSAObservation">Observation</a> and the entity whose quality was observed,
+                an act of <a href="#SOSASampling">Sampling</a> and the entity that was sampled,
+                or a <a href="#SOSADeployment">Deployment</a> and its specific target entity.
 
             </p>
             <p class="note">
@@ -1308,12 +1310,15 @@
                     <tr>
                         <th>Domain Includes</th>
                         <td>
-                            <a href="#SOSAExecution">sosa:Execution</a>
+                            <a href="#SOSADeployment">sosa:Deployment</a>
+                            , <a href="#SOSAExecution">sosa:Execution</a>
                             (i.e., <a href="#SOSAActuation">sosa:Actuation</a>
                             , <a href="#SOSAObservation">sosa:Observation</a>
-                            , <a href="#SOSASampling">sosa:Sampling</a>),
-                            <br>
-                            <a href="#SOSADeployment">sosa:Deployment</a>
+                            , <a href="#SOSASampling">sosa:Sampling</a>)
+                            , <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
+                            (i.e., <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
+                            , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+                            , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>),
                         </td>
                     </tr>
                     <tr>
@@ -1593,10 +1598,11 @@
                 <a href="#SOSAExecution">Execution</a> and its ultimate target entity
                 i.e., an <a href="#SOSAActuation">Actuation</a> and the ultimate entity whose property
                 was modified,
-                or an <a href="#SOSAObservation">Observation</a> and the ultimate entity whose quality
+                an <a href="#SOSAObservation">Observation</a> and the ultimate entity whose quality
                 was observed,
-                or an act of <a href="#SOSASampling">Sampling</a> and the ultimate entity that was
-                sampled.
+                an act of <a href="#SOSASampling">Sampling</a> and the ultimate entity that was
+                sampled, 
+                or a <a href="#SOSADeployment">Deployment</a> and its ultimate target entity.
             </p>
             <p class="note">
                 The distinction between <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>,
@@ -1615,13 +1621,15 @@
                     <tr>
                         <th>Domain Includes</th>
                         <td>
-                            <a href="#SOSAExecution">sosa:Execution</a>
-                            , <a href="#SOSAActuation">sosa:Actuation</a>
+                            <a href="#SOSADeployment">sosa:Deployment</a>
+                            , <a href="#SOSAExecution">sosa:Execution</a>
+                            (i.e., <a href="#SOSAActuation">sosa:Actuation</a>
                             , <a href="#SOSAObservation">sosa:Observation</a>
-                            , <a href="#SOSASampling">sosa:Sampling</a>
-                            , <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
+                            , <a href="#SOSASampling">sosa:Sampling</a>)
+                            , <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
+                            (i.e., <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
                             , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
-                            , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
+                            , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>),
                         </td>
                     </tr>
                     <tr>
@@ -2910,8 +2918,6 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/isSubSystemOf</p>
             <p><strong>an OWL Object Property</strong></p>
 
-            <p class="warning">isSubSystemOf added in 2025 edition.
-                This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>is subsystem of</em> -
                 Relation between component parts and a <a href="#SOSASystem">System</a>
