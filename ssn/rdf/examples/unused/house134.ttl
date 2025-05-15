@@ -78,12 +78,12 @@
 	rdfs:comment "A temperature range of -40 to 80 Celsius."@en ;
 	xsd:minInclusive -40.0 ;
 	xsd:maxInclusive 80.0 ;
-	qudt:unit unit:DegreeCelsius .
+	qudt:unit unit:DEG_C .
 
 <DHT22TempSensitivity> a sosa:Property, ssn-system:Sensitivity, ssn-system:Resolution, schema:PropertyValue ;
 	rdfs:comment "The sensitivity and resolution of the temperature sensor is 0.1 °C in normal temperature and humidity conditions."@en ;
 	schema:value 0.1 ;
-	qudt:unit unit:DegreeCelsius .
+	qudt:unit unit:DEG_C .
 
 <house/134/deployment> a sosa:Deployment ;
 	rdfs:comment "Deployment of PCB Board 1 and 2 in the kitchen for the purpose of observing the temperature."@en ;
@@ -107,16 +107,16 @@
 	sosa:hasFeatureOfInterest <house/134/bedroom> ;
 	sosa:observedProperty qk:Temperature ;
 	sosa:madeBySensor <sensor/926> ;
-	sosa:resultTime "2017-04-16T00:00:12+00:00"^^xsd:dateTimeStamp ;
+	sosa:resultTime "2017-04-16T00:00:12+00:00"^^xsd:dateTime ;
 	sosa:phenomenonTime [
 		a time:Interval ;
 		time:hasBeginning [ 
 			a time:Instant ;
-			time:inXSDDateTimeStamp "2017-04-15T00:00:00+00:00"^^xsd:dateTimeStamp
+			time:inXSDDateTimeStamp "2017-04-15T00:00:00+00:00"^^xsd:dateTime
 		] ;
     	time:hasEnd [ 
 			a time:Instant ;
-			time:inXSDDateTimeStamp "2017-04-16T00:00:00+00:00"^^xsd:dateTimeStamp
+			time:inXSDDateTimeStamp "2017-04-16T00:00:00+00:00"^^xsd:dateTime
 		]
 	] .
 
@@ -124,19 +124,15 @@
 # an hour later it had cooled one degree.
 
 <observation/235715> a sosa:Observation ;
-	sosa:resultTime "2017-11-15T14:35:13Z"^^xsd:dateTime ;
+	sosa:resultTime "2017-11-15T14:35:13+00:00"^^xsd:dateTime ;
 	sosa:hasSimpleResult "23.9"^^unit:DEG_C .
    
 <observation/235716> a sosa:Observation ;
-	sosa:resultTime "2017-11-15T15:35:13Z"^^xsd:dateTime ;
+	sosa:resultTime "2017-11-15T15:35:13+00:00"^^xsd:dateTime ;
 	sosa:hasResult [
 		a qudt:QuantityValue ;
-<<<<<<< HEAD
-		qudt:hasUnit unit:DEG_C ;
-=======
-		qudt:unit unit:DegreeCelsius ;
->>>>>>> 234-link-to-patterns
-		qudt:numericValue "22.9"^^xsd:double
+		qudt:unit unit:DEG_C ;
+		qudt:value "22.9"^^xsd:decimal
 	] .
 
 # The electric consumption in the kitchen of house #134 was 22.4 kWh as 
@@ -161,7 +157,7 @@
 	sosa:observedProperty <soil-pH> ;
 	sosa:phenomenonTime [ 
 		a time:Instant ; 
-		time:inXSDDateTimeStamp "2017-12-04T08:14:00:00+10:00"^^xsd:dateTimeStamp ;
+		time:inXSDDateTimeStamp "2017-12-04T08:14:00:00+10:00"^^xsd:dateTime ;
 	] ;
 	sosa:resultTime "2017-12-12T10:24:00:00+10:00"^^xsd:dateTime ;
 	sosa:hasSimpleResult "6.1"^^cdt:pH .  
@@ -208,6 +204,6 @@
 	sosa:actsOnProperty <window/104/state> ;
 	sosa:actuationMadeBy <windowCloser/987> ;
 	sosa:hasFeatureOfInterest  <window/104> ;
-	sosa:resultTime "2017-04-18T17:24:00+02:00"^^xsd:dateTimeStamp ;
+	sosa:resultTime "2017-04-18T17:24:00+02:00"^^xsd:dateTime ;
 	sosa:hasSimpleResult true ;
-	sosa:resultTime "2017-04-18T17:24:00+02:00"^^xsd:dateTimeStamp .
+	sosa:resultTime "2017-04-18T17:24:00+02:00"^^xsd:dateTime .

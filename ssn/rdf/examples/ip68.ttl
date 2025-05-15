@@ -20,12 +20,15 @@
 @prefix cdt: <http://w3id.org/lindt/custom_datatypes#>.
 @base <https://data.grandlyon.com/> .
 
+# This example describes the IP68 Smart Sensor that and some of its capabilities and operating ranges.
+# A specific IP68 Smart Sensor observes the air temperature, and its own battery state.
+
 ex:Organization_1 a prov:Organization ;
-    owl:sameAs <http://dbpedia.org/page/Metropolis_of_Lyon> ;
+    skos:exactMatch <http://dbpedia.org/page/Metropolis_of_Lyon> ;
 .
 ex:Air a sosa:FeatureOfInterest ;
   rdfs:label "The air."@en ;
-  owl:sameAs <https://www.wikidata.org/wiki/Q3230> . 
+  skos:exactMatch <https://www.wikidata.org/wiki/Q3230> . 
 ex:IP68_Outdoor_Temperature_Sensor a owl:Class , gr:ProductOrServiceModel ;
   rdfs:label "IP68 Outdoor Temperature Sensor"@en ;
   rdfs:subClassOf [
@@ -55,7 +58,7 @@ ex:IP68_Outdoor_Temperature_Sensor_systemCapability a sosa:Property , system:Sys
 .
 ex:IP68_Outdoor_Temperature_Sensor_RFSensitivity a sosa:Property , system:Sensitivity , schema:PropertyValue ;
   schema:value -137 ;
-  qudt:unit unit:DeciB_MilliW ;
+  qudt:unit unit:DeciB-MilliW ;
 .
 ex:IP68_Outdoor_Temperature_Sensor_TemperatureAccuracy a sosa:Property , system:Accuracy , schema:PropertyValue ;
   sosa:forProperty qk:Temperature ;

@@ -12,9 +12,13 @@ ex:OP2 a sosa:Observation ;
     sosa:hasFeatureOfInterest ex:apartment134 ;
     sosa:hasResult [
       a qudt:QuantityValue ;
-      qudt:hasUnit unit:DEG_C ;
+      qudt:unit unit:DEG_C ;
       qudt:value "-29.9"^^xsd:decimal ] ;
     .
 
 ex:Temperature a sosa:ObservableProperty .
 ex:apartment134 a sosa:FeatureOfInterest . 
+unit:DEG_C
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+.

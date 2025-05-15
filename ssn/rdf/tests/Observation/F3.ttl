@@ -26,3 +26,7 @@ ex:OF3 a sosa:Observation ;
 ex:apartment134 a sosa:FeatureOfInterest . 
 ex:T9 a sosa:Procedure .
 ex:Th3 a sosa:Sensor .
+unit:DEG_C
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+.

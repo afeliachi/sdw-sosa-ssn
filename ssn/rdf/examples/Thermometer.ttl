@@ -41,3 +41,7 @@ ex:SickChildATempObs
   sosa:madeBySensor ex:Mums-clinical-thermometer ;
   sosa:observedProperty qk:Temperature ;
 .
+unit:DEG_C
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+  .

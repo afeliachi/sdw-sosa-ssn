@@ -9,6 +9,8 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @base <https://example.org/data/wind/> .
 
+# Wind sensor spinning cups
+#
 # movements of spinning cups on wind sensor #14 serves as proxies for the wind speed
 # at the location of the wind sensor
 
@@ -28,7 +30,7 @@ ex:observation_147 rdf:type sosa:Observation ;
   sosa:observedProperty ex:windSpeed ;
   sosa:madeBySensor ex:windSensor_14 ;
   sosa:wasOriginatedBy ex:observation_147_spinningCupsMovement ;
-  sosa:resultTime "2017-04-12T12:00:00Z"^^xsd:dateTime ;
+  sosa:resultTime "2017-04-12T12:00:00+00:00"^^xsd:dateTime ;
   sosa:hasSimpleResult "47"^^unit:KiloM-PER-HR ;
 .
 # wind sensor #14 detected some movement of spinning cups, from which originated the
@@ -47,9 +49,13 @@ ex:observation_148 rdf:type sosa:Observation ;
   sosa:observedProperty ex:windSpeed ;
   sosa:madeBySensor ex:windSensor_14 ;
   sosa:wasOriginatedBy ex:observation_148_spinningCupsMovement ;
-  sosa:resultTime "2017-04-12T12:01:00Z"^^xsd:dateTime ;
+  sosa:resultTime "2017-04-12T12:01:00+00:00"^^xsd:dateTime ;
   sosa:hasSimpleResult "47"^^unit:KiloM-PER-HR ;
 .
 ex:observation_148_spinningCupsMovement rdf:type sosa:Stimulus ;
   sosa:isProxyFor ex:windSpeed ;
 .
+unit:KiloM-PER-HR
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+  .

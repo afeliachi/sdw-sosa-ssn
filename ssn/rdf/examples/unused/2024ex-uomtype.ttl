@@ -13,5 +13,5 @@
 .
 unit:DEG_C
   a rdfs:Datatype ;
-  rdfs:subClassOf xsd:decimal ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
 .

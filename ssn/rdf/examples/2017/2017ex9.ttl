@@ -48,4 +48,9 @@
    sosa:hasSimpleResult "92.5"^^unit:PERCENT ;
    sosa:resultTime "2017-06-02-T03:00:00-7:00"^^xsd:dateTime ;
    sosa:observedProperty <RelativeHumidity> ;
-   sosa:usedProcedure <MeasuringRelativeHumidityA23> .
+   sosa:usedProcedure <MeasuringRelativeHumidityA23> ;
+   .
+unit:PERCENT
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+  .

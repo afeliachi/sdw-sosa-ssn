@@ -13,3 +13,11 @@ ex:OP1 a sosa:Observation ;
 
 ex:Temperature a sosa:ObservableProperty .
 ex:apartment134 a sosa:FeatureOfInterest . 
+unit:DEG_C
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+.
+unit:DEG_C
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+.

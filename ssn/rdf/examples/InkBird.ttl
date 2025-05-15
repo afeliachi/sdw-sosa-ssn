@@ -74,3 +74,11 @@ qudt:QuantityKind
 ex:serialNumber a rdfs:Datatype ;
     rdfs:subClassOf xsd:string ;
 .
+unit:DEG_C
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+.
+unit:PERCENT
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+.
