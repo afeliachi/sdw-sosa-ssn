@@ -20,12 +20,9 @@ ex:Observation_235714 rdf:type sosa:Observation ;
      qudt:value "22.4"^^xsd:decimal ;
      qudt:unit unit:KiloW-HR ] ;
   sosa:phenomenonTime [
-    rdf:type time:Interval ;
     time:hasBeginning [ 
-      rdf:type time:Instant ;
       time:inXSDDateTimeStamp "2017-04-15T23:59:30+00:00"^^xsd:dateTime ] ;
     time:hasEnd [ 
-      rdf:type time:Instant ;
       time:inXSDDateTimeStamp "2017-04-16T00:00:00+00:00"^^xsd:dateTime ] ] ;
   sosa:resultTime "2017-04-16T00:00:12+00:00"^^xsd:dateTime ;
 .
