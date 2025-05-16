@@ -77,7 +77,8 @@ sosa:isFeatureOfInterestOf
   a owl:ObjectProperty ;
   rdfs:label "is feature of interest of"@en ;
   skos:definition """
-  A relation between a FeatureOfInterest and an Execution or Deployment operating on it, i.e. an Observation about it, an Actuation acting on it, an act of Sampling that sampled it, or a Deployment for which it is the subject.
+  A relation between a FeatureOfInterest and an Execution or Deployment operating on it, 
+  i.e.: an Observation about it; an Actuation acting on it; an act of Sampling that sampled it; or a Deployment for which it is the subject.
 """@en ;
   schema:domainIncludes sosa:FeatureOfInterest ;
   schema:rangeIncludes sosa:Deployment ;
@@ -285,7 +286,7 @@ sosa:hasFeatureOfInterest
   a owl:ObjectProperty ;
   rdfs:label "has feature of interest"@en ;
   skos:definition """
-  A relation between an Execution and its target entity, i.e. an Actuation and the entity whose property was modified, or an Observation and the entity whose quality was observed, an act of Sampling and the entity that was sampled, or a Deployment and its specific target entity.
+  A relation between an Execution and its target entity, i.e.: an Actuation and the entity whose property was modified; an Observation and the entity whose quality was observed; an act of Sampling and the entity that was sampled; or a Deployment and its specific target entity.
   """@en ;
   skos:scopeNote "This is the _proximate_ feature of interest, which may be a proxy entity such as a sample of the _ultimate_ feature of interest. Use `hasUltimateFeatureOfInterest` if the intention is to link to the _ultimate_ feature of interest. " ;
   skos:example "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight."@en ;
@@ -346,7 +347,8 @@ sosa:hasUltimateFeatureOfInterest
   a owl:ObjectProperty ;
   rdfs:label "has ultimate feature of interest"@en  ;
   skos:definition """
-  A relation between an Execution or Deployment and its ultimate target entity i.e. an Actuation and the ultimate entity whose property was modified, an Observation and the ultimate entity whose quality was observed, an act of Sampling and the ultimate entity that was sampled, or a Deployment and its ultimate target entity. 
+  A relation between an Execution or Deployment and its ultimate target entity, 
+  i.e.: an Actuation and the ultimate entity whose property was modified; an Observation and the ultimate entity whose quality was observed; an act of Sampling and the ultimate entity that was sampled; or a Deployment and its ultimate target entity. 
   """@en ;
   skos:scopeNote "This is useful when the proximate feature of interest is a sample of the ultimate feature of interest, directly or transitively." ;
   skos:note """should match a property chain something like this but with sosa:isSampleOf*
