@@ -149,7 +149,7 @@ vistavital-a:Observation_1_sdo
   rdfs:label "Example BP measurement" ;
   rdfs:seeAlso <https://github.com/vistadataproject/documents/blob/master/Background/presentations/pdf/2014-Linked_Vitals-Linked_Data_Linked_FHIR.pdf> ;
   sosa:hasFeatureOfInterest <https://example.org/patient/jones-christopher> ;
-  sosa:hasSimpleResult "150/10" ;
+  sosa:hasSimpleResult "150/10"^^vistavital-a:BP ;
   sosa:observedProperty <VA:4500634> ;
   sosa:observedProperty <https://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
   sosa:phenomenonTime [
@@ -157,4 +157,8 @@ vistavital-a:Observation_1_sdo
       time:inXSDDateTime "2005-09-01T13:00:00Z"^^xsd:dateTime ;
     ] ;
   sosa:resultTime "2005-12-28T13:48:44Z"^^xsd:dateTime ;
+.
+
+vistavital-a:BP a rdfs:Datatype ;
+  skos:definition "Blood pressure formatted as a decimal number with a slash and a decimal number" ;
 .
