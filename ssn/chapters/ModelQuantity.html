@@ -1,7 +1,7 @@
 <h3>Quantity Values and Units of Measure</h3>
 <p>
-    The result of an <a href="#SOSAObservation"><code>sosa:Observation</code></a>
-    or an <a href="#SOSAActuation"><code>sosa:Actuation</code></a> can be a quantity value with a numeric value and a
+    The result of a single <a href="#SOSAObservation"><code>sosa:Observation</code></a>
+    or <a href="#SOSAActuation"><code>sosa:Actuation</code></a> might be a quantity value with a numeric value and a
     unit of measurement.
 </p>
 <p>
@@ -11,7 +11,7 @@
     , and the St Etienne School of Mines <i>Custom Datatypes</i> [[CDT]].
 </p>
 <p>
-    The following examples show alternative encodings of the data shown in <a href="#UOM-general"></a>.
+    The following examples show alternative encodings of a single observation with a scalar result, as shown in <a href="#UOM-general"></a>.
 </p>
 <figure id="UOM-general">
     <embed alt="A simple Observation with a scaled number (Quantity) as its result" src="./images/UOM-general.svg"
@@ -22,6 +22,7 @@
         <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
     </figcaption>
 </figure>
+
 <p>
     With QUDT, a quantitative result can be represented as a <a
         href="http://qudt.org/"><code>qudt:QuantityValue</code></a>.
@@ -38,6 +39,7 @@
 </p>
 <pre class="example" data-include="./rdf/examples/UOM-cdt.ttl" data-include-format="text"></pre>
 
+<!-- 
 <p>
     Alternatively, the <em>type designator</em> can indicate the unit of measurement.
     The advantage of this approach is that the numeric value is available directly in the data, without the need to
@@ -46,6 +48,15 @@
     <a href="https://www.qudt.org/doc/2025/01/DOC_VOCAB-UNITS.html">catalogue of units of measurement</a> from [[QUDT]].
 </p>
 <pre class="example" data-include="./rdf/examples/UOM-qudt-datatype.ttl" data-include-format="text"></pre>
+-->
+
+<p>
+    Alternatively, for collections of observations or actuations in which the members use a common unit of measurement, it might be specified at that level. 
+</p>
+
+<p>
+    TBC
+</p>
 
 <!--
 <p class="note">

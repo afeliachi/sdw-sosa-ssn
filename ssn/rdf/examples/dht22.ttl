@@ -1,3 +1,4 @@
+@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
@@ -122,7 +123,7 @@ ex:observation_1087 rdf:type sosa:Observation ;
   sosa:madeBySensor ex:DHT22_4578_TemperatureSensor ;
   sosa:usedProcedure ex:DHT22_Procedure ;
   sosa:resultQuality ex:observation_1087_quality ;
-  sosa:hasSimpleResult "21.4"^^unit:DEG_C ;
+  sosa:hasSimpleResult "21.4 Cel"^^cdt:ucum ;
 .
 
 # one may use some other ontology to further qualify this quality
