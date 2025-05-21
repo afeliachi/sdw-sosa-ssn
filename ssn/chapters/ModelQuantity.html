@@ -29,13 +29,7 @@
     individual from the QUDT catalogue of units of measurement.
 </p>
 <pre class="example" data-include="./rdf/examples/UOM-qudt-object.ttl" data-include-format="text"></pre>
-<p>
-    Alternatively, an IRI from the <a href="https://www.qudt.org/doc/2025/01/DOC_VOCAB-UNITS.html">catalogue of units of
-        measurement</a> from [[QUDT]] might be used as the <em>type designator</em>
-    of a <a href="#SOSAhasSimpleResult"><code>sosa:hasSimpleResult</code></a>.
-    For this usage the resource <code>unit:DEG_C</code> is an <code>rdfs:Datatype</code>.
-</p>
-<pre class="example" data-include="./rdf/examples/UOM-qudt-datatype.ttl" data-include-format="text"></pre>
+
 <p>
     With CDT, the value of <a href="#SOSAhasSimpleResult"><code>sosa:hasSimpleResult</code></a> is a literal structured
     as space-separated quantiy-value using the UCUM code for the unit of measurement [[UCUM]].
@@ -44,7 +38,21 @@
 </p>
 <pre class="example" data-include="./rdf/examples/UOM-cdt.ttl" data-include-format="text"></pre>
 
+<p>
+    Alternatively, the <em>type designator</em> can indicate the unit of measurement.
+    The advantage of this approach is that the numeric value is available directly in the data, without the need to
+    split the string representation.
+    The datatype can be linked to the definition of the unit of measurement, using an IRI from the
+    <a href="https://www.qudt.org/doc/2025/01/DOC_VOCAB-UNITS.html">catalogue of units of measurement</a> from [[QUDT]].
+</p>
+<pre class="example" data-include="./rdf/examples/UOM-qudt-datatype.ttl" data-include-format="text"></pre>
+
+<!--
 <p class="note">
     Custom datatypes are not strictly compatible with OWL, which restricts the set of datatypes that can be used.
     See sec. 5.2 in [[owl2-syntax]] for more details.
 </p>
+
+# In fact custom datatypes are not disallowed in OWL, though they would not be recognised by a generic OWL reasoner or processor. 
+See https://github.com/w3c/sdw-sosa-ssn/issues/144#issuecomment-1913550117 
+-->
