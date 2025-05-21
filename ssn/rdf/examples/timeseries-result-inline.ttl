@@ -36,6 +36,7 @@ ex:ts159i
 ex:station223 a sosa:FeatureOfInterest .
 ex:p1 a sosa:Property .
 ex:fooglemeter39 a sosa:Sensor .
+
 ex:SpeedObservationCSVRecord a rdfs:Datatype ;
   rdfs:comment """Example of a datatype definition for CSV-encoded data records conforming to the speed observation data model.
   The speed observation data model is defined using the OGC SWE Data Model given as the object of ex:asSWEDataModel.
@@ -65,4 +66,5 @@ ex:SpeedObservationCSVRecord a rdfs:Datatype ;
           }
       }
   ]
-}"""rdf:JSON .
+}"""^^rdf:JSON ;
+.
