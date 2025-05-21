@@ -1,7 +1,8 @@
 <h3>Quantity Values and Units of Measure</h3>
 <p>
-    The result of an <a href="#SOSAObservation"><code>sosa:Observation</code></a> or an <a href="#SOSAActuation"><code>sosa:Actuation</code></a> can be a quantity value with a numeric value and a unit
-    of measure.
+    The result of an <a href="#SOSAObservation"><code>sosa:Observation</code></a>
+    or an <a href="#SOSAActuation"><code>sosa:Actuation</code></a> can be a quantity value with a numeric value and a
+    unit of measurement.
 </p>
 <p>
     It is out of the scope of this specification to recommend a particular way of representing quantitative results.
@@ -25,12 +26,13 @@
     With QUDT, a quantitative result can be represented as a <a
         href="http://qudt.org/"><code>qudt:QuantityValue</code></a>.
     In the following example <a href="http://qudt.org/vocab/unit/DEG_C">unit:DEG_C</a> is an
-    individual from the QUDT catalogue of units of measure.
+    individual from the QUDT catalogue of units of measurement.
 </p>
 <pre class="example" data-include="./rdf/examples/UOM-qudt-object.ttl" data-include-format="text"></pre>
 <p>
-    Alternatively, an IRI from the <a href="">QUDT catalogue of units of measure</a> might be used as the
-    <em>type designator</em> of a <a href="#SOSAhasSimpleResult"><code>sosa:hasSimpleResult</code></a>.
+    Alternatively, an IRI from the <a href="https://www.qudt.org/doc/2025/01/DOC_VOCAB-UNITS.html">catalogue of units of
+        measurement</a> from [[QUDT]] might be used as the <em>type designator</em>
+    of a <a href="#SOSAhasSimpleResult"><code>sosa:hasSimpleResult</code></a>.
     For this usage the resource <code>unit:DEG_C</code> is an <code>rdfs:Datatype</code>.
 </p>
 <pre class="example" data-include="./rdf/examples/UOM-qudt-datatype.ttl" data-include-format="text"></pre>
