@@ -125,7 +125,7 @@
 
 <observation/235715> a sosa:Observation ;
 	sosa:resultTime "2017-11-15T14:35:13+00:00"^^xsd:dateTime ;
-	sosa:hasSimpleResult "23.9"^^unit:DEG_C .
+	sosa:hasSimpleResult "23.9 Cel"^^cdt:ucum .
    
 <observation/235716> a sosa:Observation ;
 	sosa:resultTime "2017-11-15T15:35:13+00:00"^^xsd:dateTime ;
@@ -142,7 +142,7 @@
 	sosa:hasFeatureOfInterest <house/134/kitchen> ;
 	sosa:observedProperty <electricConsumption> ;
 	sosa:madeBySensor <sensor/927> ; 
-	sosa:hasSimpleResult "22.4"^^unit:KiloW-HR ;
+	sosa:hasSimpleResult "22.4 kW.h"^^cdt:ucum ;
 	sosa:hasResult <observation/235727/result> .
 	
 # The air temperature in the kitchen of house #134 was observed by the DHT22 #4578 embedded temperature sensor.
@@ -160,7 +160,7 @@
 		time:inXSDDateTimeStamp "2017-12-04T08:14:00:00+10:00"^^xsd:dateTime ;
 	] ;
 	sosa:resultTime "2017-12-12T10:24:00:00+10:00"^^xsd:dateTime ;
-	sosa:hasSimpleResult "6.1"^^cdt:pH .  
+	sosa:hasSimpleResult "6.1 [pH]"^^cdt:ucum .  
   
 <sampling/4578> a sosa:Sampling ;
 	geo:lat -37.9076 ; 

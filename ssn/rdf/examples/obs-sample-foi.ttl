@@ -1,3 +1,4 @@
+@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,7 +13,7 @@ ex:Ob873c4 a sosa:Observation ;
   sosa:observedProperty ex:CO2-Concentration ;
   sosa:hasFeatureOfInterest ex:Bubble873 ;
   sosa:hasUltimateFeatureOfInterest ex:EarthAtmosphere ;
-  sosa:hasSimpleResult "240"^^unit:PPM ;
+  sosa:hasSimpleResult "240 [ppm]"^^cdt:ucum ;
 .
 ex:EarthAtmosphere a sosa:FeatureOfInterest ;
   skos:exactMatch <https://www.wikidata.org/wiki/Q3230> ;
@@ -21,7 +22,3 @@ ex:CO2-Concentration a sosa:Property ;
   skos:exactMatch <http://purl.obolibrary.org/obo/ENVO_04000004> ;
   skos:prefLabel "concentration of carbon dioxide in air" ;
 . 
-unit:PPM
-  a rdfs:Datatype ;
-  rdfs:comment "pun of a QUDT Unit instance" ;
-.
