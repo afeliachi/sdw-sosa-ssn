@@ -328,7 +328,8 @@
                 A relation between a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> and an
                 <a href="#SOSAExecution">Execution</a> or <a href="#SOSADeployment">Deployment</a> operating on it,
                 <br>
-                i.e.: an Observation about it; an Actuation acting on it; an act of Sampling that sampled it; or a Deployment for which it is the subject.
+                i.e.: an Observation about it; an Actuation acting on it; an act of Sampling that sampled it; or a
+                Deployment for which it is the subject.
             </p>
             <table>
                 <tbody>
@@ -431,8 +432,9 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>is ultimate feature of interest of</em> -
-                A relation between an ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> and an 
-                <a href="#SOSAExecution">Execution</a> or <a href="#SOSADeployment">Deployment</a> that it is the ultimate subject of.
+                A relation between an ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> and an
+                <a href="#SOSAExecution">Execution</a> or <a href="#SOSADeployment">Deployment</a> that it is the
+                ultimate subject of.
             </p>
             <table>
                 <tbody>
@@ -1502,6 +1504,46 @@
             </div>
         </section>
 
+        <section class="specterm sosa" id="SOSAhasResultUnit">
+            <h6><a href="#SOSAhasResultUnit">sosa:hasResultUnit</a></h6>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasResultUnit
+            </p>
+            <p>
+                <strong>an OWL Object Property</strong>
+            </p>
+            <p>
+                <em>has result unit</em> -
+                Relation linking an <a href="#SOSAExecution">Execution</a> or
+                <a href="#SOSAExecutionCollection">ExecutionCollection</a> to the unit of measurement of its result(s).
+                This property is used on a collection to indicate the unit of measurement of the result of all members
+                of the collection.
+                <br><br>
+                The value of this property MUST be a unit of measurement.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Domain Includes</th>
+                        <td>
+                            <a href="#SOSAExecution">sosa:Execution</a>
+                            , <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/common/">http://www.w3.org/ns/sosa/common/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#Common-overview">Back to module overview</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
+            </div>
+        </section>
+
         <section class="specterm sosa" id="SOSAhasSimpleResult">
             <h6><a href="#SOSAhasSimpleResult">sosa:hasSimpleResult</a></h6>
             <p class="crossreference">
@@ -1600,7 +1642,7 @@
                 an <a href="#SOSAObservation">Observation</a> and the ultimate entity whose quality
                 was observed;
                 an act of <a href="#SOSASampling">Sampling</a> and the ultimate entity that was
-                sampled; 
+                sampled;
                 or a <a href="#SOSADeployment">Deployment</a> and its ultimate target entity.
             </p>
             <p class="note">
