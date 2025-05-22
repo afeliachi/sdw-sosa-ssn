@@ -4,8 +4,10 @@
 @prefix gr: <http://purl.org/goodrelations/v1#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
