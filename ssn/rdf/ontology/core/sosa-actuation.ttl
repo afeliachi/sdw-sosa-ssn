@@ -290,6 +290,11 @@ sosa:isResultOf
   schema:rangeIncludes sosa:Actuation ;
   rdfs:isDefinedBy sosa-common: .
 
+sosa:hasResultUnit
+  schema:domainIncludes sosa:Actuation ;
+  schema:domainIncludes sosa:ActuationCollection ;
+  rdfs:isDefinedBy sosa-common: .
+
 sosa:hasSimpleResult 
   schema:domainIncludes sosa:Actuation ;
   schema:domainIncludes sosa:ActuationCollection ;

@@ -431,6 +431,11 @@ sosa:isResultOf
   schema:rangeIncludes sosa:Observation ;
   rdfs:isDefinedBy sosa-common: .
 
+sosa:hasResultUnit
+  schema:domainIncludes sosa:Observation ;
+  schema:domainIncludes sosa:ObservationCollection ;
+  rdfs:isDefinedBy sosa-common: .
+
 sosa:hasSimpleResult 
   schema:domainIncludes sosa:Observation ;
   schema:domainIncludes sosa:ObservationCollection ;

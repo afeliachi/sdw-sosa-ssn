@@ -341,7 +341,6 @@ sosa:hasResultUnit
   schema:domainIncludes sosa:ExecutionCollection ;
   rdfs:isDefinedBy sosa-common: .
 
-
 sosa:hasSimpleResult 
   a owl:DatatypeProperty ;
   rdfs:label "has simple result"@en ;
