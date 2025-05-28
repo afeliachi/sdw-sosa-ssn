@@ -263,8 +263,7 @@ sosa:startTime owl:equivalentProperty saref:hasStartTime .
 # `saref:FeatureOfInterest` being more general than `sosa:FeatureOfInterest`, this alignemnt maps `sosa:Platform` to `saref:FeatureOfInterest` and `s4syst:System`. 
 
 sosa:Platform
-  rdfs:subClassOf s4syst:System ;
-  rdfs:subClassOf saref:FeatureOfInterest . 
+  rdfs:subClassOf s4syst:System . 
 
 
 ### Systems
