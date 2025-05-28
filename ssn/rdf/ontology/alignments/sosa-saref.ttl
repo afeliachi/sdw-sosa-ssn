@@ -57,9 +57,9 @@ sosa:saref a owl:Ontology ;
 
 ### FeatureOfInterest
 
-# In SOSA/SSN, `sosa:FeatureOfInterest` is the class of things that are the target of an execution. 
+# In SOSA/SSN, `sosa:FeatureOfInterest` is the class of things that are the target of an execution or a deployment. 
 # In SAREF, `saref:FeatureOfInterest` is the class of real world entities from which a property or a state may be acted upon, such as observed and controlled.
-# So `saref:FeatureOfInterest` is more general than `sosa:FeatureOfInterest`. An entity can be a `saref:FeatureOfInterest` even if no execution has been done about it (yet).
+# So `saref:FeatureOfInterest` is more general than `sosa:FeatureOfInterest`. An entity can be a `saref:FeatureOfInterest` even if it is not the target of an execution or a deployment.
 
 sosa:FeatureOfInterest
   rdfs:subClassOf saref:FeatureOfInterest .
