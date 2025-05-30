@@ -328,19 +328,6 @@ sosa:hasResult
   owl:inverseOf sosa:isResultOf ;
   rdfs:isDefinedBy sosa-common: .
 
-sosa:hasResultUnit
-  a owl:ObjectProperty ;
-  rdfs:label "has result unit"@en ;
-  skos:definition """
-  Relation linking an Execution or ExecutionCollection to the unit of measurement of its result.
-  This property is used on a collection to indicate the unit of measurement of the result of all members of the collection.
-
-  The value of this property MUST be a unit of measurement.
-  """@en ;
-  schema:domainIncludes sosa:Execution ;
-  schema:domainIncludes sosa:ExecutionCollection ;
-  rdfs:isDefinedBy sosa-common: .
-
 sosa:hasSimpleResult 
   a owl:DatatypeProperty ;
   rdfs:label "has simple result"@en ;

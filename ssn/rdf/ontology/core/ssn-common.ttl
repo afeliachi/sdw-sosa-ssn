@@ -148,9 +148,6 @@ sosa:hasResult
   a owl:FunctionalProperty ;
   rdfs:isDefinedBy sosa-common: .
 
-sosa:hasResultUnit
-  rdfs:isDefinedBy sosa-common: .
-
 sosa:hasSimpleResult 
   rdfs:isDefinedBy sosa-common: .
 

@@ -11,7 +11,7 @@ ex:OCa134
   a sosa:ObservationCollection ;
   sosa:hasFeatureOfInterest ex:apt134 ;
   sosa:observedProperty qk:Temperature ;
-  sosa:hasResultUnit unit:DEG_C ;
+  qudt:hasUnit unit:DEG_C ;
   sosa:hasMember ex:OCa134t1 , ex:OCa134t2 , ex:OCa134t3 ;
 .
 
