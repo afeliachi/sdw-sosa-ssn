@@ -57,7 +57,8 @@ sosa:ObservableProperty
   skos:definition """
   A quality (property, characteristic) of a FeatureOfInterest that can be observed by an Sensor.
   """@en ;
-  skos:note "'Observable' means that the value can be determined through an act of Observation using an ObservationProcedure applied by a Sensor or Observer. This can be contrasted with properties whose value is assigned by some authority (e.g. price, ownership), or whose value is a consequence of some other values (e.g. rank). "@en ;
+  skos:note """'Observable' means that the value can be determined through an act of Observation using an ObservationProcedure applied by a Sensor or Observer. 
+  This can be contrasted with properties whose value is assigned by some authority (e.g., price, ownership), or whose value is a consequence of some other values (e.g., rank). """@en ;
   skos:example "The height of a tree, the depth of a water body, or the temperature of a surface. "@en ;
   rdfs:isDefinedBy sosa-dep: .
 

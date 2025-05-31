@@ -151,6 +151,11 @@ sosa:SamplingProcedure
   A Sampling Procedure is re-usable, and might be involved in many Samplings. 
   It explains the steps to be carried out to arrive at reproducible results.
   """@en ;
+  skos:example """
+spatial distribution of locations where to collect a sample (e.g., river segment)
+instrument (or mode of use thereof) required to collect a sample (e.g., fish net, electric stunner)
+field work instructions (e.g., dig four boreholes in each cardinal direction 2 metre way from the centre of the site; collect soil material from the 15-30 cm depth and mix it in a single bag)
+  """@en ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:SpatialSample 
