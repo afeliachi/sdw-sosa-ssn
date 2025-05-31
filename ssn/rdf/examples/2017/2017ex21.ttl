@@ -14,7 +14,7 @@
 @base <https://example.org/data/> .
 
 
-<DHT22#Procedure> a sosa:Procedure ;
+<DHT22#Procedure> a sosa:ObservingProcedure ;
   sosa:hasOutput <DHT22#output> .
 
 <DHT22#output> a sosa:Output , rdfp:GraphDescription ;

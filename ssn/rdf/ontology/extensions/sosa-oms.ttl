@@ -55,9 +55,16 @@ sosa-oms:metadata
                         sosa:Sample ,
                         sosa:SampleCollection ,
                         sosa:Sampling ,
+                        sosa:SamplingCollection ,
                         sosa-oms:PreparationStep ,
                         sosa:Procedure ,
+                        sosa:ActuatingProcedure ,
+                        sosa:ObservingProcedure ,
+                        sosa:SamplingProcedure ,
+                        sosa-oms:PreparationProcedure ,
+                        sosa:Actuator ,
                         sosa:Sensor ,
+                        sosa:Sampler ,
                         sosa:Platform ,
                         sosa:Deployment ; 
     rdfs:isDefinedBy sosa-oms: .

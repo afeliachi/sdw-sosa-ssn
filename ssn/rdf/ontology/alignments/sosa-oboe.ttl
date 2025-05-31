@@ -41,7 +41,7 @@ oboe-core:ObservationCollection
     ] ;
 .
 oboe-core:Protocol
-  rdfs:subClassOf sosa:Procedure ;
+  rdfs:subClassOf sosa:ObservingProcedure ;
 .
 oboe-core:hasMeasurement
   rdfs:subPropertyOf sosa:hasMember ;

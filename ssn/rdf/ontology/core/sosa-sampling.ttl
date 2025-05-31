@@ -258,7 +258,7 @@ sosa:isResultOfUsedProcedure
   """@en ;
   schema:domainIncludes sosa:Sample ;
   schema:domainIncludes sosa:SampleCollection ;
-  schema:rangeIncludes sosa:Procedure ;
+  schema:rangeIncludes sosa:SamplingProcedure ;
   owl:inverseOf sosa:usedForExecutionHasResult ;
   rdfs:isDefinedBy sosa-sam: .
 
@@ -315,7 +315,7 @@ sosa:usedForExecutionHasResult
   skos:definition """
   Relation linking a Procedure (plan) to a Sample or SampleCollection used by it.
   """@en ;
-  schema:domainIncludes sosa:Procedure ;
+  schema:domainIncludes sosa:SamplingProcedure ;
   schema:rangeIncludes sosa:Sample ;
   schema:rangeIncludes sosa:SampleCollection ;
   owl:inverseOf sosa:isResultOfUsedProcedure ;
