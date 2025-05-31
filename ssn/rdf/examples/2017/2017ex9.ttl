@@ -36,7 +36,7 @@
    rdfs:comment "Humidity is a measure of the moisture content of air."@en ;
    rdfs:label "Relative Humidity"@en .
 
- <MeasuringRelativeHumidityA23> a sosa:Procedure ;
+ <MeasuringRelativeHumidityA23> a sosa:ObservingProcedure ;
    rdfs:comment "... detailed instructions for measuring relative humidity ..."@en ;
    .
   

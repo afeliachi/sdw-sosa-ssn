@@ -6,7 +6,9 @@
         and properties that are specifically related to modeling Actuations.
     </p>
     <figure id="Actuation">
-        <embed alt="Actuation diagram; showing Actuation, ActuationCollection, Procedure, Actuator, ActuatableProperty, FeatureOfInterest" src="images/Actuation.svg" style="width:100%" />
+        <embed
+            alt="Actuation diagram; showing Actuation, ActuationCollection, Procedure, Actuator, Property, FeatureOfInterest"
+            src="images/Actuation.svg" style="width:100%" />
         <figcaption>
             Classes and relationships involved in Actuation
             <br>
@@ -21,7 +23,8 @@
     <p>This section introduces the following classes and properties:</p>
     <div class="azlist">
         <p>
-            <a href="#SOSAActuation">sosa:Actuation</a>
+            <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
+            , <a href="#SOSAActuation">sosa:Actuation</a>
             , <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
             , <a href="#SOSAActuator">sosa:Actuator</a>
             , <a href="#SOSAactsOn">sosa:actsOn</a>
@@ -32,6 +35,64 @@
             , <a href="#SOSAwasActedOnBy">sosa:wasActedOnBy</a>
         </p>
     </div>
+
+    <section class="specterm sosa" id="SOSAActuatingProcedure">
+        <h6><a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a></h6>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/ActuatingProcedure
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p class="warning">
+            ActuatingProcedure added in the 2025 edition
+            This term is non-normative, pending further implementation experience
+        </p>
+        <p>
+            <em>Actuating Procedure</em> -
+            A workflow, protocol, plan, algorithm, or computational method specifying
+            how to make an Actuation.
+            An Actuating Procedure is re-usable, and might be involved in many Actuations.
+            It explains the steps to be carried out to arrive at reproducible results.
+        </p>
+        <table>
+            <tbody>
+                <tr class="ssn">
+                    <th>Sub class of</th>
+                    <td>
+                        <a href="#SOSAProcedure">sosa:Procedure</a>
+                    </td>
+                </tr>
+                <tr class="ssn">
+                    <th class="restrictions">Restriction</th>
+                    <td>
+                        <a href="#SOSAimplementedBy">sosa:implementedBy</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAActuator">sosa:Actuator</a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
+                        < </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttonpanel">
+            <span>
+                <span class="sosa" style="display: none;">[<a href="#"
+                        onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+                        additional SSN axioms</a>]</span>
+                <span class="ssn">[<a href="#"
+                        onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+                        additional SSN axioms</a>]</span>
+            </span>
+            <span class="back">[<a href="#Actuating">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
+    </section>
 
     <section class="specterm sosa" id="SOSAActuation">
         <h5><a href="#SOSAActuation">sosa:Actuation</a></h5>
@@ -49,16 +110,19 @@
             <br><br>
             In this context,
             <br>
-            - <a href="#SOSAhasResult">hasResult</a> shall indicate the expected value of the <a href="#SOSAProperty">Property</a> at the completion of the <a href="#SOSAActuation">Actuation</a>
+            - <a href="#SOSAhasResult">hasResult</a> shall indicate the expected value of the <a
+                href="#SOSAProperty">Property</a> at the completion of the <a href="#SOSAActuation">Actuation</a>
 
         </p>
         <p>
             <a href="#SOSArelatedObservation">relatedObservation</a> SHOULD be
-            used to link to an associated <a href="#SOSAObservation">Observation</a> or <a href="#SOSAObservationCollection">ObservationCollection</a> that monitors the actuated
+            used to link to an associated <a href="#SOSAObservation">Observation</a> or <a
+                href="#SOSAObservationCollection">ObservationCollection</a> that monitors the actuated
             property to verify that the result value has been obtained
         </p>
         <p>
-            An <a href="#SOSAActuation">Actuation</a> concerns a single <a href="#SOSAProperty">Property</a> of a single <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
+            An <a href="#SOSAActuation">Actuation</a> concerns a single <a href="#SOSAProperty">Property</a> of a single
+            <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
             Changes to multiple properties, or other combinations of Actuations, may be described in an
             <a href="#SOSAActuationCollection">ActuationCollection</a>.
         </p>
@@ -69,7 +133,8 @@
         </p>
         <p>
             <a href="#SOSArelatedObservation">relatedObservation</a> SHOULD be used
-            to link to an associated <a href="#SOSAObservation">Observation</a> or <a href="#SOSAActuationCollection">ObservationCollection</a> that monitors the actuated
+            to link to an associated <a href="#SOSAObservation">Observation</a> or <a
+                href="#SOSAActuationCollection">ObservationCollection</a> that monitors the actuated
             property to verify that the result value has been obtained..
 
         </p>
@@ -108,7 +173,7 @@
                         <em><b>ONLY</b></em> <a href="#SOSAActuator">sosa:Actuator</a>
                         <br>
                         <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAProcedure">sosa:Procedure</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
                         <br>
                         <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
                         <em><b>EXACTLY 1</b></em>
@@ -135,9 +200,11 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="sosa" style="display: none;">[<a href="#" onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+            <span class="sosa" style="display: none;">[<a href="#"
+                    onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
                     additional SSN axioms</a>]</span>
-            <span class="ssn">[<a href="#" onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+            <span class="ssn">[<a href="#"
+                    onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                     additional SSN axioms</a>]</span>
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -161,7 +228,8 @@
             Collection (set) of one or more <a href="#SOSAActuation">Actuations</a>
             or <a href="#SOSAActuationCollection">ActuationCollections</a>, i.e., collections may be nested.
             <br><br>
-            The following <a href="#SOSAActuation">Actuation</a> properties may appear in an <a href="#SOSAActuationCollection">ActuationCollection</a>:
+            The following <a href="#SOSAActuation">Actuation</a> properties may appear in an <a
+                href="#SOSAActuationCollection">ActuationCollection</a>:
             <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a>
             , <a href="#SOSAusedProcedure">usedProcedure</a>
             , <a href="#SOSAmadeByActuator">madeByActuator</a>
@@ -193,11 +261,13 @@
             collection.
             <br><br>
             4. Where an individual <a href="#SOSAActuationCollection">ActuationCollection</a> <i>has a
-                value for a property that is a range or interval</i>, each member <a href="#SOSAActuation">Actuation</a> (direct or transitive) MUST have a value for that
+                value for a property that is a range or interval</i>, each member <a href="#SOSAActuation">Actuation</a>
+            (direct or transitive) MUST have a value for that
             property that matches or falls within that range or interval.
             <br><br>
             5. Where an individual <a href="#SOSAActuationCollection">ActuationCollection</a> <i>has
-                more than one value for a property that is a range or interval</i>, each member <a href="#SOSAActuation">Actuation</a> (direct or transitive) MUST have a value for that
+                more than one value for a property that is a range or interval</i>, each member <a
+                href="#SOSAActuation">Actuation</a> (direct or transitive) MUST have a value for that
             property that matches or falls within one of those ranges or intervals.
             <br>
             The members of a collection do not necessarily share a common value for any
@@ -229,7 +299,7 @@
                         <br>
 
                         <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAProcedure">sosa:Procedure</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
                         <br>
 
                         <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
@@ -241,7 +311,8 @@
                         <br>
 
                         <a href="#SOSAhasMember">sosa:hasMember</a>
-                        <em><b>ONLY</b></em> (<a href="#SOSAActuation">sosa:Actuation</a> OR <a href="#SOSAActuationCollection">sosa:ActuationCollection</a> )
+                        <em><b>ONLY</b></em> (<a href="#SOSAActuation">sosa:Actuation</a> OR <a
+                            href="#SOSAActuationCollection">sosa:ActuationCollection</a> )
                     </td>
                 </tr>
                 <tr>
@@ -253,9 +324,11 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="sosa" style="display: none;">[<a href="#" onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+            <span class="sosa" style="display: none;">[<a href="#"
+                    onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
                     additional SSN axioms</a>]</span>
-            <span class="ssn">[<a href="#" onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+            <span class="ssn">[<a href="#"
+                    onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                     additional SSN axioms</a>]</span>
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -319,6 +392,9 @@
                         <br>
                         <a href="#SOSAactsOn">sosa:actsOn</a>
                         <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
+                        <br>
+                        <a href="#SOSAimplements">sosa:implements</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
                     </td>
                 </tr>
                 <tr>
@@ -330,9 +406,11 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="sosa" style="display: none;">[<a href="#" onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Show
+            <span class="sosa" style="display: none;">[<a href="#"
+                    onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Show
                     additional SSN axioms</a>]</span>
-            <span class="ssn">[<a href="#" onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Hide
+            <span class="ssn">[<a href="#"
+                    onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Hide
                     additional SSN axioms</a>]</span>
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -402,7 +480,8 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p class="note">
-            The 2017 edition defined the term ActuatableProperty as the range of <a href="#SOSAactsOnProperty">sosa:actsOnProperty</a>.
+            The 2017 edition defined the term ActuatableProperty as the range of <a
+                href="#SOSAactsOnProperty">sosa:actsOnProperty</a>.
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
@@ -553,9 +632,11 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="sosa" style="display: none;">[<a href="#" onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Show
+            <span class="sosa" style="display: none;">[<a href="#"
+                    onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Show
                     additional SSN axioms</a>]</span>
-            <span class="ssn">[<a href="#" onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Hide
+            <span class="ssn">[<a href="#"
+                    onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Hide
                     additional SSN axioms</a>]</span>
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -608,9 +689,11 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="sosa" style="display: none;">[<a href="#" onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Show
+            <span class="sosa" style="display: none;">[<a href="#"
+                    onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Show
                     additional SSN axioms</a>]</span>
-            <span class="ssn">[<a href="#" onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Hide
+            <span class="ssn">[<a href="#"
+                    onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Hide
                     additional SSN axioms</a>]</span>
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>

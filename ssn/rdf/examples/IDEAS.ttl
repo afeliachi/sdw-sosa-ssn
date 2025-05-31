@@ -39,7 +39,7 @@ ex:RelativeHumidity a sosa:Property ;
    rdfs:comment "Humidity is a measure of the moisture content of air."@en ;
    rdfs:label "Relative Humidity"@en ;
 .
-ex:MeasuringRelativeHumidity a sosa:Procedure ;
+ex:MeasuringRelativeHumidity a sosa:ObservingProcedure ;
    rdfs:comment "Instructions for measuring relative humidity"@en ;
 .
 ex:RH_avg_1_COPR_15min_201706020300PM a sosa:Observation ;

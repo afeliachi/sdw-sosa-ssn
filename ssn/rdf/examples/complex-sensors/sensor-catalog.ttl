@@ -36,6 +36,6 @@ property:temperature a sosa:Property ;
   rdfs:label "Air temperature" ;
 .
 
-procedure:pm-humidity-correction a sosa:Procedure ;
+procedure:pm-humidity-correction a sosa:ObservingProcedure ;
   rdfs:label "Humidity correction for Particulate Matter" ;
 .
