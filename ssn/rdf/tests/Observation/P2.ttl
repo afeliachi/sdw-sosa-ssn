@@ -16,9 +16,5 @@ ex:OP2 a sosa:Observation ;
       qudt:value "-29.9"^^xsd:decimal ] ;
     .
 
-ex:Temperature a sosa:ObservableProperty .
+ex:Temperature a sosa:Property .
 ex:apartment134 a sosa:FeatureOfInterest . 
-unit:DEG_C
-  a rdfs:Datatype ;
-  rdfs:comment "pun of a QUDT Unit instance" ;
-.

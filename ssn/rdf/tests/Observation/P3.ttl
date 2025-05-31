@@ -24,7 +24,7 @@ ex:OP3 a sosa:Observation ;
     sosa:hasSimpleResult "-29.9 Cel"^^cdt:ucum ;
 .
 
-ex:Temperature a sosa:ObservableProperty .
+ex:Temperature a sosa:Property .
 ex:apartment134 a sosa:FeatureOfInterest . 
-ex:T9 a sosa:Procedure .
+ex:T9 a sosa:ObservingProcedure .
 ex:Th3 a sosa:Sensor .

@@ -20,7 +20,7 @@ ex:StickerColor
   rdfs:label "The color of a sticker"@en ;
 .
 ex:ColorDetermination 
-  rdf:type	sosa:Procedure ;
+  rdf:type	sosa:ObservingProcedure ;
   rdfs:label "Procedure for determining the color of a sticker"@en ;
   sosa:forProperty ex:StickerColor ;
 .
@@ -59,7 +59,7 @@ ex:SmileyPopulation
   sosa:hasProperty ex:stickerColor ;
 .
 ex:SmileySamplingProcedure 
-  rdf:type sosa:Procedure ;
+  rdf:type sosa:SamplingProcedure ;
   rdfs:label "Procedure for sampling smiley stickers"@en ;
 .
 ex:SmileySampler 

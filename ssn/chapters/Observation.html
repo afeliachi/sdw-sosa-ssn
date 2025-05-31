@@ -7,7 +7,9 @@
     </p>
     <div>
         <figure id="Observation">
-            <embed alt="Observation diagram; showing Observation, ObservationCollection, Procedure, Sensor, ObservableProperty, FeatureOfInterest" src="images/Observation.svg" style="width:100%" />
+            <embed
+                alt="Observation diagram; showing Observation, ObservationCollection, Procedure, Sensor, Property, FeatureOfInterest"
+                src="images/Observation.svg" style="width:100%" />
             <figcaption>
                 Classes and relationships involved in Observation.
                 <br>
@@ -29,6 +31,7 @@
         <p>
             <a href="#SOSAObservation">sosa:Observation</a>
             , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+            , <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
             , <a href="#SOSASensor">sosa:Sensor</a>
             , <a href="#SOSAStimulus">sosa:Stimulus</a>
             , <a href="#SOSAdetects">sosa:detects</a>
@@ -78,10 +81,13 @@
         </p>
         <p>
 
-            When the <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> cannot be observed directly, a <a href="#SOSASample">Sample</a> of it might be used in Observations as a proxy.
-            In such a case the <a href="#SOSASample">Sample</a> is the proximate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the Observation,
+            When the <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> cannot be observed directly, a <a
+                href="#SOSASample">Sample</a> of it might be used in Observations as a proxy.
+            In such a case the <a href="#SOSASample">Sample</a> is the proximate <a
+                href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the Observation,
             while the (ultimate) <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the act of Sampling (i.e.
-            the entity that the Sample is ultimately <a href="#SOSAisSampleOf">isSampleOf</a>) is the ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the Observation.
+            the entity that the Sample is ultimately <a href="#SOSAisSampleOf">isSampleOf</a>) is the ultimate <a
+                href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the Observation.
         </p>
 
 
@@ -124,7 +130,7 @@
                         <em><b>ONLY</b></em> <a href="#SOSASensor">sosa:Sensor</a>
                         <br>
                         <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAProcedure">sosa:Procedure</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
                         <br>
                         <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
                         <em><b>EXACTLY 1</b></em>
@@ -167,9 +173,11 @@
         </table>
         <div class="buttonpanel">
 
-            <span class="sosa" style="display: none;">[<a href="#" onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+            <span class="sosa" style="display: none;">[<a href="#"
+                    onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
                     additional SSN axioms</a>]
-                <span class="ssn">[<a href="#" onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+                <span class="ssn">[<a href="#"
+                        onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
             <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
@@ -192,7 +200,8 @@
         <p class="note">
             An instance of <a href="#SOSAObservationCollection">ObservationCollection</a> represents a container for a
             set of data derived from observations.
-            This broadly corresponds with the class <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">dcat:Dataset</a>
+            This broadly corresponds with the class <a
+                href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">dcat:Dataset</a>
             from the Data Catalog Vocabulary [[DCAT]].
         </p>
         <p>
@@ -234,11 +243,13 @@
             property in the collection.
             <br><br>
             4. Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
-            <i>has a value for a property that is a range or interval</i>, each member <a href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
+            <i>has a value for a property that is a range or interval</i>, each member <a
+                href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
             that property that matches or falls within that range or interval.
             <br><br>
             5. Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
-            <i>has more than one value for a property that is a range or interval</i>, each member <a href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
+            <i>has more than one value for a property that is a range or interval</i>, each member <a
+                href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
             that property that matches or falls within one of those ranges or intervals.
 
             <br><br>
@@ -281,7 +292,7 @@
                         <br>
 
                         <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAProcedure">sosa:Procedure</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
                         <br>
 
                         <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
@@ -297,7 +308,8 @@
                         <br>
 
                         <a href="#SOSAhasMember">sosa:hasMember</a>
-                        <em><b>ONLY</b></em> (<a href="#SOSAObservation">sosa:Observation</a> OR <a href="#SOSAObservationCollection">sosa:ObservationCollection</a> )
+                        <em><b>ONLY</b></em> (<a href="#SOSAObservation">sosa:Observation</a> OR <a
+                            href="#SOSAObservationCollection">sosa:ObservationCollection</a> )
                     </td>
                 </tr>
                 <tr>
@@ -310,15 +322,100 @@
         </table>
         <div class="buttonpanel">
 
-            <span class="sosa" style="display: none;">[<a href="#" onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+            <span class="sosa" style="display: none;">[<a href="#"
+                    onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
                     additional SSN axioms</a>]
-                <span class="ssn">[<a href="#" onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+                <span class="ssn">[<a href="#"
+                        onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
             <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
+
+    <section class="informative specterm sosa" id="SOSAObservingProcedure">
+        <h6><a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a></h6>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservingProcedure
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p class="warning">
+            ObservingProcedure added in the 2025 edition
+            This term is non-normative, pending further implementation experience
+        </p>
+        <p>
+            <em property="rdfs:label">Observing Procedure</em> -
+            <span property="skos:definition"> A workflow, protocol, plan, algorithm, or computational method specifying
+                how to
+                make an Observation.
+                An Observing Procedure is re-usable, and might be involved in many Observations.
+                It explains the steps to be carried out to arrive at reproducible results.
+            </span>
+        </p>
+        <table>
+            <tbody>
+                <tr class="ssn">
+                    <th>Sub class of</th>
+                    <td>
+                        <a href="#SOSAProcedure">sosa:Procedure</a>
+                    </td>
+                </tr>
+                <tr class="ssn">
+                    <th class="restrictions">Restriction</th>
+                    <td>
+                        <a href="#SOSAimplementedBy">sosa:implementedBy</a>
+                        <em><b>ONLY</b></em> <a href="#SOSASensor">sosa:Sensor</a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>Examples</th>
+                    <td>
+                        <span property="skos:example">A workflow, protocol, plan, algorithm, or computational method
+                            specifying how to make an observation; the description of the process used by an
+                            observer.
+                            This could be a chemical analysis method, a protocol for measuring an object, or even
+                            a checklist used by a human observer during a biodiversity campaign.
+                            The Procedure could further describe the algorithms behind simulators or models used to
+                            generate a result
+                            from other inputs.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Note</th>
+                    <td>
+                        <span property="skos:note">[ISO 19156:2023] An ObservingProcedure shall be defined as the
+                            description of
+                            steps performed in order to determine the value of an observableProperty by an
+                            Observer.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttonpanel">
+            <span>
+                <span class="sosa" style="display: none;">[<a href="#"
+                        onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+                        additional SSN axioms</a>]</span>
+                <span class="ssn">[<a href="#"
+                        onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+                        additional SSN axioms</a>]</span>
+            </span>
+            <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
+    </section>
+
 
     <section class="specterm sosa" id="SOSASensor">
         <h5><a href="#SOSASensor">sosa:Sensor</a></h5>
@@ -374,7 +471,8 @@
                 <tr>
                     <th>Examples</th>
                     <td>
-                        Accelerometers, gyroscopes, barometers, magnetometers, etc are <a href="#SOSASensor">Sensors</a> that are typically mounted on a modern smart
+                        Accelerometers, gyroscopes, barometers, magnetometers, etc are <a href="#SOSASensor">Sensors</a>
+                        that are typically mounted on a modern smart
                         phone (which acts as <a href="#SOSAPlatform">Platform</a>).
                         Other examples of <a href="#SOSASensor">Sensors</a> include the human
                         eyes.
@@ -397,6 +495,9 @@
                         <br>
                         <a href="#SOSAdetects">sosa:detects</a>
                         <em><b>ONLY</b></em> <a href="#SOSAStimulus">sosa:Stimulus</a>
+                        <br>
+                        <a href="#SOSAimplements">sosa:implements</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
                     </td>
                 </tr>
                 <tr>
@@ -409,9 +510,11 @@
         </table>
         <div class="buttonpanel">
 
-            <span class="sosa" style="display: none;">[<a href="#" onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+            <span class="sosa" style="display: none;">[<a href="#"
+                    onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
                     additional SSN axioms</a>]
-                <span class="ssn">[<a href="#" onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+                <span class="ssn">[<a href="#"
+                        onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
             <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
@@ -467,9 +570,11 @@
         </table>
         <div class="buttonpanel">
 
-            <span class="sosa" style="display: none;">[<a href="#" onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+            <span class="sosa" style="display: none;">[<a href="#"
+                    onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
                     additional SSN axioms</a>]
-                <span class="ssn">[<a href="#" onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+                <span class="ssn">[<a href="#"
+                        onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
             <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
@@ -634,7 +739,8 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p class="note">
-            The 2017 edition defined the term ObservableProperty as the domain of <a href="#SOSAisObservedBy">sosa:isObservedBy</a>.
+            The 2017 edition defined the term ObservableProperty as the domain of <a
+                href="#SOSAisObservedBy">sosa:isObservedBy</a>.
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
@@ -696,7 +802,9 @@
                 <tr>
                     <th>Example</th>
                     <td>
-                        For example, the expansion of quicksilver is a <a href="#SOSAStimulus">Stimulus</a> that serves as a proxy for some
+                        For example, the expansion of quicksilver is a <a href="#SOSAStimulus">Stimulus</a> that serves
+                        as a
+                        proxy for some
                         temperature <a href="#SOSAProperty">Property</a>. An increase or decrease
                         in the velocity of
                         spinning cups on a wind <a href="#SOSASensor">Sensor</a> is serving as a
@@ -756,7 +864,8 @@
                 </tr>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a href="#SOSAObservation">sosa:Observation</a>, <a href="#SOSAObservationCollection">sosa:ObservationCollection</a></td>
+                    <td><a href="#SOSAObservation">sosa:Observation</a>, <a
+                            href="#SOSAObservationCollection">sosa:ObservationCollection</a></td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
@@ -1007,9 +1116,11 @@
         </table>
         <div class="buttonpanel">
 
-            <span class="sosa" style="display: none;">[<a href="#" onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+            <span class="sosa" style="display: none;">[<a href="#"
+                    onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
                     additional SSN axioms</a>]
-                <span class="ssn">[<a href="#" onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+                <span class="ssn">[<a href="#"
+                        onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
             <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
@@ -1195,7 +1306,8 @@
                         The quality of a result can be assessed following the procedures in
                         the ISO 19157 series [[iso-19157-1]].
                         <br><br>
-                        <a href="https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement">dqv:hasQualityMeasurement</a>
+                        <a
+                            href="https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement">dqv:hasQualityMeasurement</a>
                         from the Data Quality Vocabulary [[vocab-dqv]] is equivalent
                     </td>
                 </tr>

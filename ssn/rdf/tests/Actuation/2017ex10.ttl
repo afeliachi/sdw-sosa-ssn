@@ -49,7 +49,7 @@
   sosa:resultTime "2017-04-18T17:24:00+02:00"^^xsd:dateTime ;
 .
 <https://example.org/data/apartment/134/electricConsumption>
-  a sosa:ObservableProperty ;
+  a sosa:Property ;
   sosa:isObservedBy <https://example.org/data/sensor/926> ;
 .
 <https://example.org/data/sensor/926>
@@ -71,7 +71,7 @@
   ssn:hasProperty <https://example.org/data/window/104#state> ;
 .
 <https://example.org/data/window/104#state>
-  a sosa:ActuatableProperty ;
+  a sosa:Property ;
   sosa:isActedOnBy <https://example.org/data/actuation/188> ;
 .
 <https://example.org/data/windowCloser/987>

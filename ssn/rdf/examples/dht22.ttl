@@ -16,7 +16,7 @@
 
 # Complex sensor capabilities -- DHT22
 
-ex:DHT22_Procedure a sosa:Procedure ;
+ex:DHT22_Procedure a sosa:ObservingProcedure ;
   sosa:hasOutput ex:DHT22_output ;
 .
 ex:DHT22_output a rdfp:GraphDescription ;

@@ -94,7 +94,7 @@
 <sensor/927> a sosa:Sensor ;
 	sosa:implements <summingHourlyConsumptionProcedure> .
 	
-<summingHourlyConsumptionProcedure> a sosa:Procedure ;
+<summingHourlyConsumptionProcedure> a sosa:ObservingProcedure ;
 	sosa:hasOutput <electricityConsumption> ;
 	sosa:hasOutput [
 		rdfp:presentedBy [ 
@@ -131,8 +131,8 @@
 	sosa:resultTime "2017-11-15T15:35:13+00:00"^^xsd:dateTime ;
 	sosa:hasResult [
 		a qudt:QuantityValue ;
-		qudt:unit unit:DEG_C ;
-		qudt:value "22.9"^^xsd:decimal
+		qudt:value "22.9"^^xsd:decimal ;
+		qudt:hasUnit unit:DEG_C ;
 	] .
 
 # The electric consumption in the kitchen of house #134 was 22.4 kWh as 
@@ -187,7 +187,7 @@
     sosa:featureOfInterest <sample/134g1> ;
     sosa:usedProcedure <procedure/soil-organic-fraction/78> . 
     
-<procedure/soil-organic-fraction/78> a sosa:Procedure ;
+<procedure/soil-organic-fraction/78> a sosa:SamplingProcedure ;
     rdfs:comment "... details of procedure to separate the organic fraction of a soil sample ..." .
 
 

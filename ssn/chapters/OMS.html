@@ -111,10 +111,8 @@
   </p>
   <div class="azlist">
     <p>
-      <a href="#OMSObservingProcedure">sosa-oms:ObservingProcedure</a>
-      , <a href="#OMSPreparationProcedure">sosa-oms:PreparationProcedure</a>
+      <a href="#OMSPreparationProcedure">sosa-oms:PreparationProcedure</a>
       , <a href="#OMSPreparationStep">sosa-oms:PreparationStep</a>
-      , <a href="#OMSSamplingProcedure">sosa-oms:SamplingProcedure</a>
       , <a href="#OMShasPreparationStep">sosa-oms:hasPreparationStep</a>
       , <a href="#OMSmadeOnPlatform">sosa-oms:madeOnPlatform</a>
       , <a href="#OMSmetadata">sosa-oms:metadata</a>
@@ -130,75 +128,6 @@
   <p class="warning">Terms in the <code>sosa-oms:</code> namespace were added in the 2025 edition.
     These are non-normative, pending further implementation experience</p>
   <p>
-
-  <section class="informative specterm sosa" id="OMSObservingProcedure">
-    <h6><a href="#OMSObservingProcedure">sosa-oms:ObservingProcedure</a></h6>
-    <p class="crossreference">
-      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/ObservingProcedure
-    </p>
-    <p>
-      <strong>an OWL Class</strong>
-    </p>
-    <p>
-      <em>Observing Procedure</em> -
-      The description of steps performed in order to determine the value of an
-      Property by an Observer.
-      <br><br>
-      The observing procedure cannot describe a sensor instance, but it can
-      describe the sensor type.
-    </p>
-    <table>
-      <tbody>
-        <tr class="ssn">
-          <th>Sub class of</th>
-          <td>
-            sosa:Procedure
-          </td>
-        </tr>
-        <tr class="ssn">
-          <th class="restrictions">Restriction</th>
-          <td>
-
-            <a href="#SOSAforProperty">sosa:forProperty</a>
-            <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
-            <br>
-
-            <a href="#SOSAimplementedBy">sosa:implementedBy</a>
-            <em><b>ONLY</b></em> <a href="#SOSASensor">sosa:Sensor</a>
-
-          </td>
-        </tr>
-        <tr>
-          <th>Examples</th>
-          <td>
-            A workflow, protocol, plan, algorithm, or computational method
-            specifying how to make an observation; the description of the process utilized by an
-            observer.
-            This could be a chemical analysis method, a protocol for measuring an object, but could also
-            be a checklist utilized by a human observer during a biodiversity campaign.
-          </td>
-        </tr>
-        <tr>
-          <th>Note</th>
-          <td>
-            The observing procedure cannot describe a sensor instance, but it can
-            describe the sensor type.
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="buttonpanel">
-      <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
-      <span class="back">[<a href="#Overview">Back to top</a>]</span>
-    </div>
-  </section>
 
   <section class="informative specterm sosa" id="OMSPreparationProcedure">
     <h5><a href="#OMSPreparationProcedure">sosa-oms:PreparationProcedure</a></h5>
@@ -262,43 +191,6 @@
 
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
-      <span class="back">[<a href="#Overview">Back to top</a>]</span>
-    </div>
-  </section>
-
-  <section class="informative specterm sosa" id="OMSSamplingProcedure">
-    <h6><a href="#OMSSamplingProcedure">sosa-oms:SamplingProcedure</a></h6>
-    <p class="crossreference">
-      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/SamplingProcedure
-    </p>
-    <p>
-      <strong>an OWL Class</strong>
-    </p>
-    <p>
-      <em>Sampling Procedure</em> -
-      The description of steps performed by a <a href="#SOSASampler">Sampler</a>
-      in order to
-      extract a <a href="#SOSASample">Sample</a> from its sampled Feature in the frame of a <a href="#SOSASampling">Sampling</a>.
-    </p>
-    <table>
-      <tbody>
-        <tr class="ssn">
-          <th>Sub class of</th>
-          <td>
-            sosa:Procedure
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="buttonpanel">
-      <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
       <span class="back">[<a href="#Overview">Back to top</a>]</span>
     </div>
   </section>
@@ -716,7 +608,7 @@
         <td> obs-basic:ObservationCollection </td>
       </tr>
       <tr>
-        <td> <a href="#OMSObservingProcedure">sosa-oms:ObservingProcedure</a> </td>
+        <td> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a> </td>
         <td> ogc-ms:implements </td>
         <td> obs-cpt:ObservingProcedure </td>
       </tr>
@@ -761,7 +653,7 @@
         <td> sam-cpt:Sampling </td>
       </tr>
       <tr>
-        <td> <a href="#OMSSamplingProcedure">sosa-oms:SamplingProcedure</a> </td>
+        <td> <a href="#SOSASamplingProcedure">sosa:SamplingProcedure</a> </td>
         <td> ogc-ms:implements </td>
         <td> sam-cpt:SamplingProcedure </td>
       </tr>
@@ -834,7 +726,7 @@
       <tr>
         <td> obs-cpt:ObservingProcedure </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSObservingProcedure">sosa-oms:ObservingProcedure</a> </td>
+        <td> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a> </td>
       </tr>
       <tr>
         <td> sam-cpt:PreparationProcedure </td>
@@ -874,7 +766,7 @@
       <tr>
         <td> sam-cpt:SamplingProcedure </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSSamplingProcedure">sosa-oms:SamplingProcedure</a> </td>
+        <td> <a href="#SOSASamplingProcedure">sosa:SamplingProcedure</a> </td>
       </tr>
       <tr>
         <td> sam-basic:SpatialSample </td>

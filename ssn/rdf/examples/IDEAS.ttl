@@ -40,7 +40,7 @@ ex:RelativeHumidity a sosa:Property ;
    rdfs:label "Relative Humidity"@en ;
    skos:exactMatch qk:RelativeHumidity ;
 .
-ex:MeasuringRelativeHumidity a sosa:Procedure ;
+ex:MeasuringRelativeHumidity a sosa:ObservingProcedure ;
    rdfs:comment "Instructions for measuring relative humidity"@en ;
    rdfs:comment "Relative humidity as averaged over 15min."@en ;
 .

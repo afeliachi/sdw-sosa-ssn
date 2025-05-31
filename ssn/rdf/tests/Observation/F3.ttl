@@ -24,5 +24,5 @@ ex:OF3 a sosa:Observation ;
     .
 
 ex:apartment134 a sosa:FeatureOfInterest . 
-ex:T9 a sosa:Procedure .
+ex:T9 a sosa:ObservingProcedure .
 ex:Th3 a sosa:Sensor .
