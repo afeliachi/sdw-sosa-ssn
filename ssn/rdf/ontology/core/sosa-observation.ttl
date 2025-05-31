@@ -39,7 +39,7 @@ sosa:Observation
   An Observation concerns a single Property of a single FeatureOfInterest. 
   Observations of multiple properties, or other combinations of Observations, may be described in an ObservationCollection. 
   
-  Alternatively, applications may choose to encapsulate complexity by defining a complex property with multiple individual components, and a corresponding complex result (e.g. a vector). 
+  Alternatively, applications may choose to encapsulate complexity by defining a complex property with multiple individual components, and a corresponding complex result (e.g., a vector). 
   This approach is not prohibited by the SSN Ontology, but the details are beyond the scope of SSN.
   """@en ;
   skos:example "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en ;
@@ -72,6 +72,18 @@ sosa:ObservationCollection
   skos:note """An instance of ObservationCollection represents a container for a set of data derived from observations.
             This broadly corresponds with the class Dataset from DCAT."""@en ;
   rdfs:isDefinedBy sosa-obs: .
+
+sosa:ObservingProcedure 
+  a owl:Class ;
+  rdfs:label "Observing Procedure"@en ;
+  skos:definition """
+  A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation. 
+  An Observing Procedure is re-usable, and might be involved in many Observations. 
+  It explains the steps to be carried out to arrive at reproducible results.
+  """@en ;
+  skos:example """This could be a chemical analysis method, a protocol for measuring an object, or even a checklist used by a human observer during a biodiversity campaign."""@en ;
+  rdfs:isDefinedBy sosa-obs: .
+
 
 sosa:Sensor 
   a owl:Class ;
@@ -377,6 +389,7 @@ sosa:Execution
 sosa:usedProcedure 
   schema:domainIncludes sosa:Observation ;
   schema:domainIncludes sosa:ObservationCollection ;
+  schema:rangeIncludes sosa:ObservingProcedure ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:startTime 
@@ -444,6 +457,7 @@ sosa:System
 
 sosa:implements 
   schema:domainIncludes sosa:Sensor ;
+  schema:rangeIncludes sosa:ObservingProcedure ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasSubSystem 

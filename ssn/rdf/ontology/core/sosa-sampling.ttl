@@ -143,6 +143,21 @@ sosa:SamplingCollection
   skos:note """The members of a collection do not necessarily share a common value for any property."""@en ;
   rdfs:isDefinedBy sosa-sam: .
 
+sosa:SamplingProcedure  
+  a owl:Class ;
+  rdfs:label "Sampling Procedure"@en ;
+  skos:definition """
+  A workflow, protocol, plan, algorithm, or computational method specifying how to make a Sampling. 
+  A Sampling Procedure is re-usable, and might be involved in many Samplings. 
+  It explains the steps to be carried out to arrive at reproducible results.
+  """@en ;
+  skos:example """
+spatial distribution of locations where to collect a sample (e.g., river segment)
+instrument (or mode of use thereof) required to collect a sample (e.g., fish net, electric stunner)
+field work instructions (e.g., dig four boreholes in each cardinal direction 2 metre way from the centre of the site; collect soil material from the 15-30 cm depth and mix it in a single bag)
+  """@en ;
+  rdfs:isDefinedBy sosa-sam: .
+
 sosa:SpatialSample 
   a owl:Class ;
   rdfs:label "Spatial Sample"@en ;
@@ -243,7 +258,7 @@ sosa:isResultOfUsedProcedure
   """@en ;
   schema:domainIncludes sosa:Sample ;
   schema:domainIncludes sosa:SampleCollection ;
-  schema:rangeIncludes sosa:Procedure ;
+  schema:rangeIncludes sosa:SamplingProcedure ;
   owl:inverseOf sosa:usedForExecutionHasResult ;
   rdfs:isDefinedBy sosa-sam: .
 
@@ -300,7 +315,7 @@ sosa:usedForExecutionHasResult
   skos:definition """
   Relation linking a Procedure (plan) to a Sample or SampleCollection used by it.
   """@en ;
-  schema:domainIncludes sosa:Procedure ;
+  schema:domainIncludes sosa:SamplingProcedure ;
   schema:rangeIncludes sosa:Sample ;
   schema:rangeIncludes sosa:SampleCollection ;
   owl:inverseOf sosa:isResultOfUsedProcedure ;
@@ -398,6 +413,7 @@ sosa:Execution
 sosa:usedProcedure 
   schema:domainIncludes sosa:Sampling ;
   schema:domainIncludes sosa:SamplingCollection ;
+  schema:rangeIncludes sosa:SamplingProcedure ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:startTime 
@@ -465,6 +481,7 @@ sosa:System
 
 sosa:implements 
   schema:domainIncludes sosa:Sampler ;
+  schema:rangeIncludes sosa:SamplingProcedure ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasSubSystem 

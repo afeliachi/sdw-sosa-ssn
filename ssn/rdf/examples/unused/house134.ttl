@@ -94,7 +94,7 @@
 <sensor/927> a sosa:Sensor ;
 	sosa:implements <summingHourlyConsumptionProcedure> .
 	
-<summingHourlyConsumptionProcedure> a sosa:Procedure ;
+<summingHourlyConsumptionProcedure> a sosa:ObservingProcedure ;
 	sosa:hasOutput <electricityConsumption> ;
 	sosa:hasOutput [
 		rdfp:presentedBy [ 
@@ -187,7 +187,7 @@
     sosa:featureOfInterest <sample/134g1> ;
     sosa:usedProcedure <procedure/soil-organic-fraction/78> . 
     
-<procedure/soil-organic-fraction/78> a sosa:Procedure ;
+<procedure/soil-organic-fraction/78> a sosa:SamplingProcedure ;
     rdfs:comment "... details of procedure to separate the organic fraction of a soil sample ..." .
 
 

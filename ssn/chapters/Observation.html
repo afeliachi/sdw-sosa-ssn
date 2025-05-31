@@ -8,7 +8,7 @@
     <div>
         <figure id="Observation">
             <embed
-                alt="Observation diagram; showing Observation, ObservationCollection, Procedure, Sensor, ObservableProperty, FeatureOfInterest"
+                alt="Observation diagram; showing Observation, ObservationCollection, Procedure, Sensor, Property, FeatureOfInterest"
                 src="images/Observation.svg" style="width:100%" />
             <figcaption>
                 Classes and relationships involved in Observation.
@@ -31,6 +31,7 @@
         <p>
             <a href="#SOSAObservation">sosa:Observation</a>
             , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+            , <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
             , <a href="#SOSASensor">sosa:Sensor</a>
             , <a href="#SOSAStimulus">sosa:Stimulus</a>
             , <a href="#SOSAdetects">sosa:detects</a>
@@ -129,7 +130,7 @@
                         <em><b>ONLY</b></em> <a href="#SOSASensor">sosa:Sensor</a>
                         <br>
                         <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAProcedure">sosa:Procedure</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
                         <br>
                         <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
                         <em><b>EXACTLY 1</b></em>
@@ -250,9 +251,9 @@
             property that matches or falls within that range or interval.
             <br><br>
             5. Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
-            <i>has more than one value for a property that is a range or interval</i>,
-            each member <a href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for that
-            property that matches or falls within one of those ranges or intervals.
+            <i>has more than one value for a property that is a range or interval</i>, each member
+            <a href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
+            that property that matches or falls within one of those ranges or intervals.
             <br><br>
             The results of collections of observations are often packaged in a 'data cube' whose axes define the
             range of properties of the set of observations.
@@ -291,7 +292,7 @@
                         <br>
 
                         <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAProcedure">sosa:Procedure</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
                         <br>
 
                         <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
@@ -332,6 +333,89 @@
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
+
+    <section class="informative specterm sosa" id="SOSAObservingProcedure">
+        <h6><a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a></h6>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservingProcedure
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p class="warning">
+            ObservingProcedure added in the 2025 edition
+            This term is non-normative, pending further implementation experience
+        </p>
+        <p>
+            <em property="rdfs:label">Observing Procedure</em> -
+            <span property="skos:definition"> A workflow, protocol, plan, algorithm, or computational method specifying
+                how to
+                make an Observation.
+                An Observing Procedure is re-usable, and might be involved in many Observations.
+                It explains the steps to be carried out to arrive at reproducible results.
+            </span>
+        </p>
+        <table>
+            <tbody>
+                <tr class="ssn">
+                    <th>Sub class of</th>
+                    <td>
+                        <a href="#SOSAProcedure">sosa:Procedure</a>
+                    </td>
+                </tr>
+                <tr class="ssn">
+                    <th class="restrictions">Restriction</th>
+                    <td>
+                        <a href="#SOSAimplementedBy">sosa:implementedBy</a>
+                        <em><b>ONLY</b></em> <a href="#SOSASensor">sosa:Sensor</a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>Examples</th>
+                    <td>
+                        <span property="skos:example">A workflow, protocol, plan, algorithm, or computational method
+                            specifying how to make an observation; the description of the process used by an
+                            observer.
+                            This could be a chemical analysis method, a protocol for measuring an object, or even
+                            a checklist used by a human observer during a biodiversity campaign.
+                            The Procedure could further describe the algorithms behind simulators or models used to
+                            generate a result
+                            from other inputs.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Note</th>
+                    <td>
+                        <span property="skos:note">[ISO 19156:2023] An ObservingProcedure shall be defined as the
+                            description of
+                            steps performed in order to determine the value of an observableProperty by an
+                            Observer.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttonpanel">
+            <span>
+                <span class="sosa" style="display: none;">[<a href="#"
+                        onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+                        additional SSN axioms</a>]</span>
+                <span class="ssn">[<a href="#"
+                        onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+                        additional SSN axioms</a>]</span>
+            </span>
+            <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
+    </section>
+
 
     <section class="specterm sosa" id="SOSASensor">
         <h5><a href="#SOSASensor">sosa:Sensor</a></h5>
@@ -411,6 +495,9 @@
                         <br>
                         <a href="#SOSAdetects">sosa:detects</a>
                         <em><b>ONLY</b></em> <a href="#SOSAStimulus">sosa:Stimulus</a>
+                        <br>
+                        <a href="#SOSAimplements">sosa:implements</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
                     </td>
                 </tr>
                 <tr>
@@ -715,14 +802,11 @@
                 <tr>
                     <th>Example</th>
                     <td>
-                        For example, the expansion of quicksilver is a <a href="#SOSAStimulus">Stimulus</a> that serves
-                        as a proxy for some
-                        temperature <a href="#SOSAProperty">Property</a>. An increase or decrease
-                        in the velocity of
-                        spinning cups on a wind <a href="#SOSASensor">Sensor</a> is serving as a
-                        proxy for
-                        the
-                        wind speed.
+                        For example, the expansion of quicksilver is a <a href="#SOSAStimulus">Stimulus</a>
+                        that serves as a proxy for some temperature <a href="#SOSAProperty">Property</a>.
+                        An increase or decrease in the velocity of spinning cups on a wind
+                        <a href="#SOSASensor">Sensor</a>
+                        is serving as a proxy for the wind speed.
                     </td>
                 </tr>
                 <tr>

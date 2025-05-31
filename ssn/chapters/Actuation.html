@@ -7,7 +7,7 @@
     </p>
     <figure id="Actuation">
         <embed
-            alt="Actuation diagram; showing Actuation, ActuationCollection, Procedure, Actuator, ActuatableProperty, FeatureOfInterest"
+            alt="Actuation diagram; showing Actuation, ActuationCollection, Procedure, Actuator, Property, FeatureOfInterest"
             src="images/Actuation.svg" style="width:100%" />
         <figcaption>
             Classes and relationships involved in Actuation
@@ -23,7 +23,8 @@
     <p>This section introduces the following classes and properties:</p>
     <div class="azlist">
         <p>
-            <a href="#SOSAActuation">sosa:Actuation</a>
+            <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
+            , <a href="#SOSAActuation">sosa:Actuation</a>
             , <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
             , <a href="#SOSAActuator">sosa:Actuator</a>
             , <a href="#SOSAactsOn">sosa:actsOn</a>
@@ -34,6 +35,64 @@
             , <a href="#SOSAwasActedOnBy">sosa:wasActedOnBy</a>
         </p>
     </div>
+
+    <section class="specterm sosa" id="SOSAActuatingProcedure">
+        <h6><a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a></h6>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/ActuatingProcedure
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p class="warning">
+            ActuatingProcedure added in the 2025 edition
+            This term is non-normative, pending further implementation experience
+        </p>
+        <p>
+            <em>Actuating Procedure</em> -
+            A workflow, protocol, plan, algorithm, or computational method specifying
+            how to make an Actuation.
+            An Actuating Procedure is re-usable, and might be involved in many Actuations.
+            It explains the steps to be carried out to arrive at reproducible results.
+        </p>
+        <table>
+            <tbody>
+                <tr class="ssn">
+                    <th>Sub class of</th>
+                    <td>
+                        <a href="#SOSAProcedure">sosa:Procedure</a>
+                    </td>
+                </tr>
+                <tr class="ssn">
+                    <th class="restrictions">Restriction</th>
+                    <td>
+                        <a href="#SOSAimplementedBy">sosa:implementedBy</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAActuator">sosa:Actuator</a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
+                        < </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttonpanel">
+            <span>
+                <span class="sosa" style="display: none;">[<a href="#"
+                        onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+                        additional SSN axioms</a>]</span>
+                <span class="ssn">[<a href="#"
+                        onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+                        additional SSN axioms</a>]</span>
+            </span>
+            <span class="back">[<a href="#Actuating">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
+    </section>
 
     <section class="specterm sosa" id="SOSAActuation">
         <h5><a href="#SOSAActuation">sosa:Actuation</a></h5>
@@ -114,7 +173,7 @@
                         <em><b>ONLY</b></em> <a href="#SOSAActuator">sosa:Actuator</a>
                         <br>
                         <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAProcedure">sosa:Procedure</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
                         <br>
                         <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
                         <em><b>EXACTLY 1</b></em>
@@ -242,7 +301,7 @@
                         <br>
 
                         <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAProcedure">sosa:Procedure</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
                         <br>
 
                         <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
@@ -335,6 +394,9 @@
                         <br>
                         <a href="#SOSAactsOn">sosa:actsOn</a>
                         <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
+                        <br>
+                        <a href="#SOSAimplements">sosa:implements</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
                     </td>
                 </tr>
                 <tr>

@@ -22,7 +22,7 @@
   sosa:isSampleOf <UCSB> ;
 .
 ex:RoomTemperature
-  rdf:type sosa:Procedure ;
+  rdf:type sosa:ObservingProcedure ;
   rdfs:comment "This is a procedure for measuring room temperatures. To ensure a meaningful interpretation of results and interoperability, all room temperature observations need to follow the same procedure. (1) The sensor should be put at least 1m above ground. (2) The sensor should be shielded from direct sun light and circulating air, e.g., via an open window. Other heat sources such as computers should be avoided as well. (3) The sensor should not be moved during observations. (4) Room temperature observations are only comparable if they were taken during comparable outside conditions and with closed windows and doors. (5)...."^^xsd:string ;
 .
 ex:SamsungGalaxyS4_23
