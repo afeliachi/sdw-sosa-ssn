@@ -18,7 +18,7 @@ _:obs75134 a sosa:Observation ;
   sosa:hasSimpleResult 0.323 ;
   sosa:hasResult [
     qudt:value 0.323 ;
-    qudt:unit unit:MicroGM-PER-M3 ;
+    qudt:hasUnit unit:MicroGM-PER-M3 ;
   ] ;
   sosa:usedProcedure [ qb:order 1 ; skos:broader procedure:pm-humidity-correction ] ;
 .

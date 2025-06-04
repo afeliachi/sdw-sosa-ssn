@@ -10,6 +10,8 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @base <https://example.org/data/iphone_barometer/> .
 
+# iPhone Barometer
+
 ex:iphone_barometer-sosa a owl:Ontology ;
   rdfs:comment "The barometric readings from a Bosch Sensortec BMP282 sensor in an Apple IPhone 7 observed on June 6 2017 using only the SOSA core."@en ;
 .
@@ -37,7 +39,7 @@ ex:Observation_346344 rdf:type sosa:Observation ;
   sosa:hasFeatureOfInterest ex:EarthAtmosphere ;
   sosa:madeBySensor ex:sensor_35-207306-844818-0_BMP282 ;
   sosa:hasSimpleResult "1021.45 hPa"^^cdt:ucum ;
-  sosa:resultTime "2017-06-06T12:36:12Z"^^xsd:dateTime ;
+  sosa:resultTime "2017-06-06T12:36:12+00:00"^^xsd:dateTime ;
 .
 # Another observation made a second later by the Bosch Sensortec BMP282 atmospheric pressure sensor
 

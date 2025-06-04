@@ -25,7 +25,7 @@ ex:WellDrilling4578 a sosa:Sampling ;
   ] ;
   sosa:hasResult ex:IceCore12 ;
   sosa:madeBySampler ex:ThermalDrill2 ;
-  sosa:resultTime "2017-04-03T11:12:00Z"^^xsd:dateTime ;
+  sosa:resultTime "2017-04-03T11:12:00+00:00"^^xsd:dateTime ;
   sosa:hasFeatureOfInterest ex:Antarctic_ice_sheet ;
 .
 ex:CoreEx1923 a sosa:Sampling ;
@@ -34,7 +34,7 @@ ex:CoreEx1923 a sosa:Sampling ;
   ] ;
   sosa:hasResult ex:Bubble873 ;
   sosa:madeBySampler orcid:0000-0002-3884-3420 ;
-  sosa:resultTime "2018-01-09T14:12:00Z"^^xsd:dateTime ;
+  sosa:resultTime "2018-01-09T14:12:00+00:00"^^xsd:dateTime ;
   sosa:hasFeatureOfInterest ex:IceCore12 ;
   sosa:hasUltimateFeatureOfInterest ex:Antarctic_ice_sheet ;
 .

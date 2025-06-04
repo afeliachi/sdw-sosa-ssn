@@ -22,7 +22,7 @@
   sosa:madeBySensor <rangefinder/30> ;
   sosa:hasResult [ 
     qudt:hasUnit unit:M ; 
-    qudt:numericalValue "15.3"^^xsd:decimal ] .
+    qudt:value "15.3"^^xsd:decimal ] .
 
 # using SSN, one can explicitly link a property and its feature of interest.
  

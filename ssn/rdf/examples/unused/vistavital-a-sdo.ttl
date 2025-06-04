@@ -100,9 +100,9 @@ vistavital-a:Observation_1_ex
   sosa:observedProperty <https://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
   sosa:phenomenonTime [
       rdf:type time:Instant ;
-      time:inXSDDateTime "2005-09-01T13:00:00Z"^^xsd:dateTime ;
+      time:inXSDDateTime "2005-09-01T13:00:00+00:00"^^xsd:dateTime ;
     ] ;
-  sosa:resultTime "2005-12-28T13:48:44Z"^^xsd:dateTime ;
+  sosa:resultTime "2005-12-28T13:48:44+00:00"^^xsd:dateTime ;
 .
 vistavital-a:Observation_1_prov
   rdf:type sosa:Observation ;
@@ -134,9 +134,9 @@ vistavital-a:Observation_1_prov
   sosa:observedProperty <https://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
   sosa:phenomenonTime [
       rdf:type time:Instant ;
-      time:inXSDDateTime "2005-09-01T13:00:00Z"^^xsd:dateTime ;
+      time:inXSDDateTime "2005-09-01T13:00:00+00:00"^^xsd:dateTime ;
     ] ;
-  sosa:resultTime "2005-12-28T13:48:44Z"^^xsd:dateTime ;
+  sosa:resultTime "2005-12-28T13:48:44+00:00"^^xsd:dateTime ;
 .
 vistavital-a:Observation_1_sdo
   rdf:type sosa:Observation ;
@@ -154,9 +154,9 @@ vistavital-a:Observation_1_sdo
   sosa:observedProperty <https://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
   sosa:phenomenonTime [
       rdf:type time:Instant ;
-      time:inXSDDateTime "2005-09-01T13:00:00Z"^^xsd:dateTime ;
+      time:inXSDDateTime "2005-09-01T13:00:00+00:00"^^xsd:dateTime ;
     ] ;
-  sosa:resultTime "2005-12-28T13:48:44Z"^^xsd:dateTime ;
+  sosa:resultTime "2005-12-28T13:48:44+00:00"^^xsd:dateTime ;
 .
 
 vistavital-a:BP a rdfs:Datatype ;

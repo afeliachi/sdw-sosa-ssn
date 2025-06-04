@@ -64,4 +64,8 @@ ex:t4
 ex:station223 a sosa:FeatureOfInterest .
 ex:p1 a sosa:Property .
 ex:fooglemeter39 a sosa:Sensor .
-unit:M-PER-SEC a rdfs:Datatype .
+
+unit:M-PER-SEC 
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+  .

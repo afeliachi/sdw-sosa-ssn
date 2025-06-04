@@ -8,8 +8,7 @@
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @base <https://example.org/data/tree/> .
 
-# rangefinder #30 is a laser range finder sensor that was used 
-# to observe the height of tree #124 and #125
+# Tree height measurement
 
 ex:rangefinder_30 a sosa:Sensor ;
   rdfs:label "rangefinder #30"@en ;

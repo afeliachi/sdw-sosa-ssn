@@ -32,7 +32,7 @@ ex:OCa134t3
 .
 
 unit:DEG_C 
-  a qudt:Unit ;
+  a qudt:hasUnit ;
 .
 ex:apt134
   a sosa:FeatureOfInterest ;

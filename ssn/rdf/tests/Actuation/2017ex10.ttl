@@ -28,14 +28,14 @@
       a time:Interval ;
       time:hasBeginning [
           a time:Instant ;
-          time:inXSDDateTimeStamp "2017-04-15T00:00:00+00:00"^^xsd:dateTimeStamp ;
+          time:inXSDDateTimeStamp "2017-04-15T00:00:00+00:00"^^xsd:dateTime ;
         ] ;
       time:hasEnd [
           a time:Instant ;
-          time:inXSDDateTimeStamp "2017-04-16T00:00:00+00:00"^^xsd:dateTimeStamp ;
+          time:inXSDDateTimeStamp "2017-04-16T00:00:00+00:00"^^xsd:dateTime ;
         ] ;
     ] ;
-  sosa:resultTime "2017-04-16T00:00:12+00:00"^^xsd:dateTimeStamp ;
+  sosa:resultTime "2017-04-16T00:00:12+00:00"^^xsd:dateTime ;
 .
 <https://example.org/data/Observation/235754>
   a sosa:Observation ;
@@ -46,7 +46,7 @@
   sosa:actsOnProperty <https://example.org/data/window/104#state> ;
   sosa:actuationMadeBy <https://example.org/data/windowCloser/987> ;
   sosa:hasSimplResult true ;
-  sosa:resultTime "2017-04-18T17:24:00+02:00"^^xsd:dateTimeStamp ;
+  sosa:resultTime "2017-04-18T17:24:00+02:00"^^xsd:dateTime ;
 .
 <https://example.org/data/apartment/134/electricConsumption>
   a sosa:Property ;

@@ -44,6 +44,14 @@ ex:BP
   a time:TRS ;
   skos:definition "Years before 1950, positive backwards" ;
 .
+unit:YR
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+  .
+unit:PPM
+  a rdfs:Datatype ;
+  rdfs:comment "pun of a QUDT Unit instance" ;
+.
 ex:Antarctic_ice_sheet a sosa:FeatureOfInterest ;
   skos:exactMatch <https://www.wikidata.org/wiki/Q571430> ;
 . 

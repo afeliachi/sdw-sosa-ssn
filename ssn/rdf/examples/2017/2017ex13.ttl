@@ -22,7 +22,7 @@
   sosa:madeBySensor <rangefinder/30> ;
   sosa:hasResult [ 
     qudt:hasUnit unit:M ; 
-    qudt:numericalValue "15.3"^^xsd:decimal ] .
+    qudt:value "15.3"^^xsd:decimal ] .
 
 <tree/124>  rdf:type    sosa:FeatureOfInterest ;
   rdfs:label "tree #124"@en .
@@ -39,7 +39,7 @@
   sosa:madeBySensor <rangefinder/30> ;
   sosa:hasResult [ 
     qudt:value "23.0"^^xsd:decimal ;
-    qudt:hasUnit qunit:M ] .
+    qudt:hasUnit unit:M ] .
 
 <tree/125>  rdf:type    sosa:FeatureOfInterest ;
   rdfs:label "tree #125"@en .
