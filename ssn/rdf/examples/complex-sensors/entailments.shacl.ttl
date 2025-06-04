@@ -6,7 +6,7 @@ ex:ObservationEntailments
     sh:construct """
         CONSTRUCT {
             $this sosa:hasResult [
-                  qudt:numericValue ?simpleResult ;
+                  qudt:value ?simpleResult ;
                   qudt:unit ?unit ;
                 ] ;
                 sosa:usedProcedure ?procedure ;

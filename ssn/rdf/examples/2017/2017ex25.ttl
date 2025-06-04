@@ -16,7 +16,7 @@
 @base <https://data.grandlyon.com/> .
 
 <Organization/1> a org:Organization ;
-    owl:sameAs <http://dbpedia.org/page/Metropolis_of_Lyon> .
+    skos:exactMatch <http://dbpedia.org/page/Metropolis_of_Lyon> .
 
 <Air> a sosa:FeatureOfInterest ;
   rdfs:label "The air."@en .
@@ -38,7 +38,7 @@
   rdfs:comment "A temperature range of -20 to 70 Celsius."@en ;
   xsd:minInclusive -20.0 ;
   xsd:maxInclusive 70.0 ;
-  qudt:unit unit:DegreeCelsius .
+  qudt:unit unit:DEG_C .
 
 <IP68_Outdoor_Temperature_Sensor#systemCapability> a sosa:Property , ssn-system:SystemCapability ;
   rdfs:comment "The sensor capability in normal operating conditions."@en ;
@@ -47,18 +47,18 @@
 
 <IP68_Outdoor_Temperature_Sensor#RFSensitivity> a sosa:Property , ssn-system:Sensitivity , schema:PropertyValue ;
   schema:value -137 ;
-  qudt:unit unit:DecibelReferredToOneMilliwatt .
+  qudt:unit unit:DeciB-MilliW .
 
 <IP68_Outdoor_Temperature_Sensor#TemperatureAccuracy> a sosa:Property , ssn-system:Accuracy , schema:PropertyValue ;
   sosa:forProperty <Air?lat=45.75&long=4.85#temperature> ;
   xsd:minInclusive -0.2 ;
   xsd:maxInclusive 0.2 ;
-  qudt:unit unit:DegreeCelsius .
+  qudt:unit unit:DEG_C .
 
 <IP68_Outdoor_Temperature_Sensor#TemperatureResolution> a sosa:Property , ssn-system:Resolution , schema:PropertyValue ;
   sosa:forProperty <Air?lat=45.75&long=4.85#temperature> ;
   schema:value 0.0625 ;
-  qudt:unit unit:DegreeCelsius .
+  qudt:unit unit:DEG_C .
 
 <IP68_Outdoor_Temperature_Sensor#BatteryResolution> a sosa:Property , ssn-system:Resolution , schema:PropertyValue ;
   sosa:forProperty <Sensor/SL-T-P1#battery> ;
