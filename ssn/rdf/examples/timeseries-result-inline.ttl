@@ -29,16 +29,16 @@ ex:ts159i
   2017-04-15T20:01:00+00:00,3.21
   2017-04-15T20:02:00+00:00,3.15
   2017-04-15T20:03:00+00:00,3.15"""^^ex:SpeedObservationCSVRecord ;
-  rdfs:comment """The result of the observation is encoded as a CSV literal.  
-  In this example, the CSV has four rows each representing a member of the time-series.  
-  Each member value is composed of a timestamp, and a quantity in metres per second."""@en ;
+  rdfs:comment """The result of this observation is encoded as a CSV literal.  
+  The CSV has four rows each representing a member of the time-series.  
+  The CSV structure is defined in the datatype definition."""@en ;
 .
 ex:station223 a sosa:FeatureOfInterest .
 ex:p1 a sosa:Property .
 ex:fooglemeter39 a sosa:Sensor .
 
 ex:SpeedObservationCSVRecord a rdfs:Datatype ;
-  rdfs:comment """Example of a datatype definition for CSV-encoded data records conforming to the speed observation data model.
+  rdfs:comment """Datatype definition for CSV-encoded data records conforming to the speed observation data model.
   The speed observation data model is defined using the OGC SWE Data Model given as the object of ex:asSWEDataModel.
   The formal definition of this datatype (a lexical space, value space, lexical-to-value mapping) is left unspecified in this example.""" ;
   ex:asSWEDataModel """{
