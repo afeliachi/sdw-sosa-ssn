@@ -371,12 +371,12 @@
         <p>
             <em>Sample Collection</em> -
             A <a href="#SOSASampleCollection">SampleCollection</a> is a collection
-            (set) of one or more <a href="#SOSASample">Samples</a> or 
-<a href="#SOSASampleCollection">SampleCollections</a>, i.e., collections may be nested.
+            (set) of one or more <a href="#SOSASample">Samples</a> or
+            <a href="#SOSASampleCollection">SampleCollections</a>, i.e., collections may be nested.
         </p>
         <p>
-            The following <a href="#SOSASample">Sample</a> properties may appear in a 
-<a href="#SOSASampleCollection">SampleCollection</a>:
+            The following <a href="#SOSASample">Sample</a> properties may appear in a
+            <a href="#SOSASampleCollection">SampleCollection</a>:
             <a href="#SOSAhasOriginalSample">hasOriginalSample</a> ,
             <a href="#SOSAhasSampledFeature">hasSampledFeature</a> ,
             <a href="#SOSAisSampleOf">isSampleOf</a> ,
@@ -399,8 +399,8 @@
                 Where an individual <a href="#SOSASampleCollection">SampleCollection</a> has <i>a single value for a
                     property</i>, each ember <a href="#SOSASample">Sample</a> (direct or transitive) MUST have that same
                 value for that property - i.e., the collection is homogeneous in that property. That property MAY be
-                omitted in any member <a href="#SOSASample">Sample</a> or 
-<a href="#SOSASampleCollection">SampleCollection</a>.
+                omitted in any member <a href="#SOSASample">Sample</a> or
+                <a href="#SOSASampleCollection">SampleCollection</a>.
             </li>
             <li>
                 Where an individual <a href="#SOSASampleCollection">SampleCollection</a> has <i>more than one value
@@ -493,8 +493,8 @@
                 <tr>
                     <th>Examples</th>
                     <td>A ball mill, diamond drill, hammer, hypodermic syringe and needle,
-                        image <a href="#SOSASensor">Sensor</a> or a soil auger can all act as 
-<a href="#SOSASampler">Samplers</a>.
+                        image <a href="#SOSASensor">Sensor</a> or a soil auger can all act as
+                        <a href="#SOSASampler">Samplers</a>.
                         Sometimes the distinction between the <a href="#SOSASampler">Sampler</a> and the
                         <a href="#SOSASampler">Sensor</a> is not evident, if they are packaged as a unit.
                         <br><br>
@@ -631,13 +631,13 @@
             This term is non-normative pending further implementation experience</p>
         <p>
             <em>Sampling Collection</em> -
-            Collection (set) of one or more <a href="#SOSASampling">Samplings</a> or 
-<a href="#SOSASamplingCollection">SamplingCollections</a>, i.e., collections may be
+            Collection (set) of one or more <a href="#SOSASampling">Samplings</a> or
+            <a href="#SOSASamplingCollection">SamplingCollections</a>, i.e., collections may be
             nested.
         </p>
         <p>
-            The following <a href="#SOSASampling">Sampling</a> properties may appear in an 
-<a href="#SOSASamplingCollection">SamplingCollection</a>:
+            The following <a href="#SOSASampling">Sampling</a> properties may appear in an
+            <a href="#SOSASamplingCollection">SamplingCollection</a>:
             <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a>,
             <a href="#SOSAhasUltimateFeatureOfInterest">hasUltimateFeatureOfInterest</a>,
             <a href="#SOSAmadeBySampler">madeBySampler</a>,
@@ -677,15 +677,15 @@
             </li>
             <li>
                 Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> <i>has a
-                    value for a property that is a range or interval</i>, each member 
-<a href="#SOSASampling">Sampling</a>
+                    value for a property that is a range or interval</i>, each member
+                <a href="#SOSASampling">Sampling</a>
                 (direct or transitive) MUST have a value for that
                 property that matches or falls within that range or interval.
             </li>
             <li>
                 Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> <i>has
-                    more than one value for a property that is a range or interval</i>, each member 
-<a href="#SOSASampling">Sampling</a> (direct or transitive) MUST have a value for that
+                    more than one value for a property that is a range or interval</i>, each member
+                <a href="#SOSASampling">Sampling</a> (direct or transitive) MUST have a value for that
                 property that matches or falls within one of those ranges or intervals.
             </li>
         </ol>
@@ -731,8 +731,8 @@
                         <br>
 
                         <a href="#SOSAhasMember">sosa:hasMember</a>
-                        <em><b>ONLY</b></em> (<a href="#SOSASampling">sosa:Sampling</a> OR 
-<a href="#SOSASamplingCollection">sosa:SamplingCollection</a> )
+                        <em><b>ONLY</b></em> (<a href="#SOSASampling">sosa:Sampling</a> OR
+                        <a href="#SOSASamplingCollection">sosa:SamplingCollection</a> )
                     </td>
                 </tr>
                 <tr>
@@ -788,13 +788,12 @@
                 <tr>
                     <th>Examples</th>
                     <td>
-                        <span property="skos:example">spatial distribution of locations where to collect a sample (e.g.,
-                            river segment)
-                            <br>instrument (or mode of use thereof) required to collect a sample (e.g., fish net,
-                            electric stunner)
-                            <br>field work instructions (e.g., dig four boreholes in each cardinal direction 2 metre way
-                            from the centre of the site; collect soil material from the 15-30 cm depth and mix it in a
-                            single bag)</span>
+                        spatial distribution of locations where to collect a sample (e.g., river segment)
+                        <br>instrument (or mode of use thereof) required to collect a sample
+                        (e.g., fish net, electric stunner)
+                        <br>field work instructions
+                        (e.g., dig four boreholes in each cardinal direction 2 metre way from the centre of the site;
+                        collect soil material from the 15-30 cm depth and mix it in a single bag)
                     </td>
                 </tr>
                 <tr>
@@ -841,8 +840,8 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>feature sampled by</em> -
-            Relation from an ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> to a 
-<a href="#SOSASample">Sample</a> or
+            Relation from an ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> to a
+            <a href="#SOSASample">Sample</a> or
             <a href="#SOSASampleCollection">SampleCollection</a> that is intended to be
             representative of it - i.e., the end of a chain of hasSample relations. <br>
         </p>
@@ -1044,8 +1043,8 @@
         <p>
             <em>is original sample of</em> -
             Relation from the original <a href="#SOSASample">Sample</a>
-            collected from the ultimate feature of interest to a downstream <a href="#SOSASample">Sample</a> or 
-<a href="#SOSASampleCollection">SampleCollection</a>.
+            collected from the ultimate feature of interest to a downstream <a href="#SOSASample">Sample</a> or
+            <a href="#SOSASampleCollection">SampleCollection</a>.
         </p>
         <p class="note">
             Some examples of relationships between samples and features of interest within chains are
@@ -1271,8 +1270,8 @@
                 </tr>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a href="#SOSASampling">sosa:Sampling</a>, 
-<a href="#SOSASampleCollection">sosa:SampleCollection</a>
+                    <td><a href="#SOSASampling">sosa:Sampling</a>,
+                        <a href="#SOSASampleCollection">sosa:SampleCollection</a>
                     </td>
                 </tr>
                 <tr>
@@ -1360,8 +1359,8 @@
         <p>
             <em>made sampling has result</em> -
             Relation from a <a href="#SOSASampler">Sampler</a>
-            (sampling device or entity) to a <a href="#SOSASample">Sample</a> or 
-<a href="#SOSASampleCollection">SampleCollection</a> made by it.
+            (sampling device or entity) to a <a href="#SOSASample">Sample</a> or
+            <a href="#SOSASampleCollection">SampleCollection</a> made by it.
             <br>
         </p>
         <table>
