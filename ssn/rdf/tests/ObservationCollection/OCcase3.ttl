@@ -16,6 +16,11 @@ ex:oc3
   sosa:observedProperty qk:Temperature ;
   sosa:hasFeatureOfInterest ex:F1 , ex:F2 ;
   qudt:hasUnit unit:DEG_C ;
+  rdfs:comment """
+  Properties specified on the collection are inherited by the members, i.e. observedProperty, madeBySensor, hasUnit.
+  Values for properties that are not specified for the collection are provided on each member, i.e., phenomenonTime, result. 
+  Where multiple values for an individual property are specified on the collection (i.e., hasFeatureOfInterest), the value on each member must match one of the values given for the collection.
+  """ ;
 .
 ex:a31
   a sosa:Observation ;
@@ -50,4 +55,7 @@ ex:F2
 ex:T56
   a sosa:Sensor ;
   rdfs:comment "Thermometer #56" ;
+.
+qk:Temperature
+  a sosa:Property ;
 .
