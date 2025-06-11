@@ -1,0 +1,53 @@
+@prefix ex: <https://example.org/sosa/examples-collection-case-2/> .
+@prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:oc3
+  a sosa:ObservationCollection ;
+  sosa:hasMember ex:a31 ;
+  sosa:hasMember ex:a32 ;
+  sosa:madeBySensor ex:T56 ;
+  sosa:observedProperty qk:Temperature ;
+  sosa:hasFeatureOfInterest ex:F1 , ex:F2 ;
+  qudt:hasUnit unit:DEG_C ;
+.
+ex:a31
+  a sosa:Observation ;
+  sosa:madeBySensor ex:T56 ;
+  sosa:observedProperty qk:Temperature ;
+  sosa:hasFeatureOfInterest ex:F1 ;
+  sosa:phenomenonTime [
+    a time:Instant ;
+    time:inXSDDateTime "2022-05-01T20:33:40+00:00"^^xsd:dateTime ;
+  ] ;
+  sosa:hasSimpleResult 24.1 ;
+.
+ex:a32
+  a sosa:Observation ;
+  sosa:madeBySensor ex:T56 ;
+  sosa:observedProperty qk:Temperature ;
+  sosa:hasFeatureOfInterest ex:F2 ;
+  sosa:phenomenonTime [
+    a time:Instant ;
+    time:inXSDDateTime "2022-05-01T22:33:40+00:00"^^xsd:dateTime ;
+  ] ;
+  sosa:hasSimpleResult 27.3 ;
+.
+ex:F1
+  a sosa:FeatureOfInterest ;
+  rdfs:comment "Room #1" ;
+.
+ex:F2
+  a sosa:FeatureOfInterest ;
+  rdfs:comment "Room #2" ;
+.
+ex:T56
+  a sosa:Sensor ;
+  rdfs:comment "Thermometer #56" ;
+.
