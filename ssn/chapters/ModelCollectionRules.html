@@ -1,18 +1,21 @@
-<h3>Execution collections &mdash; consistency rules</h3>
+<h3>Collections &mdash; consistency rules</h3>
 
 <p>
-    Properties of the members of <a href="#SOSAExecutionCollection">ExecutionCollections</a> must follow the consistency
-    rules provided in their definitions.
+    Properties of the members of <a href="#SOSACollection">Collections</a> must follow the consistency
+    rules given in their definitions &mdash; see <a href="#SOSAExecutionCollection">ExecutionCollection</a>,
+    <a href="#SOSAActuationCollection">ActuationCollection</a>,
+    <a href="#SOSAObservationCollection">ObservationCollection</a>,
+    <a href="#SOSASampleCollection">SampleCollection</a>, and <a href="#SOSASamplingCollection">SamplingCollection</a>.
     The following examples illustrate each case from the rules, in the context of an
     <a href="#SOSAObservationCollection">ObservationCollection</a>.
     The patterns shown also apply to the other collection types.
 </p>
 
-<h4>Rule 1 &mdash; absent property on the collection</h4>
+<h4>Rule 1 &mdash; absent property on the collection &mdash; optional</h4>
 
 <blockquote>
-    Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> <i>omits a property</i>, a member
-    <a href="#SOSAExecution">Execution</a> (direct or transitive) MAY have any value for that property.
+    Where an individual Collection <i>omits a property</i>, a member (direct or transitive) MAY have any
+    value for that property.
 </blockquote>
 
 <p>
@@ -25,11 +28,10 @@
 <h4>Rule 2 &mdash; single property value on the collection</h4>
 
 <blockquote>
-    Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> has
-    <i>a single value for a property</i>, each member <a href="#SOSAExecution">Execution</a> (direct or transitive)
-    MUST have that same value for that property &mdash; i.e., the collection (set) is homogeneous in that property.
-    That property MAY then be omitted in any member <a href="#SOSAExecution">Execution</a> or
-    <a href="#SOSAExecutionCollection">ExecutionCollection</a>.
+    Where an individual Collection has <i>a single value for a property</i>, each member (direct or
+    transitive) MUST have that same value for that property i.e., the collection (set) is homogeneous in
+    that property.
+    That property MAY then be omitted in any member.
 </blockquote>
 
 <p>
@@ -43,9 +45,9 @@
 <h4>Rule 3 &mdash; multiple property values on the collection</h4>
 
 <blockquote>
-    Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> has
-    <i>more than one value for a property</i>, each member <a href="#SOSAExecution">Execution</a> (direct or transitive)
-    MUST have a value for that property that matches one of the values for the property in the collection.
+    Where an individual Collection has <i>more than one value for a property</i>, each member (direct or
+    transitive) MUST have a value for that property that matches one of the values for the property in the
+    collection.
 </blockquote>
 
 <p>
@@ -58,9 +60,9 @@
 <h4>Rule 4 &mdash; range property value on the collection</h4>
 
 <blockquote>
-    Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a>
-    <i>has a value for a property that is a range or interval</i>, each member <a href="#SOSAExecution">Execution</a>
-    (direct or transitive) MUST have a value for that property that matches or falls within that range or interval.
+    Where an individual Collection <i>has a value for a property that is a range or interval</i>, each
+    member (direct or transitive) MUST have a value for that property that matches or falls within that
+    range or interval.
 </blockquote>
 
 <p>
@@ -73,9 +75,8 @@
 <h4>Rule 5 &mdash; multiple ranges property value on the collection</h4>
 
 <blockquote>
-    Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a>
-    <i>has more than one value for a property that is a range or interval</i>, each member
-    <a href="#SOSAExecution">Execution</a> (direct or transitive) MUST have a value for that property that matches or
+    Where an individual Collection <i>has more than one value for a property that is a range or
+        interval</i>, each member (direct or transitive) MUST have a value for that property that matches or
     falls within one of those ranges or intervals.
 </blockquote>
 
