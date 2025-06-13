@@ -9,7 +9,7 @@
 </p>
 <p class="note">
   OMS was published by ISO 19156:2023 [[iso-19156-2023]], but is freely available as OGC Abstract
-  Specification - Topic 20 [[OMS]].
+  Specification &mdash; Topic 20 [[OMS]].
 </p>
 
 <p>
@@ -146,7 +146,7 @@
       <strong>an OWL Class</strong>
     </p>
     <p>
-      <em>Preparation Procedure</em> -
+      <em>Preparation Procedure</em> &mdash;
       The description of preparation steps performed on a
       Sample.
     </p>
@@ -182,7 +182,7 @@
       <strong>an OWL Class</strong>
     </p>
     <p>
-      <em>Preparation Step</em> -
+      <em>Preparation Step</em> &mdash;
       A PreparationStep is an individual step pertaining to a Sample
       PreparationProcedure.
     </p>
@@ -212,7 +212,7 @@
       <strong>an OWL Object Property</strong>
     </p>
     <p>
-      <em>has preparation step</em> -
+      <em>has preparation step</em> &mdash;
       Link to a preparation step used to prepare the sample
     </p>
     <table>
@@ -252,7 +252,7 @@
       <strong>an OWL Object Property</strong>
     </p>
     <p>
-      <em>made on platform</em> -
+      <em>made on platform</em> &mdash;
       Relation between an Observation and the Platform the Sensor
       was
       attached to at the time the observation was made.
@@ -296,7 +296,7 @@
       <strong>an OWL Object Property</strong>
     </p>
     <p>
-      <em>metadata</em> -
+      <em>metadata</em> &mdash;
       Links an individual to a metadata description
     </p>
     <table>
@@ -341,7 +341,7 @@
       <strong>an OWL Object Property</strong>
     </p>
     <p>
-      <em>observation type</em> -
+      <em>observation type</em> &mdash;
       Information providing further detail on the type of
       Observations.
     </p>
@@ -377,7 +377,7 @@
       <strong>an OWL Object Property</strong>
     </p>
     <p>
-      <em>prepared sample</em> -
+      <em>prepared sample</em> &mdash;
       The Sample on which the PreparationProcedure is
       performed.
     </p>
@@ -419,7 +419,7 @@
       <strong>an OWL Object Property</strong>
     </p>
     <p>
-      <em>processing details</em> -
+      <em>processing details</em> &mdash;
       The PreparationProcedure used by the PreparationStep.
     </p>
     <table>
@@ -460,7 +460,7 @@
       <strong>an OWL Object Property</strong>
     </p>
     <p>
-      <em>related sampling</em> -
+      <em>related sampling</em> &mdash;
       Relation to an act of Sampling.
     </p>
     <table>
@@ -501,7 +501,7 @@
       <strong>an OWL Object Property</strong>
     </p>
     <p>
-      <em>sample preparation step</em> -
+      <em>sample preparation step</em> &mdash;
       A PreparationStep that uses the PreparationProcedure.
     </p>
     <table>
@@ -542,7 +542,7 @@
       <strong>an OWL Object Property</strong>
     </p>
     <p>
-      <em>valid time</em> -
+      <em>valid time</em> &mdash;
       The time interval during which the result is assumed to be
       applicable for use.
     </p>
@@ -580,7 +580,7 @@
 </section>
 
 <section id="OMS-Class-SOSA">
-  <h4>Class Alignments - SOSA focus</h4>
+  <h4>Class Alignments &mdash; SOSA focus</h4>
   <p>
     The following classes from the SSN Ontology and this extension implement UML classes from OMS as indicated: </p>
   <table data-sortable="true">
@@ -685,7 +685,7 @@
 </section>
 
 <section id="OMS-Class-OMS">
-  <h4>Class Alignments - OMS focus</h4>
+  <h4>Class Alignments &mdash; OMS focus</h4>
   <p>
     The following UML classes in OMS are implemented by classes from the SSN Ontology and this extension as indicated:
   </p>
@@ -791,7 +791,7 @@
 </section>
 
 <section id="OMS-Property-SOSA">
-  <h4>Property Alignments - SOSA focus</h4>
+  <h4>Property Alignments &mdash; SOSA focus</h4>
   <p>
     The following properties from the SSN Ontology and this extension implement attributes and association roles from
     OMS as indicated: </p>
@@ -1011,7 +1011,7 @@
 </section>
 
 <section id="OMS-Property-OMS">
-  <h4>Property Alignments - OMS focus</h4>
+  <h4>Property Alignments &mdash; OMS focus</h4>
   <p>
     The following attributes and association roles from OMS are implemented by properties from the SSN Ontology and
     this extension as indicated: </p>
@@ -1115,8 +1115,8 @@
       <tr>
         <td> obs-cpt:Observation/result-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#SOSAhasResult">sosa:hasResult</a>
-          ,<br> <a href="#SOSAhasSimpleResult">sosa:hasSimpleResult</a> </td>
+        <td> <a href="#SOSAhasResult">sosa:hasResult</a> ,
+<br> <a href="#SOSAhasSimpleResult">sosa:hasSimpleResult</a> </td>
       </tr>
       <tr>
         <td> obs-cpt:Observation/resultTime-sem </td>
@@ -1146,8 +1146,8 @@
       <tr>
         <td> obs-cpt:Observer/observingProcedure-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#SOSAimplements">sosa:implements</a>
-          ,<br> <a href="#SOSAusedProcedure">sosa:usedProcedure</a> </td>
+        <td> <a href="#SOSAimplements">sosa:implements</a> ,
+<br> <a href="#SOSAusedProcedure">sosa:usedProcedure</a> </td>
       </tr>
       <tr>
         <td> obs-cpt:ObservingProcedure/observer-sem </td>
@@ -1167,8 +1167,8 @@
       <tr>
         <td> sam-cpt:PreparationStep/processingDetails-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#SOSAimplements">sosa:implements</a>
-          ,<br> <a href="#OMSprocessingDetails">sosa-oms:processingDetails</a> </td>
+        <td> <a href="#SOSAimplements">sosa:implements</a> ,
+<br> <a href="#OMSprocessingDetails">sosa-oms:processingDetails</a> </td>
       </tr>
       <tr>
         <td> sam-cpt:Sample/preparationStep-sem </td>
@@ -1178,8 +1178,8 @@
       <tr>
         <td> sam-cpt:Sample/sampledFeature-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#SOSAisSampleOf">sosa:isSampleOf</a>
-          ,<br> <a href="#SOSAhasSampledFeature">sosa:hasSampledFeature</a>
+        <td> <a href="#SOSAisSampleOf">sosa:isSampleOf</a> ,
+<br> <a href="#SOSAhasSampledFeature">sosa:hasSampledFeature</a>
         </td>
       </tr>
       <tr>
@@ -1191,8 +1191,8 @@
         <td> sam-cpt:Sampler/sampling-sem </td>
         <td> ogc:implementedBy </td>
         <td>
-          <a href="#SOSAmadeSampling">sosa:madeSampling</a>
-          ,<br> <a href="#SOSAmadeBySampler">sosa:madeBySampler</a>
+          <a href="#SOSAmadeSampling">sosa:madeSampling</a> ,
+<br> <a href="#SOSAmadeBySampler">sosa:madeBySampler</a>
         </td>
       </tr>
       <tr>
@@ -1218,8 +1218,8 @@
       <tr>
         <td> sam-cpt:Sampling/samplingProcedure-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#SOSAimplements">sosa:implements</a>
-          ,<br> <a href="#SOSAusedProcedure">sosa:usedProcedure</a> </td>
+        <td> <a href="#SOSAimplements">sosa:implements</a> ,
+<br> <a href="#SOSAusedProcedure">sosa:usedProcedure</a> </td>
       </tr>
     </tbody>
   </table>

@@ -69,7 +69,7 @@
                 <strong>an OWL Class</strong>
             </p>
             <p>
-                <em>Feature Of Interest</em> -
+                <em>Feature Of Interest</em> &mdash;
                 The thing that is the target of an <a href="#SOSAExecution">Execution</a> or
                 <a href="#SOSADeployment">Deployment</a>,
                 i.e., whose property is being estimated or
@@ -152,7 +152,7 @@
             </p>
 
             <p>
-                <em>Property</em> -
+                <em>Property</em> &mdash;
                 An identifiable quality of a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> that can be observed
                 or
                 acted upon. A property can apply to different features of interest.
@@ -216,7 +216,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>for property</em> -
+                <em>for property</em> &mdash;
                 A relation between some entity and a <a href="#SOSAProperty">Property</a>. <br>
             </p>
             <table>
@@ -276,7 +276,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>has property</em> -
+                <em>has property</em> &mdash;
                 Relation between an entity and a <a href="#SOSAProperty">Property</a>
                 of
                 that entity.
@@ -324,10 +324,9 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>is feature of interest of</em> -
+                <em>is feature of interest of</em> &mdash;
                 A relation between a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> and an
                 <a href="#SOSAExecution">Execution</a> or <a href="#SOSADeployment">Deployment</a> operating on it,
-                <br>
                 i.e., an Observation about it, an Actuation acting on it, an act of Sampling that sampled it, or a
                 Deployment for which it is the subject.
             </p>
@@ -381,7 +380,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>is property of</em> -
+                <em>is property of</em> &mdash;
                 Relation between a <a href="#SOSAProperty">Property</a> and
                 the <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> that it belongs to.
             </p>
@@ -431,10 +430,10 @@
             <p class="warning">isUltimateFeatureOfInterestOf added in 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>is ultimate feature of interest of</em> -
+                <em>is ultimate feature of interest of</em> &mdash;
                 A relation between an ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> and an
-                <a href="#SOSAExecution">Execution</a> or <a href="#SOSADeployment">Deployment</a> that it is the
-                ultimate subject of.
+                <a href="#SOSAExecution">Execution</a> or <a href="#SOSADeployment">Deployment</a> of which it is the
+                ultimate subject.
             </p>
             <table>
                 <tbody>
@@ -487,7 +486,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>property for</em> -
+                <em>property for</em> &mdash;
                 A relation between a <a href="#SOSAProperty">Property</a> and some
                 entity.
             </p>
@@ -577,14 +576,13 @@
                 <strong>an OWL Class</strong>
             </p>
             <p>
-                <em>Procedure</em> -
-                A workflow, protocol, plan, algorithm, or computational method
-                specifying how make a change to the state of the world (through an
-                <a href="#SOSAActuation">Actuation</a>) or to make an <a href="#SOSAObservation">Observation</a>,
-                or
+                <em>Procedure</em> &mdash;
+                A workflow, protocol, plan, algorithm, or computational method specifying how make a change to the state
+                of the world (through an
+                <a href="#SOSAActuation">Actuation</a>) or to make an <a href="#SOSAObservation">Observation</a>, or to
                 create a <a href="#SOSASample">Sample</a>.
                 A <a href="#SOSAProcedure">Procedure</a> is re-usable, and might be applied in many
-                <a href="#SOSAActuation">Actuations</a>, or <a href="#SOSAObservation">Observations</a>, or
+                <a href="#SOSAActuation">Actuations</a>, <a href="#SOSAObservation">Observations</a>, or
                 <a href="#SOSASampling">Samplings</a>.
                 It explains the steps to be carried out to arrive at reproducible results.
             </p>
@@ -656,7 +654,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>has Input</em> -
+                <em>has Input</em> &mdash;
                 Relation between a <a href="#SOSAProcedure">Procedure</a> and
                 an input required for its execution.
             </p>
@@ -708,7 +706,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>has Output</em> -
+                <em>has Output</em> &mdash;
                 Relation between a <a href="#SOSAProcedure">Procedure</a> and
                 an output or result of its execution.
             </p>
@@ -756,7 +754,7 @@
             <p class="warning">hasProcedure added in the 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>has Procedure</em> -
+                <em>has Procedure</em> &mdash;
                 Relation between a <a href="#SOSAProperty">Property</a> and a <a href="#SOSAProcedure">Procedure</a>
                 that can observe or act on it.
             </p>
@@ -803,7 +801,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>implemented by</em> -
+                <em>implemented by</em> &mdash;
                 Relation between a <a href="#SOSAProcedure">Procedure</a> (an
                 algorithm, procedure or method) and an entity
                 that implements that <a href="#SOSAProcedure">Procedure</a> in some executable way.
@@ -851,7 +849,7 @@
             <p class="warning">inputFor added in the 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>input for</em> -
+                <em>input for</em> &mdash;
                 Relation between an input and a <a href="#SOSAProcedure">Procedure</a>
                 that
                 uses it.
@@ -894,7 +892,7 @@
             <p class="warning">outputFor added in 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>output for</em> -
+                <em>output for</em> &mdash;
                 Relation between an output or result and a <a href="#SOSAProcedure">Procedure</a>
                 that generates it in an execution.
             </p>
@@ -934,7 +932,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>used for execution</em> -
+                <em>used for execution</em> &mdash;
                 A relation from a re-usable
                 <a href="#SOSAProcedure">Procedure</a> to an
                 <a href="#SOSAExecution">Execution</a> made using it.
@@ -1046,7 +1044,7 @@
                 <strong>an OWL Class</strong>
             </p>
             <p>
-                <em>Execution</em> -
+                <em>Execution</em> &mdash;
                 Act of carrying out a <a href="#SOSAProcedure">Procedure</a> using a
                 <a href="#SOSASystem">System</a> concerning a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
 
@@ -1110,20 +1108,19 @@
             <p class="warning">ExecutionCollection added in the 2025 edition
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>Execution Collection</em> -
-                Collection (set) of one or more <a href="#SOSAExecution">Executions</a>
-                or
+                <em>Execution Collection</em> &mdash;
+                Collection (set) of one or more <a href="#SOSAExecution">Executions</a> or
                 <a href="#SOSAExecutionCollection">ExecutionCollections</a>, i.e., collections may be nested.
             </p>
             <p>
                 The following <a href="#SOSAExecution">Execution</a> properties may appear in an
                 <a href="#SOSAExecutionCollection">ExecutionCollection</a>:
-                <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a> ,
-                <a href="#SOSAusedProcedure">usedProcedure</a> ,
-                <a href="#SOSAmadeBySensor">madeBySensor</a> ,
-                <a href="#SOSAendTime">endTime</a> ,
-                <a href="#SOSAresultTime">resultTime</a> ,
-                <a href="#SOSAstartTime">startTime</a> .
+                <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a>,
+                <a href="#SOSAusedProcedure">usedProcedure</a>,
+                <a href="#SOSAmadeBySensor">madeBySensor</a>,
+                <a href="#SOSAendTime">endTime</a>,
+                <a href="#SOSAresultTime">resultTime</a>,
+                <a href="#SOSAstartTime">startTime</a>.
                 If they are present, the values of these properties summarize the values of the matching properties
                 of the member Executions, where membership is either direct or transitive through one or more member
                 Execution collections.
@@ -1140,7 +1137,8 @@
                 <li>
                     Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> has
                     <i>a single value for a property</i>, each member <a href="#SOSAExecution">Execution</a> (direct or
-                    transitive) MUST have that same value for that property - i.e., the collection (set) is homogeneous
+                    transitive) MUST have that same value for that property &mdash; i.e., the collection (set) is
+                    homogeneous
                     in that property.
                     That property MAY then be omitted in any member <a href="#SOSAExecution">Execution</a>
                     or <a href="#SOSAExecutionCollection">ExecutionCollection</a>.
@@ -1227,7 +1225,7 @@
             <p class="warning">endTime added in the 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>end time</em> -
+                <em>end time</em> &mdash;
                 The instant of time when the
                 <a href="#SOSAExecution">Execution</a>
                 or <a href="#SOSADeployment">Deployment</a>
@@ -1286,7 +1284,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>has feature of interest</em> -
+                <em>has feature of interest</em> &mdash;
                 A relation between an
                 <a href="#SOSAExecution">Execution</a> and its target entity
                 i.e., an <a href="#SOSAActuation">Actuation</a> and the entity whose property was modified,
@@ -1373,7 +1371,7 @@
             <p class="warning">hasInputValue added in the 2025 edition.
                 This term is non-normative, pending further implementation experience.</p>
             <p>
-                <em>has Input Value</em> -
+                <em>has Input Value</em> &mdash;
                 Assigns a value to an input defined by the <a href="#SOSAProcedure">Procedure</a> that is used in an
                 <a href="#SOSAExecution">Execution</a>
                 (i.e., a <a href="#SOSAActuation">Actuation</a>,
@@ -1433,7 +1431,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>has result</em> -
+                <em>has result</em> &mdash;
                 Relation linking an <a href="#SOSAExecution">Execution</a>
                 (i.e., <a href="#SOSAActuation">Actuation</a>
                 or <a href="#SOSAObservation">Observation</a> or act of <a href="#SOSASampling">Sampling</a>) to its
@@ -1528,10 +1526,10 @@
                 <strong>an OWL Datatype Property</strong>
             </p>
             <p>
-                <em>has simple result</em> -
+                <em>has simple result</em> &mdash;
                 The simple value of an <a href="#SOSAActuation">Actuation</a>
                 or
-                <a href="#SOSAObservation">Observation</a> .
+                <a href="#SOSAObservation">Observation</a>.
 
                 In the case of an <a href="#SOSAActuation">sosa:Actuation</a>, the result is the intended value
                 of the
@@ -1610,7 +1608,7 @@
             <p class="warning">hasUltimateFeatureOfInterest added in 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>has ultimate feature of interest</em> -
+                <em>has ultimate feature of interest</em> &mdash;
                 A relation between an
                 <a href="#SOSAExecution">Execution</a> and its ultimate target entity
                 i.e., an <a href="#SOSAActuation">Actuation</a> and the ultimate entity whose property
@@ -1687,7 +1685,7 @@
             <p class="warning">inputValueForExecution added in the 2025 edition.
                 This term is non-normative, pending further implementation experience.</p>
             <p>
-                <em>Input Value for Execution</em> -
+                <em>Input Value for Execution</em> &mdash;
                 Relation between an InputValue and an <a href="#SOSAExecution">Execution</a>
                 (i.e., a <a href="#SOSAActuation">Actuation</a>,
                 <a href="#SOSAObservation">Observation</a>, <a href="#SOSASampling">Sampling</a>) that used
@@ -1731,7 +1729,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>is result of</em> -
+                <em>is result of</em> &mdash;
                 Relation linking a result to the <a href="#SOSAExecution">Execution</a>
                 that created or caused it (i.e., the <a href="#SOSAActuation">Actuation</a> or
                 <a href="#SOSAObservation">Observation</a> or act of <a href="#SOSASampling">Sampling</a>.
@@ -1782,7 +1780,7 @@
                 madeBySystem added in the 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>made by system</em> -
+                <em>made by system</em> &mdash;
                 Relation linking an
                 <a href="#SOSAExecution">Execution</a> to the <a href="#SOSASystem">System</a> that made it.
 
@@ -1848,7 +1846,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>phenomenon occurred</em> -
+                <em>phenomenon occurred</em> &mdash;
                 The result of an
                 <a href="#SOSAExecution">Execution</a>
                 (i.e., <a href="#SOSAActuation">Actuation</a>,
@@ -1901,7 +1899,7 @@
                 <strong>an OWL Object Property</strong>
             </p>
             <p>
-                <em>phenomenon time</em> -
+                <em>phenomenon time</em> &mdash;
                 The time that the result of an
                 <a href="#SOSAExecution">Execution</a>
                 (i.e., <a href="#SOSAActuation">Actuation</a>,
@@ -1940,7 +1938,7 @@
                 possession
                 of
                 the
-                operator. .
+                operator. 
             </p>
             <p class="note">The different time-properties on a <a href="#SOSAExecution">sosa:Execution</a> support
                 the description of plans, forecasts and predictions as well as descriptions of various historical
@@ -2032,7 +2030,7 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/resultTime</p>
             <p><strong>an OWL Datatype Property</strong></p>
             <p>
-                <em>result time</em> -
+                <em>result time</em> &mdash;
                 The instant of time when the
                 <a href="#SOSAObservation">Observation</a>
                 or <a href="#SOSASampling">Sampling</a> was completed
@@ -2072,13 +2070,9 @@ sosa:phenomenonTime [
                     </tr>
                     <th>Domain Includes</th>
                     <td>
-
-                        <a href="#SOSAObservation">sosa:Observation</a>
-                        ,
-                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
-                        ,
-                        <a href="#SOSASampling">sosa:Sampling</a>
-                        ,
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>,
+                        <a href="#SOSASampling">sosa:Sampling</a>.
                         <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
                     </td>
                     </tr>
@@ -2104,7 +2098,7 @@ sosa:phenomenonTime [
             <p class="warning">startTime added in 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>start time</em> -
+                <em>start time</em> &mdash;
                 The instant of time when the
                 <a href="#SOSAExecution">Execution</a> was initiated or tasked,
                 i.e., the <a href="#SOSAActuation">Actuation</a>
@@ -2162,7 +2156,7 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/usedProcedure</p>
             <p><strong>an OWL Object Property</strong></p>
             <p>
-                <em>used procedure</em> -
+                <em>used procedure</em> &mdash;
                 A relation from an
                 <a href="#SOSAExecution">Execution</a>, i.e., an
                 <a href="#SOSAActuation">Actuation</a>, an
@@ -2294,7 +2288,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Class</strong></p>
 
             <p>
-                <em>Deployment</em> -
+                <em>Deployment</em> &mdash;
                 A <a href="#SOSADeployment">Deployment</a> of one or more assets (<a href="#SOSASystem">Systems</a> or
                 <a href="#SOSAPlatform">sosa:Platforms</a>) to execute
                 procedures
@@ -2359,7 +2353,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Class</strong></p>
 
             <p>
-                <em>Platform</em> -
+                <em>Platform</em> &mdash;
                 A <a href="#SOSAPlatform">Platform</a> is an entity that <a href="#SOSAhosts">hosts</a> other entities,
                 particularly <a href="#SOSASensor">Sensors</a>,
                 <a href="#SOSAActuator">Actuators</a>, <a href="#SOSASampler">Samplers</a>, and other
@@ -2416,7 +2410,7 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/System</p>
             <p><strong>an OWL Class</strong></p>
             <p>
-                <em>System</em> -
+                <em>System</em> &mdash;
 
                 An entity that implements a <a href="#SOSAProcedure">Procedure</a> in the context of an
                 <a href="#SOSAExecution">Execution</a>.
@@ -2529,7 +2523,7 @@ sosa:phenomenonTime [
             <p class="warning">deployedAsset added in 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>deployed asset</em> -
+                <em>deployed asset</em> &mdash;
                 Relation between a <a href="#SOSADeployment">Deployment</a>
                 and a deployed asset (<a href="#SOSASystem">System</a> or <a href="#SOSAPlatform">Platform</a>).
             </p>
@@ -2569,7 +2563,7 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/deployedOnPlatform</p>
             <p><strong>an OWL Object Property</strong></p>
             <p>
-                <em>deployed on platform</em> -
+                <em>deployed on platform</em> &mdash;
                 Relation between a <a href="#SOSADeployment">Deployment</a>
                 and the <a href="#SOSAPlatform">Platform</a> on which the Systems are deployed.
             </p>
@@ -2610,7 +2604,7 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/deployedSystem</p>
             <p><strong>an OWL Object Property</strong></p>
             <p>
-                <em>deployed system</em> -
+                <em>deployed system</em> &mdash;
                 Relation between a <a href="#SOSADeployment">Deployment</a>
                 and a deployed <a href="#SOSASystem">System</a>.
             </p>
@@ -2651,7 +2645,7 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasDeployment</p>
             <p><strong>an OWL Object Property</strong></p>
             <p>
-                <em>has deployment</em> -
+                <em>has deployment</em> &mdash;
                 Relation between a <a href="#SOSASystem">System</a> and a <a href="#SOSADeployment">Deployment</a>,
                 recording that the <a href="#SOSASystem">System</a>
                 is
@@ -2697,7 +2691,7 @@ sosa:phenomenonTime [
                 See <a href="#ModelComplexSystem">Complex devices</a> for guidance on describing complex systems.
             </p>
             <p>
-                <em>has subsystem</em> -
+                <em>has subsystem</em> &mdash;
                 Relation between a <a href="#SOSASystem">System</a> and its
                 component parts.
             </p>
@@ -2738,7 +2732,7 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/hosts</p>
             <p><strong>an OWL Object Property</strong></p>
             <p>
-                <em>hosts</em> -
+                <em>hosts</em> &mdash;
                 Relation between a <a href="#SOSAPlatform">Platform</a> and a
                 <a href="#SOSASystem">System</a> (
                 <a href="#SOSASensor">Sensor</a>,
@@ -2793,7 +2787,7 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/implements</p>
             <p><strong>an OWL Object Property</strong></p>
             <p>
-                <em>implements</em> -
+                <em>implements</em> &mdash;
                 Relation between an entity that implements a <a href="#SOSAProcedure">Procedure</a> in some executable
                 way and the <a href="#SOSAProcedure">Procedure</a> (an algorithm, procedure or method).
             </p>
@@ -2838,7 +2832,7 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/inDeployment</p>
             <p><strong>an OWL Object Property</strong></p>
             <p>
-                <em>in deployment</em> -
+                <em>in deployment</em> &mdash;
                 Relation between a <a href="#SOSAPlatform">Platform</a> and a
                 <a href="#SOSADeployment">Deployment</a>, meaning that the
                 <a href="#SOSAdeployedSystem">deployedSystems</a> of the
@@ -2888,7 +2882,7 @@ sosa:phenomenonTime [
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/isHostedBy</p>
             <p><strong>an OWL Object Property</strong></p>
             <p>
-                <em>is hosted by</em> -
+                <em>is hosted by</em> &mdash;
                 Relation between an <a href="#SOSAActuator">Actuator</a>, or
                 <a href="#SOSASensor">Sensor</a>, or <a href="#SOSASampler">Sampler</a>, or
                 <a href="#SOSAPlatform">Platform</a>, and the <a href="#SOSAPlatform">Platform</a> that it is
@@ -2937,7 +2931,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
 
             <p>
-                <em>is subsystem of</em> -
+                <em>is subsystem of</em> &mdash;
                 Relation between component parts and a <a href="#SOSASystem">System</a>
                 they belong to.
             </p>
@@ -2982,7 +2976,7 @@ sosa:phenomenonTime [
                 This term is non-normative, pending further implementation experience</p>
             <p>
 
-                <em>madeExecution</em> -
+                <em>madeExecution</em> &mdash;
                 Relation between a
                 <a href="#SOSASystem">System</a> and an
                 <a href="#SOSAExecution">Execution</a> it has made.
@@ -3131,7 +3125,7 @@ sosa:phenomenonTime [
             <p class="warning">hasMember added in the 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
-                <em>has member of collection</em> -
+                <em>has member of collection</em> &mdash;
                 Link to a member
                 (
                 <a href="#SOSAExecution">Execution</a>
@@ -3224,7 +3218,7 @@ sosa:phenomenonTime [
                 This term is non-normative, pending further implementation experience</p>
 
             <p>
-                <em>is member of collection</em> -
+                <em>is member of collection</em> &mdash;
                 Link from a member
                 (
                 <a href="#SOSAExecution">Execution</a>

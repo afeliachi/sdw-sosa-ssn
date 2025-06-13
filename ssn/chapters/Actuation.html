@@ -103,23 +103,26 @@
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Actuation</em> -
+            <em>Actuation</em> &mdash;
             Act of carrying out an actuating <a href="#SOSAProcedure">Procedure</a>
             using an <a href="#SOSAActuator">Actuator</a> to change the value of an actuatable
             <a href="#SOSAProperty">Property</a> of a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
         </p>
         <p>
-            In this context,
-            <a href="#SOSAhasResult">hasResult</a> shall indicate the expected value of the
-            <a href="#SOSAProperty">Property</a> at the completion of the <a href="#SOSAActuation">Actuation</a>
-
+            In this context
         </p>
-        <p>
-            <a href="#SOSArelatedObservation">relatedObservation</a> SHOULD be
-            used to link to an associated <a href="#SOSAObservation">Observation</a> or
-            <a href="#SOSAObservationCollection">ObservationCollection</a> that monitors the actuated
-            property to verify that the result value has been obtained
-        </p>
+        <ul>
+            <li>
+                <a href="#SOSAhasResult">hasResult</a> SHALL indicate the expected value of the
+                <a href="#SOSAProperty">Property</a> at the completion of the <a href="#SOSAActuation">Actuation</a>
+            </li>
+            <li>
+                <a href="#SOSArelatedObservation">relatedObservation</a> SHOULD be
+                used to link to an associated <a href="#SOSAObservation">Observation</a> or
+                <a href="#SOSAObservationCollection">ObservationCollection</a> that monitors the actuated property in
+                order to verify that the result value has been obtained
+            </li>
+        </ul>
         <p>
             An <a href="#SOSAActuation">Actuation</a> concerns a single <a href="#SOSAProperty">Property</a> of a single
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
@@ -128,19 +131,12 @@
         </p>
         <p>
             Alternatively, applications may choose to encapsulate complexity by defining a complex property with
-            multiple individual components, and a corresponding complex result (e.g., a vector). This approach is not
-            prohibited by the SSN Ontology, but the details are beyond the scope of SSN.
-        </p>
-        <p>
-            <a href="#SOSArelatedObservation">relatedObservation</a> SHOULD be used
-            to link to an associated <a href="#SOSAObservation">Observation</a> or
-            <a href="#SOSAActuationCollection">ObservationCollection</a> that monitors the actuated
-            property to verify that the result value has been obtained..
-
+            multiple individual components, and a corresponding complex result (e.g., a vector).
+            This approach is not prohibited by the SSN Ontology, but the details are beyond the scope of SSN.
         </p>
         <p class="note">
-            The different time-properties on a <a href="#SOSAActuation">sosa:Actuation</a> support
-            the description of plans, forecasts and predictions as well as descriptions of various historical scenarios.
+            The different time-properties on a <a href="#SOSAActuation">sosa:Actuation</a> support the description of
+            plans, forecasts and predictions as well as descriptions of various historical scenarios.
             See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.</p>
 
         <table>
@@ -224,27 +220,26 @@
             ActuationCollection added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>Actuation Collection</em> -
+            <em>Actuation Collection</em> &mdash;
             Collection (set) of one or more <a href="#SOSAActuation">Actuations</a>
             or <a href="#SOSAActuationCollection">ActuationCollections</a>, i.e., collections may be nested.
         </p>
         <p>
             The following <a href="#SOSAActuation">Actuation</a> properties may appear in an
-            <a href="#SOSAActuationCollection">ActuationCollection</a>:
+            <a href="#SOSAActuationCollection">ActuationCollection</a> &mdash;
             <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a>,
             <a href="#SOSAusedProcedure">usedProcedure</a>,
             <a href="#SOSAmadeByActuator">madeByActuator</a>,
             <a href="#SOSAactsOnProperty">actsOnProperty</a>,
             <a href="#SOSAendTime">endTime</a>,
             <a href="#SOSAhasResult">hasResult</a>,
-            <a href="#SOSAhasSimpleResult">hasSimpleResult</a>
-            .
+            <a href="#SOSAhasSimpleResult">hasSimpleResult</a>.        
             If it is present, the value of a property summarizes the values of the matching properties of
             the member actuations, where membership is either direct or transitive through one or more member
             actuation collections.
         </p>
         <p>
-            The following consistency rules with respect to the Actuation properties listed above:
+            The following consistency rules apply to the Actuation properties listed above:
         </p>
         <ol>
             <li>
@@ -255,7 +250,7 @@
             <li>
                 Where an individual <a href="#SOSAActuationCollection">ActuationCollection</a> has <i>a
                     single value for a property</i>, each member <a href="#SOSAActuation">Actuation</a>
-                (direct or transitive) MUST have that same value for that property - i.e., the collection is homogeneous
+                (direct or transitive) MUST have that same value for that property &mdash; i.e., the collection is homogeneous
                 in that property.
                 That property MAY then be omitted in any member <a href="#SOSAActuation">Actuation</a> or
                 <a href="#SOSAActuationCollection">ActuationCollection</a>.
@@ -354,7 +349,7 @@
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Actuator</em> -
+            <em>Actuator</em> &mdash;
 
             An entity that implements an actuating <a href="#SOSAProcedure">Procedure</a> to change the value of a
             actuatable <a href="#SOSAProperty">Property</a>.
@@ -436,7 +431,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>acts on</em> -
+            <em>acts on</em> &mdash;
             Relation between an
             <a href="#SOSAActuator">Actuator</a> and a
             <a href="#SOSAProperty">Property</a> whose state may be changed by using it.
@@ -495,7 +490,7 @@
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
-            <em>acts on property</em> -
+            <em>acts on property</em> &mdash;
             Relation between an <a href="#SOSAActuation">Actuation</a> and the
             <a href="#SOSAProperty">sosa:Property</a> it acted upon.
         </p>
@@ -557,7 +552,7 @@
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
-            <em>is acted on by</em> -
+            <em>is acted on by</em> &mdash;
             Relation between a
             <a href="#SOSAProperty">Property</a> and an
             <a href="#SOSAActuator">Actuator</a> that may change its state.
@@ -605,7 +600,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>made actuation</em> -
+            <em>made actuation</em> &mdash;
             Relation between an <a href="#SOSAActuator">Actuator</a> and an
             <a href="#SOSAActuation">Actuation</a> made it.
         </p>
@@ -662,7 +657,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>made by actuator</em> -
+            <em>made by actuator</em> &mdash;
             Relation linking an <a href="#SOSAActuation">Actuation</a> to the
             <a href="#SOSAActuator">Actuator</a> that made it.
         </p>
@@ -723,7 +718,7 @@
             wasActedOnBy added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>was acted on by</em> -
+            <em>was acted on by</em> &mdash;
             Relation between a
             <a href="#SOSAProperty">sosa:Property</a> and an
             <a href="#SOSAActuation">Actuation</a> that changed its state.

@@ -59,7 +59,7 @@
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Sample</em> -
+            <em>Sample</em> &mdash;
             Feature which is intended to be representative of a
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> on which
             <a href="#SOSAObservation">Observations</a> may be made.
@@ -188,7 +188,7 @@
         <p class="warning">MaterialSample added in the 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>Material Sample</em> -
+            <em>Material Sample</em> &mdash;
             A MaterialSample is a physical, tangible Sample.
         </p>
         <table>
@@ -246,7 +246,7 @@
         <p class="warning">SpatialSample added in the 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>Spatial Sample</em> -
+            <em>Spatial Sample</em> &mdash;
             A SpatialSample is a geospatial Sample.
             When observations are made to estimate properties of a geospatial feature, in particular where the
             value
@@ -317,7 +317,7 @@
         <p class="warning">StatisticalSample added in the 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>Statistical Sample</em> -
+            <em>Statistical Sample</em> &mdash;
             A StatisticalSample is a statistical subset of a
             feature-of-interest, defined for the purpose of creating Observation(s).
         </p>
@@ -369,25 +369,25 @@
         <p class="warning">SampleCollection added in the 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>Sample Collection</em> -
+            <em>Sample Collection</em> &mdash;
             A <a href="#SOSASampleCollection">SampleCollection</a> is a collection
             (set) of one or more <a href="#SOSASample">Samples</a> or
             <a href="#SOSASampleCollection">SampleCollections</a>, i.e., collections may be nested.
         </p>
         <p>
             The following <a href="#SOSASample">Sample</a> properties may appear in a
-            <a href="#SOSASampleCollection">SampleCollection</a>:
-            <a href="#SOSAhasOriginalSample">hasOriginalSample</a> ,
-            <a href="#SOSAhasSampledFeature">hasSampledFeature</a> ,
-            <a href="#SOSAisSampleOf">isSampleOf</a> ,
-            <a href="#SOSAisResultOfUsedProcedure">isResultOfUsedProcedure</a> ,
+            <a href="#SOSASampleCollection">SampleCollection</a> &mdash;
+            <a href="#SOSAhasOriginalSample">hasOriginalSample</a>,
+            <a href="#SOSAhasSampledFeature">hasSampledFeature</a>,
+            <a href="#SOSAisSampleOf">isSampleOf</a>,
+            <a href="#SOSAisResultOfUsedProcedure">isResultOfUsedProcedure</a>,
             <a href="#SOSAisResultOfMadeBySampler">isResultOfMadeBySampler</a>.
             If it is present, the values of a property summarizes the values of the matching properties of the
             member samples, where membership is either direct or transitive through onw or more member sample
             collections.
         </p>
         <p>
-            The following consistency rules apply with respect to the Sample properties listed above:
+            The following consistency rules apply to the Sample properties listed above:
         </p>
         <ol>
             <li>
@@ -398,7 +398,7 @@
             <li>
                 Where an individual <a href="#SOSASampleCollection">SampleCollection</a> has <i>a single value for a
                     property</i>, each ember <a href="#SOSASample">Sample</a> (direct or transitive) MUST have that same
-                value for that property - i.e., the collection is homogeneous in that property. That property MAY be
+                value for that property &mdash; i.e., the collection is homogeneous in that property. That property MAY be
                 omitted in any member <a href="#SOSASample">Sample</a> or
                 <a href="#SOSASampleCollection">SampleCollection</a>.
             </li>
@@ -477,7 +477,7 @@
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Sampler</em> -
+            <em>Sampler</em> &mdash;
             An entity that implements a sampling
             <a href="#SOSAProcedure">Procedure</a> in the context of an <a href="#SOSASampling">Sampling</a>
             to generate a <a href="#SOSASample">Sample</a>.
@@ -543,7 +543,7 @@
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Sampling</em> -
+            <em>Sampling</em> &mdash;
             Act of carrying out a sampling <a href="#SOSAProcedure">Procedure</a> using
             a <a href="#SOSASampler">Sampler</a> to create one or more <a href="#SOSASample">Samples</a> of the
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
@@ -551,26 +551,24 @@
         <p class="note">
             The different time-properties on a <a href="#SOSASampling">sosa:Sampling</a> support
             the description of plans, forecasts and predictions as well as descriptions of various historical scenarios.
-            See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.</p>
+            See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.
+        </p>
         <table>
             <tbody>
                 <tr>
                     <th>Examples</th>
                     <td>
-                        Drawing blood from a patient.<br>
-                        Drilling a core from an ice sheet.<br>
-                        Crushing a rock sample in a ball mill.<br>
-                        Digging a pit through a soil sequence.<br>
-                        Dividing a field site into quadrants.<br>
-                        Drilling an observation well.<br>
-                        Establishing a station for environmental monitoring.<br>
-                        Registering an image of the landscape.<br>
-                        Sieving a powder to separate the subset finer than
-                        100-mesh.<br>
-                        Selecting a subset of a population.<br>
-                        Splitting a piece of drill-core to create two new
-                        samples.<br>
-                        Taking a diamond-drill core from a rock outcrop.<br>
+                        Drawing blood from a patient<br>
+                        Drilling a core from an ice sheet<br>
+                        Digging a pit through a soil sequence<br>
+                        Dividing a field site into quadrants<br>
+                        Drilling an observation well<br>
+                        Establishing a station for environmental monitoring<br>
+                        Registering an image of the landscape<br>
+                        Sieving a powder to separate the subset finer than 100-mesh<br>
+                        Selecting a subset of a population<br>
+                        Splitting a piece of drill-core to create two new samples<br>
+                        Taking a diamond-drill core from a rock outcrop<br>
                     </td>
                 </tr>
                 <tr class="ssn">
@@ -630,14 +628,14 @@
             SamplingCollection added in 2025 edition.
             This term is non-normative pending further implementation experience</p>
         <p>
-            <em>Sampling Collection</em> -
+            <em>Sampling Collection</em> &mdash;
             Collection (set) of one or more <a href="#SOSASampling">Samplings</a> or
             <a href="#SOSASamplingCollection">SamplingCollections</a>, i.e., collections may be
             nested.
         </p>
         <p>
             The following <a href="#SOSASampling">Sampling</a> properties may appear in an
-            <a href="#SOSASamplingCollection">SamplingCollection</a>:
+            <a href="#SOSASamplingCollection">SamplingCollection</a> &mdash;
             <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a>,
             <a href="#SOSAhasUltimateFeatureOfInterest">hasUltimateFeatureOfInterest</a>,
             <a href="#SOSAmadeBySampler">madeBySampler</a>,
@@ -646,14 +644,13 @@
             <a href="#SOSAstartTime">startTime</a>,
             <a href="#SOSAphenomenonTime">phenomenonTime</a>,
             <a href="#SOSAresultTime">resultTime</a>,
-            <a href="#SOSAhasResult">hasResult</a>
-            .
+            <a href="#SOSAhasResult">hasResult</a>.
             If it is present, the value of a property summarizes the values of the matching properties of
             the member samplings, where membership is either direct or transitive through one or more member
             sampling collections.
         </p>
         <p>
-            The following consistency rules with respect to the Sampling properties listed above:
+            The following consistency rules apply to the Sampling properties listed above:
         </p>
         <ol>
             <li>
@@ -664,7 +661,7 @@
             <li>
                 Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> has <i>a
                     single value for a property</i>, each member <a href="#SOSASampling">Sampling</a>
-                (direct or transitive) MUST have that same value for that property - i.e., the collection is homogeneous
+                (direct or transitive) MUST have that same value for that property &mdash; i.e., the collection is homogeneous
                 in that property.
                 That property MAY then be omitted in any member <a href="#SOSASampling">Sampling</a> or
                 <a href="#SOSASamplingCollection">SamplingCollection</a>.
@@ -762,7 +759,7 @@
             This term is non-normative, pending further implementation experience
         </p>
         <p>
-            <em>Sampling Procedure</em> -
+            <em>Sampling Procedure</em> &mdash;
             A workflow, protocol, plan, algorithm, or computational method specifying
             how to
             make a Sampling.
@@ -839,11 +836,11 @@
             featureSampledBy added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>feature sampled by</em> -
+            <em>feature sampled by</em> &mdash;
             Relation from an ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> to a
             <a href="#SOSASample">Sample</a> or
             <a href="#SOSASampleCollection">SampleCollection</a> that is intended to be
-            representative of it - i.e., the end of a chain of hasSample relations. <br>
+            representative of it &mdash; i.e., the end of a chain of hasSample relations. <br>
         </p>
         <p class="note">
             Some examples of relationships between samples and features of interest within chains are
@@ -892,7 +889,7 @@
             hasOriginalSample added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>has original sample</em> -
+            <em>has original sample</em> &mdash;
             Relation from a <a href="#SOSASample">Sample</a> or <a href="#SOSASampleCollection">SampleCollection</a> to
             the original <a href="#SOSASample">Sample</a>
             collected from the ultimate feature of interest.
@@ -940,7 +937,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>has sample</em> -
+            <em>has sample</em> &mdash;
             Relation between a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>
             and the <a href="#SOSASample">Sample</a> or <a href="#SOSASampleCollection">SampleCollection</a> used to
             represent it.
@@ -989,11 +986,11 @@
             hasSampledFeature added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>has ultimate sampled feature</em> -
+            <em>has ultimate sampled feature</em> &mdash;
             Relation from a <a href="#SOSASample">Sample</a> or <a href="#SOSASampleCollection">SampleCollection</a> to
             the ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> that it is intended to be
             representative
-            of - i.e., the end of a chain of isSampleOf relations.
+            of &mdash; i.e., the end of a chain of isSampleOf relations.
         </p>
         <p class="note">
             Some examples of relationships between samples and features of interest within chains are
@@ -1041,7 +1038,7 @@
             isOriginalSampleOf added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>is original sample of</em> -
+            <em>is original sample of</em> &mdash;
             Relation from the original <a href="#SOSASample">Sample</a>
             collected from the ultimate feature of interest to a downstream <a href="#SOSASample">Sample</a> or
             <a href="#SOSASampleCollection">SampleCollection</a>.
@@ -1095,7 +1092,7 @@
             isResultOfMadeBySampler added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>is a result of made by sampler</em> -
+            <em>is a result of made by sampler</em> &mdash;
             Relation from a <a href="#SOSASample">Sample</a> or <a href="#SOSASampleCollection">SampleCollection</a> to
             the <a href="#SOSASampler">Sampler</a>
             (sampling device or entity) that made it.
@@ -1154,7 +1151,7 @@
             isResultOfUsedProcedure added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>is a result of used procedure</em> -
+            <em>is a result of used procedure</em> &mdash;
             Relation from a <a href="#SOSASample">Sample</a> or
             <a href="#SOSASampleCollection">SampleCollection</a> to the <a href="#SOSAProcedure">Procedure</a>
             (plan) used to make it. <br>
@@ -1210,7 +1207,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>is sample of</em> -
+            <em>is sample of</em> &mdash;
             Relation from a <a href="#SOSASample">Sample</a> or <a href="#SOSASampleCollection">SampleCollection</a> to
             the <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> that it is intended to be
             representative of. <br>
@@ -1258,7 +1255,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>made by sampler</em> -
+            <em>made by sampler</em> &mdash;
             Relation linking an act of <a href="#SOSASampling">Sampling</a> to
             the <a href="#SOSASampler">Sampler</a> (sampling device or entity) that made it.
         </p>
@@ -1307,7 +1304,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>made sampling</em> -
+            <em>made sampling</em> &mdash;
             Relation between a <a href="#SOSASampler">Sampler</a> (sampling
             device or entity) and the <a href="#SOSASampling">Sampling</a> act it performed.
         </p>
@@ -1357,7 +1354,7 @@
             madeSamplingHasResult added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>made sampling has result</em> -
+            <em>made sampling has result</em> &mdash;
             Relation from a <a href="#SOSASampler">Sampler</a>
             (sampling device or entity) to a <a href="#SOSASample">Sample</a> or
             <a href="#SOSASampleCollection">SampleCollection</a> made by it.
@@ -1419,7 +1416,7 @@
             usedForExecutionHasResult added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>used for execution has result</em> -
+            <em>used for execution has result</em> &mdash;
             Relation from a <a href="#SOSAProcedure">Procedure</a> to a
             <a href="#SOSASample">Sample</a> or <a href="#SOSASampleCollection">SampleCollection</a> made by
             it. <br>
