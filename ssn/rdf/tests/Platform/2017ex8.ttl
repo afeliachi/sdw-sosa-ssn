@@ -63,5 +63,5 @@
   sosa:hasResult [
     a qudt:QuantityValue ;
     qudt:value "101936"^^xsd:decimal ;
-    qudt:unit unit:PA ] ;
+    qudt:hasUnit unit:PA ] ;
   sosa:resultTime "2017-06-06T12:36:13+00:00"^^xsd:dateTime .

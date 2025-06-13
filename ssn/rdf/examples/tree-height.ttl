@@ -20,7 +20,7 @@ ex:observation_1087 a sosa:Observation ;
   sosa:observedProperty qk:Height ;
   sosa:madeBySensor ex:rangefinder_30 ;
   sosa:hasResult [ 
-    qudt:unit unit:M ; 
+    qudt:hasUnit unit:M ; 
     qudt:value "15.3"^^xsd:decimal ] ;
 .
 ex:tree_124 a sosa:FeatureOfInterest ;

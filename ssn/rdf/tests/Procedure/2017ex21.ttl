@@ -125,4 +125,4 @@
   qudt:quantityValue [
     rdf:type qudt:QuantityValue ;
     qudt:value "98.4"^^xsd:double ;
-    qudt:unit unit:PERCENT ] .
+    qudt:hasUnit unit:PERCENT ] .

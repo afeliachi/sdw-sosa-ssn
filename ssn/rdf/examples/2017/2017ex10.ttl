@@ -15,7 +15,7 @@
   sosa:hasResult [
      rdf:type qudt:QuantityValue ;
      qudt:value "22.4"^^xsd:decimal ;
-     qudt:unit unit:KiloW-HR ] ;
+     qudt:hasUnit unit:KiloW-HR ] ;
   sosa:phenomenonTime [
     rdf:type time:Interval ;
     time:hasBeginning [ 
