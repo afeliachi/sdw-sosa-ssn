@@ -1,11 +1,11 @@
 <h3>Sample Relations Module</h3>
 <p>
-    Samples are often related to other samples, by sub-sampling, topological relationships
-    (stations along a traverse, pixels within an image, probe spots on a polished section,
-    specimens retrieved within a borehole)
+    Samples are often related to other samples by sub-sampling, topological relationships
+    (e.g., stations along a traverse, pixels within an image, probe spots on a polished section, or
+    specimens retrieved within a borehole),
     or as parts of sample processing chains
-    (crushing, splitting, dissecting, disolving).
-    There are an essentially unlimited set of relationships between samples,
+    (e.g., crushing, splitting, dissecting, or dissolving).
+    There is an essentially unlimited set of relationships between samples,
     so the nature of the relationship has its own class.
     This section describes a flexible model to describe such relationships between samples.
     The model is based on the
@@ -155,7 +155,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>has sample relationship</em> -
+            <em>has sample relationship</em> &mdash;
             Links a sample to a <a href="#SAMRSampleRelationship"><code>Sample Relationship</code></a> (which links to a
             related <a href="#SOSASample">Sample</a>).
         </p>
@@ -192,7 +192,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>nature of (sample) relationship</em> -
+            <em>nature of (sample) relationship</em> &mdash;
             Links a <a href="#SAMRSampleRelationship"><code>Sample Relationship</code></a>
             to an indication of the nature of the relationship.
         </p>
@@ -229,7 +229,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>related sample</em> -
+            <em>related sample</em> &mdash;
             Links a <a href="#SAMRSampleRelationship"><code>Sample Relationship</code></a> to the related
             <a href="#SOSASample"><code>Sample.</code></a>
         </p>
