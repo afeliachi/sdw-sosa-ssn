@@ -183,7 +183,7 @@ examples:obsTest1
   sosa:hasResult [
       rdf:type qudt:QuantityValue ;
       rdf:type sosa:Result ;
-      qudt:value "0.28"^^<http://www.linkedmodel.org/schema/dtype#numericUnion> ;
+      qudt:value 0.28 ;
       qudt:hasUnit <http://qudt.org/vocab/unit/Kilogram> ;
       skos:editorialNote "Use qudt:QuantityValue for sosa:Result" ;
     ] ;
