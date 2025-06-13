@@ -30,7 +30,6 @@ ex:a21
 ex:a22
   a sosa:Observation ;
   sosa:madeBySensor ex:T56 ;
-  sosa:observedProperty qk:Temperature ;
   sosa:hasFeatureOfInterest ex:F2 ;
   sosa:phenomenonTime [
     a time:Instant ;
