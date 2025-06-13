@@ -21,10 +21,10 @@ sensor:BME280 a owl:Class ;
     rdfs:subClassOf sosa:Sensor ;
     skos:prefLabel "BME280" ;
     sosa:observes 
-      [ qudt:unit unit:DEG_C ;
+      [ qudt:hasUnit unit:DEG_C ;
         skos:broader property:temperature ;
       ] ,
-      [ qudt:unit unit:MicroGM-PER-M3 ;
+      [ qudt:hasUnit unit:MicroGM-PER-M3 ;
         skos:broader property:pm10 ;
         sosa:implements 
           [ qb:order 1 ;

@@ -29,27 +29,27 @@
         This section introduces the following classes and properties:</p>
     <div class="azlist">
         <p>
-            <a href="#SOSAObservation">sosa:Observation</a>
-            , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
-            , <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
-            , <a href="#SOSASensor">sosa:Sensor</a>
-            , <a href="#SOSAStimulus">sosa:Stimulus</a>
-            , <a href="#SOSAdetects">sosa:detects</a>
-            , <a href="#SOSAhasProxy">sosa:hasProxy</a>
-            , <a href="#SOSAisDetectedBy">sosa:isDetectedBy</a>
-            , <a href="#SOSAisObservedBy">sosa:isObservedBy</a>
-            , <a href="#SOSAisProxyFor">sosa:isProxyFor</a>
-            , <a href="#SOSAmadeBySensor">sosa:madeBySensor</a>
-            , <a href="#SOSAmadeObservation">sosa:madeObservation</a>
-            , <a href="#SOSAobservationRelatedTo">sosa:observationRelatedTo</a>
-            , <a href="#SOSAobservedProperty">sosa:observedProperty</a>
-            , <a href="#SOSAobserves">sosa:observes</a>
-            , <a href="#SOSAoriginated">sosa:originated</a>
-            , <a href="#SOSAqualityOf">sosa:qualityOf</a>
-            , <a href="#SOSArelatedObservation">sosa:relatedObservation</a>
-            , <a href="#SOSAresultQuality">sosa:resultQuality</a>
-            , <a href="#SOSAwasObservedBy">sosa:wasObservedBy</a>
-            , <a href="#SOSAwasOriginatedBy">sosa:wasOriginatedBy</a>
+            <a href="#SOSAObservation">sosa:Observation</a>,
+            <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>,
+            <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>,
+            <a href="#SOSASensor">sosa:Sensor</a>,
+            <a href="#SOSAStimulus">sosa:Stimulus</a>,
+            <a href="#SOSAdetects">sosa:detects</a>,
+            <a href="#SOSAhasProxy">sosa:hasProxy</a>,
+            <a href="#SOSAisDetectedBy">sosa:isDetectedBy</a>,
+            <a href="#SOSAisObservedBy">sosa:isObservedBy</a>,
+            <a href="#SOSAisProxyFor">sosa:isProxyFor</a>,
+            <a href="#SOSAmadeBySensor">sosa:madeBySensor</a>,
+            <a href="#SOSAmadeObservation">sosa:madeObservation</a>,
+            <a href="#SOSAobservationRelatedTo">sosa:observationRelatedTo</a>,
+            <a href="#SOSAobservedProperty">sosa:observedProperty</a>,
+            <a href="#SOSAobserves">sosa:observes</a>,
+            <a href="#SOSAoriginated">sosa:originated</a>,
+            <a href="#SOSAqualityOf">sosa:qualityOf</a>,
+            <a href="#SOSArelatedObservation">sosa:relatedObservation</a>,
+            <a href="#SOSAresultQuality">sosa:resultQuality</a>,
+            <a href="#SOSAwasObservedBy">sosa:wasObservedBy</a>,
+            <a href="#SOSAwasOriginatedBy">sosa:wasOriginatedBy</a>
         </p>
     </div>
 
@@ -62,7 +62,7 @@
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Observation</em> -
+            <em>Observation</em> &mdash;
             An act of carrying out an observing <a href="#SOSAProcedure">Procedure</a>
             using a <a href="#SOSASensor">Sensor</a> to estimate or calculate a value of an observable
             <a href="#SOSAProperty">Property</a> of a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
@@ -74,35 +74,34 @@
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
             Observations of multiple properties, or other combinations of Observations, may be described in an
             <a href="#SOSAObservationCollection">ObservationCollection</a>.
-            <br><br>
+        </p>
+        <p>
             Alternatively, applications may choose to encapsulate complexity by defining a complex property with
             multiple individual components, and a corresponding complex result (e.g., a vector).
             This approach is not prohibited by the SSN Ontology, but the details are beyond the scope of SSN.
         </p>
         <p>
 
-            When the <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> cannot be observed directly, a <a
-                href="#SOSASample">Sample</a> of it might be used in Observations as a proxy.
-            In such a case the <a href="#SOSASample">Sample</a> is the proximate <a
-                href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the Observation,
-            while the (ultimate) <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the act of Sampling (i.e.
-            the entity that the Sample is ultimately <a href="#SOSAisSampleOf">isSampleOf</a>) is the ultimate <a
-                href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the Observation.
+            When the <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> cannot be observed directly, a
+            <a href="#SOSASample">Sample</a> of it might be used in Observations as a proxy.
+            In such a case the <a href="#SOSASample">Sample</a> is the proximate
+            <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the Observation,
+            while the (ultimate) <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the act of Sampling (i.e.,
+            the entity that the Sample is ultimately <a href="#SOSAisSampleOf">isSampleOf</a>) is the ultimate
+            <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the Observation.
         </p>
-
 
         <p class="note">
             The different time-properties on a <a href="#SOSAObservation">sosa:Observation</a> support the
             description of forecasts and predictions as well as observations relating to various historical scenarios.
-            See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.</p>
-
+            See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.
+        </p>
 
         <table>
             <tbody>
                 <tr>
                     <th>Examples</th>
                     <td>
-
                         The activity of
                         <br>estimating the magnitude or intensity of an earthquake
                         <br>measuring the height of a tree
@@ -111,7 +110,6 @@
                         <br>finding the location of a car
                         <br>measuring the temperature of a room
                         <br>capturing an image of a scene
-
                     </td>
                 </tr>
                 <tr class="ssn">
@@ -200,67 +198,73 @@
         <p class="note">
             An instance of <a href="#SOSAObservationCollection">ObservationCollection</a> represents a container for a
             set of data derived from observations.
-            This broadly corresponds with the class <a
-                href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">dcat:Dataset</a>
+            This broadly corresponds with the class
+            <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">dcat:Dataset</a>
             from the Data Catalog Vocabulary [[DCAT]].
         </p>
         <p>
-            <em>Observation Collection</em> -
+            <em>Observation Collection</em> &mdash;
             Collection (set) of one or more <a href="#SOSAObservation">Observations</a>
             or <a href="#SOSAObservationCollection">ObservationCollections</a>, i.e., collections may be nested.
-            <br><br>
+        </p>
+        <p>
             The following <a href="#SOSAObservation">Observation</a> properties may appear in an
-            <a href="#SOSAObservationCollection">ObservationCollection</a>:
-            <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a> ,
-            <a href="#SOSAhasUltimateFeatureOfInterest">hasUltimateFeatureOfInterest</a> ,
-            <a href="#SOSAusedProcedure">usedProcedure</a> ,
-            <a href="#SOSAmadeBySensor">madeBySensor</a> ,
-            <a href="#SOSAobservedProperty">observedProperty</a> ,
-            <a href="#SOSAphenomenonTime">phenomenonTime</a> ,
-            <a href="#SOSAresultTime">resultTime</a> ,
-            <a href="#SOSAhasResult">hasResult</a> ,
-            <a href="#SOSAhasSimpleResult">hasSimpleResult</a> .
+            <a href="#SOSAObservationCollection">ObservationCollection</a> &mdash;
+            <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a>,
+            <a href="#SOSAhasUltimateFeatureOfInterest">hasUltimateFeatureOfInterest</a>,
+            <a href="#SOSAusedProcedure">usedProcedure</a>,
+            <a href="#SOSAmadeBySensor">madeBySensor</a>,
+            <a href="#SOSAobservedProperty">observedProperty</a>,
+            <a href="#SOSAphenomenonTime">phenomenonTime</a>,
+            <a href="#SOSAresultTime">resultTime</a>,
+            <a href="#SOSAhasResult">hasResult</a>,
+            <a href="#SOSAhasSimpleResult">hasSimpleResult</a>.
             If they are present, the values of these properties summarize the values of the matching properties of
             the member observations, where membership is either direct or transitive through one or more member
             observation collections.
-            <br><br>
-            The following consistency rules with respect to the Observation properties listed above:
-            <br><br>
-            1. Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
-            <i>omits a property</i>, a member <a href="#SOSAObservation">Observation</a> (direct or
-            transitive) MAY have any value for that property.
-            <br><br>
-            2. Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a> has
-            <i>a single value for a property</i>, each member <a href="#SOSAObservation">Observation</a> (direct or
-            transitive) MUST have that same value for that property - i.e., the collection is homogeneous in that
-            property.
-            That property MAY then be omitted in any member <a href="#SOSAObservation">Observation</a>
-            or <a href="#SOSAObservationCollection">ObservationCollection</a>.
-            <br><br>
-            3. Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a> has
-            <i>more than one value for a property</i>, each member <a href="#SOSAObservation">Observation</a>
-            (direct or transitive) MUST have a value for that property that matches one of the values for the
-            property in the collection.
-            <br><br>
-            4. Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
-            <i>has a value for a property that is a range or interval</i>, each member <a
-                href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
-            that property that matches or falls within that range or interval.
-            <br><br>
-            5. Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
-            <i>has more than one value for a property that is a range or interval</i>, each member <a
-                href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
-            that property that matches or falls within one of those ranges or intervals.
-
-            <br><br>
-
-            The results of collections of observations are often packaged in a 'data cube' whose axes define the
+        </p>
+        <p>
+            The following consistency rules apply to the Observation properties listed above:
+        </p>
+        <ol>
+            <li>
+                Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
+                <i>omits a property</i>, a member <a href="#SOSAObservation">Observation</a> (direct or
+                transitive) MAY have any value for that property.
+            </li>
+            <li>
+                Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a> has
+                <i>a single value for a property</i>, each member <a href="#SOSAObservation">Observation</a> (direct or
+                transitive) MUST have that same value for that property &mdash; i.e., the collection is homogeneous in that
+                property.
+                That property MAY then be omitted in any member <a href="#SOSAObservation">Observation</a>
+                or <a href="#SOSAObservationCollection">ObservationCollection</a>.
+            </li>
+            <li>
+                Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a> has
+                <i>more than one value for a property</i>, each member <a href="#SOSAObservation">Observation</a>
+                (direct or transitive) MUST have a value for that property that matches one of the values for the
+                property in the collection.
+            </li>
+            <li>
+                Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
+                <i>has a value for a property that is a range or interval</i>, each member
+                <a href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
+                that property that matches or falls within that range or interval.
+            </li>
+            <li>
+                Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
+                <i>has more than one value for a property that is a range or interval</i>, each member
+                <a href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
+                that property that matches or falls within one of those ranges or intervals.
+            </li>
+        </ol>
+        <p> The results of collections of observations are often packaged in a 'data cube' whose axes define the
             range of properties of the set of observations.
-
-            <br><br>
+        </p>
+        <p>
             The members of a collection do not necessarily share a common value for any
             property.
-            <br><br>
         </p>
         <p class="note">
             See <a href="#ModelTimeSeries">Time series</a> and
@@ -268,18 +272,23 @@
         </p>
         <table>
             <tbody>
+                <tr>
+                    <th>Note</th>
+                    <td>The members of a collection do not necessarily share a common value
+                        for any property.</td>
+                </tr>
                 <tr class="ssn">
                     <th>Sub class of</th>
                     <td>
-                        <a href="https://www.w3.org/TR/rdf12-schema/#ch_bag">rdf:Bag</a>
-                        , <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
+                        <a href="https://www.w3.org/TR/rdf12-schema/#ch_bag">rdf:Bag</a>,
+                        <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th>Disjoint with</th>
                     <td>
-                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a> ,
-                        <a href="#SOSASampleCollection">sosa:SampleCollection</a> ,
+                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>,
+                        <a href="#SOSASampleCollection">sosa:SampleCollection</a>,
                         <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
                     </td>
                 </tr>
@@ -308,8 +317,8 @@
                         <br>
 
                         <a href="#SOSAhasMember">sosa:hasMember</a>
-                        <em><b>ONLY</b></em> (<a href="#SOSAObservation">sosa:Observation</a> OR <a
-                            href="#SOSAObservationCollection">sosa:ObservationCollection</a> )
+                        <em><b>ONLY</b></em> (<a href="#SOSAObservation">sosa:Observation</a> OR
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a> )
                     </td>
                 </tr>
                 <tr>
@@ -347,13 +356,10 @@
             This term is non-normative, pending further implementation experience
         </p>
         <p>
-            <em property="rdfs:label">Observing Procedure</em> -
-            <span property="skos:definition"> A workflow, protocol, plan, algorithm, or computational method specifying
-                how to
-                make an Observation.
-                An Observing Procedure is re-usable, and might be involved in many Observations.
-                It explains the steps to be carried out to arrive at reproducible results.
-            </span>
+            <em>Observing Procedure</em> &mdash;
+            A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation.
+            An Observing Procedure is re-usable, and might be applied in many Observations.
+            It explains the steps to be carried out to arrive at reproducible results.
         </p>
         <table>
             <tbody>
@@ -374,23 +380,19 @@
                 <tr>
                     <th>Examples</th>
                     <td>
-                        <span property="skos:example">A workflow, protocol, plan, algorithm, or computational method
-                            specifying how to make an observation; the description of the process used by an
-                            observer.
-                            This could be a chemical analysis method, a protocol for measuring an object, or even
-                            a checklist used by a human observer during a biodiversity campaign.
-                            The Procedure could further describe the algorithms behind simulators or models used to
-                            generate a result
-                            from other inputs.</span>
+                        A workflow, protocol, plan, algorithm, or computational method specifying how to make an
+                        observation; the description of the process used by an observer.
+                        This could be a chemical analysis method, a protocol for measuring an object, or even
+                        a checklist used by a human observer during a biodiversity campaign.
+                        The Procedure could further describe the algorithms behind simulators or models used to
+                        generate a result from other inputs.
                     </td>
                 </tr>
                 <tr>
                     <th>Note</th>
                     <td>
-                        <span property="skos:note">[ISO 19156:2023] An ObservingProcedure shall be defined as the
-                            description of
-                            steps performed in order to determine the value of an observableProperty by an
-                            Observer.</span>
+                        [ISO 19156:2023] An ObservingProcedure shall be defined as the description of steps performed in
+                        order to determine the value of an observableProperty by an Observer.
                     </td>
                 </tr>
                 <tr>
@@ -426,12 +428,13 @@
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Sensor</em> -
+            <em>Sensor</em> &mdash;
             An entity that implements an observing
             <a href="#SOSAProcedure">Procedure</a> in the context of an Observation to determine the value
             of an observable <a href="#SOSAProperty">Property</a>.
             This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
-            <br><br>
+        </p>
+        <p>
             A <a href="#SOSASensor">Sensor</a> responds to a <a href="#SOSAStimulus">Stimulus</a>,
             e.g., a change in the environment, or input data composed from the results of prior
             <a href="#SOSAObservation">Observations</a>.
@@ -531,7 +534,7 @@
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Stimulus</em> -
+            <em>Stimulus</em> &mdash;
             An event in the real world that 'triggers' the
             <a href="#SOSASensor">Sensor</a>. The properties associated to the
             <a href="#SOSAStimulus">Stimulus</a> may be different to the eventual observed
@@ -591,7 +594,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>detects</em> -
+            <em>detects</em> &mdash;
             A relation from a <a href="#SOSASensor">Sensor</a>
             to the <a href="#SOSAStimulus">Stimulus</a> that it detects.
             The <a href="#SOSAStimulus">Stimulus</a> itself will be serving as a proxy
@@ -638,7 +641,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>has proxy</em> -
+            <em>has proxy</em> &mdash;
             A relation from an <a href="#SOSAProperty">sosa:Property</a>
             to the <a href="#SOSAStimulus">Stimulus</a> that serves as its proxy.
         </p>
@@ -692,7 +695,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>is detected by</em> -
+            <em>is detected by</em> &mdash;
             A relation from a <a href="#SOSAStimulus">Stimulus</a> to the
             <a href="#SOSASensor">Sensor</a> that may detect it.
             The <a href="#SOSAStimulus">Stimulus</a> itself will be serving as a proxy
@@ -739,12 +742,12 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p class="note">
-            The 2017 edition defined the term ObservableProperty as the domain of <a
-                href="#SOSAisObservedBy">sosa:isObservedBy</a>.
+            The 2017 edition defined the term ObservableProperty as the domain of
+            <a href="#SOSAisObservedBy">sosa:isObservedBy</a>.
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
-            <em>is observed by</em> -
+            <em>is observed by</em> &mdash;
             Relation between a <a href="#SOSAProperty">Property</a>
             and the <a href="#SOSASensor">Sensor</a> able to observe it.
         </p>
@@ -793,7 +796,7 @@
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
-            <em>isProxyFor</em> -
+            <em>isProxyFor</em> &mdash;
             A relation from a <a href="#SOSAStimulus">Stimulus</a> to the <a href="#SOSAProperty">Property</a>
             that the <a href="#SOSAStimulus">Stimulus</a> is serving as a proxy for.
         </p>
@@ -802,15 +805,11 @@
                 <tr>
                     <th>Example</th>
                     <td>
-                        For example, the expansion of quicksilver is a <a href="#SOSAStimulus">Stimulus</a> that serves
-                        as a
-                        proxy for some
-                        temperature <a href="#SOSAProperty">Property</a>. An increase or decrease
-                        in the velocity of
-                        spinning cups on a wind <a href="#SOSASensor">Sensor</a> is serving as a
-                        proxy for
-                        the
-                        wind speed.
+                        For example, the expansion of quicksilver is a <a href="#SOSAStimulus">Stimulus</a>
+                        that serves as a proxy for some temperature <a href="#SOSAProperty">Property</a>.
+                        An increase or decrease in the velocity of spinning cups on a wind
+                        <a href="#SOSASensor">Sensor</a>
+                        is serving as a proxy for the wind speed.
                     </td>
                 </tr>
                 <tr>
@@ -851,7 +850,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>made by <a href="#SOSASensor">Sensor</a></em> -
+            <em>made by <a href="#SOSASensor">Sensor</a></em> &mdash;
             Relation between an <a href="#SOSAObservation">Observation</a> and
             the <a href="#SOSASensor">Sensor</a>
             which made the <a href="#SOSAObservation">Observations</a>.
@@ -864,8 +863,9 @@
                 </tr>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a href="#SOSAObservation">sosa:Observation</a>, <a
-                            href="#SOSAObservationCollection">sosa:ObservationCollection</a></td>
+                    <td><a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+                    </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
@@ -901,7 +901,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>made observation</em> -
+            <em>made observation</em> &mdash;
             Relation between a <a href="#SOSASensor">Sensor</a>
             and an <a href="#SOSAObservation">Observation</a> made by the <a href="#SOSASensor">Sensor</a>.
         </p>
@@ -952,7 +952,7 @@
             This term is non-normative, pending further implementation experience</p>
 
         <p>
-            <em>observation related to</em> -
+            <em>observation related to</em> &mdash;
             Relation from an <a href="#SOSAObservation">Observation</a> or
             <a href="#SOSAObservationCollection">ObservationCollection</a>.
         </p>
@@ -961,20 +961,20 @@
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAObservation">sosa:Observation</a>
-                        , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a href="#SOSAExecution">sosa:Execution</a>
-                        , <a href="#SOSAActuation">sosa:Actuation</a>
-                        , <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
-                        , <a href="#SOSAObservation">sosa:Observation</a>
-                        , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
-                        , <a href="#SOSASampling">sosa:Sampling</a>
-                        , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
+                        <a href="#SOSAExecution">sosa:Execution</a>,
+                        <a href="#SOSAActuation">sosa:Actuation</a>,
+                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>,
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>,
+                        <a href="#SOSASampling">sosa:Sampling</a>,
+                        <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
                     </td>
                 </tr>
                 <tr>
@@ -1014,13 +1014,13 @@
         </p>
         <p class="note">
             'observed property' covers the concepts referred to in [[VIM]] as 'measurand' (quantitative values) and
-            'examinand' (categorical and nominal values - [[VIM4]]), as well as complex and structured properties whose
+            'examinand' (categorical and nominal values &mdash; [[VIM4]]), as well as complex and structured properties whose
             values may be represented as lists, vectors, arrays, rasters, geometries, etc.
             More specific terms are used in other contexts for related concepts, such as 'analyte' (chemistry) and
             'determinand' (water quality).
         </p>
         <p>
-            <em>observed property</em> -
+            <em>observed property</em> &mdash;
             Relation linking an
             <a href="#SOSAObservation">Observation</a> or <a href="#SOSAObservationCollection">ObservationCollection</a>
             to the property that was
@@ -1035,8 +1035,8 @@
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAObservation">sosa:Observation</a>
-                        , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
@@ -1079,7 +1079,7 @@
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
-            <em>observes</em> -
+            <em>observes</em> &mdash;
             Relation between a <a href="#SOSASensor">Sensor</a>
             and a <a href="#SOSAProperty">Property</a> that it is capable of
             sensing.
@@ -1137,7 +1137,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>originated</em> -
+            <em>originated</em> &mdash;
             Relation between a <a href="#SOSAStimulus">Stimulus</a> and the
             <a href="#SOSAObservation">Observation</a> that was originated by it.
         </p>
@@ -1184,7 +1184,7 @@
             qualityOf added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>quality of</em> -
+            <em>quality of</em> &mdash;
             observation result that this quality relates to.
         </p>
         <table>
@@ -1192,8 +1192,8 @@
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a href="#SOSAObservation">sosa:Observation</a>
-                        , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
@@ -1230,7 +1230,7 @@
             relatedObservation added in 2025 edition.
             This term is non-normative, pending further implementation experience</p>
         <p>
-            <em>related observation</em> -
+            <em>related observation</em> &mdash;
             Relation to an <a href="#SOSAObservation">Observation</a> or
             <a href="#SOSAObservationCollection">ObservationCollection</a>.
         </p>
@@ -1239,20 +1239,20 @@
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAExecution">sosa:Execution</a>
-                        , <a href="#SOSAActuation">sosa:Actuation</a>
-                        , <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
-                        , <a href="#SOSAObservation">sosa:Observation</a>
-                        , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
-                        , <a href="#SOSASampling">sosa:Sampling</a>
-                        , <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
+                        <a href="#SOSAExecution">sosa:Execution</a>,
+                        <a href="#SOSAActuation">sosa:Actuation</a>,
+                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>,
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>,
+                        <a href="#SOSASampling">sosa:Sampling</a>,
+                        <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a href="#SOSAObservation">sosa:Observation</a>
-                        , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
@@ -1290,7 +1290,7 @@
             This term is non-normative, pending further implementation experience
         </p>
         <p>
-            <em>observation result quality</em> -
+            <em>observation result quality</em> &mdash;
             Information pertaining to the data quality of the result.
         </p>
         <table>
@@ -1306,6 +1306,7 @@
                         The quality of a result can be assessed following the procedures in
                         the ISO 19157 series [[iso-19157-1]].
                         <br><br>
+
                         <a
                             href="https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement">dqv:hasQualityMeasurement</a>
                         from the Data Quality Vocabulary [[vocab-dqv]] is equivalent
@@ -1314,8 +1315,8 @@
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAObservation">sosa:Observation</a>
-                        , <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
@@ -1349,7 +1350,7 @@
         </p>
 
         <p>
-            <em>was observed by</em> -
+            <em>was observed by</em> &mdash;
             Relation between a <a href="#SOSAProperty">Property</a>
             and an <a href="#SOSAObservation">Observation</a> that observed it.
         </p>
@@ -1394,7 +1395,7 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>was originated by</em> -
+            <em>was originated by</em> &mdash;
             Relation between an <a href="#SOSAObservation">Observation</a> and
             the <a href="#SOSAStimulus">Stimulus</a> that originated it.
         </p>

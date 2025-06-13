@@ -78,12 +78,12 @@
 	rdfs:comment "A temperature range of -40 to 80 Celsius."@en ;
 	xsd:minInclusive -40.0 ;
 	xsd:maxInclusive 80.0 ;
-	qudt:unit unit:DEG_C .
+	qudt:hasUnit unit:DEG_C .
 
 <DHT22TempSensitivity> a sosa:Property, ssn-system:Sensitivity, ssn-system:Resolution, schema:PropertyValue ;
 	rdfs:comment "The sensitivity and resolution of the temperature sensor is 0.1 °C in normal temperature and humidity conditions."@en ;
 	schema:value 0.1 ;
-	qudt:unit unit:DEG_C .
+	qudt:hasUnit unit:DEG_C .
 
 <house/134/deployment> a sosa:Deployment ;
 	rdfs:comment "Deployment of PCB Board 1 and 2 in the kitchen for the purpose of observing the temperature."@en ;

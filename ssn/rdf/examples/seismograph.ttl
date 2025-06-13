@@ -44,6 +44,6 @@ ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00 a sosa:Observation ;
   sosa:hasResult [
      rdf:type qudt:QuantityValue ;
      qudt:value "5e-4"^^xsd:double ;
-     qudt:unit unit:CentiM-PER-SEC ] ;
+     qudt:hasUnit unit:CentiM-PER-SEC ] ;
   sosa:resultTime "2017-04-18T08:23:00-07:00"^^xsd:dateTime ;
 .
