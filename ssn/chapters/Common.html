@@ -3099,6 +3099,48 @@ sosa:phenomenonTime [
                 </figcaption>
             </figure>
 
+            <p>
+                The following consistency rules apply to the properties of collections and their members:
+            </p>
+            <ol>
+                <li>
+                    Where an individual Collection <i>omits a property</i>, a member (direct or transitive) MAY have any
+                    value for that property.
+                </li>
+                <li>
+                    Where an individual Collection has <i>a single value for a property</i>, each member (direct or
+                    transitive) MUST have that same value for that property i.e., the collection (set) is homogeneous in
+                    that property.
+                    That property MAY then be omitted in any member.
+                </li>
+                <li>
+                    Where an individual Collection has <i>more than one value for a property</i>, each member (direct or
+                    transitive) MUST have a value for that property that matches one of the values for the property in
+                    the
+                    collection.
+                </li>
+                <li>
+                    Where an individual Collection <i>has a value for a property that is a range or interval</i>, each
+                    member (direct or transitive) MUST have a value for that property that matches or falls within that
+                    range or interval.
+                </li>
+                <li>
+                    Where an individual Collection <i>has more than one value for a property that is a range or
+                        interval</i>, each member (direct or transitive) MUST have a value for that property that
+                    matches or
+                    falls within one of those ranges or intervals.
+                </li>
+            </ol>
+            <p>
+                The members of a collection (set) do not necessarily share a common value for
+                any property.
+            </p>
+            <p class="note">
+                Examples of Collections conforming to the rules are provided in and
+                <a href="#ModelCollectionRules">Collections &mdash; consistency rules</a>.
+                These illustrate all the cases described above.
+            </p>
+
         </div>
     </section>
 
@@ -3111,48 +3153,6 @@ sosa:phenomenonTime [
                 <a href="#SOSAmemberOf">sosa:memberOf</a>
             </p>
         </div>
-
-        <p>
-            The following consistency rules apply to the properties of collections and their members:
-        </p>
-        <ol>
-            <li>
-                Where an individual Collection <i>omits a property</i>, a member (direct or transitive) MAY have any
-                value for that property.
-            </li>
-            <li>
-                Where an individual Collection has <i>a single value for a property</i>, each member (direct or
-                transitive) MUST have that same value for that property i.e., the collection (set) is homogeneous in
-                that property.
-                That property MAY then be omitted in any member.
-            </li>
-            <li>
-                Where an individual Collection has <i>more than one value for a property</i>, each member (direct or
-                transitive) MUST have a value for that property that matches one of the values for the property in the
-                collection.
-            </li>
-            <li>
-                Where an individual Collection <i>has a value for a property that is a range or interval</i>, each
-                member (direct or transitive) MUST have a value for that property that matches or falls within that
-                range or interval.
-            </li>
-            <li>
-                Where an individual Collection <i>has more than one value for a property that is a range or
-                    interval</i>, each member (direct or transitive) MUST have a value for that property that matches or
-                falls within one of those ranges or intervals.
-            </li>
-        </ol>
-        <p>
-            The members of a collection (set) do not necessarily share a common value for
-            any property.
-        </p>
-        <p class="note">
-            Examples of Collections conforming to the rules are provided in and
-            <a href="#ModelCollectionRules">Collections &mdash; consistency rules</a>.
-            These illustrate all the cases described above.
-        </p>
-
-
 
         <section class="specterm sosa" id="SOSAhasMember">
             <h6><a href="#SOSAhasMember">sosa:hasMember</a></h6>
