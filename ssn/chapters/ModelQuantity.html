@@ -6,10 +6,11 @@
 </p>
 <p>
     It is out of the scope of this specification to recommend a particular way of representing quantitative results.
-    Several external vocabularies are available for expressing quantities as OWL individuals, or as datatypes.
-    Examples include
-    the Quantities, Units, Dimensions, and Data Types Ontologies (QUDT, [[QUDT]]),
-    and <code>cdt:ucum</code> from the <i>Custom Datatypes</i> (CDT, [[CDT]]).
+    Several options from external vocabularies are available for expressing quantities as OWL individuals, or as
+    datatypes.
+    Examples include:
+    <code>qudt:QuantityValue</code> from the <i>Quantities, Units, Dimensions, and Data Types</i> ontologies [[QUDT]];
+    <code>cdt:ucum</code> from <i>Custom Datatypes</i> [[CDT]].
 </p>
 
 <h4>Single values</h4>
@@ -62,8 +63,8 @@
 </p>
 
 <p>
-    If <code>qudt:hasUnit</code> is present on a collection, then the consistency rules described for 
-    <a href="#SOSAActuationCollection">Actuation properties</a> or 
+    If <code>qudt:hasUnit</code> is present on a collection, then the consistency rules described for
+    <a href="#SOSAActuationCollection">Actuation properties</a> or
     <a href="#SOSAObservationCollection">Observation properties</a> apply.
 </p>
 
