@@ -1,4 +1,4 @@
-@prefix ex: <https://example.org/sosa/examples-collection-case-2/> .
+@prefix ex: <https://example.org/sosa/collection-rule-4/> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
