@@ -36,11 +36,6 @@ ex:oc5
     ] ;
   ] ;
   qudt:hasUnit unit:DEG_C ;
-  rdfs:comment """
-  Properties specified on the collection are inherited by the members, i.e. observedProperty, madeBySensor, hasUnit.
-  Values for properties that are not specified for the collection are provided on each member, i.e., FoI, result. 
-  Where multiple ranges of values for an individual property are specified on the collection (i.e., phenomenonTime), the value on each member must fall within one of the ranges of values given for the collection.
-  """ ;
 .
 ex:a51
   a sosa:Observation ;

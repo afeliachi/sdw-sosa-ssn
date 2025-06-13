@@ -8,21 +8,19 @@
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:oc1
+ex:oc3
   a sosa:ObservationCollection ;
-  sosa:hasMember ex:a11 ;
-  sosa:hasMember ex:a12 ;
+  sosa:hasMember ex:a31 ;
+  sosa:hasMember ex:a32 ;
   sosa:madeBySensor ex:T56 ;
   sosa:observedProperty qk:Temperature ;
+  sosa:hasFeatureOfInterest ex:F1 , ex:F2 ;
   qudt:hasUnit unit:DEG_C ;
-  rdfs:comment """
-  Properties specified on the collection are inherited by the members, i.e. observedProperty, madeBySensor, hasUnit.
-  Values for properties that are not specified for the collection are provided on each member, i.e., FoI, phenomenonTime, result. 
-
-  """ ;
 .
-ex:a11
+ex:a31
   a sosa:Observation ;
+  sosa:madeBySensor ex:T56 ;
+  sosa:observedProperty qk:Temperature ;
   sosa:hasFeatureOfInterest ex:F1 ;
   sosa:phenomenonTime [
     a time:Instant ;
@@ -30,8 +28,10 @@ ex:a11
   ] ;
   sosa:hasSimpleResult 24.1 ;
 .
-ex:a12
+ex:a32
   a sosa:Observation ;
+  sosa:madeBySensor ex:T56 ;
+  sosa:observedProperty qk:Temperature ;
   sosa:hasFeatureOfInterest ex:F2 ;
   sosa:phenomenonTime [
     a time:Instant ;

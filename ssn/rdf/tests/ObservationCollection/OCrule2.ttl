@@ -8,31 +8,15 @@
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:oc4
+ex:oc2
   a sosa:ObservationCollection ;
-  sosa:hasMember ex:a41 ;
-  sosa:hasMember ex:a42 ;
+  sosa:hasMember ex:a21 ;
+  sosa:hasMember ex:a22 ;
   sosa:madeBySensor ex:T56 ;
   sosa:observedProperty qk:Temperature ;
-  sosa:phenomenonTime [
-    a time:Interval ;
-    time:hasBeginning [
-      a time:Instant ;
-      time:inXSDDateTime "2022-05-01T20:00:00+00:00"^^xsd:dateTime ;
-    ] ;
-    time:hasEnd [
-      a time:Instant ;
-      time:inXSDDateTime "2022-05-01T23:00:00+00:00"^^xsd:dateTime ;
-    ] ;
-  ] ;
   qudt:hasUnit unit:DEG_C ;
-  rdfs:comment """
-  Properties specified on the collection are inherited by the members, i.e. observedProperty, madeBySensor, hasUnit.
-  Values for properties that are not specified for the collection are provided on each member, i.e., FoI, result. 
-  Where a range of values for an individual property are specified on the collection (i.e., phenomenonTime), the value on each member must fall within the range of values given for the collection.
-  """ ;
 .
-ex:a41
+ex:a21
   a sosa:Observation ;
   sosa:madeBySensor ex:T56 ;
   sosa:observedProperty qk:Temperature ;
@@ -43,7 +27,7 @@ ex:a41
   ] ;
   sosa:hasSimpleResult 24.1 ;
 .
-ex:a42
+ex:a22
   a sosa:Observation ;
   sosa:madeBySensor ex:T56 ;
   sosa:observedProperty qk:Temperature ;

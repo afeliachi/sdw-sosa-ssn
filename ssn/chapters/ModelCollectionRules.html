@@ -1,0 +1,92 @@
+<h3>Execution collections &mdash; consistency rules</h3>
+<p>
+    Properties of the members of <a href="#SOSAExecutionCollection">ExecutionCollections</a> must follow the consistency
+    rules provided in their definitions.
+    The following examples illustrate each case from the rules, in the context of an
+    <a href="#SOSAObservationCollection">ObservationCollection</a>.
+    The patterns shown also apply to the other collection types.
+</p>
+<h4>Rule 1 &mdash; absent property on the collection</h4>
+<ol>
+    <li>
+        Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a>
+        <i>omits a property</i>, a member <a href="#SOSAExecution">Execution</a> (direct or transitive) MAY have any
+        value for that property.
+    </li>
+</ol>
+
+<p>
+    Properties that are specified on the collection apply to every member, i.e., in this example
+    <code>sosa:observedProperty</code>, <code>sosa:madeBySensor</code>, <code>qudt:hasUnit</code>.
+    Properties that are not specified for the collection are provided individually on each member, i.e.,
+    <code>sosa:hasFeatureOfInterest</code>, <code>sosa:phenomenonTime</code>, <code>sosa:hasSimpleResult</code>.
+</p>
+
+<pre class="example" data-include="./rdf/tests/ObservationCollection/OCrule1.ttl" data-include-format="text"></pre>
+
+<h4>Rule 2 &mdash; single property value on the collection</h4>
+<ol>
+    <li>
+        Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> has
+        <i>a single value for a property</i>, each member <a href="#SOSAExecution">Execution</a> (direct or transitive)
+        MUST have that same value for that property &mdash; i.e., the collection (set) is
+        homogeneous in that property.
+        That property MAY then be omitted in any member <a href="#SOSAExecution">Execution</a> or
+        <a href="#SOSAExecutionCollection">ExecutionCollection</a>.
+    </li>
+</ol>
+
+<p>
+    The collection has a single value for <code>sosa:observedProperty</code>, and any member with that property has the same value.
+</p>
+
+<pre class="example" data-include="./rdf/tests/ObservationCollection/OCrule2.ttl" data-include-format="text"></pre>
+
+<h4>Rule 3 &mdash; multiple property values on the collection</h4>
+<ol>
+    <li>
+        Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> has
+        <i>more than one value for a property</i>, each member <a href="#SOSAExecution">Execution</a>
+        (direct or transitive) MUST have a value for that property that matches one of the values for the
+        property in the collection.
+    </li>
+</ol>
+
+<p>
+    The collection has a multiple values for <code>sosa:hasFeatureOfInterest</code>, and each member has one of these values for that property.
+</p>
+
+<pre class="example" data-include="./rdf/tests/ObservationCollection/OCrule3.ttl" data-include-format="text"></pre>
+
+<h4>Rule 4 &mdash; range property value on the collection</h4>
+<ol>
+    <li>
+        Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a>
+        <i>has a value for a property that is a range or interval</i>, each member
+        <a href="#SOSAExecution">Execution</a> (direct or transitive) MUST have a value for
+        that property that matches or falls within that range or interval.
+    </li>
+</ol>
+
+<p>
+    The collection has a range of values for <code>sosa:phenomenonTime</code>, and the value for that property on each member falls within the range.
+</p>
+
+<pre class="example" data-include="./rdf/tests/ObservationCollection/OCrule4.ttl" data-include-format="text"></pre>
+
+<h4>Rule 5 &mdash; multiple ranges property value on the collection</h4>
+<ol>
+    <li>
+        Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a>
+        <i>has more than one value for a property that is a range or interval</i>, each member
+        <a href="#SOSAExecution">Execution</a> (direct or transitive) MUST have a value for
+        that property that matches or falls within one of those ranges or intervals.
+    </li>
+</ol>
+
+<p>
+    The collection has two ranges of values for <code>sosa:phenomenonTime</code>, and the value for that property on each member falls within one of the ranges.
+</p>
+
+<pre class="example" data-include="./rdf/tests/ObservationCollection/OCrule5.ttl" data-include-format="text"></pre>
+

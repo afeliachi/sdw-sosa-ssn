@@ -1166,6 +1166,11 @@
                 The members of a collection (set) do not necessarily share a common value for
                 any property.
             </p>
+            <p class="note">
+                Examples of Collections conforming to the rules are provided in and
+                <a href="#ModelCollectionRules">Execution collections &mdash; consistency rules</a>.
+                These illustrate all the cases described above.
+            </p>
             <table>
                 <tbody>
                     <tr>
@@ -1900,57 +1905,49 @@
             <p>
                 <em>phenomenon time</em> &mdash;
                 The time that the result of an
-                <a href="#SOSAExecution">Execution</a>
-                (i.e., <a href="#SOSAActuation">Actuation</a>,
-                <a href="#SOSAObservation">Observation</a>,
-                or <a href="#SOSASampling">Sampling</a>)
-                applies to the <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
+                <a href="#SOSAExecution">Execution</a> (i.e., <a href="#SOSAActuation">Actuation</a>,
+                <a href="#SOSAObservation">Observation</a>, or <a href="#SOSASampling">Sampling</a>) applies to the
+                <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
                 It may be an interval or an instant, or some other compound temporal entity [[!owl-time]].
             </p>
             <p>
                 The <a href="#SOSAphenomenonTime">sosa:phenomenonTime</a> is not
-                necessarily
-                the same as the <a href="#SOSAendTime">sosa:endTime</a> or
+                necessarily the same as the <a href="#SOSAendTime">sosa:endTime</a> or
                 <a href="#SOSAresultTime">sosa:resultTime</a>.
-                <br>
-                <br>
+            </p>
+            <p>
                 In the case of <a href="#SOSAActuation">sosa:Actuation</a>,
                 <a href="#SOSAphenomenonTime">sosa:phenomenonTime</a> SHOULD indicate the time during which the
                 <a href="#SOSAActuator">sosa:Actuator</a> was active.
-                <br>
-                <br>
+            </p>
+            <p>
                 In the case of <a href="#SOSAObservation">sosa:Observation</a>, the
                 <a href="#SOSAphenomenonTime">sosa:phenomenonTime</a> MAY be distant from the
                 <a href="#SOSAresultTime">sosa:resultTime</a>.
                 For example in the case of forecasts the <a href="#SOSAphenomenonTime">sosa:phenomenonTime</a> is
-                after
-                the <a href="#SOSAresultTime">sosa:resultTime</a>.
+                after the <a href="#SOSAresultTime">sosa:resultTime</a>.
                 In historical, geological and cosmological investigations the
                 <a href="#SOSAphenomenonTime">sosa:phenomenonTime</a> can be far in the past, while
                 the <a href="#SOSAresultTime">sosa:resultTime</a> is contemporary.
-                <br>
-                <br>
+            </p>
+            <p>
                 In the case of <a href="#SOSASampling">sosa:Sampling</a> the
                 <a href="#SOSAphenomenonTime">sosa:phenomenonTime</a> SHOULD indicate the time during which the
                 sampling <a href="#SOSAProcedure">sosa:Procedure</a> was active.
                 The <a href="#SOSAresultTime">sosa:resultTime</a> can indicate when the sample comes into the
-                possession
-                of
-                the
-                operator. 
+                possession of the operator.
             </p>
-            <p class="note">The different time-properties on a <a href="#SOSAExecution">sosa:Execution</a> support
+            <p class="note">
+                The different time-properties on a <a href="#SOSAExecution">sosa:Execution</a> support
                 the description of plans, forecasts and predictions as well as descriptions of various historical
                 scenarios.
-                See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.</p>
-
-
+                See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.
+            </p>
             <table>
                 <tbody>
                     <tr>
                         <th>Examples</th>
                         <td>
-
                             <pre>
 sosa:phenomenonTime [
     a time:Instant ;
@@ -1985,7 +1982,6 @@ sosa:phenomenonTime [
     ] ;
 ] ;
 </pre>
-
                         </td>
                     </tr>
                     <tr>
