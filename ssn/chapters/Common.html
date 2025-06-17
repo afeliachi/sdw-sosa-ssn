@@ -3057,42 +3057,16 @@ sosa:phenomenonTime [
             A collection of samples may be of the same feature (entity) of interest.
         </p>
         <p>
-            The following consistency rules apply to the properties of collections and their members:
-        </p>
-        <ol>
-            <li>
-                Where an individual Collection <i>omits a property</i>, a member (direct or transitive) MAY have any
-                value for that property.
-            </li>
-            <li>
-                Where an individual Collection has <i>a single value for a property</i>, each member (direct or
-                transitive) MUST have that same value for that property i.e., the collection (set) is homogeneous in
-                that property.
-                That property MAY then be omitted in any member.
-            </li>
-            <li>
-                Where an individual Collection has <i>more than one value for a property</i>, each member (direct or
-                transitive) MUST have a value for that property that matches one of the values for the property in
-                the collection.
-            </li>
-            <li>
-                Where an individual Collection <i>has a value for a property that is a range or interval</i>, each
-                member (direct or transitive) MUST have a value for that property that matches or falls within that
-                range or interval.
-            </li>
-            <li>
-                Where an individual Collection <i>has more than one value for a property that is a range or
-                    interval</i>, each member (direct or transitive) MUST have a value for that property that
-                matches or falls within one of those ranges or intervals.
-            </li>
-        </ol>
-        <p>
-            The members of a collection (set) do not necessarily share a common value for any property.
+            Consistency rules for the properties of collections and their members are described in the definitions of
+            the specific collection types
+            <a href="#SOSAActuationCollection">ActuationCollection</a>,
+            <a href="#SOSAObservationCollection">ObservationCollection</a>,
+            <a href="#SOSASampleCollection">SampleCollection</a>, and
+            <a href="#SOSASamplingCollection">SamplingCollection</a>.
         </p>
         <p class="note">
             Examples of Collections conforming to the rules are provided in
             <a href="#ModelCollectionRules">Collections and their members' property values</a>.
-            These illustrate each of the cases described above.
         </p>
 
     </section>
