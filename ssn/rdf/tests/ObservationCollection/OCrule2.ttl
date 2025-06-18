@@ -15,10 +15,12 @@ ex:oc2
   sosa:madeBySensor ex:T56 ;
   sosa:observedProperty qk:Temperature ;
   qudt:hasUnit unit:DEG_C ;
+  rdfs:comment """
+  The properties madeBySensor, observedProperty, and hasUnit are given for the collection. 
+  """ ;
 .
 ex:a21
   a sosa:Observation ;
-  sosa:madeBySensor ex:T56 ;
   sosa:observedProperty qk:Temperature ;
   sosa:hasFeatureOfInterest ex:F1 ;
   sosa:phenomenonTime [
@@ -26,16 +28,24 @@ ex:a21
     time:inXSDDateTime "2022-05-01T20:33:40+00:00"^^xsd:dateTime ;
   ] ;
   sosa:hasSimpleResult 24.1 ;
+  rdfs:comment """
+  The properties hasFeatureOfInterest, phenomenonTime, and hasSimpleResult are specific to this individual member
+  The property observedProperty matches the value for the collection.
+  The properties madeBySensor and hasUnit are inferred from the value for the collection.
+  """ ;
 .
 ex:a22
   a sosa:Observation ;
-  sosa:madeBySensor ex:T56 ;
   sosa:hasFeatureOfInterest ex:F2 ;
   sosa:phenomenonTime [
     a time:Instant ;
     time:inXSDDateTime "2022-05-01T22:33:40+00:00"^^xsd:dateTime ;
   ] ;
   sosa:hasSimpleResult 27.3 ;
+  rdfs:comment """
+  The properties hasFeatureOfInterest, phenomenonTime, and hasSimpleResult are specific to this individual member
+  The properties madeBySensor, observedProperty, and hasUnit are inferred from the value for the collection.
+  """ ;
 .
 ex:F1
   a sosa:FeatureOfInterest ;
