@@ -235,7 +235,8 @@
             <li>
                 Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a> has
                 <i>a single value for a property</i>, each member <a href="#SOSAObservation">Observation</a> (direct or
-                transitive) MUST have that same value for that property &mdash; i.e., the collection is homogeneous in that
+                transitive) MUST have that same value for that property &mdash; i.e., the collection is homogeneous in
+                that
                 property.
                 That property MAY then be omitted in any member <a href="#SOSAObservation">Observation</a>
                 or <a href="#SOSAObservationCollection">ObservationCollection</a>.
@@ -265,6 +266,11 @@
         <p>
             The members of a collection do not necessarily share a common value for any
             property.
+        </p>
+        <p class="note">
+            Examples of Collections conforming to the rules are provided in and
+            <a href="#ModelCollectionRules">Collections and their members' property values</a>.
+            These illustrate all the cases described above.
         </p>
         <p class="note">
             See <a href="#ModelTimeSeries">Time series</a> and
@@ -1014,7 +1020,8 @@
         </p>
         <p class="note">
             'observed property' covers the concepts referred to in [[VIM]] as 'measurand' (quantitative values) and
-            'examinand' (categorical and nominal values &mdash; [[VIM4]]), as well as complex and structured properties whose
+            'examinand' (categorical and nominal values &mdash; [[VIM4]]), as well as complex and structured properties
+            whose
             values may be represented as lists, vectors, arrays, rasters, geometries, etc.
             More specific terms are used in other contexts for related concepts, such as 'analyte' (chemistry) and
             'determinand' (water quality).
