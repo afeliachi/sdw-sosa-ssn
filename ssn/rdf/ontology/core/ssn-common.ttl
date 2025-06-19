@@ -160,6 +160,9 @@ sosa:inputValueForExecution
 sosa:isResultOf 
   rdfs:isDefinedBy sosa-common: .
 
+sosa:madeBySystem 
+  rdfs:isDefinedBy sosa-common: .
+
 sosa:phenomenonOccurred 
   rdfs:isDefinedBy sosa-common: .
 
