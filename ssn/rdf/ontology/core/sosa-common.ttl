@@ -659,6 +659,7 @@ sosa:madeExecution
   """@en ;
   schema:domainIncludes sosa:System ;
   schema:rangeIncludes sosa:Execution ;
+  schema:rangeIncludes sosa:ExecutionCollection ;
   owl:inverseOf sosa:madeBySystem ;
   rdfs:isDefinedBy sosa-common: .
 

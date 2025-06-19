@@ -2489,7 +2489,8 @@ sosa:phenomenonTime [
                             <br>
                             <a href="#SOSAmadeExecution">sosa:madeExecution</a>
                             <em><b>ONLY</b></em>
-                            <a href="#SOSAExecution">sosa:Execution</a>
+                            ( <a href="#SOSAExecution">sosa:Execution</a> OR
+                            <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a> )
                             <br>
                             <a href="#SOSAhasDeployment">sosa:hasDeployment</a>
                             <em><b>ONLY</b></em>
@@ -2974,7 +2975,8 @@ sosa:phenomenonTime [
                 <em>madeExecution</em> &mdash;
                 Relation between a
                 <a href="#SOSASystem">System</a> and an
-                <a href="#SOSAExecution">Execution</a> it has made.
+                <a href="#SOSAExecution">Execution</a> or
+                <a href="#SOSAExecutionCollection">ExecutionCollection</a> it has made.
 
             </p>
             <table>
@@ -3009,7 +3011,11 @@ sosa:phenomenonTime [
                             <a href="#SOSAExecution">sosa:Execution</a>,
                             <a href="#SOSAActuation">sosa:Actuation</a>,
                             <a href="#SOSAObservation">sosa:Observation</a>,
-                            <a href="#SOSASampling">sosa:Sampling</a>
+                            <a href="#SOSASampling">sosa:Sampling</a>,
+                            <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>,
+                            <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>,
+                            <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>,
+                            <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
                         </td>
                     </tr>
                     <tr>
