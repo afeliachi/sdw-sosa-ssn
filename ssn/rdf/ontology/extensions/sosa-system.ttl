@@ -12,30 +12,27 @@
 @prefix schema: <http://schema.org/> .
 
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix sosa-common: <http://www.w3.org/ns/sosa/common/> .
-@prefix ssn: <http://www.w3.org/ns/ssn/> .
-@prefix ssn-dep: <http://www.w3.org/ns/ssn/dep/> .
-@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
+@prefix sosa-systems: <http://www.w3.org/ns/sosa/systems/> .
 
 
-ssn-system: a owl:Ontology , voaf:Vocabulary ;
+sosa-systems: a owl:Ontology , voaf:Vocabulary ;
   dcterms:title "Ontology of operating conditions and capabilities of systems"@en ;
-  dcterms:description "The System Capabilities Module imports SSN and adds classes and properties required for the description of the operating conditions and capabilities of systems, in particular Sensors and Actuators."@en ;
+  dcterms:description "The System Capabilities Module imports SOSA and adds classes and properties required for the description of the operating conditions and capabilities of systems, in particular Sensors and Actuators."@en ;
   dcterms:creator [ a foaf:Agent ; foaf:name "W3C/OGC Spatio-temporal Data on the Web Working Group"@en ] ;
-  dcterms:rights "Copyright 2017, 2025 W3C/OGC." ;
+  dcterms:rights "Copyright 2025 W3C/OGC." ;
   dcterms:license <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
   dcterms:license <http://www.opengeospatial.org/ogc/Software> ;
   rdfs:comment "Please report any errors to the W3C Spatio-temporal Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org"@en ;
   rdfs:seeAlso <https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology> ;
   dcterms:created "2017-05-14"^^xsd:date ;
   dcterms:modified "2025-06-24"^^xsd:date ;
-  vann:preferredNamespacePrefix "ssn-system" ;
-  vann:preferredNamespaceUri "http://www.w3.org/ns/ssn/systems/" ;
-  owl:imports ssn: .
+  vann:preferredNamespacePrefix "sosa" ;
+  vann:preferredNamespaceUri "http://www.w3.org/ns/sosa/" ;
+  owl:imports sosa: .
 
 ## Classes and relationships involved in the description of the operating conditions of a system (typically an observation collection about the system environment).
 
-ssn-system:hasOperatingConditions
+sosa:hasOperatingConditions
   a owl:ObjectProperty ;
   rdfs:label "has operating conditions"@en ;
   skos:definition """
@@ -43,94 +40,59 @@ ssn-system:hasOperatingConditions
   """@en ;
   schema:domainIncludes sosa:System ;
   schema:rangeIncludes sosa:ObservationCollection , sosa:Observation ;
-  rdfs:isDefinedBy ssn-system: .
+  rdfs:isDefinedBy sosa-systems: .
 
 
-ssn-system:hasOperatingConditionKind
+sosa:hasOperatingConditionKind
   a owl:ObjectProperty ;
   rdfs:label "has operating condition kind"@en ;
   skos:definition """
   Relation between an ObservationCollection (or Observation) and an OperatingConditionKind describing the kind of the operating conditions in the context of the system. A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
   """@en ;
   schema:domainIncludes sosa:ObservationCollection , sosa:Observation ;
-  schema:rangeIncludes ssn-system:OperatingConditionKind ;
-  rdfs:isDefinedBy ssn-system: .
+  schema:rangeIncludes sosa:OperatingConditionKind ;
+  rdfs:isDefinedBy sosa-systems: .
 
-ssn-system:OperatingConditionKind a owl:Class ;
+sosa:OperatingConditionKind a owl:Class ;
   rdfs:label "Operating Condition Kind"@en ;
   skos:definition """
   A concept that describes the kind of operating conditions in the context of a system. A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
   """@en ;
   rdfs:subClassOf skos:Concept ;
-  rdfs:isDefinedBy ssn-system: .
+  rdfs:isDefinedBy sosa-systems: .
 
 ## A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
 
-ssn-system:NormalOperatingConditions a ssn-system:OperatingConditionKind ;
+sosa:NormalOperatingConditions a sosa:OperatingConditionKind ;
   rdfs:label "Normal Operating Conditions"@en ;
   skos:definition """
   The conditions under which a system is expected to operate normally.
   """@en ;
-  rdfs:isDefinedBy ssn-system: .
+  rdfs:isDefinedBy sosa-systems: .
 
-ssn-system:SuboptimalConditions a ssn-system:OperatingConditionKind ;
+sosa:SuboptimalConditions a sosa:OperatingConditionKind ;
   rdfs:label "Suboptimal Conditions"@en ;
   skos:definition """
   The conditions under which a system is expected to operate suboptimally, but can recover if the conditions are restored to normal operating conditions.
   """@en ;
-  rdfs:isDefinedBy ssn-system: .
+  rdfs:isDefinedBy sosa-systems: .
 
-ssn-system:SurvivableConditions a ssn-system:OperatingConditionKind ;
+sosa:SurvivableConditions a sosa:OperatingConditionKind ;
   rdfs:label "Survivable Conditions"@en ;
   skos:definition """
   The conditions under which a system is expected to survive. The system may be damaged if the survivable conditions are violated.
   """@en ;
-  rdfs:isDefinedBy ssn-system: .
+  rdfs:isDefinedBy sosa-systems: .
 
 
 ## Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which an observation (typically about the system capabilities) is valid
 ## Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which a property (typically about the system capabilities) is valid
 
-ssn-system:inCondition a owl:ObjectProperty ;
+sosa:inCondition a owl:ObjectProperty ;
   schema:domainIncludes sosa:Observation , sosa:Property ;
-  schema:rangeIncludes sosa:ExecutionCollection  , sosa:Execution ;
+  schema:rangeIncludes sosa:ExecutionCollection , sosa:Execution ;
   rdfs:label "in condition"@en ;
   skos:definition "Describes the conditions (typically an observation collection about the system environment) defining the validity context of an observation (typically about the system capabilities) or a property (typically about the system capabilities)."@en ;
-  rdfs:isDefinedBy ssn-system: .
+  rdfs:isDefinedBy sosa-systems: .
 
 
-## SSN-System includes a short but extensible list of properties about system capabilities
-
-ssn-system:TemperaturePrecision a sosa:Property ;
-  rdfs:label "temperature precision"@en ;
-  skos:definition "The precision of the temperature measurements made by a Sensor under the defined Conditions."@en ;
-  rdfs:comment "SSN-System includes a short but extensible list of properties about system capabilities."@en ;
-  rdfs:isDefinedBy ssn-system: .
-  
-ssn-system:MinMeasurableTemperature a sosa:Property ;
-  rdfs:label "minimum measurable temperature"@en ;
-  skos:definition "The minimum temperature that a Sensor can measure under the defined Conditions."@en ;
-  rdfs:comment "SSN-System includes a short but extensible list of properties about system capabilities."@en ;
-  rdfs:isDefinedBy ssn-system: .
-
-ssn-system:MaxMeasurableTemperature a sosa:Property ;
-  rdfs:label "maximum measurable temperature"@en ;
-  skos:definition "The maximum temperature that a Sensor can measure under the defined Conditions."@en ;
-  rdfs:comment "SSN-System includes a short but extensible list of properties about system capabilities."@en ;
-  rdfs:isDefinedBy ssn-system: .
-
-
-## SSN-System includes a short but extensible list of properties about the system environment
-
-ssn-system:EnvironmentTemperature a sosa:Property ;
-  rdfs:label "environment temperature"@en ;
-  skos:definition "The temperature of the environment of the system."@en ;
-  rdfs:comment "SSN-System includes a short but extensible list of properties about the system environment."@en ;
-  rdfs:isDefinedBy ssn-system: .
-
-ssn-system:EnvironmentHumidity a sosa:Property ;
-  rdfs:label "environment humidity"@en ;
-  skos:definition "The humidity of the environment of the system."@en ;
-  rdfs:comment "SSN-System includes a short but extensible list of properties about the system environment."@en ;
-  rdfs:isDefinedBy ssn-system: .
-  

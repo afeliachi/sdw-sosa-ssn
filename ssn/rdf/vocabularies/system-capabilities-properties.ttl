@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+@prefix schema: <http://schema.org/> .
+
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix sosa-systems: <http://www.w3.org/ns/sosa/systems/> .
+@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capability-properties#> .
+
+sosa-cap: a owl:Ontology , voaf:Vocabulary ;
+  dcterms:title "Sample vocabulary of properties about system capabilities"@en ;
+  dcterms:description "This vocabulary defines a short list of properties about system capabilities. 
+
+  It is only for illustration purposes, as the Spatio-temporal Data on the Web Working Group does not ambition to maintain a living list of properties. Extensions of this list should be led by other organization, and publications done to relevant vocabulary portals."@en ;
+  dcterms:creator [ a foaf:Agent ; foaf:name "W3C/OGC Spatio-temporal Data on the Web Working Group"@en ] ;
+  dcterms:rights "Copyright 2025 W3C/OGC." ;
+  dcterms:license <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
+  dcterms:license <http://www.opengeospatial.org/ogc/Software> ;
+  rdfs:comment "Please report any errors to the W3C Spatio-temporal Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org"@en ;
+  dcterms:modified "2025-06-25"^^xsd:date ;
+  vann:preferredNamespacePrefix "sosa-cap" ;
+  vann:preferredNamespaceUri "http://www.w3.org/ns/sosa/system-capability-properties#" ;
+  owl:imports sosa-systems: .
+
+
+sosa-cap:TemperaturePrecision a sosa:Property ;
+  rdfs:label "temperature precision"@en ;
+  skos:definition "The precision of the temperature measurements made by a Sensor under the defined Conditions."@en ;
+  rdfs:isDefinedBy sosa-cap: .
+  
+sosa-cap:MinMeasurableTemperature a sosa:Property ;
+  rdfs:label "minimum measurable temperature"@en ;
+  skos:definition "The minimum temperature that a Sensor can measure under the defined Conditions."@en ;
+  rdfs:isDefinedBy sosa-cap: .
+
+sosa-cap:MaxMeasurableTemperature a sosa:Property ;
+  rdfs:label "maximum measurable temperature"@en ;
+  skos:definition "The maximum temperature that a Sensor can measure under the defined Conditions."@en ;
+  rdfs:isDefinedBy sosa-cap: .
+
+

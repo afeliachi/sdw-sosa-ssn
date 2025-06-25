@@ -1,30 +1,26 @@
 <h3>System Capabilities Module</h3>
 
 <p>
-    The System Capabilities Module imports SSN and adds classes and properties required for the description of the operating conditions and capabilities of systems, in particular Sensors and Actuators.
+    The System Capabilities Module imports SOSA and adds classes and properties required for the description of the operating conditions and capabilities of systems, in particular Sensors and Actuators.
 </p>
-<p style="text-align: center;">The namespace for the System Capabilities Module is
-    <span class="repeated" style="font-family: courier;">http://www.w3.org/ns/ssn/systems/</span>
-    <br>
-    The suggested prefix for the system capabilities, operating ranges, and survival ranges terms is <span
-        class="repeated" style="font-family: courier;">ssn-system</span>
-</p>
-<p>An <a href="http://w3c.github.io/sdw-sosa-ssn/ssn/rdf/ontology/extensions/ssn-system.ttl">RDF graph for this is
-        available</a>. </p>
 <p style="text-align: center;">
-    The SSN-System graph is available at 
-<a href="http://www.w3.org/ns/ssn-system/">http://www.w3.org/ns/ssn-system/</a>.
+The namespace for the System Capabilities Module is <code>http://www.w3.org/ns/sosa/</code>.</p>
+<p style="text-align: center;">
+The suggested prefix for the System Capabilities Module namespace is <code>sosa</code>. </p>
+<p style="text-align: center;">
+The RDF graph containing the definitions from the System Capabilities Module is available at
+<a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>.
 </p>
 
 <p class="note">
     System Capabilities was a module in the 'Horizontal Segmentation' section of the previous edition of the SSN Ontology [[vocab-ssn-20171019]].
-    This module has received little attention or testing, so it has been moved to Appendix in this edition.
+    This module has been heavily simplified and moved to Appendix in this edition.
 </p>
 
 <section class="informative">
     <h4>Overview and examples</h4>
     <div>
-        <p>TODO intro by oldsceptik</p>
+        <p class="ednote">TODO intro by oldsceptik</p>
         <p class="ssn">
             The following figure provides an overview on the classes
             and properties that are specifically related to modeling operating conditions, and system capabilities, under given conditions.</p>
@@ -33,7 +29,7 @@
             <figcaption>
                 Classes and relationships involved in the description of the operating conditions of a system (typically an observation collection about the system environment).
                 <br>
-                In this diagram, unqualified names refer to classes and properties in the ssn-system: namespace.
+                In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
                 <br>
                 <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
             </figcaption>
@@ -44,7 +40,7 @@
             <figcaption>
                 Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which an observation (typically about the system capabilities) is valid
                 <br>
-                In this diagram, unqualified names refer to classes and properties in the ssn-system: namespace.
+                In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
                 <br>
                 <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
             </figcaption>
@@ -55,7 +51,7 @@
             <figcaption>
                 Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which a property (typically about the system capabilities) is valid
                 <br>
-                In this diagram, unqualified names refer to classes and properties in the ssn-system: namespace.
+                In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
                 <br>
                 <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
             </figcaption>
@@ -68,7 +64,7 @@
             <li><a href="https://github.com/w3c/sdw-sosa-ssn/blob/gh-pages/ssn/rdf/examples/dht22.ttl">DHT22 Description</a></li>
             <li><a href="https://github.com/w3c/sdw-sosa-ssn/blob/gh-pages/ssn/rdf/examples/ip68.ttl">IP68 Smart Sensor</a></li>
         </ul>
-        <p>TODO check examples, maybe add more</p> 
+        <p class="ednote">TODO check examples, maybe add more</p> 
     </div>
 </section>
 <section>
@@ -76,17 +72,17 @@
     <p>This section introduces the following classes and properties:</p>
     <div class="azlist">
         <p>
-            <a href="#SSNSYSTEMhasOperatingConditionKind">ssn-system:hasOperatingConditionKind</a>,
-            <a href="#SSNSYSTEMhasOperatingConditions">ssn-system:hasOperatingConditions</a>,
-            <a href="#SSNSYSTEMinCondition">ssn-system:inCondition</a>,
-            <a href="#SSNSYSTEMOperatingConditionKind">ssn-system:OperatingConditionKind</a>
+            <a href="#SOSAhasOperatingConditionKind">sosa:hasOperatingConditionKind</a>,
+            <a href="#SOSAhasOperatingConditions">sosa:hasOperatingConditions</a>,
+            <a href="#SOSAinCondition">sosa:inCondition</a>,
+            <a href="#SOSAOperatingConditionKind">sosa:OperatingConditionKind</a>
         </p>
     </div>
 
-    <section class="specterm" id="SSNSYSTEMhasOperatingConditionKind">
-        <h5><a href="#SSNSYSTEMhasOperatingConditionKind">ssn-system:hasOperatingConditionKind</a></h5>
+    <section class="specterm" id="SOSAhasOperatingConditionKind">
+        <h5><a href="#SOSAhasOperatingConditionKind">sosa:hasOperatingConditionKind</a></h5>
         <p class="crossreference">
-            <strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/hasOperatingConditionKind
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasOperatingConditionKind
         </p>
         <p>
             <strong>an OWL Object Property</strong>
@@ -100,7 +96,7 @@
                 <tr>
                     <th>is Defined By</th>
                     <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
+                        <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
                     </td>
                 </tr>
             </tbody>
@@ -111,10 +107,10 @@
         </div>
     </section>
 
-    <section class="specterm" id="SSNSYSTEMhasOperatingConditions">
-        <h5><a href="#SSNSYSTEMhasOperatingConditions">ssn-system:hasOperatingConditions</a></h5>
+    <section class="specterm" id="SOSAhasOperatingConditions">
+        <h5><a href="#SOSAhasOperatingConditions">sosa:hasOperatingConditions</a></h5>
         <p class="crossreference">
-            <strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/hasOperatingConditions
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasOperatingConditions
         </p>
         <p>
             <strong>an OWL Object Property</strong>
@@ -128,7 +124,7 @@
                 <tr>
                     <th>is Defined By</th>
                     <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
+                        <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
                     </td>
                 </tr>
             </tbody>
@@ -140,10 +136,10 @@
     </section>
 
 
-    <section class="specterm" id="SSNSYSTEMinCondition">
-        <h5><a href="#SSNSYSTEMinCondition">ssn-system:inCondition</a></h5>
+    <section class="specterm" id="SOSAinCondition">
+        <h5><a href="#SOSAinCondition">sosa:inCondition</a></h5>
         <p class="crossreference">
-            <strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/inCondition
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/inCondition
         </p>
         <p>
             <strong>an OWL Object Property</strong>
@@ -157,7 +153,7 @@
                 <tr>
                     <th>is Defined By</th>
                     <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
+                        <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
                     </td>
                 </tr>
             </tbody>
@@ -168,10 +164,10 @@
         </div>
     </section>
 
-    <section class="specterm" id="SSNSYSTEMOperatingConditionKind">
-        <h5><a href="#SSNSYSTEMOperatingConditionKind">ssn-system:OperatingConditionKind</a></h5>
+    <section class="specterm" id="SOSAOperatingConditionKind">
+        <h5><a href="#SOSAOperatingConditionKind">sosa:OperatingConditionKind</a></h5>
         <p class="crossreference">
-            <strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/OperatingConditionKind
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/OperatingConditionKind
         </p>
         <p>
             <strong>an OWL Class</strong>
@@ -191,7 +187,7 @@
                 <tr>
                     <th>is Defined By</th>
                     <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
+                        <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
                     </td>
                 </tr>
             </tbody>
@@ -200,121 +196,141 @@
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
-        <section>
-            <h6>Operating Condition Kinds</h6>
-            <p>The System Capabilities Module includes a short but extensible list of operating condition kinds:</p>
-            <div class="azlist">
-                <p>
-                    <a href="#SSNSYSTEMNormalOperatingConditions">ssn-system:NormalOperatingConditions</a>,
-                    <a href="#SSNSYSTEMSuboptimalConditions">ssn-system:SuboptimalConditions</a>,
-                    <a href="#SSNSYSTEMSurvivableConditions">ssn-system:SurvivableConditions</a>
-                </p>
+    </section>
+    <section>
+        <h6>Operating Condition Kinds</h6>
+        <p>The System Capabilities Module includes a short but extensible list of operating condition kinds:</p>
+        <div class="azlist">
+            <p>
+                <a href="#SOSANormalOperatingConditions">sosa:NormalOperatingConditions</a>,
+                <a href="#SOSASuboptimalConditions">sosa:SuboptimalConditions</a>,
+                <a href="#SOSASurvivableConditions">sosa:SurvivableConditions</a>
+            </p>
+        </div>
+        <section class="specterm" id="SOSANormalOperatingConditions">
+            <h5><a href="#SOSANormalOperatingConditions">sosa:NormalOperatingConditions</a></h5>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/sosa/NormalOperatingConditions
+            </p>
+            <p>
+                <strong>an OWL Individual</strong>
+            </p>
+            <p>
+                <em>Normal Operating Conditions</em> &mdash;
+                The conditions under which a system is expected to operate normally.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
             </div>
-            <section class="specterm" id="SSNSYSTEMNormalOperatingConditions">
-                <h5><a href="#SSNSYSTEMNormalOperatingConditions">ssn-system:NormalOperatingConditions</a></h5>
-                <p class="crossreference">
-                    <strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/NormalOperatingConditions
-                </p>
-                <p>
-                    <strong>an OWL Individual</strong>
-                </p>
-                <p>
-                    <em>Normal Operating Conditions</em> &mdash;
-                    The conditions under which a system is expected to operate normally.
-                </p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>is Defined By</th>
-                            <td>
-                                <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="buttonpanel">
-                    <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
-                    <span class="back">[<a href="#Overview">Back to top</a>]</span>
-                </div>
-            </section>
+        </section>
 
-            <section class="specterm" id="SSNSYSTEMSuboptimalConditions">
-                <h5><a href="#SSNSYSTEMSuboptimalConditions">ssn-system:SuboptimalConditions</a></h5>
-                <p class="crossreference">
-                    <strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/SuboptimalConditions
-                </p>
-                <p>
-                    <strong>an OWL Individual</strong>
-                </p>
-                <p>
-                    <em>Suboptimal Conditions</em> &mdash;
-                    The conditions under which a system is expected to operate suboptimally, but can recover if the conditions are restored to normal operating conditions.
-                </p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>is Defined By</th>
-                            <td>
-                                <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="buttonpanel">
-                    <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
-                    <span class="back">[<a href="#Overview">Back to top</a>]</span>
-                </div>
-            </section>
-            <section class="specterm" id="SSNSYSTEMSurvivableConditions">
-                <h5><a href="#SSNSYSTEMSurvivableConditions">ssn-system:SurvivableConditions</a></h5>
-                <p class="crossreference">
-                    <strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/SurvivableConditions
-                </p>
-                <p>
-                    <strong>an OWL Individual</strong>
-                </p>
-                <p>
-                    <em>Survivable Conditions</em> &mdash;
-                    The conditions under which a system is expected to survive. The system may be damaged if the survivable conditions are violated.
-                </p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>is Defined By</th>
-                            <td>
-                                <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="buttonpanel">
-                    <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
-                    <span class="back">[<a href="#Overview">Back to top</a>]</span>
-                </div>
-            </section>
+        <section class="specterm" id="SOSASuboptimalConditions">
+            <h5><a href="#SOSASuboptimalConditions">sosa:SuboptimalConditions</a></h5>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/sosa/SuboptimalConditions
+            </p>
+            <p>
+                <strong>an OWL Individual</strong>
+            </p>
+            <p>
+                <em>Suboptimal Conditions</em> &mdash;
+                The conditions under which a system is expected to operate suboptimally, but can recover if the conditions are restored to normal operating conditions.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
+            </div>
+        </section>
+        <section class="specterm" id="SOSASurvivableConditions">
+            <h5><a href="#SOSASurvivableConditions">sosa:SurvivableConditions</a></h5>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/sosa/SurvivableConditions
+            </p>
+            <p>
+                <strong>an OWL Individual</strong>
+            </p>
+            <p>
+                <em>Survivable Conditions</em> &mdash;
+                The conditions under which a system is expected to survive. The system may be damaged if the survivable conditions are violated.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
+            </div>
         </section>
     </section>
     <section>
-        <h6>Properties about system capabilities</h6>
-        <p>The System Capabilities Module includes a short but extensible list of properties about system capabilities:</p>
+        <h6>Sample vocabulary of properties about system capabilities</h6>
+        <p>SOSA/SSN includes a sample vocabulary consisting of a short list of properties about system capabilities.</p>
+        <p style="text-align: center;">
+        The namespace for this sample vocabulary is <code>http://www.w3.org/ns/sosa/system-capabilities-module#</code>.</p>
+        <p style="text-align: center;">
+        The suggested prefix for this sample vocabulary is <code>sosa-cap</code>. </p>
+        <p style="text-align: center;">
+        The RDF graph containing the definition of terms in this sample vocabulary is available at
+        <a href="http://www.w3.org/ns/sosa/system-capabilities-properties">http://www.w3.org/ns/sosa/system-capabilities-properties</a>.
+        </p>
+        <p class="note">
+        This vocabulary is only for illustration purposes, as the Spatio-temporal Data on the Web Working Group does not ambition to maintain a living list of properties. Extensions of this list should be led by other organization, and publications done to relevant vocabulary portals.</p>
         <div class="azlist">
             <p>
-                <a href="#TemperaturePrecision">ssn-system:TemperaturePrecision</a>,
-                <a href="#SSNSYSTEMinMeasurableTemperature">ssn-system:MinMeasurableTemperature</a>,
-                <a href="#SSNSYSTEMaxMeasurableTemperature">ssn-system:MaxMeasurableTemperature</a>
+                <a href="#SOSACAPTemperaturePrecision">sosa-cap:TemperaturePrecision</a>,
+                <a href="#SOSACAPinMeasurableTemperature">sosa-cap:MinMeasurableTemperature</a>,
+                <a href="#SOSACAPaxMeasurableTemperature">sosa-cap:MaxMeasurableTemperature</a>
             </p>
         </div>
         <p>TODO CONTINUE</p>
     </section>
     <section>
-        <h6>Properties about the system environment</h6>
-        <p>The System Capabilities Module includes a short but extensible list of properties about the system environment:</p>
+        <h6>Sample vocabulary of properties about the system environment</h6>
+        <p>SOSA/SSN includes a sample vocabulary consisting of a short list of properties about the system environment.</p>
+        <p style="text-align: center;">
+        The namespace for this sample vocabulary is <code>http://www.w3.org/ns/sosa/system-environment-module#</code>.</p>
+        <p style="text-align: center;">
+        The suggested prefix for this sample vocabulary is <code>sosa-env</code>. </p>
+        <p style="text-align: center;">
+        The RDF graph containing the definition of terms in this sample vocabulary is available at
+        <a href="http://www.w3.org/ns/sosa/system-environment-properties">http://www.w3.org/ns/sosa/system-environment-properties</a>.
+        </p>
+        <p class="note">
+        This vocabulary is only for illustration purposes, as the Spatio-temporal Data on the Web Working Group does not ambition to maintain a living list of properties. Extensions of this list should be led by other organization, and publications done to relevant vocabulary portals.</p>
         <div class="azlist">
             <p>
-                <a href="#SSNSYSTEMEnvironmentTemperature">ssn-system:EnvironmentTemperature</a>,
-                <a href="#SSNSYSTEMEnvironmentHumidity">ssn-system:EnvironmentHumidity</a>
+                <a href="#SOSAENVEnvironmentTemperature">sosa-env:EnvironmentTemperature</a>,
+                <a href="#SOSAENVEnvironmentHumidity">sosa-env:EnvironmentHumidity</a>
             </p>
         </div>
-        <p>TODO CONTINUE</p>
+        <p class="ednote">TODO CONTINUE</p>
     </section>
 </section>
