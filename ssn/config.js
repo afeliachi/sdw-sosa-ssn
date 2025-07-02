@@ -1,10 +1,10 @@
 var respecConfig = {
   specStatus: "ED",
-  shortName: "vocab-ssn",
+  shortName: "vocab-ssn-2023",
   //publishDate:  "2015-05-18",
   //previousPublishDate: "2014-03-27",
   //previousMaturity: "FPWD",
-  //previousURI: "http://www.w3.org/TR/2014/WD-tabular-data-model-20140327/",
+  //previousURI: "http://www.w3.org/TR/vocab-ssn/",
   edDraftURI: "https://w3c.github.io/sdw-sosa-ssn/ssn/",
   // lcEnd: "3000-01-01",
   // crEnd: "3000-01-01",
@@ -22,10 +22,9 @@ var respecConfig = {
       orcid: "0000-0001-9814-8991"
     },
     {
-      name: "Krzysztof Janowicz",
-      company: "Universität Wien",
-      companyURL: "https://www.univie.ac.at/",
-      orcid: "0009-0003-1968-887X"
+      name: "Rob Warren",
+      company: "Glengarry Agriculture and Farming",
+      companyURL: "https://github.com/GlengarryAg"
     }],
   formerEditors: [
     {
@@ -33,6 +32,12 @@ var respecConfig = {
       company: "Australian National University",
       companyURL: "https://www.cbe.anu.edu.au/",
       orcid: "0000-0003-3425-0780"
+    },
+    {
+      name: "Krzysztof Janowicz",
+      company: "Universität Wien",
+      companyURL: "https://www.univie.ac.at/",
+      orcid: "0009-0003-1968-887X"
     },
     {
       name: "Danh Le Phuoc",
@@ -57,11 +62,13 @@ var respecConfig = {
         }, {
           value: "Sylvain Grellet, BRGM"
         }, {
+          value: "Krzysztof Janowicz, Universität Wien"
+        }, {
+          value: "Alex Robin, Georobotix"
+        }, {
           value: "Kathi Schleidt, Datacove"
         }, {
           value: "Hylke van der Schaaf, Fraunhofer IOSB"
-        }, {
-          value: "Rob Warren, Glengarry Agriculture and Farming"
         }]
     },
     {
@@ -90,7 +97,7 @@ var respecConfig = {
   noLegacyStyle: false,
   logos: [
     {
-      src: "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/gh-pages/ssn/images/OGC-0.png",
+      src: "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/gh-pages/ssn/images/ogclogo_symbol_transparentbackground.png",
       alt: "OGC",
       height: "70",
       width: "62",
@@ -105,64 +112,12 @@ var respecConfig = {
       authors: ["Maxime Lefrançois", "Antoine Zimmermann"],
       date: "19 July 2021"
     },
-    "SAREF_Patterns": {
-      href: "https://www.etsi.org/deliver/etsi_ts/103500_103599/103548/01.02.01_60/ts_103548v010201p.pdf",
-      title: "SmartM2M; SAREF reference ontology patterns",
-      id: "ETSI TS 103 548 (V1.2.1)",
-      publisher: "ETSI",
-      date: "2024"
-    },
-    "SAREF": {
-      href: "https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/04.01.01_60/ts_103264v040101p.pdf",
-      title: "SmartM2M; Smart Applications; Reference Ontology and oneM2M Mapping",
-      id: "ETSI TS 103 264 (V4.1.1)",
-      publisher: "ETSI",
-      date: "2025"
-    },
-    "SWE": {
-      href: "https://www.ogc.org/about-ogc/domains/swe/",
-      title: "Sensor Web Enablement (SWE)",
-      publisher: "Open Geospatial Consortium"
-    },
-    "STA": {
-      href: "https://www.ogc.org/standard/sensorthings/",
-      title: "OGC SensorThings API (STA)",
-      publisher: "Open Geospatial Consortium"
-    },
-    "SWE-Common": {
-      authors: ["Alex Robin"],
-      href: "https://portal.ogc.org/files/?artifact_id=41157",
-      title: "OGC® SWE Common Data Model Encoding Standard",
-      publisher: "Open Geospatial Consortium",
-      date: "January 2011"
-    },
-    "SWE-Common-JSON": {
-      authors: ["Alex Robin"],
-      href: "https://docs.ogc.org/bp/17-011r2/17-011r2.html",
-      title: "JSON Encoding Rules SWE Common / SensorML",
-      publisher: "Open Geospatial Consortium",
-      date: "January 2018"
-    },
     "CoverageJSON": {
       authors: ["Chris Little", "Jon Blower", "Maik Reichert"],
       href: "https://docs.ogc.org/cs/21-069r2/21-069r2.html",
       title: "OGC CoverageJSON Community Standard",
       publisher: "Open Geospatial Consortium",
       date: "August 2023"
-    },
-    "SSNX": {
-      authors: ["Michael Compton", "Payam Barnaghi", "Luis Bermudez", "Raúl García-Castro", "Oscar Corcho", "Simon Cox", "John Graybeal", "Manfred Hauswirth", "Cory Henson", "Arthur Herzog", "Vincent Huang", "Krzysztof Janowicz", "W. David Kelsey", "Danh Le Phuoc", "Laurent Lefort", "Myriam Leggieri", "Holger Neuhaus", "Andriy Nikolov", "Kevin Page", "Alexandre Passant", "Amit Sheth", "Kerry Taylor"],
-      title: "The SSN ontology of the W3C semantic sensor network incubator group",
-      href: "http://www.sciencedirect.com/science/article/pii/S1570826812000571",
-      publisher: "Web Semantics: Science, Services and Agents on the World Wide Web, 17:25-32 ",
-      date: "December 2012"
-    },
-    "UCUM": {
-      href: "https://ucum.org/ucum",
-      title: "The Unified Code for Units of Measure",
-      authors: ["Gunther Schadow", "Clement J. McDonald"],
-      publisher: "Regenstrief Institute, Inc. and the UCUM Organization",
-      date: "17 June 2024"
     },
     "DCAT": {
       authors: [
@@ -188,32 +143,30 @@ var respecConfig = {
       authors: ["Aldo Gangemi"],
       title: "DOLCE+DnS Ultralite (DUL)"
     },
-    "Cuenca-Grau-et-al-2009": {
-      href: "https://www.cs.ox.ac.uk/publications/publication779-abstract.html",
-      authors: ["Bernardo Cuenca Grau", "Ian Horrocks", "Yevgeny Kazakov ", "Ulrike Sattler"],
-      title: "Extracting Modules from Ontologies: A Logic−based Approach",
-      publisher: "Springer",
-      date: "2009"
+    "iso-19157-1": {
+      authors: [
+        "ISO/TC 211"
+      ],
+      href: "https://www.iso.org/standard/78900.html",
+      title: "Geographic information -- Data quality -- Part 1: General requirements",
+      publisher: "ISO",
+      status: "International Standard",
+      date: "2023",
+      isoNumber: "ISO 19157-1:2023"
     },
-    "SSO-Pattern": {
-      href: "http://ceur-ws.org/Vol-668/paper12.pdf",
-      authors: ["Krzysztof Janowicz", "Michael Compton"],
-      title: "The Stimulus-Sensor-Observation Ontology Design Pattern and its Integration into the Semantic Sensor Network Ontology",
-      publisher: "CEUR: Proceedings of the 3rd International Workshop on Semantic Sensor Networks (SSN10)",
-      date: "2010"
+    "Lefrancois-et-al-2017": {
+      href: "https://w3id.org/seas/SEAS-D2_2-SEAS-Knowledge-Model.pdf",
+      authors: ["Maxime Lefrançois", "Jarmo Kalaoja", "Takoua Ghariani", "Antoine Zimmermann"],
+      title: "The SEAS Knowledge Model",
+      status: "Deliverable 2.2",
+      publisher: "ITEA2 12004 Smart Energy Aware Systems",
+      date: "2017"
     },
     "OBOE": {
       href: "http://dx.doi.org/10.5063/F11C1TTM",
       date: "2016",
       authors: ["Mark Schildhauer", "Matthew B. Jones", "Shawn Bowers", "Joshua Madin", "Sergeui Krivov", "Deana Pennington", "Ferdinando Villa", "Benjamin Leinfelder", "Christopher Jones", "Margaret O'Brien"],
       title: "OBOE: the Extensible Observation Ontology, version 1.1"
-    },
-    "OM-Heavy": {
-      href: "http://ceur-ws.org/Vol-1063/paper1.pdf",
-      title: "An explicit OWL representation of ISO/OGC Observations and Measurements ",
-      publisher: "CEUR: 6th International Conference on Semantic Sensor Networks",
-      date: "2013",
-      authors: ["S.J.D. Cox"]
     },
     "OM-Lite": {
       href: "http://content.iospress.com/articles/semantic-web/sw214",
@@ -231,6 +184,20 @@ var respecConfig = {
       title: "A Project Ontology",
       date: "2017"
     },
+    "SAREF": {
+      href: "https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/04.01.01_60/ts_103264v040101p.pdf",
+      title: "SmartM2M; Smart Applications; Reference Ontology and oneM2M Mapping",
+      id: "ETSI TS 103 264 (V4.1.1)",
+      publisher: "ETSI",
+      date: "2025"
+    },
+    "SAREF_Patterns": {
+      href: "https://www.etsi.org/deliver/etsi_ts/103500_103599/103548/01.02.01_60/ts_103548v010201p.pdf",
+      title: "SmartM2M; SAREF reference ontology patterns",
+      id: "ETSI TS 103 548 (V1.2.1)",
+      publisher: "ETSI",
+      date: "2024"
+    },
     "SSN-PROV": {
       href: "http://ceur-ws.org/Vol-1401/paper-05.pdf",
       title: "Sensor Data Provenance: SSNO and PROV-O Together at Last",
@@ -238,39 +205,51 @@ var respecConfig = {
       authors: ["Michael Compton", "David Corsar", "Kerry Taylor"],
       publisher: "CEUR: 7th International Conference on Semantic Sensor Networks"
     },
-    "SSN-Short": {
-      authors: ["Kerry Taylor", "Michael Compton", "Laurent Lefort"],
-      href: "https://eresearchau.files.wordpress.com/2012/06/74-semantically-enabling-the-web-of-things-the-w3c-semantic-sensor-network-ontology.pdf",
-      title: "The Web of Things: The W3C Semantic Sensor Network Ontology",
-      publisher: "5th Australasian eResearch Conference, Melbourne",
-      date: "November 2011"
+    "SSNX": {
+      authors: ["Michael Compton", "Payam Barnaghi", "Luis Bermudez", "Raúl García-Castro", "Oscar Corcho", "Simon Cox", "John Graybeal", "Manfred Hauswirth", "Cory Henson", "Arthur Herzog", "Vincent Huang", "Krzysztof Janowicz", "W. David Kelsey", "Danh Le Phuoc", "Laurent Lefort", "Myriam Leggieri", "Holger Neuhaus", "Andriy Nikolov", "Kevin Page", "Alexandre Passant", "Amit Sheth", "Kerry Taylor"],
+      title: "The SSN ontology of the W3C semantic sensor network incubator group",
+      href: "http://www.sciencedirect.com/science/article/pii/S1570826812000571",
+      publisher: "Web Semantics: Science, Services and Agents on the World Wide Web, 17:25-32 ",
+      date: "December 2012"
     },
-    "Lefrancois-et-al-2017": {
-      href: "https://w3id.org/seas/SEAS-D2_2-SEAS-Knowledge-Model.pdf",
-      authors: ["Maxime Lefrançois", "Jarmo Kalaoja", "Takoua Ghariani", "Antoine Zimmermann"],
-      title: "The SEAS Knowledge Model",
-      status: "Deliverable 2.2",
-      publisher: "ITEA2 12004 Smart Energy Aware Systems",
-      date: "2017"
+    "SSO-Pattern": {
+      href: "http://ceur-ws.org/Vol-668/paper12.pdf",
+      authors: ["Krzysztof Janowicz", "Michael Compton"],
+      title: "The Stimulus-Sensor-Observation Ontology Design Pattern and its Integration into the Semantic Sensor Network Ontology",
+      publisher: "CEUR: Proceedings of the 3rd International Workshop on Semantic Sensor Networks (SSN10)",
+      date: "2010"
     },
-    "Rijgersberg-et-al-2013": {
-      href: "http://www.semantic-web-journal.net/content/ontology-units-measure-and-related-concepts",
-      authors: ["Hajo Rijgersberg", "Mark van Assem", "Jan Top"],
-      title: "Ontology of Units of Measure and Related Concepts",
-      publisher: "Semantic Web journal, IOS Press",
-      date: "2013"
+    "STA": {
+      href: "https://www.ogc.org/standard/sensorthings/",
+      title: "OGC SensorThings API (STA)",
+      publisher: "Open Geospatial Consortium"
     },
-    "iso-19157-1": {
-      authors: [
-        "ISO/TC 211"
-      ],
-      href: "https://www.iso.org/standard/78900.html",
-      title: "Geographic information -- Data quality -- Part 1: General requirements",
-      publisher: "ISO",
-      status: "International Standard",
-      date: "2023",
-      isoNumber: "ISO 19157-1:2023"
+    "SWE": {
+      href: "https://www.ogc.org/about-ogc/domains/swe/",
+      title: "Sensor Web Enablement (SWE)",
+      publisher: "Open Geospatial Consortium"
+    },
+    "SWE-Common": {
+      authors: ["Alex Robin"],
+      href: "https://portal.ogc.org/files/?artifact_id=41157",
+      title: "OGC® SWE Common Data Model Encoding Standard",
+      publisher: "Open Geospatial Consortium",
+      date: "January 2011"
+    },
+    "SWE-Common-JSON": {
+      authors: ["Alex Robin"],
+      href: "https://docs.ogc.org/bp/17-011r2/17-011r2.html",
+      title: "JSON Encoding Rules SWE Common / SensorML",
+      publisher: "Open Geospatial Consortium",
+      date: "January 2018"
+    },
+    "UCUM": {
+      href: "https://ucum.org/ucum",
+      title: "The Unified Code for Units of Measure",
+      authors: ["Gunther Schadow", "Clement J. McDonald"],
+      publisher: "Regenstrief Institute, Inc. and the UCUM Organization",
+      date: "17 June 2024"
     }
   },
-  issueBase: "https://www.w3.org/2015/spatial/track/issues/"
+  issueBase: "https://github.com/w3c/sdw-sosa-ssn/issues"
 };
