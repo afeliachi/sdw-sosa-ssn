@@ -58,7 +58,7 @@ var respecConfig = {
         {
           value: "Rob Atkinson, Metalinkage"
         }, {
-          value: "Luis de Sousa, ISRIC"
+          value: "Luis de Sousa, Técnico Lisboa"
         }, {
           value: "Sylvain Grellet, BRGM"
         }, {
