@@ -5,12 +5,12 @@ var respecConfig = {
   prevRecShortname: "vocab-ssn",
   previousPublishDate: "2017-10-19",
   previousMaturity: "TR",
-  edDraftURI: "https://w3c.github.io/sdw-sosa-ssn/ssn/",
   repoURL: "https://github.com/w3c/sdw-sosa-ssn/",
+  edDraftURI: "https://w3c.github.io/sdw-sosa-ssn/ssn/",
   editors: [
     {
       name: "Simon J D Cox",
-      company: "Timely Logic, AU"
+      company: "Timely Logic, AU",
       note: "formerly CSIRO and OGC",
       orcid: "0000-0002-3884-3420"
     },
