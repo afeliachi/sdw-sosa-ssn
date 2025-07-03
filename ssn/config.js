@@ -89,7 +89,7 @@ var respecConfig = {
       key: "OGC Document Number",
       data: [
         {
-          value: "OGC NN-NNN"
+          value: "OGC 25-022"
         }]
     }],
   group: "wg/sdw",
