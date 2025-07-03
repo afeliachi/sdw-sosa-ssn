@@ -403,7 +403,9 @@
                     <th class="restrictions">Restrictions</th>
                     <td>
                         <a href="#SOSAmadeActuation">sosa:madeActuation</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAActuation">sosa:Actuation</a>
+                        <em><b>ONLY</b></em>
+                        ( <a href="#SOSAActuation">sosa:Actuation</a> OR
+                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a> )
                         <br>
                         <a href="#SOSAactsOn">sosa:actsOn</a>
                         <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
@@ -622,7 +624,8 @@
         <p>
             <em>made actuation</em> &mdash;
             Relation between an <a href="#SOSAActuator">Actuator</a> and an
-            <a href="#SOSAActuation">Actuation</a> made it.
+            <a href="#SOSAActuation">Actuation</a> or
+            <a href="#SOSAActuationCollection">ActuationCollection</a> it has made.
         </p>
         <table>
             <tbody>
@@ -639,7 +642,8 @@
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a href="#SOSAActuation">sosa:Actuation</a>
+                        <a href="#SOSAActuation">sosa:Actuation</a>,
+                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
                     </td>
                 </tr>
                 <tr>
@@ -692,7 +696,8 @@
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAActuation">sosa:Actuation</a>
+                        <a href="#SOSAActuation">sosa:Actuation</a>,
+                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
                     </td>
                 </tr>
                 <tr>
