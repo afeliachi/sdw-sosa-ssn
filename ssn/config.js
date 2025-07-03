@@ -1,85 +1,88 @@
 var respecConfig = {
   specStatus: "ED",
   shortName: "vocab-ssn-2023",
-  //publishDate:  "2015-05-18",
-  //previousPublishDate: "2014-03-27",
-  //previousMaturity: "FPWD",
-  //previousURI: "http://www.w3.org/TR/vocab-ssn/",
+  //publishDate:  "2025-08-01",
+  prevRecShortname: "vocab-ssn",
+  previousPublishDate: "2017-10-19",
+  previousMaturity: "TR",
   edDraftURI: "https://w3c.github.io/sdw-sosa-ssn/ssn/",
-  // lcEnd: "3000-01-01",
-  // crEnd: "3000-01-01",
+  repoURL: "https://github.com/w3c/sdw-sosa-ssn/",
   editors: [
     {
       name: "Simon J D Cox",
-      company: "OGC",
-      companyURL: "https://ogc.org/",
+      company: "Timely Logic, AU"
+      note: "formerly CSIRO and OGC",
       orcid: "0000-0002-3884-3420"
     },
     {
       name: "Maxime Lefrançois",
-      company: "École Nationale Supérieure des Mines de Saint-Étienne",
+      company: "École Nationale Supérieure des Mines de Saint-Étienne, FR",
       companyURL: "https://www.mines-stetienne.fr/",
       orcid: "0000-0001-9814-8991"
     },
     {
       name: "Rob Warren",
-      company: "Glengarry Agriculture and Farming",
+      company: "Glengarry Agriculture and Farming, CA",
       companyURL: "https://github.com/GlengarryAg"
+    },
+    {
+      name: "Luis Moreira de Sousa",
+      company: "Instituto Superior Técnico Lisboa, PT",
+      companyURL: "https://tecnico.ulisboa.pt/en/",
+      orcid: "0000-0002-5851-2071"
     }],
   formerEditors: [
     {
       name: "Armin Haller",
-      company: "Australian National University",
+      company: "Australian National University, AU",
       companyURL: "https://www.cbe.anu.edu.au/",
       orcid: "0000-0003-3425-0780"
     },
     {
       name: "Krzysztof Janowicz",
-      company: "Universität Wien",
+      company: "Universität Wien, AT",
       companyURL: "https://www.univie.ac.at/",
       orcid: "0009-0003-1968-887X"
     },
     {
       name: "Danh Le Phuoc",
-      company: "Technical University of Berlin",
+      company: "Technical University of Berlin, DE",
       companyURL: "http://www.tu-berlin.de/",
       orcid: "0000-0003-2480-9261"
     },
     {
       name: "Kerry Taylor",
-      company: "Australian National University",
+      company: "Australian National University, AU",
       companyURL: "https://cecs.anu.edu.au/",
       orcid: "0000-0003-2447-1088"
     }],
   otherLinks: [
     {
-      key: "Contributors (ordered alphabetically)",
+      key: "Contributors (ordered alphabetically by surname)",
       data: [
         {
-          value: "Rob Atkinson, Metalinkage"
+          value: "Rob Atkinson, Metalinkage, AU"
         }, {
-          value: "Luis de Sousa, Técnico Lisboa"
+          value: "Sylvain Grellet, BRGM, FR"
         }, {
-          value: "Sylvain Grellet, BRGM"
+          value: "Krzysztof Janowicz, Universität Wien, AT"
         }, {
-          value: "Krzysztof Janowicz, Universität Wien"
+          value: "Alex Robin, Georobotix, FR"
         }, {
-          value: "Alex Robin, Georobotix"
+          value: "Kathi Schleidt, Datacove, AT"
         }, {
-          value: "Kathi Schleidt, Datacove"
-        }, {
-          value: "Hylke van der Schaaf, Fraunhofer IOSB"
+          value: "Hylke van der Schaaf, Fraunhofer IOSB, DE"
         }]
     },
     {
-      key: "Previous Contributors (ordered alphabetically)",
+      key: "Previous Contributors (ordered alphabetically by surname)",
       data: [
         {
-          value: "Raúl García-Castro, Universidad Politécnica de Madrid"
+          value: "Raúl García-Castro, Universidad Politécnica de Madrid, ES"
         }, {
-          value: "Joshua Lieberman, Tumbling Walls"
+          value: "Joshua Lieberman, Tumbling Walls, US"
         }, {
-          value: "Claus Stadler, Universität Leipzig"
+          value: "Claus Stadler, Universität Leipzig, DE"
         }]
     },
     {
@@ -250,6 +253,5 @@ var respecConfig = {
       publisher: "Regenstrief Institute, Inc. and the UCUM Organization",
       date: "17 June 2024"
     }
-  },
-  issueBase: "https://github.com/w3c/sdw-sosa-ssn/issues"
+  }
 };

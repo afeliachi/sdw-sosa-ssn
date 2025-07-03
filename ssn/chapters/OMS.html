@@ -168,6 +168,14 @@
     </table>
 
     <div class="buttonpanel">
+      <span>
+        <span class="sosa" style="display: none;">[<a href="#"
+                        onclick="hide_ssn(false,this.parentElement.parentElement.parentElement.parentElement);return false;">Show
+                        additional SSN axioms</a>]</span>
+        <span class="ssn">[<a href="#"
+                        onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
+                        additional SSN axioms</a>]</span>
+      </span>
       <span class="back">[<a href="#Procedures">Back to module overview</a>]</span>
       <span class="back">[<a href="#Overview">Back to top</a>]</span>
     </div>
@@ -1116,7 +1124,8 @@
         <td> obs-cpt:Observation/result-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a href="#SOSAhasResult">sosa:hasResult</a> ,
-<br> <a href="#SOSAhasSimpleResult">sosa:hasSimpleResult</a> </td>
+          <br> <a href="#SOSAhasSimpleResult">sosa:hasSimpleResult</a>
+        </td>
       </tr>
       <tr>
         <td> obs-cpt:Observation/resultTime-sem </td>
@@ -1147,7 +1156,8 @@
         <td> obs-cpt:Observer/observingProcedure-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a href="#SOSAimplements">sosa:implements</a> ,
-<br> <a href="#SOSAusedProcedure">sosa:usedProcedure</a> </td>
+          <br> <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
+        </td>
       </tr>
       <tr>
         <td> obs-cpt:ObservingProcedure/observer-sem </td>
@@ -1168,7 +1178,8 @@
         <td> sam-cpt:PreparationStep/processingDetails-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a href="#SOSAimplements">sosa:implements</a> ,
-<br> <a href="#OMSprocessingDetails">sosa-oms:processingDetails</a> </td>
+          <br> <a href="#OMSprocessingDetails">sosa-oms:processingDetails</a>
+        </td>
       </tr>
       <tr>
         <td> sam-cpt:Sample/preparationStep-sem </td>
@@ -1179,7 +1190,7 @@
         <td> sam-cpt:Sample/sampledFeature-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a href="#SOSAisSampleOf">sosa:isSampleOf</a> ,
-<br> <a href="#SOSAhasSampledFeature">sosa:hasSampledFeature</a>
+          <br> <a href="#SOSAhasSampledFeature">sosa:hasSampledFeature</a>
         </td>
       </tr>
       <tr>
@@ -1192,7 +1203,7 @@
         <td> ogc:implementedBy </td>
         <td>
           <a href="#SOSAmadeSampling">sosa:madeSampling</a> ,
-<br> <a href="#SOSAmadeBySampler">sosa:madeBySampler</a>
+          <br> <a href="#SOSAmadeBySampler">sosa:madeBySampler</a>
         </td>
       </tr>
       <tr>
@@ -1219,7 +1230,8 @@
         <td> sam-cpt:Sampling/samplingProcedure-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a href="#SOSAimplements">sosa:implements</a> ,
-<br> <a href="#SOSAusedProcedure">sosa:usedProcedure</a> </td>
+          <br> <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
+        </td>
       </tr>
     </tbody>
   </table>
