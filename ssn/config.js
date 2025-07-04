@@ -7,6 +7,22 @@ var respecConfig = {
   previousMaturity: "TR",
   repoURL: "https://github.com/w3c/sdw-sosa-ssn/",
   edDraftURI: "https://w3c.github.io/sdw-sosa-ssn/ssn/",
+  group: "wg/sdw",
+  wgPublicList: "public-sdw-comments",
+  implementationReportURI: "https://w3c.github.io/sdw-sosa-ssn/ssn-usage/",
+  inlineCSS: true,
+  noIDLIn: true,
+  noLegacyStyle: false,
+  noRecTrack: false,
+  logos: [
+    {
+      src: "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/gh-pages/ssn/images/ogclogo_symbol_transparentbackground.png",
+      alt: "OGC",
+      height: "70",
+      width: "62",
+      url: "https://www.ogc.org/"
+    }
+  ],
   editors: [
     {
       name: "Simon J D Cox",
@@ -30,7 +46,8 @@ var respecConfig = {
       company: "Instituto Superior Técnico Lisboa, PT",
       companyURL: "https://tecnico.ulisboa.pt/en/",
       orcid: "0000-0002-5851-2071"
-    }],
+    }
+  ],
   formerEditors: [
     {
       name: "Armin Haller",
@@ -55,7 +72,8 @@ var respecConfig = {
       company: "Australian National University, AU",
       companyURL: "https://cecs.anu.edu.au/",
       orcid: "0000-0003-2447-1088"
-    }],
+    }
+  ],
   otherLinks: [
     {
       key: "Contributors (ordered alphabetically by surname)",
@@ -72,7 +90,8 @@ var respecConfig = {
           value: "Kathi Schleidt, Datacove, AT"
         }, {
           value: "Hylke van der Schaaf, Fraunhofer IOSB, DE"
-        }]
+        }
+      ]
     },
     {
       key: "Previous Contributors (ordered alphabetically by surname)",
@@ -83,31 +102,18 @@ var respecConfig = {
           value: "Joshua Lieberman, Tumbling Walls, US"
         }, {
           value: "Claus Stadler, Universität Leipzig, DE"
-        }]
+        }
+      ]
     },
     {
       key: "OGC Document Number",
       data: [
         {
           value: "OGC 25-022"
-        }]
-    }],
-  group: "wg/sdw",
-  wgPublicList: "public-sdw-comments",
-  implementationReportURI: "https://w3c.github.io/sdw-sosa-ssn/ssn-usage/",
-  inlineCSS: true,
-  noIDLIn: true,
-  noLegacyStyle: false,
-  logos: [
-    {
-      src: "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/gh-pages/ssn/images/ogclogo_symbol_transparentbackground.png",
-      alt: "OGC",
-      height: "70",
-      width: "62",
-      url: "https://www.ogc.org/"
+        }
+      ]
     }
   ],
-  noRecTrack: false,
   localBiblio: {
     "CDT": {
       href: "https://w3id.org/lindt/v4/custom_datatypes",
