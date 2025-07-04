@@ -1,59 +1,62 @@
 <h3>OMS Extension Module</h3>
 
 <section id="OMS-req">
-<h4>OMS Extension Requirement</h4>
-<p>
-  This section introduces extensions to the SSN Ontology to provide a canonical RDF implementation of [[[OMS]]] (ISO
-  19156:2023).
-</p>
-<p>
-  OMS is the latest edition of the OGC and ISO standard previously known as Observations and Measurements [[OandM]],
-  which was a key influence and input in the development of SSN.
-</p>
-<p class="note">
-  OMS was published by ISO 19156:2023 [[iso-19156-2023]], but is freely available as OGC Abstract
-  Specification &mdash; Topic 20 [[OMS]].
-</p>
+  <h4>OMS Requirement</h4>
+  <p>
+    This section introduces extensions to the SSN Ontology to provide a canonical RDF implementation of [[[OMS]]] (ISO
+    19156:2023).
+  </p>
+  <p>
+    OMS is the latest edition of the OGC and ISO standard previously known as Observations and Measurements [[OandM]],
+    which was a key influence and input in the development of SSN.
+  </p>
+  <p class="note">
+    OMS was published by ISO 19156:2023 [[iso-19156-2023]], but is freely available as OGC Abstract
+    Specification &mdash; Topic 20 [[OMS]].
+  </p>
 
-<p>
-  This module provides (i) additional classes and properties required for an RDF implementation of OMS, (ii) a detailed
-  mapping of SOSA terms to discrete requirements in [[OMS]].
-  Note that [[OMS]] is formalized using UML, which does not provide accessible global identifiers for terms in the
-  structure model.
-  The URI for each formal Requirement relating to a class or property in [[OMS]] denotes the UML class or
-  property.
-  The predicate <code>ogc-ms:implements</code> links a SOSA term to the corresponding OMS class or property,
-  and <code>ogc-ms:implementedBy</code> its inverse, defined as follows: </p>
-<pre>ogc-ms:implements an OWL:ObjectProperty ;
+  <p>
+    This module provides (i) additional classes and properties required for an RDF implementation of OMS, (ii) a
+    detailed
+    mapping of SOSA terms to discrete requirements in [[OMS]].
+    Note that [[OMS]] is formalized using UML, which does not provide accessible global identifiers for terms in the
+    structure model.
+    The URI for each formal Requirement relating to a class or property in [[OMS]] denotes the UML class or
+    property.
+    The predicate <code>ogc-ms:implements</code> links a SOSA term to the corresponding OMS class or property,
+    and <code>ogc-ms:implementedBy</code> its inverse, defined as follows: </p>
+  <pre>ogc-ms:implements an OWL:ObjectProperty ;
   rdfs:subPropertyOf dcterms:source , prov:wasDerivedFrom . </pre>
 
-<pre>ogc-ms:implementedBy an OWL:ObjectProperty ;
+  <pre>ogc-ms:implementedBy an OWL:ObjectProperty ;
     owl:inverseOf ogc-ms:implements . </pre>
-
-<h4>SOSA-OMS</h4>
-<p>
-  SOSA-OMS describes the implementation of ISO 19156:2023 [[OMS]] using terms from the SSN Ontology.
-  SOSA-OMS imports SOSA Observation and SOSA Sampling and declares additional terms required for OMS.
-  <b>SOSA-OMS is the canonical RDF implementation of OMS.</b>
-</p>
-<p style="text-align: center;">
-  The SOSA-OMS graph is available at <a href="http://www.w3.org/ns/sosa-oms/">http://www.w3.org/ns/sosa-oms/</a>.
-</p>
 </section>
 
-<h4>SSN-OMS</h4>
-<p>
-  SSN-OMS describes the implementation of ISO 19156:2023 [[OMS]] using terms from the SSN Ontology, with RDFS/OWL
-  axiomatization.
-  SSN-OMS imports SOSA-OMS and SSN Observation and SSN Sampling.
-  <b>SSN-OMS is the canonical OWL implementation of OMS.</b>
-</p>
-<p style="text-align: center;">
-  The SSN-OMS graph is available at <a href="http://www.w3.org/ns/ssn-oms/">http://www.w3.org/ns/ssn-oms/</a>.
-</p>
+<section id="OMS-modules">
+  <h4>OMS modules</h4>
 
-<section id="OMS-namespaces">
-  <h4>Namespaces</h4>
+  <h5>SOSA-OMS</h5>
+  <p>
+    SOSA-OMS describes the implementation of ISO 19156:2023 [[OMS]] using terms from the SSN Ontology.
+    SOSA-OMS imports SOSA Observation and SOSA Sampling and declares additional terms required for OMS.
+    <b>SOSA-OMS is the canonical RDF implementation of OMS.</b>
+  </p>
+  <p style="text-align: center;">
+    The SOSA-OMS graph is available at <a href="http://www.w3.org/ns/sosa-oms/">http://www.w3.org/ns/sosa-oms/</a>.
+  </p>
+
+  <h5>SSN-OMS</h5>
+  <p>
+    SSN-OMS describes the implementation of ISO 19156:2023 [[OMS]] using terms from the SSN Ontology, with RDFS/OWL
+    axiomatization.
+    SSN-OMS imports SOSA-OMS and SSN Observation and SSN Sampling.
+    <b>SSN-OMS is the canonical OWL implementation of OMS.</b>
+  </p>
+  <p style="text-align: center;">
+    The SSN-OMS graph is available at <a href="http://www.w3.org/ns/ssn-oms/">http://www.w3.org/ns/ssn-oms/</a>.
+  </p>
+
+  <h5>Namespaces</h5>
   <p>
     The following namespace prefixes are used in the RDF implementation of OMS:</p>
   <table>
@@ -113,6 +116,7 @@
     </tbody>
   </table>
 </section>
+
 <section id="OMS-New-Terms">
   <h4>New terms</h4>
   <p>
