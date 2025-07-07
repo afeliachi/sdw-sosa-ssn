@@ -16,7 +16,7 @@ var respecConfig = {
   noRecTrack: false,
   logos: [
     {
-      src: "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/gh-pages/ssn/images/ogclogo_symbol_transparentbackground.png",
+      src: "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/gh-pages/ssn/images/OGC-0.png",
       alt: "OGC",
       height: "70",
       width: "62",
