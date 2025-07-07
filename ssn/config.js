@@ -215,6 +215,15 @@ var respecConfig = {
       publisher: "CEUR: 7th International Conference on Semantic Sensor Networks"
     },
     "SSNX": {
+        authors: [
+            "W3C Semantic Sensor Network Incubator Group"
+        ],
+        title: "Semantic Sensor Network Ontology",
+        href: "https://www.w3.org/2005/Incubator/ssn/ssnx/ssn",
+        publisher: "W3C",
+        date: "2011"
+    },
+    "SSNX-Paper": {
       authors: ["Michael Compton", "Payam Barnaghi", "Luis Bermudez", "Raúl García-Castro", "Oscar Corcho", "Simon Cox", "John Graybeal", "Manfred Hauswirth", "Cory Henson", "Arthur Herzog", "Vincent Huang", "Krzysztof Janowicz", "W. David Kelsey", "Danh Le Phuoc", "Laurent Lefort", "Myriam Leggieri", "Holger Neuhaus", "Andriy Nikolov", "Kevin Page", "Alexandre Passant", "Amit Sheth", "Kerry Taylor"],
       title: "The SSN ontology of the W3C semantic sensor network incubator group",
       href: "http://www.sciencedirect.com/science/article/pii/S1570826812000571",
