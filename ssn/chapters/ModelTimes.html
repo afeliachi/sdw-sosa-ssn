@@ -1,13 +1,13 @@
 <h3>Temporal properties</h3>
 
 <p>
-    Multiple times are associated with an <a href="#SOSAExecution">Execution</a>.
-    Trivially, since an Execution is a time-bounded activity, there is a <a href="#SOSAstartTime">startTime</a> and
-    <a href="#SOSAendTime">endTime</a>.
-    In the case of <a href="#SOSAObservation">Observation</a> and <a href="#SOSASampling">Sampling</a> the end of the
-    Execution is the time that the result is generated so it is called <a href="#SOSAresultTime">resultTime</a>.
-    In the case of <a href="#SOSAActuation">Actuation</a> and <a href="#SOSAObservation">Observation</a> the
-    <a href="#SOSAphenomenonTime">phenomenonTime</a> is the interval when the change or result applies to the actuated-
+    Multiple times are associated with an <a>sosa:Execution</a>.
+    Trivially, since an Execution is a time-bounded activity, there is a <a>sosa:startTime</a> and
+    <a>sosa:endTime</a>.
+    In the case of <a>sosa:Observation</a> and <a>sosa:Sampling</a> the end of the
+    Execution is the time that the result is generated so it is called <a>sosa:resultTime</a>.
+    In the case of <a>sosa:Actuation</a> and <a>sosa:Observation</a> the
+    <a>sosa:phenomenonTime</a> is the interval when the change or result applies to the actuated-
     or observed-property.
 </p>
 <p>
@@ -102,6 +102,6 @@
 <pre class="example" data-include="./rdf/examples/paleo-atmosphere.ttl" data-include-format="text"></pre>
 
 <p>
-    In each of these cases the ultimate <a href="#SOSAphenomenonTime">phenomenonTime</a> is far in the past,
-    while the <a href="#SOSAresultTime">resultTime</a> is contemporary.
+    In each of these cases the ultimate <a>sosa:phenomenonTime</a> is far in the past,
+    while the <a>sosa:resultTime</a> is contemporary.
 </p>
