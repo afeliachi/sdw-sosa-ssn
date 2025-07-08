@@ -23,21 +23,21 @@
     <p>This section introduces the following classes and properties:</p>
     <div class="azlist">
         <p>
-            <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>,
-            <a href="#SOSAActuation">sosa:Actuation</a>,
-            <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>,
-            <a href="#SOSAActuator">sosa:Actuator</a>,
-            <a href="#SOSAactsOn">sosa:actsOn</a>,
-            <a href="#SOSAactsOnProperty">sosa:actsOnProperty</a>,
-            <a href="#SOSAisActedOnBy">sosa:isActedOnBy</a>,
-            <a href="#SOSAmadeActuation">sosa:madeActuation</a>,
-            <a href="#SOSAmadeByActuator">sosa:madeByActuator</a>,
-            <a href="#SOSAwasActedOnBy">sosa:wasActedOnBy</a>
+            <a>sosa:ActuatingProcedure</a>,
+            <a>sosa:Actuation</a>,
+            <a>sosa:ActuationCollection</a>,
+            <a>sosa:Actuator</a>,
+            <a>sosa:actsOn</a>,
+            <a>sosa:actsOnProperty</a>,
+            <a>sosa:isActedOnBy</a>,
+            <a>sosa:madeActuation</a>,
+            <a>sosa:madeByActuator</a>,
+            <a>sosa:wasActedOnBy</a>
         </p>
     </div>
 
     <section class="specterm sosa" id="SOSAActuatingProcedure">
-        <h6><a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a></h6>
+        <h5><dfn>sosa:ActuatingProcedure</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/ActuatingProcedure
         </p>
@@ -60,14 +60,14 @@
                 <tr class="ssn">
                     <th>Sub class of</th>
                     <td>
-                        <a href="#SOSAProcedure">sosa:Procedure</a>
+                        <a>sosa:Procedure</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th class="restrictions">Restriction</th>
                     <td>
-                        <a href="#SOSAimplementedBy">sosa:implementedBy</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAActuator">sosa:Actuator</a>
+                        <a>sosa:implementedBy</a>
+                        <em><b>ONLY</b></em> <a>sosa:Actuator</a>
 
                     </td>
                 </tr>
@@ -95,7 +95,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAActuation">
-        <h5><a href="#SOSAActuation">sosa:Actuation</a></h5>
+        <h5><dfn>sosa:Actuation</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/Actuation
         </p>
@@ -135,7 +135,7 @@
             This approach is not prohibited by the SSN Ontology, but the details are beyond the scope of SSN.
         </p>
         <p class="note">
-            The different time-properties on a <a href="#SOSAActuation">sosa:Actuation</a> support the description of
+            The different time-properties on a <a>sosa:Actuation</a> support the description of
             plans, forecasts and predictions as well as descriptions of various historical scenarios.
             See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.</p>
 
@@ -156,34 +156,34 @@
                 <tr class="ssn">
                     <th>Sub class of</th>
                     <td>
-                        <a href="#SOSAExecution">sosa:Execution</a>
+                        <a>sosa:Execution</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th class="restrictions">Restrictions</th>
                     <td>
-                        <a href="#SOSAmadeByActuator">sosa:madeByActuator</a>
+                        <a>sosa:madeByActuator</a>
                         <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a href="#SOSAmadeByActuator">sosa:madeByActuator</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAActuator">sosa:Actuator</a>
+                        <a>sosa:madeByActuator</a>
+                        <em><b>ONLY</b></em> <a>sosa:Actuator</a>
                         <br>
-                        <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
+                        <a>sosa:usedProcedure</a>
+                        <em><b>ONLY</b></em> <a>sosa:ActuatingProcedure</a>
                         <br>
-                        <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
+                        <a>sosa:hasFeatureOfInterest</a>
                         <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>
+                        <a>sosa:hasFeatureOfInterest</a>
+                        <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                         <br>
-                        <a href="#SOSAactsOnProperty">sosa:actsOnProperty</a>
+                        <a>sosa:actsOnProperty</a>
                         <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a href="#SOSAactsOnProperty">sosa:actsOnProperty</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
+                        <a>sosa:actsOnProperty</a>
+                        <em><b>ONLY</b></em> <a>sosa:Property</a>
                         <br>
-                        <a href="#SOSAhasResult">sosa:hasResult</a>
+                        <a>sosa:hasResult</a>
                         <em><b>EXACTLY 1</b></em>
                     </td>
                 </tr>
@@ -208,7 +208,7 @@
     </section>
 
     <section class="informative specterm" id="SOSAActuationCollection">
-        <h5><a href="#SOSAActuationCollection">sosa:ActuationCollection</a></h5>
+        <h5><dfn>sosa:ActuationCollection</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/ActuationCollection
         </p>
@@ -290,40 +290,40 @@
                         <th>Sub class of</th>
                         <td>
                             <a href="https://www.w3.org/TR/rdf12-schema/#ch_bag">rdf:Bag</a>,
-                            <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
+                            <a>sosa:ExecutionCollection</a>
                         </td>
                     </tr>
                     <tr class="ssn">
                         <th>Disjoint with</th>
                         <td>
-                            <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>,
-                            <a href="#SOSASampleCollection">sosa:SampleCollection</a>,
-                            <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
+                            <a>sosa:ObservationCollection</a>,
+                            <a>sosa:SampleCollection</a>,
+                            <a>sosa:SamplingCollection</a>
                         </td>
                     </tr>
                     <tr class="ssn">
                         <th class="restrictions">Restrictions</th>
                         <td>
 
-                            <a href="#SOSAmadeByActuator">sosa:madeByActuator</a>
-                            <em><b>ONLY</b></em> <a href="#SOSAActuator">sosa:Actuator</a>
+                            <a>sosa:madeByActuator</a>
+                            <em><b>ONLY</b></em> <a>sosa:Actuator</a>
                             <br>
 
-                            <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
-                            <em><b>ONLY</b></em> <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
+                            <a>sosa:usedProcedure</a>
+                            <em><b>ONLY</b></em> <a>sosa:ActuatingProcedure</a>
                             <br>
 
-                            <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
-                            <em><b>ONLY</b></em> <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>
+                            <a>sosa:hasFeatureOfInterest</a>
+                            <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                             <br>
 
-                            <a href="#SOSAactsOnProperty">sosa:actsOnProperty</a>
-                            <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
+                            <a>sosa:actsOnProperty</a>
+                            <em><b>ONLY</b></em> <a>sosa:Property</a>
                             <br>
 
-                            <a href="#SOSAhasMember">sosa:hasMember</a>
-                            <em><b>ONLY</b></em> (<a href="#SOSAActuation">sosa:Actuation</a> OR
-                            <a href="#SOSAActuationCollection">sosa:ActuationCollection</a> )
+                            <a>sosa:hasMember</a>
+                            <em><b>ONLY</b></em> (<a>sosa:Actuation</a> OR
+                            <a>sosa:ActuationCollection</a> )
                         </td>
                     </tr>
                     <tr>
@@ -347,7 +347,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAActuator">
-        <h5><a href="#SOSAActuator">sosa:Actuator</a></h5>
+        <h5><dfn>sosa:Actuator</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/Actuator
         </p>
@@ -392,22 +392,22 @@
                 <tr class="ssn">
                     <th>Sub class of</th>
                     <td>
-                        <a href="#SOSASystem">sosa:System</a>
+                        <a>sosa:System</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th class="restrictions">Restrictions</th>
                     <td>
-                        <a href="#SOSAmadeActuation">sosa:madeActuation</a>
+                        <a>sosa:madeActuation</a>
                         <em><b>ONLY</b></em>
-                        ( <a href="#SOSAActuation">sosa:Actuation</a> OR
-                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a> )
+                        ( <a>sosa:Actuation</a> OR
+                        <a>sosa:ActuationCollection</a> )
                         <br>
-                        <a href="#SOSAactsOn">sosa:actsOn</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
+                        <a>sosa:actsOn</a>
+                        <em><b>ONLY</b></em> <a>sosa:Property</a>
                         <br>
-                        <a href="#SOSAimplements">sosa:implements</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>
+                        <a>sosa:implements</a>
+                        <em><b>ONLY</b></em> <a>sosa:ActuatingProcedure</a>
                     </td>
                 </tr>
                 <tr>
@@ -431,7 +431,7 @@
     </section>
 
     <section class="specterm" id="SOSAactsOn">
-        <h5><a href="#SOSAactsOn">sosa:actsOn</a></h5>
+        <h5><dfn>sosa:actsOn</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/actsOn
         </p>
@@ -449,25 +449,25 @@
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAActuator">sosa:Actuator</a>
+                        <a>sosa:Actuator</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a href="#SOSAProperty">sosa:Property</a>
+                        <a>sosa:Property</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a href="#SOSAisActedOnBy">sosa:isActedOnBy</a>
+                        <a>sosa:isActedOnBy</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th>Sub property of</th>
                     <td>
-                        <a href="#SOSAforProperty">sosa:forProperty</a>
+                        <a>sosa:forProperty</a>
                     </td>
                 </tr>
                 <tr>
@@ -485,7 +485,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAactsOnProperty">
-        <h5><a href="#SOSAactsOnProperty">sosa:actsOnProperty</a></h5>
+        <h5><dfn>sosa:actsOnProperty</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/actsOnProperty
         </p>
@@ -494,13 +494,13 @@
         </p>
         <p class="note">
             The 2017 edition defined the term ActuatableProperty as the range of
-            <a href="#SOSAactsOnProperty">sosa:actsOnProperty</a>.
-            That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2025 edition.
+            <a>sosa:actsOnProperty</a>.
+            That specialization of <a>sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
             <em>acts on property</em> &mdash;
             Relation between an <a href="#SOSAActuation">Actuation</a> and the
-            <a href="#SOSAProperty">sosa:Property</a> it acted upon.
+            <a>sosa:Property</a> it acted upon.
         </p>
         <table>
             <tbody>
@@ -516,20 +516,20 @@
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAActuation">sosa:Actuation</a>,
-                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
+                        <a>sosa:Actuation</a>,
+                        <a>sosa:ActuationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a href="#SOSAProperty">sosa:Property</a>
+                        <a>sosa:Property</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a href="#SOSAwasActedOnBy">sosa:wasActedOnBy</a>
+                        <a>sosa:wasActedOnBy</a>
                     </td>
                 </tr>
                 <tr>
@@ -547,7 +547,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAisActedOnBy">
-        <h5><a href="#SOSAisActedOnBy">sosa:isActedOnBy</a></h5>
+        <h5><dfn>sosa:isActedOnBy</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/isActedOnBy
         </p>
@@ -556,8 +556,8 @@
         </p>
         <p class="note">
             The 2017 edition defined the term ActuatableProperty as the domain of
-            <a href="#SOSAisActedOnBy">sosa:isActedOnBy</a>.
-            That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2025 edition.
+            <a>sosa:isActedOnBy</a>.
+            That specialization of <a>sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
             <em>is acted on by</em> &mdash;
@@ -570,19 +570,19 @@
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAProperty">sosa:Property</a>
+                        <a>sosa:Property</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a href="#SOSAActuator">sosa:Actuator</a>
+                        <a>sosa:Actuator</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a href="#SOSAactsOn">sosa:actsOn</a>
+                        <a>sosa:actsOn</a>
                     </td>
                 </tr>
                 <tr>
@@ -600,7 +600,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAmadeActuation">
-        <h5><a href="#SOSAmadeActuation">sosa:madeActuation</a></h5>
+        <h5><dfn>sosa:madeActuation</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeActuation
         </p>
@@ -617,25 +617,25 @@
             <tbody>
                 <tr class="ssn">
                     <th>Sub property of</th>
-                    <td><a href="#SOSAmadeExecution">sosa:madeExecution</a></td>
+                    <td><a>sosa:madeExecution</a></td>
                 </tr>
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAActuator">sosa:Actuator</a>
+                        <a>sosa:Actuator</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a href="#SOSAActuation">sosa:Actuation</a>,
-                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
+                        <a>sosa:Actuation</a>,
+                        <a>sosa:ActuationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a href="#SOSAmadeByActuator">sosa:madeByActuator</a>
+                        <a>sosa:madeByActuator</a>
                     </td>
                 </tr>
                 <tr>
@@ -659,7 +659,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAmadeByActuator">
-        <h5><a href="#SOSAmadeByActuator">sosa:madeByActuator</a></h5>
+        <h5><dfn>sosa:madeByActuator</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeByActuator
         </p>
@@ -675,25 +675,25 @@
             <tbody>
                 <tr class="ssn">
                     <th>Sub property of</th>
-                    <td><a href="#SOSAmadeBySystem">sosa:madeBySystem</a></td>
+                    <td><a>sosa:madeBySystem</a></td>
                 </tr>
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAActuation">sosa:Actuation</a>,
-                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
+                        <a>sosa:Actuation</a>,
+                        <a>sosa:ActuationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a href="#SOSAActuator">sosa:Actuator</a>
+                        <a>sosa:Actuator</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a href="#SOSAmadeActuation">sosa:madeActuation</a>
+                        <a>sosa:madeActuation</a>
                     </td>
                 </tr>
                 <tr>
@@ -717,7 +717,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAwasActedOnBy">
-        <h5><a href="#SOSAwasActedOnBy">sosa:wasActedOnBy</a></h5>
+        <h5><dfn>sosa:wasActedOnBy</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/wasActedOnBy
         </p>
@@ -731,7 +731,7 @@
         <p>
             <em>was acted on by</em> &mdash;
             Relation between a
-            <a href="#SOSAProperty">sosa:Property</a> and an
+            <a>sosa:Property</a> and an
             <a href="#SOSAActuation">Actuation</a> that changed its state.
         </p>
         <table>
@@ -739,20 +739,20 @@
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a href="#SOSAProperty">sosa:Property</a>
+                        <a>sosa:Property</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a href="#SOSAActuation">sosa:Actuation</a>,
-                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>
+                        <a>sosa:Actuation</a>,
+                        <a>sosa:ActuationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a href="#SOSAactsOnProperty">sosa:actsOnProperty</a>
+                        <a>sosa:actsOnProperty</a>
                     </td>
                 </tr>
                 <tr>
