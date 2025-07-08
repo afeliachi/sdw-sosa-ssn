@@ -29,32 +29,32 @@
         This section introduces the following classes and properties:</p>
     <div class="azlist">
         <p>
-            <a>sosa:Observation</a>,
-            <a>sosa:ObservationCollection</a>,
-            <a>sosa:ObservingProcedure</a>,
-            <a>sosa:Sensor</a>,
-            <a>sosa:Stimulus</a>,
-            <a>sosa:detects</a>,
-            <a>sosa:hasProxy</a>,
-            <a>sosa:isDetectedBy</a>,
-            <a>sosa:isObservedBy</a>,
-            <a>sosa:isProxyFor</a>,
-            <a>sosa:madeBySensor</a>,
-            <a>sosa:madeObservation</a>,
-            <a>sosa:observationRelatedTo</a>,
-            <a>sosa:observedProperty</a>,
-            <a>sosa:observes</a>,
-            <a>sosa:originated</a>,
-            <a>sosa:qualityOf</a>,
-            <a>sosa:relatedObservation</a>,
-            <a>sosa:resultQuality</a>,
-            <a>sosa:wasObservedBy</a>,
-            <a>sosa:wasOriginatedBy</a>
+            <a href="#SOSAObservation">sosa:Observation</a>,
+            <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>,
+            <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>,
+            <a href="#SOSASensor">sosa:Sensor</a>,
+            <a href="#SOSAStimulus">sosa:Stimulus</a>,
+            <a href="#SOSAdetects">sosa:detects</a>,
+            <a href="#SOSAhasProxy">sosa:hasProxy</a>,
+            <a href="#SOSAisDetectedBy">sosa:isDetectedBy</a>,
+            <a href="#SOSAisObservedBy">sosa:isObservedBy</a>,
+            <a href="#SOSAisProxyFor">sosa:isProxyFor</a>,
+            <a href="#SOSAmadeBySensor">sosa:madeBySensor</a>,
+            <a href="#SOSAmadeObservation">sosa:madeObservation</a>,
+            <a href="#SOSAobservationRelatedTo">sosa:observationRelatedTo</a>,
+            <a href="#SOSAobservedProperty">sosa:observedProperty</a>,
+            <a href="#SOSAobserves">sosa:observes</a>,
+            <a href="#SOSAoriginated">sosa:originated</a>,
+            <a href="#SOSAqualityOf">sosa:qualityOf</a>,
+            <a href="#SOSArelatedObservation">sosa:relatedObservation</a>,
+            <a href="#SOSAresultQuality">sosa:resultQuality</a>,
+            <a href="#SOSAwasObservedBy">sosa:wasObservedBy</a>,
+            <a href="#SOSAwasOriginatedBy">sosa:wasOriginatedBy</a>
         </p>
     </div>
 
     <section class="specterm sosa" id="SOSAObservation">
-        <h5><a>sosa:Observation</a></h5>
+        <h5><a href="#SOSAObservation">sosa:Observation</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/Observation
         </p>
@@ -63,17 +63,17 @@
         </p>
         <p>
             <em>Observation</em> &mdash;
-            An act of carrying out an observing <a>sosa:Procedure</a>
-            using a <a>sosa:Sensor</a> to estimate or calculate a value of an observable
-            <a>sosa:Property</a> of a <a>sosa:FeatureOfInterest</a>.
+            An act of carrying out an observing <a href="#SOSAProcedure">Procedure</a>
+            using a <a href="#SOSASensor">Sensor</a> to estimate or calculate a value of an observable
+            <a href="#SOSAProperty">Property</a> of a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
 
         </p>
         <p>
-            An <a>sosa:Observation</a> concerns a single
-            <a>sosa:Property</a> of a single
-            <a>sosa:FeatureOfInterest</a>.
+            An <a href="#SOSAObservation">Observation</a> concerns a single
+            <a href="#SOSAProperty">Property</a> of a single
+            <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
             Observations of multiple properties, or other combinations of Observations, may be described in an
-            <a>sosa:ObservationCollection</a>.
+            <a href="#SOSAObservationCollection">ObservationCollection</a>.
         </p>
         <p>
             Alternatively, applications may choose to encapsulate complexity by defining a complex property with
@@ -82,17 +82,17 @@
         </p>
         <p>
 
-            When the <a>sosa:FeatureOfInterest</a> cannot be observed directly, a
-            <a>sosa:Sample</a> of it might be used in Observations as a proxy.
-            In such a case the <a>sosa:Sample</a> is the proximate
-            <a>sosa:FeatureOfInterest</a> of the Observation,
-            while the (ultimate) <a>sosa:FeatureOfInterest</a> of the act of Sampling (i.e.,
-            the entity that the Sample is ultimately <a>sosa:isSampleOf</a>) is the ultimate
-            <a>sosa:FeatureOfInterest</a> of the Observation.
+            When the <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> cannot be observed directly, a
+            <a href="#SOSASample">Sample</a> of it might be used in Observations as a proxy.
+            In such a case the <a href="#SOSASample">Sample</a> is the proximate
+            <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the Observation,
+            while the (ultimate) <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the act of Sampling (i.e.,
+            the entity that the Sample is ultimately <a href="#SOSAisSampleOf">isSampleOf</a>) is the ultimate
+            <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> of the Observation.
         </p>
 
         <p class="note">
-            The different time-properties on a <a>sosa:Observation</a> support the
+            The different time-properties on a <a href="#SOSAObservation">sosa:Observation</a> support the
             description of forecasts and predictions as well as observations relating to various historical scenarios.
             See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.
         </p>
@@ -115,49 +115,49 @@
                 <tr class="ssn">
                     <th>Sub class of</th>
                     <td>
-                        <a>sosa:Execution</a>
+                        <a href="#SOSAExecution">sosa:Execution</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th class="restrictions">Restrictions</th>
                     <td>
-                        <a>sosa:madeBySensor</a>
+                        <a href="#SOSAmadeBySensor">sosa:madeBySensor</a>
                         <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a>sosa:madeBySensor</a>
-                        <em><b>ONLY</b></em> <a>sosa:Sensor</a>
+                        <a href="#SOSAmadeBySensor">sosa:madeBySensor</a>
+                        <em><b>ONLY</b></em> <a href="#SOSASensor">sosa:Sensor</a>
                         <br>
-                        <a>sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a>sosa:ObservingProcedure</a>
+                        <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
                         <br>
-                        <a>sosa:hasFeatureOfInterest</a>
+                        <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
                         <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a>sosa:hasFeatureOfInterest</a>
-                        <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
+                        <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>
                         <br>
-                        <a>sosa:hasUltimateFeatureOfInterest</a>
+                        <a href="#SOSAhasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a>
                         <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a>sosa:hasUltimateFeatureOfInterest</a>
-                        <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
+                        <a href="#SOSAhasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>
                         <br>
-                        <a>sosa:observedProperty</a>
+                        <a href="#SOSAobservedProperty">sosa:observedProperty</a>
                         <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a>sosa:observedProperty</a>
-                        <em><b>ONLY</b></em> <a>sosa:Property</a>
+                        <a href="#SOSAobservedProperty">sosa:observedProperty</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
                         <br>
-                        <a>sosa:wasOriginatedBy</a>
+                        <a href="#SOSAwasOriginatedBy">sosa:wasOriginatedBy</a>
                         <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a>sosa:wasOriginatedBy</a>
-                        <em><b>ONLY</b></em> <a>sosa:Stimulus</a>
+                        <a href="#SOSAwasOriginatedBy">sosa:wasOriginatedBy</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAStimulus">sosa:Stimulus</a>
                         <br>
-                        <a>sosa:phenomenonTime</a>
+                        <a href="#SOSAphenomenonTime">sosa:phenomenonTime</a>
                         <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a>sosa:hasResult</a>
+                        <a href="#SOSAhasResult">sosa:hasResult</a>
                         <em><b>EXACTLY 1</b></em>
                     </td>
                 </tr>
@@ -176,7 +176,7 @@
     </section>
 
     <section class="informative specterm sosa" id="SOSAObservationCollection">
-        <h5><a>sosa:ObservationCollection</a></h5>
+        <h5><a href="#SOSAObservationCollection">sosa:ObservationCollection</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservationCollection
         </p>
@@ -188,7 +188,7 @@
             This term is non-normative, pending further implementation experience
         </p>
         <p class="note">
-            An instance of <a>sosa:ObservationCollection</a> represents a container for a
+            An instance of <a href="#SOSAObservationCollection">ObservationCollection</a> represents a container for a
             set of data derived from observations.
             This broadly corresponds with the class
             <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">dcat:Dataset</a>
@@ -196,21 +196,21 @@
         </p>
         <p>
             <em>Observation Collection</em> &mdash;
-            Collection (set) of one or more <a>sosa:Observations</a>
-            or <a>sosa:ObservationCollections</a>, i.e., collections may be nested.
+            Collection (set) of one or more <a href="#SOSAObservation">Observations</a>
+            or <a href="#SOSAObservationCollection">ObservationCollections</a>, i.e., collections may be nested.
         </p>
         <p>
-            The following <a>sosa:Observation</a> properties may appear in an
-            <a>sosa:ObservationCollection</a> &mdash;
-            <a>sosa:hasFeatureOfInterest</a>,
-            <a>sosa:hasUltimateFeatureOfInterest</a>,
-            <a>sosa:usedProcedure</a>,
-            <a>sosa:madeBySensor</a>,
-            <a>sosa:observedProperty</a>,
-            <a>sosa:phenomenonTime</a>,
-            <a>sosa:resultTime</a>,
-            <a>sosa:hasResult</a>,
-            <a>sosa:hasSimpleResult</a>.
+            The following <a href="#SOSAObservation">Observation</a> properties may appear in an
+            <a href="#SOSAObservationCollection">ObservationCollection</a> &mdash;
+            <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a>,
+            <a href="#SOSAhasUltimateFeatureOfInterest">hasUltimateFeatureOfInterest</a>,
+            <a href="#SOSAusedProcedure">usedProcedure</a>,
+            <a href="#SOSAmadeBySensor">madeBySensor</a>,
+            <a href="#SOSAobservedProperty">observedProperty</a>,
+            <a href="#SOSAphenomenonTime">phenomenonTime</a>,
+            <a href="#SOSAresultTime">resultTime</a>,
+            <a href="#SOSAhasResult">hasResult</a>,
+            <a href="#SOSAhasSimpleResult">hasSimpleResult</a>.
             If they are present, the values of these properties summarize the values of the matching properties of
             the member observations, where membership is either direct or transitive through one or more member
             observation collections.
@@ -220,35 +220,35 @@
         </p>
         <ol>
             <li>
-                Where an individual <a>sosa:ObservationCollection</a>
-                <i>omits a property</i>, a member <a>sosa:Observation</a> (direct or
+                Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
+                <i>omits a property</i>, a member <a href="#SOSAObservation">Observation</a> (direct or
                 transitive) MAY have any value for that property.
             </li>
             <li>
-                Where an individual <a>sosa:ObservationCollection</a> has
-                <i>a single value for a property</i>, each member <a>sosa:Observation</a> (direct or
+                Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a> has
+                <i>a single value for a property</i>, each member <a href="#SOSAObservation">Observation</a> (direct or
                 transitive) MUST have that same value for that property &mdash; i.e., the collection is homogeneous in
                 that
                 property.
-                That property MAY then be omitted in any member <a>sosa:Observation</a>
-                or <a>sosa:ObservationCollection</a>.
+                That property MAY then be omitted in any member <a href="#SOSAObservation">Observation</a>
+                or <a href="#SOSAObservationCollection">ObservationCollection</a>.
             </li>
             <li>
-                Where an individual <a>sosa:ObservationCollection</a> has
-                <i>more than one value for a property</i>, each member <a>sosa:Observation</a>
+                Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a> has
+                <i>more than one value for a property</i>, each member <a href="#SOSAObservation">Observation</a>
                 (direct or transitive) MUST have a value for that property that matches one of the values for the
                 property in the collection.
             </li>
             <li>
-                Where an individual <a>sosa:ObservationCollection</a>
+                Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
                 <i>has a value for a property that is a range or interval</i>, each member
-                <a>sosa:Observation</a> (direct or transitive) MUST have a value for
+                <a href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
                 that property that matches or falls within that range or interval.
             </li>
             <li>
-                Where an individual <a>sosa:ObservationCollection</a>
+                Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a>
                 <i>has more than one value for a property that is a range or interval</i>, each member
-                <a>sosa:Observation</a> (direct or transitive) MUST have a value for
+                <a href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for
                 that property that matches or falls within one of those ranges or intervals.
             </li>
         </ol>
@@ -279,44 +279,44 @@
                     <th>Sub class of</th>
                     <td>
                         <a href="https://www.w3.org/TR/rdf12-schema/#ch_bag">rdf:Bag</a>,
-                        <a>sosa:ExecutionCollection</a>
+                        <a href="#SOSAExecutionCollection">sosa:ExecutionCollection</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th>Disjoint with</th>
                     <td>
-                        <a>sosa:ActuationCollection</a>,
-                        <a>sosa:SampleCollection</a>,
-                        <a>sosa:SamplingCollection</a>
+                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>,
+                        <a href="#SOSASampleCollection">sosa:SampleCollection</a>,
+                        <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th class="restrictions">Restrictions</th>
                     <td>
 
-                        <a>sosa:madeBySensor</a>
-                        <em><b>ONLY</b></em> <a>sosa:Sensor</a>
+                        <a href="#SOSAmadeBySensor">sosa:madeBySensor</a>
+                        <em><b>ONLY</b></em> <a href="#SOSASensor">sosa:Sensor</a>
                         <br>
 
-                        <a>sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a>sosa:ObservingProcedure</a>
+                        <a href="#SOSAusedProcedure">sosa:usedProcedure</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
                         <br>
 
-                        <a>sosa:hasFeatureOfInterest</a>
-                        <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
+                        <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>
                         <br>
 
-                        <a>sosa:hasUltimateFeatureOfInterest</a>
-                        <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
+                        <a href="#SOSAhasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>
                         <br>
 
-                        <a>sosa:observedProperty</a>
-                        <em><b>ONLY</b></em> <a>sosa:Property</a>
+                        <a href="#SOSAobservedProperty">sosa:observedProperty</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
                         <br>
 
-                        <a>sosa:hasMember</a>
-                        <em><b>ONLY</b></em> (<a>sosa:Observation</a> OR
-                        <a>sosa:ObservationCollection</a> )
+                        <a href="#SOSAhasMember">sosa:hasMember</a>
+                        <em><b>ONLY</b></em> (<a href="#SOSAObservation">sosa:Observation</a> OR
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a> )
                     </td>
                 </tr>
                 <tr>
@@ -334,7 +334,7 @@
     </section>
 
     <section class="informative specterm sosa" id="SOSAObservingProcedure">
-        <h5><dfn>sosa:ObservingProcedure</dfn></h5>
+        <h6><a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a></h6>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservingProcedure
         </p>
@@ -356,14 +356,14 @@
                 <tr class="ssn">
                     <th>Sub class of</th>
                     <td>
-                        <a>sosa:Procedure</a>
+                        <a href="#SOSAProcedure">sosa:Procedure</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th class="restrictions">Restriction</th>
                     <td>
-                        <a>sosa:implementedBy</a>
-                        <em><b>ONLY</b></em> <a>sosa:Sensor</a>
+                        <a href="#SOSAimplementedBy">sosa:implementedBy</a>
+                        <em><b>ONLY</b></em> <a href="#SOSASensor">sosa:Sensor</a>
 
                     </td>
                 </tr>
@@ -402,7 +402,7 @@
 
 
     <section class="specterm sosa" id="SOSASensor">
-        <h5><a>sosa:Sensor</a></h5>
+        <h5><a href="#SOSASensor">sosa:Sensor</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/Sensor
         </p>
@@ -412,14 +412,14 @@
         <p>
             <em>Sensor</em> &mdash;
             An entity that implements an observing
-            <a>sosa:Procedure</a> in the context of an Observation to determine the value
-            of an observable <a>sosa:Property</a>.
+            <a href="#SOSAProcedure">Procedure</a> in the context of an Observation to determine the value
+            of an observable <a href="#SOSAProperty">Property</a>.
             This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
         </p>
         <p>
-            A <a>sosa:Sensor</a> responds to a <a>sosa:Stimulus</a>,
+            A <a href="#SOSASensor">Sensor</a> responds to a <a href="#SOSAStimulus">Stimulus</a>,
             e.g., a change in the environment, or input data composed from the results of prior
-            <a>sosa:Observations</a>.
+            <a href="#SOSAObservation">Observations</a>.
             This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
 
         </p>
@@ -454,34 +454,34 @@
                 <tr>
                     <th>Examples</th>
                     <td>
-                        Accelerometers, gyroscopes, barometers, magnetometers, etc are <a>sosa:Sensors</a>
+                        Accelerometers, gyroscopes, barometers, magnetometers, etc are <a href="#SOSASensor">Sensors</a>
                         that are typically mounted on a modern smart phone (which acts as
-                        <a>sosa:Platform</a>).
-                        Other examples of <a>sosa:Sensors</a> include the human eyes.
+                        <a href="#SOSAPlatform">Platform</a>).
+                        Other examples of <a href="#SOSASensor">Sensors</a> include the human eyes.
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th>Sub class of</th>
                     <td>
-                        <a>sosa:System</a>
+                        <a href="#SOSASystem">sosa:System</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th class="restrictions">Restrictions</th>
                     <td>
-                        <a>sosa:madeObservation</a>
+                        <a href="#SOSAmadeObservation">sosa:madeObservation</a>
                         <em><b>ONLY</b></em>
-                        ( <a>sosa:Observation</a> OR
-                        <a>sosa:ObservationCollection</a> )
+                        ( <a href="#SOSAObservation">sosa:Observation</a> OR
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a> )
                         <br>
-                        <a>sosa:observes</a>
-                        <em><b>ONLY</b></em> <a>sosa:Property</a>
+                        <a href="#SOSAobserves">sosa:observes</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
                         <br>
-                        <a>sosa:detects</a>
-                        <em><b>ONLY</b></em> <a>sosa:Stimulus</a>
+                        <a href="#SOSAdetects">sosa:detects</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAStimulus">sosa:Stimulus</a>
                         <br>
-                        <a>sosa:implements</a>
-                        <em><b>ONLY</b></em> <a>sosa:ObservingProcedure</a>
+                        <a href="#SOSAimplements">sosa:implements</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>
                     </td>
                 </tr>
                 <tr>
@@ -499,7 +499,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAStimulus">
-        <h5><a>sosa:Stimulus</a></h5>
+        <h5><a href="#SOSAStimulus">sosa:Stimulus</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/Stimulus
         </p>
@@ -509,30 +509,30 @@
         <p>
             <em>Stimulus</em> &mdash;
             An event in the real world that 'triggers' the
-            <a>sosa:Sensor</a>. The properties associated to the
-            <a>sosa:Stimulus</a> may be different to the eventual observed
-            <a>sosa:Property</a>.
-            It is the event, not the object, that triggers the <a>sosa:Sensor</a>.
+            <a href="#SOSASensor">Sensor</a>. The properties associated to the
+            <a href="#SOSAStimulus">Stimulus</a> may be different to the eventual observed
+            <a href="#SOSAProperty">Property</a>.
+            It is the event, not the object, that triggers the <a href="#SOSASensor">Sensor</a>.
         </p>
         <table>
             <tbody>
                 <tr class="ssn">
                     <th class="restrictions">Restrictions</th>
                     <td>
-                        <a>sosa:isProxyFor</a>
-                        <em><b>ONLY</b></em> <a>sosa:Property</a>
+                        <a href="#SOSAisProxyFor">sosa:isProxyFor</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAProperty">sosa:Property</a>
                         <br>
 
                         <em><b>inverse
-                                Of</b></em> <a>sosa:wasOriginatedBy</a>
-                        <em><b>ONLY</b></em> <a>sosa:Observation</a>
+                                Of</b></em> <a href="#SOSAwasOriginatedBy">sosa:wasOriginatedBy</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAObservation">sosa:Observation</a>
                         <br>
 
                         <em><b>inverse
                                 Of</b></em>
-                        <a>sosa:detects</a>
+                        <a href="#SOSAdetects">sosa:detects</a>
                         <em><b>ONLY</b></em>
-                        <a>sosa:Sensor</a>
+                        <a href="#SOSASensor">sosa:Sensor</a>
                         <br>
                     </td>
                 </tr>
@@ -551,7 +551,7 @@
     </section>
 
     <section class="specterm" id="SOSAdetects">
-        <h5><a>sosa:detects</a></h5>
+        <h5><a href="#SOSAdetects">sosa:detects</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/detects
         </p>
@@ -560,27 +560,27 @@
         </p>
         <p>
             <em>detects</em> &mdash;
-            A relation from a <a>sosa:Sensor</a>
-            to the <a>sosa:Stimulus</a> that it detects.
-            The <a>sosa:Stimulus</a> itself will be serving as a proxy
-            (<a>sosa:isProxyFor</a>) for some
-            <a>sosa:Property</a>.
+            A relation from a <a href="#SOSASensor">Sensor</a>
+            to the <a href="#SOSAStimulus">Stimulus</a> that it detects.
+            The <a href="#SOSAStimulus">Stimulus</a> itself will be serving as a proxy
+            (<a href="#SOSAisProxyFor">isProxyFor</a>) for some
+            <a href="#SOSAProperty">Property</a>.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Sensor</a></td>
+                    <td><a href="#SOSASensor">sosa:Sensor</a></td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:Stimulus</a>
+                    <td><a href="#SOSAStimulus">sosa:Stimulus</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:isDetectedBy</a>
+                        <a href="#SOSAisDetectedBy">sosa:isDetectedBy</a>
                     </td>
                 </tr>
                 <tr>
@@ -598,7 +598,7 @@
     </section>
 
     <section class="informative specterm" id="SOSAhasProxy">
-        <h5><a>sosa:hasProxy</a></h5>
+        <h5><a href="#SOSAhasProxy">sosa:hasProxy</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasProxy
         </p>
@@ -607,8 +607,8 @@
         </p>
         <p>
             <em>has proxy</em> &mdash;
-            A relation from an <a>sosa:Property</a>
-            to the <a>sosa:Stimulus</a> that serves as its proxy.
+            A relation from an <a href="#SOSAProperty">sosa:Property</a>
+            to the <a href="#SOSAStimulus">Stimulus</a> that serves as its proxy.
         </p>
         <table>
             <tbody>
@@ -616,25 +616,25 @@
                     <th>Examples</th>
                     <td>
                         For example, the expansion of mercury is a
-                        <a>sosa:Stimulus</a> that serves as a proxy for some temperature
-                        <a>sosa:Property</a>.
+                        <a href="#SOSAStimulus">Stimulus</a> that serves as a proxy for some temperature
+                        <a href="#SOSAProperty">Property</a>.
                         <br>An increase or decrease in the velocity of spinning cups on a wind
-                        <a>sosa:Sensor</a> is serving as a proxy for the wind speed.
+                        <a href="#SOSASensor">Sensor</a> is serving as a proxy for the wind speed.
                     </td>
                 </tr>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Property</a></td>
+                    <td><a href="#SOSAProperty">sosa:Property</a></td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:Stimulus</a>
+                    <td><a href="#SOSAStimulus">sosa:Stimulus</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:isProxyFor</a>
+                        <a href="#SOSAisProxyFor">sosa:isProxyFor</a>
                     </td>
                 </tr>
                 <tr>
@@ -652,7 +652,7 @@
     </section>
 
     <section class="informative specterm" id="SOSAisDetectedBy">
-        <h5><a>sosa:isDetectedBy</a></h5>
+        <h5><a href="#SOSAisDetectedBy">sosa:isDetectedBy</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/isDetectedBy
         </p>
@@ -661,27 +661,27 @@
         </p>
         <p>
             <em>is detected by</em> &mdash;
-            A relation from a <a>sosa:Stimulus</a> to the
-            <a>sosa:Sensor</a> that may detect it.
-            The <a>sosa:Stimulus</a> itself will be serving as a proxy
-            (<a>sosa:isProxyFor</a>) for some
-            <a>sosa:Property</a>.
+            A relation from a <a href="#SOSAStimulus">Stimulus</a> to the
+            <a href="#SOSASensor">Sensor</a> that may detect it.
+            The <a href="#SOSAStimulus">Stimulus</a> itself will be serving as a proxy
+            (<a href="#SOSAisProxyFor">isProxyFor</a>) for some
+            <a href="#SOSAProperty">Property</a>.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Stimulus</a></td>
+                    <td><a href="#SOSAStimulus">sosa:Stimulus</a></td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:Sensor</a>
+                    <td><a href="#SOSASensor">sosa:Sensor</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:detects</a>
+                        <a href="#SOSAdetects">sosa:detects</a>
                     </td>
                 </tr>
                 <tr>
@@ -699,7 +699,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAisObservedBy">
-        <h5><a>sosa:isObservedBy</a></h5>
+        <h5><a href="#SOSAisObservedBy">sosa:isObservedBy</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/isObservedBy
         </p>
@@ -708,29 +708,29 @@
         </p>
         <p class="note">
             The 2017 edition defined the term ObservableProperty as the domain of
-            <a>sosa:isObservedBy</a>.
-            That specialization of <a>sosa:Property</a> is deprecated in this 2023 Edition.
+            <a href="#SOSAisObservedBy">sosa:isObservedBy</a>.
+            That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2023 Edition.
         </p>
         <p>
             <em>is observed by</em> &mdash;
-            Relation between a <a>sosa:Property</a>
-            and the <a>sosa:Sensor</a> able to observe it.
+            Relation between a <a href="#SOSAProperty">Property</a>
+            and the <a href="#SOSASensor">Sensor</a> able to observe it.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Property</a></td>
+                    <td><a href="#SOSAProperty">sosa:Property</a></td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:Sensor</a>
+                    <td><a href="#SOSASensor">sosa:Sensor</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:observes</a>
+                        <a href="#SOSAobserves">sosa:observes</a>
                     </td>
                 </tr>
                 <tr>
@@ -748,7 +748,7 @@
     </section>
 
     <section class="specterm" id="SOSAisProxyFor">
-        <h5><a>sosa:isProxyFor</a></h5>
+        <h5><a href="#SOSAisProxyFor">sosa:isProxyFor</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/isProxyFor
         </p>
@@ -757,39 +757,39 @@
         </p>
         <p class="note">
             The 2017 edition defined the term ObservableProperty as the range of
-            <a>sosa:isProxyFor</a>.
-            That specialization of <a>sosa:Property</a> is deprecated in this 2023 Edition.
+            <a href="#SOSAisProxyFor">sosa:isProxyFor</a>.
+            That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2023 Edition.
         </p>
         <p>
             <em>isProxyFor</em> &mdash;
-            A relation from a <a>sosa:Stimulus</a> to the <a>sosa:Property</a>
-            that the <a>sosa:Stimulus</a> is serving as a proxy for.
+            A relation from a <a href="#SOSAStimulus">Stimulus</a> to the <a href="#SOSAProperty">Property</a>
+            that the <a href="#SOSAStimulus">Stimulus</a> is serving as a proxy for.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Example</th>
                     <td>
-                        For example, the expansion of quicksilver is a <a>sosa:Stimulus</a>
-                        that serves as a proxy for some temperature <a>sosa:Property</a>.
+                        For example, the expansion of quicksilver is a <a href="#SOSAStimulus">Stimulus</a>
+                        that serves as a proxy for some temperature <a href="#SOSAProperty">Property</a>.
                         An increase or decrease in the velocity of spinning cups on a wind
-                        <a>sosa:Sensor</a>
+                        <a href="#SOSASensor">Sensor</a>
                         is serving as a proxy for the wind speed.
                     </td>
                 </tr>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Stimulus</a></td>
+                    <td><a href="#SOSAStimulus">sosa:Stimulus</a></td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:Property</a>
+                    <td><a href="#SOSAProperty">sosa:Property</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:hasProxy</a>
+                        <a href="#SOSAhasProxy">sosa:hasProxy</a>
                     </td>
                 </tr>
                 <tr>
@@ -807,7 +807,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAmadeBySensor">
-        <h5><a>sosa:madeBySensor</a></h5>
+        <h5><a href="#SOSAmadeBySensor">sosa:madeBySensor</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeBySensor
         </p>
@@ -815,31 +815,31 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p>
-            <em>made by <a>sosa:Sensor</a></em> &mdash;
-            Relation linking an <a>sosa:Observation</a> to the
-            <a>sosa:Sensor</a> that made it.
+            <em>made by <a href="#SOSASensor">Sensor</a></em> &mdash;
+            Relation linking an <a href="#SOSAObservation">Observation</a> to the
+            <a href="#SOSASensor">Sensor</a> that made it.
         </p>
         <table>
             <tbody>
                 <tr class="ssn">
                     <th>Sub property of</th>
-                    <td><a>sosa:madeBySystem</a></td>
+                    <td><a href="#SOSAmadeBySystem">sosa:madeBySystem</a></td>
                 </tr>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>
+                    <td><a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:Sensor</a>
+                    <td><a href="#SOSASensor">sosa:Sensor</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:madeObservation</a>
+                        <a href="#SOSAmadeObservation">sosa:madeObservation</a>
                     </td>
                 </tr>
                 <tr>
@@ -857,7 +857,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAmadeObservation">
-        <h5><a>sosa:madeObservation</a></h5>
+        <h5><a href="#SOSAmadeObservation">sosa:madeObservation</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeObservation
         </p>
@@ -866,35 +866,35 @@
         </p>
         <p>
             <em>made observation</em> &mdash;
-            Relation between a <a>sosa:Sensor</a> and an
-            <a>sosa:Observation</a> or
-            <a>sosa:ObservationCollection</a> it has made.
+            Relation between a <a href="#SOSASensor">Sensor</a> and an
+            <a href="#SOSAObservation">Observation</a> or
+            <a href="#SOSAObservationCollection">ObservationCollection</a> it has made.
         </p>
         <table>
             <tbody>
                 <tr class="ssn">
                     <th>Sub property of</th>
                     <td>
-                        <a>sosa:madeExecution</a>
+                        <a href="#SOSAmadeExecution">sosa:madeExecution</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a>sosa:Sensor</a>
+                        <a href="#SOSASensor">sosa:Sensor</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:madeBySensor</a>
+                        <a href="#SOSAmadeBySensor">sosa:madeBySensor</a>
                     </td>
                 </tr>
                 <tr>
@@ -912,7 +912,7 @@
     </section>
 
     <section class="informative specterm" id="SOSAobservationRelatedTo">
-        <h5><a>sosa:observationRelatedTo</a></h5>
+        <h5><a href="#SOSAobservationRelatedTo">sosa:observationRelatedTo</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/observationRelatedTo
         </p>
@@ -925,35 +925,35 @@
 
         <p>
             <em>observation related to</em> &mdash;
-            Relation from an <a>sosa:Observation</a> or
-            <a>sosa:ObservationCollection</a>.
+            Relation from an <a href="#SOSAObservation">Observation</a> or
+            <a href="#SOSAObservationCollection">ObservationCollection</a>.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a>sosa:Execution</a>,
-                        <a>sosa:Actuation</a>,
-                        <a>sosa:ActuationCollection</a>,
-                        <a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>,
-                        <a>sosa:Sampling</a>,
-                        <a>sosa:SamplingCollection</a>
+                        <a href="#SOSAExecution">sosa:Execution</a>,
+                        <a href="#SOSAActuation">sosa:Actuation</a>,
+                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>,
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>,
+                        <a href="#SOSASampling">sosa:Sampling</a>,
+                        <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
 
-                        <a>sosa:relatedObservation</a>
+                        <a href="#SOSArelatedObservation">sosa:relatedObservation</a>
                     </td>
                 </tr>
                 <tr>
@@ -972,7 +972,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAobservedProperty">
-        <h5><a>sosa:observedProperty</a></h5>
+        <h5><a href="#SOSAobservedProperty">sosa:observedProperty</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/observedProperty
         </p>
@@ -981,8 +981,8 @@
         </p>
         <p class="note">
             The 2017 edition defined the term ObservableProperty as the range of
-            <a>sosa:observedProperty</a>.
-            That specialization of <a>sosa:Property</a> is deprecated in this 2023 Edition.
+            <a href="#SOSAobservedProperty">sosa:observedProperty</a>.
+            That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2023 Edition.
         </p>
         <p class="note">
             'observed property' covers the concepts referred to in [[VIM]] as 'measurand' (quantitative values) and
@@ -995,27 +995,27 @@
         <p>
             <em>observed property</em> &mdash;
             Relation linking an
-            <a>sosa:Observation</a> or <a>sosa:ObservationCollection</a>
+            <a href="#SOSAObservation">Observation</a> or <a href="#SOSAObservationCollection">ObservationCollection</a>
             to the property that was
             observed.
-            The <a>sosa:Property</a> MUST be a property of the
-            <a>sosa:FeatureOfInterest</a> (linked by
-            <a>sosa:hasFeatureOfInterest</a>) of this
-            <a>sosa:Observation</a>.
+            The <a href="#SOSAProperty">Property</a> MUST be a property of the
+            <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> (linked by
+            <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a>) of this
+            <a href="#SOSAObservation">Observation</a>.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a>sosa:Property</a>
+                        <a href="#SOSAProperty">sosa:Property</a>
                     </td>
                 </tr>
                 <tr>
@@ -1039,7 +1039,7 @@
     </section>
 
     <section class="specterm sosa" id="SOSAobserves">
-        <h5><a>sosa:observes</a></h5>
+        <h5><a href="#SOSAobserves">sosa:observes</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/observes
         </p>
@@ -1048,35 +1048,35 @@
         </p>
         <p class="note">
             The 2017 edition defined the term ObservableProperty as the range of
-            <a>sosa:observes</a>.
-            That specialization of <a>sosa:Property</a> is deprecated in this 2023 Edition.
+            <a href="#SOSAobserves">sosa:observes</a>.
+            That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2023 Edition.
         </p>
         <p>
             <em>observes</em> &mdash;
-            Relation between a <a>sosa:Sensor</a>
-            and a <a>sosa:Property</a> that it is capable of
+            Relation between a <a href="#SOSASensor">Sensor</a>
+            and a <a href="#SOSAProperty">Property</a> that it is capable of
             sensing.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Sensor</a></td>
+                    <td><a href="#SOSASensor">sosa:Sensor</a></td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:Property</a></td>
+                    <td><a href="#SOSAProperty">sosa:Property</a></td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:isObservedBy</a>
+                        <a href="#SOSAisObservedBy">sosa:isObservedBy</a>
                     </td>
                 </tr>
                 <tr class="ssn">
                     <th>Sub property of</th>
                     <td>
-                        <a>sosa:forProperty</a>
+                        <a href="#SOSAforProperty">sosa:forProperty</a>
                     </td>
                 </tr>
                 <tr>
@@ -1094,7 +1094,7 @@
     </section>
 
     <section class="informative specterm" id="SOSAoriginated">
-        <h5><a>sosa:originated</a></h5>
+        <h5><a href="#SOSAoriginated">sosa:originated</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/originated
         </p>
@@ -1103,24 +1103,24 @@
         </p>
         <p>
             <em>originated</em> &mdash;
-            Relation between a <a>sosa:Stimulus</a> and the
-            <a>sosa:Observation</a> that was originated by it.
+            Relation between a <a href="#SOSAStimulus">Stimulus</a> and the
+            <a href="#SOSAObservation">Observation</a> that was originated by it.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Stimulus</a></td>
+                    <td><a href="#SOSAStimulus">sosa:Stimulus</a></td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:Observation</a>
+                    <td><a href="#SOSAObservation">sosa:Observation</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:wasOriginatedBy</a>
+                        <a href="#SOSAwasOriginatedBy">sosa:wasOriginatedBy</a>
                     </td>
                 </tr>
                 <tr>
@@ -1138,7 +1138,7 @@
     </section>
 
     <section class="informative specterm" id="SOSAqualityOf">
-        <h5><dfn>sosa:qualityOf</dfn></h5>
+        <h6><a href="#SOSAqualityOf">sosa:qualityOf</a></h6>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/qualityOf
         </p>
@@ -1157,14 +1157,14 @@
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:resultQuality</a>
+                        <a href="#SOSAresultQuality">sosa:resultQuality</a>
                     </td>
                 </tr>
                 <tr>
@@ -1183,7 +1183,7 @@
     </section>
 
     <section class="informative specterm" id="SOSArelatedObservation">
-        <h5><a>sosa:relatedObservation</a></h5>
+        <h5><a href="#SOSArelatedObservation">sosa:relatedObservation</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/relatedObservation
         </p>
@@ -1196,35 +1196,35 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>related observation</em> &mdash;
-            Relation to an <a>sosa:Observation</a> or
-            <a>sosa:ObservationCollection</a>.
+            Relation to an <a href="#SOSAObservation">Observation</a> or
+            <a href="#SOSAObservationCollection">ObservationCollection</a>.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a>sosa:Execution</a>,
-                        <a>sosa:Actuation</a>,
-                        <a>sosa:ActuationCollection</a>,
-                        <a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>,
-                        <a>sosa:Sampling</a>,
-                        <a>sosa:SamplingCollection</a>
+                        <a href="#SOSAExecution">sosa:Execution</a>,
+                        <a href="#SOSAActuation">sosa:Actuation</a>,
+                        <a href="#SOSAActuationCollection">sosa:ActuationCollection</a>,
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>,
+                        <a href="#SOSASampling">sosa:Sampling</a>,
+                        <a href="#SOSASamplingCollection">sosa:SamplingCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
                     <td>
-                        <a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
 
-                        <a>sosa:observationRelatedTo</a>
+                        <a href="#SOSAobservationRelatedTo">sosa:observationRelatedTo</a>
                     </td>
                 </tr>
                 <tr>
@@ -1243,7 +1243,7 @@
     </section>
 
     <section class="informative specterm" id="SOSAresultQuality">
-        <h5><dfn>sosa:resultQuality</dfn></h5>
+        <h6><a href="#SOSAresultQuality">sosa:resultQuality</a></h6>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/resultQuality
         </p>
@@ -1280,14 +1280,14 @@
                 <tr>
                     <th>Domain Includes</th>
                     <td>
-                        <a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>
+                        <a href="#SOSAObservation">sosa:Observation</a>,
+                        <a href="#SOSAObservationCollection">sosa:ObservationCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:qualityOf</a>
+                        <a href="#SOSAqualityOf">sosa:qualityOf</a>
                     </td>
                 </tr>
                 <tr>
@@ -1306,7 +1306,7 @@
     </section>
 
     <section class="specterm" id="SOSAwasObservedBy">
-        <h5><a>sosa:wasObservedBy</a></h5>
+        <h5><a href="#SOSAwasObservedBy">sosa:wasObservedBy</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/wasObservedBy
         </p>
@@ -1316,25 +1316,25 @@
 
         <p>
             <em>was observed by</em> &mdash;
-            Relation between a <a>sosa:Property</a>
-            and an <a>sosa:Observation</a> that observed it.
+            Relation between a <a href="#SOSAProperty">Property</a>
+            and an <a href="#SOSAObservation">Observation</a> that observed it.
         </p>
 
         <table>
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Property</a></td>
+                    <td><a href="#SOSAProperty">sosa:Property</a></td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:Observation</a>
+                    <td><a href="#SOSAObservation">sosa:Observation</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:observedProperty</a>
+                        <a href="#SOSAobservedProperty">sosa:observedProperty</a>
                     </td>
                 </tr>
                 <tr>
@@ -1352,7 +1352,7 @@
     </section>
 
     <section class="specterm" id="SOSAwasOriginatedBy">
-        <h5><a>sosa:wasOriginatedBy</a></h5>
+        <h5><a href="#SOSAwasOriginatedBy">sosa:wasOriginatedBy</a></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/wasOriginatedBy
         </p>
@@ -1361,24 +1361,24 @@
         </p>
         <p>
             <em>was originated by</em> &mdash;
-            Relation between an <a>sosa:Observation</a> and
-            the <a>sosa:Stimulus</a> that originated it.
+            Relation between an <a href="#SOSAObservation">Observation</a> and
+            the <a href="#SOSAStimulus">Stimulus</a> that originated it.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Observation</a></td>
+                    <td><a href="#SOSAObservation">sosa:Observation</a></td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:Stimulus</a>
+                    <td><a href="#SOSAStimulus">sosa:Stimulus</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a>sosa:originated</a>
+                        <a href="#SOSAoriginated">sosa:originated</a>
                     </td>
                 </tr>
                 <tr>

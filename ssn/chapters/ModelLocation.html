@@ -26,12 +26,12 @@
 <h5>Systems, Platforms, Deployments</h5>
 
 <p>
-    A number of patterns may be used to characterize the location of a <a>sosa:System</a>, depending on
-    how much detail about <a>sosa:Platforms</a> and <a>sosa:Deployments</a> is useful.
+    A number of patterns may be used to characterize the location of a <a href="#SOSASystem">System</a>, depending on
+    how much detail about <a href="#SOSAPlatform">Platforms</a> and <a href="#SOSADeployment">Deployments</a> is useful.
 </p>
 
 <p>
-    For example, a System, such as a <a>sosa:Sensor</a>, might be permanently in one specific location,
+    For example, a System, such as a <a href="#SOSASensor">Sensor</a>, might be permanently in one specific location,
     described as follows:
 </p>
 <figure id="Fig-LocatedSensor">
@@ -68,7 +68,7 @@
 
 <h5>Samples, Features</h5>
 
-<p>Similarly, Location can be associated directly or indirectly with a <a>sosa:Sample</a>. </p>
+<p>Similarly, Location can be associated directly or indirectly with a <a href="#SOSASample">Sample</a>. </p>
 
 <p>
     Observations of the atmosphere are necessarily made at a specific location.
@@ -95,13 +95,13 @@
 
 <h4>Relative location patterns</h4>
 <p>
-    In general, the locations of the <a>sosa:System</a> and
-    <a>sosa:FeatureOfInterest</a> for an <a>sosa:Execution</a> are different.
-    For example, the <em>relative</em> locations of the <a>sosa:Sensor</a>
-    (or its <a>sosa:Platform</a> or <a>sosa:Deployment</a>) and the feature of
-    interest (or <a>sosa:Sample</a>), along with the <a href="#SOSAphenomenonTime">phenomenon-</a> and
+    In general, the locations of the <a href="#SOSASystem">System</a> and
+    <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> for an <a href="#SOSAExecution">Execution</a> are different.
+    For example, the <em>relative</em> locations of the <a href="#SOSASensor">Sensor</a>
+    (or its <a href="#SOSAPlatform">Platform</a> or <a href="#SOSADeployment">Deployment</a>) and the feature of
+    interest (or <a href="#SOSASample">Sample</a>), along with the <a href="#SOSAphenomenonTime">phenomenon-</a> and
     <a href="#SOSAresultTime">result-time</a>, fall into distinct
-    patterns for different <a>sosa:Observation</a> modes as follows:
+    patterns for different <a href="#SOSAObservation">Observation</a> modes as follows:
 </p>
 <dl>
     <dt>in situ monitoring</dt>
@@ -113,15 +113,15 @@
         phenomenon-time</dd>
 </dl>
 <p>
-    Note that in ex situ measurements, there will usually be a <a>sosa:Sample</a> and thus an act of
-    <a>sosa:Sampling</a> involved, whose properties determine the location and phenomenon-time.
+    Note that in ex situ measurements, there will usually be a <a href="#SOSASample">Sample</a> and thus an act of
+    <a href="#SOSASampling">Sampling</a> involved, whose properties determine the location and phenomenon-time.
 </p>
 
 <h4>Geometry results</h4>
 <p>
     Geometry may appear in other contexts.
     For example, a determination of location using a GPS receiver can be described as an
-    <a>sosa:Observation</a> whose <a>sosa:hasResult</a> value is a geometry.
+    <a href="#SOSAObservation">Observation</a> whose <a href="#SOSAhasResult">hasResult</a> value is a geometry.
     The following example illustrates this pattern, with the result being a GeoSPARQL <code>Geometry</code> object:
 </p>
 <figure id="Fig-GeometryResult">
