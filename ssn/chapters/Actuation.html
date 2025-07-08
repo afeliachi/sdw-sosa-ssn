@@ -104,9 +104,9 @@
         </p>
         <p>
             <em>Actuation</em> &mdash;
-            Act of carrying out an actuating <a href="#SOSAProcedure">Procedure</a>
-            using an <a href="#SOSAActuator">Actuator</a> to change the value of an actuatable
-            <a href="#SOSAProperty">Property</a> of a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
+            Act of carrying out an Actuating Procedure
+            using an Actuator to change the value of an actuatable
+            Property of a FeatureOfInterest.
         </p>
         <p>
             In this context
@@ -162,29 +162,21 @@
                 <tr class="ssn">
                     <th class="restrictions">Restrictions</th>
                     <td>
-                        <a>sosa:madeByActuator</a>
-                        <em><b>EXACTLY 1</b></em>
+                        <a>sosa:madeByActuator</a> <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a>sosa:madeByActuator</a>
-                        <em><b>ONLY</b></em> <a>sosa:Actuator</a>
+                        <a>sosa:madeByActuator</a> <em><b>ONLY</b></em> <a>sosa:Actuator</a>
                         <br>
-                        <a>sosa:usedProcedure</a>
-                        <em><b>ONLY</b></em> <a>sosa:ActuatingProcedure</a>
+                        <a>sosa:usedProcedure</a> <em><b>ONLY</b></em> <a>sosa:ActuatingProcedure</a>
                         <br>
-                        <a>sosa:hasFeatureOfInterest</a>
-                        <em><b>EXACTLY 1</b></em>
+                        <a>sosa:hasFeatureOfInterest</a> <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a>sosa:hasFeatureOfInterest</a>
-                        <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
+                        <a>sosa:hasFeatureOfInterest</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                         <br>
-                        <a>sosa:actsOnProperty</a>
-                        <em><b>EXACTLY 1</b></em>
+                        <a>sosa:actsOnProperty</a> <em><b>EXACTLY 1</b></em>
                         <br>
-                        <a>sosa:actsOnProperty</a>
-                        <em><b>ONLY</b></em> <a>sosa:Property</a>
+                        <a>sosa:actsOnProperty</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                         <br>
-                        <a>sosa:hasResult</a>
-                        <em><b>EXACTLY 1</b></em>
+                        <a>sosa:hasResult</a> <em><b>EXACTLY 1</b></em>
                     </td>
                 </tr>
                 <tr>
@@ -221,19 +213,18 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>Actuation Collection</em> &mdash;
-            Collection (set) of one or more <a href="#SOSAActuation">Actuations</a>
-            or <a href="#SOSAActuationCollection">ActuationCollections</a>, i.e., collections may be nested.
+            set of one or more Actuations or ActuationCollections, i.e., collections may be nested.
         </p>
         <p>
             The following <a href="#SOSAActuation">Actuation</a> properties may appear in an
-            <a href="#SOSAActuationCollection">ActuationCollection</a> &mdash;
-            <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a>,
-            <a href="#SOSAusedProcedure">usedProcedure</a>,
-            <a href="#SOSAmadeByActuator">madeByActuator</a>,
-            <a href="#SOSAactsOnProperty">actsOnProperty</a>,
-            <a href="#SOSAendTime">endTime</a>,
-            <a href="#SOSAhasResult">hasResult</a>,
-            <a href="#SOSAhasSimpleResult">hasSimpleResult</a>.
+            <a>sosa:ActuationCollection</a> &mdash;
+            <a>sosa:hasFeatureOfInterest</a>,
+            <a>sosa:usedProcedure</a>,
+            <a>sosa:madeByActuator</a>,
+            <a>sosa:actsOnProperty</a>,
+            <a>sosa:endTime</a>,
+            <a>sosa:hasResult</a>,
+            <a>sosa:hasSimpleResult</a>.
             If it is present, the value of a property summarizes the values of the matching properties of
             the member actuations, where membership is either direct or transitive through one or more member
             actuation collections.
@@ -305,25 +296,20 @@
                         <th class="restrictions">Restrictions</th>
                         <td>
 
-                            <a>sosa:madeByActuator</a>
-                            <em><b>ONLY</b></em> <a>sosa:Actuator</a>
+                            <a>sosa:madeByActuator</a> <em><b>ONLY</b></em> <a>sosa:Actuator</a>
                             <br>
 
-                            <a>sosa:usedProcedure</a>
-                            <em><b>ONLY</b></em> <a>sosa:ActuatingProcedure</a>
+                            <a>sosa:usedProcedure</a> <em><b>ONLY</b></em> <a>sosa:ActuatingProcedure</a>
                             <br>
 
-                            <a>sosa:hasFeatureOfInterest</a>
-                            <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
+                            <a>sosa:hasFeatureOfInterest</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                             <br>
 
-                            <a>sosa:actsOnProperty</a>
-                            <em><b>ONLY</b></em> <a>sosa:Property</a>
+                            <a>sosa:actsOnProperty</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                             <br>
 
-                            <a>sosa:hasMember</a>
-                            <em><b>ONLY</b></em> (<a>sosa:Actuation</a> OR
-                            <a>sosa:ActuationCollection</a> )
+                            <a>sosa:hasMember</a> <em><b>ONLY</b></em>
+                            (<a>sosa:Actuation</a> OR <a>sosa:ActuationCollection</a> )
                         </td>
                     </tr>
                     <tr>
@@ -356,9 +342,7 @@
         </p>
         <p>
             <em>Actuator</em> &mdash;
-
-            An entity that implements an actuating <a href="#SOSAProcedure">Procedure</a> to change the value of a
-            actuatable <a href="#SOSAProperty">Property</a>.
+            entity that implements an Actuating Procedure to change the value of a actuatable Property.
             This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
 
         </p>
@@ -398,16 +382,12 @@
                 <tr class="ssn">
                     <th class="restrictions">Restrictions</th>
                     <td>
-                        <a>sosa:madeActuation</a>
-                        <em><b>ONLY</b></em>
-                        ( <a>sosa:Actuation</a> OR
-                        <a>sosa:ActuationCollection</a> )
+                        <a>sosa:madeActuation</a> <em><b>ONLY</b></em>
+                        ( <a>sosa:Actuation</a> OR <a>sosa:ActuationCollection</a> )
                         <br>
-                        <a>sosa:actsOn</a>
-                        <em><b>ONLY</b></em> <a>sosa:Property</a>
+                        <a>sosa:actsOn</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                         <br>
-                        <a>sosa:implements</a>
-                        <em><b>ONLY</b></em> <a>sosa:ActuatingProcedure</a>
+                        <a>sosa:implements</a> <em><b>ONLY</b></em> <a>sosa:ActuatingProcedure</a>
                     </td>
                 </tr>
                 <tr>
@@ -440,9 +420,7 @@
         </p>
         <p>
             <em>acts on</em> &mdash;
-            Relation between an
-            <a href="#SOSAActuator">Actuator</a> and a
-            <a href="#SOSAProperty">Property</a> whose state may be changed by using it.
+            Relation between an Actuator and a Property whose state may be changed by using it.
         </p>
         <table>
             <tbody>
@@ -493,24 +471,22 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p class="note">
-            The 2017 edition defined the term ActuatableProperty as the range of
-            <a>sosa:actsOnProperty</a>.
+            The 2017 edition defined the term ActuatableProperty as the range of <a>sosa:actsOnProperty</a>.
             That specialization of <a>sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
             <em>acts on property</em> &mdash;
-            Relation between an <a href="#SOSAActuation">Actuation</a> and the
-            <a>sosa:Property</a> it acted upon.
+            relation between an Actuation and the Property it acted upon.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Example</th>
                     <td>
-                        In the activity (<a href="#SOSAActuation">Actuation</a>) of
-                        automatically closing a window if the temperature in a room drops below 20 degrees Celsius,
-                        the property on which the <a href="#SOSAActuator">Actuator</a> acts upon is the state of the
-                        window as it changes from being open to being closed.
+                        In the activity (<a href="#SOSAActuation">Actuation</a>) of automatically closing a window if
+                        the temperature in a room drops below 20 degrees Celsius, the property on which the
+                        <a href="#SOSAActuator">Actuator</a> acts upon is the state of the window as it changes from
+                        being open to being closed.
                     </td>
                 </tr>
                 <tr>
@@ -555,15 +531,12 @@
             <strong>an OWL Object Property</strong>
         </p>
         <p class="note">
-            The 2017 edition defined the term ActuatableProperty as the domain of
-            <a>sosa:isActedOnBy</a>.
+            The 2017 edition defined the term ActuatableProperty as the domain of <a>sosa:isActedOnBy</a>.
             That specialization of <a>sosa:Property</a> is deprecated in this 2025 edition.
         </p>
         <p>
             <em>is acted on by</em> &mdash;
-            Relation between a
-            <a href="#SOSAProperty">Property</a> and an
-            <a href="#SOSAActuator">Actuator</a> that may change its state.
+            relation between a Property and an Actuator that may change its state.
         </p>
         <table>
             <tbody>
@@ -609,9 +582,7 @@
         </p>
         <p>
             <em>made actuation</em> &mdash;
-            Relation between an <a href="#SOSAActuator">Actuator</a> and an
-            <a href="#SOSAActuation">Actuation</a> or
-            <a href="#SOSAActuationCollection">ActuationCollection</a> it has made.
+            relation between an Actuator and an Actuation or ActuationCollection it has made.
         </p>
         <table>
             <tbody>
@@ -668,8 +639,7 @@
         </p>
         <p>
             <em>made by actuator</em> &mdash;
-            Relation linking an <a href="#SOSAActuation">Actuation</a> to the
-            <a href="#SOSAActuator">Actuator</a> that made it.
+            relation linking an Actuation to the Actuator that made it.
         </p>
         <table>
             <tbody>
@@ -730,9 +700,7 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>was acted on by</em> &mdash;
-            Relation between a
-            <a>sosa:Property</a> and an
-            <a href="#SOSAActuation">Actuation</a> that changed its state.
+            relation between a Property and an Actuation that changed its state.
         </p>
         <table>
             <tbody>
