@@ -38,11 +38,11 @@
             <a href="#SOSAfeatureSampledBy">sosa:featureSampledBy</a>,
             <a href="#SOSAhasOriginalSample">sosa:hasOriginalSample</a>,
             <a href="#SOSAhasSample">sosa:hasSample</a>,
-            <a href="#SOSAhasSampledFeature">sosa:hasSampledFeature</a>,
             <a href="#SOSAisOriginalSampleOf">sosa:isOriginalSampleOf</a>,
             <a href="#SOSAisResultOfMadeBySampler">sosa:isResultOfMadeBySampler</a>,
             <a href="#SOSAisResultOfUsedProcedure">sosa:isResultOfUsedProcedure</a>,
             <a href="#SOSAisSampleOf">sosa:isSampleOf</a>,
+            <a href="#SOSAisSampleOfUltimateFOI">sosa:isSampleOfUltimateFOI</a>,
             <a href="#SOSAmadeBySampler">sosa:madeBySampler</a>,
             <a href="#SOSAmadeSampling">sosa:madeSampling</a>,
             <a href="#SOSAmadeSamplingHasResult">sosa:madeSamplingHasResult</a>,
@@ -131,12 +131,12 @@
                         <a href="#SOSAisSampleOf">sosa:isSampleOf</a>
                         <em><b>MIN 1</b></em>
                         <br>
+                        <a href="#SOSAisSampleOfUltimateFOI">sosa:isSampleOfUltimateFOI</a>
+                        <em><b>ONLY</b></em> <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>
+                        <br>
                         <a href="#SOSAhasOriginalSample">sosa:hasOriginalSample</a>
                         <em><b>ONLY</b></em>
                         <a href="#SOSASample">sosa:Sample</a>
-                        <br>
-                        <a href="#SOSAhasSampledFeature">sosa:hasSampledFeature</a>
-                        <em><b>ONLY</b></em> <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>
                         <br>
                         <a href="#SOSAisResultOfMadeBySampler">sosa:isResultOfMadeBySampler</a>
                         <em><b>ONLY</b></em> <a href="#SOSASampler">sosa:Sampler</a>
@@ -378,8 +378,8 @@
             The following <a href="#SOSASample">Sample</a> properties may appear in a
             <a href="#SOSASampleCollection">SampleCollection</a> &mdash;
             <a href="#SOSAhasOriginalSample">hasOriginalSample</a>,
-            <a href="#SOSAhasSampledFeature">hasSampledFeature</a>,
             <a href="#SOSAisSampleOf">isSampleOf</a>,
+            <a href="#SOSAisSampleOfUltimateFOI">isSampleOfUltimateFOI</a>,
             <a href="#SOSAisResultOfUsedProcedure">isResultOfUsedProcedure</a>,
             <a href="#SOSAisResultOfMadeBySampler">isResultOfMadeBySampler</a>.
             If it is present, the values of a property summarizes the values of the matching properties of the
@@ -872,7 +872,7 @@
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-                        <a href="#SOSAhasSampledFeature">sosa:hasSampledFeature</a>
+                        <a href="#SOSAisSampleOfUltimateFOI">sosa:isSampleOfUltimateFOI</a>
                     </td>
                 </tr>
                 <tr>
@@ -970,58 +970,6 @@
                     <th>Inverse property of</th>
                     <td>
                         <a href="#SOSAisSampleOf">sosa:isSampleOf</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/sosa/sampling/">http://www.w3.org/ns/sosa/sampling/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="buttonpanel">
-            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
-            <span class="back">[<a href="#Overview">Back to top</a>]</span>
-        </div>
-    </section>
-
-    <section class="informative specterm sosa" id="SOSAhasSampledFeature">
-        <h5><a href="#SOSAhasSampledFeature">sosa:hasSampledFeature</a></h5>
-        <p class="crossreference">
-            <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasSampledFeature
-        </p>
-        <p>
-            <strong>an OWL Object Property</strong>
-        </p>
-        <p class="warning">
-            hasSampledFeature added in 2025 edition.
-            This term is non-normative, pending further implementation experience</p>
-        <p>
-            <em>has ultimate sampled feature</em> &mdash;
-            Relation from a <a href="#SOSASample">Sample</a> or <a href="#SOSASampleCollection">SampleCollection</a> to
-            the ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> that it is intended to be
-            representative
-            of &mdash; i.e., the end of a chain of isSampleOf relations.
-        </p>
-        <p class="note">
-            Some examples of relationships between samples and features of interest within chains are
-            illustrated in <a href="#ModelSampleChains">Sample chains</a>.</p>
-        <table>
-            <tbody>
-                <tr>
-                    <th>Domain Includes</th>
-                    <td><a href="#SOSASample">sosa:Sample</a>, <a href="#SOSASampleCollection">sosa:SampleCollection</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Range Includes</th>
-                    <td><a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a></td>
-                </tr>
-                <tr>
-                    <th>Inverse property of</th>
-                    <td>
-                        <a href="#SOSAfeatureSampledBy">sosa:featureSampledBy</a>
                     </td>
                 </tr>
                 <tr>
@@ -1242,6 +1190,58 @@
                     <th>Inverse property of</th>
                     <td>
                         <a href="#SOSAhasSample">sosa:hasSample</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/sampling/">http://www.w3.org/ns/sosa/sampling/</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttonpanel">
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
+    </section>
+
+    <section class="informative specterm sosa" id="SOSAisSampleOfUltimateFOI">
+        <h5><a href="#SOSAisSampleOfUltimateFOI">sosa:isSampleOfUltimateFOI</a></h5>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/isSampleOfUltimateFOI
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="warning">
+            isSampleOfUltimateFOI added in 2025 edition.
+            This term is non-normative, pending further implementation experience</p>
+        <p>
+            <em>is sample of ultimate feature of interest</em> &mdash;
+            Relation from a <a href="#SOSASample">Sample</a> or <a href="#SOSASampleCollection">SampleCollection</a> to
+            the ultimate <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> that it is intended to be
+            representative
+            of &mdash; i.e., the end of a chain of isSampleOf relations.
+        </p>
+        <p class="note">
+            Some examples of relationships between samples and features of interest within chains are
+            illustrated in <a href="#ModelSampleChains">Sample chains</a>.</p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Domain Includes</th>
+                    <td><a href="#SOSASample">sosa:Sample</a>, <a href="#SOSASampleCollection">sosa:SampleCollection</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Range Includes</th>
+                    <td><a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a></td>
+                </tr>
+                <tr>
+                    <th>Inverse property of</th>
+                    <td>
+                        <a href="#SOSAfeatureSampledBy">sosa:featureSampledBy</a>
                     </td>
                 </tr>
                 <tr>
