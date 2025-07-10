@@ -115,54 +115,6 @@ var respecConfig = {
     }
   ],
   localBiblio: {
-    "CDT": {
-      href: "https://w3id.org/lindt/v4/custom_datatypes",
-      title: "Custom Datatypes - Towards a web of Linked Datatypes",
-      authors: ["Maxime Lefrançois", "Antoine Zimmermann"],
-      date: "19 July 2021"
-    },
-    "CoverageJSON": {
-      authors: ["Chris Little", "Jon Blower", "Maik Reichert"],
-      href: "https://docs.ogc.org/cs/21-069r2/21-069r2.html",
-      title: "OGC CoverageJSON Community Standard",
-      publisher: "Open Geospatial Consortium",
-      date: "August 2023"
-    },
-    "DCAT": {
-      authors: [
-        "Riccardo Albertoni",
-        "David Browning",
-        "Simon Cox",
-        "Alejandra Gonzalez Beltran",
-        "Andrea Perego",
-        "Peter Winstanley"
-      ],
-      href: "https://www.w3.org/TR/vocab-dcat/",
-      title: "Data Catalog Vocabulary (DCAT) - Version 3",
-      rawDate: "2024-08-22",
-      status: "REC",
-      publisher: "W3C",
-      edDraft: "https://w3c.github.io/dxwg/dcat/",
-      deliveredBy: [
-        "https://www.w3.org/2017/dxwg/"
-      ],
-    },
-    "DUL": {
-      href: "http://ontologydesignpatterns.org/wiki/Ontology:DOLCE+DnS_Ultralite",
-      authors: ["Aldo Gangemi"],
-      title: "DOLCE+DnS Ultralite (DUL)"
-    },
-    "iso-19157-1": {
-      authors: [
-        "ISO/TC 211"
-      ],
-      href: "https://www.iso.org/standard/78900.html",
-      title: "Geographic information -- Data quality -- Part 1: General requirements",
-      publisher: "ISO",
-      status: "International Standard",
-      date: "2023",
-      isoNumber: "ISO 19157-1:2023"
-    },
     "Lefrancois-et-al-2017": {
       href: "https://w3id.org/seas/SEAS-D2_2-SEAS-Knowledge-Model.pdf",
       authors: ["Maxime Lefrançois", "Jarmo Kalaoja", "Takoua Ghariani", "Antoine Zimmermann"],
@@ -170,12 +122,6 @@ var respecConfig = {
       status: "Deliverable 2.2",
       publisher: "ITEA2 12004 Smart Energy Aware Systems",
       date: "2017"
-    },
-    "OBOE": {
-      href: "http://dx.doi.org/10.5063/F11C1TTM",
-      date: "2016",
-      authors: ["Mark Schildhauer", "Matthew B. Jones", "Shawn Bowers", "Joshua Madin", "Sergeui Krivov", "Deana Pennington", "Ferdinando Villa", "Benjamin Leinfelder", "Christopher Jones", "Margaret O'Brien"],
-      title: "OBOE: the Extensible Observation Ontology, version 1.1"
     },
     "OM-Lite": {
       href: "http://content.iospress.com/articles/semantic-web/sw214",
@@ -193,35 +139,12 @@ var respecConfig = {
       title: "A Project Ontology",
       date: "2017"
     },
-    "SAREF": {
-      href: "https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/04.01.01_60/ts_103264v040101p.pdf",
-      title: "SmartM2M; Smart Applications; Reference Ontology and oneM2M Mapping",
-      id: "ETSI TS 103 264 (V4.1.1)",
-      publisher: "ETSI",
-      date: "2025"
-    },
-    "SAREF_Patterns": {
-      href: "https://www.etsi.org/deliver/etsi_ts/103500_103599/103548/01.02.01_60/ts_103548v010201p.pdf",
-      title: "SmartM2M; SAREF reference ontology patterns",
-      id: "ETSI TS 103 548 (V1.2.1)",
-      publisher: "ETSI",
-      date: "2024"
-    },
     "SSN-PROV": {
       href: "http://ceur-ws.org/Vol-1401/paper-05.pdf",
       title: "Sensor Data Provenance: SSNO and PROV-O Together at Last",
       date: "2014",
       authors: ["Michael Compton", "David Corsar", "Kerry Taylor"],
       publisher: "CEUR: 7th International Conference on Semantic Sensor Networks"
-    },
-    "SSNX": {
-        authors: [
-            "W3C Semantic Sensor Network Incubator Group"
-        ],
-        title: "Semantic Sensor Network Ontology",
-        href: "https://www.w3.org/2005/Incubator/ssn/ssnx/ssn",
-        publisher: "W3C",
-        date: "2011"
     },
     "SSNX-Paper": {
       authors: ["Michael Compton", "Payam Barnaghi", "Luis Bermudez", "Raúl García-Castro", "Oscar Corcho", "Simon Cox", "John Graybeal", "Manfred Hauswirth", "Cory Henson", "Arthur Herzog", "Vincent Huang", "Krzysztof Janowicz", "W. David Kelsey", "Danh Le Phuoc", "Laurent Lefort", "Myriam Leggieri", "Holger Neuhaus", "Andriy Nikolov", "Kevin Page", "Alexandre Passant", "Amit Sheth", "Kerry Taylor"],
@@ -237,36 +160,10 @@ var respecConfig = {
       publisher: "CEUR: Proceedings of the 3rd International Workshop on Semantic Sensor Networks (SSN10)",
       date: "2010"
     },
-    "STA": {
-      href: "https://www.ogc.org/standard/sensorthings/",
-      title: "OGC SensorThings API (STA)",
-      publisher: "Open Geospatial Consortium"
-    },
     "SWE": {
       href: "https://www.ogc.org/about-ogc/domains/swe/",
       title: "Sensor Web Enablement (SWE)",
       publisher: "Open Geospatial Consortium"
-    },
-    "SWE-Common": {
-      authors: ["Alex Robin"],
-      href: "https://portal.ogc.org/files/?artifact_id=41157",
-      title: "OGC® SWE Common Data Model Encoding Standard",
-      publisher: "Open Geospatial Consortium",
-      date: "January 2011"
-    },
-    "SWE-Common-JSON": {
-      authors: ["Alex Robin"],
-      href: "https://docs.ogc.org/bp/17-011r2/17-011r2.html",
-      title: "JSON Encoding Rules SWE Common / SensorML",
-      publisher: "Open Geospatial Consortium",
-      date: "January 2018"
-    },
-    "UCUM": {
-      href: "https://ucum.org/ucum",
-      title: "The Unified Code for Units of Measure",
-      authors: ["Gunther Schadow", "Clement J. McDonald"],
-      publisher: "Regenstrief Institute, Inc. and the UCUM Organization",
-      date: "17 June 2024"
     }
   }
-};
+}
