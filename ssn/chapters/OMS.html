@@ -119,17 +119,17 @@
   </p>
   <div class="azlist">
     <p>
-      <a href="#OMSPreparationProcedure">sosa-oms:PreparationProcedure</a>,
-      <a href="#OMSPreparationStep">sosa-oms:PreparationStep</a>,
-      <a href="#OMShasPreparationStep">sosa-oms:hasPreparationStep</a>,
-      <a href="#OMSmadeOnPlatform">sosa-oms:madeOnPlatform</a>,
-      <a href="#OMSmetadata">sosa-oms:metadata</a>,
-      <a href="#OMSobservationType">sosa-oms:observationType</a>,
-      <a href="#OMSpreparedSample">sosa-oms:preparedSample</a>,
-      <a href="#OMSprocessingDetails">sosa-oms:processingDetails</a>,
-      <a href="#OMSrelatedSampling">sosa-oms:relatedSampling</a>,
-      <a href="#OMSsamplePreparationStep">sosa-oms:samplePreparationStep</a>,
-      <a href="#OMSvalidTime">sosa-oms:validTime</a>
+      <a>sosa-oms:PreparationProcedure</a>,
+      <a>sosa-oms:PreparationStep</a>,
+      <a>sosa-oms:hasPreparationStep</a>,
+      <a>sosa-oms:madeOnPlatform</a>,
+      <a>sosa-oms:metadata</a>,
+      <a>sosa-oms:observationType</a>,
+      <a>sosa-oms:preparedSample</a>,
+      <a>sosa-oms:processingDetails</a>,
+      <a>sosa-oms:relatedSampling</a>,
+      <a>sosa-oms:samplePreparationStep</a>,
+      <a>sosa-oms:validTime</a>
     </p>
   </div>
 
@@ -138,7 +138,7 @@
   <p>
 
   <section class="informative specterm sosa" id="OMSPreparationProcedure">
-    <h5><a href="#OMSPreparationProcedure">sosa-oms:PreparationProcedure</a></h5>
+    <h5><dfn>sosa-oms:PreparationProcedure</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/PreparationProcedure
     </p>
@@ -147,15 +147,14 @@
     </p>
     <p>
       <em>Preparation Procedure</em> &mdash;
-      The description of preparation steps performed on a
-      Sample.
+      description of preparation steps performed on a      Sample.
     </p>
     <table>
       <tbody>
         <tr class="ssn">
           <th>Sub class of</th>
           <td>
-            sosa:Procedure
+            <a>sosa:Procedure</a>
           </td>
         </tr>
         <tr>
@@ -174,7 +173,7 @@
   </section>
 
   <section class="informative specterm" id="OMSPreparationStep">
-    <h5><a href="#OMSPreparationStep">sosa-oms:PreparationStep</a></h5>
+    <h5><dfn>sosa-oms:PreparationStep</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/PreparationStep
     </p>
@@ -183,8 +182,7 @@
     </p>
     <p>
       <em>Preparation Step</em> &mdash;
-      A PreparationStep is an individual step pertaining to a Sample
-      PreparationProcedure.
+      an individual step pertaining to a Sample      PreparationProcedure.
     </p>
     <table>
       <tbody>
@@ -204,7 +202,7 @@
   </section>
 
   <section class="informative specterm" id="OMShasPreparationStep">
-    <h5><a href="#OMShasPreparationStep">sosa-oms:hasPreparationStep</a></h5>
+    <h5><dfn>sosa-oms:hasPreparationStep</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/hasPreparationStep
     </p>
@@ -213,7 +211,7 @@
     </p>
     <p>
       <em>has preparation step</em> &mdash;
-      Link to a preparation step used to prepare the sample
+      link to a preparation step used to prepare the sample
     </p>
     <table>
       <tbody>
@@ -226,7 +224,7 @@
         <tr>
           <th>Range Includes</th>
           <td>
-            <a href="#OMSPreparationStep">sosa-oms:PreparationStep</a>
+            <a>sosa-oms:PreparationStep</a>
           </td>
         </tr>
         <tr>
@@ -244,7 +242,7 @@
   </section>
 
   <section class="informative specterm" id="OMSmadeOnPlatform">
-    <h5><a href="#OMSmadeOnPlatform">sosa-oms:madeOnPlatform</a></h5>
+    <h5><dfn>sosa-oms:madeOnPlatform</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/madeOnPlatform
     </p>
@@ -253,9 +251,7 @@
     </p>
     <p>
       <em>made on platform</em> &mdash;
-      Relation between an Observation and the Platform the Sensor
-      was
-      attached to at the time the observation was made.
+      relation between an Observation and the Platform the Sensor      was      attached to at the time the observation was made.
     </p>
     <table>
       <tbody>
@@ -288,7 +284,7 @@
   </section>
 
   <section class="informative specterm" id="OMSmetadata">
-    <h5><a href="#OMSmetadata">sosa-oms:metadata</a></h5>
+    <h5><dfn>sosa-oms:metadata</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/metadata
     </p>
@@ -297,7 +293,7 @@
     </p>
     <p>
       <em>metadata</em> &mdash;
-      Links an individual to a metadata description
+      link to an individual to a metadata description
     </p>
     <table>
       <tbody>
@@ -311,7 +307,7 @@
             <a>sosa:Sample</a>,
             <a>sosa:SampleCollection</a>,
             <a>sosa:Sampling</a>,
-            <a href="#OMSPreparationStep">sosa-oms:PreparationStep</a>,
+            <a>sosa-oms:PreparationStep</a>,
             <a>sosa:Procedure</a>,
             <a>sosa:Sensor</a>,
             <a>sosa:Platform</a>,
@@ -333,7 +329,7 @@
   </section>
 
   <section class="informative specterm" id="OMSobservationType">
-    <h5><a href="#OMSobservationType">sosa-oms:observationType</a></h5>
+    <h5><dfn>sosa-oms:observationType</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/observationType
     </p>
@@ -342,8 +338,7 @@
     </p>
     <p>
       <em>observation type</em> &mdash;
-      Information providing further detail on the type of
-      Observations.
+      further detail on the type of      Observations.
     </p>
     <table>
       <tbody>
@@ -369,7 +364,7 @@
   </section>
 
   <section class="informative specterm" id="OMSpreparedSample">
-    <h5><a href="#OMSpreparedSample">sosa-oms:preparedSample</a></h5>
+    <h5><dfn>sosa-oms:preparedSample</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/preparedSample
     </p>
@@ -378,15 +373,14 @@
     </p>
     <p>
       <em>prepared sample</em> &mdash;
-      The Sample on which the PreparationProcedure is
-      performed.
+      the Sample on which the PreparationProcedure is      performed.
     </p>
     <table>
       <tbody>
         <tr>
           <th>Domain Includes</th>
           <td>
-            <a href="#OMSPreparationStep">sosa-oms:PreparationStep</a>
+            <a>sosa-oms:PreparationStep</a>
           </td>
         </tr>
         <tr>
@@ -411,7 +405,7 @@
   </section>
 
   <section class="informative specterm" id="OMSprocessingDetails">
-    <h5><a href="#OMSprocessingDetails">sosa-oms:processingDetails</a></h5>
+    <h5><dfn>sosa-oms:processingDetails</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/processingDetails
     </p>
@@ -420,20 +414,20 @@
     </p>
     <p>
       <em>processing details</em> &mdash;
-      The PreparationProcedure used by the PreparationStep.
+      the PreparationProcedure used by the PreparationStep.
     </p>
     <table>
       <tbody>
         <tr>
           <th>Domain Includes</th>
           <td>
-            <a href="#OMSPreparationStep">sosa-oms:PreparationStep</a>
+            <a>sosa-oms:PreparationStep</a>
           </td>
         </tr>
         <tr>
           <th>Range Includes</th>
           <td>
-            <a href="#OMSPreparationProcedure">sosa-oms:PreparationProcedure</a>
+            <a>sosa-oms:PreparationProcedure</a>
           </td>
         </tr>
         <tr>
@@ -452,7 +446,7 @@
   </section>
 
   <section class="informative specterm" id="OMSrelatedSampling">
-    <h5><a href="#OMSrelatedSampling">sosa-oms:relatedSampling</a></h5>
+    <h5><dfn>sosa-oms:relatedSampling</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/relatedSampling
     </p>
@@ -461,7 +455,7 @@
     </p>
     <p>
       <em>related sampling</em> &mdash;
-      Relation to an act of Sampling.
+      relation to an act of Sampling.
     </p>
     <table>
       <tbody>
@@ -493,7 +487,7 @@
   </section>
 
   <section class="informative specterm" id="OMSsamplePreparationStep">
-    <h5><a href="#OMSsamplePreparationStep">sosa-oms:samplePreparationStep</a></h5>
+    <h5><dfn>sosa-oms:samplePreparationStep</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/samplePreparationStep
     </p>
@@ -502,20 +496,20 @@
     </p>
     <p>
       <em>sample preparation step</em> &mdash;
-      A PreparationStep that uses the PreparationProcedure.
+      a PreparationStep that is used in the PreparationProcedure.
     </p>
     <table>
       <tbody>
         <tr>
           <th>Domain Includes</th>
           <td>
-            <a href="#OMSPreparationProcedure">sosa-oms:PreparationProcedure</a>
+            <a>sosa-oms:PreparationProcedure</a>
           </td>
         </tr>
         <tr>
           <th>Range Includes</th>
           <td>
-            <a href="#OMSPreparationStep">sosa-oms:PreparationStep</a>
+            <a>sosa-oms:PreparationStep</a>
           </td>
         </tr>
         <tr>
@@ -534,7 +528,7 @@
   </section>
 
   <section class="informative specterm" id="OMSvalidTime">
-    <h5><a href="#OMSvalidTime">sosa-oms:validTime</a></h5>
+    <h5><dfn>sosa-oms:validTime</dfn></h5>
     <p class="crossreference">
       <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/validTime
     </p>
@@ -543,8 +537,7 @@
     </p>
     <p>
       <em>valid time</em> &mdash;
-      The time interval during which the result is assumed to be
-      applicable for use.
+      the time interval during which the result is assumed to be      applicable for use.
     </p>
     <table>
       <tbody>
@@ -626,12 +619,12 @@
         <td> obs-cpt:Host </td>
       </tr>
       <tr>
-        <td> <a href="#OMSPreparationProcedure">sosa-oms:PreparationProcedure</a> </td>
+        <td> <a>sosa-oms:PreparationProcedure</a> </td>
         <td> ogc-ms:implements </td>
         <td> sam-cpt:PreparationProcedure </td>
       </tr>
       <tr>
-        <td> <a href="#OMSPreparationStep">sosa-oms:PreparationStep</a> </td>
+        <td> <a>sosa-oms:PreparationStep</a> </td>
         <td> ogc-ms:implements </td>
         <td> sam-cpt:PreparationStep </td>
       </tr>
@@ -739,12 +732,12 @@
       <tr>
         <td> sam-cpt:PreparationProcedure </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSPreparationProcedure">sosa-oms:PreparationProcedure</a> </td>
+        <td> <a>sosa-oms:PreparationProcedure</a> </td>
       </tr>
       <tr>
         <td> sam-cpt:PreparationStep </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSPreparationStep">sosa-oms:PreparationStep</a> </td>
+        <td> <a>sosa-oms:PreparationStep</a> </td>
       </tr>
       <tr>
         <td> obs-cpt:Procedure </td>
@@ -833,7 +826,7 @@
         </td>
       </tr>
       <tr>
-        <td> <a href="#OMShasPreparationStep">sosa-oms:hasPreparationStep</a> </td>
+        <td> <a>sosa-oms:hasPreparationStep</a> </td>
         <td> ogc-ms:implements </td>
         <td> sam-cpt:Sample/preparationStep-sem </td>
       </tr>
@@ -915,7 +908,7 @@
         <td> obs-cpt:gen/relatedObservation-sem </td>
       </tr>
       <tr>
-        <td> <a href="#OMSmadeOnPlatform">sosa-oms:madeOnPlatform</a> </td>
+        <td> <a>sosa-oms:madeOnPlatform</a> </td>
         <td> ogc-ms:implements </td>
         <td> obs-cpt:Observation/host-sem </td>
       </tr>
@@ -925,12 +918,12 @@
         <td> sam-cpt:Sampler/sampling-sem </td>
       </tr>
       <tr>
-        <td> <a href="#OMSmetadata">sosa-oms:metadata</a> </td>
+        <td> <a>sosa-oms:metadata</a> </td>
         <td> ogc-ms:implements </td>
         <td> obs-core:gen/metadata-sem </td>
       </tr>
       <tr>
-        <td> <a href="#OMSobservationType">sosa-oms:observationType</a> </td>
+        <td> <a>sosa-oms:observationType</a> </td>
         <td> ogc-ms:implements </td>
         <td> obs-core:AbstractObservationCharacteristics/type-sem </td>
       </tr>
@@ -950,12 +943,12 @@
         <td> obs-cpt:Observation/phenomenonTime-sem </td>
       </tr>
       <tr>
-        <td> <a href="#OMSpreparedSample">sosa-oms:preparedSample</a> </td>
+        <td> <a>sosa-oms:preparedSample</a> </td>
         <td> ogc-ms:implements </td>
         <td> sam-cpt:PreparationStep/preparedSample-sem </td>
       </tr>
       <tr>
-        <td> <a href="#OMSprocessingDetails">sosa-oms:processingDetails</a> </td>
+        <td> <a>sosa-oms:processingDetails</a> </td>
         <td> ogc-ms:implements </td>
         <td> sam-cpt:PreparationStep/processingDetails-sem </td>
       </tr>
@@ -965,7 +958,7 @@
         <td> obs-cpt:gen/relatedObservation-sem </td>
       </tr>
       <tr>
-        <td> <a href="#OMSrelatedSampling">sosa-oms:relatedSampling</a> </td>
+        <td> <a>sosa-oms:relatedSampling</a> </td>
         <td> ogc-ms:implements </td>
         <td> sam-cpt:Sampling/relatedSampling-sem </td>
       </tr>
@@ -980,7 +973,7 @@
         <td> obs-cpt:Observation/resultTime-sem </td>
       </tr>
       <tr>
-        <td> <a href="#OMSsamplePreparationStep">sosa-oms:samplePreparationStep</a> </td>
+        <td> <a>sosa-oms:samplePreparationStep</a> </td>
         <td> ogc-ms:implements </td>
         <td> sam-cpt:PreparationProcedure/samplePreparationStep-sem </td>
       </tr>
@@ -997,7 +990,7 @@
         </td>
       </tr>
       <tr>
-        <td> <a href="#OMSvalidTime">sosa-oms:validTime</a> </td>
+        <td> <a>sosa-oms:validTime</a> </td>
         <td> ogc-ms:implements </td>
         <td> obs-cpt:Observation/validTime-sem </td>
       </tr>
@@ -1025,7 +1018,7 @@
       <tr>
         <td> obs-core:gen/metadata-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSmetadata">sosa-oms:metadata</a> </td>
+        <td> <a>sosa-oms:metadata</a> </td>
       </tr>
       <tr>
         <td> obs-cpt:gen/relatedObservation-sem </td>
@@ -1050,7 +1043,7 @@
       <tr>
         <td> obs-core:AbstractObservationCharacteristics/type-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSobservationType">sosa-oms:observationType</a> </td>
+        <td> <a>sosa-oms:observationType</a> </td>
       </tr>
       <tr>
         <td> obs-core:AbstractObservationCharacteristics/pFoI-sem </td>
@@ -1090,7 +1083,7 @@
       <tr>
         <td> obs-cpt:Observation/host-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSmadeOnPlatform">sosa-oms:madeOnPlatform</a> </td>
+        <td> <a>sosa-oms:madeOnPlatform</a> </td>
       </tr>
       <tr>
         <td> obs-cpt:Observation/observedProperty-sem </td>
@@ -1126,7 +1119,7 @@
       <tr>
         <td> obs-cpt:Observation/validTime-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSvalidTime">sosa-oms:validTime</a> </td>
+        <td> <a>sosa-oms:validTime</a> </td>
       </tr>
       <tr>
         <td> obs-basic:ObservationCollection/member-sem </td>
@@ -1157,23 +1150,23 @@
       <tr>
         <td> sam-cpt:PreparationProcedure/samplePreparationStep-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSsamplePreparationStep">sosa-oms:samplePreparationStep</a> </td>
+        <td> <a>sosa-oms:samplePreparationStep</a> </td>
       </tr>
       <tr>
         <td> sam-cpt:PreparationStep/preparedSample-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSpreparedSample">sosa-oms:preparedSample</a> </td>
+        <td> <a>sosa-oms:preparedSample</a> </td>
       </tr>
       <tr>
         <td> sam-cpt:PreparationStep/processingDetails-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a>sosa:implements</a> ,
-<br> <a href="#OMSprocessingDetails">sosa-oms:processingDetails</a> </td>
+<br> <a>sosa-oms:processingDetails</a> </td>
       </tr>
       <tr>
         <td> sam-cpt:Sample/preparationStep-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMShasPreparationStep">sosa-oms:hasPreparationStep</a> </td>
+        <td> <a>sosa-oms:hasPreparationStep</a> </td>
       </tr>
       <tr>
         <td> sam-cpt:Sample/sampledFeature-sem </td>
@@ -1203,7 +1196,7 @@
       <tr>
         <td> sam-cpt:Sampling/relatedSampling-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a href="#OMSrelatedSampling">sosa-oms:relatedSampling</a> </td>
+        <td> <a>sosa-oms:relatedSampling</a> </td>
       </tr>
       <tr>
         <td> sam-cpt:Sampling/sample-sem </td>
