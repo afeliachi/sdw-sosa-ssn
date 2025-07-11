@@ -1063,42 +1063,41 @@
         <p>
             <em>is a result of made by sampler</em> &mdash;
             relation from a Sample or SampleCollection to the Sampler that made it
-        </p <table>
-        <tbody>
-            <tr>
-                <th>Domain Includes</th>
-                <td>
-                    <a>sosa:Sample</a>,
-                    <a>sosa:SampleCollection</a>
-                </td>
-            </tr>
-            <tr>
-                <th>Range Includes</th>
-                <td>
-                    <a>sosa:Sampler</a>
-                </td>
-            </tr>
-            <tr>
-                <th>Inverse property of</th>
-                <td>
-                    <a>sosa:madeSamplingHasResult</a>
-                </td>
-            </tr>
-            <tr class="ssn">
-                <th>Sub property of Chain</th>
-                <td>
-                    <a>sosa:isResultOf</a> o
-
-                    <a>sosa:madeBySampler</a>
-                </td>
-            </tr>
-            <tr>
-                <th>is Defined By</th>
-                <td>
-                    <a href="http://www.w3.org/ns/sosa/sampling/">http://www.w3.org/ns/sosa/sampling/</a>
-                </td>
-            </tr>
-        </tbody>
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Domain Includes</th>
+                    <td>
+                        <a>sosa:Sample</a>,
+                        <a>sosa:SampleCollection</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Range Includes</th>
+                    <td>
+                        <a>sosa:Sampler</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Inverse property of</th>
+                    <td>
+                        <a>sosa:madeSamplingHasResult</a>
+                    </td>
+                </tr>
+                <tr class="ssn">
+                    <th>Sub property of Chain</th>
+                    <td>
+                        <a>sosa:isResultOf</a> o <a>sosa:madeBySampler</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/sampling/">http://www.w3.org/ns/sosa/sampling/</a>
+                    </td>
+                </tr>
+            </tbody>
         </table>
         <div class="buttonpanel">
             <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
@@ -1336,12 +1335,6 @@
         </p>
         <table>
             <tbody>
-                <tr class="ssn">
-                    <th>Sub property of</th>
-                    <td>
-                        <a>sosa:madeBySystem</a>
-                    </td>
-                </tr>
                 <tr>
                     <th>Domain Includes</th>
                     <td>
@@ -1420,10 +1413,7 @@
                 <tr class="ssn">
                     <th>Sub property of Chain</th>
                     <td>
-                        <a>sosa:usedForExecution</a>
-                        o
-
-                        <a>sosa:hasResult</a>
+                        <a>sosa:usedForExecution</a> o <a>sosa:hasResult</a>
                     </td>
                 </tr>
                 <tr>
