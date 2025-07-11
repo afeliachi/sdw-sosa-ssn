@@ -60,7 +60,7 @@
         </p>
         <p>
             <em>Sample</em> &mdash;
-            feature which is intended to be representative of a FeatureOfInterest on which Observations may be made.
+            piece or subset that is intended to be representative of a FeatureOfInterest
         </p>
         <p class="note">
             In the previous edition Sample was axiomatized as a sub-class of
@@ -231,7 +231,7 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>Spatial Sample</em> &mdash;
-            geospatial Sample.
+            subset of a FeatureOfInterest defined by its location and shape in space
         </p>
         <p>
             When observations are made to estimate properties of a geospatial feature, in particular where the value of
@@ -304,7 +304,7 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>Statistical Sample</em> &mdash;
-            statistical subset of a feature-of-interest, defined for the purpose of creating Observations.
+            subset of a FeatureOfInterest defined by the statistical process used to create it
         </p>
         <table>
             <tbody>
@@ -355,7 +355,7 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>Sample Collection</em> &mdash;
-            collection (set) of one or more Samples or SampleCollections, i.e., collections may be nested.
+            set of one or more Samples or SampleCollections &mdash; collections may be nested.
         </p>
         <p>
             The following <a href="#SOSASample">Sample</a> properties may appear in a
@@ -465,8 +465,7 @@
         </p>
         <p>
             <em>Sampler</em> &mdash;
-            entity that implements a Sampling Procedure in the context of an Sampling to generate a Sample.
-            This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
+            System that implements a SamplingProcedure to generate a Sample
         </p>
         <p class="note">
             A Sampler may have a geographic location.
@@ -527,8 +526,7 @@
         </p>
         <p>
             <em>Sampling</em> &mdash;
-            act of carrying out a Sampling Procedure using a Sampler to create one or more Samples of the
-            FeatureOfInterest.
+            act of carrying out a SamplingProcedure using a Sampler to create one or more Samples of a FeatureOfInterest
         </p>
         <p class="note">
             The different time-properties on a <a>sosa:Sampling</a> support
@@ -604,7 +602,7 @@
             This term is non-normative pending further implementation experience</p>
         <p>
             <em>Sampling Collection</em> &mdash;
-            set of one or more Samplings or SamplingCollections, i.e., collections may be nested.
+            set of one or more Samplings or SamplingCollections &mdash; collections may be nested
         </p>
         <p>
             The following <a href="#SOSASampling">Sampling</a> properties may appear in an
@@ -727,7 +725,9 @@
         </p>
         <p>
             <em>Sampling Procedure</em> &mdash;
-            workflow, protocol, plan, algorithm, or computational method specifying how to make a Sampling.
+            workflow, protocol, plan, algorithm, or computational method specifying how to make a Sampling
+        </p>
+        <p>
             A Sampling Procedure is re-usable, and might be applied in many Samplings.
             It explains the steps to be carried out to arrive at reproducible results.
         </p>
@@ -804,7 +804,7 @@
         <p>
             <em>feature sampled by</em> &mdash;
             relation from an ultimate FeatureOfInterest to a Sample or SampleCollection that is intended to be
-            representative of it &mdash; i.e., the end of a chain of hasSample relations. 
+            representative of it &mdash; i.e., the end of a chain of hasSample relations
         </p>
         <p class="note">
             Some examples of relationships between samples and features of interest within chains are
@@ -856,8 +856,8 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>has original sample</em> &mdash;
-            relation from a Sample or SampleCollection to the original Sample collected from the ultimate feature of
-            interest.
+            relation from a Sample or SampleCollection to the initial Sample collected from the ultimate
+            FeatureOfInterest
         </p>
         <p class="note">Some examples of relationships between samples and features of interest within chains are
             illustrated in <a href="#ModelSampleChains">Sample chains</a>.</p>
@@ -905,7 +905,7 @@
         </p>
         <p>
             <em>has sample</em> &mdash;
-            relation between a FeatureOfInterest and the Sample or SampleCollection used to represent it.
+            relation from a FeatureOfInterest to the Sample or SampleCollection used to represent it.
         </p>
         <table>
             <tbody>
@@ -955,7 +955,7 @@
         <p>
             <em>has ultimate sampled feature</em> &mdash;
             relation from a Sample or SampleCollection to the ultimate FeatureOfInterest that it is intended to be
-            representative of &mdash; i.e., the end of a chain of isSampleOf relations.
+            representative of &mdash; i.e., the end of a chain of isSampleOf relations
         </p>
         <p class="note">
             Some examples of relationships between samples and features of interest within chains are
@@ -1007,8 +1007,8 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>is original sample of</em> &mdash;
-            relation from the original Sample collected from the ultimate feature of interest to a downstream Sample or
-            SampleCollection.
+            relation from the initial Sample collected from the ultimate FeatureOfInterest to a downstream Sample or
+            SampleCollection
         </p>
         <p class="note">
             Some examples of relationships between samples and features of interest within chains are
@@ -1062,44 +1062,43 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>is a result of made by sampler</em> &mdash;
-            relation from a Sample or SampleCollection to the Sampler (sampling device or entity) that made it.
-        </p>
-        <table>
-            <tbody>
-                <tr>
-                    <th>Domain Includes</th>
-                    <td>
-                        <a>sosa:Sample</a>,
-                        <a>sosa:SampleCollection</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Range Includes</th>
-                    <td>
-                        <a>sosa:Sampler</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Inverse property of</th>
-                    <td>
-                        <a>sosa:madeSamplingHasResult</a>
-                    </td>
-                </tr>
-                <tr class="ssn">
-                    <th>Sub property of Chain</th>
-                    <td>
-                        <a>sosa:isResultOf</a> o
+            relation from a Sample or SampleCollection to the Sampler that made it
+        </p <table>
+        <tbody>
+            <tr>
+                <th>Domain Includes</th>
+                <td>
+                    <a>sosa:Sample</a>,
+                    <a>sosa:SampleCollection</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Range Includes</th>
+                <td>
+                    <a>sosa:Sampler</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse property of</th>
+                <td>
+                    <a>sosa:madeSamplingHasResult</a>
+                </td>
+            </tr>
+            <tr class="ssn">
+                <th>Sub property of Chain</th>
+                <td>
+                    <a>sosa:isResultOf</a> o
 
-                        <a>sosa:madeBySampler</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/sosa/sampling/">http://www.w3.org/ns/sosa/sampling/</a>
-                    </td>
-                </tr>
-            </tbody>
+                    <a>sosa:madeBySampler</a>
+                </td>
+            </tr>
+            <tr>
+                <th>is Defined By</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/sampling/">http://www.w3.org/ns/sosa/sampling/</a>
+                </td>
+            </tr>
+        </tbody>
         </table>
         <div class="buttonpanel">
             <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
@@ -1120,7 +1119,7 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>is a result of used procedure</em> &mdash;
-            relation from a Sample or SampleCollection to the Procedure (plan) used to make it.
+            relation from a Sample or SampleCollection to the Procedure (plan) used to make it
         </p>
         <table>
             <tbody>
@@ -1175,8 +1174,7 @@
         </p>
         <p>
             <em>is sample of</em> &mdash;
-            relation from a Sample or SampleCollection to the FeatureOfInterest that it is intended to be representative
-            of.
+            relation from a Sample or SampleCollection to the FeatureOfInterest that it is intended to represent
         </p>
         <p class="note">
             Some examples of relationships between samples and features of interest within chains are
@@ -1225,7 +1223,7 @@
         </p>
         <p>
             <em>made by sampler</em> &mdash;
-            relation linking an act of Sampling to the Sampler that made it.
+            relation from an act of Sampling to the Sampler that made it
         </p>
         <table>
             <tbody>
@@ -1278,7 +1276,7 @@
         </p>
         <p>
             <em>made sampling</em> &mdash;
-            relation between a Sampler and the Sampling or SamplingCollection it has made.
+            relation from a Sampler to the Sampling or SamplingCollection it has made
         </p>
         <table>
             <tbody>
@@ -1334,7 +1332,7 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>made sampling has result</em> &mdash;
-            relation from a Sampler (sampling device or entity) to a Sample or SampleCollection made by it.
+            relation from a Sampler to a Sample or SampleCollection made by it
         </p>
         <table>
             <tbody>
@@ -1396,7 +1394,7 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>used for execution has result</em> &mdash;
-            relation from a Procedure to a Sample or SampleCollection made by it.
+            relation from a Procedure to a Sample or SampleCollection made by it
         </p>
         <table>
             <tbody>

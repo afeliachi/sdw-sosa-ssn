@@ -63,8 +63,8 @@
         </p>
         <p>
             <em>Observation</em> &mdash;
-            act of carrying out an Observing Procedure using a Sensor to estimate or calculate a value of an observable
-            Property of a FeatureOfInterest.
+            act of carrying out an ObservingProcedure using a Sensor to estimate or calculate a value of an observable
+            Property of a FeatureOfInterest
 
         </p>
         <p>
@@ -190,7 +190,7 @@
         </p>
         <p>
             <em>Observation Collection</em> &mdash;
-            set of one or more Observations or ObservationCollections, i.e., collections may be nested.
+            set of one or more Observations or ObservationCollections &mdash; collections may be nested
         </p>
         <p>
             The following <a href="#SOSAObservation">Observation</a> properties may appear in an
@@ -337,7 +337,9 @@
         </p>
         <p>
             <em>Observing Procedure</em> &mdash;
-            workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation.
+            workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation
+        </p>
+        <p>
             An Observing Procedure is re-usable, and might be applied in many Observations.
             It explains the steps to be carried out to arrive at reproducible results.
         </p>
@@ -408,8 +410,9 @@
         </p>
         <p>
             <em>Sensor</em> &mdash;
-            entity that implements an Observing Procedure in the context of an Observation to determine the value of an
-            observable Property.
+            System that implements an ObservingProcedure to determine the value of an observable Property
+        </p>
+        <p>
             This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
         </p>
         <p>
@@ -503,7 +506,9 @@
         </p>
         <p>
             <em>Stimulus</em> &mdash;
-            event in the real world that 'triggers' the Sensor.
+            event in the real world that 'triggers' a Sensor
+        </p>
+        <p>
             The properties associated to the Stimulus may be different to the eventual observed Property.
             It is the event, not the object, that triggers the Sensor.
         </p>
@@ -553,7 +558,9 @@
         </p>
         <p>
             <em>detects</em> &mdash;
-            relation from a Sensor to the Stimulus that it detects.
+            relation from a Sensor to the Stimulus that it detects
+        </p>
+        <p>
             The Stimulus itself will be serving as a proxy (<a>sosa:isProxyFor</a>) for some Property.
         </p>
         <table>
@@ -600,7 +607,7 @@
         </p>
         <p>
             <em>has proxy</em> &mdash;
-            relation from an Property to the Stimulus that serves as its proxy.
+            relation from an Property to a Stimulus that serves as its proxy
         </p>
         <table>
             <tbody>
@@ -656,7 +663,9 @@
         </p>
         <p>
             <em>is detected by</em> &mdash;
-            relation from a Stimulus to the Sensor that may detect it.
+            relation from a Stimulus to a Sensor that may detect it
+        </p>
+        <p>
             The Stimulus itself will be serving as a proxy (<a>sosa:isProxyFor</a>) for some Property.
         </p>
         <table>
@@ -708,7 +717,7 @@
         </p>
         <p>
             <em>is observed by</em> &mdash;
-            relation between a Property and the Sensor able to observe it.
+            relation from a Property to a Sensor that is able to observe it
         </p>
         <table>
             <tbody>
@@ -758,7 +767,7 @@
         </p>
         <p>
             <em>isProxyFor</em> &mdash;
-            relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.
+            relation from a Stimulus to the Property that it is serving as a proxy for
         </p>
         <table>
             <tbody>
@@ -813,7 +822,7 @@
         </p>
         <p>
             <em>made by Sensor</em> &mdash;
-            relation linking an Observation to the Sensor that made it.
+            relation from an Observation or ObservationCollection to the Sensor that made it
         </p>
         <table>
             <tbody>
@@ -866,7 +875,7 @@
         </p>
         <p>
             <em>made observation</em> &mdash;
-            relation between a Sensor and an Observation or ObservationCollection it has made.
+            relation from a Sensor to an Observation or ObservationCollection it has made.
         </p>
         <table>
             <tbody>
@@ -990,7 +999,9 @@
         </p>
         <p>
             <em>observed property</em> &mdash;
-            relation linking an Observation or ObservationCollection to the property that was observed.
+            relation from an Observation or ObservationCollection to the property that was observed
+        </p>
+        <p>
             The Property MUST be a property of the FeatureOfInterest of this Observation.
         </p>
         <table>
@@ -1043,7 +1054,7 @@
         </p>
         <p>
             <em>observes</em> &mdash;
-            relation between a Sensor and a Property that it is capable of sensing.
+            relation from a Sensor to a Property that it is capable of sensing
         </p>
         <table>
             <tbody>
@@ -1103,7 +1114,7 @@
         </p>
         <p>
             <em>originated</em> &mdash;
-            relation between a Stimulus and the Observation that was originated by it.
+            relation from a Stimulus to an Observation that was originated by it
         </p>
         <table>
             <tbody>
@@ -1152,7 +1163,7 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>quality of</em> &mdash;
-            observation result that this quality relates to.
+            link from a quality description to an Observation or ObservationCollection that it relates to
         </p>
         <table>
             <tbody>
@@ -1198,7 +1209,7 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>related observation</em> &mdash;
-            relation to an Observation or ObservationCollection.
+            relation from an Execution or ExecutionCollection to a related Observation or ObservationCollection
         </p>
         <table>
             <tbody>
@@ -1206,12 +1217,12 @@
                     <th>Domain Includes</th>
                     <td>
                         <a>sosa:Execution</a>,
-                        <a>sosa:ExecutionCollection</a>,
                         <a>sosa:Actuation</a>,
-                        <a>sosa:ActuationCollection</a>,
                         <a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>,
                         <a>sosa:Sampling</a>,
+                        <a>sosa:ExecutionCollection</a>,
+                        <a>sosa:ActuationCollection</a>,
+                        <a>sosa:ObservationCollection</a>,
                         <a>sosa:SamplingCollection</a>
                     </td>
                 </tr>
@@ -1258,7 +1269,8 @@
         </p>
         <p>
             <em>observation result quality</em> &mdash;
-            information pertaining to the data quality of the result.
+            relation from an Observation or ObservationCollection to some information pertaining to the quality of the
+            result
         </p>
         <table>
             <tbody>
@@ -1315,7 +1327,7 @@
 
         <p>
             <em>was observed by</em> &mdash;
-            relation between a Property and an Observation that observed it.
+            relation from a Property to an Observation that observed it
         </p>
 
         <table>
@@ -1362,7 +1374,7 @@
         </p>
         <p>
             <em>was originated by</em> &mdash;
-            relation between an Observation and the Stimulus that originated it.
+            relation from an Observation to the Stimulus that originated it
         </p>
         <table>
             <tbody>

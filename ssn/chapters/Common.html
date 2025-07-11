@@ -70,14 +70,13 @@
             </p>
             <p>
                 <em>Feature Of Interest</em> &mdash;
-                thing that is the target of an Execution or
-                Deployment,
-                i.e., whose property is being estimated or
-                calculated in the course of an Observation to arrive at a
-                result, or whose property is being manipulated by an Actuator,
-                or which is being sampled or transformed in an act of Sampling,
-                or which is the target of Executions planned as part of a
-                Deployment.
+                entity that is the target of an Execution or Deployment
+            </p>
+            <p>
+                I.e., the entity whose property is being estimated by an Observation,
+                or whose property is being manipulated by an Actuation,
+                or which is being sampled or transformed by an act of Sampling,
+                or which is the target of Executions planned as part of a Deployment.
             </p>
             <p class="note">
                 The relationship between <a>sosa:FeatureOfInterest</a>,
@@ -146,11 +145,12 @@
                 Those specializations of Property are deprecated in this 2025 edition.
                 <a>sosa:Property</a> should be used instead.
             </p>
-
             <p>
                 <em>Property</em> &mdash;
-                identifiable quality of a FeatureOfInterest that can be observed
-                or acted upon. A property can apply to different features of interest.
+                identifiable quality of a FeatureOfInterest that can be observed or acted upon
+            </p>
+            <p>
+                A property can apply to different features of interest.
             </p>
 
             <p class="note">
@@ -209,7 +209,7 @@
             </p>
             <p>
                 <em>for property</em> &mdash;
-                relation between some entity and a Property. <br>
+                relation from some Procedure or System to a Property
             </p>
             <table>
                 <tbody>
@@ -269,7 +269,7 @@
             </p>
             <p>
                 <em>has property</em> &mdash;
-                relation between an entity and a Property of that entity.
+                relation from an entity to a Property of that entity
             </p>
             <table>
                 <tbody>
@@ -315,10 +315,9 @@
             </p>
             <p>
                 <em>is feature of interest of</em> &mdash;
-                relation between a FeatureOfInterest and an
-                Execution or Deployment operating on it,
-                i.e., an Observation about it, an Actuation acting on it, an act of Sampling that sampled it, or a
-                Deployment for which it is the subject.
+                relation from a FeatureOfInterest to an Execution or Deployment operating on it &mdash;
+                i.e., to an Observation about it, to an Actuation acting on it, to an act of Sampling that sampled it,
+                or to a Deployment for which it is the subject.
             </p>
             <table>
                 <tbody>
@@ -369,8 +368,7 @@
             </p>
             <p>
                 <em>is property of</em> &mdash;
-                relation between a Property and
-                the FeatureOfInterest that it belongs to.
+                relation from a Property to a FeatureOfInterest that it belongs to
             </p>
             <table>
                 <tbody>
@@ -419,9 +417,8 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>is ultimate feature of interest of</em> &mdash;
-                relation between an ultimate FeatureOfInterest and an
-                Execution or Deployment of which it is the
-                ultimate subject.
+                relation from an ultimate FeatureOfInterest to an Execution or Deployment for which it is the ultimate
+                subject
             </p>
             <table>
                 <tbody>
@@ -472,7 +469,7 @@
             </p>
             <p>
                 <em>property for</em> &mdash;
-                relation between a Property and some entity.
+                relation from a Property to some Procedure or System that acts on it or observes it
             </p>
             <table>
                 <tbody>
@@ -561,12 +558,10 @@
             </p>
             <p>
                 <em>Procedure</em> &mdash;
-                workflow, protocol, plan, algorithm, or computational method specifying how make a change to the state
-                of the world (through an Actuation) or to make an
-                Observation, or to create a Sample.
-                A Procedure is re-usable, and might be applied in many
-                Actuations, Observations, or
-                Samplings.
+                workflow, protocol, plan, algorithm, or computational method specifying how to make an Execution
+            </p>
+            <p>
+                A Procedure is re-usable, and might be applied in many Actuations, Observations, or Samplings.
                 It explains the steps to be carried out to arrive at reproducible results.
             </p>
             <p class="note">
@@ -631,20 +626,21 @@
             </p>
             <p>
                 <em>has Input</em> &mdash;
-                relation between a Procedure and
-                an input required for its execution.
+                relation from a Procedure to an input required for its execution
             </p>
             <table>
                 <tbody>
                     <tr>
                         <th>Note</th>
-                        <td>This property will typically describe the type of the inputs
-                            required to execute the Procedure.
+                        <td>
+                            This property will typically describe the type of the inputs required to execute the
+                            Procedure.
                         </td>
                     </tr>
                     <tr>
                         <th>Note</th>
-                        <td>An input might be a calibration or conditioning parameter,
+                        <td>
+                            An input might be a calibration or conditioning parameter,
                             or the result of a previous execution within an extended processing chain.
                         </td>
                     </tr>
@@ -684,15 +680,14 @@
             </p>
             <p>
                 <em>has Output</em> &mdash;
-                relation between a Procedure and
-                an output or result of its execution.
+                relation from a Procedure to an output or result of its execution
             </p>
             <table>
                 <tbody>
                     <tr>
                         <th>Note</th>
-                        <td>This property will typically describe the type of the result from
-                            executing the Procedure.
+                        <td>
+                            This property will typically describe the type of the result from executing the Procedure.
                         </td>
                     </tr>
                     <tr>
@@ -733,8 +728,7 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>has Procedure</em> &mdash;
-                relation between a Property and a Procedure
-                that can observe or act on it.
+                relation from a Property to a Procedure that can observe or act on it
             </p>
             <table>
                 <tbody>
@@ -780,8 +774,7 @@
             </p>
             <p>
                 <em>implemented by</em> &mdash;
-                relation between a Procedure (an algorithm, procedure or method) and an
-                entity that implements that Procedure in some executable way.
+                relation from a Procedure to a System that implements it
             </p>
             <table>
                 <tbody>
@@ -829,9 +822,7 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>input for</em> &mdash;
-                relation between an input and a Procedure
-                that
-                uses it.
+                relation from an input to a Procedure that uses it in an Execution
             </p>
             <table>
                 <tbody>
@@ -873,8 +864,7 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>output for</em> &mdash;
-                relation between an output or result and a Procedure
-                that generates it in an execution.
+                relation from an output or result to a Procedure that generates it in an Execution
             </p>
             <table>
                 <tbody>
@@ -914,9 +904,7 @@
             </p>
             <p>
                 <em>used for execution</em> &mdash;
-                relation from a re-usable
-                Procedure to an
-                Execution made using it.
+                relation from a Procedure to an Execution made using it
             </p>
             <table>
                 <tbody>
@@ -1030,7 +1018,6 @@
             <p>
                 <em>Execution</em> &mdash;
                 act of carrying out a Procedure using a System
-                concerning a FeatureOfInterest.
 
             </p>
             <p class="note">The different time-properties on a <a>sosa:Execution</a> support the description of plans,
@@ -1089,7 +1076,7 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>Execution Collection</em> &mdash;
-                set of one or more Executions or ExecutionCollections, i.e., collections may be nested.
+                set of one or more Executions or ExecutionCollections &mdash; collections may be nested.
             </p>
             <p>
                 The following <a href="#SOSAExecution">Execution</a> properties may appear in an
@@ -1203,7 +1190,7 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>end time</em> &mdash;
-                instant of time when the Execution or Deployment was ended or completed
+                instant of time when the Execution or ExecutionCollectionor Deployment was ended or completed
             </p>
             <p>
                 The value would usually be encoded using
@@ -1229,8 +1216,8 @@
                     <th>Domain Includes</th>
                     <td>
                         <a>sosa:Execution</a>,
-                        <a>sosa:ExecutionCollection</a>,
                         <a>sosa:Actuation</a>,
+                        <a>sosa:ExecutionCollection</a>,
                         <a>sosa:ActuationCollection</a>,
                         <a>sosa:Deployment</a>
                     </td>
@@ -1259,11 +1246,11 @@
             </p>
             <p>
                 <em>has feature of interest</em> &mdash;
-                relation between an Execution and its target entity
-                i.e., an Actuation and the entity whose property was modified;
-                an Observation and the entity whose quality was observed;
-                an act of Sampling and the entity that was sampled;
-                or a Deployment and its specific target entity.
+                relation from an Execution to its subject entity
+                i.e., from an Actuation to the entity whose property was modified;
+                from an Observation to the entity whose quality was observed;
+                from an act of Sampling to the entity that was sampled;
+                or from a Deployment to its target
 
             </p>
             <p class="note">
@@ -1340,8 +1327,7 @@
                 This term is non-normative, pending further implementation experience.</p>
             <p>
                 <em>has Input Value</em> &mdash;
-                assigns a value to an input defined by the Procedure that is used in an Execution (i.e., a Actuation,
-                Observation, Sampling).
+                assigns a value to an input defined by the Procedure that is used in an Execution
             </p>
             <table>
                 <tbody>
@@ -1396,8 +1382,7 @@
             </p>
             <p>
                 <em>has result</em> &mdash;
-                relation linking an Execution (i.e., Actuation or Observation or act of Sampling) to its result or
-                Sample.
+                relation from an Execution to its result
             </p>
             <p>
                 In the case of an <a href="#SOSAActuation">Actuation</a>, the result is the expected value
@@ -1491,19 +1476,16 @@
             </p>
             <p>
                 <em>has simple result</em> &mdash;
-                simple value of an Actuation or Observation.
+                relation from an Execution to its simple value
             </p>
             <p>
-                In the case of an <a>sosa:Actuation</a>, the result is the intended value
-                of the
-                <a>sosa:Property</a> following the
-                execution of the <a href="#SOSAProcedure">Procedure</a> by the <a href="#SOSAActuator">Actuator</a>.
+                In the case of an <a>sosa:Actuation</a>, the result is the intended value of the <a>sosa:Property</a>
+                following the execution of the <a href="#SOSAProcedure">Procedure</a> by the
+                <a href="#SOSAActuator">Actuator</a>.
             </p>
             <p>
-                In the case of an <a href="#SOSAObservation">Observation</a>, the result is the
-                value
-                produced
-                by the execution of the <a href="#SOSAProcedure">Procedure</a> by the <a href="#SOSASensor">Sensor</a>.
+                In the case of an <a href="#SOSAObservation">Observation</a>, the result is the value produced by the
+                execution of the <a href="#SOSAProcedure">Procedure</a> by the <a href="#SOSASensor">Sensor</a>.
             </p>
             <p class="note">
                 The result of an actuation or observation may be a quantity.
@@ -1572,11 +1554,11 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>has ultimate feature of interest</em> &mdash;
-                relation between an Execution and its ultimate target entity
-                i.e., an Actuation and the ultimate entity whose property was modified;
-                an Observation and the ultimate entity whose quality was observed;
-                an act of Sampling and the ultimate entity that was sampled;
-                or a Deployment and its ultimate target entity.
+                relation from an Execution to its ultimate subject entity
+                i.e., from an Actuation to the ultimate entity whose property was modified;
+                from an Observation to the ultimate entity whose quality was observed;
+                from an act of Sampling to the ultimate entity that was sampled;
+                or from a Deployment to its ultimate target
             </p>
             <p class="note">
                 The distinction between <a>sosa:hasFeatureOfInterest</a>,
@@ -1642,7 +1624,7 @@
                 This term is non-normative, pending further implementation experience.</p>
             <p>
                 <em>Input Value for Execution</em> &mdash;
-                relation between an InputValue and an Execution (i.e., a Actuation, Observation, Sampling) that used it.
+                relation from an InputValue to an Execution that used it
             </p>
             <table>
                 <tbody>
@@ -1681,8 +1663,7 @@
             </p>
             <p>
                 <em>is result of</em> &mdash;
-                relation linking a result to the Execution that created or caused it (i.e., the Actuation or Observation
-                or act of Sampling).
+                relation from a result to the Execution that created or caused it
             </p>
             <table>
                 <tbody>
@@ -1731,7 +1712,7 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>made by system</em> &mdash;
-                relation linking an Execution to the System that made it.
+                relation from an Execution to the System that made it
 
             </p>
             <table>
@@ -1799,7 +1780,7 @@
             </p>
             <p>
                 <em>phenomenon occurred</em> &mdash;
-                result of an Execution (i.e., Actuation, Observation, or Sampling) that this time applies to.
+                result of an Execution that this time applies to
             </p>
             <table>
                 <tbody>
@@ -1850,8 +1831,9 @@
             </p>
             <p>
                 <em>phenomenon time</em> &mdash;
-                time that the result of an Execution (i.e., Actuation, Observation, or Sampling) applies to the
-                FeatureOfInterest.
+                time that the result of an Execution applies to the subject entity
+            </p>
+            <p>
                 It may be an interval or an instant, or some other compound temporal entity [[!owl-time]].
             </p>
             <p>
@@ -1965,8 +1947,9 @@ sosa:phenomenonTime [
             <p><strong>an OWL Datatype Property</strong></p>
             <p>
                 <em>result time</em> &mdash;
-                instant of time when the Observation or Sampling was completed.
-                <br>
+                instant of time when the Observation or Sampling was completed
+            </p>
+            <p>
                 The value would usually be encoded using
                 <a href="https://www.w3.org/TR/xmlschema-2/#dateTime">xsd:dateTime</a>
                 <a href="https://www.w3.org/TR/xmlschema-2/#date">xsd:date</a>
@@ -2031,9 +2014,9 @@ sosa:phenomenonTime [
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>start time</em> &mdash;
-                instant of time when the Execution was initiated or tasked, i.e., the Actuation or Observation or
-                Sampling
-                <br>
+                instant of time when the Execution or ExecutionCollection or Deployment was initiated or tasked
+            </p>
+            <p>
                 The value would usually be encoded using
                 <a href="https://www.w3.org/TR/xmlschema-2/#dateTime">xsd:dateTime</a>
                 <a href="https://www.w3.org/TR/xmlschema-2/#date">xsd:date</a>
@@ -2056,13 +2039,14 @@ sosa:phenomenonTime [
                     <tr>
                         <th>Domain Includes</th>
                         <td>
+                            <a>sosa:Deployment</a>,
                             <a>sosa:Execution</a>,
-                            <a>sosa:ExecutionCollection</a>,
                             <a>sosa:Actuation</a>,
-                            <a>sosa:ActuationCollection</a>,
                             <a>sosa:Observation</a>,
-                            <a>sosa:ObservationCollection</a>,
                             <a>sosa:Sampling</a>,
+                            <a>sosa:ExecutionCollection</a>,
+                            <a>sosa:ActuationCollection</a>,
+                            <a>sosa:ObservationCollection</a>,
                             <a>sosa:SamplingCollection</a>
                         </td>
                     </tr>
@@ -2086,8 +2070,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>used procedure</em> &mdash;
-                relation from an Execution (i.e., an Actuation, an Observation, or a Sampling) to a re-usable Procedure
-                used to make it.
+                relation from an Execution or ExecutionCollection to a Procedure used to make it
             </p>
             <table>
                 <tbody>
@@ -2209,9 +2192,8 @@ sosa:phenomenonTime [
 
             <p>
                 <em>Deployment</em> &mdash;
-                arrangement of one or more assets (Systems or Platforms) to execute Procedures with respect to
-                designated features-of-interest.
-                Deployment may be done on a Platform.
+                arrangement of one or more assets (Systems and/or Platforms) to execute Procedures,
+                usually with respect to a designated subject entity (FeatureOfInterest)
             </p>
             <p class="note">
                 A Deployment may have a geographic location.
@@ -2267,8 +2249,7 @@ sosa:phenomenonTime [
 
             <p>
                 <em>Platform</em> &mdash;
-                an entity that hosts other entities, particularly Systems
-                (i.e., Actuators, Sensors, Samplers), and other Platforms.
+                an entity that hosts other entities, particularly Systems and other Platforms
             </p>
             <p>
                 The INSPIRE 'Environmental Monitoring Facility' may be implemented using SOSA by the OWL/RDFS class
@@ -2318,14 +2299,16 @@ sosa:phenomenonTime [
             <p><strong>an OWL Class</strong></p>
             <p>
                 <em>System</em> &mdash;
-                entity that implements a Procedure in the context of an Execution.
+                entity that implements a Procedure in the context of an Execution
+            </p>
+            <p>
                 This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
             </p>
             <p>
-                A System may have components, its sub-systems, which are other systems.
+                Different Systems can implement the same (reusable) Procedure.
             </p>
             <p>
-                Different Systems can implement the same (reusable) Procedure for different Executions.
+                A System may have components, its sub-systems, which are other systems.
             </p>
             <p class="note">
                 See <a href="#ModelSystemType">Systems Types and Individuals</a> for guidance on
@@ -2406,7 +2389,7 @@ sosa:phenomenonTime [
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>deployed asset</em> &mdash;
-                relation between a Deployment and a deployed asset (System or Platform).
+                relation from a Deployment to an asset (System or Platform)
             </p>
             <table>
                 <tbody>
@@ -2448,7 +2431,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>deployed on platform</em> &mdash;
-                relation between a Deployment and the Platform on which the Systems are deployed.
+                relation from a Deployment to the Platform on which the Systems are hosted
             </p>
             <table>
                 <tbody>
@@ -2490,7 +2473,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>deployed system</em> &mdash;
-                relation between a Deployment and a deployed System.
+                relation from a Deployment to a deployed System.
             </p>
             <table>
                 <tbody>
@@ -2532,7 +2515,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>has deployment</em> &mdash;
-                relation between a System and a Deployment in which it is deployed.
+                relation from a System to a Deployment in which it is deploye.
             </p>
             <table>
                 <tbody>
@@ -2577,7 +2560,7 @@ sosa:phenomenonTime [
             </p>
             <p>
                 <em>has subsystem</em> &mdash;
-                relation between a System and its component parts.
+                relation from a System to a component System
             </p>
             <table>
                 <tbody>
@@ -2619,8 +2602,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>hosts</em> &mdash;
-                relation between a Platform and a System
-                (i.e., Sensor, Actuator, Sampler), or Platform, hosted or mounted on it.
+                relation from a Platform to a System or Platform hosted or mounted on it
             </p>
             <table>
                 <tbody>
@@ -2671,8 +2653,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>implements</em> &mdash;
-                relation between an entity that implements a Procedure in some executable way and the Procedure (an
-                algorithm, procedure or ethod).
+                relation from a System to the Procedure that it implements
             </p>
             <table>
                 <tbody>
@@ -2716,8 +2697,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>in deployment</em> &mdash;
-                relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are
-                hosted on the Platform.
+                relation from a Platform that may host Systems to a Deployment
             </p>
             <table>
                 <tbody>
@@ -2766,8 +2746,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>is hosted by</em> &mdash;
-                relation between an System (Actuator, or Sensor, or Sampler), or Platform, and the Platform that it is
-                mounted on or hosted by.
+                relation from an System, or Platform, to a Platform that it is mounted on or hosted by
             </p>
             <table>
                 <tbody>
@@ -2812,7 +2791,7 @@ sosa:phenomenonTime [
 
             <p>
                 <em>is subsystem of</em> &mdash;
-                relation between component parts and a System they belong to.
+                relation from a component System to a System that it belongs to
             </p>
             <table>
                 <tbody>
@@ -2858,7 +2837,7 @@ sosa:phenomenonTime [
             <p>
 
                 <em>madeExecution</em> &mdash;
-                relation between a System and an Execution or ExecutionCollection it has made.
+                relation from a System to an Execution or ExecutionCollection that it has made
 
             </p>
             <table>
@@ -3014,9 +2993,7 @@ sosa:phenomenonTime [
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>has member of collection</em> &mdash;
-                link to a member ( Execution or Actuation or Observation or Sampling or Sample ) or (
-                ExecutionCollection or ActuationCollection or ObservationCollection or SamplingCollection or
-                SampleCollection ) within a collection.
+                link from a Collection to an Execution or Sample or Collection that is part of it
             </p>
             <p>
                 rules for the consistency of values of properties of collections and
@@ -3094,9 +3071,7 @@ sosa:phenomenonTime [
 
             <p>
                 <em>is member of collection</em> &mdash;
-                link from a member ( Execution or Actuation or Observation or Sampling or Sample ) or (
-                ExecutionCollection or ActuationCollection or ObservationCollection or SamplingCollection or
-                SampleCollection ) to a collection that it belongs to.
+                link from an Execution or Sample or Collection to a collection that it is part of
             </p>
             <p>
                 rules for the consistency of values of properties of collections and

@@ -147,7 +147,7 @@
     </p>
     <p>
       <em>Preparation Procedure</em> &mdash;
-      description of preparation steps performed on a      Sample.
+      description of preparation steps performed on a Sample
     </p>
     <table>
       <tbody>
@@ -182,7 +182,7 @@
     </p>
     <p>
       <em>Preparation Step</em> &mdash;
-      an individual step pertaining to a Sample      PreparationProcedure.
+      individual step pertaining to a Sample PreparationProcedure
     </p>
     <table>
       <tbody>
@@ -211,7 +211,7 @@
     </p>
     <p>
       <em>has preparation step</em> &mdash;
-      link to a preparation step used to prepare the sample
+      link from a Sample to a PreparationStep used for it
     </p>
     <table>
       <tbody>
@@ -251,7 +251,7 @@
     </p>
     <p>
       <em>made on platform</em> &mdash;
-      relation between an Observation and the Platform the Sensor      was      attached to at the time the observation was made.
+      relation from an Observation to the Platform that the Sensor was attached to at the time it was made
     </p>
     <table>
       <tbody>
@@ -293,7 +293,7 @@
     </p>
     <p>
       <em>metadata</em> &mdash;
-      link to an individual to a metadata description
+      link from an individual to a metadata description
     </p>
     <table>
       <tbody>
@@ -338,7 +338,7 @@
     </p>
     <p>
       <em>observation type</em> &mdash;
-      further detail on the type of      Observations.
+      further detail on the type of Observations.
     </p>
     <table>
       <tbody>
@@ -373,7 +373,7 @@
     </p>
     <p>
       <em>prepared sample</em> &mdash;
-      the Sample on which the PreparationProcedure is      performed.
+      link from a PreparationStep to a Sample on which the PreparationProcedure was performed
     </p>
     <table>
       <tbody>
@@ -414,7 +414,7 @@
     </p>
     <p>
       <em>processing details</em> &mdash;
-      the PreparationProcedure used by the PreparationStep.
+      link from a PreparationStep to the PreparationProcedure used
     </p>
     <table>
       <tbody>
@@ -455,7 +455,7 @@
     </p>
     <p>
       <em>related sampling</em> &mdash;
-      relation to an act of Sampling.
+      relation from a Sampling to another Sampling
     </p>
     <table>
       <tbody>
@@ -496,7 +496,7 @@
     </p>
     <p>
       <em>sample preparation step</em> &mdash;
-      a PreparationStep that is used in the PreparationProcedure.
+      link from a PreparationProcedure to a PreparationStep used in it
     </p>
     <table>
       <tbody>
@@ -537,7 +537,7 @@
     </p>
     <p>
       <em>valid time</em> &mdash;
-      the time interval during which the result is assumed to be      applicable for use.
+      time interval during which the result is assumed to be applicable for use.
     </p>
     <table>
       <tbody>
@@ -1109,7 +1109,8 @@
         <td> obs-cpt:Observation/result-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a>sosa:hasResult</a> ,
-<br> <a>sosa:hasSimpleResult</a> </td>
+          <br> <a>sosa:hasSimpleResult</a>
+        </td>
       </tr>
       <tr>
         <td> obs-cpt:Observation/resultTime-sem </td>
@@ -1140,7 +1141,8 @@
         <td> obs-cpt:Observer/observingProcedure-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a>sosa:implements</a> ,
-<br> <a>sosa:usedProcedure</a> </td>
+          <br> <a>sosa:usedProcedure</a>
+        </td>
       </tr>
       <tr>
         <td> obs-cpt:ObservingProcedure/observer-sem </td>
@@ -1161,7 +1163,8 @@
         <td> sam-cpt:PreparationStep/processingDetails-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a>sosa:implements</a> ,
-<br> <a>sosa-oms:processingDetails</a> </td>
+          <br> <a>sosa-oms:processingDetails</a>
+        </td>
       </tr>
       <tr>
         <td> sam-cpt:Sample/preparationStep-sem </td>
@@ -1172,7 +1175,7 @@
         <td> sam-cpt:Sample/sampledFeature-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a>sosa:isSampleOf</a> ,
-<br> <a>sosa:hasSampledFeature</a>
+          <br> <a>sosa:hasSampledFeature</a>
         </td>
       </tr>
       <tr>
@@ -1185,7 +1188,7 @@
         <td> ogc:implementedBy </td>
         <td>
           <a>sosa:madeSampling</a> ,
-<br> <a>sosa:madeBySampler</a>
+          <br> <a>sosa:madeBySampler</a>
         </td>
       </tr>
       <tr>
@@ -1212,7 +1215,8 @@
         <td> sam-cpt:Sampling/samplingProcedure-sem </td>
         <td> ogc:implementedBy </td>
         <td> <a>sosa:implements</a> ,
-<br> <a>sosa:usedProcedure</a> </td>
+          <br> <a>sosa:usedProcedure</a>
+        </td>
       </tr>
     </tbody>
   </table>
