@@ -181,16 +181,16 @@
             ObservationCollection added in the 2025 edition
             This term is non-normative, pending further implementation experience
         </p>
+        <p>
+            <em>Observation Collection</em> &mdash;
+            set of one or more Observations or ObservationCollections &mdash; collections may be nested
+        </p>
         <p class="note">
             An instance of <a href="#SOSAObservationCollection">ObservationCollection</a> represents a container for a
             set of data derived from observations.
             This broadly corresponds with the class
             <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">dcat:Dataset</a>
             from the Data Catalog Vocabulary [[DCAT]].
-        </p>
-        <p>
-            <em>Observation Collection</em> &mdash;
-            set of one or more Observations or ObservationCollections &mdash; collections may be nested
         </p>
         <p>
             The following <a href="#SOSAObservation">Observation</a> properties may appear in an
@@ -506,7 +506,7 @@
         </p>
         <p>
             <em>Stimulus</em> &mdash;
-            event in the real world that 'triggers' a Sensor
+            event in the real world that triggers a Sensor
         </p>
         <p>
             The properties associated to the Stimulus may be different to the eventual observed Property.
@@ -875,7 +875,7 @@
         </p>
         <p>
             <em>made observation</em> &mdash;
-            relation from a Sensor to an Observation or ObservationCollection it has made.
+            relation from a Sensor to an Observation or ObservationCollection it has made
         </p>
         <table>
             <tbody>
@@ -932,7 +932,7 @@
 
         <p>
             <em>observation related to</em> &mdash;
-            relation from an Observation or ObservationCollection.
+            relation from an Observation or ObservationCollection
         </p>
         <table>
             <tbody>
@@ -990,16 +990,16 @@
             The 2017 edition defined the term ObservableProperty as the range of <a>sosa:observedProperty</a>.
             That specialization of <a>sosa:Property</a> is deprecated in this 2025 edition.
         </p>
+        <p>
+            <em>observed property</em> &mdash;
+            relation from an Observation or ObservationCollection to the property that was observed
+        </p>
         <p class="note">
             'observed property' covers the concepts referred to in [[VIM]] as 'measurand' (quantitative values) and
             'examinand' (categorical and nominal values &mdash; [[VIM4]]), as well as complex and structured properties
             whose values may be represented as lists, vectors, arrays, rasters, geometries, etc.
             More specific terms are used in other contexts for related concepts, such as 'analyte' (chemistry) and
             'determinand' (water quality).
-        </p>
-        <p>
-            <em>observed property</em> &mdash;
-            relation from an Observation or ObservationCollection to the property that was observed
         </p>
         <p>
             The Property MUST be a property of the FeatureOfInterest of this Observation.

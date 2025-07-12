@@ -315,8 +315,10 @@
             </p>
             <p>
                 <em>is feature of interest of</em> &mdash;
-                relation from a FeatureOfInterest to an Execution or Deployment operating on it &mdash;
-                i.e., to an Observation about it, to an Actuation acting on it, to an act of Sampling that sampled it,
+                relation from a FeatureOfInterest to an Execution or Deployment operating on it
+            </p>
+            <p>
+                I.e., to an Observation about it, to an Actuation acting on it, to an act of Sampling that sampled it,
                 or to a Deployment for which it is the subject.
             </p>
             <table>
@@ -1076,7 +1078,7 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>Execution Collection</em> &mdash;
-                set of one or more Executions or ExecutionCollections &mdash; collections may be nested.
+                set of one or more Executions or ExecutionCollections &mdash; collections may be nested
             </p>
             <p>
                 The following <a href="#SOSAExecution">Execution</a> properties may appear in an
@@ -1190,7 +1192,7 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>end time</em> &mdash;
-                instant of time when the Execution or ExecutionCollectionor Deployment was ended or completed
+                instant of time when the Execution or ExecutionCollection or Deployment was ended or completed
             </p>
             <p>
                 The value would usually be encoded using
@@ -1247,11 +1249,12 @@
             <p>
                 <em>has feature of interest</em> &mdash;
                 relation from an Execution to its subject entity
-                i.e., from an Actuation to the entity whose property was modified;
+            </p>
+            <p>
+                I.e., from an Actuation to the entity whose property was modified;
                 from an Observation to the entity whose quality was observed;
                 from an act of Sampling to the entity that was sampled;
                 or from a Deployment to its target
-
             </p>
             <p class="note">
                 The distinction between <a>sosa:hasFeatureOfInterest</a>,
@@ -1551,11 +1554,14 @@
             </p>
 
             <p class="warning">hasUltimateFeatureOfInterest added in 2025 edition.
-                This term is non-normative, pending further implementation experience</p>
+                This term is non-normative, pending further implementation experience
+            </p>
             <p>
                 <em>has ultimate feature of interest</em> &mdash;
                 relation from an Execution to its ultimate subject entity
-                i.e., from an Actuation to the ultimate entity whose property was modified;
+            </p>
+            <p>
+                I.e., from an Actuation to the ultimate entity whose property was modified;
                 from an Observation to the ultimate entity whose quality was observed;
                 from an act of Sampling to the ultimate entity that was sampled;
                 or from a Deployment to its ultimate target
@@ -2748,7 +2754,7 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>is hosted by</em> &mdash;
-                relation from an System, or Platform, to a Platform that it is mounted on or hosted by
+                relation from an System or Platform, to a Platform that it is mounted on or hosted by
             </p>
             <table>
                 <tbody>
@@ -2982,7 +2988,7 @@ sosa:phenomenonTime [
         <div class="azlist">
             <p>
                 <a>sosa:hasMember</a>,
-                <a>sosa:memberOf</a>
+                <a>sosa:isMemberOf</a>
             </p>
         </div>
 
@@ -3046,7 +3052,7 @@ sosa:phenomenonTime [
                     <tr>
                         <th>Inverse property of</th>
                         <td>
-                            <a>sosa:memberOf</a>
+                            <a>sosa:isMemberOf</a>
                         </td>
                     </tr>
                     <tr>
@@ -3063,12 +3069,12 @@ sosa:phenomenonTime [
             </div>
         </section>
 
-        <section class="specterm sosa" id="SOSAmemberOf">
-            <h6><dfn>sosa:memberOf</dfn></h6>
-            <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/memberOf</p>
+        <section class="specterm sosa" id="SOSAisMemberOf">
+            <h6><dfn>sosa:isMemberOf</dfn></h6>
+            <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/isMemberOf</p>
             <p><strong>an OWL Object Property</strong></p>
 
-            <p class="warning">memberOf added in 2025 edition.
+            <p class="warning">isMemberOf added in 2025 edition.
                 This term is non-normative, pending further implementation experience</p>
 
             <p>
@@ -3152,7 +3158,7 @@ sosa:phenomenonTime [
             An <a href="#PROV-alignment">alignment of SSN to PROV</a> is provided in this document.
             A basic Project Ontology based on PROV has also been proposed [[Project-PROV]].
             Higher level aggregations in SSN applications should consider the PROV framework along with the recursive
-            <a>sosa:hasMember</a>|<a>sosa:memberOf</a> pattern used for SSN collections.
+            <a>sosa:hasMember</a>|<a>sosa:isMemberOf</a> pattern used for SSN collections.
         </p>
 
     </section>
