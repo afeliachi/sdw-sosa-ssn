@@ -28,7 +28,8 @@ var respecConfig = {
       name: "Simon J D Cox",
       company: "Timely Logic, AU",
       note: "formerly CSIRO and OGC",
-      orcid: "0000-0002-3884-3420"
+      orcid: "0000-0002-3884-3420",
+      w3cid: 1796
     },
     {
       name: "Maxime Lefrançois",
