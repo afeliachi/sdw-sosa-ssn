@@ -179,7 +179,7 @@ sosa:StatisticalSample
   skos:note "StatisticalSamples usually apply to populations or other sets, of which certain subset may be of specific interest."@en ;
   rdfs:isDefinedBy sosa-sam: .
 
-sosa:featureSampledBy 
+sosa:featureHasUltimateSample 
   a owl:ObjectProperty ;
   rdfs:label "feature sampled by"@en ;
   skos:definition """
@@ -223,7 +223,7 @@ sosa:isSampleOfUltimateFOI
   schema:domainIncludes sosa:Sample ;
   schema:domainIncludes sosa:SampleCollection ;
   schema:rangeIncludes sosa:FeatureOfInterest ;
-  owl:inverseOf sosa:featureSampledBy ;
+  owl:inverseOf sosa:featureHasUltimateSample ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:isOriginalSampleOf 

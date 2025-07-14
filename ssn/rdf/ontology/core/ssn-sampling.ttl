@@ -110,7 +110,7 @@ sosa:StatisticalSample
   rdfs:subClassOf sosa:Sample ;
   rdfs:isDefinedBy sosa-sam: .
 
-sosa:featureSampledBy 
+sosa:featureHasUltimateSample 
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:hasOriginalSample 
