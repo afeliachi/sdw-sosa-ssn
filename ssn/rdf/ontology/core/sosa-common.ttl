@@ -33,7 +33,7 @@ sosa:FeatureOfInterest
   skos:definition """
   entity that is the target of an Execution or Deployment
 
-  i.e. whose property is being estimated by an Observation, 
+  i.e., whose property is being estimated by an Observation, 
   or whose property is being manipulated by an Actuator, 
   or which is being sampled or transformed in an act of Sampling, 
   or which is the target of Executions planned as part of a Deployment.
@@ -83,7 +83,7 @@ sosa:isFeatureOfInterestOf
   skos:definition """
   relation from a FeatureOfInterest to an Execution or Deployment operating on it
 
-  I.e., to an Observation about it, to an Actuation acting on it, to an act of Sampling that sampled it,
+  i.e., to an Observation about it, to an Actuation acting on it, to an act of Sampling that sampled it,
   or to a Deployment for which it is the subject.
 """@en ;
   schema:domainIncludes sosa:FeatureOfInterest ;
@@ -250,7 +250,7 @@ sosa:ExecutionCollection
   
   1. Where an individual Execution Collection omits a property, a member Execution (direct or transitive) MAY have any value for that property.
 
-  2. Where an individual Execution Collection has a single value for a property, each member Execution (direct or transitive) MUST have that same value for the property - i.e. the collection is homogeneous in that property.  That property MAY then be omitted in any member Observation or Observation Collection.
+  2. Where an individual Execution Collection has a single value for a property, each member Execution (direct or transitive) MUST have that same value for the property - i.e., the collection is homogeneous in that property.  That property MAY then be omitted in any member Observation or Observation Collection.
 
   3. Where an individual Execution Collection has more than one value for a property, each member Execution (direct or transitive) MUST have a value for that property that matches one of the values for the property in the collection. 
   
@@ -297,7 +297,7 @@ sosa:hasFeatureOfInterest
   skos:definition """
   relation from an Execution to its subject entity
 
-  I.e., from an Actuation to the entity whose property was modified;
+  i.e., from an Actuation to the entity whose property was modified;
   from an Observation to the entity whose quality was observed;
   from an act of Sampling to the entity that was sampled;
   or from a Deployment to its target
@@ -364,7 +364,7 @@ sosa:hasUltimateFeatureOfInterest
   skos:definition """
   relation from an Execution to its ultimate subject entity
 
-  I.e., from an Actuation to the ultimate entity whose property was modified;
+  i.e., from an Actuation to the ultimate entity whose property was modified;
   from an Observation to the ultimate entity whose quality was observed;
   from an act of Sampling to the ultimate entity that was sampled;
   or from a Deployment to its ultimate target

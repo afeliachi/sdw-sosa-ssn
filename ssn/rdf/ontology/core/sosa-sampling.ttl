@@ -37,7 +37,7 @@ sosa:Sample
   Samples are typically subsets or extracts from an entity or feature.
   Every sample is expected to (eventually) be the feature-of-interest of an Observation. 
   
-  When the feature of interest cannot be observed directly, a sample of it might be used in Observations as a proxy for it. In such a case the Sample is the proximate Feature of Interest of the Observation, while the Feature of Interest of the act of Sampling (i.e. the entity that the Sample 'isSampleOf') is the ultimate Feature of Interest of the Observation.
+  When the feature of interest cannot be observed directly, a sample of it might be used in Observations as a proxy for it. In such a case the Sample is the proximate Feature of Interest of the Observation, while the Feature of Interest of the act of Sampling (i.e., the entity that the Sample 'isSampleOf') is the ultimate Feature of Interest of the Observation.
   Samples are used in situations where observations cannot be made directly on the ultimate feature of interest, either because the entire feature cannot be observed, or because it is more convenient to use a proxy.
   Samples are thus artifacts of an observational strategy, and have no significant function outside of their role in the observation process. 
   The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign.
@@ -67,10 +67,10 @@ sosa:SpatialSample
   skos:definition """
   subset of a FeatureOfInterest defined by its location and shape in space
   
-  When observations are made to estimate properties of a geospatial feature, in particular where the value of a property varies within the scope of the feature, a SpatialSample is used.
+  When observations are made to estimate properties of a geospatial feature, particularly where the value of a property varies within the scope of the feature, a SpatialSample is used.
   """@en ;
   skos:example "Some common names for spatial samples include: borehole, flightline, interval, lidar cloud, map horizon, microscope slide, mine level, mine, observation well, profile,  quadrat, scene, section, ship track, spot, station, swath, trajectory, traverse, etc..."@en ;
-  skos:note "Depending on accessibility and on the nature of the expected property variation, the SpatialSample may be extensive in one, two or three spatial dimensions."@en ;
+  skos:note "Depending on accessibility and on the nature of the expected property variation, a SpatialSample may extend in one, two or three spatial dimensions."@en ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:StatisticalSample 
@@ -80,7 +80,7 @@ sosa:StatisticalSample
   subset of a FeatureOfInterest defined by the statistical process used to create it
   """@en ;
   skos:example "The male or female subset of a population."@en ;
-  skos:note "StatisticalSamples usually apply to populations or other sets, of which certain subset may be of specific interest."@en ;
+  skos:note "StatisticalSamples usually apply to populations or other sets, of which a certain subset may be of specific interest."@en ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:SampleCollection 
@@ -97,7 +97,7 @@ sosa:SampleCollection
   
   1. Where an individual Sample Collection omits a property, a member Sample (direct or transitive) MAY have any value for that property.
 
-  2. Where an individual Sample Collection has a single value for a property, each member Sample (direct or transitive) MUST have that same value for the property - i.e. the collection is homogeneous in that property.  That property MAY be omitted in any member Sample or Sample Collection.
+  2. Where an individual Sample Collection has a single value for a property, each member Sample (direct or transitive) MUST have that same value for the property - i.e., the collection is homogeneous in that property.  That property MAY be omitted in any member Sample or Sample Collection.
 
   3. Where an individual Sample Collection has more than one value for a property, each member Sample (direct or transitive) MUST have a value for that property that matches one of the values for the property in the collection. 
   
@@ -151,7 +151,7 @@ sosa:SamplingCollection
   
   1. Where an individual Sampling Collection omits a property, a member Sampling (direct or transitive) MAY have any value for that property.
 
-  2. Where an individual Sampling Collection has a single value for a property, each member Sampling (direct or transitive) MUST have that same value for the property - i.e. the collection is homogeneous in that property.  That property MAY then be omitted in any member Actuation or Actuation Collection.
+  2. Where an individual Sampling Collection has a single value for a property, each member Sampling (direct or transitive) MUST have that same value for the property - i.e., the collection is homogeneous in that property.  That property MAY then be omitted in any member Actuation or Actuation Collection.
 
   3. Where an individual Sampling Collection has more than one value for a property, each member Sampling (direct or transitive) MUST have a value for that property that matches one of the values for the property in the collection. 
   
@@ -182,7 +182,7 @@ sosa:featureSampledBy
   a owl:ObjectProperty ;
   rdfs:label "feature sampled by"@en ;
   skos:definition """
-  relation from an ultimate FeatureOfInterest to a Sample or SampleCollection that is intended to be representative of it &mdash; i.e., the end of a chain of hasSample relations
+  relation from an ultimate FeatureOfInterest to a Sample or SampleCollection that is intended to be representative of it; i.e., the end of a chain of hasSample relations
   """@en ;
   schema:domainIncludes sosa:FeatureOfInterest ;
   schema:rangeIncludes sosa:Sample ;
@@ -217,7 +217,7 @@ sosa:hasSampledFeature
   a owl:ObjectProperty ;
   rdfs:label "has sampled feature"@en ;
   skos:definition """
-  relation from a Sample or SampleCollection to the ultimate FeatureOfInterest that it is intended to be representative of &mdash; i.e., the end of a chain of isSampleOf relations
+  relation from a Sample or SampleCollection to the ultimate FeatureOfInterest that it is intended to be representative of; i.e., the end of a chain of isSampleOf relations
   """@en ;
   schema:domainIncludes sosa:Sample ;
   schema:domainIncludes sosa:SampleCollection ;

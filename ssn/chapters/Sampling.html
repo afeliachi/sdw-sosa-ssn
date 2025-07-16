@@ -271,9 +271,8 @@
                 <tr>
                     <th>Note</th>
                     <td>
-                        Depending on accessibility and on the nature of the expected
-                        property variation, the SpatialSample may be extensive in one, two or three spatial
-                        dimensions.
+                        Depending on accessibility and on the nature of the expected property variation, a
+                        SpatialSample may extend in one, two or three spatial dimensions.
                     </td>
                 </tr>
                 <tr>
@@ -323,8 +322,8 @@
                 <tr>
                     <th>Note</th>
                     <td>
-                        StatisticalSamples usually apply to populations or other sets, of which a certain subset may be of
-                        specific interest.
+                        StatisticalSamples usually apply to populations or other sets, of which a certain subset may be
+                        of specific interest.
                     </td>
                 </tr>
                 <tr>
@@ -355,7 +354,7 @@
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em>Sample Collection</em> &mdash;
-            set of one or more Samples or SampleCollections &mdash; collections may be nested
+            set of one or more Samples or SampleCollections; collections may be nested
         </p>
         <p>
             The following <a href="#SOSASample">Sample</a> properties may appear in a
@@ -381,7 +380,7 @@
             <li>
                 Where an individual <a href="#SOSASampleCollection">SampleCollection</a> has <i>a single value for a
                     property</i>, each ember <a href="#SOSASample">Sample</a> (direct or transitive) MUST have that same
-                value for that property &mdash; i.e., the collection is homogeneous in that property. That property MAY
+                value for that property; i.e., the collection is homogeneous in that property. That property MAY
                 be omitted in any member <a href="#SOSASample">Sample</a> or
                 <a href="#SOSASampleCollection">SampleCollection</a>.
             </li>
@@ -530,7 +529,7 @@
         </p>
         <p class="note">
             The different time-properties on a <a>sosa:Sampling</a> support
-            the description of plans, forecasts and predictions as well as descriptions of various historical scenarios.
+            the description of plans, forecasts, and predictions, as well as descriptions of various historical scenarios.
             See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.
         </p>
         <table>
@@ -632,7 +631,7 @@
             <li>
                 Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> has <i>a
                     single value for a property</i>, each member <a href="#SOSASampling">Sampling</a>
-                (direct or transitive) MUST have that same value for that property &mdash; i.e., the collection is
+                (direct or transitive) MUST have that same value for that property; i.e., the collection is
                 homogeneous in that property.
                 That property MAY then be omitted in any member <a href="#SOSASampling">Sampling</a> or
                 <a href="#SOSASamplingCollection">SamplingCollection</a>.
@@ -796,7 +795,7 @@
         <p>
             <em>feature sampled by</em> &mdash;
             relation from an ultimate FeatureOfInterest to a Sample or SampleCollection that is intended to be
-            representative of it &mdash; i.e., the end of a chain of hasSample relations
+            representative of it; i.e., the end of a chain of hasSample relations
         </p>
         <p class="note">
             Some examples of relationships between samples and features of interest within chains are
@@ -947,7 +946,7 @@
         <p>
             <em>has ultimate sampled feature</em> &mdash;
             relation from a Sample or SampleCollection to the ultimate FeatureOfInterest that it is intended to be
-            representative of &mdash; i.e., the end of a chain of isSampleOf relations
+            representative of; i.e., the end of a chain of isSampleOf relations
         </p>
         <p class="note">
             Some examples of relationships between samples and features of interest within chains are
