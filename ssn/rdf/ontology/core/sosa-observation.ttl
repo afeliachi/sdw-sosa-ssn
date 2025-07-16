@@ -162,7 +162,7 @@ sosa:isProxyFor
   a owl:ObjectProperty ;
   rdfs:label "is proxy for"@en ;
   skos:definition """
-  relation from a Stimulus to the Property that it is serving as a proxy for
+  relation from a Stimulus to the Property for which it is serving as a proxy
   """@en ;
   skos:example "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed."@en ;
   schema:domainIncludes sosa:Stimulus ;
