@@ -35,14 +35,14 @@
             <a>sosa:Sampling</a>,
             <a>sosa:SamplingCollection</a>,
             <a>sosa:SamplingProcedure</a>,
-            <a>sosa:featureSampledBy</a>,
+            <a>sosa:featureHasUltimateSample</a>,
             <a>sosa:hasOriginalSample</a>,
             <a>sosa:hasSample</a>,
-            <a>sosa:hasSampledFeature</a>,
             <a>sosa:isOriginalSampleOf</a>,
             <a>sosa:isResultOfMadeBySampler</a>,
             <a>sosa:isResultOfUsedProcedure</a>,
             <a>sosa:isSampleOf</a>,
+            <a>sosa:isSampleOfUltimateFOI</a>,
             <a>sosa:madeBySampler</a>,
             <a>sosa:madeSampling</a>,
             <a>sosa:madeSamplingHasResult</a>,
@@ -127,7 +127,7 @@
                         <br>
                         <a>sosa:hasOriginalSample</a> <em><b>ONLY</b></em> <a>sosa:Sample</a>
                         <br>
-                        <a>sosa:hasSampledFeature</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
+                        <a>sosa:isSampleOfUltimateFOI</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                         <br>
                         <a>sosa:isResultOfMadeBySampler</a> <em><b>ONLY</b></em> <a>sosa:Sampler</a>
                         <br>
@@ -360,7 +360,7 @@
             The following <a href="#SOSASample">Sample</a> properties may appear in a
             <a>sosa:SampleCollection</a> &mdash;
             <a>sosa:hasOriginalSample</a>,
-            <a>sosa:hasSampledFeature</a>,
+            <a>sosa:isSampleOfUltimateFOI</a>,
             <a>sosa:isSampleOf</a>,
             <a>sosa:isResultOfUsedProcedure</a>,
             <a>sosa:isResultOfMadeBySampler</a>.
