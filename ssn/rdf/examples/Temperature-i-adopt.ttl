@@ -9,16 +9,18 @@ ex:SickChildTemperature
   a iop:Variable , sosa:Property;
   iop:hasProperty qk:Temperature ;
   iop:hasObjectOfInterest ex:Child ;
-  iop:hasConstraint iop:SickChild ;
+  iop:hasConstraint iop:Sick ;
 .
 qk:Temperature 
   a iop:Property , sosa:Property ;
+  skos:definition "Temperature"@en ;
 .
 ex:Child
   a iop:Entity ;
+  skos:definition "Child"@en ;
 .
-ex:SickChild 
+ex:Sick 
   a iop:Constraint ;
-  skos:definition "Sick Child"@en ;
+  skos:definition "Sick"@en ;
   iop:Constrains ex:Child ;
 .
