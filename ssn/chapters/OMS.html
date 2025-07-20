@@ -851,11 +851,6 @@
         </td>
       </tr>
       <tr>
-        <td> <a>sosa:hasSampledFeature</a> </td>
-        <td> ogc-ms:implements </td>
-        <td> sam-cpt:Sample/sampledFeature-sem </td>
-      </tr>
-      <tr>
         <td> <a>sosa:hasSimpleResult</a> </td>
         <td> ogc-ms:implements </td>
         <td> obs-cpt:Observation/result-sem </td>
@@ -898,6 +893,11 @@
       </tr>
       <tr>
         <td> <a>sosa:isSampleOf</a> </td>
+        <td> ogc-ms:implements </td>
+        <td> sam-cpt:Sample/sampledFeature-sem </td>
+      </tr>
+      <tr>
+        <td> <a>sosa:isSampleOfUltimateFOI</a> </td>
         <td> ogc-ms:implements </td>
         <td> sam-cpt:Sample/sampledFeature-sem </td>
       </tr>
@@ -1178,7 +1178,9 @@
       <tr>
         <td> sam-cpt:Sample/sampledFeature-sem </td>
         <td> ogc:implementedBy </td>
-        <td> <a>sosa:isSampleOf</a> , <br> <a>sosa:hasSampledFeature</a> </td>
+        <td> <a>sosa:isSampleOf</a> ,
+          <br> <a>sosa:isSampleOfUltimateFOI</a>
+        </td>
       </tr>
       <tr>
         <td> sam-basic:SampleCollection/member-sem </td>

@@ -47,6 +47,23 @@ var respecConfig = {
       company: "Instituto Superior Técnico Lisboa, PT",
       companyURL: "https://tecnico.ulisboa.pt/en/",
       orcid: "0000-0002-5851-2071"
+    },
+    {
+      name: "Rob Atkinson",
+      company: "Metalinkage",
+      orcid: "0000-0002-7815-2472"
+    },
+    {
+      name: "Sylvain Grellet",
+      company: "BRGM",
+      companyURL: "https://brgm.fr/",
+      orcid: "0000-0001-7656-1830"
+    },
+    {
+      name: "Kathi Schleidt",
+      company: "Datacove",
+      companyURL: "https://www.datacove.eu/",
+      orcid: "0000-0002-8011-7350"
     }
   ],
   formerEditors: [
@@ -80,15 +97,9 @@ var respecConfig = {
       key: "Contributors (ordered alphabetically by surname)",
       data: [
         {
-          value: "Rob Atkinson, Metalinkage, AU"
-        }, {
-          value: "Sylvain Grellet, BRGM, FR"
-        }, {
           value: "Krzysztof Janowicz, Universität Wien, AT"
         }, {
           value: "Alex Robin, Georobotix, FR"
-        }, {
-          value: "Kathi Schleidt, Datacove, AT"
         }, {
           value: "Hylke van der Schaaf, Fraunhofer IOSB, DE"
         }
