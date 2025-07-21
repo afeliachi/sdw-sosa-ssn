@@ -65,7 +65,6 @@
             <em>Observation</em> &mdash;
             act of carrying out an ObservingProcedure using a Sensor to estimate or calculate a value of an observable
             Property of a FeatureOfInterest
-
         </p>
         <p>
             An <a href="#SOSAObservation">Observation</a> concerns a single
@@ -80,7 +79,6 @@
             This approach is not prohibited by the SSN Ontology, but the details are beyond the scope of SSN.
         </p>
         <p>
-
             When the <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> cannot be observed directly, a
             <a href="#SOSASample">Sample</a> of it might be used in Observations as a proxy.
             In such a case the <a href="#SOSASample">Sample</a> is the proximate
@@ -237,7 +235,8 @@
                 that property that matches or falls within one of those ranges or intervals.
             </li>
         </ol>
-        <p> The results of collections of observations are often packaged in a 'data cube' whose axes define the
+        <p>
+            The results of collections of observations are often packaged in a 'data cube' whose axes define the
             range of properties of the set of observations.
         </p>
         <p>
@@ -906,12 +905,12 @@
                     <th>Range Includes</th>
                     <td>
                         <a>sosa:Execution</a>,
-                        <a>sosa:ExecutionCollection</a>,
                         <a>sosa:Actuation</a>,
-                        <a>sosa:ActuationCollection</a>,
                         <a>sosa:Observation</a>,
-                        <a>sosa:ObservationCollection</a>,
                         <a>sosa:Sampling</a>,
+                        <a>sosa:ExecutionCollection</a>,
+                        <a>sosa:ActuationCollection</a>,
+                        <a>sosa:ObservationCollection</a>,
                         <a>sosa:SamplingCollection</a>
                     </td>
                 </tr>
@@ -1186,7 +1185,6 @@
                 <tr>
                     <th>Inverse property of</th>
                     <td>
-
                         <a>sosa:observationRelatedTo</a>
                     </td>
                 </tr>
@@ -1220,8 +1218,7 @@
         <p>
             <em>observation result quality</em> &mdash;
             relation from an Observation or ObservationCollection to some information pertaining to the quality of
-            the
-            result
+            the result
         </p>
         <table>
             <tbody>

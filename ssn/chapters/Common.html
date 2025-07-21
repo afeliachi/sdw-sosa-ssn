@@ -104,13 +104,10 @@
                     <tr class="ssn">
                         <th class="restrictions">Restrictions</th>
                         <td>
-
                             <a>sosa:hasProperty</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                             <br>
-
                             <a>sosa:hasProperty</a> <em><b>MIN 1</b></em>
                             <br>
-
                             <a>sosa:hasSample</a> <em><b>ONLY</b></em> <a>sosa:Sample</a>
                             <br>
                         </td>
@@ -566,14 +563,13 @@
                     <tr>
                         <th>Example</th>
                         <td>
-                            The measured <em>wind speed</em> differs depending on the
-                            height of the
+                            The measured <em>wind speed</em> differs depending on the height of the
                             <a href="#SOSASensor">Sensor</a> above the surface, due to friction.
                             For this reason, procedures for measuring wind speed define a standard height for
                             anemometers above ground, typically 10m for meteorological measures and 2m in
                             Agrometeorology.
-                            This definition of height, <a href="#SOSASensor">Sensor</a> placement, etc are defined
-                            by the <a href="#SOSAProcedure">Procedure</a>.
+                            This definition of height, <a href="#SOSASensor">Sensor</a> placement, etc are defined by
+                            the <a href="#SOSAProcedure">Procedure</a>.
                         </td>
                     </tr>
                     <tr>
@@ -590,11 +586,9 @@
                             <br>
                             <a>sosa:hasOutput</a>
                             <br>
-                            <a>sosa:implementedBy</a>
-                            <em><b>ONLY</b></em> <a>sosa:System</a>
+                            <a>sosa:implementedBy</a> <em><b>ONLY</b></em> <a>sosa:System</a>
                             <br>
-                            <a>sosa:forProperty</a>
-                            <em><b>ONLY</b></em> <a>sosa:Property</a>
+                            <a>sosa:forProperty</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                         </td>
                     </tr>
                     <tr>
@@ -639,7 +633,8 @@
                     </tr>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:Procedure</a>
+                        <td>
+                            <a>sosa:Procedure</a>
                         </td>
                     </tr>
                     <tr>
@@ -684,7 +679,8 @@
                     </tr>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:Procedure</a>
+                        <td>
+                            <a>sosa:Procedure</a>
                         </td>
                     </tr>
                     <tr>
@@ -771,12 +767,14 @@
                 <tbody>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:Procedure</a>
+                        <td>
+                            <a>sosa:Procedure</a>
                         </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:System</a>
+                        <td>
+                            <a>sosa:System</a>
                         </td>
                     </tr>
                     <tr>
@@ -817,7 +815,8 @@
                 <tbody>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:Procedure</a>
+                        <td>
+                            <a>sosa:Procedure</a>
                         </td>
                     </tr>
                     <tr>
@@ -858,7 +857,8 @@
                 <tbody>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:Procedure</a>
+                        <td>
+                            <a>sosa:Procedure</a>
                         </td>
                     </tr>
                     <tr>
@@ -897,11 +897,14 @@
                 <tbody>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:Procedure</a>
+                        <td>
+                            <a>sosa:Procedure</a>
+                        </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:Execution</a>,
+                        <td>
+                            <a>sosa:Execution</a>,
                             <a>sosa:Actuation</a>,
                             <a>sosa:Observation</a>,
                             <a>sosa:Sampling</a>,
@@ -941,8 +944,7 @@
         <div>
             <p>
                 <a href="#Fig-Execution"></a> provides an overview of the classes and properties related to modeling
-                Execution of
-                Procedures.
+                Execution of Procedures.
             </p>
             <figure id="Fig-Execution">
                 <embed alt="Execution of Procedures diagram; showing Execution, System, FeatureOfInterest, Procedure"
@@ -1007,7 +1009,6 @@
                     <tr>
                         <th>Scope note</th>
                         <td>
-
                             Execution generalizes the <a href="#SOSAActuation">Actuation</a>,
                             <a href="#SOSAObservation">Observation</a>, and
                             <a href="#SOSASampling">Sampling</a> classes.
@@ -1022,14 +1023,11 @@
                     <tr class="ssn">
                         <th class="restrictions">Restrictions</th>
                         <td>
-                            <a>sosa:usedProcedure</a>
-                            <em><b>ONLY</b></em> <a>sosa:Procedure</a>
+                            <a>sosa:usedProcedure</a> <em><b>ONLY</b></em> <a>sosa:Procedure</a>
                             <br>
-                            <a>sosa:hasFeatureOfInterest</a>
-                            <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
+                            <a>sosa:hasFeatureOfInterest</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                             <br>
-                            <a>sosa:hasUltimateFeatureOfInterest</a>
-                            <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
+                            <a>sosa:hasUltimateFeatureOfInterest</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                         </td>
                     </tr>
                     <tr>
@@ -1083,21 +1081,18 @@
                     transitive) MAY have any value for that property.
                 </li>
                 <li>
-                    Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> has
-                    <i>a single value for a property</i>, each member <a href="#SOSAExecution">Execution</a> (direct
-                    or
-                    transitive) MUST have that same value for that property &mdash; i.e., the collection (set) is
-                    homogeneous
-                    in that property.
-                    That property MAY then be omitted in any member <a href="#SOSAExecution">Execution</a>
-                    or <a href="#SOSAExecutionCollection">ExecutionCollection</a>.
+                    Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> has <i>a single value
+                        for a property</i>, each member <a href="#SOSAExecution">Execution</a> (direct or transitive)
+                    MUST have that same value for that property &mdash; i.e., the collection (set) is homogeneous in
+                    that property.
+                    That property MAY then be omitted in any member <a href="#SOSAExecution">Execution</a> or
+                    <a href="#SOSAExecutionCollection">ExecutionCollection</a>.
                 </li>
                 <li>
                     Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> has
                     <i>more than one value for a property</i>, each member <a href="#SOSAExecution">Execution</a>
                     (direct or transitive) MUST have a value for that property that matches one of the values for
-                    the
-                    property in the collection.
+                    the property in the collection.
                 </li>
                 <li>
                     Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a>
@@ -1126,14 +1121,13 @@
                     <tr>
                         <th>Scope note</th>
                         <td>
-
                             ExecutionCollection generalizes the
                             <a href="#SOSAActuationCollection">ActuationCollection</a>,
                             <a href="#SOSAObservationCollection">ObservationCollection</a>, and
                             <a href="#SOSASamplingCollection">SamplingCollection</a> classes.
                             It is included in the ontology to support the definition of a common pattern for
                             executions and their properties.
-
+                            <br>
                             ExecutionCollection MUST be considered to be abstract, so any individual
                             ExecutionCollection SHOULD be declared to be an instance of one of the concrete
                             sub-classes, and not of the ExecutionCollection
@@ -1149,9 +1143,7 @@
                     <tr class="ssn">
                         <th class="restrictions">Restrictions</th>
                         <td>
-
-                            <a>sosa:hasMember</a>
-                            <em><b>ONLY</b></em> (<a>sosa:Execution</a> OR
+                            <a>sosa:hasMember</a> <em><b>ONLY</b></em> (<a>sosa:Execution</a> OR
                             <a>sosa:ExecutionCollection</a> )
                         </td>
                     </tr>
@@ -1207,8 +1199,8 @@
                     <th>Domain Includes</th>
                     <td>
                         <a>sosa:Execution</a>,
-                        <a>sosa:ExecutionCollection</a>,
                         <a>sosa:Actuation</a>,
+                        <a>sosa:ExecutionCollection</a>,
                         <a>sosa:ActuationCollection</a>,
                         <a>sosa:Deployment</a>
                     </td>
@@ -1276,12 +1268,9 @@
                         <td>
                             <a>sosa:Deployment</a>,
                             <a>sosa:Execution</a>
-                            (i.e., <a>sosa:Actuation</a>,
-                            <a>sosa:Observation</a>,
-                            <a>sosa:Sampling</a>),
+                            (i.e., <a>sosa:Actuation</a>, <a>sosa:Observation</a>, <a>sosa:Sampling</a>),
                             <a>sosa:ExecutionCollection</a>
-                            (i.e., <a>sosa:ActuationCollection</a>,
-                            <a>sosa:ObservationCollection</a>,
+                            (i.e., <a>sosa:ActuationCollection</a>, <a>sosa:ObservationCollection</a>,
                             <a>sosa:SamplingCollection</a>),
                         </td>
                     </tr>
@@ -1345,9 +1334,7 @@
                         <th>Domain Includes</th>
                         <td>
                             <a>sosa:Execution</a>
-                            (i.e., <a>sosa:Actuation</a>,
-                            <a>sosa:Observation</a>,
-                            <a>sosa:Sampling</a>)
+                            (i.e., <a>sosa:Actuation</a>, <a>sosa:Observation</a>, <a>sosa:Sampling</a>)
                         </td>
                     </tr>
                     <tr>
@@ -1432,7 +1419,8 @@
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:Sample</a>
+                        <td>
+                            <a>sosa:Sample</a>
                         </td>
                     </tr>
                     <tr>
@@ -1444,9 +1432,7 @@
                     <tr class="ssn">
                         <th>is</th>
                         <td>
-
                             <a href="https://www.w3.org/TR/owl2-syntax/#Functional_Object_Properties">Functional</a>
-
                         </td>
                     </tr>
                     <tr>
@@ -1476,17 +1462,13 @@
                 relation from an Execution to its simple value
             </p>
             <p>
-                In the case of an <a>sosa:Actuation</a>, the result is the intended value
-                of the
-                <a>sosa:Property</a> following the
-                execution of the <a href="#SOSAProcedure">Procedure</a> by the <a href="#SOSAActuator">Actuator</a>.
+                In the case of an <a>sosa:Actuation</a>, the result is the intended value of the <a>sosa:Property</a>
+                following the execution of the <a href="#SOSAProcedure">Procedure</a> by the
+                <a href="#SOSAActuator">Actuator</a>.
             </p>
             <p>
-                In the case of an <a href="#SOSAObservation">Observation</a>, the result is the
-                value
-                produced
-                by the execution of the <a href="#SOSAProcedure">Procedure</a> by the
-                <a href="#SOSASensor">Sensor</a>.
+                In the case of an <a href="#SOSAObservation">Observation</a>, the result is the value produced by the
+                execution of the <a href="#SOSAProcedure">Procedure</a> by the <a href="#SOSASensor">Sensor</a>.
             </p>
             <p class="note">
                 The result of an actuation or observation may be a quantity.
@@ -1522,10 +1504,10 @@
                         <th>Domain Includes</th>
                         <td>
                             <a>sosa:Execution</a>,
-                            <a>sosa:ExecutionCollection</a>,
                             <a>sosa:Actuation</a>,
-                            <a>sosa:ActuationCollection</a>,
                             <a>sosa:Observation</a>,
+                            <a>sosa:ExecutionCollection</a>,
+                            <a>sosa:ActuationCollection</a>,
                             <a>sosa:ObservationCollection</a>
                         </td>
                     </tr>
@@ -1565,8 +1547,7 @@
                 or from a Deployment to its ultimate target
             </p>
             <p class="note">
-                The distinction between <a>sosa:hasFeatureOfInterest</a>,
-                and <a>sosa:hasUltimateFeatureOfInterest</a>
+                The distinction between <a>sosa:hasFeatureOfInterest</a>, and <a>sosa:hasUltimateFeatureOfInterest</a>
                 is explored further in <a href="#ModelFOI">Proximate and Ultimate feature of interest</a>
             </p>
             <table>
@@ -1624,7 +1605,8 @@
                 <strong>an OWL Object Property</strong>
             </p>
 
-            <p class="warning">inputValueForExecution added in the 2025 edition.
+            <p class="warning">
+                inputValueForExecution added in the 2025 edition.
                 This term is non-normative, pending further implementation experience.</p>
             <p>
                 <em>Input Value for Execution</em> &mdash;
@@ -1726,13 +1708,10 @@
                         <td>
                             `madeBySystem` generalizes the <a>sosa:madeByActuator</a>,
                             <a>sosa:madeBySensor</a>, and <a>sosa:madeBySampler</a> properties.
-                            It is included in the ontology to support the definition of a common pattern for
-                            executions
+                            It is included in the ontology to support the definition of a common pattern for executions
                             and their properties.
-
-                            `madeBySystem` MUST be considered to be abstract, so SHOULD NOT appear in
-                            data
-                            instances.
+                            <br>
+                            `madeBySystem` MUST be considered to be abstract, so SHOULD NOT appear in data instances.
                             Applications can use concrete sub-properties of `madeBySystem`.
                         </td>
                     </tr>
@@ -1800,12 +1779,12 @@
                         <th>Range Includes</th>
                         <td>
                             <a>sosa:Execution</a>,
-                            <a>sosa:ExecutionCollection</a>,
                             <a>sosa:Actuation</a>,
-                            <a>sosa:ActuationCollection</a>,
                             <a>sosa:Observation</a>,
-                            <a>sosa:ObservationCollection</a>,
                             <a>sosa:Sampling</a>,
+                            <a>sosa:ExecutionCollection</a>,
+                            <a>sosa:ActuationCollection</a>,
+                            <a>sosa:ObservationCollection</a>,
                             <a>sosa:SamplingCollection</a>
                         </td>
                     </tr>
@@ -1848,27 +1827,22 @@
             </p>
             <p>
                 In the case of <a>sosa:Actuation</a>, <a>sosa:phenomenonTime</a> SHOULD indicate the time during
-                which
-                the <a>sosa:Actuator</a> was active.
+                which the <a>sosa:Actuator</a> was active.
             </p>
             <p>
                 In the case of <a>sosa:Observation</a>, the <a>sosa:phenomenonTime</a> MAY be distant from the
                 <a>sosa:resultTime</a>.
-                For example in the case of forecasts the <a>sosa:phenomenonTime</a> is after the
-                <a>sosa:resultTime</a>.
-                In historical, geological and cosmological investigations the <a>sosa:phenomenonTime</a> can be far
-                in
+                For example in the case of forecasts the <a>sosa:phenomenonTime</a> is after the <a>sosa:resultTime</a>.
+                In historical, geological and cosmological investigations the <a>sosa:phenomenonTime</a> can be far in
                 the past, while the <a>sosa:resultTime</a> is contemporary.
             </p>
             <p>
-                In the case of <a>sosa:Sampling</a> the <a>sosa:phenomenonTime</a> SHOULD indicate the time during
-                which
+                In the case of <a>sosa:Sampling</a> the <a>sosa:phenomenonTime</a> SHOULD indicate the time during which
                 the sampling <a>sosa:Procedure</a> was active.
                 The <a>sosa:resultTime</a> can indicate when the sample comes into the possession of the operator.
             </p>
             <p class="note">
-                The different time-properties on a <a>sosa:Execution</a> support the description of plans, forecasts
-                and
+                The different time-properties on a <a>sosa:Execution</a> support the description of plans, forecasts and
                 predictions as well as descriptions of arious historical scenarios.
                 See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.
             </p>
@@ -1917,12 +1891,12 @@ sosa:phenomenonTime [
                         <th>Domain Includes</th>
                         <td>
                             <a>sosa:Execution</a>,
-                            <a>sosa:ExecutionCollection</a>,
                             <a>sosa:Actuation</a>,
-                            <a>sosa:ActuationCollection</a>,
                             <a>sosa:Observation</a>,
-                            <a>sosa:ObservationCollection</a>,
                             <a>sosa:Sampling</a>,
+                            <a>sosa:ExecutionCollection</a>,
+                            <a>sosa:ActuationCollection</a>,
+                            <a>sosa:ObservationCollection</a>,
                             <a>sosa:SamplingCollection</a>
                         </td>
                     </tr>
@@ -1967,9 +1941,9 @@ sosa:phenomenonTime [
                 <a href="https://www.w3.org/TR/xmlschema-2/#gYearMonth">xsd:gYearMonth</a>
                 <a href="https://www.w3.org/TR/xmlschema-2/#gYear">xsd:gYear</a>.
             </p>
-            <p class="note">The different time-properties on a <a>sosa:Execution</a> support
-                the description of plans, forecasts, and predictions, as well as descriptions of various historical
-                scenarios.
+            <p class="note">
+                The different time-properties on a <a>sosa:Execution</a> support the description of plans, forecasts,
+                and predictions, as well as descriptions of various historical scenarios.
                 See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.</p>
 
             <table>
@@ -1977,14 +1951,12 @@ sosa:phenomenonTime [
                     <tr>
                         <th>Examples</th>
                         <td>
-
                             <pre>
 "2024-01-23T19:26:00+11:00"^^xsd:dateTime
 "2024-01-23"^^xsd:date
 "2024-01"^^xsd:gMonth
 "2024"^^xsd:gYear
 </pre>
-
                         </td>
                     </tr>
                     <tr class="ssn">
@@ -2151,8 +2123,8 @@ sosa:phenomenonTime [
     <section class="informative" id="Systems-and-their-Deployment-overview">
         <h5>Overview</h5>
         <div>
-            <p>The following figure provides an overview of the classes
-                and properties that are specifically related to modeling systems and their deployment.
+            <p>The following figure provides an overview of the classes and properties that are specifically related to
+                modeling systems and their deployment.
             </p>
             <figure id="System">
                 <embed
@@ -2175,10 +2147,9 @@ sosa:phenomenonTime [
                 Mobile platforms include vehicles, marine- and air-craft, satellites, mobile phones, etc.
             </p>
             <p>
-                A <a>sosa:Deployment</a> is an arrangement of assets (systems and platforms) with
-                the intention of executing actuation, observation or sampling procedures with respect to
-                designated
-                features-of-interest for a specified time interval.
+                A <a>sosa:Deployment</a> is an arrangement of assets (systems and platforms) with the intention of
+                executing actuation, observation or sampling procedures with respect to designated features-of-interest
+                for a specified time interval.
             </p>
         </div>
 
@@ -2212,12 +2183,8 @@ sosa:phenomenonTime [
 
             <p>
                 <em>Deployment</em> &mdash;
-                A <a href="#SOSADeployment">Deployment</a> of one or more assets
-                (<a href="#SOSASystem">Systems</a>
-                or
-                <a>sosa:Platforms</a>) to execute
-                procedures
-                with respect to designated features-of-interest.
+                A <a href="#SOSADeployment">Deployment</a> of one or more assets (<a href="#SOSASystem">Systems</a> or
+                <a>sosa:Platforms</a>) to execute procedures with respect to designated features-of-interest.
                 <a href="#SOSADeployment">Deployment</a> may be done on a <a href="#SOSAPlatform">Platform</a>.
             </p>
             <p class="note">
@@ -2229,13 +2196,10 @@ sosa:phenomenonTime [
                     <tr>
                         <th>Note</th>
                         <td>
-                            A <a>sosa:Deployment</a> will usually be
-                            for a specified time interval.
-                            It MAY involve <a>sosa:Platforms</a>, or
-                            <a>sosa:Systems</a>, or both.
-                            A <a>sosa:Deployment</a> can be used quite flexibly to describe
-                            the use of systems, and platforms that host systems, with respect to a feature of
-                            interest.
+                            A <a>sosa:Deployment</a> will usually be for a specified time interval.
+                            It MAY involve <a>sosa:Platforms</a>, or <a>sosa:Systems</a>, or both.
+                            A <a>sosa:Deployment</a> can be used quite flexibly to describe the use of systems, and
+                            platforms that host systems, with respect to a feature of interest.
 
                         </td>
                     </tr>
@@ -2248,14 +2212,11 @@ sosa:phenomenonTime [
                     <tr class="ssn">
                         <th class="restrictions">Restrictions</th>
                         <td>
-                            <a>sosa:deployedSystem</a>
-                            <em><b>ONLY</b></em> <a>sosa:System</a>
+                            <a>sosa:deployedSystem</a> <em><b>ONLY</b></em> <a>sosa:System</a>
                             <br>
-                            <a>sosa:deployedOnPlatform</a>
-                            <em><b>ONLY</b></em> <a>sosa:Platform</a>
+                            <a>sosa:deployedOnPlatform</a> <em><b>ONLY</b></em> <a>sosa:Platform</a>
                             <br>
-                            <a>sosa:hasFeatureOfInterest</a>
-                            <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
+                            <a>sosa:hasFeatureOfInterest</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                         </td>
                     </tr>
                     <tr>
@@ -2279,16 +2240,13 @@ sosa:phenomenonTime [
 
             <p>
                 <em>Platform</em> &mdash;
-                A <a href="#SOSAPlatform">Platform</a> is an entity that <a href="#SOSAhosts">hosts</a> other
-                entities,
-                particularly <a href="#SOSASensor">Sensors</a>,
-                <a href="#SOSAActuator">Actuators</a>, <a href="#SOSASampler">Samplers</a>, and other
-                <a href="#SOSAPlatform">Platforms</a>.
+                A <a href="#SOSAPlatform">Platform</a> is an entity that <a href="#SOSAhosts">hosts</a> other entities,
+                particularly <a href="#SOSASensor">Sensors</a>, <a href="#SOSAActuator">Actuators</a>,
+                <a href="#SOSASampler">Samplers</a>, and other <a href="#SOSAPlatform">Platforms</a>.
             </p>
             <p>
-                The INSPIRE 'Environmental Monitoring Facility' may be implemented
-                using
-                SOSA by the OWL/RDFS class 'Platform'.
+                The INSPIRE 'Environmental Monitoring Facility' may be implemented using SOSA by the OWL/RDFS class
+                'Platform'.
             </p>
 
             <p class="note">A Platform may have a geographic location.
@@ -2299,22 +2257,18 @@ sosa:phenomenonTime [
                     <tr>
                         <th>Examples</th>
                         <td>
-                            A post, buoy, vehicle, ship, aircraft, satellite,
-                            cell-phone,
-                            human or animal may act as <a href="#SOSAPlatform">Platforms</a> for
-                            (technical or biological) <a href="#SOSASensor">Sensors</a> or
-                            <a href="#SOSAActuator">Actuators</a>.
+                            A post, buoy, vehicle, ship, aircraft, satellite, cell-phone, human or animal may act as
+                            <a href="#SOSAPlatform">Platforms</a> for (technical or biological)
+                            <a href="#SOSASensor">Sensors</a> or <a href="#SOSAActuator">Actuators</a>.
                         </td>
                     </tr>
                     <tr class="ssn">
                         <th class="restrictions">Restrictions</th>
                         <td>
-                            <a>sosa:hosts</a>
-                            <em><b>ONLY</b></em> ( <a>sosa:System</a>
-                            <em><b>OR</b></em> <a>sosa:Platform</a> )
+                            <a>sosa:hosts</a> <em><b>ONLY</b></em> ( <a>sosa:System</a> <em><b>OR</b></em>
+                            <a>sosa:Platform</a> )
                             <br>
-                            <a>sosa:inDeployment</a>
-                            <em><b>ONLY</b></em> <a>sosa:Deployment</a>
+                            <a>sosa:inDeployment</a> <em><b>ONLY</b></em> <a>sosa:Deployment</a>
                         </td>
                     </tr>
                     <tr>
@@ -2364,73 +2318,47 @@ sosa:phenomenonTime [
                         <td>
 
                             System generalizes the <a href="#SOSAActuator">Actuator</a>,
-                            <a href="#SOSASensor">Sensor</a>, and
-                            <a href="#SOSASampler">Sampler</a> classes.
-                            It is included in the ontology to support the definition of a common pattern for
-                            executions and their properties.
-                            System MUST be considered to be abstract, so any individual System SHOULD be
-                            declared to
-                            be an instance of one of the concrete sub-classes, and not of the System class.
+                            <a href="#SOSASensor">Sensor</a>, and <a href="#SOSASampler">Sampler</a> classes.
+                            It is included in the ontology to support the definition of a common pattern for executions
+                            and their properties.
+                            System MUST be considered to be abstract, so any individual System SHOULD be declared to be
+                            an instance of one of the concrete sub-classes, and not of the System class.
                             <br><br>
-
-
-                            Specific system <em>types</em> may be implemented as <em>sub-classes</em> of this
-                            class
-                            or its sub-classes.
-                            Their descriptions may capture the properties and characteristics of a whole class
-                            of
+                            Specific system <em>types</em> may be implemented as <em>sub-classes</em> of this class or
+                            its sub-classes.
+                            Their descriptions may capture the properties and characteristics of a whole class of
                             systems, corresponding with the information typically found in a data-sheet.
-                            Individual system <em>instances</em> are <em>members</em> of this class or its
-                            sub-classes.
+                            Individual system <em>instances</em> are <em>members</em> of this class or its sub-classes.
                             <br><br>
-
-
                             The association of a System (<a href="#SOSAActuator">Actuator</a>,
                             <a href="#SOSASensor">Sensor</a>, or <a href="#SOSASampler">Sampler</a>) with a
-                            <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> is usually in the context of
-                            an
-                            <a href="#SOSAExecution">Execution</a> or a
-                            <a href="#SOSADeployment">Deployment</a>.
+                            <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> is usually in the context of an
+                            <a href="#SOSAExecution">Execution</a> or a <a href="#SOSADeployment">Deployment</a>.
                             <br><br>
-                            A <a>sosa:System</a> can be hosted by a
-                            <a>sosa:Platform</a>.
+                            A <a>sosa:System</a> can be hosted by a <a>sosa:Platform</a>.
                             <br><br>
-                            A <a>sosa:System</a> can be deployed for a specified time interval as
-                            part of a <a>sosa:Deployment</a>.
+                            A <a>sosa:System</a> can be deployed for a specified time interval as part of a
+                            <a>sosa:Deployment</a>.
 
                         </td>
                     </tr>
                     <tr class="ssn">
                         <th class="restrictions">Restrictions</th>
                         <td>
-                            <a>sosa:isHostedBy</a>
-                            <em><b>ONLY</b></em>
-                            <a>sosa:Platform</a>
+                            <a>sosa:isHostedBy</a> <em><b>ONLY</b></em> <a>sosa:Platform</a>
                             <br>
-                            <a>sosa:implements</a>
-                            <em><b>ONLY</b></em>
-                            <a>sosa:Procedure</a>
+                            <a>sosa:implements</a> <em><b>ONLY</b></em> <a>sosa:Procedure</a>
                             <br>
-                            <a>sosa:forProperty</a>
-                            <em><b>ONLY</b></em>
-                            <a>sosa:Property</a>
+                            <a>sosa:forProperty</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                             <br>
-                            <a>sosa:hasSubSystem</a>
-                            <em><b>ONLY</b></em>
-                            <a>sosa:System</a>
+                            <a>sosa:hasSubSystem</a> <em><b>ONLY</b></em> <a>sosa:System</a>
                             <br>
-                            <a>sosa:isSubSystemOf</a>
-                            <em><b>ONLY</b></em>
-                            <a>sosa:System</a>
+                            <a>sosa:isSubSystemOf</a> <em><b>ONLY</b></em> <a>sosa:System</a>
                             <br>
-                            <a>sosa:madeExecution</a>
-                            <em><b>ONLY</b></em>
-                            ( <a>sosa:Execution</a> OR
+                            <a>sosa:madeExecution</a> <em><b>ONLY</b></em> ( <a>sosa:Execution</a> OR
                             <a>sosa:ExecutionCollection</a> )
                             <br>
-                            <a>sosa:hasDeployment</a>
-                            <em><b>ONLY</b></em>
-                            <a>sosa:Deployment</a>
+                            <a>sosa:hasDeployment</a> <em><b>ONLY</b></em> <a>sosa:Deployment</a>
                         </td>
                     </tr>
                     <tr>
@@ -2451,8 +2379,8 @@ sosa:phenomenonTime [
             <h6><dfn>sosa:deployedAsset</dfn></h6>
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/deployedAsset</p>
             <p><strong>an OWL Object Property</strong></p>
-
-            <p class="warning">deployedAsset added in 2023 Edition.
+            <p class="warning">
+                deployedAsset added in 2023 Edition.
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>deployed asset</em> &mdash;
@@ -2463,17 +2391,20 @@ sosa:phenomenonTime [
                 <tbody>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:Deployment</a>
+                        <td>
+                            <a>sosa:Deployment</a>
                         </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:System</a>
+                        <td>
+                            <a>sosa:System</a>
                         </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:Platform</a>
+                        <td>
+                            <a>sosa:Platform</a>
                         </td>
                     </tr>
                     <tr>
@@ -2496,19 +2427,21 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>deployed on platform</em> &mdash;
-                Relation between a <a href="#SOSADeployment">Deployment</a>
-                and the <a href="#SOSAPlatform">Platform</a> on which the Systems are deployed.
+                Relation between a <a href="#SOSADeployment">Deployment</a> and the <a href="#SOSAPlatform">Platform</a>
+                on which the Systems are deployed.
             </p>
             <table>
                 <tbody>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:Deployment</a>
+                        <td>
+                            <a>sosa:Deployment</a>
                         </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:Platform</a>
+                        <td>
+                            <a>sosa:Platform</a>
                         </td>
                     </tr>
                     <tr>
@@ -2537,19 +2470,21 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>deployed system</em> &mdash;
-                Relation between a <a href="#SOSADeployment">Deployment</a>
-                and a deployed <a href="#SOSASystem">System</a>.
+                Relation between a <a href="#SOSADeployment">Deployment</a> and a deployed
+                <a href="#SOSASystem">System</a>.
             </p>
             <table>
                 <tbody>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:Deployment</a>
+                        <td>
+                            <a>sosa:Deployment</a>
                         </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:System</a>
+                        <td>
+                            <a>sosa:System</a>
                         </td>
                     </tr>
                     <tr>
@@ -2578,22 +2513,22 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>has deployment</em> &mdash;
-                Relation between a <a href="#SOSASystem">System</a> and a
-                <a href="#SOSADeployment">Deployment</a>,
-                recording that the <a href="#SOSASystem">System</a>
-                is
-                deployed in that <a href="#SOSADeployment">Deployment</a>.
+                Relation between a <a href="#SOSASystem">System</a> and a <a href="#SOSADeployment">Deployment</a>,
+                recording that the <a href="#SOSASystem">System</a> is deployed in that
+                <a href="#SOSADeployment">Deployment</a>.
             </p>
             <table>
                 <tbody>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:System</a>
+                        <td>
+                            <a>sosa:System</a>
                         </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:Deployment</a>
+                        <td>
+                            <a>sosa:Deployment</a>
                         </td>
                     </tr>
                     <tr>
@@ -2633,12 +2568,14 @@ sosa:phenomenonTime [
                 <tbody>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:System</a>
+                        <td>
+                            <a>sosa:System</a>
                         </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:System</a>
+                        <td>
+                            <a>sosa:System</a>
                         </td>
                     </tr>
                     <tr>
@@ -2667,25 +2604,23 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>hosts</em> &mdash;
-                Relation between a <a href="#SOSAPlatform">Platform</a> and a
-                <a href="#SOSASystem">System</a> (
-                <a href="#SOSASensor">Sensor</a>,
-                <a href="#SOSAActuator">Actuator</a>,
-                <a href="#SOSASampler">Sampler</a>), or <a href="#SOSAPlatform">Platform</a>,
-                hosted or mounted on it.
+                Relation between a <a href="#SOSAPlatform">Platform</a> and a <a href="#SOSASystem">System</a>
+                ( <a href="#SOSASensor">Sensor</a>, <a href="#SOSAActuator">Actuator</a>,
+                <a href="#SOSASampler">Sampler</a>), or <a href="#SOSAPlatform">Platform</a>, hosted or mounted on it.
             </p>
             <table>
                 <tbody>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:Platform</a></td>
+                        <td>
+                            <a>sosa:Platform</a>
+                        </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:System</a>
-                            (includes <a>sosa:Actuator</a>,
-                            <a>sosa:Sensor</a>,
-                            <a>sosa:Sampler</a>),
+                        <td>
+                            <a>sosa:System</a>
+                            (includes <a>sosa:Actuator</a>, <a>sosa:Sensor</a>, <a>sosa:Sampler</a>),
                             <a>sosa:Platform</a>
                         </td>
                     </tr>
@@ -2698,8 +2633,7 @@ sosa:phenomenonTime [
                     <tr class="ssn">
                         <th>Sub property of Chain</th>
                         <td>
-                            <a>sosa:inDeployment</a> o
-                            <a>sosa:deployedSystem</a>
+                            <a>sosa:inDeployment</a> o <a>sosa:deployedSystem</a>
                         </td>
                     </tr>
                     <tr>
@@ -2722,15 +2656,15 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>implements</em> &mdash;
-                Relation between an entity that implements a <a href="#SOSAProcedure">Procedure</a> in some
-                executable
+                Relation between an entity that implements a <a href="#SOSAProcedure">Procedure</a> in some executable
                 way and the <a href="#SOSAProcedure">Procedure</a> (an algorithm, procedure or method).
             </p>
             <table>
                 <tbody>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:System</a>
+                        <td>
+                            <a>sosa:System</a>
                         </td>
                     </tr>
                     <tr>
@@ -2768,9 +2702,8 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>in deployment</em> &mdash;
-                Relation between a <a href="#SOSAPlatform">Platform</a> and a
-                <a href="#SOSADeployment">Deployment</a>, meaning that the
-                <a href="#SOSAdeployedSystem">deployedSystems</a> of the
+                Relation between a <a href="#SOSAPlatform">Platform</a> and a <a href="#SOSADeployment">Deployment</a>,
+                meaning that the <a href="#SOSAdeployedSystem">deployedSystems</a> of the
                 <a href="#SOSADeployment">Deployment</a> are hosted on the <a href="#SOSAPlatform">Platform</a>.
             </p>
             <table>
@@ -2778,18 +2711,20 @@ sosa:phenomenonTime [
                     <tr>
                         <th>Example</th>
                         <td>
-                            For example, a relation between a buoy and a
-                            <a href="#SOSADeployment">Deployment</a> of several
-                            <a href="#SOSASensor">Sensors</a>.
+                            For example, a relation between a buoy and a <a href="#SOSADeployment">Deployment</a> of
+                            several <a href="#SOSASensor">Sensors</a>.
                         </td>
                     </tr>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:Platform</a></td>
+                        <td>
+                            <a>sosa:Platform</a>
+                        </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:Deployment</a>
+                        <td>
+                            <a>sosa:Deployment</a>
                         </td>
                     </tr>
                     <tr>
@@ -2818,11 +2753,9 @@ sosa:phenomenonTime [
             <p><strong>an OWL Object Property</strong></p>
             <p>
                 <em>is hosted by</em> &mdash;
-                Relation between an <a href="#SOSAActuator">Actuator</a>, or
-                <a href="#SOSASensor">Sensor</a>, or <a href="#SOSASampler">Sampler</a>, or
-                <a href="#SOSAPlatform">Platform</a>, and the <a href="#SOSAPlatform">Platform</a> that it is
-                mounted
-                on or hosted by.
+                Relation between an <a href="#SOSAActuator">Actuator</a>, or <a href="#SOSASensor">Sensor</a>, or
+                <a href="#SOSASampler">Sampler</a>, or <a href="#SOSAPlatform">Platform</a>, and the
+                <a href="#SOSAPlatform">Platform</a> that it is mounted on or hosted by.
             </p>
             <table>
                 <tbody>
@@ -2830,15 +2763,15 @@ sosa:phenomenonTime [
                         <th>Domain Includes</th>
                         <td>
                             <a>sosa:System</a>
-                            (includes <a>sosa:Actuator</a>,
-                            <a>sosa:Sensor</a>,
-                            <a>sosa:Sampler</a> ),
+                            (includes <a>sosa:Actuator</a>, <a>sosa:Sensor</a>, <a>sosa:Sampler</a> ),
                             <a>sosa:Platform</a>
                         </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:Platform</a></td>
+                        <td>
+                            <a>sosa:Platform</a>
+                        </td>
                     </tr>
                     <tr>
                         <th>Inverse property of</th>
@@ -2874,12 +2807,14 @@ sosa:phenomenonTime [
                 <tbody>
                     <tr>
                         <th>Domain Includes</th>
-                        <td><a>sosa:System</a>
+                        <td>
+                            <a>sosa:System</a>
                         </td>
                     </tr>
                     <tr>
                         <th>Range Includes</th>
-                        <td><a>sosa:System</a>
+                        <td>
+                            <a>sosa:System</a>
                         </td>
                     </tr>
                     <tr>
@@ -2912,9 +2847,7 @@ sosa:phenomenonTime [
             <p>
 
                 <em>madeExecution</em> &mdash;
-                Relation between a
-                <a href="#SOSASystem">System</a> and an
-                <a href="#SOSAExecution">Execution</a> or
+                Relation between a <a href="#SOSASystem">System</a> and an <a href="#SOSAExecution">Execution</a> or
                 <a href="#SOSAExecutionCollection">ExecutionCollection</a> it has made.
 
             </p>
@@ -2923,18 +2856,12 @@ sosa:phenomenonTime [
                     <tr>
                         <th>Scope note</th>
                         <td>
-                            `madeExecution` generalizes the
-                            <a>sosa:madeActuation</a>,
-                            <a>sosa:madeObservation</a>, and
+                            `madeExecution` generalizes the <a>sosa:madeActuation</a>, <a>sosa:madeObservation</a>, and
                             <a>sosa:madeSampling</a> properties.
-                            It is included in the ontology to support the definition of a common pattern for
-                            executions
+                            It is included in the ontology to support the definition of a common pattern for executions
                             and their properties.
-
-                            `madeExecution` MUST be considered to be abstract, so SHOULD NOT appear
-                            in
-                            data
-                            instances.
+                            <br>
+                            `madeExecution` MUST be considered to be abstract, so SHOULD NOT appear in data instances.
                             Applications can use concrete sub-properties of `madeExecution`.
                         </td>
                     </tr>
@@ -2989,21 +2916,18 @@ sosa:phenomenonTime [
     <section class="informative" id="Collections-requirement">
         <h5>Requirement for collections</h5>
         <p>
-            The results of multiple observations are typically assessed together in order to discover or detect
-            a
+            The results of multiple observations are typically assessed together in order to discover or detect a
             pattern or signal.
-            Similarly, a single sample is usually insufficient to provide insight regarding the properties of
-            its
-            source
+            Similarly, a single sample is usually insufficient to provide insight regarding the properties of its source
             entity or population.
         </p>
         <p>
-            Collections (sets) that are useful for analysis will typically be homogeneous with respect to one or
-            more properties of the members.
-            For example, a collection of observations of the same observed-property on
-            the same feature of interest at a series of different times.
-            A collection of actuations may act on different properties of the same feature of
-            interest, but other cases also apply.
+            Collections (sets) that are useful for analysis will typically be homogeneous with respect to one or more
+            properties of the members.
+            For example, a collection of observations of the same observed-property on the same feature of interest at a
+            series of different times.
+            A collection of actuations may act on different properties of the same feature of interest, but other cases
+            also apply.
             A collection of samplings may use the same sampler.
             A collection of samples may be of the same feature (entity) of interest.
         </p>
@@ -3024,9 +2948,7 @@ sosa:phenomenonTime [
         </ol>
         <p>
             Consistency rules for the properties of collections and their members are described in the
-            definitions
-            of
-            the specific collection types
+            definitions of the specific collection types
             <a href="#SOSAExecutionCollection">ExecutionCollection</a>,
             <a href="#SOSAActuationCollection">ActuationCollection</a>,
             <a href="#SOSAObservationCollection">ObservationCollection</a>,
@@ -3043,8 +2965,7 @@ sosa:phenomenonTime [
         <h5>Overview</h5>
         <div>
             <p>
-                <a href="#Fig-Collections"></a> provides an overview of the classes and properties that are
-                specifically
+                <a href="#Fig-Collections"></a> provides an overview of the classes and properties that are specifically
                 related to describing collections of executions or of samples.
             </p>
             <figure id="Fig-Collections">
@@ -3078,9 +2999,7 @@ sosa:phenomenonTime [
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>has member of collection</em> &mdash;
-                Link to a member
-                (
-                <a href="#SOSAExecution">Execution</a>
+                Link to a member ( <a href="#SOSAExecution">Execution</a>
                 or <a href="#SOSAActuation">Actuation</a>
                 or <a href="#SOSAObservation">Observation</a>
                 or <a href="#SOSASampling">Sampling</a>
@@ -3091,22 +3010,20 @@ sosa:phenomenonTime [
                 or <a href="#SOSAObservationCollection">collection of Observations</a>
                 or <a href="#SOSASamplingCollection">collection of Samplings</a>
                 or <a href="#SOSASampleCollection">collection of Samples</a>
-                )
-                within a collection.
+                ) within a collection.
             </p>
             <p>
-                rules for the consistency of values of properties of collections and
-                properties of their members are given for each collection type.
+                rules for the consistency of values of properties of collections and properties of their members are
+                given for each collection type.
             </p>
             <p>
                 Note that there is a single `member` property.
-                OWL or SHACL constraints may limit the range depending on the context of different collection
-                types.
+                OWL or SHACL constraints may limit the range depending on the context of different collection types.
             </p>
             <p class="note">
                 See <a href="#ModelTimeSeries">Time series</a> and
-                <a href="#ModelObservationCollection">Homogeneous observation collection</a>
-                for examples of use of `hasMember`.
+                <a href="#ModelObservationCollection">Homogeneous observation collection</a> for examples of use of
+                `hasMember`.
             </p>
             <table>
                 <tbody>
@@ -3130,14 +3047,14 @@ sosa:phenomenonTime [
                         <th>Range Includes</th>
                         <td>
                             <a>sosa:Execution</a>,
-                            <a>sosa:ExecutionCollection</a>,
                             <a>sosa:Actuation</a>,
-                            <a>sosa:ActuationCollection</a>,
                             <a>sosa:Observation</a>,
-                            <a>sosa:ObservationCollection</a>,
                             <a>sosa:Sampling</a>,
-                            <a>sosa:SamplingCollection</a>,
                             <a>sosa:Sample</a>,
+                            <a>sosa:ExecutionCollection</a>,
+                            <a>sosa:ActuationCollection</a>,
+                            <a>sosa:ObservationCollection</a>,
+                            <a>sosa:SamplingCollection</a>
                             <a>sosa:SampleCollection</a>
                         </td>
                     </tr>
@@ -3171,9 +3088,7 @@ sosa:phenomenonTime [
 
             <p>
                 <em>is member of collection</em> &mdash;
-                Link from a member
-                (
-                <a href="#SOSAExecution">Execution</a>
+                Link from a member ( <a href="#SOSAExecution">Execution</a>
                 or <a href="#SOSAActuation">Actuation</a>
                 or <a href="#SOSAObservation">Observation</a>
                 or <a href="#SOSASampling">Sampling</a>
@@ -3184,17 +3099,15 @@ sosa:phenomenonTime [
                 or <a href="#SOSAObservationCollection">collection of Observations</a>
                 or <a href="#SOSASamplingCollection">collection of Samplings</a>
                 or <a href="#SOSASampleCollection">collection of Samples</a>
-                )
-                to a collection it belongs to.
+                ) to a collection it belongs to.
             </p>
             <p>
-                rules for the consistency of values of properties of collections and
-                properties of their members are given for each collection type.
+                rules for the consistency of values of properties of collections and properties of their members are
+                given for each collection type.
             </p>
             <p>
-                Note that there is a single `member` property. OWL or SHACL constraints
-                may
-                limit the range depending on the context of different collection types.
+                Note that there is a single `member` property. OWL or SHACL constraints may limit the range depending on
+                the context of different collection types.
             </p>
             <table>
                 <tbody>
@@ -3208,14 +3121,14 @@ sosa:phenomenonTime [
                         <th>Domain Includes</th>
                         <td>
                             <a>sosa:Execution</a>,
-                            <a>sosa:ExecutionCollection</a>,
                             <a>sosa:Actuation</a>,
-                            <a>sosa:ActuationCollection</a>,
                             <a>sosa:Observation</a>,
-                            <a>sosa:ObservationCollection</a>,
                             <a>sosa:Sampling</a>,
-                            <a>sosa:SamplingCollection</a>,
                             <a>sosa:Sample</a>,
+                            <a>sosa:ExecutionCollection</a>,
+                            <a>sosa:ActuationCollection</a>,
+                            <a>sosa:ObservationCollection</a>,
+                            <a>sosa:SamplingCollection</a>
                             <a>sosa:SampleCollection</a>
                         </td>
                     </tr>
@@ -3254,12 +3167,9 @@ sosa:phenomenonTime [
     <section class="informative" id="Collections-extensions">
         <h5>Other collections</h5>
         <p>
-            Collections of other entities associated with sensing, actuation and sampling could use the same
-            pattern.
-            For example, networks of sensors and platforms (sites and stations) are common in environmental
-            monitoring.
-            Furthermore, higher level aggregations of both entities and activities, such as occur in the context
-            of
+            Collections of other entities associated with sensing, actuation and sampling could use the same pattern.
+            For example, networks of sensors and platforms (sites and stations) are common in environmental monitoring.
+            Furthermore, higher level aggregations of both entities and activities, such as occur in the context of
             projects, initiatives, and campaigns, might be described using similar patterns.
             However, the details of these cases are currently beyond the scope of the SSN Ontology.
         </p>
@@ -3268,11 +3178,8 @@ sosa:phenomenonTime [
             [[prov-o]].
             An <a href="#PROV-alignment">alignment of SSN to PROV</a> is provided in this document.
             A basic Project Ontology based on PROV has also been proposed [[Project-PROV]].
-            Higher level aggregations in SSN applications should consider the PROV framework along with the
-            recursive
-            <a>sosa:hasMember</a>/<a>sosa:isMemberOf</a> pattern used for
-            SSN
-            collections.
+            Higher level aggregations in SSN applications should consider the PROV framework along with the recursive
+            <a>sosa:hasMember</a>/<a>sosa:isMemberOf</a> pattern used for SSN collections.
         </p>
 
     </section>

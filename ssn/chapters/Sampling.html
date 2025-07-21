@@ -101,17 +101,15 @@
                 </tr>
                 <tr>
                     <th>Examples</th>
-                    <td>A 'station' is a spatial sample, in the form of an identifiable
-                        locality where a <a href="#SOSASensor">Sensor</a> system or procedure may be deployed and an
-                        observation made.
-                        In the context of the observation model, it connotes the 'world in the vicinity of the
-                        station', so the observed properties relate to the physical medium at the station, and not
-                        to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.
+                    <td>A 'station' is a spatial sample, in the form of an identifiable locality where a
+                        <a href="#SOSASensor">Sensor</a> system or procedure may be deployed and an observation made.
+                        In the context of the observation model, it connotes the 'world in the vicinity of the station',
+                        so the observed properties relate to the physical medium at the station, and not to any physical
+                        artifact such as a mooring, buoy, benchmark, monument, well, etc.
                         <br><br>
-                        A statistical sample is often designed to be characteristic of an
-                        entire population, so that <a href="#SOSAObservation">Observations</a> can be
-                        made regarding the sample that provide a good estimate of the properties of the
-                        population.
+                        A statistical sample is often designed to be characteristic of an entire population, so that
+                        <a href="#SOSAObservation">Observations</a> can be made regarding the sample that provide a good
+                        estimate of the properties of the population.
                     </td>
                 </tr>
                 <tr class="ssn">
@@ -374,9 +372,8 @@
         </p>
         <ol>
             <li>
-                Where an individual <a href="#SOSASampleCollection">SampleCollection</a>
-                <i>omits a property</i>, a member <a href="#SOSASample">Sample</a> (direct or transitive) MAY have any
-                value for that property.
+                Where an individual <a href="#SOSASampleCollection">SampleCollection</a> <i>omits a property</i>, a
+                member <a href="#SOSASample">Sample</a> (direct or transitive) MAY have any value for that property.
             </li>
             <li>
                 Where an individual <a href="#SOSASampleCollection">SampleCollection</a> has <i>a single value for a
@@ -476,8 +473,8 @@
                 <tr>
                     <th>Examples</th>
                     <td>
-                        A ball mill, diamond drill, hammer, hypodermic syringe and needle,
-                        image <a href="#SOSASensor">Sensor</a> or a soil auger can all act as
+                        A ball mill, diamond drill, hammer, hypodermic syringe and needle, image
+                        <a href="#SOSASensor">Sensor</a> or a soil auger can all act as
                         <a href="#SOSASampler">Samplers</a>.
                         Sometimes the distinction between the <a href="#SOSASampler">Sampler</a> and the
                         <a href="#SOSASampler">Sensor</a> is not evident, if they are packaged as a unit.
@@ -625,9 +622,8 @@
         </p>
         <ol>
             <li>
-                Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a>
-                <i>omits a property</i>, a member <a href="#SOSASampling">Sampling</a> (direct or
-                transitive) MAY have any value for that property.
+                Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> <i>omits a property</i>, a
+                member <a href="#SOSASampling">Sampling</a> (direct or transitive) MAY have any value for that property.
             </li>
             <li>
                 Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> has <i>a
@@ -638,23 +634,20 @@
                 <a href="#SOSASamplingCollection">SamplingCollection</a>.
             </li>
             <li>
-                Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> has
-                <i>more than one value for a property</i>, each member <a href="#SOSASampling">Sampling</a> (direct or
-                transitive) MUST have a value for that property that matches one of the values for the property in the
-                collection.
+                Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> has <i>more than one value
+                    for a property</i>, each member <a href="#SOSASampling">Sampling</a> (direct or transitive) MUST
+                have a value for that property that matches one of the values for the property in the collection.
             </li>
             <li>
-                Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> <i>has a
-                    value for a property that is a range or interval</i>, each member
-                <a href="#SOSASampling">Sampling</a>
-                (direct or transitive) MUST have a value for that
-                property that matches or falls within that range or interval.
+                Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> <i>has a value for a
+                    property that is a range or interval</i>, each member <a href="#SOSASampling">Sampling</a> (direct
+                or transitive) MUST have a value for that property that matches or falls within that range or interval.
             </li>
             <li>
-                Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> <i>has
-                    more than one value for a property that is a range or interval</i>, each member
-                <a href="#SOSASampling">Sampling</a> (direct or transitive) MUST have a value for that
-                property that matches or falls within one of those ranges or intervals.
+                Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> <i>has more than one value
+                    for a property that is a range or interval</i>, each member <a href="#SOSASampling">Sampling</a>
+                (direct or transitive) MUST have a value for that property that matches or falls within one of those
+                ranges or intervals.
             </li>
         </ol>
         <p>
@@ -743,7 +736,6 @@
                     <th class="restrictions">Restriction</th>
                     <td>
                         <a>sosa:implementedBy</a> <em><b>ONLY</b></em> <a>sosa:Sampler</a>
-
                     </td>
                 </tr>
                 <tr>
@@ -1180,12 +1172,15 @@
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Sample</a>, <a>sosa:SampleCollection</a>
+                    <td>
+                        <a>sosa:Sample</a>, <a>sosa:SampleCollection</a>
                     </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
-                    <td><a>sosa:FeatureOfInterest</a></td>
+                    <td>
+                        <a>sosa:FeatureOfInterest</a>
+                    </td>
                 </tr>
                 <tr>
                     <th>Inverse property of</th>
@@ -1332,7 +1327,9 @@
             <tbody>
                 <tr>
                     <th>Domain Includes</th>
-                    <td><a>sosa:Sampler</a></td>
+                    <td>
+                        <a>sosa:Sampler</a>
+                    </td>
                 </tr>
                 <tr>
                     <th>Range Includes</th>
