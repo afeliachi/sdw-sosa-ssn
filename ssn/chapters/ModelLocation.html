@@ -14,13 +14,13 @@
 <p>
     In particular, GeoSPARQL [[GeoSPARQL]] provides a flexible and relatively complete platform for geospatial
     objects, that fosters interoperability between geo-datasets.
-    The property <code>geo:hasGeometry</code> MAY be used to attach a geometry or location to any entity.
-    Note that <code>geo:hasGeometry</code> has a global domain constraint which entails that any resource carrying this
-    property SHALL be inferred to be a <code>geo:Feature</code>
+    The property `geo:hasGeometry` MAY be used to attach a geometry or location to any entity.
+    Note that `geo:hasGeometry` has a global domain constraint which entails that any resource carrying this
+    property SHALL be inferred to be a `geo:Feature`
     (<a href="https://docs.ogc.org/is/22-047r1/22-047r1.html#_01414b7a-8464-4a9b-897d-46c471274ea6">GeoSPARQL 1.1,
         clause 8.4.1</a>).
     In case of classes, e.g., specific types of features of interest such as rivers, these MAY be explicitly defined as
-    subclasses of <code>geo:Feature</code>.
+    subclasses of `geo:Feature`.
 </p>
 
 <h5>Systems, Platforms, Deployments</h5>
@@ -122,7 +122,7 @@
     Geometry may appear in other contexts.
     For example, a determination of location using a GPS receiver can be described as an
     <a href="#SOSAObservation">Observation</a> whose <a href="#SOSAhasResult">hasResult</a> value is a geometry.
-    The following example illustrates this pattern, with the result being a GeoSPARQL <code>Geometry</code> object:
+    The following example illustrates this pattern, with the result being a GeoSPARQL `Geometry` object:
 </p>
 <figure id="Fig-GeometryResult">
     <embed alt="Geometry as the result of an observation" src="./images/GeometryResult.svg" style="width:75%" />
