@@ -4,10 +4,29 @@
     The System Capabilities Module imports SOSA and adds classes and properties required for the description of the
     operating conditions and capabilities of systems, in particular Sensors and Actuators.
 </p>
+            <p>The complexity of the SSN/SOSA ontologies is directly due to the complexity of the use-cases that they are
+                meant to support. Previous standards and data formats have been limited by the constraints of their
+                underlying technologies often resulting in solutions that were simple to implement but that could only
+                handle real-life exceptions through the use of workarounds. The use of &quot;fill
+                values&quot; or &quot;magic numbers&quot; were a simple and common solution to data quality requirements or to indicate equipment
+                failure. Unfortunatly, these could later be inadvertently analyzed as actual instrument readings.</p>
+            <p>The richness of RDF/S and ontological approaches offer oppourtunies for the rich and deep recording of system
+                information and results. This perversely creates a new problem in that the ability to handle complexity can 
+                make implementation difficult and costly for implementers that are simply
+                trying determine whether their ice cream is about to melt. The very richness of the semantic web
+                ecosystem also makes it tempting to over-specify data structures to an extents that it becomes inflexible.</p>
+
+            <p>The authors often wrestled with these issues when designing this standard and attempting to support the complexity
+                of real-life deployments: data quality constraints must ensure that the data is sensical while making allowanced
+                for the storage of out-of-bounds values that may indicate a problem with a deployed sensor.  The System
+                Capabilities Module deals with these issues using two primary conncepts: the systems's ability to sense and the
+                conditions under which it can sense them.</p>
+        
+
 <p style="text-align: center;">
-    The namespace for the System Capabilities Module is <code>http://www.w3.org/ns/sosa/</code>.</p>
+    The namespace for the System Capabilities Module is <code>http://www.w3.org/ns/sosa/systems/</code>.</p>
 <p style="text-align: center;">
-    The suggested prefix for the System Capabilities Module namespace is <code>sosa</code>. </p>
+    The suggested prefix for the System Capabilities Module namespace is <code>sosa-systems</code>. </p>
 <p style="text-align: center;">
     The RDF graph containing the definitions from the System Capabilities Module is available at
     <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>.
@@ -22,22 +41,9 @@
 <section class="informative" id="SysCap-overview">
     <h4>Overview and examples</h4>
     <div>
-        <div class="ednote">
-            <p>The complexity of the SSN/SOSA ontologies is directly due to the complexity of the use-cases that it is
-                meant to support. Previous standards and data formats have been limited by the constraints of their
-                underlying technologies often resulting in solutions that were simple to implement but that could only
-                handle real-life exceptions through the use of work arounds. A typical example are the use of "fill
-                values" or "magic numbers" to resolve data quality requirements or to indicate equipment failure that
-                could inadvertently later be analyzed as actual instrument readings.</p>
-            <p>RDF/S and ontological approaches suffer from a different problem in that complexity can be taken into
-                account to a degree that makes implementation difficult and costly for implementers that are simply
-                trying determine whether their ice cream is about to melt. The very richness of the semantic web
-                ecosystem also makes it tempting to over-specify data structures.</p>
-            <p>During the design of this standard, the authors often wrestled with these issues in attempting to support
-                the complexity of real-life deployments: data quality constraints ensure that the data is valid for the
-                performance of a sensor, but most also allow for the storage of sensor readings that are out-of-bound
-                and that indicate that there is a problem in the first place.</p>
-        </div>
+<p>
+    More to come here.
+</p>
 
         <p class="ssn">
             The following figure provides an overview on the classes
@@ -102,11 +108,12 @@
             <a>sosa:hasOperatingConditionKind</a>,
             <a>sosa:hasOperatingConditions</a>,
             <a>sosa:inCondition</a>,
-            <a>sosa:OperatingConditionKind</a>
+            <a>sosa:OperatingCondition</a>,
+            <a>system:hasSystemCapability</a>
         </p>
     </div>
 
-    <section class="specterm" id="SOSAhasOperatingConditionKind">
+k    <section class="specterm" id="SOSAhasOperatingConditionKind">
         <h5><dfn>sosa:hasOperatingConditionKind</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasOperatingConditionKind
@@ -282,8 +289,8 @@
             </p>
             <p>
                 <em>Suboptimal Conditions</em> &mdash;
-                The conditions under which a system is expected to operate suboptimally, but can recover if the
-                conditions are restored to normal operating conditions.
+                The conditions under which a system is expected to operate suboptimally. Results will still be reported but the
+                performance of the sensor, in term of precision for example, will be impaired.
             </p>
             <table>
                 <tbody>
@@ -311,8 +318,10 @@
             </p>
             <p>
                 <em>Survivable Conditions</em> &mdash;
-                The conditions under which a system is expected to survive. The system may be damaged if the survivable
-                conditions are violated.
+                The conditions under which a system is expected to survive, that is to continue to exist in its current form, even
+                if its future operations are impaired. A typical example is the temperature at which a sensor looses physical
+                integrety and looses its shape. A system or sensor exponse to conditions outside of those reported by SurvivableConditions
+                will no longer be serviceable.
             </p>
             <table>
                 <tbody>
@@ -329,7 +338,105 @@
                 <span class="back">[<a href="#Overview">Back to top</a>]</span>
             </div>
         </section>
+
+        <section class="specterm" id="system:hasSystemCapability">
+            <h5><dfn>system:hasSystemCapability</dfn></h5>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/system:hasSystemCapability
+            </p>
+            <p>
+                <strong>an OWL Property</strong>
+            </p>
+            <p>
+                <em>has System Capability</em> &mdash;
+                The capability of the sensor or system as an observation collection. A sensor or system may have more than one set
+                of system capability observation that are related to the conditions under which they hold true.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
+            </div>
+        </section>
+
+
+        <section class="specterm" id="system:hasSystemCapability">
+            <h5><dfn>system:hasSystemCapability</dfn></h5>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/system:hasSystemCapability
+            </p>
+            <p>
+                <strong>an OWL Property</strong>
+            </p>
+            <p>
+                <em>has System Capability</em> &mdash;
+                The capability of the sensor or system as an observation collection. A sensor or system may have more than one set
+                of system capability observation that are related to the conditions under which they hold true.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
+            </div>
+        </section>
+
+
+        <section class="specterm" id="system:Battery">
+            <h5><dfn>system:Battery</dfn></h5>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/system:Battery
+            </p>
+            <p>
+                <strong>an OWL Property</strong>
+            </p>
+            <p>
+                <em>has System Capability</em> &mdash;
+                A class representing a Battery powering a <a href="#SOSASystem">System</a>. The battery class is an abstract class
+                that is expected to hold the primary or secondary storage power source for a system.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
+            </div>
+        </section>
+
+The BatteryLifetime class from previous systems extensions was removed in favour of addtional collectons
+
+
+
     </section>
+
+
+
+
 
     <section id="SysCap-capability-properties">
         <h6>Sample vocabulary of properties about system capabilities</h6>
