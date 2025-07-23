@@ -105,15 +105,45 @@
     <p>This section introduces the following classes and properties:</p>
     <div class="azlist">
         <p>
+            <a>sosa:Battery</a>,
             <a>sosa:hasOperatingConditionKind</a>,
             <a>sosa:hasOperatingConditions</a>,
+            <a>sosa:hasSystemCapability</a>,
             <a>sosa:inCondition</a>,
-            <a>sosa:OperatingCondition</a>,
-            <a>system:hasSystemCapability</a>
+            <a>sosa:OperatingConditionKind</a>
         </p>
     </div>
 
-k    <section class="specterm" id="SOSAhasOperatingConditionKind">
+    <section class="specterm" id="SOSABattery">
+        <h5><dfn>sosa:Battery</dfn></h5>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/Battery
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p>
+            <em>Bettery</em> &mdash;
+            A class representing a Battery powering a <a href="#SOSASystem">System</a>. The battery class is an abstract class
+            that is expected to hold the primary or secondary storage power source for a system.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttonpanel">
+            <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
+    </section>
+
+    <section class="specterm" id="SOSAhasOperatingConditionKind">
         <h5><dfn>sosa:hasOperatingConditionKind</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasOperatingConditionKind
@@ -165,6 +195,42 @@ k    <section class="specterm" id="SOSAhasOperatingConditionKind">
                     <th>is Defined By</th>
                     <td>
                         <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttonpanel">
+            <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
+    </section>
+
+    <section class="specterm" id="SOSAhasSystemCapability">
+        <h5><dfn>sosa:hasSystemCapability</dfn></h5>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasSystemCapability
+        </p>
+        <p>
+            <strong>an OWL Property</strong>
+        </p>
+        <p>
+            <em>has System Capability</em> &mdash;
+            Relation between a System and an ObservationCollection (or Observation) describing  
+            the capability of the system. A sensor or system may have more than one set
+            of system capabilities that are related to the conditions under which they hold true.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>sub-property of</th>
+                    <td>
+                        <a>sosa:isFeatureOfInterestOf</a>
                     </td>
                 </tr>
             </tbody>
@@ -338,99 +404,6 @@ k    <section class="specterm" id="SOSAhasOperatingConditionKind">
                 <span class="back">[<a href="#Overview">Back to top</a>]</span>
             </div>
         </section>
-
-        <section class="specterm" id="system:hasSystemCapability">
-            <h5><dfn>system:hasSystemCapability</dfn></h5>
-            <p class="crossreference">
-                <strong>IRI:</strong> http://www.w3.org/ns/system:hasSystemCapability
-            </p>
-            <p>
-                <strong>an OWL Property</strong>
-            </p>
-            <p>
-                <em>has System Capability</em> &mdash;
-                The capability of the sensor or system as an observation collection. A sensor or system may have more than one set
-                of system capability observation that are related to the conditions under which they hold true.
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>is Defined By</th>
-                        <td>
-                            <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="buttonpanel">
-                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
-                <span class="back">[<a href="#Overview">Back to top</a>]</span>
-            </div>
-        </section>
-
-
-        <section class="specterm" id="system:hasSystemCapability">
-            <h5><dfn>system:hasSystemCapability</dfn></h5>
-            <p class="crossreference">
-                <strong>IRI:</strong> http://www.w3.org/ns/system:hasSystemCapability
-            </p>
-            <p>
-                <strong>an OWL Property</strong>
-            </p>
-            <p>
-                <em>has System Capability</em> &mdash;
-                The capability of the sensor or system as an observation collection. A sensor or system may have more than one set
-                of system capability observation that are related to the conditions under which they hold true.
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>is Defined By</th>
-                        <td>
-                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="buttonpanel">
-                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
-                <span class="back">[<a href="#Overview">Back to top</a>]</span>
-            </div>
-        </section>
-
-
-        <section class="specterm" id="system:Battery">
-            <h5><dfn>system:Battery</dfn></h5>
-            <p class="crossreference">
-                <strong>IRI:</strong> http://www.w3.org/ns/system:Battery
-            </p>
-            <p>
-                <strong>an OWL Property</strong>
-            </p>
-            <p>
-                <em>has System Capability</em> &mdash;
-                A class representing a Battery powering a <a href="#SOSASystem">System</a>. The battery class is an abstract class
-                that is expected to hold the primary or secondary storage power source for a system.
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>is Defined By</th>
-                        <td>
-                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="buttonpanel">
-                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
-                <span class="back">[<a href="#Overview">Back to top</a>]</span>
-            </div>
-        </section>
-
-The BatteryLifetime class from previous systems extensions was removed in favour of addtional collectons
-
-
 
     </section>
 

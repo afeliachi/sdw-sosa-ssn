@@ -2,7 +2,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
 @prefix sampling: <http://www.w3.org/ns/sosa/sampling/> .
 @prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -17,6 +16,7 @@
 @prefix ex: <https://example.org/data/> .
 @base  <https://example.org/data/> .
 
+## NOTE: This graph should be deleted, it uses the old SSN-System module and uses xsd:maxInclusive and xsd:minInclusive. 
 
 <house/134> a sosa:FeatureOfInterest ;
 	rdfs:comment "House #134."@en .
@@ -67,12 +67,12 @@
 	
 <DHT22/4578#TemperatureSensor> a sosa:Sensor, sosa:System ;
 	rdfs:comment "The DHT22 #4578 embedded temperature sensor."@en ;
-	ssn-system:hasSystemCapability <DHT22TempCapability> .
+	system:hasSystemCapability <DHT22TempCapability> .
   
-<DHT22TempCapability> a sosa:Property, ssn-system:SystemCapability ;
+<DHT22TempCapability> a sosa:Property, system:SystemCapability ;
 	rdfs:comment "The capabilities of the temperature sensor in normal temperature conditions."@en;
-	ssn-system:inCondition <normalTemp> ;
-	ssn-system:hasSystemProperty <DHT22TempSensitivity> .
+	system:inCondition <normalTemp> ;
+	system:hasSystemProperty <DHT22TempSensitivity> .
   
 <normalTemp> a schema:PropertyValue ;
 	rdfs:comment "A temperature range of -40 to 80 Celsius."@en ;
@@ -80,7 +80,7 @@
 	xsd:maxInclusive 80.0 ;
 	qudt:hasUnit unit:DEG_C .
 
-<DHT22TempSensitivity> a sosa:Property, ssn-system:Sensitivity, ssn-system:Resolution, schema:PropertyValue ;
+<DHT22TempSensitivity> a sosa:Property, system:Sensitivity, system:Resolution, schema:PropertyValue ;
 	rdfs:comment "The sensitivity and resolution of the temperature sensor is 0.1 °C in normal temperature and humidity conditions."@en ;
 	schema:value 0.1 ;
 	qudt:hasUnit unit:DEG_C .

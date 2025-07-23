@@ -84,9 +84,17 @@ sosa:SurvivableConditions a sosa:OperatingConditionKind ;
   """@en ;
   rdfs:isDefinedBy sosa-systems: .
 
+## Relationship involved in the description of the System capability
 
-## Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which an observation (typically about the system capabilities) is valid
-## Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which a property (typically about the system capabilities) is valid
+sosa:hasSystemCapability a owl:ObjectProperty ;
+  schema:domainIncludes sosa:System , sosa:Sensor, sosa:Actuator, sosa:Sampler ;
+  schema:rangeIncludes sosa:ExecutionCollection , sosa:Execution ;
+  rdfs:label "has system capability"en ;
+  skos:definition "Relation between a System and an ObservationCollection (or Observation) describing the capability of the system. A sensor or system may have more than one set of system capabilities that are related to the conditions under which they hold true."@en ;
+  rdfs:isDefinedBy sosa-systems: .
+  
+
+## Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which an observation or property (typically about the system capabilities) is valid
 
 sosa:inCondition a owl:ObjectProperty ;
   schema:domainIncludes sosa:Observation , sosa:Property ;

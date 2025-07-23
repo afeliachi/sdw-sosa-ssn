@@ -11,6 +11,8 @@
 @prefix system: <http://www.w3.org/ns/ssn/systems/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+## NOTE: This graph should be deleted, it uses the old SSN-System module and uses xsd:maxInclusive and xsd:minInclusive. 
+
 ex:IBS-TH2 rdfs:subClassOf sosa:Sensor ;
     rdfs:comment "The class of IBS-TH2 sensors is a subclass of the general class of sensors" ;
     gs1:pip <https://inkbird.com/products/hygrometer-ibs-th2> ;
