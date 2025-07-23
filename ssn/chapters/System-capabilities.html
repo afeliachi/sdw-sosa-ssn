@@ -1,33 +1,59 @@
 <h3>System Capabilities Module</h3>
 
 <p>
-    The System Capabilities Module imports SOSA and adds classes and properties required for the description of the operating conditions and capabilities of systems, in particular Sensors and Actuators.
+    The System Capabilities Module imports SOSA and adds classes and properties required for the description of the
+    operating conditions and capabilities of systems, in particular Sensors and Actuators.
 </p>
+            <p>The complexity of the SSN/SOSA ontologies is directly due to the complexity of the use-cases that they are
+                meant to support. Previous standards and data formats have been limited by the constraints of their
+                underlying technologies often resulting in solutions that were simple to implement but that could only
+                handle real-life exceptions through the use of workarounds. The use of &quot;fill
+                values&quot; or &quot;magic numbers&quot; were a simple and common solution to data quality requirements or to indicate equipment
+                failure. Unfortunatly, these could later be inadvertently analyzed as actual instrument readings.</p>
+            <p>The richness of RDF/S and ontological approaches offer oppourtunies for the rich and deep recording of system
+                information and results. This perversely creates a new problem in that the ability to handle complexity can 
+                make implementation difficult and costly for implementers that are simply
+                trying determine whether their ice cream is about to melt. The very richness of the semantic web
+                ecosystem also makes it tempting to over-specify data structures to an extents that it becomes inflexible.</p>
+
+            <p>The authors often wrestled with these issues when designing this standard and attempting to support the complexity
+                of real-life deployments: data quality constraints must ensure that the data is sensical while making allowanced
+                for the storage of out-of-bounds values that may indicate a problem with a deployed sensor.  The System
+                Capabilities Module deals with these issues using two primary conncepts: the systems's ability to sense and the
+                conditions under which it can sense them.</p>
+        
+
 <p style="text-align: center;">
-The namespace for the System Capabilities Module is <code>http://www.w3.org/ns/sosa/</code>.</p>
+    The namespace for the System Capabilities Module is <code>http://www.w3.org/ns/sosa/systems/</code>.</p>
 <p style="text-align: center;">
-The suggested prefix for the System Capabilities Module namespace is <code>sosa</code>. </p>
+    The suggested prefix for the System Capabilities Module namespace is <code>sosa-systems</code>. </p>
 <p style="text-align: center;">
-The RDF graph containing the definitions from the System Capabilities Module is available at
-<a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>.
+    The RDF graph containing the definitions from the System Capabilities Module is available at
+    <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>.
 </p>
 
 <p class="note">
-    System Capabilities was a module in the 'Horizontal Segmentation' section of the previous edition of the SSN Ontology [[vocab-ssn-20171019]].
+    System Capabilities was a module in the 'Horizontal Segmentation' section of the previous edition of the SSN
+    Ontology [[vocab-ssn-20171019]].
     This module has been heavily simplified and moved to Appendix in this edition.
 </p>
 
-<section class="informative">
+<section class="informative" id="SysCap-overview">
     <h4>Overview and examples</h4>
     <div>
-        <p class="ednote">TODO intro by oldsceptik</p>
+<p>
+    More to come here.
+</p>
+
         <p class="ssn">
             The following figure provides an overview on the classes
-            and properties that are specifically related to modeling operating conditions, and system capabilities, under given conditions.</p>
+            and properties that are specifically related to modeling operating conditions, and system capabilities,
+            under given conditions.</p>
         <figure class="ssn">
             <embed alt="Conditions" src="images/SSNSystem-operating-conditions.svg" style="width: 100%;" />
             <figcaption>
-                Classes and relationships involved in the description of the operating conditions of a system (typically an observation collection about the system environment).
+                Classes and relationships involved in the description of the operating conditions of a system (typically
+                an observation collection about the system environment).
                 <br>
                 In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
                 <br>
@@ -38,7 +64,9 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         <figure class="ssn">
             <embed alt="System properties" src="images/SSNSystem-observation-conditions.svg" style="width: 100%;" />
             <figcaption>
-                Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which an observation (typically about the system capabilities) is valid
+                Detailed classes and relationships involved in the description of the conditions (typically an
+                observation collection about the system environment) under which an observation (typically about the
+                system capabilities) is valid
                 <br>
                 In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
                 <br>
@@ -49,7 +77,9 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         <figure class="ssn">
             <embed alt="System properties" src="images/SSNSystem-property-conditions.svg" style="width: 100%;" />
             <figcaption>
-                Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which a property (typically about the system capabilities) is valid
+                Detailed classes and relationships involved in the description of the conditions (typically an
+                observation collection about the system environment) under which a property (typically about the system
+                capabilities) is valid
                 <br>
                 In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
                 <br>
@@ -61,26 +91,30 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         <p>The following examples illustrate how the terms related to System capabilities, operating ranges, and
             survival ranges can be used:</p>
         <ul>
-            <li><a href="https://github.com/w3c/sdw-sosa-ssn/blob/gh-pages/ssn/rdf/examples/dht22.ttl">DHT22 Description</a></li>
-            <li><a href="https://github.com/w3c/sdw-sosa-ssn/blob/gh-pages/ssn/rdf/examples/ip68.ttl">IP68 Smart Sensor</a></li>
+            <li><a href="https://github.com/w3c/sdw-sosa-ssn/blob/gh-pages/ssn/rdf/examples/dht22.ttl">DHT22 Description</a>
+            </li>
+            <li><a href="https://github.com/w3c/sdw-sosa-ssn/blob/gh-pages/ssn/rdf/examples/ip68.ttl">IP68 Smart Sensor</a>
+            </li>
         </ul>
-        <p class="ednote">TODO check examples, maybe add more</p> 
+        <p class="ednote">TODO check examples, maybe add more</p>
     </div>
 </section>
-<section>
+
+<section id="SysCap-specification">
     <h4>Specification</h4>
     <p>This section introduces the following classes and properties:</p>
     <div class="azlist">
         <p>
-            <a href="#SOSAhasOperatingConditionKind">sosa:hasOperatingConditionKind</a>,
-            <a href="#SOSAhasOperatingConditions">sosa:hasOperatingConditions</a>,
-            <a href="#SOSAinCondition">sosa:inCondition</a>,
-            <a href="#SOSAOperatingConditionKind">sosa:OperatingConditionKind</a>
+            <a>sosa:hasOperatingConditionKind</a>,
+            <a>sosa:hasOperatingConditions</a>,
+            <a>sosa:inCondition</a>,
+            <a>sosa:OperatingCondition</a>,
+            <a>system:hasSystemCapability</a>
         </p>
     </div>
 
-    <section class="specterm" id="SOSAhasOperatingConditionKind">
-        <h5><a href="#SOSAhasOperatingConditionKind">sosa:hasOperatingConditionKind</a></h5>
+k    <section class="specterm" id="SOSAhasOperatingConditionKind">
+        <h5><dfn>sosa:hasOperatingConditionKind</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasOperatingConditionKind
         </p>
@@ -89,7 +123,10 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         </p>
         <p>
             <em>has operating condition kind</em> &mdash;
-            Relation between an ObservationCollection (or Observation) and an OperatingConditionKind describing the kind of the operating conditions in the context of the system. A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
+            Relation between an ObservationCollection (or Observation) and an OperatingConditionKind describing the kind
+            of the operating conditions in the context of the system. A short but extensible list of operating condition
+            kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable
+            conditions.
         </p>
         <table>
             <tbody>
@@ -108,7 +145,7 @@ The RDF graph containing the definitions from the System Capabilities Module is 
     </section>
 
     <section class="specterm" id="SOSAhasOperatingConditions">
-        <h5><a href="#SOSAhasOperatingConditions">sosa:hasOperatingConditions</a></h5>
+        <h5><dfn>sosa:hasOperatingConditions</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasOperatingConditions
         </p>
@@ -117,7 +154,10 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         </p>
         <p>
             <em>has operating conditions</em> &mdash;
-            Relation between a System and an ObservationCollection (or Observation) describing conditions under which the System operates more or less normally (TODO improve here). A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
+            Relation between a System and an ObservationCollection (or Observation) describing conditions under which
+            the System operates more or less normally (TODO improve here). A short but extensible list of operating
+            condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and
+            survivable conditions.
         </p>
         <table>
             <tbody>
@@ -135,9 +175,8 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         </div>
     </section>
 
-
     <section class="specterm" id="SOSAinCondition">
-        <h5><a href="#SOSAinCondition">sosa:inCondition</a></h5>
+        <h5><dfn>sosa:inCondition</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/inCondition
         </p>
@@ -146,7 +185,9 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         </p>
         <p>
             <em>in condition</em> &mdash;
-            Describes the conditions (typically an observation collection about the system environment) defining the validity context of an observation (typically about the system capabilities) or a property (typically about the system capabilities)..
+            Describes the conditions (typically an observation collection about the system environment) defining the
+            validity context of an observation (typically about the system capabilities) or a property (typically about
+            the system capabilities)..
         </p>
         <table>
             <tbody>
@@ -165,7 +206,7 @@ The RDF graph containing the definitions from the System Capabilities Module is 
     </section>
 
     <section class="specterm" id="SOSAOperatingConditionKind">
-        <h5><a href="#SOSAOperatingConditionKind">sosa:OperatingConditionKind</a></h5>
+        <h5><dfn>sosa:OperatingConditionKind</dfn></h5>
         <p class="crossreference">
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/OperatingConditionKind
         </p>
@@ -174,7 +215,9 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         </p>
         <p>
             <em>Operating Condition Kind</em> &mdash;
-            A concept that describes the kind of operating conditions in the context of a system. A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
+            A concept that describes the kind of operating conditions in the context of a system. A short but extensible
+            list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal
+            conditions, and survivable conditions.
         </p>
         <table>
             <tbody>
@@ -197,18 +240,19 @@ The RDF graph containing the definitions from the System Capabilities Module is 
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
-    <section>
+
+    <section id="SysCap-OperatingConditionKinds">
         <h6>Operating Condition Kinds</h6>
         <p>The System Capabilities Module includes a short but extensible list of operating condition kinds:</p>
         <div class="azlist">
             <p>
-                <a href="#SOSANormalOperatingConditions">sosa:NormalOperatingConditions</a>,
-                <a href="#SOSASuboptimalConditions">sosa:SuboptimalConditions</a>,
-                <a href="#SOSASurvivableConditions">sosa:SurvivableConditions</a>
+                <a>sosa:NormalOperatingConditions</a>,
+                <a>sosa:SuboptimalConditions</a>,
+                <a>sosa:SurvivableConditions</a>
             </p>
         </div>
         <section class="specterm" id="SOSANormalOperatingConditions">
-            <h5><a href="#SOSANormalOperatingConditions">sosa:NormalOperatingConditions</a></h5>
+            <h5><dfn>sosa:NormalOperatingConditions</dfn></h5>
             <p class="crossreference">
                 <strong>IRI:</strong> http://www.w3.org/ns/sosa/NormalOperatingConditions
             </p>
@@ -236,7 +280,7 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         </section>
 
         <section class="specterm" id="SOSASuboptimalConditions">
-            <h5><a href="#SOSASuboptimalConditions">sosa:SuboptimalConditions</a></h5>
+            <h5><dfn>sosa:SuboptimalConditions</dfn></h5>
             <p class="crossreference">
                 <strong>IRI:</strong> http://www.w3.org/ns/sosa/SuboptimalConditions
             </p>
@@ -245,7 +289,8 @@ The RDF graph containing the definitions from the System Capabilities Module is 
             </p>
             <p>
                 <em>Suboptimal Conditions</em> &mdash;
-                The conditions under which a system is expected to operate suboptimally, but can recover if the conditions are restored to normal operating conditions.
+                The conditions under which a system is expected to operate suboptimally. Results will still be reported but the
+                performance of the sensor, in term of precision for example, will be impaired.
             </p>
             <table>
                 <tbody>
@@ -262,8 +307,9 @@ The RDF graph containing the definitions from the System Capabilities Module is 
                 <span class="back">[<a href="#Overview">Back to top</a>]</span>
             </div>
         </section>
+
         <section class="specterm" id="SOSASurvivableConditions">
-            <h5><a href="#SOSASurvivableConditions">sosa:SurvivableConditions</a></h5>
+            <h5><dfn>sosa:SurvivableConditions</dfn></h5>
             <p class="crossreference">
                 <strong>IRI:</strong> http://www.w3.org/ns/sosa/SurvivableConditions
             </p>
@@ -272,7 +318,39 @@ The RDF graph containing the definitions from the System Capabilities Module is 
             </p>
             <p>
                 <em>Survivable Conditions</em> &mdash;
-                The conditions under which a system is expected to survive. The system may be damaged if the survivable conditions are violated.
+                The conditions under which a system is expected to survive, that is to continue to exist in its current form, even
+                if its future operations are impaired. A typical example is the temperature at which a sensor looses physical
+                integrety and looses its shape. A system or sensor exponse to conditions outside of those reported by SurvivableConditions
+                will no longer be serviceable.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
+            </div>
+        </section>
+
+        <section class="specterm" id="system:hasSystemCapability">
+            <h5><dfn>system:hasSystemCapability</dfn></h5>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/system:hasSystemCapability
+            </p>
+            <p>
+                <strong>an OWL Property</strong>
+            </p>
+            <p>
+                <em>has System Capability</em> &mdash;
+                The capability of the sensor or system as an observation collection. A sensor or system may have more than one set
+                of system capability observation that are related to the conditions under which they hold true.
             </p>
             <table>
                 <tbody>
@@ -289,20 +367,94 @@ The RDF graph containing the definitions from the System Capabilities Module is 
                 <span class="back">[<a href="#Overview">Back to top</a>]</span>
             </div>
         </section>
+
+
+        <section class="specterm" id="system:hasSystemCapability">
+            <h5><dfn>system:hasSystemCapability</dfn></h5>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/system:hasSystemCapability
+            </p>
+            <p>
+                <strong>an OWL Property</strong>
+            </p>
+            <p>
+                <em>has System Capability</em> &mdash;
+                The capability of the sensor or system as an observation collection. A sensor or system may have more than one set
+                of system capability observation that are related to the conditions under which they hold true.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
+            </div>
+        </section>
+
+
+        <section class="specterm" id="system:Battery">
+            <h5><dfn>system:Battery</dfn></h5>
+            <p class="crossreference">
+                <strong>IRI:</strong> http://www.w3.org/ns/system:Battery
+            </p>
+            <p>
+                <strong>an OWL Property</strong>
+            </p>
+            <p>
+                <em>has System Capability</em> &mdash;
+                A class representing a Battery powering a <a href="#SOSASystem">System</a>. The battery class is an abstract class
+                that is expected to hold the primary or secondary storage power source for a system.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>is Defined By</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttonpanel">
+                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+                <span class="back">[<a href="#Overview">Back to top</a>]</span>
+            </div>
+        </section>
+
+The BatteryLifetime class from previous systems extensions was removed in favour of addtional collectons
+
+
+
     </section>
-    <section>
+
+
+
+
+
+    <section id="SysCap-capability-properties">
         <h6>Sample vocabulary of properties about system capabilities</h6>
         <p>SOSA/SSN includes a sample vocabulary consisting of a short list of properties about system capabilities.</p>
         <p style="text-align: center;">
-        The namespace for this sample vocabulary is <code>http://www.w3.org/ns/sosa/system-capabilities-module#</code>.</p>
+            The namespace for this sample vocabulary is
+            <code>http://www.w3.org/ns/sosa/system-capabilities-module#</code>.
+        </p>
         <p style="text-align: center;">
-        The suggested prefix for this sample vocabulary is <code>sosa-cap</code>. </p>
+            The suggested prefix for this sample vocabulary is <code>sosa-cap</code>. </p>
         <p style="text-align: center;">
-        The RDF graph containing the definition of terms in this sample vocabulary is available at
-        <a href="http://www.w3.org/ns/sosa/system-capabilities-properties">http://www.w3.org/ns/sosa/system-capabilities-properties</a>.
+            The RDF graph containing the definition of terms in this sample vocabulary is available at
+            <a href="http://www.w3.org/ns/sosa/system-capabilities-properties">http://www.w3.org/ns/sosa/system-capabilities-properties</a>.
         </p>
         <p class="note">
-        This vocabulary is only for illustration purposes, as the Spatio-temporal Data on the Web Working Group does not ambition to maintain a living list of properties. Extensions of this list should be led by other organization, and publications done to relevant vocabulary portals.</p>
+            This vocabulary is only for illustration purposes, as the Spatio-temporal Data on the Web Working Group does
+            not ambition to maintain a living list of properties. Extensions of this list should be led by other
+            organization, and publications done to relevant vocabulary portals.</p>
         <div class="azlist">
             <p>
                 <a href="#SOSACAPTemperaturePrecision">sosa-cap:TemperaturePrecision</a>,
@@ -312,19 +464,25 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         </div>
         <p>TODO CONTINUE</p>
     </section>
-    <section>
+
+    <section id="SysCap-environment-properties">
         <h6>Sample vocabulary of properties about the system environment</h6>
-        <p>SOSA/SSN includes a sample vocabulary consisting of a short list of properties about the system environment.</p>
+        <p>SOSA/SSN includes a sample vocabulary consisting of a short list of properties about the system environment.
+        </p>
         <p style="text-align: center;">
-        The namespace for this sample vocabulary is <code>http://www.w3.org/ns/sosa/system-environment-module#</code>.</p>
+            The namespace for this sample vocabulary is
+            <code>http://www.w3.org/ns/sosa/system-environment-module#</code>.
+        </p>
         <p style="text-align: center;">
-        The suggested prefix for this sample vocabulary is <code>sosa-env</code>. </p>
+            The suggested prefix for this sample vocabulary is <code>sosa-env</code>. </p>
         <p style="text-align: center;">
-        The RDF graph containing the definition of terms in this sample vocabulary is available at
-        <a href="http://www.w3.org/ns/sosa/system-environment-properties">http://www.w3.org/ns/sosa/system-environment-properties</a>.
+            The RDF graph containing the definition of terms in this sample vocabulary is available at
+            <a href="http://www.w3.org/ns/sosa/system-environment-properties">http://www.w3.org/ns/sosa/system-environment-properties</a>.
         </p>
         <p class="note">
-        This vocabulary is only for illustration purposes, as the Spatio-temporal Data on the Web Working Group does not ambition to maintain a living list of properties. Extensions of this list should be led by other organization, and publications done to relevant vocabulary portals.</p>
+            This vocabulary is only for illustration purposes, as the Spatio-temporal Data on the Web Working Group does
+            not ambition to maintain a living list of properties. Extensions of this list should be led by other
+            organization, and publications done to relevant vocabulary portals.</p>
         <div class="azlist">
             <p>
                 <a href="#SOSAENVEnvironmentTemperature">sosa-env:EnvironmentTemperature</a>,
@@ -333,4 +491,5 @@ The RDF graph containing the definitions from the System Capabilities Module is 
         </div>
         <p class="ednote">TODO CONTINUE</p>
     </section>
+
 </section>
