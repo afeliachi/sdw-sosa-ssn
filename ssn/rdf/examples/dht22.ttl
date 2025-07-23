@@ -51,7 +51,7 @@ ex:DHT22_4578_HumiditySensor a sosa:Sensor , sosa:System ;
   sosa:implements ex:DHT22_Procedure ;
 
 # These are operating conditions under which the sensor can properly function. These are seperate from capabilites in that not
-# all of the condition observations may be sensed by the sensor itself, eg: supply voltage.
+# all of the condition observations may be sensed by the sensor itself, e.g.: supply voltage.
 
 DHT22_4578_HumiditySensorNormalOperatingConditions a sosa:NormalOperatingConditions;
  rdfs:comment "The conditions in which the DHT22 system is expected to operate."@en ;
@@ -97,7 +97,7 @@ ex:minimumOperatingHumidity a sosa:Observation ;
  sosa:observedProperty ex:minSensorEnvironmentHumidityLimit ;
  sosa:hasSimpleResult "0.0"^^xsd:decimal ;
  qudt:hasUnit unit:PERCENT .
-# Some will point out that a percentage is not a unit, however this present in QUDT and used here
+# Some will point out that a percentage is not a unit, however this is present in QUDT and used here
 # as a convinience for display purposes.
 
 ex:minSensorEnvironmentHumidityLimit a iop:Variable, sosa:Property;
