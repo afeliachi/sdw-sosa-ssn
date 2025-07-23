@@ -541,7 +541,8 @@
                 workflow, protocol, plan, algorithm, or computational method specifying how to make an Execution
             </p>
             <p>
-                A Procedure is re-usable, and might be applied in many Actuations, Observations, or Samplings.
+                A Procedure is re-usable, and might be applied in many Executions (Actuations, Observations, or
+                Samplings).
                 It explains the steps to be carried out to arrive at reproducible results.
             </p>
             <p class="note">
@@ -563,18 +564,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>Note</th>
-                        <td>Many <a href="#SOSAExecution">Executions</a>
-                            may be created via the same Procedure, the same way as many tables are assembled using
-                            the same instructions (as information objects, not their concrete realization).
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Note</th>
-                        <td>Specializations of Procedure are provided for
-                            <a href="#SOSAActuatingProcedure">Actuating</a>,
-                            <a href="#SOSAObservingProcedure">Observing</a>, and
-                            <a href="#SOSASamplingProcedure">Sampling</a>.
+                        <th>Scope Note</th>
+                        <td>
+                            Procedure generalizes the
+                            <a href="#SOSAActuatingProcedure">ActuatingProcedure</a>,
+                            <a href="#SOSAObservingProcedure">ObservingProcedure</a>, and
+                            <a href="#SOSASamplingProcedure">SamplingProcedure</a> classes.
+                            It appears in the ontology to support the description of a common pattern for executions and
+                            their properties.
                         </td>
                     </tr>
                     <tr class="ssn">
