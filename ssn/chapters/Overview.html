@@ -1,10 +1,12 @@
 <h3>Overview of Classes and Properties</h3>
 <p>
-    The following figures show the key classes and properties in the ontology modules,
+    <a href="#Fig-Execution-overview"></a>, <a href="#Fig-Actuation-overview"></a>,
+    <a href="#Fig-Observation-overview"></a>, <a href="#Fig-Sampling-overview"></a>,
+    show the key classes and properties in the ontology modules,
     showing the general pattern for Executions,
     and from the perspectives of Actuation, Observation, and Sampling.
 </p>
-<figure id="Execution-overview">
+<figure id="Fig-Execution-overview">
     <embed alt="SSN ontology modules &mdash; Common" src="./images/Execution-overview.svg" style="width: 100%;" />
     <figcaption>
         Overview of the key classes and properties (general execution pattern)
@@ -13,7 +15,7 @@
     </figcaption>
 </figure>
 
-<figure id="Actuation-overview">
+<figure id="Fig-Actuation-overview">
     <embed alt="SSN ontology modules &mdash; Actuation" src="./images/Actuation-overview.svg" style="width: 100%;" />
     <figcaption>
         Overview of the key classes and properties (actuation perspective)
@@ -22,8 +24,9 @@
     </figcaption>
 </figure>
 
-<figure id="Observation-overview">
-    <embed alt="SSN ontology modules &mdash; Observation" src="./images/Observation-overview.svg" style="width: 100%;" />
+<figure id="Fig-Observation-overview">
+    <embed alt="SSN ontology modules &mdash; Observation" src="./images/Observation-overview.svg"
+        style="width: 100%;" />
     <figcaption>
         Overview of the key classes and properties (observation perspective)
         <br>
@@ -31,7 +34,7 @@
     </figcaption>
 </figure>
 
-<figure id="Sampling-overview">
+<figure id="Fig-Sampling-overview">
     <embed alt="SSN ontology modules &mdash; Sampling" src="./images/Sampling-overview.svg" style="width: 100%;" />
     <figcaption>
         Overview of the key classes and properties (sampling and sample perspective)
@@ -44,7 +47,7 @@
         The following are alphabetical lists of the classes and properties in the SSN Ontology.
     </p>
     <p class="note">
-        Terms added in the 2025 edition are indicated with an asterisk*.
+        Terms added in the 2023 Edition are indicated with an asterisk*.
     </p>
     <div class="azlist">
         <p>
@@ -86,13 +89,13 @@
             <a>sosa:deployedOnPlatform</a>,
             <a>sosa:deployedSystem</a>,
             <a>sosa:detects</a>,
-            <a>sosa:featureSampledBy</a>*,
+            <a>sosa:featureHasUltimateSample</a>*,
             <a>sosa:forProperty</a>,
             <a>sosa:hasDeployment</a>,
             <a>sosa:hasFeatureOfInterest</a>,
             <a>sosa:hasInput</a>,
             <a>sosa:hasInputValue</a>*,
-            <a href="#SOSAhasMember">sosa:hasMember*</a>,
+            <a>sosa:hasMember</a>*,
             <a>sosa:hasOriginalSample</a>*,
             <a>sosa:hasOutput</a>,
             <a>sosa:hasProcedure</a>*,
@@ -100,7 +103,7 @@
             <a>sosa:hasProxy</a>*,
             <a>sosa:hasResult</a>,
             <a>sosa:hasSample</a>,
-            <a>sosa:hasSampledFeature</a>*,
+            <a>sosa:isSampleOfUltimateFOI</a>*,
             <a>sosa:hasSubSystem</a>,
             <a>sosa:hasUltimateFeatureOfInterest</a>*,
             <a>sosa:hosts</a>,
@@ -113,6 +116,7 @@
             <a>sosa:isDetectedBy</a>*,
             <a>sosa:isFeatureOfInterestOf</a>,
             <a>sosa:isHostedBy</a>,
+            <a>sosa:isMemberOf</a>*,
             <a>sosa:isObservedBy</a>,
             <a>sosa:isOriginalSampleOf</a>*,
             <a>sosa:isPropertyOf</a>,
@@ -132,7 +136,6 @@
             <a>sosa:madeObservation</a>,
             <a>sosa:madeSampling</a>,
             <a>sosa:madeSamplingHasResult</a>*,
-            <a>sosa:isMemberOf</a>*,
             <a>sosa:observationRelatedTo</a>*,
             <a>sosa:observedProperty</a>,
             <a>sosa:observes</a>,
