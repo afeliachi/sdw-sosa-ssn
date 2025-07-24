@@ -1,8 +1,89 @@
-<h3>Planning</h3>
+<h3>Planning executions and collections</h3>
 <p>
-    Systems and platforms may be deployed with the intention of executing actuations, observations, or sampling at some future time. 
-    Specific deployments will usually be made for a specified target entity or feature-of-interest. 
+    Assets (Systems or Platforms) may be deployed with the intention of making Executions (Actuations, Observations, or
+    Sampling) at some future time.
+    Collections of Samples or Executions can be described ahead of their completion, inorder to indicate the intention
+    to make collections with the given properties at a future date.
+    Here we describe patterns that may be used in this way.
 </p>
-<p>
-    TBC
-</p>
+
+<section id="ModelPlan-Deployment">
+    <h4>Planned System Deployment</h4>
+    <p>
+        A specific <a>sosa:System</a> (<a>sosa:Actuator</a>, <a>sosa:Sensor</a>, <a>sosa:Sampler</a>) can be planned to
+        be attached to a
+        <a>sosa:Platform</a> as part of a <a>sosa:Deployment</a> during a nominated time interval.
+    </p>
+    <p>
+        For example, <a href="#Fig-PlannedDeployment"></a> describes the deployment of a specific <a>sosa:Sampler</a> (`ex:SA56`) on        a specified <a>sosa:Platform</a> (`ex:LOIRE_A_JARGEAU_WQ_Station`) on the Loire River between 2026 and 2028.
+        This Sampler implements a nominated <a>sosa:SamplingProcedure</a>. 
+        It may be associated with a potential set of        Samples, packaged in an empty <a>sosa:SampleCollection</a>, denoted by a blank node.
+    </p>
+    <p>
+        The resulting SampleCollection has no members prior to the deployment, but can be characterized prospectively in
+        terms of
+        the SamplingProcedure and Platform (station) used.
+    </p>
+    <figure id="Fig-PlannedDeployment">
+        <embed alt="Planned deployment of a sampler system" src="./images/PlannedDeployment.svg" style="width:90%" />
+        <figcaption>
+            Deployment of a Sampler.
+            <code>_:b3</code> is a "blank node" denoting the set of Samples that will be the result of this deployment.
+            <br>
+            <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
+        </figcaption>
+    </figure>
+    <pre class="example" data-include="./rdf/examples/SamplerDeployment.ttl" data-include-format="text"></pre>
+</section>
+
+<section id="ModelPlan-Collections">
+    <h4>Planned Collection using generic system</h4>
+    <p>
+        More generically, a Collection (i.e., <a>sosa:ActuationCollection</a>, <a>sosa:ObservationCollection</a>,
+        <a>sosa:SamplingCollection</a>, or <a>sosa:SampleCollection</a>) can be described which is made by a potential
+        deployment, where the actual system is only specified in terms of the Procedure implemented.
+    </p>
+    <p>
+        For example, <a href="#Fig-PlannedSampleCollection"></a> describes a potential set of samples, packaged in a
+        <a>sosa:SampleCollection</a>, of the Loire River collected from a specified <a>sosa:Platform</a>, using a given
+        <a>sosa:SamplingProcedure</a>.
+        The actual <a>sosa:Sampler</a> is not specified, only that it must implement the nominated SamplingProcedure,
+        and be deployed at the nominated station.
+    </p>
+    <figure id="Fig-PlannedSampleCollection">
+        <embed alt="Planned sample collection" src="./images/PlannedSampleCollection.svg" style="width:90%" />
+        <figcaption>
+            A planned SampleCollection.
+            <code>_:b1</code> is a "blank node" denoting some Sampler that implements <code>ex:pH_sampling-A56</code>
+            and
+            is deployed on <code>ex:LOIRE_A_JARGEAU_WQ_Station</code>.
+            <br>
+            <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
+        </figcaption>
+    </figure>
+    <pre class="example" data-include="./rdf/examples/PlannedSampleCollection.ttl" data-include-format="text"></pre>
+
+    <p>
+        Then <a href="#Fig-PlannedObservationCollection"></a> describes a potential set of observations of <em>pH</em>,
+        packaged in a <a>sosa:ObservationCollection</a>, whose (proximate) feature of interest is a member of this
+        collection, and thus must be consistent with the requirements for membership - i.e., be sampled on the specified
+        <a>sosa:Platform</a> using the nominated <a>sosa:ObservingProcedure</a>.
+        Again, the actual System (<a>sosa:Sensor</a>) is not specified, only that it must implement the nominated
+        ObservingProcedure.
+    </p>
+    <p>
+        It is not specified that the observations are made at any particular time or place, so might be
+        <em>ex-situ</em>.
+    </p>
+    <figure id="Fig-PlannedObservationCollection">
+        <embed alt="Planned observation collection" src="./images/PlannedObservationCollection.svg" style="width:90%" />
+        <figcaption>
+            A planned ObservationCollection.
+            <code>_:b2</code> is a "blank node" denoting any Sample that is a member of <code>ex:SamColpH</code>.
+            <br>
+            <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
+        </figcaption>
+    </figure>
+    <pre class="example" data-include="./rdf/examples/PlannedObservationCollection.ttl"
+        data-include-format="text"></pre>
+</section>
