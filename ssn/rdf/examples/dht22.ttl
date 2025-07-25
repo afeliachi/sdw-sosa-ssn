@@ -2,7 +2,7 @@
 @prefix ex: <https://example.org/data/> .
 @prefix et: <http://vocabs.lter-europe.net/EnvThes/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix iop: <https://w3id.org/iadopt/ont/1.1.0> .
 @prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
@@ -22,6 +22,7 @@
 ex:DHT22_Procedure a sosa:ObservingProcedure ;
   sosa:hasOutput ex:DHT22_output ;
 .
+
 ex:DHT22_output a rdfp:GraphDescription ;
   rdfs:comment "The output is a RDF Graph that describes both the temperature and the humidity. It can be validated by a SHACL shapes graph."@en ;
   rdfp:presentedBy [
@@ -29,42 +30,46 @@ ex:DHT22_output a rdfp:GraphDescription ;
     rdfp:validationRule ex:shacl_shapes_graph ;
   ] ;
 .
+
+# System objects; a DHT22 sensor instance, serial number 4578
 ex:DHT22_4578 a sosa:System ;
   rdfs:comment "DHT22 sensor #4578 contains a humidity and a temperature sensor."@en ;
   rdfs:seeAlso <https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf> ;
-  sosa:hasSubSystem ex:DHT22_4578_TemperatureSensor, ex:DHT22_4578_HumiditySensor ;
-  sosa:hasOperatingConditions ex:DHT22_4578_TemperatureSensorNormalOperatingConditions, DHT22_4578_HumiditySensorNormalOperatingConditions ;
+  sosa:hasSubSystem ex:DHT22_4578_TemperatureSensor,ex:DHT22_4578_HumiditySensor ;
+  sosa:hasOperatingCondition ex:DHT22_4578_TemperatureSensorNormalOperatingConditions, ex:DHT22_4578_HumiditySensorNormalOperatingConditions ;
+  ex:serialNumber "4578" ;
 .
 
 ex:DHT22_4578_TemperatureSensor a sosa:Sensor , sosa:System ;
   rdfs:comment "The embedded temperature sensor, a specific instance of temperature sensor."@en ;
-  sosa-systems:hasSystemCapability ex:DHT22_4578_TemperatureSensorCapabilities ;
-  sosa-systems:hasOperatingCondition ex:DHT22_4578_TemperatureSensorNormalOperatingConditions ;
+  sosa:hasSystemCapability ex:DHT22_4578_TemperatureSensorCapabilities ;
+  sosa:hasOperatingCondition ex:DHT22_4578_TemperatureSensorNormalOperatingConditions ;
   sosa:implements ex:DHT22_Procedure ;
 .
 
 ex:DHT22_4578_HumiditySensor a sosa:Sensor , sosa:System ;
   rdfs:comment "The embedded humidity sensor, a specific instance of humidity sensor."@en ;
-  sosa-systems:hasSystemCapability ex:DHT22_4578_HumiditySensorCapabilities ;
-  sosa-systems:hasOperatingCondition DHT22_4578_HumiditySensorNormalOperatingConditions;
+  sosa:hasSystemCapability ex:DHT22_4578_HumiditySensorCapabilities ;
+  sosa:hasOperatingCondition ex:DHT22_4578_HumiditySensorNormalOperatingConditions;
   sosa:implements ex:DHT22_Procedure ;
+.
 
 # These are operating conditions under which the sensor can properly function. These are seperate from capabilites in that not
-# all of the condition observations may be sensed by the sensor itself, e.g.: supply voltage.
+# all of the condition observations may be sensed by the sensor itself, e.g.: supply voltage. 
 
-DHT22_4578_HumiditySensorNormalOperatingConditions a sosa:ObservationCollection ;
- sosa:hasOperatingConditionKind sosa:NormalOperatingConditions ;
+ex:DHT22_4578_HumiditySensorNormalOperatingConditions a sosa:ObservationCollection ;
+ rdf:type sosa:NormalOperatingConditions ;
  rdfs:comment "The conditions in which the DHT22 system is expected to operate."@en ;
  sosa:hasMember ex:minimumOperatingTemperature, ex:maximumOperatingTemperature, ex:minimumOperatingHumidity, ex:maximumOperatingHumidity, ex:mimimalOperatingInputVoltage, ex:maximumOperatingInputVoltage, ex:nominalOperatingInputVoltage .
 
 ex:DHT22_4578_TemperatureSensorNormalOperatingConditions a sosa:ObservationCollection ;
- sosa:hasOperatingConditionKind sosa:NormalOperatingConditions ;
+ rdf:type sosa:NormalOperatingConditions ;
  rdfs:comment "The conditions in which the DHT22 system is expected to operate."@en ;
  sosa:hasMember ex:minimumOperatingTemperature, ex:maximumOperatingTemperature, ex:mimimalOperatingInputVoltage, ex:maximumOperatingInputVoltage, ex:nominalOperatingInputVoltage .
 
-# The minimum operating temperature in this case is the temperature of the sensor itself
-# as heat transfer from the mechanical mounting will directly impact the sensor rather than
-# ambient air. Note that these conditions apply to the entire System, including both sensors.
+# The minimum / maxinum operating temperatures in this case are the temperature of the System itself
+# as heat transfer from the mechanical mounting will directly impact the sensor rather than the
+# ambient air. 
 
 ex:minimumOperatingTemperature a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578 ;
@@ -73,9 +78,9 @@ ex:minimumOperatingTemperature a sosa:Observation ;
  qudt:hasUnit unit:DEG_C .
 
 ex:minimumSensorTemperatureLimit a iop:Variable, sosa:Property;
-iop:hasStatisticalModifier nom:minimum ;
-iop:hasObjectOfInterest ex:DHT22_4578;
-iop:hasProperty qudt:Temperature .
+ iop:hasStatisticalModifier uom:minimum ;
+ iop:hasObjectOfInterest ex:DHT22_4578;
+ iop:hasProperty qudt:Temperature .
 
 ex:maximumOperatingTemperature a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578 ;
@@ -84,26 +89,23 @@ ex:maximumOperatingTemperature a sosa:Observation ;
  qudt:hasUnit unit:DEG_C .
 
 ex:maximumSensorTemperatureLimit a iop:Variable, sosa:Property;
- iop:hasStatisticalModifier nom:maximum ;
+ iop:hasStatisticalModifier uom:maximum ;
  iop:hasObjectOfInterest ex:DHT22_4578 ;
  iop:hasProperty qudt:Temperature .
 
-# Unlike temperature, the operating condition of the System are affected by the relative
-# humidity of the air around the sensor.
+# Unlike temperature, the operating condition of the System are affected by the relative humidity of the air around the sensor. 
+# Percentage is not a unit, however this is present in QUDT and used here as a convinience for display purposes.
 
-qk:RelativeHumidity skos:narrower ex:relativeHumidityOfAirAroundSensor .
 
 ex:minimumOperatingHumidity a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578;
  sosa:observedProperty ex:minSensorEnvironmentHumidityLimit ;
  sosa:hasSimpleResult 0.0 ;
  qudt:hasUnit unit:PERCENT .
-# Some will point out that a percentage is not a unit, however this is present in QUDT and used here
-# as a convinience for display purposes.
 
 ex:minSensorEnvironmentHumidityLimit a iop:Variable, sosa:Property;
- iop:hasStatisticalModifier nom:minimum ;
- iop:hasObjectOfInterest et:23 ;
+ iop:hasStatisticalModifier uom:minimum ;
+ iop:hasObjectOfInterest ex:airAround_DHT22_4578;
  iop:hasProperty qk:RelativeHumidity .
 
 ex:maximumOperatingHumidity a sosa:Observation ;
@@ -113,12 +115,18 @@ ex:maximumOperatingHumidity a sosa:Observation ;
  qudt:hasUnit unit:PERCENT .
 
 ex:maxSensorEnvironmentHumidityLimit a iop:Variable, sosa:Property;
- iop:hasStatisticalModifier nom:maximum ;
- iop:hasObjectOfInterest et:23 ;
+ iop:hasStatisticalModifier uom:maximum ;
+ iop:hasObjectOfInterest ex:airAround_DHT22_4578;
  iop:hasProperty qk:RelativeHumidity .
 
+ex:airAround_DHT22_4578 skos:broader et:23;
+  rdfs:label "The air immediatly around the DHT22 sensor." 
+.
+  
 et:23 rdfs:label "air" .
 
+#
+#
 ex:DHT22_4578_inputVoltage a sosa:FeatureOfInterest ;
  rdfs:comment "The DC voltage being supplied to the sensor"@en ;.
 
@@ -129,22 +137,22 @@ ex:mimimalOperatingInputVoltage  a sosa:Observation ;
   qudt:hasUnit unit:V .
 
 ex:mimOperatingInputVoltageRestriction a iop:Variable, sosa:Property;
-  iop:hasStatisticalModifier nom:minimum ;
+  iop:hasStatisticalModifier uom:minimum ;
   iop:hasObjectOfInterest ex:DHT22_4578 ;
   iop:hasProperty qk:Voltage .
 
-ex:maximumOperatingInputVoltage a a sosa:Observation ;
+ex:maximumOperatingInputVoltage a sosa:Observation ;
   sosa:hasFeatureOfInterest ex:DHT22_4578_inputVoltage ;
   sosa:observedProperty ex:maxOperatingInputVoltageRestriction ;
   sosa:hasSimpleResult 6.0 ;
   qudt:hasUnit unit:V .
 
 ex:maxOperatingInputVoltageRestriction a iop:Variable, sosa:Property;
-  iop:hasStatisticalModifier nom:maximum ;
+  iop:hasStatisticalModifier uom:maximum ;
   iop:hasObjectOfInterest ex:DHT22_4578 ;
   iop:hasProperty qk:Voltage .
 
-ex:nominalOperatingInputVoltage a a sosa:Observation ;
+ex:nominalOperatingInputVoltage  a sosa:Observation ;
   sosa:hasFeatureOfInterest ex:DHT22_4578_inputVoltage ;
   sosa:observedProperty ex:nominalOperatingInputVoltageRestriction ;
   sosa:hasSimpleResult 5.0 ;
@@ -152,87 +160,94 @@ ex:nominalOperatingInputVoltage a a sosa:Observation ;
 
 # A complaint may be that the time period of the averaging period is unspecified; 
 ex:nominalOperatingInputVoltageRestriction a iop:Variable, sosa:Property;
-  iop:hasStatisticalModifier nom:average ;
+  iop:hasStatisticalModifier uom:average ;
   iop:hasObjectOfInterest ex:DHT22_4578 ;
   iop:hasProperty qk:Voltage .
 
+#
+# These are the system capabilities
+#
+
 ex:DHT22_4578_TemperatureSensorCapabilities a sosa:ObservationCollection;
  sosa:inCondition ex:DHT22_4578_TemperatureSensorNormalOperatingConditions ;
- sosa:hasMember ex:DHT22_4578_minimumMeasureableTemperature, DHT22_4578_maximumMeasureableTemperature, ex:DHT22_4578_TemperatureMeasurementAccuracy, ex:DHT22_4578_TemperatureMeasurementSensitivity, ex:DHT22_4578_TemperatureMeasurementFrequency .
+ sosa:hasMember ex:DHT22_4578_minimumMeasureableTemperature, ex:DHT22_4578_maximumMeasureableTemperature, ex:DHT22_4578_TemperatureMeasurementAccuracy, ex:DHT22_4578_TemperatureMeasurementSensitivity, ex:DHT22_4578_TemperatureMeasurementFrequency .
 
 ex:DHT22_4578_HumiditySensorCapabilities a sosa:ObservationCollection;
  sosa:inCondition ex:DHT22_4578_HumiditySensorNormalOperatingConditions ;
- sosa:hasMember ex:DHT22_4578_minimumMeasureableTemperature, DHT22_4578_maximumMeasureableTemperature, ex:DHT22_4578_TemperatureMeasurementAccuracy, ex:DHT22_4578_TemperatureMeasurementSensitivity, ex:DHT22_4578_TemperatureMeasurementFrequency,ex:DHT22_4578_minimumMeasureableRelativeHumidity, ex:DHT22_4578_maximumMeasureableRelativeHumidity, ex:DHT22_4578_RelativeHumidityFrequency .
+ sosa:hasMember ex:DHT22_4578_minimumMeasureableRelativeHumidity, ex:DHT22_4578_maximumMeasureableRelativeHumidity, ex:DHT22_4578_RelativeHumidityFrequency .
 
 ex:DHT22_4578_minimumMeasureableTemperature a sosa:Observation ;
- sosa:hasFeatureOfInterest et:23;
+ sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor ;
  sosa:property ex:DHT22_4578_minimumMeasureableTemperatureLimit;
  sosa:hasSimpleResult "-40.0"^^xsd:decimal ;
  qudt:hasUnit unit:DEG_C .
 
 ex:DHT22_4578_minimumMeasureableTemperatureLimit a iop:Variable, sosa:Property;
- iop:hasStatisticalModifier nom:minimum ;
- iop:hasObjectOfInterest ex:DHT22_4578_TemperatureSensor;
- iop:hasProperty et:23 .
+ iop:hasStatisticalModifier uom:minimum ;
+ iop:hasObjectOfInterest ex:airAround_DHT22_4578;
+ iop:hasProperty qudt:Temperature .
 
 ex:DHT22_4578_maximumMeasureableTemperature a sosa:Observation ;
- sosa:hasFeatureOfInterest et:23;
+ sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor ;
  sosa:property ex:DHT22_4578_maximumMeasureableTemperatureLimit;
  sosa:hasSimpleResult 80.0 ;
  qudt:hasUnit unit:DEG_C .
 
 ex:DHT22_4578_maximumMeasureableTemperatureLimit a iop:Variable, sosa:Property;
- iop:hasStatisticalModifier nom:maximum ;
- iop:hasObjectOfInterest ex:DHT22_4578_TemperatureSensor;
- iop:hasProperty et:23 .
+ iop:hasStatisticalModifier uom:maximum ;
+ iop:hasObjectOfInterest ex:airAround_DHT22_4578;
+ iop:hasProperty qudt:Temperature .
 
 
 ex:DHT22_4578_TemperatureMeasurementAccuracy a sosa:Observation ;
- sosa:hasFeatureOfInterest et:23;
- sosa:property sosa-systems:Accuracy ;
+ sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor;
+ sosa:property sosa:Accuracy ;
  sosa:hasSimpleResult 0.5 ;
  qudt:hasUnit unit:DEG_C .
 
+
 ex:DHT22_4578_TemperatureMeasurementSensitivity a sosa:Observation ;
- sosa:hasFeatureOfInterest et:23;
- sosa:property sosa-systems:Sensitivity , sosa-systems:Resolution ;
+ sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor;
+ sosa:property sosa:Sensitivity ,sosa:Resolution ;
  sosa:hasSimpleResult 0.1 ;
  qudt:hasUnit unit:DEG_C .
 
 ex:DHT22_4578_TemperatureMeasurementFrequency a sosa:Observation ;
  rdfs:comment "The smallest possible time between one observation and the next is 2 s on average."@en ;
- sosa:hasFeatureOfInterest et:23;
+ sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor;
  sosa:property ex:DHT22_4578_TemperatureMeasurementFrequencyLimit ;
  sosa:hasSimpleResult 2.0 ;
- qudt:hasUnit unit:SEC ;
+ qudt:hasUnit unit:SEC .
+
+# TODO Likely wrong
 
 ex:DHT22_4578_TemperatureMeasurementFrequencyLimit  a iop:Variable, sosa:Property;
-  iop:hasStatisticalModifier nom:average ;
-  iop:hasObjectOfInterest ex:DHT22_4578_TemperatureSensor;
+  iop:hasStatisticalModifier uom:average ;
+  iop:hasObjectOfInterest ex:airAround_DHT22_4578;
   iop:hasProperty qk:Period .
 
 # These are very close to the system conditions and the same limits can be reused.
 ex:DHT22_4578_minimumMeasureableRelativeHumidity a sosa:Observation ;
- sosa:hasFeatureOfInterest et:23;
+ sosa:hasFeatureOfInterest ex:DHT22_4578_HumiditySensor;
  sosa:property ex:minSensorEnvironmentHumidityLimit;
  sosa:hasSimpleResult 0.0 ;
  qudt:hasUnit unit:PERCENT .
 
 ex:DHT22_4578_maximumMeasureableRelativeHumidity a sosa:Observation ;
- sosa:hasFeatureOfInterest et:23;
+ sosa:hasFeatureOfInterest ex:DHT22_4578_HumiditySensor;
  sosa:property ex:maxSensorEnvironmentHumidityLimit;
  sosa:hasSimpleResult 100.0 ;
  qudt:hasUnit unit:PERCENT .
 
 ex:DHT22_4578_RelativeHumidityFrequency a sosa:Observation ;
  rdfs:comment "The smallest possible time between one observation and the next is 2 s on average."@en ;
- sosa:hasFeatureOfInterest et:23;
+ sosa:hasFeatureOfInterest ex:DHT22_4578_HumiditySensor;
  sosa:property ex:DHT22_4578_RelativeHumidityFrequencyLimit ;
  sosa:hasSimpleResult 2.0 ;
- qudt:hasUnit unit:SEC ;
+ qudt:hasUnit unit:SEC .
 
 ex:DHT22_4578_RelativeHumidityFrequencyLimit  a iop:Variable, sosa:Property;
-  iop:hasStatisticalModifier nom:average ;
+  iop:hasStatisticalModifier uom:average ;
   iop:hasObjectOfInterest ex:DHT22_4578_HumiditySensor;
   iop:hasProperty qk:Period .
 

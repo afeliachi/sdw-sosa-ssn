@@ -9,8 +9,8 @@
                 underlying technologies often resulting in solutions that were simple to implement but that could only
                 handle real-life exceptions through the use of workarounds. The use of &quot;fill
                 values&quot; or &quot;magic numbers&quot; were a simple and common solution to data quality requirements or to indicate equipment
-                failure. Unfortunatly, these could later be inadvertently analyzed as actual instrument readings.</p>
-            <p>The richness of RDF/S and ontological approaches offer oppourtunies for the rich and deep recording of system
+                failure. Unfortunately, these could later be inadvertently analyzed as actual instrument readings.</p>
+            <p>The richness of RDF/S and ontological approaches offer opportunities for the rich and deep recording of system
                 information and results. This perversely creates a new problem in that the ability to handle complexity can 
                 make implementation difficult and costly for implementers that are simply
                 trying determine whether their ice cream is about to melt. The very richness of the semantic web
@@ -18,9 +18,7 @@
 
             <p>The authors often wrestled with these issues when designing this standard and attempting to support the complexity
                 of real-life deployments: data quality constraints must ensure that the data is sensical while making allowanced
-                for the storage of out-of-bounds values that may indicate a problem with a deployed sensor.  The System
-                Capabilities Module deals with these issues using two primary conncepts: the systems's ability to sense and the
-                conditions under which it can sense them.</p>
+                for the storage of out-of-bounds values that may indicate a problem with a deployed sensor.</p>
         
 
 <p style="text-align: center;">
@@ -39,47 +37,85 @@
 </p>
 
 <section class="informative" id="SysCap-overview">
-    <h4>Overview and examples</h4>
+    <h4>Overview</h4>
     <div>
-<p>
-    More to come here.
-</p>
+     <p>The System Capabilities Module comprises of has two primary concepts: the system's capability to sense and the conditions
+     under which it can do so.  Both concepts are closely related and are often described as one and the same in industrial
+     literature.  The System Capabilities describes the properties of the measurement being performed by the system while the
+     Operating Conditions describe the potentials environments in which the system is deployed.  This separation is needed in order
+     to account for the variability in the performance of the system under different environmental or operating parameters.
+     Furthermore:</p>
+     <ul>
+      <li>Some system depend on unreported environmental measurements in order to produce results (e.g.: temperature is a component of
+      the relative humidity calculation)
+      <li>Some systems have requirements for proper operation for properties that they are unable to sense themselves
+        (e.g.: minimum power supply voltage)
+      <li>The performance of some systems may vary according to environmental conditions (e.g.: the frequency counter accuracy being
+        affected by environmental temperature)
+     </ul>  
+        
+    <p>This information allows designers to communicate complex operating behavior to the consumer of the system results and to
+    simplify procurement and system deployment decision by enabling searches for systems capable of fulfilling a specific
+    requirement.</p>
+    <p>The implementation of capabilities and conditions is done through ObservationCollections that aggregate observations on
+    features and properties without a reporting sensor. Their reuse of the observation structure ensures consistency in reporting
+    values across the ontology and it may be the case that the same observation can be used for reporting both the capability and
+    the operating condition. This is application dependent and nuances may sometimes prevent reuse: a thermometer's capability is
+    based on its ability to measure a medium while its survival condition is based on its own physical temperature.</p>
 
-        <p class="ssn">
-            The following figure provides an overview on the classes
-            and properties that are specifically related to modeling operating conditions, and system capabilities,
-            under given conditions.</p>
         <figure class="ssn">
-            <embed alt="Conditions" src="images/SSNSystem-operating-conditions.svg" style="width: 100%;" />
+            <embed alt="Conditions" src="images/SystemOverviewDiagram.drawio.svg" style="width: 80%;" />
             <figcaption>
-                Classes and relationships involved in the description of the operating conditions of a system (typically
-                an observation collection about the system environment).
-                <br>
-                In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
+                Classes and relationships involved in the description of the operating capabilities and conditions of a system. In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
                 <br>
                 <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
             </figcaption>
         </figure>
+
+
+    <p>System operating conditions are further qualified through a SystemConditionKind class that gives guidance as to expected desirability
+    of the conditions. Three sub-classes are further provided as a basic classification: NormalOperatingCondition, SuboptimalOperatingConditions
+    and SurvivableOperatingConditions. Implementers may wish to extend these classes to account for other niche conditions.
+    Operating conditions are especially useful to implement performance bands through the use of specific system capabilities for
+    different measurement ranges. An example are environmental sensors that present different measurement accuracies in certain
+    concentration ranges or that offer detection-only capabilities at very low concentrations.</p>
+
 
         <figure class="ssn">
             <embed alt="System properties" src="images/SSNSystem-observation-conditions.svg" style="width: 100%;" />
             <figcaption>
                 Detailed classes and relationships involved in the description of the conditions (typically an
-                observation collection about the system environment) under which an observation (typically about the
-                system capabilities) is valid
+                observation collection about the system environment).
                 <br>
                 In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
                 <br>
                 <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
             </figcaption>
         </figure>
+
+
+    <p>Operating conditions determine which system capabilities will be in use based on the properties of the operating
+    environment. It is possible with additional ontological statements to create conditions that are &quot;latching&quot;, as in the case of
+    damaged sensors with permanently degraded operating characteristics. It is possible through additional observations to include
+    sensor operating conditions using external inputs to implement operating modes. However the specifications does not provide guidance
+    on an interoperable way to achieve this.</p>
+
+    <p class="note">
+    System Capabilities are properties that are relevant while the system is in operation. Operating Conditions may be relevant irrespective of
+    the operating state; a sensor that exceeds its SurvivalCondition will be rendered inoperable irrespective of whether it was powered on or off at the
+    time, as in the case of a deep water sensor reaching its crush-depth.
+    </p>
+
+</p>
+
+
 
         <figure class="ssn">
             <embed alt="System properties" src="images/SSNSystem-property-conditions.svg" style="width: 100%;" />
             <figcaption>
                 Detailed classes and relationships involved in the description of the conditions (typically an
                 observation collection about the system environment) under which a property (typically about the system
-                capabilities) is valid
+                capabilities) is valid.
                 <br>
                 In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
                 <br>
@@ -87,9 +123,61 @@
             </figcaption>
         </figure>
     </div>
+
+    </div> 
+    <h4>Guidance on System Capability properties and ranges</h4>
     <div>
-        <p>The following examples illustrate how the terms related to System capabilities, operating ranges, and
-            survival ranges can be used:</p>
+    <p>The System Capabilities module has been downsized in this edition and its vocabulary extensively reworked with a number of
+    classes deprecated in favor of external vocabularies and property repositories. The module further suffered from under specification
+    and lacked documentation over its intended use.</p>
+
+    <p>The usage of Observations has been expanded capabilities and conditions through the enumeration of values and constraints on
+    valued on properties and features without assigning a reporting sensor or timestamp. This allows to reuse the structure to
+    report on sensor behavior. The use of <a href="https://www.w3.org/TR/vocab-dqv/">Data Quality Vocabulary</a>, the <a
+    href="https://i-adopt.github.io/ontology/">I-ADOPT Framework ontology</a> and the <a
+    href="http://www.ontology-of-units-of-measure.org/page/om-2">Ontology of Units of Measure</a> to name a few. The examples
+    provided here are non-normative but lend themselves to most vocabularies.</p>
+
+
+    <p>This edition has also removed the notion of &quot;Ranges&quot; within its vocabulary due to the difficulty in using
+    numerical ranges as part of the specification. The use of xsd:minInclusive / xsd:maxInclusive was not ontologically possible
+    due to OWL2 profile limitations and schema:minValue / schema:maxValue created additional problems relating to the property of
+    the feature.</P>
+    
+    <p>A possible solution is the use of constrains to record sensor reading limitations.</p>
+     
+            <table>
+                <tbody>
+                    <tr>
+                    <tr>
+                        <th>Example</th>
+                        <td>
+                            <pre>
+ex:SensorCapabilityObservation a sosa:Observation ;
+ sosa:hasFeatureOfInterest ex:Sensor ;
+ sosa:property ex:SensorMinimumLimit;
+ sosa:hasSimpleResult "-40.0"^^xsd:decimal ;
+ qudt:hasUnit unit:DEG_C .
+
+ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
+ iop:hasStatisticalModifier uom:minimum ;
+ iop:hasObjectOfInterest ex:air;
+ iop:hasProperty qudt:Temperature .
+</pre>
+                        </td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>    
+
+    
+
+    </div>
+    
+    <h4>Further Examples</h4>
+
+    <div>
+        <p>The following examples illustrate how the terms related to System capabilities and operating conditions:</p>
         <ul>
             <li><a href="https://github.com/w3c/sdw-sosa-ssn/blob/gh-pages/ssn/rdf/examples/dht22.ttl">DHT22 Description</a>
             </li>
@@ -123,9 +211,9 @@
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Bettery</em> &mdash;
+            <em>Battery</em> &mdash;
             A class representing a Battery powering a <a href="#SOSASystem">System</a>. The battery class is an abstract class
-            that is expected to hold the primary or secondary storage power source for a system.
+            that is expected to represent the primary or secondary storage power source for a system.
         </p>
         <table>
             <tbody>
@@ -142,6 +230,7 @@
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
+
 
     <section class="specterm" id="SOSAhasOperatingConditionKind">
         <h5><dfn>sosa:hasOperatingConditionKind</dfn></h5>
@@ -355,7 +444,7 @@
             </p>
             <p>
                 <em>Suboptimal Conditions</em> &mdash;
-                The conditions under which a system is expected to operate suboptimally. Results will still be reported but the
+                The conditions under which a system is expected to operate sub-optimally. Results will still be reported but the
                 performance of the sensor, in term of precision for example, will be impaired.
             </p>
             <table>
@@ -386,7 +475,7 @@
                 <em>Survivable Conditions</em> &mdash;
                 The conditions under which a system is expected to survive, that is to continue to exist in its current form, even
                 if its future operations are impaired. A typical example is the temperature at which a sensor looses physical
-                integrety and looses its shape. A system or sensor exponse to conditions outside of those reported by SurvivableConditions
+                integrity and looses its shape. A system or sensor exposed to conditions outside of those reported by SurvivableConditions
                 will no longer be serviceable.
             </p>
             <table>
