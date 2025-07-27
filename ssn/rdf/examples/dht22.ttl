@@ -198,7 +198,6 @@ ex:DHT22_4578_maximumMeasureableTemperatureLimit a iop:Variable, sosa:Property;
  iop:hasObjectOfInterest ex:airAround_DHT22_4578;
  iop:hasProperty qudt:Temperature .
 
-
 ex:DHT22_4578_TemperatureMeasurementAccuracy a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor;
  sosa:property sosa:Accuracy ;

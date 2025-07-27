@@ -75,7 +75,7 @@
 
     <p>System operating conditions are further qualified through a SystemConditionKind class that gives guidance as to expected desirability
     of the conditions. Three sub-classes are further provided as a basic classification: NormalOperatingConditions, SuboptimalOperatingConditions
-    and SurvivableOperatingConditions. Implementers may wish to extend these classes to account for other niche conditions.
+    and SurvivableConditions. Implementers may wish to extend these classes to account for other niche conditions.
     Operating conditions are especially useful to implement performance bands through the use of specific system capabilities for
     different measurement ranges. An example are environmental sensors that present different measurement accuracies in certain
     concentration ranges or that offer detection-only capabilities at very low concentrations.</p>
@@ -402,7 +402,7 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
         <div class="azlist">
             <p>
                 <a>sosa:NormalOperatingConditions</a>,
-                <a>sosa:SuboptimalConditions</a>,
+                <a>sosa:SuboptimalOperatingConditions</a>,
                 <a>sosa:SurvivableConditions</a>
             </p>
         </div>
@@ -412,7 +412,7 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
                 <strong>IRI:</strong> http://www.w3.org/ns/sosa/NormalOperatingConditions
             </p>
             <p>
-                <strong>an OWL Individual</strong>
+                <strong>an OWL Class</strong>
             </p>
             <p>
                 <em>Normal Operating Conditions</em> &mdash;
@@ -421,6 +421,13 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
             <table>
                 <tbody>
                     <tr>
+                        <th>Sub class of</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/OperatingConditionKind">sosa:OperatingConditionKind</a>
+                        </td>
+                    </tr>
+                    <tr>
+
                         <th>is Defined By</th>
                         <td>
                             <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
@@ -434,13 +441,13 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
             </div>
         </section>
 
-        <section class="specterm" id="SOSASuboptimalConditions">
-            <h5><dfn>sosa:SuboptimalConditions</dfn></h5>
+        <section class="specterm" id="SOSASuboptimalOperatingConditions">
+            <h5><dfn>sosa:SuboptimalOperatingConditions</dfn></h5>
             <p class="crossreference">
                 <strong>IRI:</strong> http://www.w3.org/ns/sosa/SuboptimalConditions
             </p>
             <p>
-                <strong>an OWL Individual</strong>
+                <strong>an OWL Class</strong>
             </p>
             <p>
                 <em>Suboptimal Conditions</em> &mdash;
@@ -449,6 +456,12 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
             </p>
             <table>
                 <tbody>
+                    <tr>
+                        <th>Sub class of</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/OperatingConditionKind">sosa:OperatingConditionKind</a>
+                        </td>
+                    </tr>
                     <tr>
                         <th>is Defined By</th>
                         <td>
@@ -469,7 +482,7 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
                 <strong>IRI:</strong> http://www.w3.org/ns/sosa/SurvivableConditions
             </p>
             <p>
-                <strong>an OWL Individual</strong>
+                <strong>an OWL Class</strong>
             </p>
             <p>
                 <em>Survivable Conditions</em> &mdash;
@@ -480,6 +493,12 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
             </p>
             <table>
                 <tbody>
+                    <tr>
+                        <th>Sub class of</th>
+                        <td>
+                            <a href="http://www.w3.org/ns/sosa/OperatingConditionKind">sosa:OperatingConditionKind</a>
+                        </td>
+                    </tr>
                     <tr>
                         <th>is Defined By</th>
                         <td>

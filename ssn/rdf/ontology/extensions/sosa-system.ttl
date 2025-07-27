@@ -17,7 +17,7 @@
 
 sosa-systems: a owl:Ontology , voaf:Vocabulary ;
   dcterms:title "Ontology of operating conditions and capabilities of systems"@en ;
-  dcterms:description "The System Capabilities Module imports SOSA and adds classes and properties required for the description of the operating conditions and capabilities of systems, in particular Sensors and Actuators."@en ;
+  dcterms:description "The System Capabilities Module imports SOSA and adds classes and properties required for the description of the operating conditions and capabilities of systems, particularly Sensors and Actuators."@en ;
   dcterms:creator [ a foaf:Agent ; foaf:name "W3C/OGC Spatio-temporal Data on the Web Working Group"@en ] ;
   dcterms:rights "Copyright 2025 W3C/OGC." ;
   dcterms:license <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
@@ -63,21 +63,21 @@ sosa:OperatingConditionKind a owl:Class ;
 
 ## A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
 
-sosa:NormalOperatingConditions a sosa:OperatingConditionKind ;
+sosa:NormalOperatingConditions rdfs:subClassOf sosa:OperatingConditionKind ;
   rdfs:label "Normal Operating Conditions"@en ;
   skos:definition """
   The conditions under which a system is expected to operate normally.
   """@en ;
   rdfs:isDefinedBy sosa-systems: .
 
-sosa:SuboptimalConditions a sosa:OperatingConditionKind ;
+sosa:SuboptimalOperatingConditions rdfs:subClassOf sosa:OperatingConditionKind ;
   rdfs:label "Suboptimal Conditions"@en ;
   skos:definition """
-  The conditions under which a system is expected to operate suboptimally, but can recover if the conditions are restored to normal operating conditions.
+  The conditions under which a system is expected to operate suboptimally, but may recover if the conditions are restored to normal operating conditions.
   """@en ;
   rdfs:isDefinedBy sosa-systems: .
 
-sosa:SurvivableConditions a sosa:OperatingConditionKind ;
+sosa:SurvivableConditions rdfs:subClassOf sosa:OperatingConditionKind ;
   rdfs:label "Survivable Conditions"@en ;
   skos:definition """
   The conditions under which a system is expected to survive. The system may be damaged if the survivable conditions are violated.
