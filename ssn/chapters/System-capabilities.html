@@ -74,7 +74,7 @@
 
 
     <p>System operating conditions are further qualified through a SystemConditionKind class that gives guidance as to expected desirability
-    of the conditions. Three sub-classes are further provided as a basic classification: NormalOperatingCondition, SuboptimalOperatingConditions
+    of the conditions. Three sub-classes are further provided as a basic classification: NormalOperatingConditions, SuboptimalOperatingConditions
     and SurvivableOperatingConditions. Implementers may wish to extend these classes to account for other niche conditions.
     Operating conditions are especially useful to implement performance bands through the use of specific system capabilities for
     different measurement ranges. An example are environmental sensors that present different measurement accuracies in certain
@@ -274,7 +274,7 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
         <p>
             <em>has operating conditions</em> &mdash;
             Relation between a System and an ObservationCollection (or Observation) describing conditions under which
-            the System operates more or less normally (TODO improve here). A short but extensible list of operating
+            the System can operate. A short but extensible list of operating
             condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and
             survivable conditions.
         </p>
@@ -396,8 +396,8 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
         </div>
     </section>
 
-    <section id="SysCap-OperatingConditionKinds">
-        <h6>Operating Condition Kinds</h6>
+    <section id="SysCap-OperatingConditionKind">
+        <h6>Operating Condition Kind</h6>
         <p>The System Capabilities Module includes a short but extensible list of operating condition kinds:</p>
         <div class="azlist">
             <p>
@@ -495,10 +495,6 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
         </section>
 
     </section>
-
-
-
-
 
     <section id="SysCap-capability-properties">
         <h6>Sample vocabulary of properties about system capabilities</h6>
