@@ -6,7 +6,7 @@
 ex:ObsColpH a sosa:ObservationCollection ;
     sosa:hasUltimateFeatureOfInterest ex:Loire_River ; 
     sosa:observedProperty qk:PH ;
-    sosa:usedProcedure ex:pH_determination-A56 ;
+    sosa:usedProcedure ex:pH-A56 ;
     sosa:hasFeatureOfInterest ex:SC-LaJ2 ;
 .
 ex:Loire_River
@@ -15,7 +15,7 @@ ex:Loire_River
 qk:PH 
     a sosa:Property ;
 . 
-ex:pH_determination-A56 
+ex:pH-A56 
     a sosa:ObservingProcedure ;
 .
 ex:SC-LaJ2 

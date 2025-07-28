@@ -20,7 +20,7 @@
         2026 and 2028.
         This Sampler implements a nominated <a>sosa:SamplingProcedure</a>.
         It may be associated with a potential set of Samples, packaged in an empty <a>sosa:SampleCollection</a>
-        (`ex:SC-LaJ`).
+        (`ex:SC-LaJ1`).
     </p>
     <p>
         The resulting SampleCollection has no members prior to the deployment, but can be characterized prospectively in
@@ -31,7 +31,7 @@
         <embed alt="Planned deployment of a sampler system" src="./images/PlannedDeployment.svg" style="width:90%" />
         <figcaption>
             Deployment of a Sampler.
-            `ex:SC-LaJ` denotes the set of Samples that will be the result of this deployment.
+            `ex:SC-LaJ1` denotes the set of Samples that will be the result of this deployment.
             <br>
             <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
         </figcaption>
@@ -57,7 +57,7 @@
         <embed alt="Planned sample collection" src="./images/PlannedSampleCollection.svg" style="width:90%" />
         <figcaption>
             A planned SampleCollection.
-            `_:b1` is a "blank node" denoting some Sampler that implements `ex:pH_sampling-A56` and is deployed on
+            `_:b1` is a "blank node" denoting some Sampler that implements `ex:sA56` and is deployed on
             `ex:LOIRE_A_JARGEAU_WQ_Station`.
             <br>
             <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
@@ -72,8 +72,8 @@
         described above (`ex:SC-LaJ2`).
         Each member of the <a>sosa:ObservationCollection</a>must be consistent with the
         <a href="#SOSAObservationCollection">requirements for membership of an ObservationCollection</a> - i.e., be
-        sampled on the specified <a>sosa:Platform</a> using the nominated <a>sosa:ObservingProcedure</a>, and whose
-        <a>sosa:hasFeatureOfInterest</a> must be a member of the set of Samples (`ex:SC-LaJ2`).
+        sampled on the specified <a>sosa:Platform</a> using the nominated <a>sosa:ObservingProcedure</a> (`ex:pH-A56`),
+        and whose <a>sosa:hasFeatureOfInterest</a> must be a member of the set of Samples (`ex:SC-LaJ2`).
         Again, the actual System (<a>sosa:Sensor</a>) is not specified, only that it must implement the nominated
         ObservingProcedure.
     </p>

@@ -17,11 +17,11 @@ ex:LOIRE_A_JARGEAU_WQ_Station
 . 
 ex:SA56 
     a sosa:Sampler ;
-    sosa:implements ex:sampling-A56 ;
+    sosa:implements ex:sA56 ;
     sosa:isHostedBy ex:LOIRE_A_JARGEAU_WQ_Station ;
     sosa:madeSamplingHasResult ex:SC-LaJ1 ;
 .
-ex:sampling-A56 
+ex:sA56 
     a sosa:SamplingProcedure ;
 . 
 ex:SC-LaJ1
