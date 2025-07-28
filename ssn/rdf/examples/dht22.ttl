@@ -55,7 +55,7 @@ ex:DHT22_4578_HumiditySensor a sosa:Sensor , sosa:System ;
 .
 
 # These are operating conditions under which the sensor can properly function. These are seperate from capabilites in that not
-# all of the condition observations may be sensed by the sensor itself, e.g.: supply voltage. 
+# all of the condition observations may be sensed by the sensor itself, e.g., supply voltage. 
 
 ex:DHT22_4578_HumiditySensorNormalOperatingConditions a sosa:ObservationCollection ;
  rdf:type sosa:NormalOperatingConditions ;
