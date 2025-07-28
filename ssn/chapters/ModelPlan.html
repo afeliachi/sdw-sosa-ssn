@@ -15,9 +15,12 @@
         <a>sosa:Platform</a> as part of a <a>sosa:Deployment</a> during a nominated time interval.
     </p>
     <p>
-        For example, <a href="#Fig-PlannedDeployment"></a> describes the deployment of a specific <a>sosa:Sampler</a> (`ex:SA56`) on        a specified <a>sosa:Platform</a> (`ex:LOIRE_A_JARGEAU_WQ_Station`) on the Loire River between 2026 and 2028.
-        This Sampler implements a nominated <a>sosa:SamplingProcedure</a>. 
-        It may be associated with a potential set of        Samples, packaged in an empty <a>sosa:SampleCollection</a>, denoted by a blank node.
+        For example, <a href="#Fig-PlannedDeployment"></a> describes the deployment of a specific <a>sosa:Sampler</a>
+        (`ex:SA56`) on a specified <a>sosa:Platform</a> (`ex:LOIRE_A_JARGEAU_WQ_Station`) on the Loire River between
+        2026 and 2028.
+        This Sampler implements a nominated <a>sosa:SamplingProcedure</a>.
+        It may be associated with a potential set of Samples, packaged in an empty <a>sosa:SampleCollection</a>
+        (`ex:SC-LaJ`).
     </p>
     <p>
         The resulting SampleCollection has no members prior to the deployment, but can be characterized prospectively in
@@ -28,7 +31,7 @@
         <embed alt="Planned deployment of a sampler system" src="./images/PlannedDeployment.svg" style="width:90%" />
         <figcaption>
             Deployment of a Sampler.
-            <code>_:b3</code> is a "blank node" denoting the set of Samples that will be the result of this deployment.
+            `ex:SC-LaJ` denotes the set of Samples that will be the result of this deployment.
             <br>
             <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
         </figcaption>
@@ -44,9 +47,9 @@
         deployment, where the actual system is only specified in terms of the Procedure implemented.
     </p>
     <p>
-        For example, <a href="#Fig-PlannedSampleCollection"></a> describes a potential set of samples, packaged in a
-        <a>sosa:SampleCollection</a>, of the Loire River collected from a specified <a>sosa:Platform</a>, using a given
-        <a>sosa:SamplingProcedure</a>.
+        For example, <a href="#Fig-PlannedSampleCollection"></a> describes a potential set of samples (`ex:SC-LaJ2`) of
+        the Loire River, packaged in a <a>sosa:SampleCollection</a>, collected from a specified <a>sosa:Platform</a>,
+        using a given <a>sosa:SamplingProcedure</a>.
         The actual <a>sosa:Sampler</a> is not specified, only that it must implement the nominated SamplingProcedure,
         and be deployed at the nominated station.
     </p>
@@ -54,9 +57,8 @@
         <embed alt="Planned sample collection" src="./images/PlannedSampleCollection.svg" style="width:90%" />
         <figcaption>
             A planned SampleCollection.
-            <code>_:b1</code> is a "blank node" denoting some Sampler that implements <code>ex:pH_sampling-A56</code>
-            and
-            is deployed on <code>ex:LOIRE_A_JARGEAU_WQ_Station</code>.
+            `_:b1` is a "blank node" denoting some Sampler that implements `ex:pH_sampling-A56` and is deployed on
+            `ex:LOIRE_A_JARGEAU_WQ_Station`.
             <br>
             <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
         </figcaption>
@@ -64,10 +66,14 @@
     <pre class="example" data-include="./rdf/examples/PlannedSampleCollection.ttl" data-include-format="text"></pre>
 
     <p>
-        Then <a href="#Fig-PlannedObservationCollection"></a> describes a potential set of observations of <em>pH</em>,
-        packaged in a <a>sosa:ObservationCollection</a>, whose (proximate) feature of interest is a member of this
-        collection, and thus must be consistent with the requirements for membership - i.e., be sampled on the specified
-        <a>sosa:Platform</a> using the nominated <a>sosa:ObservingProcedure</a>.
+        Then <a href="#Fig-PlannedObservationCollection"></a> describes a potential set of observations of <em>pH</em>
+        (`ex:ObsColpH`),
+        packaged in a <a>sosa:ObservationCollection</a>, whose (proximate) feature of interest is the set of Samples
+        described above (`ex:SC-LaJ2`).
+        Each member of the <a>sosa:ObservationCollection</a>must be consistent with the
+        <a href="#SOSAObservationCollection">requirements for membership of an ObservationCollection</a> - i.e., be
+        sampled on the specified <a>sosa:Platform</a> using the nominated <a>sosa:ObservingProcedure</a>, and whose
+        <a>sosa:hasFeatureOfInterest</a> must be a member of the set of Samples (`ex:SC-LaJ2`).
         Again, the actual System (<a>sosa:Sensor</a>) is not specified, only that it must implement the nominated
         ObservingProcedure.
     </p>
@@ -79,7 +85,8 @@
         <embed alt="Planned observation collection" src="./images/PlannedObservationCollection.svg" style="width:90%" />
         <figcaption>
             A planned ObservationCollection.
-            <code>_:b2</code> is a "blank node" denoting any Sample that is a member of <code>ex:SamColpH</code>.
+            `_:b3` is a "blank node" denoting a <a>sosa:Sensor</a> that is implied by the presence of the
+            <a>sosa:usedProcedure</a> value.
             <br>
             <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
         </figcaption>
