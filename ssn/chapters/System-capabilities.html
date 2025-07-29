@@ -141,7 +141,7 @@
                             <pre>
 ex:SensorCapabilityObservation a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:Sensor ;
- sosa:property ex:SensorMinimumLimit;
+ sosa:observedProperty ex:SensorMinimumLimit;
  sosa:hasSimpleResult "-40.0"^^xsd:decimal ;
  qudt:hasUnit unit:DEG_C .
 
@@ -173,7 +173,7 @@ ex:observation_233 rdf:type sosa:Observation ;
  sosa:resultQuality [ 
   ex:233MeasurementAccuracy a sosa:Observation ;
   sosa:hasFeatureOfInterest ex:TemperatureSensor;
-  sosa:property sosa:Accuracy ;
+  sosa:observedProperty sosa:Accuracy ;
   sosa:hasSimpleResult 1.5 ;
   qudt:hasUnit unit:DEG_C .
  ];
@@ -213,7 +213,6 @@ ex:nominalLifetimeRestriction a iop:Variable, sosa:Property;
   iop:hasStatisticalModifier nom:average ;
   iop:hasObjectOfInterest ex:AABattery ;
   iop:hasProperty sosa:BatteryLifetime .
- 
 </pre>
                         </td>
                     </tr>
