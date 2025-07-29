@@ -144,7 +144,7 @@
     due to OWL2 profile limitations and schema:minValue / schema:maxValue created additional problems relating to the property of
     the feature.</P>
     
-    <p>A possible solution is the use of constrains to record sensor reading limitations.</p>
+    <p>A possible solution is the use of constrains to record sensor reading limitations using other ontologies such as I-ADOPT:</p>
      
             <table>
                 <tbody>
@@ -170,7 +170,37 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
                 </tbody>
             </table>    
 
-    
+    <p>The advantage of this approach is that multiple statistical statements can be made about the property beyond that of simple
+    maximun / minimum values, such as nominal or peak values. The Observation structure can similarly be used to report on the
+    quality of individual results. In some applications, the properties of individual measurements vary within the operating
+    conditions of the sensor. The values of these properties can then be reported alongside the individual result entries.</p>
+            <table>
+                <tbody>
+                    <tr>
+                    <tr>
+                        <th>Example</th>
+                        <td>
+                            <pre>
+ex:observation_233 rdf:type sosa:Observation ;
+ sosa:observedProperty ex:TheAir;
+ sosa:madeBySensor ex:TemperatureSensor ;
+ sosa:resultQuality [ 
+  ex:233MeasurementAccuracy a sosa:Observation ;
+  sosa:hasFeatureOfInterest ex:TemperatureSensor;
+  sosa:property sosa:Accuracy ;
+  sosa:hasSimpleResult 1.5 ;
+  qudt:hasUnit unit:DEG_C .
+ ];
+ sosa:hasSimpleResult 21.4;
+ qudt:hasUnit unit:DEG_C .
+</pre>
+                        </td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>    
+    <p>        
+
 
     </div>
     
