@@ -39,7 +39,7 @@
 <section class="informative" id="SysCap-overview">
     <h4>Overview</h4>
     <div>
-     <p>The System Capabilities Module comprises of has two primary concepts: the system's capability to sense and the conditions
+     <p>The System Capabilities Module comprises of two primary concepts: the system's capability to sense and the conditions
      under which it can do so.  Both concepts are closely related and are often described as one and the same in industrial
      literature.  The System Capabilities describes the properties of the measurement being performed by the system while the
      Operating Conditions describe the potentials environments in which the system is deployed.  This separation is needed in order
@@ -145,7 +145,7 @@ ex:SensorCapabilityObservation a sosa:Observation ;
  sosa:hasSimpleResult "-40.0"^^xsd:decimal ;
  qudt:hasUnit unit:DEG_C .
 
-ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
+ex:SensorMinimumLimit a iop:Variable, sosa:Property;
  iop:hasStatisticalModifier uom:minimum ;
  iop:hasObjectOfInterest ex:air;
  iop:hasProperty qudt:Temperature .
@@ -197,6 +197,8 @@ ex:observation_233 rdf:type sosa:Observation ;
                         <th>Example</th>
                         <td>
                             <pre>
+@prefix iop: <https://w3id.org/iadopt/ont/1.1.0> .
+
 ex:AABattery a sosa:Battery ;
  rdfs:label "An AA battery."  .
  
