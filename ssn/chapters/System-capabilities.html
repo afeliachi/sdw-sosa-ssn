@@ -82,7 +82,7 @@
 
 
         <figure class="ssn">
-            <embed alt="System properties" src="images/SSNSystem-observation-conditions.svg" style="width: 100%;" />
+            <embed alt="System properties" src="images/SSNSystem-observation-conditions.svg" style="width: 80%;" />
             <figcaption>
                 Detailed classes and relationships involved in the description of the conditions (typically an
                 observation collection about the system environment).
@@ -108,20 +108,6 @@
 
 </p>
 
-
-
-        <figure class="ssn">
-            <embed alt="System properties" src="images/SSNSystem-property-conditions.svg" style="width: 100%;" />
-            <figcaption>
-                Detailed classes and relationships involved in the description of the conditions (typically an
-                observation collection about the system environment) under which a property (typically about the system
-                capabilities) is valid.
-                <br>
-                In this diagram, unqualified names refer to classes and properties in the sosa: namespace.
-                <br>
-                <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
-            </figcaption>
-        </figure>
     </div>
 
     </div> 
@@ -171,7 +157,7 @@ ex:ex:SensorMinimumLimit a iop:Variable, sosa:Property;
             </table>    
 
     <p>The advantage of this approach is that multiple statistical statements can be made about the property beyond that of simple
-    maximun / minimum values, such as nominal or peak values. The Observation structure can similarly be used to report on the
+    maximum / minimum values, such as nominal or peak values. The Observation structure can similarly be used to report on the
     quality of individual results. In some applications, the properties of individual measurements vary within the operating
     conditions of the sensor. The values of these properties can then be reported alongside the individual result entries.</p>
             <table>
@@ -199,7 +185,41 @@ ex:observation_233 rdf:type sosa:Observation ;
                     </tr>
                 </tbody>
             </table>    
-    <p>        
+
+    <p>The System Capabilities Module also introduced a Battery class to represent power supply
+    requirements for mobile sensors while retaining the BatteryLifetime class. This allows to record expected battery utilization
+    either on a nominal basis or within different operating conditions.</p>
+
+            <table>
+                <tbody>
+                    <tr>
+                    <tr>
+                        <th>Example</th>
+                        <td>
+                            <pre>
+ex:AABattery a sosa:Battery ;
+ rdfs:label "An AA battery."  .
+ 
+ex:sensor a sosa:Sensor;
+ sosa:hasSubSystem ex:AABattery .
+ 
+ex:nominalLifetime a sosa:Observation ;
+  sosa:hasFeatureOfInterest ex:sensor ;
+  sosa:observedProperty ex:nominalLifetimeRestriction ;
+  sosa:hasSimpleResult 1 ;
+  qudt:hasUnit unit:YR .
+
+ex:nominalLifetimeRestriction a iop:Variable, sosa:Property;
+  iop:hasStatisticalModifier nom:average ;
+  iop:hasObjectOfInterest ex:AABattery ;
+  iop:hasProperty sosa:BatteryLifetime .
+ 
+</pre>
+                        </td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>    
 
 
     </div>
@@ -224,6 +244,7 @@ ex:observation_233 rdf:type sosa:Observation ;
     <div class="azlist">
         <p>
             <a>sosa:Battery</a>,
+            <a>sosa:BatteryLifetime</a>,
             <a>sosa:hasOperatingConditionKind</a>,
             <a>sosa:hasOperatingConditions</a>,
             <a>sosa:hasSystemCapability</a>,
@@ -242,11 +263,50 @@ ex:observation_233 rdf:type sosa:Observation ;
         </p>
         <p>
             <em>Battery</em> &mdash;
-            A class representing a Battery powering a <a href="#SOSASystem">System</a>. The battery class is an abstract class
-            that is expected to represent the primary or secondary storage power source for a system.
-        </p>
+            A Battery powering a <a href="#SOSASystem">System</a> as its primary or secondary power source.
+            As this is a specialization of the <a href="#SOSASystem">System</a> class, modeling of integrated battery
+            management systems is also possible. </p>
         <table>
             <tbody>
+                <tr>
+                    <th>Sub class of</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/System">sosa:System</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttonpanel">
+            <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
+    </section>
+
+    <section class="specterm" id="SOSABatteryLifetime">
+        <h5><dfn>sosa:BatteryLifetime</dfn></h5>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/BatteryLifetime
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p>
+            <em>Battery Lifetime</em> &mdash;
+            Total useful life of a <a href="#SOSASystem">System</a>'s <a href="#SOSABattery">Battery</a>.</p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Sub class of</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/Property">sosa:Property</a>
+                    </td>
+                </tr>
                 <tr>
                     <th>is Defined By</th>
                     <td>
