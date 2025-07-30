@@ -4,8 +4,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iop: <https://w3id.org/iadopt/ont/1.1.0> .
 @prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
-@prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix schema: <http://schema.org/>.
@@ -36,21 +36,21 @@ ex:DHT22_4578 a sosa:System ;
   rdfs:comment "DHT22 sensor #4578 contains a humidity and a temperature sensor."@en ;
   rdfs:seeAlso <https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf> ;
   sosa:hasSubSystem ex:DHT22_4578_TemperatureSensor,ex:DHT22_4578_HumiditySensor ;
-  sosa:hasOperatingCondition ex:DHT22_4578_TemperatureSensorNormalOperatingConditions, ex:DHT22_4578_HumiditySensorNormalOperatingConditions ;
+  sosa:hasOperatingConditions ex:DHT22_4578_TemperatureSensorNormalOperatingConditions, ex:DHT22_4578_HumiditySensorNormalOperatingConditions ;
   ex:serialNumber "4578" ;
 .
 
 ex:DHT22_4578_TemperatureSensor a sosa:Sensor , sosa:System ;
   rdfs:comment "The embedded temperature sensor, a specific instance of temperature sensor."@en ;
   sosa:hasSystemCapability ex:DHT22_4578_TemperatureSensorCapabilities ;
-  sosa:hasOperatingCondition ex:DHT22_4578_TemperatureSensorNormalOperatingConditions ;
+  sosa:hasOperatingConditions ex:DHT22_4578_TemperatureSensorNormalOperatingConditions ;
   sosa:implements ex:DHT22_Procedure ;
 .
 
 ex:DHT22_4578_HumiditySensor a sosa:Sensor , sosa:System ;
   rdfs:comment "The embedded humidity sensor, a specific instance of humidity sensor."@en ;
   sosa:hasSystemCapability ex:DHT22_4578_HumiditySensorCapabilities ;
-  sosa:hasOperatingCondition ex:DHT22_4578_HumiditySensorNormalOperatingConditions;
+  sosa:hasOperatingConditions ex:DHT22_4578_HumiditySensorNormalOperatingConditions;
   sosa:implements ex:DHT22_Procedure ;
 .
 
@@ -80,7 +80,7 @@ ex:minimumOperatingTemperature a sosa:Observation ;
 ex:minimumSensorTemperatureLimit a iop:Variable, sosa:Property;
  iop:hasStatisticalModifier uom:minimum ;
  iop:hasObjectOfInterest ex:DHT22_4578;
- iop:hasProperty qudt:Temperature .
+ iop:hasProperty qk:Temperature .
 
 ex:maximumOperatingTemperature a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578 ;
@@ -91,7 +91,7 @@ ex:maximumOperatingTemperature a sosa:Observation ;
 ex:maximumSensorTemperatureLimit a iop:Variable, sosa:Property;
  iop:hasStatisticalModifier uom:maximum ;
  iop:hasObjectOfInterest ex:DHT22_4578 ;
- iop:hasProperty qudt:Temperature .
+ iop:hasProperty qk:Temperature .
 
 # Unlike temperature, the operating condition of the System are affected by the relative humidity of the air around the sensor. 
 # Percentage is not a unit, however this is present in QUDT and used here as a convinience for display purposes.
@@ -185,7 +185,7 @@ ex:DHT22_4578_minimumMeasureableTemperature a sosa:Observation ;
 ex:DHT22_4578_minimumMeasureableTemperatureLimit a iop:Variable, sosa:Property;
  iop:hasStatisticalModifier uom:minimum ;
  iop:hasObjectOfInterest ex:airAround_DHT22_4578;
- iop:hasProperty qudt:Temperature .
+ iop:hasProperty qk:Temperature .
 
 ex:DHT22_4578_maximumMeasureableTemperature a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor ;
@@ -196,7 +196,7 @@ ex:DHT22_4578_maximumMeasureableTemperature a sosa:Observation ;
 ex:DHT22_4578_maximumMeasureableTemperatureLimit a iop:Variable, sosa:Property;
  iop:hasStatisticalModifier uom:maximum ;
  iop:hasObjectOfInterest ex:airAround_DHT22_4578;
- iop:hasProperty qudt:Temperature .
+ iop:hasProperty qk:Temperature .
 
 ex:DHT22_4578_TemperatureMeasurementAccuracy a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor;

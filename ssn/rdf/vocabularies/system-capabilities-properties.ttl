@@ -30,6 +30,10 @@ sosa-cap: a owl:Ontology , voaf:Vocabulary ;
   vann:preferredNamespaceUri "http://www.w3.org/ns/sosa/system-capability-properties#" ;
   owl:imports sosa-systems: .
 
+sosa-cap:BatteryLifetime a sosa:Property ;
+  rdfs:label "Battery Lifetime"@en ;
+  skos:definition "Total useful life of a battery."@en ;
+  rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:TemperaturePrecision a sosa:Property ;
   rdfs:label "temperature precision"@en ;

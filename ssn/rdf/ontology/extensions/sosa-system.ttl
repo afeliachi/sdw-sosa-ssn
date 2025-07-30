@@ -36,7 +36,7 @@ sosa:hasOperatingConditions
   a owl:ObjectProperty ;
   rdfs:label "has operating conditions"@en ;
   skos:definition """
-  Relation between a System and an ObservationCollection (or Observation) describing conditions under which the System operates more or less normally (TODO improve here). A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
+  Relation between a System and an ObservationCollection (or Observation) describing conditions under which the System operates more or less normally (TODO improve here). A short but extensible list of operating condition kinds is provided in SOSA-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
   """@en ;
   schema:domainIncludes sosa:System ;
   schema:rangeIncludes sosa:ObservationCollection , sosa:Observation ;
@@ -47,7 +47,7 @@ sosa:hasOperatingConditionKind
   a owl:ObjectProperty ;
   rdfs:label "has operating condition kind"@en ;
   skos:definition """
-  Relation between an ObservationCollection (or Observation) and an OperatingConditionKind describing the kind of the operating conditions in the context of the system. A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
+  Relation between an ObservationCollection (or Observation) and an OperatingConditionKind describing the kind of the operating conditions in the context of the system. A short but extensible list of operating condition kinds is provided in SOSA-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
   """@en ;
   schema:domainIncludes sosa:ObservationCollection , sosa:Observation ;
   schema:rangeIncludes sosa:OperatingConditionKind ;
@@ -56,28 +56,28 @@ sosa:hasOperatingConditionKind
 sosa:OperatingConditionKind a owl:Class ;
   rdfs:label "Operating Condition Kind"@en ;
   skos:definition """
-  A concept that describes the kind of operating conditions in the context of a system. A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
+  A concept that describes the kind of operating conditions in the context of a system. A short but extensible list of operating condition kinds is provided in SOSA-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
   """@en ;
   rdfs:subClassOf skos:Concept ;
   rdfs:isDefinedBy sosa-systems: .
 
-## A short but extensible list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
+## A short but extensible list of operating condition kinds is provided in SOSA-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
 
-sosa:NormalOperatingConditions rdfs:subClassOf sosa:OperatingConditionKind ;
+sosa:NormalOperatingConditions rdf:type sosa:OperatingConditionKind ;
   rdfs:label "Normal Operating Conditions"@en ;
   skos:definition """
   The conditions under which a system is expected to operate normally.
   """@en ;
   rdfs:isDefinedBy sosa-systems: .
 
-sosa:SuboptimalOperatingConditions rdfs:subClassOf sosa:OperatingConditionKind ;
+sosa:SuboptimalOperatingConditions rdf:type sosa:OperatingConditionKind ;
   rdfs:label "Suboptimal Conditions"@en ;
   skos:definition """
   The conditions under which a system is expected to operate suboptimally, but may recover if the conditions are restored to normal operating conditions.
   """@en ;
   rdfs:isDefinedBy sosa-systems: .
 
-sosa:SurvivableConditions rdfs:subClassOf sosa:OperatingConditionKind ;
+sosa:SurvivableConditions rdf:type sosa:OperatingConditionKind ;
   rdfs:label "Survivable Conditions"@en ;
   skos:definition """
   The conditions under which a system is expected to survive. The system may be damaged if the survivable conditions are violated.
@@ -107,13 +107,5 @@ sosa:inCondition a owl:ObjectProperty ;
 ## Battery
 sosa:Battery rdfs:subClassOf sosa:System ;
   rdfs:label "Battery"@en ;
-  skos:definition """
-  A Battery powering a System as its primary or secondary power source. As this is a specialization of the System class modeling of integrated battery management systems is also possible.
-  """@en ;
-  rdfs:isDefinedBy sosa-systems: .
-
-ssn:BatteryLifetime a owl:Class ;
-  rdfs:label "Battery Lifetime"@en ;
-  skos:definition "Total useful life of a battery."@en ;
-  rdfs:subClassOf sosa:Property ;
+  skos:definition "A Battery powering a System as its primary or secondary power source. As this is a specialization of the System class modeling of integrated battery management systems is also possible."@en ;
   rdfs:isDefinedBy sosa-systems: .

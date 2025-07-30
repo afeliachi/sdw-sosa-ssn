@@ -37,7 +37,7 @@ ex:IP68_Outdoor_Temperature_Sensor a owl:Class , gr:ProductOrServiceModel ;
     owl:onProperty sosa:hasSystemCapability ;
     owl:hasValue ex:IP68_Outdoor_Temperature_Sensor_systemCapability ] ;
 .
-ex:Sensor_SL-T-P1_battery a ex:Battery;
+ex:Sensor_SL-T-P1_battery a sosa:Battery;
  rdfs:label "The battery powering the IP68 Outdoor Temperature Sensor"@en .
 
 ex:IP68_Outdoor_Temperature_Sensor_operatingRange a sosa:ObservationCollection ;
