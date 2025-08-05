@@ -40,9 +40,8 @@ ex:IP68_Outdoor_Temperature_Sensor a owl:Class , gr:ProductOrServiceModel ;
 ex:Sensor_SL-T-P1_battery a sosa:Battery;
  rdfs:label "The battery powering the IP68 Outdoor Temperature Sensor"@en .
 
-ex:IP68_Outdoor_Temperature_Sensor_operatingRange a sosa:ObservationCollection ;
+ex:IP68_Outdoor_Temperature_Sensor_operatingRange a sosa:ObservationCollection , sosa:NormalOperatingConditions ;
     rdfs:comment "An environment temperature range of -20 to 70 Celsius."@en ;
-    sosa:hasOperatingConditionKind sosa:NormalOperatingConditions ;
     sosa:hasMember [
       sosa:observedProperty ex:MinEnvironmentTemperature ;
       sosa:hasResult [ 

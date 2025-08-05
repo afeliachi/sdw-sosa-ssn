@@ -25,7 +25,7 @@
     and lacked documentation over its intended use.
 </p>
 
-<p>The usage of <a href="SOSAObservation">observations</a> and <a href="SOSAObservationCollection">observation collections</a> has been expanded
+<p>The usage of <a href="#SOSAObservation">observations</a> and <a href="#SOSAObservationCollection">observation collections</a> has been expanded
     to capabilities and conditions through the enumeration of values and constraints on those values without assigning a reporting sensor or timestamp.
     This allows to reuse the same structure to report on sensor behavior.
 </p>
@@ -33,7 +33,7 @@
 <p>This edition has also removed the notion of &quot;Ranges&quot; within its vocabulary due to the absence of an appropriate datatype or vocabulary to
     describe numerical ranges. xsd:minInclusive/xsd:maxInclusive are part of OWL reserved vocabulary, and schema:minValue/schema:maxValue created additional
     problems relating to the property of the feature. Instead, this edition recommends the specification of individual, simple properties such as
-    <em>MinMeasurableTemperature</em> and <em>MaxMeasurableTemperature</em>. Apart from <a href="SOSAinCondition">inCondition</a>, this edition does not
+    <em>MinMeasurableTemperature</em> and <em>MaxMeasurableTemperature</em>. Apart from <a href="#SOSAinCondition">inCondition</a>, this edition does not
     provide means to relate properties or describe them further. External ontologies are expected to be complementary to this module, such as the
     <a href="https://i-adopt.github.io/ontology/">I-ADOPT Framework ontology</a>, and the
     <a href="http://www.ontology-of-units-of-measure.org/page/om-2">Ontology of Units of Measure</a>.
@@ -106,12 +106,12 @@
 
     <section class="informative" id="SysCap-operating-conditions">
         <h5>Operating Conditions</h5>
-        <p>A system is linked to its operating conditions through property <a href="SOSAhasOperatingConditions">hasOperatingConditions</a>.
+        <p>A system is linked to its operating conditions through property <a href="#SOSAhasOperatingConditions">hasOperatingConditions</a>.
             The operating conditions themselves are modelled as <a href="#SOSAObservation">observations</a> or <a href="#SOSAObservationCollection">observation collections</a>, typically about the system environment.
-            Furthermore, the operating conditions are <em>soft-typed</em> through the <a href="SOSAhasOperatingConditionKind">hasOperatingConditionKind</a> property that explicits the desirability of the conditions.
-            Three instances of <a href="#SOSAOperatingConditionKind">OperatingConditionKind</a> are provided as a basic classification:
-            <a href="SOSANormalOperatingConditions">NormalOperatingConditions</a>, <a href="SOSASuboptimalOperatingConditions">SuboptimalOperatingConditions</a>,
-            and <a href="SOSASurvivableConditions">SurvivableConditions</a>.
+            Furthermore, operating conditions can be typed by one of the sub-classes of <a href="#SOSAOperatingConditions">OperatingConditions</a>
+            so as to explicit the desirability of the conditions. Three such sub-classes are provided as a basic classification:
+            <a href="#SOSANormalOperatingConditions">NormalOperatingConditions</a>, <a href="#SOSASuboptimalOperatingConditions">SuboptimalOperatingConditions</a>,
+            and <a href="#SOSASurvivableConditions">SurvivableConditions</a>.
         </p>
         <p class="note">
             For illustration purposes, this specification includes a <a href="#SysCap-environment-properties">sample vocabulary</a> consisting of a short
@@ -119,8 +119,8 @@
         </p>
         <p>It is possible with additional ontological statements to create conditions that are &quot;latching&quot;, as in the case of
             damaged sensors with permanently degraded operating characteristics. It is also possible to describe operating modes of systems
-            using all the expressivity of observations and observation collections. Implementers may define additional instances of
-            <a href="#SOSAOperatingConditionKind">OperatingConditionKind</a> to account for such use cases.
+            using all the expressivity of observations and observation collections. Implementers may define additional sub-classes of
+            <a href="#SOSAOperatingConditions">OperatingConditions</a> to account for such use cases.
         </p>
 
         <figure class="ssn">
@@ -136,9 +136,9 @@
         </figure>
 
         <p class="note">
-            The <a href="SOSAhasFeatureOfInterest">feature of interest</a> of the operating conditions may be the system itself, but this is not mandatory.
+            The <a href="#SOSAhasFeatureOfInterest">feature of interest</a> of the operating conditions may be the system itself, but this is not mandatory.
             <br />
-            The <a href="SOSAmadeBySensor">sensor</a> that made the observations can be left unspecified.
+            The <a href="#SOSAmadeBySensor">sensor</a> that made the observations can be left unspecified.
         </p>
 
         <p>The following example describes that sensor <code>ex:InkBird-IBS-TH2-0354313547</code> can survive from -273.0&nbsp;°C to 80.0&nbsp;°C.</p>
@@ -147,16 +147,16 @@
     </section>
     <section class="informative" id="SysCap-system-capabilities">
         <h5>System Capabilities</h5>
-        <p>A system is linked to its capabilities through property <a href="SOSAhasSystemCapability">hasSystemCapability</a>.
+        <p>A system is linked to its capabilities through property <a href="#SOSAhasSystemCapability">hasSystemCapability</a>.
             The system capabilities themselves are modelled as <a href="#SOSAObservation">observations</a> or <a href="#SOSAObservationCollection">observation
-                collections</a>, that have for <a href="SOSAobservedProperty">observed property</a> a property that qualifies some capability of the system.
+                collections</a>, that have for <a href="#SOSAobservedProperty">observed property</a> a property that qualifies some capability of the system.
         </p>
         <p class="note">
             For illustration purposes, this specification includes a <a href="#SysCap-capability-properties">sample vocabulary</a> consisting of a short
             list of properties about system capabilities.
         </p>
 
-        <p>Optionally, system capabilities may be linked through property <a href="SOSAinCondition">inCondition</a> to some
+        <p>Optionally, system capabilities may be linked through property <a href="#SOSAinCondition">inCondition</a> to some
             <a href="#SOSAObservation">observations</a> or <a href="#SOSAObservationCollection">observation collections</a> that model the conditions under
             which the system capabilities hold. These observations are typically about the system environment.
             Conditions are especially useful to describe performance bands of systems.
@@ -169,7 +169,7 @@
         </p>
         <p>
             System Capabilities are properties that are relevant while the system is in operation. Operating Conditions may be relevant irrespective of
-            the operating state; a sensor that exceeds its <a href="SOSASurvivableConditions">SurvivableConditions</a> will be rendered inoperable
+            the operating state; a sensor that exceeds its <a href="#SOSASurvivableConditions">SurvivableConditions</a> will be rendered inoperable
             irrespective of whether it was powered on or off at the time, as in the case of a deep water sensor reaching its crush-depth.
         </p>
 
@@ -185,7 +185,7 @@
             </figcaption>
         </figure>
 
-        <p class="warning">The axiomatization of property <a href="SOSAhasSystemCapability">hasSystemCapability</a> enforces that the <a href="SOSAhasFeatureOfInterest">feature of interest</a> of the system capability is the system itself.</p>
+        <p class="warning">The axiomatization of property <a href="#SOSAhasSystemCapability">hasSystemCapability</a> enforces that the <a href="#SOSAhasFeatureOfInterest">feature of interest</a> of the system capability is the system itself.</p>
 
         <p>The following example describes the system capabilities of sensor <code>ex:IBS-TH2-Plus-T-687343</code> in terms of its accuracy and measurable temperature range, valid from 0.0 to 99.0&nbsp;%R.H.</p>
 
@@ -194,8 +194,8 @@
     <section class="informative" id="SysCap-property-conditions">
         <h5>Property Conditions</h5>
 
-        <p>The object property <a href="SOSAinCondition">inCondition</a> may be used to qualify the conditions under which a SOSA <a href="SOSAProperty">Property</a>
-            is applicable. These conditions are modelled as individual <a href="#SOSAObservation">observations</a> or as grouped <a href="#SOSAObservationCollection">observation collections</a>. When the qualified <a href="SOSAProperty">Property</a> represents a system capability,
+        <p>The object property <a href="#SOSAinCondition">inCondition</a> may be used to qualify the conditions under which a SOSA <a href="#SOSAProperty">Property</a>
+            is applicable. These conditions are modelled as individual <a href="#SOSAObservation">observations</a> or as grouped <a href="#SOSAObservationCollection">observation collections</a>. When the qualified <a href="#SOSAProperty">Property</a> represents a system capability,
             the observed properties in the condition typically refer to aspects of the system's operating environment.
             For example, water heaters are characterized by nominal power and efficiency values under specified inlet and outlet temperatures and flow rates, and their energy consumption at steady temperature is typically expressed in kWh/24h under the condition that the water temperature is maintained at 65&nbsp;°C.
         </p>
@@ -210,7 +210,7 @@
                 <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
             </figcaption>
         </figure>
-        <p class="note">Beyond the scope of the System Capabilities module, <a href="SOSAProperty">Properties</a> may also be further described with conditions.
+        <p class="note">Beyond the scope of the System Capabilities module, <a href="#SOSAProperty">Properties</a> may also be further described with conditions.
             For example standard meteorological practice defines reference measurement heights, such as 10&nbsp;m for wind and 2&nbsp;m for air temperature.
         </p>
 
@@ -235,8 +235,8 @@
         <pre class="example" data-include="./rdf/examples/dqv.ttl" data-include-format="text"></pre>
 
 
-        <p>The System Capabilities Module also introduced a <a href="SOSABattery">Battery</a> class to represent power supply requirements for mobile sensors.
-            The illustrative <a href="SOSACAPBatteryLifetime"><code>sosa-cap:BatteryLifetime</code></a> system capability property allows to record expected battery
+        <p>The System Capabilities Module also introduced a <a href="#SOSABattery">Battery</a> class to represent power supply requirements for mobile sensors.
+            The illustrative <a href="#SOSACAPBatteryLifetime"><code>sosa-cap:BatteryLifetime</code></a> system capability property allows to record expected battery
             utilization either on a nominal basis or within different operating conditions.
         </p>
 
@@ -263,12 +263,14 @@
     <div class="azlist">
         <p>
             <a>sosa:Battery</a>,
-            <a>sosa:hasOperatingConditionKind</a>,
             <a>sosa:hasOperatingConditions</a>,
             <a>sosa:hasSystemCapability</a>,
             <a>sosa:inCondition</a>,
-            <a>sosa:OperatingConditionKind</a>
-        </p>
+            <a>sosa:NormalOperatingConditions</a>,
+            <a>sosa:OperatingConditions</a>,
+            <a>sosa:SuboptimalOperatingConditions</a>,
+            <a>sosa:SurvivableConditions</a>
+    </p>
     </div>
 
     <section class="specterm" id="SOSABattery">
@@ -296,38 +298,6 @@
                 <tr>
                     <th>is Defined By</th>
                     <td>
-                        <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="buttonpanel">
-            <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
-            <span class="back">[<a href="#Overview">Back to top</a>]</span>
-        </div>
-    </section>
-
-
-    <section class="specterm" id="SOSAhasOperatingConditionKind">
-        <h5><dfn>sosa:hasOperatingConditionKind</dfn></h5>
-        <p class="crossreference">
-            <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasOperatingConditionKind
-        </p>
-        <p>
-            <strong>an OWL Object Property</strong>
-        </p>
-        <p>
-            <em>has operating condition kind</em> &mdash;
-            Relation between an ObservationCollection (or Observation) and an OperatingConditionKind describing the kind
-            of the operating conditions in the context of the system. A short but extensible list of operating condition
-            kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable
-            conditions.
-        </p>
-        <table>
-            <tbody>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
                         <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
                     </td>
                 </tr>
@@ -349,13 +319,29 @@
         </p>
         <p>
             <em>has operating conditions</em> &mdash;
-            Relation between a System and an ObservationCollection (or Observation) describing conditions under which
-            the System can operate. A short but extensible list of operating
-            condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal conditions, and
-            survivable conditions.
+            Relation between a System and its Operating Conditions, modelled as ObservationCollection (or Observation) describing
+            conditions under which the System can operate. A short but extensible list of sub-classes of OperatingConditions is
+            provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
         </p>
         <table>
             <tbody>
+                <tr>
+                    <th>Domain Includes</th>
+                    <td>
+                        <a>sosa:System</a>,
+                        <a>sosa:Sensor</a>,
+                        <a>sosa:Actuator</a>,
+                        <a>sosa:Sampler</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Range Includes</th>
+                    <td>
+                        <a>sosa:Observation</a>,
+                        <a>sosa:ObservationCollection</a>
+                        <a>sosa:OperatingConditions</a>,
+                    </td>
+                </tr>
                 <tr>
                     <th>is Defined By</th>
                     <td>
@@ -387,15 +373,31 @@
         <table>
             <tbody>
                 <tr>
-                    <th>is Defined By</th>
+                    <th>Domain Includes</th>
                     <td>
-                        <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
+                        <a>sosa:System</a>,
+                        <a>sosa:Sensor</a>,
+                        <a>sosa:Actuator</a>,
+                        <a>sosa:Sampler</a>
                     </td>
                 </tr>
                 <tr>
-                    <th>sub-property of</th>
+                    <th>Range Includes</th>
+                    <td>
+                        <a>sosa:Observation</a>,
+                        <a>sosa:ObservationCollection</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Sub property of</th>
                     <td>
                         <a>sosa:isFeatureOfInterestOf</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
                     </td>
                 </tr>
             </tbody>
@@ -417,11 +419,26 @@
         <p>
             <em>in condition</em> &mdash;
             Describes the conditions (typically an observation collection about the system environment) defining the
-            validity context of an observation (typically about the system capabilities) or a property (typically about
-            the system capabilities)..
+            validity context of an observation collection or observation (typically about the system capabilities) or a property (typically about
+            the system capabilities).
         </p>
         <table>
             <tbody>
+                <tr>
+                    <th>Domain Includes</th>
+                    <td>
+                        <a>sosa:Observation</a>,
+                        <a>sosa:ObservationCollection</a>
+                        <a>sosa:Property</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Range Includes</th>
+                    <td>
+                        <a>sosa:Observation</a>,
+                        <a>sosa:ObservationCollection</a>
+                    </td>
+                </tr>
                 <tr>
                     <th>is Defined By</th>
                     <td>
@@ -436,26 +453,95 @@
         </div>
     </section>
 
-    <section class="specterm" id="SOSAOperatingConditionKind">
-        <h5><dfn>sosa:OperatingConditionKind</dfn></h5>
+    <section class="specterm" id="SOSANormalOperatingConditions">
+        <h5><dfn>sosa:NormalOperatingConditions</dfn></h5>
         <p class="crossreference">
-            <strong>IRI:</strong> http://www.w3.org/ns/sosa/OperatingConditionKind
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/NormalOperatingConditions
         </p>
         <p>
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Operating Condition Kind</em> &mdash;
-            A concept that describes the kind of operating conditions in the context of a system. A short but extensible
-            list of operating condition kinds is provided in SSN-System, such as normal operating conditions, suboptimal
-            conditions, and survivable conditions.
+            <em>Normal Operating Conditions</em> &mdash;
+            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a>
+            that describe the conditions under which a system is expected to operate normally.
         </p>
         <table>
             <tbody>
                 <tr>
                     <th>Sub class of</th>
                     <td>
-                        <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>
+                        <a href="http://www.w3.org/ns/sosa/OperatingConditions">sosa:OperatingConditions</a>
+                    </td>
+                </tr>
+                <tr>
+
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttonpanel">
+            <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
+    </section>
+
+    <section class="specterm" id="SOSAOperatingConditions">
+        <h5><dfn>sosa:OperatingConditions</dfn></h5>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/OperatingConditions
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p>
+            <em>Operating Condition</em> &mdash;
+            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a>
+            that describe operating conditions of systems. Sub-classes of this class explicit the desirability of the conditions.
+            Three such sub-classes are provided as a basic classification:
+            <a href="#SOSANormalOperatingConditions">NormalOperatingConditions</a>,
+            <a href="#SOSASuboptimalOperatingConditions">SuboptimalOperatingConditions</a>,
+            and <a href="#SOSASurvivableConditions">SurvivableConditions</a>.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttonpanel">
+            <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
+    </section>
+
+    <section class="specterm" id="SOSASuboptimalOperatingConditions">
+        <h5><dfn>sosa:SuboptimalOperatingConditions</dfn></h5>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/SuboptimalConditions
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p>
+            <em>Suboptimal Conditions</em> &mdash;
+            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a>
+            that describe the conditions under which a system is expected to operate sub-optimally. Results will still be reported but the
+            performance of the sensor, in term of precision for example, will be impaired.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Sub class of</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/OperatingConditions">sosa:OperatingConditions</a>
                     </td>
                 </tr>
                 <tr>
@@ -472,123 +558,42 @@
         </div>
     </section>
 
-    <section id="SysCap-OperatingConditionKind">
-        <h6>Operating Condition Kind</h6>
-        <p>The System Capabilities Module includes a short but extensible list of operating condition kinds:</p>
-        <div class="azlist">
-            <p>
-                <a>sosa:NormalOperatingConditions</a>,
-                <a>sosa:SuboptimalOperatingConditions</a>,
-                <a>sosa:SurvivableConditions</a>
-            </p>
+    <section class="specterm" id="SOSASurvivableConditions">
+        <h5><dfn>sosa:SurvivableConditions</dfn></h5>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/SurvivableConditions
+        </p>
+        <p>
+            <strong>an OWL Named Individual</strong>
+        </p>
+        <p>
+            <em>Survivable Conditions</em> &mdash;
+            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a>
+            that describe the conditions under which a system is expected to survive, that is to continue to exist in its current form, even
+            if its future operations are impaired. A typical example is the temperature at which a sensor looses physical
+            integrity and looses its shape. A system or sensor exposed to conditions outside of those reported by SurvivableConditions
+            will no longer be serviceable.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Sub class of</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/OperatingConditions">sosa:OperatingConditions</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>is Defined By</th>
+                    <td>
+                        <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttonpanel">
+            <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
-        <section class="specterm" id="SOSANormalOperatingConditions">
-            <h5><dfn>sosa:NormalOperatingConditions</dfn></h5>
-            <p class="crossreference">
-                <strong>IRI:</strong> http://www.w3.org/ns/sosa/NormalOperatingConditions
-            </p>
-            <p>
-                <strong>an OWL Named Individual</strong>
-            </p>
-            <p>
-                <em>Normal Operating Conditions</em> &mdash;
-                The conditions under which a system is expected to operate normally.
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Member of</th>
-                        <td>
-                            <a href="http://www.w3.org/ns/sosa/OperatingConditionKind">sosa:OperatingConditionKind</a>
-                        </td>
-                    </tr>
-                    <tr>
-
-                        <th>is Defined By</th>
-                        <td>
-                            <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="buttonpanel">
-                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
-                <span class="back">[<a href="#Overview">Back to top</a>]</span>
-            </div>
-        </section>
-
-        <section class="specterm" id="SOSASuboptimalOperatingConditions">
-            <h5><dfn>sosa:SuboptimalOperatingConditions</dfn></h5>
-            <p class="crossreference">
-                <strong>IRI:</strong> http://www.w3.org/ns/sosa/SuboptimalConditions
-            </p>
-            <p>
-                <strong>an OWL Named Individual</strong>
-            </p>
-            <p>
-                <em>Suboptimal Conditions</em> &mdash;
-                The conditions under which a system is expected to operate sub-optimally. Results will still be reported but the
-                performance of the sensor, in term of precision for example, will be impaired.
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Member of</th>
-                        <td>
-                            <a href="http://www.w3.org/ns/sosa/OperatingConditionKind">sosa:OperatingConditionKind</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>is Defined By</th>
-                        <td>
-                            <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="buttonpanel">
-                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
-                <span class="back">[<a href="#Overview">Back to top</a>]</span>
-            </div>
-        </section>
-
-        <section class="specterm" id="SOSASurvivableConditions">
-            <h5><dfn>sosa:SurvivableConditions</dfn></h5>
-            <p class="crossreference">
-                <strong>IRI:</strong> http://www.w3.org/ns/sosa/SurvivableConditions
-            </p>
-            <p>
-                <strong>an OWL Named Individual</strong>
-            </p>
-            <p>
-                <em>Survivable Conditions</em> &mdash;
-                The conditions under which a system is expected to survive, that is to continue to exist in its current form, even
-                if its future operations are impaired. A typical example is the temperature at which a sensor looses physical
-                integrity and looses its shape. A system or sensor exposed to conditions outside of those reported by SurvivableConditions
-                will no longer be serviceable.
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Member of</th>
-                        <td>
-                            <a href="http://www.w3.org/ns/sosa/OperatingConditionKind">sosa:OperatingConditionKind</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>is Defined By</th>
-                        <td>
-                            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="buttonpanel">
-                <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
-                <span class="back">[<a href="#Overview">Back to top</a>]</span>
-            </div>
-        </section>
-
     </section>
 
     <section id="SysCap-capability-properties">
