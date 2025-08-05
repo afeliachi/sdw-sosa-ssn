@@ -130,7 +130,7 @@ section.specterm.sosa, section.specterm.sosa th{
     background-color: #c7eae5;
 }
 
-section.specterm.ssn, section.specterm.ssn th, section.specterm.sosa tr.ssn, section.specterm.sosa tr.ssn th {
+.ssn {
     background-color: #67a9cf;
 }
 
