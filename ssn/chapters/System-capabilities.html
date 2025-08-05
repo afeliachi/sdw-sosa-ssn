@@ -113,29 +113,57 @@
             <em>System</em> &mdash;
             entity that implements a Procedure in the context of an Execution
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th class="restrictions">Additional Restrictions</th>
-                    <td>
-                        <a href="#SSNSYSTEMhasSystemCapability">ssn-system:hasSystemCapability</a>
-                        <em><b>ONLY</b></em> <a href="#SSNSYSTEMSystemCapability">ssn-system:SystemCapability</a>
-                        <br>
-                        <a href="#SSNSYSTEMhasOperatingRange">ssn-system:hasOperatingRange</a>
-                        <em><b>ONLY</b></em> <a href="#SSNSYSTEMOperatingRange">ssn-system:OperatingRange</a>
-                        <br>
-                        <a href="#SSNSYSTEMhasSurvivalRange">ssn-system:hasSurvivalRange</a>
-                        <em><b>ONLY</b></em> <a href="#SSNSYSTEMSurvivalRange">ssn-system:SurvivalRange</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/sosa/common/">http://www.w3.org/ns/sosa/common/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn restrictions">
+                Additional Restrictions
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMhasSystemCapability">
+                    ssn-system:hasSystemCapability
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMSystemCapability">
+                    ssn-system:SystemCapability
+                </a>
+                <br/>
+                <a href="#SSNSYSTEMhasOperatingRange">
+                    ssn-system:hasOperatingRange
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMOperatingRange">
+                    ssn-system:OperatingRange
+                </a>
+                <br/>
+                <a href="#SSNSYSTEMhasSurvivalRange">
+                    ssn-system:hasSurvivalRange
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMSurvivalRange">
+                    ssn-system:SurvivalRange
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/sosa/common/">
+                    http://www.w3.org/ns/sosa/common/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -157,23 +185,27 @@
             <a href="#SSNSYSTEMOperatingRange">OperatingRanges</a>
             and <a href="#SSNSYSTEMSurvivalRange">SurvivalRanges</a>.
         </p>
-        <table>
-            <tbody>
-                <tr>
-                    <th>Example</th>
-                    <td>
-                        Used for example to say that a <a href="#SOSASensor">Sensor</a>
-                        has a particular accuracy in particular conditions.
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt>
+                Example
+            </dt>
+            <dd>
+                Used for example to say that a
+                <a href="#SOSASensor">
+                    Sensor
+                </a>
+                has a particular accuracy in particular conditions.
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -194,22 +226,25 @@
             to a <a href="#SSNSYSTEMSystemCapability">SystemCapability</a> describing the capabilities
             of the <a href="#SOSASystem">System</a> under certain conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub property of</th>
-                    <td>
-                        <a>sosa:hasProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub property of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:hasProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -235,47 +270,84 @@
             represent the system's normal operating environment, including conditions that don't affect the
             <a href="#SOSAObservation">Observations</a> or the <a href="#SOSAActuation">Actuations</a>.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a>sosa:Property</a>
-                    </td>
-                </tr>
-                <tr class="ssn">
-                    <th class="restrictions">Restrictions</th>
-                    <td>
-
-                        <a>sosa:forProperty</a>
-                        <em><b>ONLY</b></em> <a>sosa:Property</a>
-                        <br>
-
-                        <a href="#SSNSYSTEMhasSystemProperty">ssn-system:hasSystemProperty</a>
-                        <em><b>ONLY</b></em> <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                        <br>
-
-                        <a href="#SSNSYSTEMinCondition">ssn-system:inCondition</a>
-                        <br>
-
-                        <a href="#SSNSYSTEMinCondition">ssn-system:inCondition</a>
-                        <em><b>MIN 1</b></em>
-                        <br>
-
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSystemCapability">ssn-system:hasSystemCapability</a>
-                        <em><b>ONLY</b></em> <a>sosa:System</a><br>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:Property
+                </a>
+            </dd>
+            <dt class="ssn restrictions">
+                Restrictions
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:forProperty
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a>
+                    sosa:Property
+                </a>
+                <br/>
+                <a href="#SSNSYSTEMhasSystemProperty">
+                    ssn-system:hasSystemProperty
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+                <br/>
+                <a href="#SSNSYSTEMinCondition">
+                    ssn-system:inCondition
+                </a>
+                <br/>
+                <a href="#SSNSYSTEMinCondition">
+                    ssn-system:inCondition
+                </a>
+                <em>
+                    <b>
+                        MIN 1
+                    </b>
+                </em>
+                <br/>
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSystemCapability">
+                    ssn-system:hasSystemCapability
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a>
+                    sosa:System
+                </a>
+                <br/>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -297,22 +369,25 @@
             capabilities of the
             <a href="#SOSASystem">System</a>.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub property of</th>
-                    <td>
-                        <a>sosa:hasProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub property of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:hasProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -335,37 +410,60 @@
             an <a href="#SOSAActuator">Actuator</a> to make <a href="#SOSAActuation">Actuations</a>,
             or a <a href="#SOSASampler">Sampler</a> to make <a href="#SOSASampling">Sampling</a>.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a>sosa:Property</a>
-                    </td>
-                </tr>
-                <tr class="ssn">
-                    <th class="restrictions">Restrictions</th>
-                    <td>
-
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSystemProperty">ssn-system:hasSystemProperty</a>
-                        <em><b>ONLY</b></em> <a href="#SSNSYSTEMSystemCapability">ssn-system:SystemCapability</a><br>
-
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSystemProperty">ssn-system:hasSystemProperty</a>
-                        <em><b>MIN 1</b></em>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:Property
+                </a>
+            </dd>
+            <dt class="ssn restrictions">
+                Restrictions
+            </dt>
+            <dd class="ssn">
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSystemProperty">
+                    ssn-system:hasSystemProperty
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMSystemCapability">
+                    ssn-system:SystemCapability
+                </a>
+                <br/>
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSystemProperty">
+                    ssn-system:hasSystemProperty
+                </a>
+                <em>
+                    <b>
+                        MIN 1
+                    </b>
+                </em>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -387,38 +485,63 @@
             return as the result of an <a href="#SOSAObservation">Observation</a>
             under the defined conditions with the defined system properties.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>,
-                        <a href="#SSNSYSTEMRange">ssn-system:Range</a>
-                    </td>
-                </tr>
-                <tr class="ssn">
-                    <th class="restrictions">Restrictions</th>
-                    <td>
-
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSystemProperty">ssn-system:hasSystemProperty</a>
-                        <em><b>ONLY</b></em>
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSystemCapability">ssn-system:hasSystemCapability</a>
-                        <em><b>ONLY</b></em> <a>sosa:Sensor</a>
-
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+                ,
+                <a href="#SSNSYSTEMRange">
+                    ssn-system:Range
+                </a>
+            </dd>
+            <dt class="ssn restrictions">
+                Restrictions
+            </dt>
+            <dd class="ssn">
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSystemProperty">
+                    ssn-system:hasSystemProperty
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSystemCapability">
+                    ssn-system:hasSystemCapability
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a>
+                    sosa:Sensor
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -439,38 +562,63 @@
             values that can be the result of an <a href="#SOSAActuation">Actuation</a> under the
             defined conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>,
-                        <a href="#SSNSYSTEMRange">ssn-system:Range</a>
-                    </td>
-                </tr>
-                <tr class="ssn">
-                    <th class="restrictions">Restriction</th>
-                    <td>
-
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSystemProperty">ssn-system:hasSystemProperty</a>
-                        <em><b>ONLY</b></em>
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSystemCapability">ssn-system:hasSystemCapability</a>
-                        <em><b>ONLY</b></em> <a>sosa:Actuator</a>
-
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+                ,
+                <a href="#SSNSYSTEMRange">
+                    ssn-system:Range
+                </a>
+            </dd>
+            <dt class="ssn restrictions">
+                Restriction
+            </dt>
+            <dd class="ssn">
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSystemProperty">
+                    ssn-system:hasSystemProperty
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSystemCapability">
+                    ssn-system:hasSystemCapability
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a>
+                    sosa:Actuator
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -493,22 +641,25 @@
             and the true value of the observed <a href="#SOSAProperty">Property</a>
             under the defined conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -529,37 +680,59 @@
             claiming the absence of a component in a material is beta, given a probability alpha of falsely claiming
             its presence.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                    </td>
-                </tr>
-                <tr class="ssn">
-                    <th class="restrictions">Restriction</th>
-                    <td>
-
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSystemProperty">ssn-system:hasSystemProperty</a>
-                        <em><b>ONLY</b></em>
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSystemCapability">ssn-system:hasSystemCapability</a>
-                        <em><b>ONLY</b></em> <a>sosa:Sensor</a>
-
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+            </dd>
+            <dt class="ssn restrictions">
+                Restriction
+            </dt>
+            <dd class="ssn">
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSystemProperty">
+                    ssn-system:hasSystemProperty
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSystemCapability">
+                    ssn-system:hasSystemCapability
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a>
+                    sosa:Sensor
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -586,22 +759,25 @@
             <a href="#SOSAProperty">Property</a> over time for an unchanging command under the defined
             conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -622,22 +798,25 @@
             <a href="#SOSAObservation">Observation</a>, <a href="#SOSAActuation">Actuation</a>,
             or <a href="#SOSASampling">Sampling</a> and the next, under the defined conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -660,22 +839,25 @@
             (resp. the <a href="#SOSAActuator">Actuator</a> operating the <a href="#SOSAActuation">Actuation</a>),
             under the defined conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -704,22 +886,25 @@
             i.e., a measure of an <a href="#SOSAActuator">Actuator</a>'s ability to consistently
             reproduce an <a href="#SOSAActuation">Actuations</a>, under the defined conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -747,22 +932,25 @@
             acted on, under the defined
             conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -787,16 +975,17 @@
             bound of the range as simple properties. While SOSA/SSN only specifies the use of these properties to list
             bounding values, individual implementations may add additional axioms to restrict observation values or
             deployment conditions.</p>
-        <table>
-            <tbody>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -824,22 +1013,25 @@
             and the 'settling' of the value of the acted on <a href="#SOSAProperty">Property</a>,
             under the defined conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -872,22 +1064,25 @@
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> being acted on, under the defined
             conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -914,22 +1109,25 @@
             corresponding change in a value of an <a href="#SOSAProperty">Property</a> being acted on, under the
             defined conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSystemProperty">ssn-system:SystemProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSystemProperty">
+                    ssn-system:SystemProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -950,22 +1148,25 @@
             to an <a href="#SSNSYSTEMOperatingRange">OperatingRange</a> describing the normal operating
             environment of the <a href="#SOSASystem">System</a>.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub property of</th>
-                    <td>
-                        <a>sosa:hasProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub property of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:hasProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -997,43 +1198,75 @@
             operating 'out of operating range' and <a href="#SSNSYSTEMSystemCapability">SystemCapability</a>
             specifications may no longer hold.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a>sosa:Property</a>,
-                        <a href="#SSNSYSTEMRange">ssn-system:Range</a>
-                    </td>
-                </tr>
-                <tr class="ssn">
-                    <th class="restrictions">Restrictions</th>
-                    <td>
-
-                        <a href="#SSNSYSTEMhasOperatingProperty">ssn-system:hasOperatingProperty</a>
-                        <em><b>ONLY</b></em> <a href="#SSNSYSTEMOperatingProperty">ssn-system:OperatingProperty</a>
-                        <br>
-
-                        <a href="#SSNSYSTEMinCondition">ssn-system:inCondition</a>
-                        <br>
-
-                        <a href="#SSNSYSTEMinCondition">ssn-system:inCondition</a>
-                        <em><b>MIN 1</b></em>
-                        <br>
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasOperatingRange">ssn-system:hasOperatingRange</a>
-                        <em><b>ONLY</b></em> <a>sosa:System</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:Property
+                </a>
+                ,
+                <a href="#SSNSYSTEMRange">
+                    ssn-system:Range
+                </a>
+            </dd>
+            <dt class="ssn restrictions">
+                Restrictions
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMhasOperatingProperty">
+                    ssn-system:hasOperatingProperty
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMOperatingProperty">
+                    ssn-system:OperatingProperty
+                </a>
+                <br/>
+                <a href="#SSNSYSTEMinCondition">
+                    ssn-system:inCondition
+                </a>
+                <br/>
+                <a href="#SSNSYSTEMinCondition">
+                    ssn-system:inCondition
+                </a>
+                <em>
+                    <b>
+                        MIN 1
+                    </b>
+                </em>
+                <br/>
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasOperatingRange">
+                    ssn-system:hasOperatingRange
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a>
+                    sosa:System
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1055,22 +1288,25 @@
             of
             the <a href="#SOSASystem">System</a>.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub property of</th>
-                    <td>
-                        <a>sosa:hasProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub property of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:hasProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1091,37 +1327,60 @@
             specified conditions.
             May describe power ranges, power sources, standard configurations, attachments and the like.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a>sosa:Property</a>
-                    </td>
-                </tr>
-                <tr class="ssn">
-                    <th class="restrictions">Restrictions</th>
-                    <td>
-
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasOperatingProperty">ssn-system:hasOperatingProperty</a>
-                        <em><b>ONLY</b></em> <a href="#SSNSYSTEMOperatingRange">ssn-system:OperatingRange</a><br>
-
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasOperatingProperty">ssn-system:hasOperatingProperty</a>
-                        <em><b>MIN 1</b></em>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:Property
+                </a>
+            </dd>
+            <dt class="ssn restrictions">
+                Restrictions
+            </dt>
+            <dd class="ssn">
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasOperatingProperty">
+                    ssn-system:hasOperatingProperty
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMOperatingRange">
+                    ssn-system:OperatingRange
+                </a>
+                <br/>
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasOperatingProperty">
+                    ssn-system:hasOperatingProperty
+                </a>
+                <em>
+                    <b>
+                        MIN 1
+                    </b>
+                </em>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1142,22 +1401,25 @@
             in
             the specified conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMOperatingProperty">ssn-system:OperatingProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMOperatingProperty">
+                    ssn-system:OperatingProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1177,23 +1439,29 @@
             Power range in which <a href="#SOSASystem">System</a>
             is expected to operate in the specified conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMOperatingProperty">ssn-system:OperatingProperty</a>,
-                        <a href="#SSNSYSTEMRange">ssn-system:Range</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMOperatingProperty">
+                    ssn-system:OperatingProperty
+                </a>
+                ,
+                <a href="#SSNSYSTEMRange">
+                    ssn-system:Range
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1213,22 +1481,25 @@
             Relation from a <a href="#SOSASystem">System</a>
             to a <a href="#SSNSYSTEMSurvivalRange">SurvivalRange</a>.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub property of</th>
-                    <td>
-                        <a>sosa:hasProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub property of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:hasProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1258,42 +1529,76 @@
             If, however, the SurvivalRange is violated, the <a href="#SOSASystem">System</a> is 'damaged'
             and <a href="#SSNSYSTEMSystemCapability">SystemCapability</a> specifications may no longer hold.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a>sosa:Property</a>,
-                        <a href="#SSNSYSTEMRange">ssn-system:Range</a>
-                    </td>
-                </tr>
-                <tr class="ssn">
-                    <th class="restrictions">Restrictions</th>
-                    <td>
-
-                        <a href="#SSNSYSTEMhasSurvivalProperty">ssn-system:hasSurvivalProperty</a>
-                        <em><b>ONLY</b></em> <a href="#SSNSYSTEMSurvivalProperty">ssn-system:SurvivalProperty</a>
-                        <br>
-
-                        <a href="#SSNSYSTEMinCondition">ssn-system:inCondition</a>
-                        <br>
-
-                        <a href="#SSNSYSTEMinCondition">ssn-system:inCondition</a>
-                        <em><b>MIN 1</b></em>
-                        <br>
-
-                        <em><b>inverse Of</b></em> <a href="#SSNSYSTEMhasSurvivalRange">ssn-system:hasSurvivalRange</a>
-                        <em><b>ONLY</b></em> <a>sosa:System</a><br>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:Property
+                </a>
+                ,
+                <a href="#SSNSYSTEMRange">
+                    ssn-system:Range
+                </a>
+            </dd>
+            <dt class="ssn restrictions">
+                Restrictions
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMhasSurvivalProperty">
+                    ssn-system:hasSurvivalProperty
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMSurvivalProperty">
+                    ssn-system:SurvivalProperty
+                </a>
+                <br/>
+                <a href="#SSNSYSTEMinCondition">
+                    ssn-system:inCondition
+                </a>
+                <br/>
+                <a href="#SSNSYSTEMinCondition">
+                    ssn-system:inCondition
+                </a>
+                <em>
+                    <b>
+                        MIN 1
+                    </b>
+                </em>
+                <br/>
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSurvivalRange">
+                    ssn-system:hasSurvivalRange
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a>
+                    sosa:System
+                </a>
+                <br/>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1315,22 +1620,25 @@
             <a href="#SOSASystem">System</a> to a <a href="#SSNSYSTEMSurvivalProperty">SurvivalProperty</a>
             describing the survival range of the <a href="#SOSASystem">System</a>.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub property of</th>
-                    <td>
-                        <a>sosa:hasProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub property of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:hasProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1354,37 +1662,60 @@
             of <a href="#SOSAObservation">Observations</a> that can be made before the sensing capability is
             depleted.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a>sosa:Property</a>
-                    </td>
-                </tr>
-                <tr class="ssn">
-                    <th class="restrictions">Restrictions</th>
-                    <td>
-
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSurvivalProperty">ssn-system:hasSurvivalProperty</a>
-                        <em><b>ONLY</b></em> <a href="#SSNSYSTEMSurvivalRange">ssn-system:SurvivalRange</a><br>
-
-
-                        <em><b>inverse Of</b></em>
-                        <a href="#SSNSYSTEMhasSurvivalProperty">ssn-system:hasSurvivalProperty</a>
-                        <em><b>MIN 1</b></em>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a>
+                    sosa:Property
+                </a>
+            </dd>
+            <dt class="ssn restrictions">
+                Restrictions
+            </dt>
+            <dd class="ssn">
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSurvivalProperty">
+                    ssn-system:hasSurvivalProperty
+                </a>
+                <em>
+                    <b>
+                        ONLY
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMSurvivalRange">
+                    ssn-system:SurvivalRange
+                </a>
+                <br/>
+                <em>
+                    <b>
+                        inverse Of
+                    </b>
+                </em>
+                <a href="#SSNSYSTEMhasSurvivalProperty">
+                    ssn-system:hasSurvivalProperty
+                </a>
+                <em>
+                    <b>
+                        MIN 1
+                    </b>
+                </em>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1405,22 +1736,25 @@
             (expressed as total life since manufacture, time in use, number of operations, etc.) in the specified
             conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSurvivalProperty">ssn-system:SurvivalProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSurvivalProperty">
+                    ssn-system:SurvivalProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1440,22 +1774,25 @@
             Total useful life of a <a href="#SOSASystem">System</a>'s
             battery in the specified conditions.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                    <th>Sub class of</th>
-                    <td>
-                        <a href="#SSNSYSTEMSurvivalProperty">ssn-system:SurvivalProperty</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+                Sub class of
+            </dt>
+            <dd class="ssn">
+                <a href="#SSNSYSTEMSurvivalProperty">
+                    ssn-system:SurvivalProperty
+                </a>
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -1474,18 +1811,21 @@
             <em>Battery</em> &mdash;
             A class representing a Battery powering a <a href="#SOSASystem">System</a>.
         </p>
-        <table>
-            <tbody>
-                <tr class="ssn">
-                </tr>
-                <tr>
-                    <th>is Defined By</th>
-                    <td>
-                        <a href="http://www.w3.org/ns/ssn/systems/">http://www.w3.org/ns/ssn/systems/</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl>
+            <dt class="ssn">
+            </dt>
+            <dd class="ssn">
+            </dd>
+            <dt>
+                is Defined By
+            </dt>
+            <dd>
+                <a href="http://www.w3.org/ns/ssn/systems/">
+                    http://www.w3.org/ns/ssn/systems/
+                </a>
+            </dd>
+        </dl>
+        
         <div class="buttonpanel">
             <span class="back">[<a href="#System-capabilities">Back to module overview and examples</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
