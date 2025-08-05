@@ -85,8 +85,9 @@ ex:minimumSensorTemperatureLimit a iop:Variable, sosa:Property;
 ex:maximumOperatingTemperature a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578 ;
  sosa:observedProperty ex:maximumSensorTemperatureLimit ;
- sosa:hasSimpleResult 80.0 ;
- qudt:hasUnit unit:DEG_C .
+ sosa:hasResult [
+   qudt:value 80.0 ;
+   qudt:hasUnit unit:DEG_C ] .
 
 ex:maximumSensorTemperatureLimit a iop:Variable, sosa:Property;
  iop:hasStatisticalModifier uom:maximum ;
@@ -100,8 +101,9 @@ ex:maximumSensorTemperatureLimit a iop:Variable, sosa:Property;
 ex:minimumOperatingHumidity a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578;
  sosa:observedProperty ex:minSensorEnvironmentHumidityLimit ;
- sosa:hasSimpleResult 0.0 ;
- qudt:hasUnit unit:PERCENT .
+ sosa:hasResult [
+   qudt:value 0.0 ;
+   qudt:hasUnit unit:PERCENT ] .
 
 ex:minSensorEnvironmentHumidityLimit a iop:Variable, sosa:Property;
  iop:hasStatisticalModifier uom:minimum ;
@@ -111,8 +113,9 @@ ex:minSensorEnvironmentHumidityLimit a iop:Variable, sosa:Property;
 ex:maximumOperatingHumidity a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578 ;
  sosa:observedProperty ex:maxSensorEnvironmentHumidityLimit ; 
- sosa:hasSimpleResult 100.0 ;
- qudt:hasUnit unit:PERCENT .
+ sosa:hasResult [
+   qudt:value 100.0 ;
+   qudt:hasUnit unit:PERCENT ] .
 
 ex:maxSensorEnvironmentHumidityLimit a iop:Variable, sosa:Property;
  iop:hasStatisticalModifier uom:maximum ;
@@ -190,8 +193,9 @@ ex:DHT22_4578_minimumMeasureableTemperatureLimit a iop:Variable, sosa:Property;
 ex:DHT22_4578_maximumMeasureableTemperature a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor ;
  sosa:observedProperty ex:DHT22_4578_maximumMeasureableTemperatureLimit;
- sosa:hasSimpleResult 80.0 ;
- qudt:hasUnit unit:DEG_C .
+ sosa:hasResult [
+   qudt:value 80.0 ;
+   qudt:hasUnit unit:DEG_C ] .
 
 ex:DHT22_4578_maximumMeasureableTemperatureLimit a iop:Variable, sosa:Property;
  iop:hasStatisticalModifier uom:maximum ;
@@ -200,23 +204,26 @@ ex:DHT22_4578_maximumMeasureableTemperatureLimit a iop:Variable, sosa:Property;
 
 ex:DHT22_4578_TemperatureMeasurementAccuracy a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor;
- sosa:observedProperty sosa:Accuracy ;
- sosa:hasSimpleResult 0.5 ;
- qudt:hasUnit unit:DEG_C .
+ sosa:observedProperty ex:Accuracy ;
+ sosa:hasResult [
+   qudt:value 0.5 ;
+   qudt:hasUnit unit:DEG_C ] .
 
 
 ex:DHT22_4578_TemperatureMeasurementSensitivity a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor;
- sosa:observedProperty sosa:Sensitivity ,sosa:Resolution ;
- sosa:hasSimpleResult 0.1 ;
- qudt:hasUnit unit:DEG_C .
+ sosa:observedProperty ex:Sensitivity , ex:Resolution ;
+ sosa:hasResult [
+   qudt:value 0.1 ;
+   qudt:hasUnit unit:DEG_C ] .
 
 ex:DHT22_4578_TemperatureMeasurementFrequency a sosa:Observation ;
  rdfs:comment "The smallest possible time between one observation and the next is 2 s on average."@en ;
  sosa:hasFeatureOfInterest ex:DHT22_4578_TemperatureSensor;
  sosa:observedProperty ex:DHT22_4578_TemperatureMeasurementFrequencyLimit ;
- sosa:hasSimpleResult 2.0 ;
- qudt:hasUnit unit:SEC .
+ sosa:hasResult [
+   qudt:value 2.0 ;
+   qudt:hasUnit unit:SEC ] .
 
 # TODO Likely wrong
 
@@ -229,21 +236,24 @@ ex:DHT22_4578_TemperatureMeasurementFrequencyLimit  a iop:Variable, sosa:Propert
 ex:DHT22_4578_minimumMeasureableRelativeHumidity a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578_HumiditySensor;
  sosa:observedProperty ex:minSensorEnvironmentHumidityLimit;
- sosa:hasSimpleResult 0.0 ;
- qudt:hasUnit unit:PERCENT .
+ sosa:hasResult [
+   qudt:value 0.0 ;
+   qudt:hasUnit unit:PERCENT ] .
 
 ex:DHT22_4578_maximumMeasureableRelativeHumidity a sosa:Observation ;
  sosa:hasFeatureOfInterest ex:DHT22_4578_HumiditySensor;
  sosa:observedProperty ex:maxSensorEnvironmentHumidityLimit;
- sosa:hasSimpleResult 100.0 ;
- qudt:hasUnit unit:PERCENT .
+ sosa:hasResult [
+   qudt:value 100.0 ;
+   qudt:hasUnit unit:PERCENT ] .
 
 ex:DHT22_4578_RelativeHumidityFrequency a sosa:Observation ;
  rdfs:comment "The smallest possible time between one observation and the next is 2 s on average."@en ;
  sosa:hasFeatureOfInterest ex:DHT22_4578_HumiditySensor;
  sosa:observedProperty ex:DHT22_4578_RelativeHumidityFrequencyLimit ;
- sosa:hasSimpleResult 2.0 ;
- qudt:hasUnit unit:SEC .
+ sosa:hasResult [
+   qudt:value 2.0 ;
+   qudt:hasUnit unit:SEC ] .
 
 ex:DHT22_4578_RelativeHumidityFrequencyLimit  a iop:Variable, sosa:Property;
   iop:hasStatisticalModifier uom:average ;

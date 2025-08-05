@@ -20,6 +20,24 @@
     of real-life deployments: data quality constraints must ensure that the data is sensical while making allowanced
     for the storage of out-of-bounds values that may indicate a problem with a deployed sensor.</p>
 
+<p>The System Capabilities module has been downsized in this edition and its vocabulary extensively reworked with a number of
+    classes deleted in favor of external vocabularies and property repositories. The module further suffered from under specification
+    and lacked documentation over its intended use.
+</p>
+
+<p>The usage of <a href="SOSAObservation">observations</a> and <a href="SOSAObservationCollection">observation collections</a> has been expanded
+    to capabilities and conditions through the enumeration of values and constraints on those values without assigning a reporting sensor or timestamp.
+    This allows to reuse the same structure to report on sensor behavior.
+</p>
+
+<p>This edition has also removed the notion of &quot;Ranges&quot; within its vocabulary due to the absence of an appropriate datatype or vocabulary to
+    describe numerical ranges. xsd:minInclusive/xsd:maxInclusive are part of OWL reserved vocabulary, and schema:minValue/schema:maxValue created additional
+    problems relating to the property of the feature. Instead, this edition recommends the specification of individual, simple properties such as
+    <em>MinMeasurableTemperature</em> and <em>MaxMeasurableTemperature</em>. Apart from <a href="SOSAinCondition">inCondition</a>, this edition does not
+    provide means to relate properties or describe them further. External ontologies are expected to be complementary to this module, such as the
+    <a href="https://i-adopt.github.io/ontology/">I-ADOPT Framework ontology</a>, and the
+    <a href="http://www.ontology-of-units-of-measure.org/page/om-2">Ontology of Units of Measure</a>.
+</p>
 
 <p style="text-align: center;">
     The namespace for the System Capabilities Module is <code>http://www.w3.org/ns/sosa/</code>.</p>
@@ -43,9 +61,10 @@
         literature. The System Capabilities describes the properties of the measurement being performed by the system while the
         Operating Conditions describe the potentials environments in which the system is deployed. This separation is needed in order
         to account for the variability in the performance of the system under different environmental or operating parameters.
-        Furthermore:</p>
+        Furthermore:
+    </p>
     <ul>
-        <li>Some system depend on unreported environmental measurements in order to produce results (e.g., temperature is a component of
+        <li>Some systems depend on unreported environmental measurements in order to produce results (e.g., temperature is a component of
             the relative humidity calculation)</li>
         <li>Some systems have requirements for proper operation for properties that they are unable to sense themselves
             (e.g., minimum power supply voltage)</li>
@@ -55,11 +74,23 @@
 
     <p>This information allows designers to communicate complex operating behavior to the consumer of the system results and to
         simplify procurement and system deployment decision by enabling searches for systems capable of fulfilling a specific
-        requirement.</p>
-    <p>The implementation of operating conditions and capabilities is done through <a href="#SOSAObservationCollection">observation collections</a>
-        that aggregate <a href="#SOSAObservation">observations</a> on <a href="#SOSAProperty">properties</a> of the system or its environment
-        without a reporting sensor. Their reuse of the observation structure ensures consistency in reporting values across the ontology and it may be the case that the same observation can be used for reporting both the capability and the operating condition. This is application dependent and nuances may sometimes prevent reuse: a thermometer's capability is based on its ability to measure a medium while its survival condition is based on its own physical
-        temperature.
+        requirement.
+    </p>
+    <p>
+        The reporting of operating conditions and capabilities is done through
+        <a href="#SOSAObservationCollection">observation collections</a>
+        that aggregate <a href="#SOSAObservation">observations</a>.
+        Each observation gives a value for a system or environment <a href="#SOSAProperty">property</a>.
+        The information is typically provided by a system vendor, and in this context sensor, procedure, and timestamp
+        are generally not reported.
+    </p>
+    <p>
+        Reuse of <a>sosa:Observation</a> in this way ensures consistency in reporting values across the ontology,
+        which is particularly helpful when the same observation can be used for reporting both a capability and
+        operating condition.
+        Note that this is application dependent, and nuances may prevent reuse: for example, a thermometer's
+        capability is based on its ability to measure a medium while its survival condition is based on its own
+        physical temperature.
     </p>
 
     <figure class="ssn">
@@ -189,27 +220,8 @@
     </section>
     <section>
         <h4>Guidance on System Capability properties and ranges</h4>
-        <p>The System Capabilities module has been downsized in this edition and its vocabulary extensively reworked with a number of
-            classes deleted in favor of external vocabularies and property repositories. The module further suffered from under specification
-            and lacked documentation over its intended use.
-        </p>
 
-        <p>The usage of <a href="SOSAObservation">observations</a> and <a href="SOSAObservationCollection">observation collections</a> has been expanded
-            to capabilities and conditions through the enumeration of values and constraints on those values without assigning a reporting sensor or timestamp.
-            This allows to reuse the same structure to report on sensor behavior.
-        </p>
-
-        <p>This edition has also removed the notion of &quot;Ranges&quot; within its vocabulary due to the absence of an appropriate datatype or vocabulary to
-            describe numerical ranges. xsd:minInclusive/xsd:maxInclusive are part of OWL reserved vocabulary, and schema:minValue/schema:maxValue created additional
-            problems relating to the property of the feature. Instead, this edition recommends the specification of individual, simple properties such as
-            <em>MinMeasurableTemperature</em> and <em>MaxMeasurableTemperature</em>. Apart from <a href="SOSAinCondition">inCondition</a>, this edition does not
-            provide means to relate properties or describe them further. External ontologies are expected to be complementary to this module, such as the
-            <a href="https://i-adopt.github.io/ontology/">I-ADOPT Framework ontology</a>, and the
-            <a href="http://www.ontology-of-units-of-measure.org/page/om-2">Ontology of Units of Measure</a>.
-            The examples provided here are non-normative but lend themselves to most vocabularies.
-        </p>
-
-        <p>The following example describes a possible solution is the use of constrains to record sensor reading limitations using other ontologies such as I-ADOPT:</p>
+        <p>The following example demonstrates a possible solution for describing sensor reading limitations using other ontologies such as I-ADOPT:</p>
 
         <pre class="example" data-include="./rdf/examples/i-adopt.ttl" data-include-format="text"></pre>
 
@@ -364,7 +376,7 @@
             <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasSystemCapability
         </p>
         <p>
-            <strong>an OWL Property</strong>
+            <strong>an OWL Object Property</strong>
         </p>
         <p>
             <em>has System Capability</em> &mdash;
@@ -476,7 +488,7 @@
                 <strong>IRI:</strong> http://www.w3.org/ns/sosa/NormalOperatingConditions
             </p>
             <p>
-                <strong>an OWL Class</strong>
+                <strong>an OWL Named Individual</strong>
             </p>
             <p>
                 <em>Normal Operating Conditions</em> &mdash;
@@ -485,7 +497,7 @@
             <table>
                 <tbody>
                     <tr>
-                        <th>Sub class of</th>
+                        <th>Member of</th>
                         <td>
                             <a href="http://www.w3.org/ns/sosa/OperatingConditionKind">sosa:OperatingConditionKind</a>
                         </td>
@@ -511,7 +523,7 @@
                 <strong>IRI:</strong> http://www.w3.org/ns/sosa/SuboptimalConditions
             </p>
             <p>
-                <strong>an OWL Class</strong>
+                <strong>an OWL Named Individual</strong>
             </p>
             <p>
                 <em>Suboptimal Conditions</em> &mdash;
@@ -521,7 +533,7 @@
             <table>
                 <tbody>
                     <tr>
-                        <th>Sub class of</th>
+                        <th>Member of</th>
                         <td>
                             <a href="http://www.w3.org/ns/sosa/OperatingConditionKind">sosa:OperatingConditionKind</a>
                         </td>
@@ -546,7 +558,7 @@
                 <strong>IRI:</strong> http://www.w3.org/ns/sosa/SurvivableConditions
             </p>
             <p>
-                <strong>an OWL Class</strong>
+                <strong>an OWL Named Individual</strong>
             </p>
             <p>
                 <em>Survivable Conditions</em> &mdash;
@@ -558,7 +570,7 @@
             <table>
                 <tbody>
                     <tr>
-                        <th>Sub class of</th>
+                        <th>Member of</th>
                         <td>
                             <a href="http://www.w3.org/ns/sosa/OperatingConditionKind">sosa:OperatingConditionKind</a>
                         </td>
