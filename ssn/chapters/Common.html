@@ -5,11 +5,11 @@
     <p>
         The <b>Common</b> module defines terms that are common across Sensing, Observation, Sampling and Actuation
         applications.
-        Some of the classes in the Common module are used as-is in applications (FeatureOfInterest, Property, Platform,
-        Deployment).
+        Some of the classes in the Common module are used as-is in applications (<a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>, <a href="SOSAProperty">Property</a>, <a href="SOSAPlatform">Platform</a>,
+        <a href="SOSADeployment">Deployment</a>).
         Other classes in the Common module are super-classes of more specific classes used in the application modules
-        (Procedure, System, Execution).
-        They all support the description of Actuation, Observation and Sampling instances using patterns that are common
+        (<a href="SOSAProcedure">Procedure</a>, <a href="SOSASystem">System</a>, <a href="SOSAExecution">Execution</a>).
+        They all support the description of <a href="SOSAActuation">Actuation</a>, <a href="SOSAObservation">Observation</a> and <a href="SOSASampling">Sampling</a> instances using patterns that are common
         across the applications.
     </p>
     <p>
@@ -102,7 +102,7 @@
                         </td>
                     </tr>
                     <tr class="ssn">
-                        <th class="restrictions">Restrictions</th>
+                        <th class="restrictions">Restrictions in SSN</th>
                         <td>
                             <a>sosa:hasProperty</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                             <br>
@@ -575,7 +575,7 @@
                         </td>
                     </tr>
                     <tr class="ssn">
-                        <th class="restrictions">Restrictions</th>
+                        <th class="restrictions">Restrictions in SSN</th>
                         <td>
                             <a>sosa:hasInput</a>
                             <br>
@@ -1010,7 +1010,7 @@
                         </td>
                     </tr>
                     <tr class="ssn">
-                        <th class="restrictions">Restrictions</th>
+                        <th class="restrictions">Restrictions in SSN</th>
                         <td>
                             <a>sosa:usedProcedure</a> <em><b>ONLY</b></em> <a>sosa:Procedure</a>
                             <br>
@@ -1130,7 +1130,7 @@
                         </td>
                     </tr>
                     <tr class="ssn">
-                        <th class="restrictions">Restrictions</th>
+                        <th class="restrictions">Restrictions in SSN</th>
                         <td>
                             <a>sosa:hasMember</a> <em><b>ONLY</b></em> (<a>sosa:Execution</a> OR
                             <a>sosa:ExecutionCollection</a> )
@@ -2148,7 +2148,7 @@ sosa:phenomenonTime [
                         </td>
                     </tr>
                     <tr class="ssn">
-                        <th class="restrictions">Restrictions</th>
+                        <th class="restrictions">Restrictions in SSN</th>
                         <td>
                             <a>sosa:deployedSystem</a> <em><b>ONLY</b></em> <a>sosa:System</a>
                             <br>
@@ -2199,7 +2199,7 @@ sosa:phenomenonTime [
                         </td>
                     </tr>
                     <tr class="ssn">
-                        <th class="restrictions">Restrictions</th>
+                        <th class="restrictions">Restrictions in SSN</th>
                         <td>
                             <a>sosa:hosts</a> <em><b>ONLY</b></em> ( <a>sosa:System</a> <em><b>OR</b></em>
                             <a>sosa:Platform</a> )
@@ -2287,7 +2287,7 @@ sosa:phenomenonTime [
                         </td>
                     </tr>
                     <tr class="ssn">
-                        <th class="restrictions">Restrictions</th>
+                        <th class="restrictions">Restrictions in SSN</th>
                         <td>
                             <a>sosa:isHostedBy</a> <em><b>ONLY</b></em> <a>sosa:Platform</a>
                             <br>
