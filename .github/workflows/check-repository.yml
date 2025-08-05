@@ -25,5 +25,4 @@ jobs:
 
       - name: Run repository check
         run: |
-          cd ssn
-          python scripts/check_repository.py
+          python ssn/scripts/check_repository.py

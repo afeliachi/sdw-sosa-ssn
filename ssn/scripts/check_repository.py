@@ -4,7 +4,7 @@ from pathlib import Path
 from rdflib import Graph, Namespace, RDF, RDFS, OWL, URIRef
 from collections import defaultdict
 
-CHAPTERS_DIR = Path("chapters")
+CHAPTERS_DIR = Path("ssn/chapters")
 TTL_EXT = ".ttl"
 SSN_NS = "http://www.w3.org/ns/ssn/"
 SOSA_NS = "http://www.w3.org/ns/sosa/"
@@ -52,7 +52,7 @@ def find_unreferenced_ttl_files():
                 # Discard absolute URLs
                 if re.match(r"^\w+://", match):  # e.g., http://, https://, file://
                     continue
-                resolved_path = Path(match).resolve()
+                resolved_path = (Path("ssn") / Path(match)).resolve()
                 if resolved_path in ttl_files:
                     referenced.add(resolved_path)
 
@@ -61,19 +61,20 @@ def find_unreferenced_ttl_files():
 
 # Find unreferenced images
 def find_unreferenced_images():
-    image_dir = Path("images")
-    all_images = {f.resolve() for f in image_dir.glob("*") if f.is_file()}
+    image_dir = Path("ssn/images")
+    allowed_exts = {".svg", ".png", ".jpg", ".jpeg", ".gif"}
+    all_images = {f.resolve() for f in image_dir.glob("*") if f.is_file() and f.suffix.lower() in allowed_exts}
     referenced = set()
 
     # Match src="images/..." or src="./images/..."
     img_ref_pattern = re.compile(r'src=["\'](?:\.\/)?images\/([^"\']+)["\']')
 
-    for html_file in Path("chapters").rglob("*.html"):
+    for html_file in Path("ssn/chapters").rglob("*.html"):
         with open(html_file, encoding="utf-8") as f:
             content = f.read()
             matches = img_ref_pattern.findall(content)
             for filename in matches:
-                resolved_path = (Path("images") / filename).resolve()
+                resolved_path = (Path("ssn/images") / filename).resolve()
                 if resolved_path in all_images:
                     referenced.add(resolved_path)
 
@@ -82,9 +83,9 @@ def find_unreferenced_images():
 
 # Check defined terms
 def check_defined_terms():
-    ontology_folder = Path("rdf/ontology/core")
+    ontology_folder = Path("ssn/rdf/ontology/core")
     ttl_files = sorted(ontology_folder.glob("*.ttl"))
-    term_definitions = defaultdict(list)
+    term_definitions = defaultdict(set)
     ontology_declarations = {}
 
     for ttl_file in ttl_files:
@@ -109,7 +110,7 @@ def check_defined_terms():
                     ):
                         # Check if explicitly defined by this ontology
                         if (term, RDFS.isDefinedBy, ontology_iri) in g:
-                            term_definitions[term].append(ttl_file)
+                            term_definitions[term].add(ttl_file)
                             
         except Exception as e:
             print(f"❌ Error parsing {ttl_file}: {e}")
@@ -133,7 +134,7 @@ def check_defined_terms():
     return term_definitions, len(duplicates) > 0  # return True if issues found
 
 def check_examples_terms_defined(core_terms):
-    example_folder = Path("rdf/examples")
+    example_folder = Path("ssn/rdf/examples")
     undefined_terms = defaultdict(set)  # term → set of example files using it
 
     for ttl_file in example_folder.glob("*.ttl"):
