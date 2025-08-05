@@ -24,4 +24,6 @@ jobs:
           pip install rdflib
 
       - name: Run repository check
-        run: python scripts/check_repository.py
+        run: |
+          cd ssn
+          python scripts/check_repository.py
