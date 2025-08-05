@@ -8,6 +8,8 @@
 @prefix sensor: <https://example.org/sensor/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capabilities-properties#> .
+@prefix sosa-env: <http://www.w3.org/ns/sosa/system-environment-properties#> .
 @base <https://example.org/data/TH2-PLUS/> .
 
 sensor:IBS-TH2-Plus-T a owl:Class ;
@@ -22,7 +24,7 @@ ex:IBS-TH2-Plus-T-687343 a sensor:IBS-TH2-Plus-T ;
 sensor:IBS-TH2-Plus-T-systemCapability a sosa:ObservationCollection ;
   sosa:hasMember [
       a sosa:Observation ;
-      sosa:observedProperty ex:TemperatureAccuracy ;
+      sosa:observedProperty sosa-cap:TemperatureAccuracy ;
       sosa:hasResult [ 
         qudt:value 0.5 ;
         qudt:unit unit:DEG_C ;
@@ -30,7 +32,7 @@ sensor:IBS-TH2-Plus-T-systemCapability a sosa:ObservationCollection ;
   ] ,
   [
       a sosa:Observation ;
-      sosa:observedProperty ex:MaxMeasurableTemperature ;
+      sosa:observedProperty sosa-cap:MaxMeasurableTemperature ;
       sosa:hasResult [ 
         qudt:value 60.0 ;
         qudt:unit unit:DEG_C ;
@@ -38,7 +40,7 @@ sensor:IBS-TH2-Plus-T-systemCapability a sosa:ObservationCollection ;
   ] ,
   [
       a sosa:Observation ;
-      sosa:observedProperty ex:MinMeasurableTemperature ;
+      sosa:observedProperty sosa-cap:MinMeasurableTemperature ;
       sosa:hasResult [ 
         qudt:value -40.0 ;
         qudt:unit unit:DEG_C ;
@@ -49,7 +51,7 @@ sensor:IBS-TH2-Plus-T-systemCapability a sosa:ObservationCollection ;
 sensor:IBS-TH2-Plus-T-normalHumidityConditions a sosa:Observation ;
   sosa:hasMember [
       a sosa:Observation ;
-      sosa:observedProperty ex:MaxEnvironmentRelativeHumidity ;
+      sosa:observedProperty sosa-env:MinAmbientRelativeHumidity ;
       sosa:hasResult [ 
         qudt:value 0.0 ;
         qudt:unit unit:PERCENT ;
@@ -57,7 +59,7 @@ sensor:IBS-TH2-Plus-T-normalHumidityConditions a sosa:Observation ;
   ] ,
   [
       a sosa:Observation ;
-      sosa:observedProperty ex:MinEnvironmentRelativeHumidity ;
+      sosa:observedProperty sosa-env:MaxAmbientRelativeHumidity ;
       sosa:hasResult [ 
         qudt:value 99.0 ;
         qudt:unit unit:PERCENT ;

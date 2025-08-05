@@ -16,6 +16,8 @@
 @prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix seas: <https://w3id.org/seas/>.
 @prefix cdt: <http://w3id.org/lindt/custom_datatypes#>.
+@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capabilities-properties#> .
+@prefix sosa-env: <http://www.w3.org/ns/sosa/system-environment-properties#> .
 @base <https://data.grandlyon.com/> .
 
 # This example describes the IP68 Smart Sensor that and some of its capabilities and operating ranges.
@@ -44,13 +46,13 @@ ex:IP68_Outdoor_Temperature_Sensor_operatingRange a sosa:ObservationCollection ;
     rdfs:comment "An environment temperature range of -20 to 70 Celsius."@en ;
     sosa:hasOperatingConditionKind sosa:NormalOperatingConditions ;
     sosa:hasMember [
-      sosa:observedProperty ex:MinEnvironmentTemperature ;
+      sosa:observedProperty sosa-env:MinAmbientTemperature ;
       sosa:hasResult [ 
         qudt:value -20.0 ;
         qudt:unit unit:DEG_C ;
       ] ;
     ] , [
-      sosa:observedProperty ex:MaxEnvironmentTemperature ;
+      sosa:observedProperty sosa-env:MaxAmbientTemperature ;
       sosa:hasResult [ 
         qudt:value 70.0 ;
         qudt:unit unit:DEG_C ;
@@ -60,16 +62,16 @@ ex:IP68_Outdoor_Temperature_Sensor_operatingRange a sosa:ObservationCollection ;
 ex:IP68_Outdoor_Temperature_Sensor_systemCapability a sosa:ObservationCollection ;
   rdfs:comment "The sensor capability in normal operating conditions."@en ;
   sosa:hasMember [
-    sosa:observedProperty ex:RFSensitivity ;
+    sosa:observedProperty sosa-cap:RFSensitivity ;
     sosa:hasResult [ qudt:value -137.0 ; qudt:hasUnit unit:DeciB-MilliW ] ;
   ] , [
-    sosa:observedProperty ex:TemperatureAccuracy ;
+    sosa:observedProperty sosa-cap:TemperatureAccuracy ;
     sosa:hasResult [ qudt:value 0.2 ; qudt:hasUnit unit:DEG_C ] ;
   ] , [ 
-    sosa:observedProperty ex:TemperatureResolution 
+    sosa:observedProperty sosa-cap:TemperatureResolution 
     sosa:hasResult [ qudt:value 0.0625 ; qudt:hasUnit unit:DEG_C ] ;
   ] , [ 
-    sosa:observedProperty ex:BatteryResolution 
+    sosa:observedProperty sosa-cap:BatteryResolution 
     sosa:hasResult [ qudt:value 3.937e-3 ; qudt:hasUnit unit:PERCENT ] ;
   ] ;
   sosa:inCondition ex:IP68_Outdoor_Temperature_Sensor_operatingRange ;

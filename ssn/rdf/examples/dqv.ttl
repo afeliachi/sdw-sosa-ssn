@@ -3,6 +3,7 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#>.
 @prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix unit: <http://qudt.org/vocab/unit/>.
+@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capabilities-properties#> .
 
 ex:observation_233 a sosa:Observation ;
   sosa:observedProperty ex:TheAir;
@@ -16,7 +17,7 @@ ex:observation_233 a sosa:Observation ;
    
 ex:observation_233_MeasurementAccuracy a sosa:Observation ;
   sosa:hasFeatureOfInterest ex:TemperatureSensor;
-  sosa:observedProperty ex:TemperatureAccuracy ;
+  sosa:observedProperty sosa-cap:TemperatureAccuracy ;
   sosa:hasResult [ 
     qudt:value 1.5 ;
     qudt:unit unit:DEG_C ;

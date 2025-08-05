@@ -9,6 +9,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-env: <http://www.w3.org/ns/sosa/system-environment-properties#> .
 @base <https://rdf.ag/o/equipment/> .
 
 # This example is a partial specification for a common over-the-shelf temperature and humidity sensor.  Different instantions can
@@ -39,13 +40,13 @@ ex:IBSTH2TemperatureSensorLimits a sosa:ObservationCollection ;
     rdfs:label "Inkbird IBS-TH2 Temperature Sensor Limits"@en ;
     sosa:hasOperatingConditionKind sosa:NormalOperatingConditions ;
     sosa:hasMember [
-      sosa:observedProperty ex:MinEnvironmentTemperature ;
+      sosa:observedProperty sosa-env:MinAmbientTemperature ;
       sosa:hasResult [ 
         qudt:value -40.0 ;
         qudt:unit unit:DEG_C ;
       ] ;
     ] , [
-      sosa:observedProperty ex:MaxEnvironmentTemperature ;
+      sosa:observedProperty sosa-env:MaxAmbientTemperature ;
       sosa:hasResult [ 
         qudt:value 60.0 ;
         qudt:unit unit:DEG_C ;
@@ -57,13 +58,13 @@ ex:IBSTH2SurvivalRange a sosa:ObservationCollection ;
     sosa:hasOperatingConditionKind sosa:SurvivableConditions ;
     rdfs:label "Inkbird IBS-TH2 Failiure limits"@en ;
     sosa:hasMember [
-      sosa:observedProperty ex:MinEnvironmentTemperature ;
+      sosa:observedProperty sosa-env:MinAmbientTemperature ;
       sosa:hasResult [ 
         qudt:value -273.0 ;
         qudt:unit unit:DEG_C ;
       ] ;
     ] , [
-      sosa:observedProperty ex:MaxEnvironmentTemperature ;
+      sosa:observedProperty sosa-env:MaxAmbientTemperature ;
       sosa:hasResult [ 
         qudt:value 80.0 ;
         qudt:unit unit:DEG_C ;

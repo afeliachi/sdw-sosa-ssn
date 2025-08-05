@@ -8,6 +8,7 @@
 @prefix sensor: <https://example.org/sensor/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capabilities-properties#> .
 @base <https://example.org/data/TH2-PLUS/> .
 
 sensor:IBS-TH2-Plus
@@ -34,12 +35,12 @@ sensor:IBS-TH2-Plus
 sensor:IBS-TH2-Plus-systemCapability a sosa:ObservationCollection ;
   sosa:hasMember [
       a sosa:Observation ;
-      sosa:observedProperty ex:MaxFrequency ;
+      sosa:observedProperty sosa-cap:MaxFrequency ;
       sosa:hasSimpleResult "0.1 Hz"^^cdt:ucum ;
   ] ,
   [
       a sosa:Observation ;
-      sosa:observedProperty ex:MinFrequency ;
+      sosa:observedProperty sosa-cap:MinFrequency ;
       sosa:hasSimpleResult "5.556e-4 Hz"^^cdt:ucum ;
   ]
 .
@@ -76,34 +77,34 @@ sensor:IBS-TH2-Plus-T
 sensor:IBS-TH2-Plus-H-systemCapability a sosa:ObservationCollection ;
   sosa:hasMember [
       a sosa:Observation ;
-      sosa:observedProperty ex:HumidityAccuracy ;
+      sosa:observedProperty sosa-cap:HumidityAccuracy ;
       sosa:hasSimpleResult "4.5 %"^^cdt:ucum ;
   ] ,
   [
       a sosa:Observation ;
-      sosa:observedProperty ex:MaxMeasurableHumidity ;
+      sosa:observedProperty sosa-cap:MaxMeasurableHumidity ;
       sosa:hasSimpleResult "99.0 %"^^cdt:ucum ;
   ] ,
   [
       a sosa:Observation ;
-      sosa:observedProperty ex:MinMeasurableHumidity ;
+      sosa:observedProperty sosa-cap:MinMeasurableHumidity ;
       sosa:hasSimpleResult "0.0 %"^^cdt:ucum ;
   ]
 .
 sensor:IBS-TH2-Plus-T-systemCapability a sosa:ObservationCollection ;
   sosa:hasMember [
       a sosa:Observation ;
-      sosa:observedProperty ex:TemperatureAccuracy ;
+      sosa:observedProperty sosa-cap:TemperatureAccuracy ;
       sosa:hasSimpleResult "0.5 Cel"^^cdt:ucum ;
   ] ,
   [
       a sosa:Observation ;
-      sosa:observedProperty ex:MaxMeasurableTemperature ;
+      sosa:observedProperty sosa-cap:MaxMeasurableTemperature ;
       sosa:hasSimpleResult "60.0 Cel"^^cdt:ucum ;
   ] ,
   [
       a sosa:Observation ;
-      sosa:observedProperty ex:MinMeasurableTemperature ;
+      sosa:observedProperty sosa-cap:MinMeasurableTemperature ;
       sosa:hasSimpleResult "-40.0 Cel"^^cdt:ucum ;
   ]
 .
