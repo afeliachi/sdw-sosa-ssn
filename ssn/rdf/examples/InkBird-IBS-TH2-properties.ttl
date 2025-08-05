@@ -3,25 +3,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix sosa-env: <http://www.w3.org/ns/sosa/system-environment-properties#> .
 
 ex:IBSTH2HumidityAccuracy a sosa:Property ;
     rdfs:label "Humidity Accuracy (25°C/77°C, 20%~80%RH)"@en ;
     sosa:inCondition [ 
       a sosa:ObservationCollection ;
       sosa:hasMember [
-        sosa:observedProperty ex:EnvironmentTemperature ;
+        sosa:observedProperty sosa-env:AmbientTemperature ;
         sosa:hasResult [ 
           qudt:value 25.0 ;
           qudt:unit unit:DEG_C ;
         ] ;
       ] , [
-        sosa:observedProperty ex:MinEnvironmentRelativeHumidity ;
+        sosa:observedProperty sosa-env:MinAmbientRelativeHumidity ;
         sosa:hasResult [ 
           qudt:value 20.0 ;
           qudt:unit unit:PERCENT ;
         ] ;
       ] , [
-        sosa:observedProperty ex:MaxEnvironmentRelativeHumidity ;
+        sosa:observedProperty sosa-env:MaxAmbientRelativeHumidity ;
         sosa:hasResult [ 
           qudt:value 80.0 ;
           qudt:unit unit:PERCENT ;
