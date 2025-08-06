@@ -176,6 +176,17 @@ var respecConfig = {
       href: "https://www.ogc.org/about-ogc/domains/swe/",
       title: "Sensor Web Enablement (SWE)",
       publisher: "Open Geospatial Consortium"
+    },
+    "Description Logics": {
+      href: "http://www.cambridge.org/uk/catalogue/catalogue.asp?isbn=9780521876254",
+      authors: ["Franz Baader", "Diego Calvanese", "Deborah L. McGuinness", "Daniele Nardi", "Peter F. Patel-Schneider"],
+      title: "The Description Logic Handbook: Theory, Implementation, and Applications, second edition",
+      publisher: "Cambridge University Press",
+      date: "2007"
+    },
+    "Description Logics Home Page": {
+      href: "https://dl.kr.org/",
+      title: "Description Logics Home Page"
     }
   }
 }
