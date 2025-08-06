@@ -134,7 +134,6 @@ section.specterm.sosa, section.specterm.sosa th{
     background-color: #67a9cf;
 }
 
-
 .buttonpanel {
    display: flex;
    justify-content: flex-end ;
@@ -146,4 +145,32 @@ section.specterm.sosa, section.specterm.sosa th{
     padding-bottom: 0.6ex;
     border: 0px dotted black;
     font-size: small;
+}
+
+ul.align-on-symbol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul.align-on-symbol li {
+  margin-left: 0;
+  padding-left: 0;
+  display: flex;
+  /*gap: 0.5em;*/
+  font-family: monospace; /* optional for better alignment */
+}
+
+ul.align-on-symbol li .lhs {
+  min-width: 30ch;  /* fixed width for alignment */
+  text-align: right;
+}
+
+ul.align-on-symbol li .symbol {
+  padding: 0 0.5ch;
+}
+
+ul.align-on-symbol li .rhs {
+  flex: 1;
+  text-align: left;
 }
