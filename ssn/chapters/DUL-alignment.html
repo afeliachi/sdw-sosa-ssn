@@ -5,233 +5,78 @@
   SSN users wishing to interoperate with other DUL-aligned ontologies. Note, however, that the DUL alignment can
   be used independently to align SSN with more generic concepts/properties of DUL.</p>
 The DUL alignment, known as "ssn-dul" is available at <a href="http://www.w3.org/ns/ssn/dul">http://www.w3.org/ns/ssn/dul</a>.
+
+<p class="note">
+  This section uses [[Description Logics]] notations (see also the [[Description Logics Home Page]]).
+  <br>
+  <span class="logic">⊑</span> denotes either <code>SubClassOf</code> or <code>SubObjectPropertyOf</code>, depending on the context.
+</p>
+
 <section id="DUL_Alignment-namespaces">
   <h4>Namespaces</h4>
   <p>The following namespace prefixes are used in the alignment to SOSA
     and SSN</p>
-  <table>
-    <tbody>
-      <tr>
-        <th> Prefix </th>
-        <th> Namespace </th>
-      </tr>
-      <tr>
-        <td> sosa: </td>
-        <td> <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
-        </td>
-      </tr>
-      <tr>
-        <td> dul: </td>
-        <td> <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl">http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <dl>
+    <dt>sosa:</dt>
+    <dd>
+      <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+    </dd>
+    <dt>dul:</dt>
+    <dd>
+      <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl">http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</a>
+    </dd>
+  </dl>
 </section>
 <section id="DUL-Classes-Alignment">
   <h4>Class Alignments</h4>
   <p>The following classes in SOSA and SSN can be aligned via a subclass relation as follows. </p>
-  <table>
-    <tbody>
-      <tr>
-        <td> <a>sosa:FeatureOfInterest</a> </td>
-        <td> subclass of </td>
-        <td> dul:Entity </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Procedure</a> </td>
-        <td> subclass of </td>
-        <td> dul:Method </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:System</a> </td>
-        <td> subclass of </td>
-        <td> dul:Object</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Actuator</a> </td>
-        <td> subclass of </td>
-        <td> dul:Object</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Sensor</a> </td>
-        <td> subclass of </td>
-        <td> dul:Object</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Sampler</a> </td>
-        <td> subclass of </td>
-        <td> dul:Object</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Execution</a> </td>
-        <td> subclass of </td>
-        <td> dul:Event</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Actuation</a> </td>
-        <td> subclass of </td>
-        <td> dul:Event</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Observation</a> </td>
-        <td> subclass of </td>
-        <td> dul:Event</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Sampling</a> </td>
-        <td> subclass of </td>
-        <td> dul:Event</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Property</a> </td>
-        <td> subclass of </td>
-        <td> dul:Quality</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Stimulus</a> </td>
-        <td> subclass of </td>
-        <td> dul:Event</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Platform</a> </td>
-        <td> subclass of </td>
-        <td> dul:Object</td>
-      </tr>
-      <tr>
-        <td> <a>sosa:Deployment</a> </td>
-        <td> subclass of </td>
-        <td> dul:Event</td>
-      </tr>
-    </tbody>
-  </table>
+  <ul class="align-on-symbol">
+    <li><span class="lhs"><a>sosa:FeatureOfInterest</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Entity</span></li>
+    <li><span class="lhs"><a>sosa:Procedure</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Method</span></li>
+    <li><span class="lhs"><a>sosa:System</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Object</span></li>
+    <li><span class="lhs"><a>sosa:Actuator</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Object</span></li>
+    <li><span class="lhs"><a>sosa:Sensor</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Object</span></li>
+    <li><span class="lhs"><a>sosa:Sampler</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Object</span></li>
+    <li><span class="lhs"><a>sosa:Execution</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Event</span></li>
+    <li><span class="lhs"><a>sosa:Actuation</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Event</span></li>
+    <li><span class="lhs"><a>sosa:Observation</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Event</span></li>
+    <li><span class="lhs"><a>sosa:Sampling</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Event</span></li>
+    <li><span class="lhs"><a>sosa:Property</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Quality</span></li>
+    <li><span class="lhs"><a>sosa:Stimulus</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Event</span></li>
+    <li><span class="lhs"><a>sosa:Platform</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Object</span></li>
+    <li><span class="lhs"><a>sosa:Deployment</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:Event</span></li>
+  </ul>
   <p>For more complex alignments, the axiomatic alignments are defined as follows.</p>
-  <table>
-    <tbody>
-      <tr>
-        <td> (not (oldsosa:Observation)) and (old-sosa:observationResult some owl:Thing)</td>
-        <td> subclass of </td>
-        <td> <a>sosa:Observation</a> </td>
-      </tr>
-    </tbody>
-  </table>
+  <ul class="align-on-symbol">
+    <li><span class="lhs">(not (oldsosa:Observation)) and (old-sosa:observationResult some owl:Thing)</span> <span class="symbol logic">⊑</span> <span class="rhs"><a>sosa:Observation</a></span></li>
+  </ul>
 </section>
 <section id="DUL_Alignment_property">
   <h4>Property Alignments</h4>
   <p>Additional alignments from SOSA/SSN to DUL properties are defined as
     follows. </p>
-  <table>
-    <tbody>
-      <tr>
-        <td> <a>sosa:hasProperty</a> </td>
-        <td> sub-property of </td>
-        <td> dul:hasQuality </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:isPropertyOf</a> </td>
-        <td> sub-property of </td>
-        <td> dul:isQualityOf </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:hosts</a> </td>
-        <td> sub-property of </td>
-        <td> dul:isLocationOf </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:isHostedBy</a> </td>
-        <td> sub-property of </td>
-        <td> dul:hasLocation </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:implementedBy</a> </td>
-        <td> sub-property of </td>
-        <td> dul:describes </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:implements</a> </td>
-        <td> sub-property of </td>
-        <td> dul:isDescribedBy </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:usedProcedure</a> </td>
-        <td> sub-property of </td>
-        <td> dul:hasParticipant </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:madeActuation</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:madeObservation</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:madeSampling</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:madeByActuator</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:madeBySensor</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:madeBySampler</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:actsOnProperty</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:observedProperty</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:hasResult</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:phenomenonTime</a> </td>
-        <td> sub-property of </td>
-        <td> dul:hasRegion </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:hasSubSystem</a> </td>
-        <td> sub-property of </td>
-        <td> dul:hasPart </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:deployedOnPlatform</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:deployedSystem</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:hasDeployment</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-      <tr>
-        <td> <a>sosa:inDeployment</a> </td>
-        <td> sub-property of </td>
-        <td> dul:associatedWith </td>
-      </tr>
-    </tbody>
-  </table>
+  <ul class="align-on-symbol">
+    <li><span class="lhs"><a>sosa:hasProperty</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:hasQuality</span></li>
+    <li><span class="lhs"><a>sosa:isPropertyOf</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:isQualityOf</span></li>
+    <li><span class="lhs"><a>sosa:hosts</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:isLocationOf</span></li>
+    <li><span class="lhs"><a>sosa:isHostedBy</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:hasLocation</span></li>
+    <li><span class="lhs"><a>sosa:implementedBy</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:describes</span></li>
+    <li><span class="lhs"><a>sosa:implements</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:isDescribedBy</span></li>
+    <li><span class="lhs"><a>sosa:usedProcedure</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:hasParticipant</span></li>
+    <li><span class="lhs"><a>sosa:madeActuation</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:madeObservation</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:madeSampling</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:madeByActuator</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:madeBySensor</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:madeBySampler</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:actsOnProperty</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:observedProperty</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:hasResult</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:phenomenonTime</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:hasRegion</span></li>
+    <li><span class="lhs"><a>sosa:hasSubSystem</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:hasPart</span></li>
+    <li><span class="lhs"><a>sosa:deployedOnPlatform</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:deployedSystem</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:hasDeployment</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+    <li><span class="lhs"><a>sosa:inDeployment</a></span> <span class="symbol logic">⊑</span> <span class="rhs">dul:associatedWith</span></li>
+  </ul>
 </section>

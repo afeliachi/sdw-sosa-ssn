@@ -78,8 +78,7 @@
     </p>
     <p>
         The reporting of operating conditions and capabilities is done through
-        <a href="#SOSAObservationCollection">observation collections</a>
-        that aggregate <a href="#SOSAObservation">observations</a>.
+        <a href="#SOSAObservationCollection">observation collections</a> that aggregate <a href="#SOSAObservation">observations</a>.
         Each observation gives a value for a system or environment <a href="#SOSAProperty">property</a>.
         The information is typically provided by a system vendor, and in this context sensor, procedure, and timestamp
         are generally not reported.
@@ -93,7 +92,7 @@
         physical temperature.
     </p>
 
-    <figure class="ssn">
+    <figure>
         <embed title="System Capabilities Module Overview" alt="System Capabilities Module Overview" src="images/SSNSystem-overview.svg" style="width: 90%;" />
         <figcaption>
             Classes and relationships involved in the description of the operating conditions and capabilities of a system.
@@ -107,8 +106,7 @@
         <h5>Operating Conditions</h5>
         <p>A system is linked to its operating conditions through property <a href="#SOSAhasOperatingConditions">hasOperatingConditions</a>.
             The operating conditions themselves are modelled as <a href="#SOSAObservation">observations</a> or <a href="#SOSAObservationCollection">observation collections</a>, typically about the system environment.
-            Furthermore, operating conditions can be typed by one of the sub-classes of <a href="#SOSAOperatingConditions">OperatingConditions</a>
-            so as to explicit the desirability of the conditions. Three such sub-classes are provided as a basic classification:
+            Furthermore, operating conditions can be typed by one of the sub-classes of <a href="#SOSAOperatingConditions">OperatingConditions</a> so as to explicit the desirability of the conditions. Three such sub-classes are provided as a basic classification:
             <a href="#SOSANormalOperatingConditions">NormalOperatingConditions</a>, <a href="#SOSASuboptimalOperatingConditions">SuboptimalOperatingConditions</a>,
             and <a href="#SOSASurvivableConditions">SurvivableConditions</a>.
         </p>
@@ -122,7 +120,7 @@
             <a href="#SOSAOperatingConditions">OperatingConditions</a> to account for such use cases.
         </p>
 
-        <figure class="ssn">
+        <figure>
             <embed title="System properties" alt="System properties" src="images/SSNSystem-operating-conditions.svg" style="width: 90%;" />
             <figcaption>
                 Classes and relationships involved in the description of the operating conditions of a system (typically an observation
@@ -148,7 +146,7 @@
         <h5>System Capabilities</h5>
         <p>A system is linked to its capabilities through property <a href="#SOSAhasSystemCapability">hasSystemCapability</a>.
             The system capabilities themselves are modelled as <a href="#SOSAObservation">observations</a> or <a href="#SOSAObservationCollection">observation
-                collections</a>, that have for <a href="#SOSAobservedProperty">observed property</a> a property that qualifies some capability of the system.
+            collections</a>, that have for <a href="#SOSAobservedProperty">observed property</a> a property that qualifies some capability of the system.
         </p>
         <p class="note">
             For illustration purposes, this specification includes a <a href="#SysCap-capability-properties">sample vocabulary</a> consisting of a short
@@ -172,7 +170,7 @@
             irrespective of whether it was powered on or off at the time, as in the case of a deep water sensor reaching its crush-depth.
         </p>
 
-        <figure class="ssn">
+        <figure>
             <embed title="System properties" alt="System properties" src="images/SSNSystem-observation-validity-context.svg" style="width: 90%;" />
             <figcaption>
                 Detailed classes and relationships involved in the description of the context (typically an observation collection about the
@@ -195,12 +193,11 @@
     <section class="informative" id="SysCap-property-conditions">
         <h5>Property Validity Context</h5>
 
-        <p>The object property <a href="#SOSAhasValidityContext">hasValidityContext</a> may be used to qualify the context in which a SOSA <a href="#SOSAProperty">Property</a>
-            is valid. This context is modelled as individual <a href="#SOSAObservation">observations</a> or as grouped <a href="#SOSAObservationCollection">observation collections</a>. When the qualified <a href="#SOSAProperty">Property</a> represents a system capability,
+        <p>The object property <a href="#SOSAhasValidityContext">hasValidityContext</a> may be used to qualify the context in which a SOSA <a href="#SOSAProperty">Property</a> is valid. This context is modelled as individual <a href="#SOSAObservation">observations</a> or as grouped <a href="#SOSAObservationCollection">observation collections</a>. When the qualified <a href="#SOSAProperty">Property</a> represents a system capability,
             the observed properties in the validity context typically refer to aspects of the system's operating environment.
             For example, water heaters are characterized by nominal power and efficiency values under specified inlet and outlet temperatures and flow rates, and their energy consumption at steady temperature is typically expressed in kWh/24h in the context where the water temperature is maintained at 65&nbsp;°C.
         </p>
-        <figure class="ssn">
+        <figure>
             <embed title="System properties" alt="System properties" src="images/SSNSystem-property-validity-context.svg" style="width: 90%;" />
             <figcaption>
                 Detailed classes and relationships involved in the description of the context (typically an observation collection
@@ -288,21 +285,13 @@
             management systems is also possible.
         </p>
         <dl>
-            <dt>
-                Sub class of
-            </dt>
+            <dt>Sub class of</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/System">
-                    sosa:System
-                </a>
+                <a href="http://www.w3.org/ns/sosa/System">sosa:System</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/systems/">
-                    http://www.w3.org/ns/sosa/systems/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
             </dd>
         </dl>
 
@@ -327,49 +316,22 @@
             provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
         </p>
         <dl>
-            <dt>
-                Domain Includes
-            </dt>
+            <dt>Domain Includes</dt>
             <dd>
-                <a>
-                    sosa:System
-                </a>
-                ,
-                <a>
-                    sosa:Sensor
-                </a>
-                ,
-                <a>
-                    sosa:Actuator
-                </a>
-                ,
-                <a>
-                    sosa:Sampler
-                </a>
+                <a>sosa:System</a>,
+                <a>sosa:Sensor</a>,
+                <a>sosa:Actuator</a>,
+                <a>sosa:Sampler</a>
             </dd>
-            <dt>
-                Range Includes
-            </dt>
+            <dt>Range Includes</dt>
             <dd>
-                <a>
-                    sosa:Observation
-                </a>
-                ,
-                <a>
-                    sosa:ObservationCollection
-                </a>
-                <a>
-                    sosa:OperatingConditions
-                </a>
-                ,
+                <a>sosa:Observation</a>,
+                <a>sosa:ObservationCollection</a>
+                <a>sosa:OperatingConditions</a>,
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/systems/">
-                    http://www.w3.org/ns/sosa/systems/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
             </dd>
         </dl>
 
@@ -394,53 +356,25 @@
             of system capabilities with different validity contexts.
         </p>
         <dl>
-            <dt>
-                Domain Includes
-            </dt>
+            <dt>Domain Includes</dt>
             <dd>
-                <a>
-                    sosa:System
-                </a>
-                ,
-                <a>
-                    sosa:Sensor
-                </a>
-                ,
-                <a>
-                    sosa:Actuator
-                </a>
-                ,
-                <a>
-                    sosa:Sampler
-                </a>
+                <a>sosa:System</a>,
+                <a>sosa:Sensor</a>,
+                <a>sosa:Actuator</a>,
+                <a>sosa:Sampler</a>
             </dd>
-            <dt>
-                Range Includes
-            </dt>
+            <dt>Range Includes</dt>
             <dd>
-                <a>
-                    sosa:Observation
-                </a>
-                ,
-                <a>
-                    sosa:ObservationCollection
-                </a>
+                <a>sosa:Observation</a>,
+                <a>sosa:ObservationCollection</a>
             </dd>
-            <dt>
-                Sub property of
-            </dt>
+            <dt>Sub property of</dt>
             <dd>
-                <a>
-                    sosa:isFeatureOfInterestOf
-                </a>
+                <a>sosa:isFeatureOfInterestOf</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/systems/">
-                    http://www.w3.org/ns/sosa/systems/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
             </dd>
         </dl>
 
@@ -464,40 +398,20 @@
             the system capabilities) to its validity context, described as an observation collection or observation (typically about the system environment)
         </p>
         <dl>
-            <dt>
-                Domain Includes
-            </dt>
+            <dt>Domain Includes</dt>
             <dd>
-                <a>
-                    sosa:Observation
-                </a>
-                ,
-                <a>
-                    sosa:ObservationCollection
-                </a>
-                <a>
-                    sosa:Property
-                </a>
+                <a>sosa:Observation</a>,
+                <a>sosa:ObservationCollection</a>
+                <a>sosa:Property</a>
             </dd>
-            <dt>
-                Range Includes
-            </dt>
+            <dt>Range Includes</dt>
             <dd>
-                <a>
-                    sosa:Observation
-                </a>
-                ,
-                <a>
-                    sosa:ObservationCollection
-                </a>
+                <a>sosa:Observation</a>,
+                <a>sosa:ObservationCollection</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/systems/">
-                    http://www.w3.org/ns/sosa/systems/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
             </dd>
         </dl>
 
@@ -517,25 +431,16 @@
         </p>
         <p>
             <em>Normal Operating Conditions</em> &mdash;
-            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a>
-            that describe the conditions under which a system is expected to operate normally.
+            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a> that describe the conditions under which a system is expected to operate normally.
         </p>
         <dl>
-            <dt>
-                Sub class of
-            </dt>
+            <dt>Sub class of</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/OperatingConditions">
-                    sosa:OperatingConditions
-                </a>
+                <a href="http://www.w3.org/ns/sosa/OperatingConditions">sosa:OperatingConditions</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/systems/">
-                    http://www.w3.org/ns/sosa/systems/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
             </dd>
         </dl>
 
@@ -555,21 +460,16 @@
         </p>
         <p>
             <em>Operating Condition</em> &mdash;
-            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a>
-            that describe operating conditions of systems. Sub-classes of this class explicit the desirability of the conditions.
+            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a> that describe operating conditions of systems. Sub-classes of this class explicit the desirability of the conditions.
             Three such sub-classes are provided as a basic classification:
             <a href="#SOSANormalOperatingConditions">NormalOperatingConditions</a>,
             <a href="#SOSASuboptimalOperatingConditions">SuboptimalOperatingConditions</a>,
             and <a href="#SOSASurvivableConditions">SurvivableConditions</a>.
         </p>
         <dl>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/systems/">
-                    http://www.w3.org/ns/sosa/systems/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
             </dd>
         </dl>
 
@@ -589,26 +489,17 @@
         </p>
         <p>
             <em>Suboptimal Conditions</em> &mdash;
-            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a>
-            that describe the conditions under which a system is expected to operate sub-optimally. Results will still be reported but the
+            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a> that describe the conditions under which a system is expected to operate sub-optimally. Results will still be reported but the
             performance of the sensor, in term of precision for example, will be impaired.
         </p>
         <dl>
-            <dt>
-                Sub class of
-            </dt>
+            <dt>Sub class of</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/OperatingConditions">
-                    sosa:OperatingConditions
-                </a>
+                <a href="http://www.w3.org/ns/sosa/OperatingConditions">sosa:OperatingConditions</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/systems/">
-                    http://www.w3.org/ns/sosa/systems/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
             </dd>
         </dl>
 
@@ -628,28 +519,19 @@
         </p>
         <p>
             <em>Survivable Conditions</em> &mdash;
-            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a>
-            that describe the conditions under which a system is expected to survive, that is to continue to exist in its current form, even
+            Type of <a href="#SOSAObservation">observation</a> or <a href="#SOSAObservationCollection">observation collection</a> that describe the conditions under which a system is expected to survive, that is to continue to exist in its current form, even
             if its future operations are impaired. A typical example is the temperature at which a sensor looses physical
             integrity and looses its shape. A system or sensor exposed to conditions outside of those reported by SurvivableConditions
             will no longer be serviceable.
         </p>
         <dl>
-            <dt>
-                Sub class of
-            </dt>
+            <dt>Sub class of</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/OperatingConditions">
-                    sosa:OperatingConditions
-                </a>
+                <a href="http://www.w3.org/ns/sosa/OperatingConditions">sosa:OperatingConditions</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/systems/">
-                    http://www.w3.org/ns/sosa/systems/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/systems/">http://www.w3.org/ns/sosa/systems/</a>
             </dd>
         </dl>
 
