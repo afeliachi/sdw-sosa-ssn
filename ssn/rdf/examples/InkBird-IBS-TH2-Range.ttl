@@ -36,9 +36,8 @@ ex:IBSTH2TemperatureSensor rdfs:subClassOf sosa:Sensor ;
                       owl:allValuesFrom ex:IBSTH2SurvivalRange 
                     ] ;
 .
-ex:IBSTH2TemperatureSensorLimits a sosa:ObservationCollection ;
+ex:IBSTH2TemperatureSensorLimits a sosa:ObservationCollection , sosa:NormalOperatingConditions ;
     rdfs:label "Inkbird IBS-TH2 Temperature Sensor Limits"@en ;
-    sosa:hasOperatingConditionKind sosa:NormalOperatingConditions ;
     sosa:hasMember [
       sosa:observedProperty sosa-env:MinAmbientTemperature ;
       sosa:hasResult [ 
@@ -54,8 +53,7 @@ ex:IBSTH2TemperatureSensorLimits a sosa:ObservationCollection ;
     ]
 .
 # Physical limits of the sensor (and platform) where structural failure occurs.
-ex:IBSTH2SurvivalRange a sosa:ObservationCollection ;
-    sosa:hasOperatingConditionKind sosa:SurvivableConditions ;
+ex:IBSTH2SurvivalRange a sosa:ObservationCollection , sosa:SurvivableConditions ;
     rdfs:label "Inkbird IBS-TH2 Failiure limits"@en ;
     sosa:hasMember [
       sosa:observedProperty sosa-env:MinAmbientTemperature ;

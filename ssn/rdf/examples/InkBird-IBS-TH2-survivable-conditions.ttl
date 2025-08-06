@@ -15,8 +15,7 @@ ex:InkBird-IBS-TH2-0354313547 a ex:InkBird-IBS-TH2 ;
     sosa:hasOperatingConditions ex:IBSTH2SurvivalRange ;
 .
 
-ex:IBSTH2SurvivalRange a sosa:ObservationCollection ;
-    sosa:hasOperatingConditionKind sosa:SurvivableConditions ;
+ex:IBSTH2SurvivalRange a sosa:ObservationCollection , sosa:SurvivableConditions ;
     rdfs:label "Inkbird IBS-TH2 Failiure limits"@en ;
     sosa:hasMember [
       sosa:observedProperty sosa-env:MinAmbientTemperature ;

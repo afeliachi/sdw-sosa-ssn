@@ -36,51 +36,51 @@ sosa:hasOperatingConditions
   a owl:ObjectProperty ;
   rdfs:label "has operating conditions"@en ;
   skos:definition """
-  Relation between a System and an ObservationCollection (or Observation) describing conditions under which the System operates more or less normally (TODO improve here). A short but extensible list of operating condition kinds is provided in SOSA-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
+  Relation between a System and its Operating Conditions, modelled as ObservationCollection (or Observation) describing
+  conditions under which the System can operate. A short but extensible list of sub-classes of OperatingConditions is
+  provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
   """@en ;
-  schema:domainIncludes sosa:System ;
-  schema:rangeIncludes sosa:ObservationCollection , sosa:Observation ;
+  schema:domainIncludes sosa:System , sosa:Sensor, sosa:Actuator, sosa:Sampler ;
+  schema:rangeIncludes sosa:Observation , sosa:ObservationCollection , sosa:OperatingConditions ;
   rdfs:isDefinedBy sosa-systems: .
 
 
-sosa:hasOperatingConditionKind
-  a owl:ObjectProperty ;
-  rdfs:label "has operating condition kind"@en ;
+sosa:OperatingConditions a owl:Class ;
+  rdfs:label "Operating Conditions"@en ;
   skos:definition """
-  Relation between an ObservationCollection (or Observation) and an OperatingConditionKind describing the kind of the operating conditions in the context of the system. A short but extensible list of operating condition kinds is provided in SOSA-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
+  Type of observation or observation collection that describe operating conditions of systems.
+  Sub-classes of this class explicit the desirability of the conditions.
+  Three such sub-classes are provided as a basic classification:
+  NormalOperatingConditions, SuboptimalOperatingConditions, and SurvivableConditions.
   """@en ;
-  schema:domainIncludes sosa:ObservationCollection , sosa:Observation ;
-  schema:rangeIncludes sosa:OperatingConditionKind ;
-  rdfs:isDefinedBy sosa-systems: .
-
-sosa:OperatingConditionKind a owl:Class ;
-  rdfs:label "Operating Condition Kind"@en ;
-  skos:definition """
-  A concept that describes the kind of operating conditions in the context of a system. A short but extensible list of operating condition kinds is provided in SOSA-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
-  """@en ;
-  rdfs:subClassOf skos:Concept ;
   rdfs:isDefinedBy sosa-systems: .
 
 ## A short but extensible list of operating condition kinds is provided in SOSA-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
 
-sosa:NormalOperatingConditions rdf:type sosa:OperatingConditionKind ;
+sosa:NormalOperatingConditions a owl:Class ;
+  rdfs:subClassOf sosa:OperatingConditions ;
   rdfs:label "Normal Operating Conditions"@en ;
   skos:definition """
-  The conditions under which a system is expected to operate normally.
+  Type of observation or observation collection that describe the conditions under which a system is expected to operate normally.
   """@en ;
   rdfs:isDefinedBy sosa-systems: .
 
-sosa:SuboptimalOperatingConditions rdf:type sosa:OperatingConditionKind ;
+sosa:SuboptimalOperatingConditions a owl:Class ;
+  rdfs:subClassOf sosa:OperatingConditions ;
   rdfs:label "Suboptimal Conditions"@en ;
   skos:definition """
-  The conditions under which a system is expected to operate suboptimally, but may recover if the conditions are restored to normal operating conditions.
+ Type of observation or observation collection that describe the conditions under which a system is expected to operate sub-optimally.
+ Results will still be reported but the performance of the sensor, in term of precision for example, will be impaired.
   """@en ;
   rdfs:isDefinedBy sosa-systems: .
 
-sosa:SurvivableConditions rdf:type sosa:OperatingConditionKind ;
+sosa:SurvivableConditions a owl:Class ;
+  rdfs:subClassOf sosa:OperatingConditions ;
   rdfs:label "Survivable Conditions"@en ;
   skos:definition """
-  The conditions under which a system is expected to survive. The system may be damaged if the survivable conditions are violated.
+  Type of observation or observation collection that describe the conditions under which a system is expected to survive, that is to continue to exist in its current form,
+  even if its future operations are impaired. A typical example is the temperature at which a sensor looses physical integrity and looses its shape.
+  A system or sensor exposed to conditions outside of those reported by SurvivableConditions will no longer be serviceable.
   """@en ;
   rdfs:isDefinedBy sosa-systems: .
 
@@ -88,7 +88,7 @@ sosa:SurvivableConditions rdf:type sosa:OperatingConditionKind ;
 
 sosa:hasSystemCapability a owl:ObjectProperty ;
   schema:domainIncludes sosa:System , sosa:Sensor, sosa:Actuator, sosa:Sampler ;
-  schema:rangeIncludes sosa:ExecutionCollection , sosa:Execution ;
+  schema:rangeIncludes sosa:Observation , sosa:ObservationCollection ;
   rdfs:label "has system capability"en ;
   skos:definition "Relation between a System and an ObservationCollection (or Observation) describing the capability of the system. A sensor or system may have more than one set of system capabilities that are related to the conditions under which they hold true."@en ;
   rdfs:isDefinedBy sosa-systems: .
@@ -97,10 +97,10 @@ sosa:hasSystemCapability a owl:ObjectProperty ;
 ## Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which an observation or property (typically about the system capabilities) is valid
 
 sosa:inCondition a owl:ObjectProperty ;
-  schema:domainIncludes sosa:Observation , sosa:Property ;
-  schema:rangeIncludes sosa:ExecutionCollection , sosa:Execution ;
+  schema:domainIncludes sosa:Observation , sosa:ObservationCollection , sosa:Property ;
+  schema:rangeIncludes sosa:ObservationCollection , sosa:Observation ;
   rdfs:label "in condition"@en ;
-  skos:definition "Describes the conditions (typically an observation collection about the system environment) defining the validity context of an observation (typically about the system capabilities) or a property (typically about the system capabilities)."@en ;
+  skos:definition "Describes the conditions (typically an observation collection about the system environment) defining the validity context of an observation collection or observation (typically about the system capabilities) or a property (typically about the system capabilities)."@en ;
   rdfs:isDefinedBy sosa-systems: .
 
 
