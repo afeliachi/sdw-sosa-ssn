@@ -166,6 +166,11 @@ ul.align-on-symbol li .lhs {
   text-align: right;
 }
 
+ul.align-on-symbol.align-on-symbol-long li .lhs {
+  min-width: 50ch;  /* fixed width for alignment */
+  text-align: right;
+}
+
 ul.align-on-symbol li .symbol {
   padding: 0 0.5ch;
 }
