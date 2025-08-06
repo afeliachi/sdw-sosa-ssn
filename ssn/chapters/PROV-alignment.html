@@ -30,6 +30,15 @@
   Compton et al. [[SSN-PROV]] and Cox [[OM-Lite]] have described alignments of the [[SSNX]] and [[OandM]] models with [[prov-o]].
   The alignment here (see <a href="#Fig-PROV-Alignment"></a>) is based on that work, also extended to consider actuation and sampling.
 </p>
+<p class="note">
+  This section uses a combination of [[Description Logics]] notation (see also the [[Description Logics Home Page]]) and the Manchester Syntax [[owl2-manchester-syntax]].
+  <br>
+  <span class="logic">⊑</span> denotes either <code>SubClassOf</code> or <code>SubObjectPropertyOf</code>, depending on the context.
+  <br>
+  <span class="logic">≡</span> indicates equivalence, corresponding to either <code>EquivalentClasses</code> or <code>EquivalentObjectProperties</code>, depending on the context.
+  <br>
+  The expression <code>OP1 <span class="logic">o</span> OP2 <span class="logic">⊑</span> OP3</code> represents a subproperty chain axiom.
+</p>
 
 <section id="PROV_Alignment_ns">
   <h4>Namespaces</h4>
@@ -226,7 +235,7 @@
     </li>
     <li>
       <span class="lhs"></span>
-      <span class="symbol logic">with domain</span>
+      <span class="symbol logic">Domain:</span>
       <span class="rhs"><a>sosa:Execution</a></span>
     </li>
     <li>
@@ -236,7 +245,7 @@
     </li>
     <li>
       <span class="lhs"></span>
-      <span class="symbol logic">with domain</span>
+      <span class="symbol logic">Domain:</span>
       <span class="rhs"><a>sosa:Procedure</a></span>
     </li>
   </ul>
