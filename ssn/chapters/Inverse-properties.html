@@ -9,161 +9,189 @@
     Terms added in the 2023 Edition are indicated with an asterisk*.
 </p>
 
-<table data-sortable="true">
-    <tr>
-        <th data-sortable="true">Property</th>
-        <th data-sortable="true">Inverse property</th>
-    </tr>
-    <tr>
-        <td><a>sosa:actsOn</a>*</td>
-        <td><a>sosa:isActedOnBy</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:actsOnProperty</a></td>
-        <td><a>sosa:wasActedOnBy</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:deployedOnPlatform</a></td>
-        <td><a>sosa:inDeployment</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:deployedSystem</a></td>
-        <td><a>sosa:hasDeployment</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:detects</a></td>
-        <td><a>sosa:isDetectedBy</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:endTime</a>*</td>
-        <td>Datatype Property<br> &mdash; no inverse</td>
-    </tr>
-    <tr>
-        <td><a>sosa:forProperty</a></td>
-        <td>
-            (<a>sosa:propertyFor</a>*
-            OR <a>sosa:hasProcedure</a>*)
-            (implemented as a super-property `sosa:invForProperty*`)
-        </td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasFeatureOfInterest</a></td>
-        <td><a>sosa:isFeatureOfInterestOf</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasInput</a></td>
-        <td><a>sosa:inputFor</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasInputValue</a>*</td>
-        <td><a>sosa:inputValueForExecution</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasMember</a>*</td>
-        <td><a>sosa:isMemberOf</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasOriginalSample</a>*</td>
-        <td><a>sosa:isOriginalSampleOf</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasOutput</a></td>
-        <td><a>sosa:outputFor</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasProperty</a></td>
-        <td><a>sosa:isPropertyOf</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasResult</a></td>
-        <td><a>sosa:isResultOf</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasSimpleResult</a></td>
-        <td>Datatype Property<br> &mdash; no inverse</td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasSubSystem</a></td>
-        <td><a>sosa:isSubSystemOf</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:hasUltimateFeatureOfInterest</a>*</td>
-        <td><a>sosa:isUltimateFeatureOfInterestOf</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:hosts</a></td>
-        <td><a>sosa:isHostedBy</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:implements</a></td>
-        <td><a>sosa:implementedBy</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:isResultOfMadeBySampler</a>*</td>
-        <td><a>sosa:madeSamplingHasResult</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:isResultOfUsedProcedure</a>*</td>
-        <td><a>sosa:usedForExecutionHasResult</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:isProxyFor</a></td>
-        <td><a>sosa:hasProxy</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:isSampleOf</a></td>
-        <td><a>sosa:hasSample</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:isSampleOfUltimateFOI</a>*</td>
-        <td><a>sosa:featureHasUltimateSample</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:madeByActuator</a></td>
-        <td><a>sosa:madeActuation</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:madeBySampler</a></td>
-        <td><a>sosa:madeSampling</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:madeBySensor</a></td>
-        <td><a>sosa:madeObservation</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:observedProperty</a></td>
-        <td><a>sosa:wasObservedBy</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:observes</a></td>
-        <td><a>sosa:isObservedBy</a></td>
-    </tr>
-    <tr>
-        <td><a>sosa:phenomenonTime</a></td>
-        <td><a>sosa:phenomenonOccurred</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:relatedObservation</a>*</td>
-        <td><a>sosa:observationRelatedTo</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:resultQuality</a>*</td>
-        <td><a>sosa:qualityOf</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:resultTime</a></td>
-        <td>Datatype Property<br> &mdash; no inverse</td>
-    </tr>
-    <tr>
-        <td><a>sosa:startTime</a>*</td>
-        <td>Datatype Property<br> &mdash; no inverse</td>
-    </tr>
-    <tr>
-        <td><a>sosa:usedProcedure</a></td>
-        <td><a>sosa:usedForExecution</a>*</td>
-    </tr>
-    <tr>
-        <td><a>sosa:wasOriginatedBy</a></td>
-        <td><a>sosa:originated</a>*</td>
-    </tr>
-</table>
+<ul class="align-on-symbol" data-sortable="true">
+    <li>
+      <span class="lhs"><a>sosa:actsOn</a>*</span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isActedOnBy</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:actsOnProperty</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:wasActedOnBy</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:deployedOnPlatform</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:inDeployment</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:deployedSystem</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:hasDeployment</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:detects</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isDetectedBy</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+        <span class="lhs"><a>sosa:forProperty</a></span>
+        <span class="symbol">≡</span>
+        <span class="rhs"><a>sosa:invForProperty</a>*<sup class="logic">-</sup> <br>(super-property of <a>sosa:propertyFor</a>*
+            and <a>sosa:hasProcedure</a>*)</span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hasFeatureOfInterest</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isFeatureOfInterestOf</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hasInput</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:inputFor</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hasInputValue</a>*</span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:inputValueForExecution</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hasMember</a>*</span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isMemberOf</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hasOriginalSample</a>*</span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isOriginalSampleOf</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hasOutput</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:outputFor</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hasProperty</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isPropertyOf</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hasResult</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isResultOf</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hasSubSystem</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isSubSystemOf</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hasUltimateFeatureOfInterest</a>*</span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isUltimateFeatureOfInterestOf</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:hosts</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isHostedBy</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:implements</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:implementedBy</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:isResultOfMadeBySampler</a>*</span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:madeSamplingHasResult</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:isResultOfUsedProcedure</a>*</span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:usedForExecutionHasResult</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:isProxyFor</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:hasProxy</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:isSampleOf</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:hasSample</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:isSampleOfUltimateFOI</a>*</span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:featureHasUltimateSample</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:madeByActuator</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:madeActuation</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:madeBySampler</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:madeSampling</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:madeBySensor</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:madeObservation</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:observedProperty</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:wasObservedBy</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:observes</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:isObservedBy</a><sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:phenomenonTime</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:phenomenonOccurred</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:relatedObservation</a>*</span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:observationRelatedTo</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:resultQuality</a>*</span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:qualityOf</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:usedProcedure</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:usedForExecution</a>*<sup class="logic">-</sup></span>
+    </li>
+    <li>
+      <span class="lhs"><a>sosa:wasOriginatedBy</a></span>
+      <span class="symbol">≡</span>
+      <span class="rhs"><a>sosa:originated</a>*<sup class="logic">-</sup></span>
+    </li>
+</ul>
+<p>
+    The following properties are datatype properties, and have therefore no inverses.
+</p>
+
+<ul class="align-on-symbol" data-sortable="true">
+    <li>
+        <span class="rhs"><a>sosa:endTime</a>*</span>
+    </li>
+    <li>
+        <span class="rhs"><a>sosa:hasSimpleResult</a></span>
+    </li>
+    <li>
+        <span class="rhs"><a>sosa:resultTime</a></span>
+    </li>
+    <li>
+        <span class="rhs"><a>sosa:startTime</a>*</span>
+    </li>
+</ul>
