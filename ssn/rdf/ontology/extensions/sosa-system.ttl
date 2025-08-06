@@ -90,17 +90,17 @@ sosa:hasSystemCapability a owl:ObjectProperty ;
   schema:domainIncludes sosa:System , sosa:Sensor, sosa:Actuator, sosa:Sampler ;
   schema:rangeIncludes sosa:Observation , sosa:ObservationCollection ;
   rdfs:label "has system capability"en ;
-  skos:definition "Relation between a System and an ObservationCollection (or Observation) describing the capability of the system. A sensor or system may have more than one set of system capabilities that are related to the conditions under which they hold true."@en ;
+  skos:definition "Relation between a System and an ObservationCollection (or Observation) describing the capability of the system. A sensor or system may have more than one set of system capabilities with different validity contexts."@en ;
   rdfs:isDefinedBy sosa-systems: .
   
 
 ## Detailed classes and relationships involved in the description of the conditions (typically an observation collection about the system environment) under which an observation or property (typically about the system capabilities) is valid
 
-sosa:inCondition a owl:ObjectProperty ;
+sosa:hasValidityContext a owl:ObjectProperty ;
   schema:domainIncludes sosa:Observation , sosa:ObservationCollection , sosa:Property ;
   schema:rangeIncludes sosa:ObservationCollection , sosa:Observation ;
-  rdfs:label "in condition"@en ;
-  skos:definition "Describes the conditions (typically an observation collection about the system environment) defining the validity context of an observation collection or observation (typically about the system capabilities) or a property (typically about the system capabilities)."@en ;
+  rdfs:label "has validity context"@en ;
+  skos:definition "Links a an observation collection or observation (typically about the system capabilities) or a property (typically about the system capabilities) to its validity context, described as an observation collection or observation (typically about the system environment)."@en ;
   rdfs:isDefinedBy sosa-systems: .
 
 

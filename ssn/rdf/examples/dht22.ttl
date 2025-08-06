@@ -172,11 +172,11 @@ ex:nominalOperatingInputVoltageRestriction a iop:Variable, sosa:Property;
 #
 
 ex:DHT22_4578_TemperatureSensorCapabilities a sosa:ObservationCollection;
- sosa:inCondition ex:DHT22_4578_TemperatureSensorNormalOperatingConditions ;
+ sosa:hasValidityContext ex:DHT22_4578_TemperatureSensorNormalOperatingConditions ;
  sosa:hasMember ex:DHT22_4578_minimumMeasureableTemperature, ex:DHT22_4578_maximumMeasureableTemperature, ex:DHT22_4578_TemperatureMeasurementAccuracy, ex:DHT22_4578_TemperatureMeasurementSensitivity, ex:DHT22_4578_TemperatureMeasurementFrequency .
 
 ex:DHT22_4578_HumiditySensorCapabilities a sosa:ObservationCollection;
- sosa:inCondition ex:DHT22_4578_HumiditySensorNormalOperatingConditions ;
+ sosa:hasValidityContext ex:DHT22_4578_HumiditySensorNormalOperatingConditions ;
  sosa:hasMember ex:DHT22_4578_minimumMeasureableRelativeHumidity, ex:DHT22_4578_maximumMeasureableRelativeHumidity, ex:DHT22_4578_RelativeHumidityFrequency .
 
 ex:DHT22_4578_minimumMeasureableTemperature a sosa:Observation ;

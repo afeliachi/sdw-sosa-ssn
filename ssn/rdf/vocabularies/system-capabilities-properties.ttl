@@ -57,7 +57,7 @@ sosa-cap:Frequency a sosa:Property ;
 
 sosa-cap:HumidityAccuracy a sosa:Property ;
   rdfs:label "humidity accuracy"@en ;
-  skos:definition "The closeness of agreement between the measured humidity and the true humidity under defined conditions."@en ;
+  skos:definition "The closeness of agreement between the measured humidity and the true humidity."@en ;
   rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:Latency a sosa:Property ;
@@ -82,17 +82,17 @@ sosa-cap:MaxFrequency a sosa:Property ;
 
 sosa-cap:MaxMeasurableHumidity a sosa:Property ;
   rdfs:label "maximum measurable humidity"@en ;
-  skos:definition "The maximum relative humidity value that the system can measure under defined conditions."@en ;
+  skos:definition "The maximum relative humidity value that the system can measure."@en ;
   rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:MaxMeasurableTemperature a sosa:Property ;
   rdfs:label "maximum measurable temperature"@en ;
-  skos:definition "The maximum temperature that a Sensor can measure under the defined Conditions."@en ;
+  skos:definition "The maximum temperature that a Sensor can measure."@en ;
   rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:MaxOperatingPower a sosa:Property ;
   rdfs:label "maximum operating power"@en ;
-  skos:definition "The maximum power level at which the system can reliably operate under defined conditions."@en ;
+  skos:definition "The maximum power level at which the system can reliably operate."@en ;
   rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:MinFrequency a sosa:Property ;
@@ -102,22 +102,22 @@ sosa-cap:MinFrequency a sosa:Property ;
 
 sosa-cap:MinMeasurableHumidity a sosa:Property ;
   rdfs:label "minimum measurable humidity"@en ;
-  skos:definition "The minimum relative humidity value that the system can measure under defined conditions."@en ;
+  skos:definition "The minimum relative humidity value that the system can measure."@en ;
   rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:MinMeasurableTemperature a sosa:Property ;
   rdfs:label "minimum measurable temperature"@en ;
-  skos:definition "The minimum temperature that a Sensor can measure under the defined Conditions."@en ;
+  skos:definition "The minimum temperature that a Sensor can measure."@en ;
   rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:MinOperatingPower a sosa:Property ;
   rdfs:label "minimum operating power"@en ;
-  skos:definition "The minimum power level at which the system can reliably operate under defined conditions."@en ;
+  skos:definition "The minimum power level at which the system can reliably operate."@en ;
   rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:Precision a sosa:Property ;
   rdfs:label "precision"@en ;
-  skos:definition "The degree to which repeated measurements under unchanged conditions show the same results."@en ;
+  skos:definition "The degree to which repeated measurements show the same results."@en ;
   rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:Resolution a sosa:Property ;
@@ -147,12 +147,12 @@ sosa-cap:Sensitivity a sosa:Property ;
 
 sosa-cap:TemperatureAccuracy a sosa:Property ;
   rdfs:label "temperature accuracy"@en ;
-  skos:definition "The closeness of agreement between the measured temperature and the true temperature under defined conditions."@en ;
+  skos:definition "The closeness of agreement between the measured temperature and the true temperature."@en ;
   rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:TemperaturePrecision a sosa:Property ;
   rdfs:label "temperature precision"@en ;
-  skos:definition "The precision of the temperature measurements made by a Sensor under the defined Conditions."@en ;
+  skos:definition "The precision of the temperature measurements made by a Sensor."@en ;
   rdfs:isDefinedBy sosa-cap: .
 
 sosa-cap:TemperatureResolution a sosa:Property ;

@@ -73,7 +73,7 @@ ex:IP68_Outdoor_Temperature_Sensor_systemCapability a sosa:ObservationCollection
     sosa:observedProperty sosa-cap:BatteryResolution 
     sosa:hasResult [ qudt:value 3.937e-3 ; qudt:hasUnit unit:PERCENT ] ;
   ] ;
-  sosa:inCondition ex:IP68_Outdoor_Temperature_Sensor_operatingRange ;
+  sosa:hasValidityContext ex:IP68_Outdoor_Temperature_Sensor_operatingRange ;
 .
 ex:Air_4575_485 a sosa:Sample ;
   rdfs:label "The air at lat 45.75 and long 4.85."@en ;

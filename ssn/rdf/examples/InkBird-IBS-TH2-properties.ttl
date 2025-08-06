@@ -7,7 +7,7 @@
 
 ex:IBSTH2HumidityAccuracy a sosa:Property ;
     rdfs:label "Humidity Accuracy (25°C/77°C, 20%~80%RH)"@en ;
-    sosa:inCondition [ 
+    sosa:hasValidityContext [ 
       a sosa:ObservationCollection ;
       sosa:hasMember [
         sosa:observedProperty sosa-env:AmbientTemperature ;

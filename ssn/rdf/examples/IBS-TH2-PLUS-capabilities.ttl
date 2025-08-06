@@ -46,7 +46,7 @@ sensor:IBS-TH2-Plus-T-systemCapability a sosa:ObservationCollection ;
         qudt:unit unit:DEG_C ;
       ] ;
   ]
-  sosa:inCondition sensor:IBS-TH2-Plus-T-normalHumidityConditions ;
+  sosa:hasValidityContext sensor:IBS-TH2-Plus-T-normalHumidityConditions ;
 .
 sensor:IBS-TH2-Plus-T-normalHumidityConditions a sosa:Observation ;
   sosa:hasMember [
