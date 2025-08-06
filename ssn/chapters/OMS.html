@@ -175,22 +175,25 @@
       <em>Preparation Procedure</em> &mdash;
       description of preparation steps performed on a Sample
     </p>
-    <table>
-      <tbody>
-        <tr class="ssn">
-          <th>Sub class of</th>
-          <td>
-            <a>sosa:Procedure</a>
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt class="ssn">
+            Sub class of
+        </dt>
+        <dd class="ssn">
+            <a>
+                sosa:Procedure
+            </a>
+        </dd>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
 
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
@@ -210,16 +213,17 @@
       <em>Preparation Step</em> &mdash;
       individual step pertaining to a Sample PreparationProcedure
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
 
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
@@ -239,28 +243,33 @@
       <em>has preparation step</em> &mdash;
       link from a Sample to a PreparationStep used for it
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>Domain Includes</th>
-          <td>
-            <a>sosa:Sample</a>
-          </td>
-        </tr>
-        <tr>
-          <th>Range Includes</th>
-          <td>
-            <a>sosa-oms:PreparationStep</a>
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt>
+            Domain Includes
+        </dt>
+        <dd>
+            <a>
+                sosa:Sample
+            </a>
+        </dd>
+        <dt>
+            Range Includes
+        </dt>
+        <dd>
+            <a>
+                sosa-oms:PreparationStep
+            </a>
+        </dd>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
       <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -279,29 +288,37 @@
       <em>made on platform</em> &mdash;
       relation from an Observation to the Platform that the Sensor was attached to at the time it was made
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>Domain Includes</th>
-          <td>
-            <a>sosa:Observation</a>,
-            <a>sosa:ObservationCollection</a>
-          </td>
-        </tr>
-        <tr>
-          <th>Range Includes</th>
-          <td>
-            <a>sosa:Platform</a>
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt>
+            Domain Includes
+        </dt>
+        <dd>
+            <a>
+                sosa:Observation
+            </a>
+            ,
+            <a>
+                sosa:ObservationCollection
+            </a>
+        </dd>
+        <dt>
+            Range Includes
+        </dt>
+        <dd>
+            <a>
+                sosa:Platform
+            </a>
+        </dd>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
 
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
@@ -321,33 +338,69 @@
       <em>metadata</em> &mdash;
       link from an individual to a metadata description
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>Domain Includes</th>
-          <td>
-            <a>sosa:FeatureOfInterest</a>,
-            <a>sosa:Property</a>,
-            <a>sosa:Observation</a>,
-            <a>sosa:ObservationCollection</a>,
-            <a>sosa:Sample</a>,
-            <a>sosa:SampleCollection</a>,
-            <a>sosa:Sampling</a>,
-            <a>sosa-oms:PreparationStep</a>,
-            <a>sosa:Procedure</a>,
-            <a>sosa:Sensor</a>,
-            <a>sosa:Platform</a>,
-            <a>sosa:Deployment</a>
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt>
+            Domain Includes
+        </dt>
+        <dd>
+            <a>
+                sosa:FeatureOfInterest
+            </a>
+            ,
+            <a>
+                sosa:Property
+            </a>
+            ,
+            <a>
+                sosa:Observation
+            </a>
+            ,
+            <a>
+                sosa:ObservationCollection
+            </a>
+            ,
+            <a>
+                sosa:Sample
+            </a>
+            ,
+            <a>
+                sosa:SampleCollection
+            </a>
+            ,
+            <a>
+                sosa:Sampling
+            </a>
+            ,
+            <a>
+                sosa-oms:PreparationStep
+            </a>
+            ,
+            <a>
+                sosa:Procedure
+            </a>
+            ,
+            <a>
+                sosa:Sensor
+            </a>
+            ,
+            <a>
+                sosa:Platform
+            </a>
+            ,
+            <a>
+                sosa:Deployment
+            </a>
+        </dd>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
       <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -366,22 +419,25 @@
       <em>observation type</em> &mdash;
       further detail on the type of Observations.
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>Domain Includes</th>
-          <td>
-            <a>sosa:Observation</a>
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt>
+            Domain Includes
+        </dt>
+        <dd>
+            <a>
+                sosa:Observation
+            </a>
+        </dd>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
 
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
@@ -401,28 +457,33 @@
       <em>prepared sample</em> &mdash;
       link from a PreparationStep to a Sample on which the PreparationProcedure was performed
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>Domain Includes</th>
-          <td>
-            <a>sosa-oms:PreparationStep</a>
-          </td>
-        </tr>
-        <tr>
-          <th>Range Includes</th>
-          <td>
-            <a>sosa:Sample</a>
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt>
+            Domain Includes
+        </dt>
+        <dd>
+            <a>
+                sosa-oms:PreparationStep
+            </a>
+        </dd>
+        <dt>
+            Range Includes
+        </dt>
+        <dd>
+            <a>
+                sosa:Sample
+            </a>
+        </dd>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
 
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
@@ -442,28 +503,33 @@
       <em>processing details</em> &mdash;
       link from a PreparationStep to the PreparationProcedure used
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>Domain Includes</th>
-          <td>
-            <a>sosa-oms:PreparationStep</a>
-          </td>
-        </tr>
-        <tr>
-          <th>Range Includes</th>
-          <td>
-            <a>sosa-oms:PreparationProcedure</a>
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt>
+            Domain Includes
+        </dt>
+        <dd>
+            <a>
+                sosa-oms:PreparationStep
+            </a>
+        </dd>
+        <dt>
+            Range Includes
+        </dt>
+        <dd>
+            <a>
+                sosa-oms:PreparationProcedure
+            </a>
+        </dd>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
 
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
@@ -483,28 +549,33 @@
       <em>related sampling</em> &mdash;
       relation from a Sampling to another Sampling
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>Domain Includes</th>
-          <td>
-            <a>sosa:Sampling</a>
-          </td>
-        </tr>
-        <tr>
-          <th>Range Includes</th>
-          <td>
-            <a>sosa:Sampling</a>
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt>
+            Domain Includes
+        </dt>
+        <dd>
+            <a>
+                sosa:Sampling
+            </a>
+        </dd>
+        <dt>
+            Range Includes
+        </dt>
+        <dd>
+            <a>
+                sosa:Sampling
+            </a>
+        </dd>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
 
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
@@ -524,28 +595,33 @@
       <em>sample preparation step</em> &mdash;
       link from a PreparationProcedure to a PreparationStep used in it
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>Domain Includes</th>
-          <td>
-            <a>sosa-oms:PreparationProcedure</a>
-          </td>
-        </tr>
-        <tr>
-          <th>Range Includes</th>
-          <td>
-            <a>sosa-oms:PreparationStep</a>
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt>
+            Domain Includes
+        </dt>
+        <dd>
+            <a>
+                sosa-oms:PreparationProcedure
+            </a>
+        </dd>
+        <dt>
+            Range Includes
+        </dt>
+        <dd>
+            <a>
+                sosa-oms:PreparationStep
+            </a>
+        </dd>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
 
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
@@ -565,30 +641,41 @@
       <em>valid time</em> &mdash;
       time interval during which the result is assumed to be applicable for use.
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>Domain Includes</th>
-          <td>
-            <a>sosa:Observation</a>,
-            <a>sosa:Sampling</a>
-          </td>
-        </tr>
-        <tr>
-          <th>Range Includes</th>
-          <td>
-            <a href="https://www.w3.org/TR/owl-time/#time:Interval">time:Interval</a>,
-            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PeriodOfTime">dcterms:PeriodOfTime</a>
-          </td>
-        </tr>
-        <tr>
-          <th>is Defined By</th>
-          <td>
-            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl>
+        <dt>
+            Domain Includes
+        </dt>
+        <dd>
+            <a>
+                sosa:Observation
+            </a>
+            ,
+            <a>
+                sosa:Sampling
+            </a>
+        </dd>
+        <dt>
+            Range Includes
+        </dt>
+        <dd>
+            <a href="https://www.w3.org/TR/owl-time/#time:Interval">
+                time:Interval
+            </a>
+            ,
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PeriodOfTime">
+                dcterms:PeriodOfTime
+            </a>
+        </dd>
+        <dt>
+            is Defined By
+        </dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">
+                http://www.w3.org/ns/sosa/oms/
+            </a>
+        </dd>
+    </dl>
+    
 
     <div class="buttonpanel">
       <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
