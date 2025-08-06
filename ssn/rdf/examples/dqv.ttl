@@ -4,9 +4,11 @@
 @prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix unit: <http://qudt.org/vocab/unit/>.
 @prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capabilities-properties#> .
+@prefix sosa-env: <http://www.w3.org/ns/sosa/system-environment-properties#> .
 
 ex:observation_233 a sosa:Observation ;
-  sosa:observedProperty ex:TheAir;
+  sosa:hasFeatureOfInterest ex:TheAir;
+  sosa:observedProperty sosa-env:AmbientTemperature;
   sosa:madeBySensor ex:TemperatureSensor ;
   sosa:resultQuality ex:observation_233_MeasurementAccuracy ;
   sosa:hasResult [ 
@@ -16,7 +18,7 @@ ex:observation_233 a sosa:Observation ;
 .
    
 ex:observation_233_MeasurementAccuracy a sosa:Observation ;
-  sosa:hasFeatureOfInterest ex:TemperatureSensor;
+  sosa:hasFeatureOfInterest ex:observation_233 ;
   sosa:observedProperty sosa-cap:TemperatureAccuracy ;
   sosa:hasResult [ 
     qudt:value 1.5 ;
