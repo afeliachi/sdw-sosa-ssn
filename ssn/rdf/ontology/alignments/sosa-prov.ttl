@@ -63,7 +63,7 @@ sosa:prov
   dcterms:license <http://www.opengeospatial.org/ogc/Software> ;
   dcterms:license <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
   dcterms:modified "2024-02-06"^^xsd:date ;
-  dcterms:rights "Copyright 2017, 2024 W3C/OGC." ;
+  dcterms:rights "Copyright 2017, 2025 W3C/OGC." ;
   rdfs:comment "Alignment of the the W3C/OGC SOSA Ontology with the W3C PROV-O Ontology"@en ;
   rdfs:label "Alignment of SOSA with PROV-O"@en ;
   owl:imports <http://www.w3.org/ns/prov-o#> ;

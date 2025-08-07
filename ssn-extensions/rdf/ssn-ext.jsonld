@@ -188,7 +188,7 @@
     "description" : "Some extensions to the SSN Ontology, to support\r\n\r\n1. discovery and use of observation and sample data through links to an ultimate feature-of-interest, or sample\r\n2. observations are  made as part of a set or collection, in which one or more of the observation properties - hasFeatureOfInterest, observedProperty, madeBySensor, usedProcedure, phenomenonTime, resultTime - are shared by all members of the collection. \r\n\r\nThese extensions to the SSN Ontology are packaged in a separate RDF graph to enable loading and use if required. ",
     "license" : [ "http://www.opengeospatial.org/ogc/Software", "http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" ],
     "modified" : "2019-12-24",
-    "rights" : "Copyright 2019 W3C/OGC.",
+    "rights" : "Copyright 2025 W3C/OGC.",
     "title" : {
       "@language" : "en",
       "@value" : "Extensions to the SSN Ontology"
