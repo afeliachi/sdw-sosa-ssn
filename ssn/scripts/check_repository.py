@@ -41,6 +41,7 @@ def find_invalid_ttl_files():
 # Identify .ttl files not referenced in any HTML via href or data-include
 def find_unreferenced_ttl_files():
     ttl_files = {f.resolve() for f in Path(".").rglob(f"*{TTL_EXT}")}
+    ttl_files = set(filter(lambda f: "ontology" not in str(f), ttl_files))
     referenced = set()
     ttl_ref_pattern = re.compile(r'(?:href|data-include)=["\']([^"\']+?\.ttl)["\']')
 
@@ -84,9 +85,11 @@ def find_unreferenced_images():
 # Check defined terms
 def check_defined_terms():
     ontology_folder = Path("ssn/rdf/ontology/core")
-    ttl_files = sorted(ontology_folder.glob("*.ttl"))
-    term_definitions = defaultdict(set)
-    ontology_declarations = {}
+    ttl_files = sorted(ontology_folder.rglob("*.ttl"))
+    term_to_ontos_using_term = defaultdict(set)
+    term_to_ontos_defining_term = defaultdict(set)
+    onto_to_file_declaring_onto = {}
+    onto_to_terms_defined_in_onto = defaultdict(set)
 
     for ttl_file in ttl_files:
         try:
@@ -95,60 +98,109 @@ def check_defined_terms():
 
             # Find ontology IRI
             ontology_iris = list(g.subjects(RDF.type, OWL.Ontology))
-            if not ontology_iris:
-                print(f"⚠️  No ontology IRI found in {ttl_file}")
+            if len(ontology_iris) == 0:
+                print(f"⚠️  No ontology declaration found in {ttl_file}")
+                continue
+            if len(ontology_iris) > 1:
+                print(f"⚠️  >1 ontology declaration found in {ttl_file}")
                 continue
 
             ontology_iri = ontology_iris[0]
-            ontology_declarations[ttl_file] = ontology_iri
+            onto_to_file_declaring_onto[ontology_iri] = ttl_file
 
             # Find terms defined by this ontology
-            for s, p, o in g:
-                for term in (s, p, o):
-                    if isinstance(term, URIRef) and (
-                        str(term).startswith(SOSA_NS) or str(term).startswith(SSN_NS)
-                    ):
-                        # Check if explicitly defined by this ontology
-                        if (term, RDFS.isDefinedBy, ontology_iri) in g:
-                            term_definitions[term].add(ttl_file)
-                            
+            terms = set()
+            for triple in g:
+                for t in triple:
+                    if not isinstance(t, URIRef) or not (t.startswith(SOSA_NS) or t.startswith(SSN_NS)):
+                        continue
+                    terms.add(t)
+            for term in terms:
+                term_to_ontos_using_term[term].add(ttl_file)
+                for o in g.objects(term, RDFS.isDefinedBy):
+                    term_to_ontos_defining_term[term].add(o)
+                    onto_to_terms_defined_in_onto[o].add(term)
+                
         except Exception as e:
             print(f"❌ Error parsing {ttl_file}: {e}")
 
     # Print ontology declarations
     print("=== Ontology Declarations ===")
-    for file, iri in ontology_declarations.items():
-        print(f"- {file}: <{iri}>")
+    for iri, file in onto_to_file_declaring_onto.items():
+        print(f"- <{iri}>: {file}")
 
-    # Check for duplicates
-    print("\n=== Term Definition Duplicates ===")
-    duplicates = {term: files for term, files in term_definitions.items() if len(files) > 1}
+    # Check for duplicates term definitions
+    print("\n=== Term Definitions ===")
+    duplicates = {term: ontos for term, ontos in term_to_ontos_defining_term.items() if len(ontos) > 1}
     if not duplicates:
         print("No duplicate term definitions 🎉")
     else:
-        for term, files in duplicates.items():
+        print(f"❌ Term definition duplicates")
+        for term, ontos in duplicates.items():
             print(f"- {term} defined in:")
-            for f in files:
-                print(f"    - {f}")
+            for onto in ontos:
+                print(f"    - {onto}")
+        
+    # Check for undefined terms
+    not_defined = {term for term, ontos in term_to_ontos_defining_term.items() if len(ontos) == 0}
+    if not not_defined:
+        print("No term undefined 🎉")
+    else:
+        print(f"❌ Missing term declarations")
+        for term in not_defined:
+            print(f"- {term} not defined but used in:")
+            for ttl_file in term_to_ontos_using_term[term]:
+                print(f"    - {ttl_file}")
 
-    return term_definitions, len(duplicates) > 0  # return True if issues found
+    # Check terms defined in a non-declared ontology
+    onto_doesnt_exist = defaultdict(set)
+    for term, ontos in term_to_ontos_defining_term.items():
+        for onto in ontos:
+            if onto not in onto_to_file_declaring_onto:
+                onto_doesnt_exist[onto].add(term)
+    if not onto_doesnt_exist:
+        print("All terms defined in existing ontologies 🎉")
+    else:
+        print(f"❌ some terms are defined in a non-declared ontology")
+        for onto in onto_doesnt_exist:
+            print(f"- {onto} is declared nowhere but the following terms are declared to be defined in it:")
+            for term in onto_doesnt_exist[onto]:
+                print(f"    - {term}")
+        
+    # List all term definitions
+    print("\n=== All Term Definitions ===")
+    for term in sorted(term_to_ontos_defining_term):
+        onto = next(iter(term_to_ontos_defining_term[term]), None)
+        ttl_file = onto_to_file_declaring_onto.get(onto, None)
+        print(f"- {term} defined in {onto} which is declared in {ttl_file}")
 
-def check_examples_terms_defined(core_terms):
+    # List all term definitions
+    print("\n=== Term Definitions Per File ===")
+    for onto in sorted(onto_to_terms_defined_in_onto):
+        ttl_file = onto_to_file_declaring_onto.get(onto, None)
+        for term in sorted(onto_to_terms_defined_in_onto[onto]):
+            print(f"- {ttl_file} declares {term}")
+
+    issues = bool(duplicates) or bool(not_defined) or bool(onto_doesnt_exist)
+    return term_to_ontos_defining_term, issues  # return True if issues found
+
+def check_examples_terms_defined(term_to_ontos_defining_term):
     example_folder = Path("ssn/rdf/examples")
     undefined_terms = defaultdict(set)  # term → set of example files using it
+    terms_present_in_some_example = set()
 
     for ttl_file in example_folder.glob("*.ttl"):
         try:
             g = Graph()
             g.parse(ttl_file, format="turtle")
 
-            for s, p, o in g:
-                for term in (s, p, o):
-                    if isinstance(term, URIRef) and (
-                        str(term).startswith(SOSA_NS) or str(term).startswith(SSN_NS)
-                    ):
-                        if term not in core_terms:
-                            undefined_terms[term].add(ttl_file)
+            for triple in g:
+                for t in triple:
+                    if not isinstance(t, URIRef) or not (t.startswith(SOSA_NS) or t.startswith(SSN_NS)):
+                        continue
+                    terms_present_in_some_example.add(t)
+                    if t not in term_to_ontos_defining_term:
+                        undefined_terms[t].add(ttl_file)
 
         except Exception as e:
             print(f"❌ Error parsing example file {ttl_file}: {e}")
@@ -156,14 +208,22 @@ def check_examples_terms_defined(core_terms):
     print("\n=== Undefined SOSA/SSN Terms in Examples ===")
     if not undefined_terms:
         print("All SOSA/SSN terms in examples are properly defined 🎉")
-        return False  # no issues
     else:
-        for term, files in undefined_terms.items():
-            print(f"- {term} used in:")
+        print(f"❌ some terms in examples are not defined:")
+        for t, files in undefined_terms.items():
+            print(f"- {t} used in:")
             for f in files:
                 print(f"    - {f}")
-        return True  # issues found
 
+    terms_absent_from_examples = set(term_to_ontos_defining_term).difference(terms_present_in_some_example)
+    if not terms_absent_from_examples:
+        print("All SOSA/SSN terms are present in some example 🎉")
+    else:
+        print(f"❌ some terms are not present in any example:")
+        for term in sorted(terms_absent_from_examples):
+            print(f"- {term}")
+    
+    return bool(undefined_terms) or bool(terms_absent_from_examples)
 
 if __name__ == "__main__":
     has_issue = False
@@ -175,7 +235,7 @@ if __name__ == "__main__":
     else:
         has_issue = True
         for f in unused_htmls:
-            print("-", f)
+            print(f"- {f}")
 
     print("\n=== Unreferenced Image Files ===")
     unreferenced_images = find_unreferenced_images()
@@ -184,7 +244,7 @@ if __name__ == "__main__":
     else:
         has_issue = True
         for f in unreferenced_images:
-            print("-", f)
+            print(f"- {f}")
   
     print("\n=== Invalid TTL Files ===")
     invalid_ttls = find_invalid_ttl_files()
@@ -193,7 +253,7 @@ if __name__ == "__main__":
     else:
         has_issue = True
         for f, err in invalid_ttls:
-            print(f"- {f} ✗ Error: {err}")
+            print(f"- {f} ❌ Error: {err}")
 
     print("\n=== Unreferenced TTL Files ===")
     unreferenced_ttls = find_unreferenced_ttl_files()
@@ -202,12 +262,10 @@ if __name__ == "__main__":
     else:
         has_issue = True
         for f in unreferenced_ttls:
-            print("-", f)
+            print(f"- {f}")
 
-    print("\n=== Ontology Term Uniqueness Check ===")
-    term_definitions, len_duplicates = check_defined_terms()
-    if len_duplicates:
-        has_issue = True
+    term_definitions, issues = check_defined_terms()
+    has_issue |= issues
     
     if check_examples_terms_defined(term_definitions):
         has_issue = True
