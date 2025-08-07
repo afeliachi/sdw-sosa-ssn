@@ -22,7 +22,7 @@ sosa:sampling
     ] ;
   dcterms:license <http://www.opengeospatial.org/ogc/Software> ;
   dcterms:license <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
-  dcterms:rights "Copyright 2017 W3C/OGC." ;
+  dcterms:rights "Copyright 2025 W3C/OGC." ;
 .
 sosa-rel:RelationshipNature
   rdf:type owl:Class ;
