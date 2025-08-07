@@ -32,7 +32,7 @@
     For <a href="#SOSAFeatureOfInterest">feature-of-interest</a>, SOSA has:
 </p>
 <pre>
-sosa:hasFeatureOfInterest 
+sosa:hasFeatureOfInterest
   schema:domainIncludes sosa:Execution ;
   schema:domainIncludes sosa:Deployment ;
   schema:rangeIncludes sosa:FeatureOfInterest ;
@@ -47,7 +47,7 @@ sosa:hasFeatureOfInterest
 <p>
     So the 'domain and range' indications in SOSA are functionally harmless.
     The fact that
-<pre>sosa:hasFeatureOfInterest schema:rangeIncludes sosa:FeatureOfInterest .</pre> 
+<pre>sosa:hasFeatureOfInterest schema:rangeIncludes sosa:FeatureOfInterest .</pre>
 merely says that things of type
 <a>sosa:FeatureOfInterest</a> might be found as the object of
 hasFeatureOfInterest statements.
@@ -61,20 +61,20 @@ No more, no less.
     Related to the <a href="#SOSAFeatureOfInterest">feature-of-interest</a>, SSN has:
 </p>
 <pre>
-sosa:Execution 
-  rdfs:subClassOf [ 
-    a owl:Restriction ; 
-    owl:onProperty sosa:hasFeatureOfInterest ; 
+sosa:Execution
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty sosa:hasFeatureOfInterest ;
     owl:allValuesFrom sosa:FeatureOfInterest ] ;
 .
-sosa:Deployment 
-  rdfs:subClassOf [ 
-    a owl:Restriction ; 
-    owl:onProperty sosa:hasFeatureOfInterest ; 
+sosa:Deployment
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty sosa:hasFeatureOfInterest ;
     owl:allValuesFrom sosa:FeatureOfInterest ] ;
 .
 </pre>
-<p>This says that, in the context of an individual <a>sosa:Execution</a> 
+<p>This says that, in the context of an individual <a>sosa:Execution</a>
     or <a>sosa:Deployment</a>,
     the object of <a>sosa:hasFeatureOfInterest</a> is always an individual
     <a>sosa:FeatureOfInterest</a>.
@@ -139,10 +139,10 @@ ex:YarraAboveDightsFalls rdf:type hydro:RiverReach .
 <pre>
 ex:o345 rdf:type sosa:Observation ;
     sosa:hasFeatureOfInterest ex:YarraAboveDightsFalls ;
-    sosa:observedProperty hydro:elevation ; 
+    sosa:observedProperty hydro:elevation ;
     sosa:hasSimpleResult "30 m"^^cdt:ucum ;
     sosa:phenomenonTime [ a time:Instant ; time:inXSDDateTime "2024-07-15T13:30:00+10:00" ; ] ;
-. 
+.
 </pre>
 <p>
     The SSN constraint shown above entails:
