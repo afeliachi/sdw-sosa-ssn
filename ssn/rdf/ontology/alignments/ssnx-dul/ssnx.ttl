@@ -11,9 +11,7 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 
 @prefix oldssn: <http://purl.oclc.org/NET/ssnx/ssn#>.
-@prefix ssn: <http://www.w3.org/ns/ssn/>.
 @prefix sosa: <http://www.w3.org/ns/sosa/>.
-@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>.
 
 voaf:Vocabulary a owl:Class .
 dcterms:title a owl:AnnotationProperty .
@@ -47,7 +45,6 @@ time:TemporalEntity a owl:Class .
   skos:note """Please report any errors to the Semantic Sensor Network Incubator Activity via the public W3C list public-xg-ssn@w3.org"""@en ;
   dcterms:source """This ontology is developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG). The concepts and structure of the ontology were discussed in the group's meetings and on the mailing list. For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/"""@en ;
   rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/> ;
-  owl:imports ssn-system: ;
   owl:imports <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
   owl:imports <http://www.w3.org/ns/ssn/dul> .
 
@@ -73,7 +70,7 @@ oldssn:Property a owl:Class ;
   rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton> ;
   rdfs:subClassOf dul:Quality ;
   owl:deprecated true ;
-  owl:equivalentClass ssn:Property ;
+  owl:equivalentClass sosa:Property ;
   rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:hasProperty a owl:ObjectProperty ;
@@ -82,7 +79,7 @@ oldssn:Property a owl:Class ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton> ;
     rdfs:subPropertyOf dul:hasQuality ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:hasProperty ;
+    owl:equivalentProperty sosa:hasProperty ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:isPropertyOf a owl:ObjectProperty ;
@@ -91,7 +88,7 @@ oldssn:Property a owl:Class ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton> ;
     rdfs:subPropertyOf dul:isQualityOf ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:isPropertyOf ;
+    owl:equivalentProperty sosa:isPropertyOf ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
 
@@ -157,7 +154,7 @@ oldssn:Process a owl:Class ;
     skos:definition "Relation between a Process and an Input to it."@en ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Model#Process> ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:hasInput ;
+    owl:equivalentProperty sosa:hasInput ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:Input a owl:Class ;
@@ -167,7 +164,7 @@ oldssn:Process a owl:Class ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Model#Process> ;
       owl:disjointWith oldssn:Output ; # Can we delete this triple in the new SSN ?  
       owl:deprecated true ;
-      owl:equivalentClass ssn:Input ;
+      owl:equivalentClass sosa:Input ;
       rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:hasOutput a owl:ObjectProperty ;
@@ -175,7 +172,7 @@ oldssn:Process a owl:Class ;
     skos:definition "Relation between a Process and an Output of it."@en ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Model#Process> ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:hasOutput ;
+    owl:equivalentProperty sosa:hasOutput ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:Output a owl:Class ;
@@ -184,7 +181,7 @@ oldssn:Process a owl:Class ;
       dcterms:source <http://marinemetadata.org/community/teams/ontdevices> ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Model#Process> ;
       owl:deprecated true ;
-      owl:equivalentClass ssn:Output ;
+      owl:equivalentClass sosa:Output ;
       rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
 
@@ -197,7 +194,7 @@ oldssn:implements a owl:ObjectProperty ;
   owl:inverseOf oldssn:implementedBy ;
   rdfs:subPropertyOf dul:isDescribedBy ;
   owl:deprecated true ;
-  owl:equivalentProperty ssn:implements ;
+  owl:equivalentProperty sosa:implements ;
   rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
 oldssn:implementedBy a owl:ObjectProperty ;
@@ -207,7 +204,7 @@ oldssn:implementedBy a owl:ObjectProperty ;
   owl:inverseOf oldssn:implements ;
   rdfs:subPropertyOf dul:describes ;
   owl:deprecated true ;
-  owl:equivalentProperty ssn:implementedBy ;
+  owl:equivalentProperty sosa:implementedBy ;
   rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
 oldssn:Sensor a owl:Class ;
@@ -329,7 +326,7 @@ oldssn:Stimulus a owl:Class ;
   rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton> ;
   rdfs:subClassOf dul:Event ;
   owl:deprecated true ;
-  owl:equivalentClass ssn:Stimulus ;
+  owl:equivalentClass sosa:Stimulus ;
   rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
 oldssn:SensorInput a owl:Class ;
@@ -349,7 +346,7 @@ oldssn:SensorInput a owl:Class ;
   The Stimulus itself will be serving as a proxy for (see isProxyOf) some observable property."""@en ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton> ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:detects ;
+    owl:equivalentProperty sosa:detects ;
     rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:isProxyFor a owl:ObjectProperty ;
@@ -357,7 +354,7 @@ oldssn:SensorInput a owl:Class ;
     skos:definition "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.  For example, the expansion of quicksilver is a stimulus that serves as a proxy for temperature. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for wind speed."@en ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton> ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:isProxyFor ;
+    owl:equivalentProperty sosa:isProxyFor ;
     rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
 
@@ -456,7 +453,6 @@ oldssn:SensorOutput a owl:Class ;
     dcterms:source """skos:exactMatch 'resultQuality' [O&M - ISO/DIS 19156] 
                           http://portal.opengeospatial.org/files/?artifact_id=41579""" ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Observation#Observation> ;
-    owl:equivalentProperty ssn-system:qualityOfObservation ;
     owl:deprecated true ;
     rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
@@ -489,7 +485,7 @@ oldssn:System a owl:Class ;
   rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Model#System> ;
   rdfs:subClassOf dul:PhysicalObject ;
   owl:deprecated true ;
-  owl:equivalentClass ssn:System ;
+  owl:equivalentClass sosa:System ;
   rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:hasSubSystem a owl:ObjectProperty ;
@@ -498,7 +494,7 @@ oldssn:System a owl:Class ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Model#System> ;
     rdfs:subPropertyOf dul:hasPart ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:hasSubSystem ;
+    owl:equivalentProperty sosa:hasSubSystem ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:Device a owl:Class ;
@@ -509,7 +505,7 @@ oldssn:System a owl:Class ;
     rdfs:subClassOf dul:DesignedArtifact ;
     owl:deprecated true ;
     rdfs:subClassOf sosa:Platform ;
-    rdfs:subClassOf ssn:System ;
+    rdfs:subClassOf sosa:System ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:SensingDevice a owl:Class ;
@@ -553,7 +549,7 @@ oldssn:Deployment a owl:Class ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty oldssn:deployedOnPlatform ; owl:allValuesFrom oldssn:Platform ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty oldssn:deployedSystem ; owl:allValuesFrom oldssn:System ] ;
   owl:deprecated true ;
-  owl:equivalentClass ssn:Deployment ;
+  owl:equivalentClass sosa:Deployment ;
   rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:deployedOnPlatform a owl:ObjectProperty ;
@@ -563,7 +559,7 @@ oldssn:Deployment a owl:Class ;
     owl:inverseOf oldssn:inDeployment ;
     rdfs:subPropertyOf dul:hasParticipant ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:deployedOnPlatform ;
+    owl:equivalentProperty sosa:deployedOnPlatform ;
     rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:deployedSystem a owl:ObjectProperty ;
@@ -573,7 +569,7 @@ oldssn:Deployment a owl:Class ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#Deployment> ;
     rdfs:subPropertyOf dul:hasParticipant ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:deployedSystem ;
+    owl:equivalentProperty sosa:deployedSystem ;
     rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:hasDeployment a owl:ObjectProperty ;
@@ -582,7 +578,7 @@ oldssn:Deployment a owl:Class ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#Deployment> ;
     rdfs:subPropertyOf dul:isParticipantIn ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:hasDeployment ;
+    owl:equivalentProperty sosa:hasDeployment ;
     rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:inDeployment a owl:ObjectProperty ;
@@ -591,7 +587,7 @@ oldssn:Deployment a owl:Class ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#Deployment> ;
     rdfs:subPropertyOf dul:isParticipantIn ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn:inDeployment ;
+    owl:equivalentProperty sosa:inDeployment ;
     rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/ssn> .
 
 
@@ -602,7 +598,7 @@ oldssn:forProperty a owl:ObjectProperty ;
   skos:definition "A relation between some aspect of a sensing entity and a property.  For example, from a sensor to the properties it can observe, or from a deployment to the properties it was installed to observe.  Also from a measurement capability to the property the capability is described for.  Used in conjunction with ofFeature."@en ;
   rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton> ;
   owl:deprecated true ;
-  owl:equivalentProperty ssn:forProperty ;
+  owl:equivalentProperty sosa:forProperty ;
   rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
 oldssn:ofFeature rdf:type owl:ObjectProperty ;
@@ -616,7 +612,7 @@ oldssn:inCondition a owl:ObjectProperty ;
   skos:definition "Describes the prevailing environmental conditions for MeasurementCapabilites, OperatingConditions and SurvivalRanges.  Used for example to say that a sensor has a particular accuracy in particular conditions.  See also MeasurementCapability."@en ;
   rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#ConstraintBlock> ;
   owl:deprecated true ;
-  owl:equivalentProperty ssn-system:inCondition ;
+  owl:equivalentProperty sosa:inCondition ;
   rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:Condition a owl:Class ;
@@ -625,7 +621,6 @@ oldssn:inCondition a owl:ObjectProperty ;
     rdfs:subClassOf oldssn:Property ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#ConstraintBlock> ;
     owl:deprecated true ;
-    owl:equivalentClass ssn-system:Condition ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
 
@@ -637,7 +632,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
   rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
   rdfs:subPropertyOf oldssn:hasProperty ;
   owl:deprecated true ;
-  rdfs:subPropertyOf ssn-system:hasSystemCapability ;
   rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:MeasurementCapability a owl:Class ;
@@ -658,7 +652,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
     rdfs:subClassOf [ a owl:Restriction ; owl:onProperty oldssn:inCondition ; owl:allValuesFrom oldssn:Condition ] ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
     owl:deprecated true ;
-    rdfs:subClassOf ssn-system:SystemCapability ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:hasMeasurementProperty a owl:ObjectProperty ;
@@ -667,7 +660,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
     rdfs:subPropertyOf oldssn:hasProperty ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
     owl:deprecated true ;
-    rdfs:subPropertyOf ssn-system:hasSystemProperty ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:MeasurementProperty a owl:Class ;
@@ -676,7 +668,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
     rdfs:subClassOf oldssn:Property ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
     owl:deprecated true ;
-    rdfs:subClassOf ssn-system:SystemProperty ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:MeasurementRange a owl:Class ;
@@ -687,7 +678,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      owl:equivalentClass ssn-system:MeasurementRange ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:Accuracy a owl:Class ;
@@ -698,7 +688,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:MeasurementProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      rdfs:subClassOf ssn-system:Accuracy ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:DetectionLimit a owl:Class ;
@@ -709,7 +698,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:MeasurementProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      rdfs:subClassOf ssn-system:DetectionLimit ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:Drift a owl:Class ;
@@ -720,7 +708,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:MeasurementProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      rdfs:subClassOf ssn-system:Drift ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:Frequency a owl:Class ;
@@ -729,7 +716,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:MeasurementProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      rdfs:subClassOf ssn-system:Frequency ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:Latency a owl:Class ;
@@ -738,7 +724,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:MeasurementProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      rdfs:subClassOf ssn-system:Latency ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:Precision a owl:Class ;
@@ -749,7 +734,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      owl:equivalentClass ssn-system:Precision ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:Resolution a owl:Class ;
@@ -760,7 +744,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:MeasurementProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      rdfs:subClassOf ssn-system:Resolution ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:ResponseTime a owl:Class ;
@@ -771,7 +754,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:MeasurementProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      rdfs:subClassOf ssn-system:ResponseTime ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:Selectivity a owl:Class ;
@@ -782,7 +764,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:MeasurementProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      rdfs:subClassOf ssn-system:Selectivity ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:Sensitivity a owl:Class ;
@@ -793,7 +774,6 @@ oldssn:hasMeasurementCapability a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:MeasurementProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability> ;
       owl:deprecated true ;
-      owl:equivalentClass ssn-system:Sensitivity ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
 
@@ -805,7 +785,6 @@ oldssn:hasOperatingRange a owl:ObjectProperty ;
   rdfs:subPropertyOf oldssn:hasProperty ;
   rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction> ;
   owl:deprecated true ;
-  owl:equivalentProperty ssn-system:hasOperatingRange ;
   rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:OperatingRange a owl:Class ;
@@ -820,7 +799,6 @@ oldssn:hasOperatingRange a owl:ObjectProperty ;
     The difference is that here we also allow for qualities that aren't VIM influence quantities [VIM 2.52] - for example, a quantity that alters the power requirements, but doesn't affect the measurement properties - conditions specified in MeasurementCapability should be influence quantities.""" ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction> ;
     owl:deprecated true ;
-    owl:equivalentClass ssn-system:OperatingRange ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:hasOperatingProperty a owl:ObjectProperty ;
@@ -829,7 +807,6 @@ oldssn:hasOperatingRange a owl:ObjectProperty ;
     rdfs:subPropertyOf oldssn:hasProperty ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction> ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn-system:hasOperatingProperty ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:OperatingProperty a owl:Class ;
@@ -838,7 +815,6 @@ oldssn:hasOperatingRange a owl:ObjectProperty ;
     rdfs:subClassOf oldssn:Property ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction> ;
     owl:deprecated true ;
-    owl:equivalentClass ssn-system:OperatingProperty ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:MaintenanceSchedule a owl:Class ;
@@ -847,7 +823,6 @@ oldssn:hasOperatingRange a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:OperatingProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction> ;
       owl:deprecated true ;
-      owl:equivalentClass ssn-system:MaintenanceSchedule ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:OperatingPowerRange a owl:Class ;
@@ -856,7 +831,6 @@ oldssn:hasOperatingRange a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:OperatingProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction> ;
       owl:deprecated true ;
-      owl:equivalentClass ssn-system:OperatingPowerRange ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
 
@@ -868,7 +842,6 @@ oldssn:hasSurvivalRange a owl:ObjectProperty ;
   rdfs:subPropertyOf oldssn:hasProperty ;
   rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction> ;
   owl:deprecated true ;
-  owl:equivalentProperty ssn-system:hasSurvivalRange ;
   rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:SurvivalRange a owl:Class ;
@@ -881,7 +854,6 @@ oldssn:hasSurvivalRange a owl:ObjectProperty ;
     http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction> ;
     owl:deprecated true ;
-    owl:equivalentClass ssn-system:SurvivalRange ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:hasSurvivalProperty a owl:ObjectProperty ;
@@ -890,7 +862,6 @@ oldssn:hasSurvivalRange a owl:ObjectProperty ;
     rdfs:subPropertyOf oldssn:hasProperty ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction> ;
     owl:deprecated true ;
-    owl:equivalentProperty ssn-system:hasSurvivalProperty ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
   oldssn:SurvivalProperty a owl:Class ;
@@ -899,7 +870,6 @@ oldssn:hasSurvivalRange a owl:ObjectProperty ;
     rdfs:subClassOf oldssn:Property ;
     rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction> ;
     owl:deprecated true ;
-    owl:equivalentClass ssn-system:SurvivalProperty ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:SystemLifetime a owl:Class ;
@@ -908,7 +878,6 @@ oldssn:hasSurvivalRange a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:SurvivalProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction> ;
       owl:deprecated true ;
-      owl:equivalentClass ssn-system:SystemLifetime ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
     oldssn:BatteryLifetime a owl:Class ;
@@ -917,7 +886,6 @@ oldssn:hasSurvivalRange a owl:ObjectProperty ;
       rdfs:subClassOf oldssn:SurvivalProperty ;
       rdfs:seeAlso <http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction> ;
       owl:deprecated true ;
-      owl:equivalentClass ssn-system:BatteryLifetime ;
       rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> .
 
 

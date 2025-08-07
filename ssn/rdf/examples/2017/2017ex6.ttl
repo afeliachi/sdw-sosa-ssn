@@ -1,5 +1,4 @@
 @prefix ex: <https://example.org/data/> .
-@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 ex:TemperatureSensor a sosa:Sensor .

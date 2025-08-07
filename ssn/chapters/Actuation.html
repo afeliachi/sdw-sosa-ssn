@@ -58,40 +58,22 @@
             It explains the steps to be carried out to arrive at reproducible results.
         </p>
         <dl>
-            <dt class="ssn">
-                Sub class of
-            </dt>
+            <dt class="ssn">Sub class of</dt>
             <dd class="ssn">
-                <a>
-                    sosa:Procedure
-                </a>
+                <a>sosa:Procedure</a>
             </dd>
-            <dt class="ssn restrictions">
-                Restriction
-            </dt>
+            <dt class="ssn restrictions">Restriction</dt>
             <dd class="ssn">
-                <a>
-                    sosa:implementedBy
-                </a>
-                <em>
-                    <b>
-                        ONLY
-                    </b>
-                </em>
-                <a>
-                    sosa:Actuator
-                </a>
+                <a>sosa:implementedBy</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:Actuator</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/oms/">
-                    http://www.w3.org/ns/sosa/oms/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
             </dd>
         </dl>
-        
+
 
         <div class="buttonpanel">
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
@@ -145,140 +127,60 @@
             See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.</p>
 
         <dl>
-            <dt>
-                Example
-            </dt>
+            <dt>Example</dt>
             <dd>
                 The activity of automatically closing a window if the temperature
-                                                                                                        in a room drops below 20 degree Celsius.
-                                                                                                        The activity is the
-                <a href="#SOSAActuation">
-                    Actuation
-                </a>
-                and the device that closes the
-                                                                                                        window is the
-                <a href="#SOSAActuator">
-                    Actuator
-                </a>
-                .
-                                                                                                        The
-                <a href="#SOSAProcedure">
-                    Procedure
-                </a>
-                is the rule, plan, or specification that may
-                                                                                                        define the condition that triggers the
-                <a href="#SOSAActuation">
-                    Actuation
-                </a>
-                (a drop in
-                                                                                                        temperature).
+                in a room drops below 20 degree Celsius.
+                The activity is the
+                <a href="#SOSAActuation">Actuation</a> and the device that closes the
+                window is the
+                <a href="#SOSAActuator">Actuator</a>.
+                The
+                <a href="#SOSAProcedure">Procedure</a> is the rule, plan, or specification that may
+                define the condition that triggers the
+                <a href="#SOSAActuation">Actuation</a>(a drop in
+                temperature).
             </dd>
-            <dt class="ssn">
-                Sub class of
-            </dt>
+            <dt class="ssn">Sub class of</dt>
             <dd class="ssn">
-                <a>
-                    sosa:Execution
-                </a>
+                <a>sosa:Execution</a>
             </dd>
-            <dt class="ssn restrictions">
-                Restrictions in SSN
-            </dt>
+            <dt class="ssn restrictions">Restrictions in SSN</dt>
             <dd class="ssn">
-                <a>
-                    sosa:madeByActuator
-                </a>
-                <em>
-                    <b>
-                        EXACTLY 1
-                    </b>
-                </em>
-                <br/>
-                <a>
-                    sosa:madeByActuator
-                </a>
-                <em>
-                    <b>
-                        ONLY
-                    </b>
-                </em>
-                <a>
-                    sosa:Actuator
-                </a>
-                <br/>
-                <a>
-                    sosa:usedProcedure
-                </a>
-                <em>
-                    <b>
-                        ONLY
-                    </b>
-                </em>
-                <a>
-                    sosa:ActuatingProcedure
-                </a>
-                <br/>
-                <a>
-                    sosa:hasFeatureOfInterest
-                </a>
-                <em>
-                    <b>
-                        EXACTLY 1
-                    </b>
-                </em>
-                <br/>
-                <a>
-                    sosa:hasFeatureOfInterest
-                </a>
-                <em>
-                    <b>
-                        ONLY
-                    </b>
-                </em>
-                <a>
-                    sosa:FeatureOfInterest
-                </a>
-                <br/>
-                <a>
-                    sosa:actsOnProperty
-                </a>
-                <em>
-                    <b>
-                        EXACTLY 1
-                    </b>
-                </em>
-                <br/>
-                <a>
-                    sosa:actsOnProperty
-                </a>
-                <em>
-                    <b>
-                        ONLY
-                    </b>
-                </em>
-                <a>
-                    sosa:Property
-                </a>
-                <br/>
-                <a>
-                    sosa:hasResult
-                </a>
-                <em>
-                    <b>
-                        EXACTLY 1
-                    </b>
-                </em>
+                <a>sosa:madeByActuator</a>
+                <em><b>EXACTLY 1</b></em>
+                <br>
+                <a>sosa:madeByActuator</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:Actuator</a>
+                <br>
+                <a>sosa:usedProcedure</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:ActuatingProcedure</a>
+                <br>
+                <a>sosa:hasFeatureOfInterest</a>
+                <em><b>EXACTLY 1</b></em>
+                <br>
+                <a>sosa:hasFeatureOfInterest</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:FeatureOfInterest</a>
+                <br>
+                <a>sosa:actsOnProperty</a>
+                <em><b>EXACTLY 1</b></em>
+                <br>
+                <a>sosa:actsOnProperty</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:Property</a>
+                <br>
+                <a>sosa:hasResult</a>
+                <em><b>EXACTLY 1</b></em>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/actuation/">
-                    http://www.w3.org/ns/sosa/actuation/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/actuation/">http://www.w3.org/ns/sosa/actuation/</a>
             </dd>
         </dl>
-        
+
         <div class="buttonpanel">
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -326,8 +228,7 @@
             </li>
             <li>
                 Where an individual <a href="#SOSAActuationCollection">ActuationCollection</a> has <i>a
-                    single value for a property</i>, each member <a href="#SOSAActuation">Actuation</a>
-                (direct or transitive) MUST have that same value for that property; i.e., the collection is
+                single value for a property</i>, each member <a href="#SOSAActuation">Actuation</a>(direct or transitive) MUST have that same value for that property; i.e., the collection is
                 homogeneous
                 in that property.
                 That property MAY then be omitted in any member <a href="#SOSAActuation">Actuation</a> or
@@ -341,139 +242,72 @@
             </li>
             <li>
                 Where an individual <a href="#SOSAActuationCollection">ActuationCollection</a> <i>has a
-                    value for a property that is a range or interval</i>, each member
-                <a href="#SOSAActuation">Actuation</a>
-                (direct or transitive) MUST have a value for that
+                value for a property that is a range or interval</i>, each member
+                <a href="#SOSAActuation">Actuation</a>(direct or transitive) MUST have a value for that
                 property that matches or falls within that range or interval.
             </li>
             <li>
                 Where an individual <a href="#SOSAActuationCollection">ActuationCollection</a> <i>has
-                    more than one value for a property that is a range or interval</i>, each member
+                more than one value for a property that is a range or interval</i>, each member
                 <a href="#SOSAActuation">Actuation</a> (direct or transitive) MUST have a value for that
                 property that matches or falls within one of those ranges or intervals.
             </li>
-            <p>
-                The members of a collection do not necessarily share a common value for any
-                property.
-            </p>
-            <p class="note">
-                Examples of Collections conforming to the rules are provided in and
-                <a href="#ModelCollectionRules">Collections and their members' property values</a>.
-                These illustrate all the cases described above.
-            </p>
-            <dl>
-                <dt class="ssn">
-                    Sub class of
-                </dt>
-                <dd class="ssn">
-                    <a href="https://www.w3.org/TR/rdf12-schema/#ch_bag">
-                        rdf:Bag
-                    </a>
-                    ,
-                    <a>
-                        sosa:ExecutionCollection
-                    </a>
-                </dd>
-                <dt class="ssn">
-                    Disjoint with
-                </dt>
-                <dd class="ssn">
-                    <a>
-                        sosa:ObservationCollection
-                    </a>
-                    ,
-                    <a>
-                        sosa:SampleCollection
-                    </a>
-                    ,
-                    <a>
-                        sosa:SamplingCollection
-                    </a>
-                </dd>
-                <dt class="ssn restrictions">
-                    Restrictions in SSN
-                </dt>
-                <dd class="ssn">
-                    <a>
-                        sosa:madeByActuator
-                    </a>
-                    <em>
-                        <b>
-                            ONLY
-                        </b>
-                    </em>
-                    <a>
-                        sosa:Actuator
-                    </a>
-                    <br/>
-                    <a>
-                        sosa:usedProcedure
-                    </a>
-                    <em>
-                        <b>
-                            ONLY
-                        </b>
-                    </em>
-                    <a>
-                        sosa:ActuatingProcedure
-                    </a>
-                    <br/>
-                    <a>
-                        sosa:hasFeatureOfInterest
-                    </a>
-                    <em>
-                        <b>
-                            ONLY
-                        </b>
-                    </em>
-                    <a>
-                        sosa:FeatureOfInterest
-                    </a>
-                    <br/>
-                    <a>
-                        sosa:actsOnProperty
-                    </a>
-                    <em>
-                        <b>
-                            ONLY
-                        </b>
-                    </em>
-                    <a>
-                        sosa:Property
-                    </a>
-                    <br/>
-                    <a>
-                        sosa:hasMember
-                    </a>
-                    <em>
-                        <b>
-                            ONLY
-                        </b>
-                    </em>
-                    (
-                    <a>
-                        sosa:Actuation
-                    </a>
-                    OR
-                    <a>
-                        sosa:ActuationCollection
-                    </a>
-                    )
-                </dd>
-                <dt>
-                    is Defined By
-                </dt>
-                <dd>
-                    <a href="http://www.w3.org/ns/sosa/actuation/">
-                        http://www.w3.org/ns/sosa/actuation/
-                    </a>
-                </dd>
-            </dl>
-            
-            <div class="buttonpanel">
-                <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
-                <span class="back">[<a href="#Overview">Back to top</a>]</span>
-            </div>
+        </ol>
+        <p>
+            The members of a collection do not necessarily share a common value for any
+            property.
+        </p>
+        <p class="note">
+            Examples of Collections conforming to the rules are provided in and
+            <a href="#ModelCollectionRules">Collections and their members' property values</a>.
+            These illustrate all the cases described above.
+        </p>
+        <dl>
+            <dt class="ssn">Sub class of</dt>
+            <dd class="ssn">
+                <a href="https://www.w3.org/TR/rdf12-schema/#ch_bag">rdf:Bag</a>,
+                <a>sosa:ExecutionCollection</a>
+            </dd>
+            <dt class="ssn">Disjoint with</dt>
+            <dd class="ssn">
+                <a>sosa:ObservationCollection</a>,
+                <a>sosa:SampleCollection</a>,
+                <a>sosa:SamplingCollection</a>
+            </dd>
+            <dt class="ssn restrictions">Restrictions in SSN</dt>
+            <dd class="ssn">
+                <a>sosa:madeByActuator</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:Actuator</a>
+                <br>
+                <a>sosa:usedProcedure</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:ActuatingProcedure</a>
+                <br>
+                <a>sosa:hasFeatureOfInterest</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:FeatureOfInterest</a>
+                <br>
+                <a>sosa:actsOnProperty</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:Property</a>
+                <br>
+                <a>sosa:hasMember</a>
+                <em><b>ONLY</b></em>
+                (
+                <a>sosa:Actuation</a> OR
+                <a>sosa:ActuationCollection</a>)
+            </dd>
+            <dt>is Defined By</dt>
+            <dd>
+                <a href="http://www.w3.org/ns/sosa/actuation/">http://www.w3.org/ns/sosa/actuation/</a>
+            </dd>
+        </dl>
+
+        <div class="buttonpanel">
+            <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Overview">Back to top</a>]</span>
+        </div>
     </section>
 
     <section class="specterm sosa" id="SOSAActuator">
@@ -496,107 +330,57 @@
             See <a href="#ModelLocation">Location and Geometry</a> for patterns to describe this.</p>
 
         <dl>
-            <dt>
-                Scope note
-            </dt>
+            <dt>Scope note</dt>
             <dd>
                 Specific actuator
-                <em>
-                    types
-                </em>
+                <em>types</em>
                 may be implemented as
-                <em>
-                    sub-classes
-                </em>
+                <em>sub-classes</em>
                 of this class
-                                                                                                        or its sub-classes.
-                                                                                                        Their descriptions may capture the properties and characteristics of a whole class of
-                                                                                                        actuators, corresponding with the information typically found in a spec-sheet or
-                                                                                                        data-sheet.
-                <br/>
-                <br/>
+                or its sub-classes.
+                Their descriptions may capture the properties and characteristics of a whole class of
+                actuators, corresponding with the information typically found in a spec-sheet or
+                data-sheet.
+                <br>
+                <br>
                 Individual actuator
-                <em>
-                    instances
-                </em>
+                <em>instances</em>
                 are
-                <em>
-                    members
-                </em>
+                <em>members</em>
                 of this class
-                                                                                                        or its sub-classes.
+                or its sub-classes.
             </dd>
-            <dt>
-                Example
-            </dt>
+            <dt>Example</dt>
             <dd>
                 A window actuator for automatic window control,
-                                                                                                        i.e., opening or closing the window.
+                i.e., opening or closing the window.
             </dd>
-            <dt class="ssn">
-                Sub class of
-            </dt>
+            <dt class="ssn">Sub class of</dt>
             <dd class="ssn">
-                <a>
-                    sosa:System
-                </a>
+                <a>sosa:System</a>
             </dd>
-            <dt class="ssn restrictions">
-                Restrictions in SSN
-            </dt>
+            <dt class="ssn restrictions">Restrictions in SSN</dt>
             <dd class="ssn">
-                <a>
-                    sosa:madeActuation
-                </a>
-                <em>
-                    <b>
-                        ONLY
-                    </b>
-                </em>
+                <a>sosa:madeActuation</a>
+                <em><b>ONLY</b></em>
                 (
-                <a>
-                    sosa:Actuation
-                </a>
-                OR
-                <a>
-                    sosa:ActuationCollection
-                </a>
-                )
-                <br/>
-                <a>
-                    sosa:actsOn
-                </a>
-                <em>
-                    <b>
-                        ONLY
-                    </b>
-                </em>
-                <a>
-                    sosa:Property
-                </a>
-                <br/>
-                <a>
-                    sosa:implements
-                </a>
-                <em>
-                    <b>
-                        ONLY
-                    </b>
-                </em>
-                <a>
-                    sosa:ActuatingProcedure
-                </a>
+                <a>sosa:Actuation</a> OR
+                <a>sosa:ActuationCollection</a>)
+                <br>
+                <a>sosa:actsOn</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:Property</a>
+                <br>
+                <a>sosa:implements</a>
+                <em><b>ONLY</b></em>
+                <a>sosa:ActuatingProcedure</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/actuation/">
-                    http://www.w3.org/ns/sosa/actuation/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/actuation/">http://www.w3.org/ns/sosa/actuation/</a>
             </dd>
         </dl>
-        
+
         <div class="buttonpanel">
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -616,48 +400,28 @@
             relation from an Actuator to a Property whose state may be changed by using it
         </p>
         <dl>
-            <dt>
-                Domain Includes
-            </dt>
+            <dt>Domain Includes</dt>
             <dd>
-                <a>
-                    sosa:Actuator
-                </a>
+                <a>sosa:Actuator</a>
             </dd>
-            <dt>
-                Range Includes
-            </dt>
+            <dt>Range Includes</dt>
             <dd>
-                <a>
-                    sosa:Property
-                </a>
+                <a>sosa:Property</a>
             </dd>
-            <dt>
-                Inverse property of
-            </dt>
+            <dt>Inverse property of</dt>
             <dd>
-                <a>
-                    sosa:isActedOnBy
-                </a>
+                <a>sosa:isActedOnBy</a>
             </dd>
-            <dt class="ssn">
-                Sub property of
-            </dt>
+            <dt class="ssn">Sub property of</dt>
             <dd class="ssn">
-                <a>
-                    sosa:forProperty
-                </a>
+                <a>sosa:forProperty</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/actuation/">
-                    http://www.w3.org/ns/sosa/actuation/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/actuation/">http://www.w3.org/ns/sosa/actuation/</a>
             </dd>
         </dl>
-        
+
         <div class="buttonpanel">
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -681,60 +445,32 @@
             relation from an Actuation to the Property it acted upon
         </p>
         <dl>
-            <dt>
-                Example
-            </dt>
+            <dt>Example</dt>
             <dd>
-                In the activity (
-                <a href="#SOSAActuation">
-                    Actuation
-                </a>
-                ) of automatically closing a window if
-                                                                                                        the temperature in a room drops below 20 degrees Celsius, the property on which the
-                <a href="#SOSAActuator">
-                    Actuator
-                </a>
-                acts upon is the state of the window as it changes from
-                                                                                                        being open to being closed.
+                In the activity (<a href="#SOSAActuation">Actuation</a>) of automatically closing a window
+                if the temperature in a room drops below 20 degrees Celsius, the property upon which the
+                <a href="#SOSAActuator">Actuator</a> acts is the state of the window as it changes from
+                being open to being closed.
             </dd>
-            <dt>
-                Domain Includes
-            </dt>
+            <dt>Domain Includes</dt>
             <dd>
-                <a>
-                    sosa:Actuation
-                </a>
-                ,
-                <a>
-                    sosa:ActuationCollection
-                </a>
+                <a>sosa:Actuation</a>,
+                <a>sosa:ActuationCollection</a>
             </dd>
-            <dt>
-                Range Includes
-            </dt>
+            <dt>Range Includes</dt>
             <dd>
-                <a>
-                    sosa:Property
-                </a>
+                <a>sosa:Property</a>
             </dd>
-            <dt>
-                Inverse property of
-            </dt>
+            <dt>Inverse property of</dt>
             <dd>
-                <a>
-                    sosa:wasActedOnBy
-                </a>
+                <a>sosa:wasActedOnBy</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/actuation/">
-                    http://www.w3.org/ns/sosa/actuation/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/actuation/">http://www.w3.org/ns/sosa/actuation/</a>
             </dd>
         </dl>
-        
+
         <div class="buttonpanel">
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -758,40 +494,24 @@
             relation from a Property to an Actuator that may change its state
         </p>
         <dl>
-            <dt>
-                Domain Includes
-            </dt>
+            <dt>Domain Includes</dt>
             <dd>
-                <a>
-                    sosa:Property
-                </a>
+                <a>sosa:Property</a>
             </dd>
-            <dt>
-                Range Includes
-            </dt>
+            <dt>Range Includes</dt>
             <dd>
-                <a>
-                    sosa:Actuator
-                </a>
+                <a>sosa:Actuator</a>
             </dd>
-            <dt>
-                Inverse property of
-            </dt>
+            <dt>Inverse property of</dt>
             <dd>
-                <a>
-                    sosa:actsOn
-                </a>
+                <a>sosa:actsOn</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/actuation/">
-                    http://www.w3.org/ns/sosa/actuation/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/actuation/">http://www.w3.org/ns/sosa/actuation/</a>
             </dd>
         </dl>
-        
+
         <div class="buttonpanel">
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -811,52 +531,29 @@
             relation from an Actuator to an Actuation or ActuationCollection it has made
         </p>
         <dl>
-            <dt class="ssn">
-                Sub property of
-            </dt>
+            <dt class="ssn">Sub property of</dt>
             <dd class="ssn">
-                <a>
-                    sosa:madeExecution
-                </a>
+                <a>sosa:madeExecution</a>
             </dd>
-            <dt>
-                Domain Includes
-            </dt>
+            <dt>Domain Includes</dt>
             <dd>
-                <a>
-                    sosa:Actuator
-                </a>
+                <a>sosa:Actuator</a>
             </dd>
-            <dt>
-                Range Includes
-            </dt>
+            <dt>Range Includes</dt>
             <dd>
-                <a>
-                    sosa:Actuation
-                </a>
-                ,
-                <a>
-                    sosa:ActuationCollection
-                </a>
+                <a>sosa:Actuation</a>,
+                <a>sosa:ActuationCollection</a>
             </dd>
-            <dt>
-                Inverse property of
-            </dt>
+            <dt>Inverse property of</dt>
             <dd>
-                <a>
-                    sosa:madeByActuator
-                </a>
+                <a>sosa:madeByActuator</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/actuation/">
-                    http://www.w3.org/ns/sosa/actuation/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/actuation/">http://www.w3.org/ns/sosa/actuation/</a>
             </dd>
         </dl>
-        
+
         <div class="buttonpanel">
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -876,52 +573,29 @@
             relation from an Actuation or ActuationCollection to the Actuator that made it
         </p>
         <dl>
-            <dt class="ssn">
-                Sub property of
-            </dt>
+            <dt class="ssn">Sub property of</dt>
             <dd class="ssn">
-                <a>
-                    sosa:madeBySystem
-                </a>
+                <a>sosa:madeBySystem</a>
             </dd>
-            <dt>
-                Domain Includes
-            </dt>
+            <dt>Domain Includes</dt>
             <dd>
-                <a>
-                    sosa:Actuation
-                </a>
-                ,
-                <a>
-                    sosa:ActuationCollection
-                </a>
+                <a>sosa:Actuation</a>,
+                <a>sosa:ActuationCollection</a>
             </dd>
-            <dt>
-                Range Includes
-            </dt>
+            <dt>Range Includes</dt>
             <dd>
-                <a>
-                    sosa:Actuator
-                </a>
+                <a>sosa:Actuator</a>
             </dd>
-            <dt>
-                Inverse property of
-            </dt>
+            <dt>Inverse property of</dt>
             <dd>
-                <a>
-                    sosa:madeActuation
-                </a>
+                <a>sosa:madeActuation</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/actuation/">
-                    http://www.w3.org/ns/sosa/actuation/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/actuation/">http://www.w3.org/ns/sosa/actuation/</a>
             </dd>
         </dl>
-        
+
         <div class="buttonpanel">
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
@@ -945,44 +619,25 @@
             relation from a Property to an Actuation that changed its state
         </p>
         <dl>
-            <dt>
-                Domain Includes
-            </dt>
+            <dt>Domain Includes</dt>
             <dd>
-                <a>
-                    sosa:Property
-                </a>
+                <a>sosa:Property</a>
             </dd>
-            <dt>
-                Range Includes
-            </dt>
+            <dt>Range Includes</dt>
             <dd>
-                <a>
-                    sosa:Actuation
-                </a>
-                ,
-                <a>
-                    sosa:ActuationCollection
-                </a>
+                <a>sosa:Actuation</a>,
+                <a>sosa:ActuationCollection</a>
             </dd>
-            <dt>
-                Inverse property of
-            </dt>
+            <dt>Inverse property of</dt>
             <dd>
-                <a>
-                    sosa:actsOnProperty
-                </a>
+                <a>sosa:actsOnProperty</a>
             </dd>
-            <dt>
-                is Defined By
-            </dt>
+            <dt>is Defined By</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/actuation/">
-                    http://www.w3.org/ns/sosa/actuation/
-                </a>
+                <a href="http://www.w3.org/ns/sosa/actuation/">http://www.w3.org/ns/sosa/actuation/</a>
             </dd>
         </dl>
-        
+
         <div class="buttonpanel">
             <span class="back">[<a href="#Actuations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
