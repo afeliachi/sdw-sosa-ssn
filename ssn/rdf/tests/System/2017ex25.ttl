@@ -6,7 +6,6 @@
 @prefix schema: <http://schema.org/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
-@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -26,42 +25,42 @@
   gr:name "IP68 Outdoor Temperature Sensor"@en ;
   rdfs:label "IP68 Outdoor Temperature Sensor"@en ;
   rdfs:subClassOf [
-    owl:onProperty ssn-system:hasOperatingRange ;
+    owl:onProperty system:hasOperatingRange ;
     owl:hasValue <IP68_Outdoor_Temperature_Sensor#operatingRange> ] ;
   rdfs:subClassOf [
-    owl:onProperty ssn-system:hasSystemCapability ;
+    owl:onProperty system:hasSystemCapability ;
     owl:hasValue <IP68_Outdoor_Temperature_Sensor#systemCapability> ] .
 
-<IP68_Outdoor_Temperature_Sensor#operatingRange> a ssn-system:OperatingRange , ssn:Property ;
-  ssn-system:inCondition <IP68_Outdoor_Temperature_Sensor#normalOperatingCondition> .
+<IP68_Outdoor_Temperature_Sensor#operatingRange> a system:OperatingRange , ssn:Property ;
+  system:inCondition <IP68_Outdoor_Temperature_Sensor#normalOperatingCondition> .
 
-<IP68_Outdoor_Temperature_Sensor#normalOperatingCondition> a ssn-system:Condition , schema:PropertyValue ;
+<IP68_Outdoor_Temperature_Sensor#normalOperatingCondition> a system:Condition , schema:PropertyValue ;
   rdfs:comment "A temperature range of -20 to 70 Celsius."@en ;
   schema:minValue -20.0 ;
   schema:maxValue 70.0 ;
   schema:unitCode unit:DEG_C .
 
-<IP68_Outdoor_Temperature_Sensor#systemCapability> a ssn:Property , ssn-system:SystemCapability ;
+<IP68_Outdoor_Temperature_Sensor#systemCapability> a ssn:Property , system:SystemCapability ;
   rdfs:comment "The sensor capability in normal operating conditions."@en ;
-  ssn-system:hasSystemProperty <IP68_Outdoor_Temperature_Sensor#RFSensitivity> , <IP68_Outdoor_Temperature_Sensor#TemperatureAccuracy> , <IP68_Outdoor_Temperature_Sensor#TemperatureResolution> , <IP68_Outdoor_Temperature_Sensor#BatteryAccuracy> , <IP68_Outdoor_Temperature_Sensor#BatteryResolution> ;
-  ssn-system:inCondition <IP68_Outdoor_Temperature_Sensor#normalOperatingCondition> .
+  system:hasSystemProperty <IP68_Outdoor_Temperature_Sensor#RFSensitivity> , <IP68_Outdoor_Temperature_Sensor#TemperatureAccuracy> , <IP68_Outdoor_Temperature_Sensor#TemperatureResolution> , <IP68_Outdoor_Temperature_Sensor#BatteryAccuracy> , <IP68_Outdoor_Temperature_Sensor#BatteryResolution> ;
+  system:inCondition <IP68_Outdoor_Temperature_Sensor#normalOperatingCondition> .
 
-<IP68_Outdoor_Temperature_Sensor#RFSensitivity> a ssn:Property , ssn-system:Sensitivity , schema:PropertyValue ;
+<IP68_Outdoor_Temperature_Sensor#RFSensitivity> a ssn:Property , system:Sensitivity , schema:PropertyValue ;
   schema:value -137 ;
   schema:unitCode unit:DeciB-MilliW .
 
-<IP68_Outdoor_Temperature_Sensor#TemperatureAccuracy> a ssn:Property , ssn-system:Accuracy , schema:PropertyValue ;
+<IP68_Outdoor_Temperature_Sensor#TemperatureAccuracy> a ssn:Property , system:Accuracy , schema:PropertyValue ;
   ssn:forProperty <Air?lat=45.75&long=4.85#temperature> ;
   schema:minValue -0.2 ;
   schema:maxValue 0.2 ;
   schema:unitCode unit:DEG_C .
 
-<IP68_Outdoor_Temperature_Sensor#TemperatureResolution> a ssn:Property , ssn-system:Resolution , schema:PropertyValue ;
+<IP68_Outdoor_Temperature_Sensor#TemperatureResolution> a ssn:Property , system:Resolution , schema:PropertyValue ;
   ssn:forProperty <Air?lat=45.75&long=4.85#temperature> ;
   schema:value 0.0625 ;
   schema:unitCode unit:DEG_C .
 
-<IP68_Outdoor_Temperature_Sensor#BatteryResolution> a ssn:Property , ssn-system:Resolution , schema:PropertyValue ;
+<IP68_Outdoor_Temperature_Sensor#BatteryResolution> a ssn:Property , system:Resolution , schema:PropertyValue ;
   ssn:forProperty <Sensor/SL-T-P1#battery> ;
   schema:value 3.937e-3 ;
   schema:unitCode unit:PERCENT .

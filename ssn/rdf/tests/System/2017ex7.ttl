@@ -15,12 +15,12 @@ ex:TemperatureSensor a owl:Class ;
 # the class or at the level of each instance with this modeling choice:
 
 ex:TemperatureSensor  rdfs:subClassOf [
-    owl:onProperty ssn-system:hasOperatingRange ;
+    owl:onProperty system:hasOperatingRange ;
     owl:hasValue ex:TemperatureSensorOperatingRange ] .
 
 <TemperatureSensor/1> 
-  ssn-system:hasOperatingRange ex:TemperatureSensorOperatingRange ; # this axiom can be inferred
-  ssn-system:hasOperatingRange <moreSpecificTemperatureSensorOperatingRange> .
+  system:hasOperatingRange ex:TemperatureSensorOperatingRange ; # this axiom can be inferred
+  system:hasOperatingRange <moreSpecificTemperatureSensorOperatingRange> .
 
-<moreSpecificTemperatureSensorOperatingRange> a ssn-system:OperatingRange ;
-  ssn-system:inCondition <modeSpecificTemperatureCondition> , <modeSpecificHumidityCondition> .
+<moreSpecificTemperatureSensorOperatingRange> a system:OperatingRange ;
+  system:inCondition <modeSpecificTemperatureCondition> , <modeSpecificHumidityCondition> .

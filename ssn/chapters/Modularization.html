@@ -39,16 +39,16 @@
     <ol>
         <li>
             <b>SOSA Common</b> defines classes and properties that are shared across
-            Actuation, Observation and Sampling applications
+            Actuation, Observation and Sampling applications, documented in section <a href="#Common"></a>
         </li>
         <li>
-            <b>SOSA Actuation</b> imports <b>SOSA Common</b> and defines classes and properties used in Actuations
+            <b>SOSA Actuation</b> imports <b>SOSA Common</b> and defines classes and properties used in Actuations, documented in section <a href="#Actuation"></a>
         </li>
         <li>
-            <b>SOSA Observation</b> imports <b>SOSA Common</b> and defines classes and properties used in Observations
+            <b>SOSA Observation</b> imports <b>SOSA Common</b> and defines classes and properties used in Observations, documented in section <a href="#Observation"></a>
         </li>
         <li>
-            <b>SOSA Sampling</b> imports <b>SOSA Common</b> and defines classes and properties used in Samplings
+            <b>SOSA Sampling</b> imports <b>SOSA Common</b> and defines classes and properties used in Samplings, documented in section <a href="#Sampling"></a>
         </li>
     </ol>
     <p>
@@ -61,8 +61,7 @@
 
     <h4 id="ssn-module">SSN</h4>
     <p>
-        The <i>SSN Module</i> adds axioms that formally indicate how properties relate to classes, how classes relate to
-        each other. SSN may be used in semantic web systems that use inferencing and reasoning, and consistency checking
+        The <i>SSN Module</i> adds axioms that formally indicate how properties relate to classes, and how classes relate to each other. SSN may be used in semantic web systems that use inferencing and reasoning, and consistency checking
         for datasets. </p>
     <p>
         The modularization of <b>SSN</b> mirrors <b>SOSA</b>.
@@ -71,22 +70,19 @@
     <ol>
         <li>
             <b>SSN Common</b> imports <b>SOSA Common</b> and axiomatizes classes and properties that are shared across
-            Actuation, Observation and Sampling
-            applications
+            Actuation, Observation and Sampling applications, as documented in section <a href="#Common"></a>
         </li>
         <li>
             <b>SSN Actuation</b> imports <b>SSN Common</b> and <b>SOSA Actuation</b>, and axiomatizes classes and
-            properties
-            used in Actuations
+            properties used in Actuations, as documented in section <a href="#Actuation"></a>
         </li>
         <li>
             <b>SSN Observation</b> imports <b>SSN Common</b> and <b>SOSA Observation</b>, and axiomatizes classes and
-            properties used in Observations
+            properties used in Observations, as documented in section <a href="#Observation"></a>
         </li>
         <li>
             <b>SSN Sampling</b> imports <b>SSN Common</b> and <b>SOSA Sampling</b>, and axiomatizes classes and
-            properties
-            used in Samplings
+            properties used in Samplings, as documented in section <a href="#Sampling"></a>
         </li>
     </ol>
     <p>
@@ -123,28 +119,35 @@
         <b><i>SSN-OMS</i> may be used by audiences for whom full conformance to [[OMS]] (also known as ISO 19156:2023)
             is a requirement, with reasoning support</b>
     </p>
-
-    <h4 id="system-capabilities-module">System Capabilities</h4>
     <p>
-        The <i>System Capabilities module</i> imports <i>SSN Actuation</i> and <i>SSN Observation</i>, and adds classes
-        and properties required for the description of the capabilities of systems, in particular Sensors and Actuators.
+        The <i>SOSA-OMS module</i> and the <i>SSN-OMS module</i> are documented in section <a href="#OMS"></a>
     </p>
-
 
     <h4 id="sample-relations-module">Sample Relations</h4>
     <p>
         The <i>Sample Relations module</i> imports <i>SOSA Sampling</i>, and adds classes and properties required for
-        the
-        description of networks of samples.
+        the description of networks of samples.
     </p>
+    <p>
+        The <i>Sample Relations module</i> is documented in section <a href="#Sample-Relations"></a>.
+    </p>
+
+    <h4 id="system-capabilities-module">System Capabilities</h4>
+    <p>
+        The <i>System Capabilities module</i> imports <i>SOSA</i> and adds classes and properties required for the description of the
+        operating conditions and capabilities of systems, in particular Sensors and Actuators.
+    </p>
+    <p>
+        The <i>System Capabilities module</i> is documented in appendix <a href="#System-capabilities"></a>.
+    </p>
+
 </section>
 
 <section id="SSNalignmentModules">
     <h3>Alignment modules</h3>
     <p>
         <a href="#Fig-SSN-alignment-modules"></a> summarizes alignments of other ontologies and specifications with the
-        SSN Ontology that are
-        described in this document.
+        SSN Ontology that are described in this document.
     </p>
     <figure id="Fig-SSN-alignment-modules">
         <embed alt="SSN alignment modules" src="images/SSN-alignment-modules.svg" style="width:100%">
@@ -160,11 +163,17 @@
         The <i>SOSA-PROV module</i> imports <b>SOSA Common</b>, and describes the alignment of SOSA to [[[prov-o]]].
         <i>SOSA-PROV</i> may be used to integrate data designed using SSN into provenance systems.
     </p>
+    <p>
+        The <i>SOSA-PROV module</i> is documented in section <a href="#PROV-alignment"></a>.
+    </p>
 
     <h4 id="sosa-saref-module">SAREF</h4>
     <p>
         The <i>SOSA-SAREF module</i> imports <b>SOSA</b>, and describes the alignment of SOSA to [[[SAREF]]].
         <i>SOSA-SAREF</i> may be used to integrate data designed using SSN with data designed using SAREF.
+    </p>
+    <p>
+        The <i>SOSA-SAREF module</i> is documented in section <a href="#SAREF-alignment"></a>.
     </p>
 
     <h4 id="sosa-oboe-module">OBOE</h4>
@@ -172,11 +181,17 @@
         The <i>SOSA-OBOE module</i> imports <b>SOSA Observation</b>, and describes the alignment of SOSA to [[[OBOE]]].
         <i>SOSA-OBOE</i> may be used to integrate observation data structured using OBOE with data using SOSA.
     </p>
-
-    <h4 id="ssn-dul-module">DUL</h4>
     <p>
-        The <i>SSN-DUL module</i> imports <b>SSN</b>, and adds axioms that position SSN within <i>Dolce-UltraLite</i>.
-        <i>SSN-DUL</i> may be used to integrate data designed using SSN into systems otherwise built in the
-        <i>Dolce-UltraLite</i> framework.
+        The <i>SOSA-OBOE module</i> is documented in section <a href="#OBOE-alignment"></a>.
+    </p>
+
+    <h4 id="sosa-dul-module">DUL</h4>
+    <p>
+        The <i>SOSA-DUL module</i> imports <b>SOSA</b>, and adds axioms that position SOSA within <i>DOLCE UltraLite</i>.
+        <i>SOSA-DUL</i> may be used to integrate data designed using SOSA into systems otherwise built in the
+        <i>DOLCE UltraLite</i> framework.
+    </p>
+    <p>
+        The <i>SOSA-DUL module</i> is documented in section <a href="#DUL-alignment"></a>.
     </p>
 </section>

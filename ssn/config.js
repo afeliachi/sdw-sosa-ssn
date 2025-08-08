@@ -50,18 +50,18 @@ var respecConfig = {
     },
     {
       name: "Rob Atkinson",
-      company: "Metalinkage",
+      company: "Metalinkage, AU",
       orcid: "0000-0002-7815-2472"
     },
     {
       name: "Sylvain Grellet",
-      company: "BRGM",
+      company: "BRGM, FR",
       companyURL: "https://brgm.fr/",
       orcid: "0000-0001-7656-1830"
     },
     {
       name: "Kathi Schleidt",
-      company: "Datacove",
+      company: "Datacove, AT",
       companyURL: "https://www.datacove.eu/",
       orcid: "0000-0002-8011-7350"
     }
@@ -127,6 +127,17 @@ var respecConfig = {
     }
   ],
   localBiblio: {
+    "Description Logics": {
+      href: "http://www.cambridge.org/uk/catalogue/catalogue.asp?isbn=9780521876254",
+      authors: ["Franz Baader", "Diego Calvanese", "Deborah L. McGuinness", "Daniele Nardi", "Peter F. Patel-Schneider"],
+      title: "The Description Logic Handbook: Theory, Implementation, and Applications, second edition",
+      publisher: "Cambridge University Press",
+      date: "2007"
+    },
+    "Description Logics Home Page": {
+      href: "https://dl.kr.org/",
+      title: "Description Logics Home Page"
+    },
     "Lefrancois-et-al-2017": {
       href: "https://w3id.org/seas/SEAS-D2_2-SEAS-Knowledge-Model.pdf",
       authors: ["Maxime Lefrançois", "Jarmo Kalaoja", "Takoua Ghariani", "Antoine Zimmermann"],
