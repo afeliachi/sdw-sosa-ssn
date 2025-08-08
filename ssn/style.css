@@ -179,3 +179,42 @@ ul.align-on-symbol li .rhs {
   flex: 1;
   text-align: left;
 }
+
+/* Responsive behavior for small screens */
+@media (max-width: 600px) {
+  ul.align-on-symbol li {
+    display: block; /* stack vertically */
+    margin-bottom: 1em;
+  }
+
+  
+  ul.align-on-symbol li .lhs {
+    min-width: 0;
+    text-align: left;
+    display: block;
+    margin-bottom: 0.25em;
+  }
+
+  ul.align-on-symbol.align-on-symbol-long li .lhs {
+    min-width: 0;
+    text-align: left;
+    display: block;
+    margin-bottom: 0.25em;
+  }
+
+  ul.align-on-symbol li .symbol,
+  ul.align-on-symbol li .rhs {
+    display: inline;
+  }
+
+  /* Wrap symbol+rhs in a flex container */
+  ul.align-on-symbol li .symbol + .rhs {
+    display: inline;
+  }
+
+  /* Optional: indent second line */
+  ul.align-on-symbol li .symbol {
+    padding-left: 1.5em;
+    padding-right: 0.5ch;
+  }
+}
