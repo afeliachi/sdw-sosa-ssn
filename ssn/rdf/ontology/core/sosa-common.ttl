@@ -602,7 +602,7 @@ sosa:hasDeployment
   a owl:ObjectProperty ;
   rdfs:label "has deployment"@en ;
   skos:definition """
-  relation from a System to a Deployment in which it is deployed
+  relation from a System or Platform to a Deployment in which it is deployed
   """@en ;
   schema:domainIncludes sosa:System ;
   schema:domainIncludes sosa:Platform ;
