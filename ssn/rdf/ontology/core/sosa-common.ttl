@@ -58,7 +58,7 @@ sosa:forProperty
   a owl:ObjectProperty ;
   rdfs:label "for property"@en ;
   skos:definition """
-  relation from some Procedure or System to a Property
+  relation from some Procedure or System to a Property it acts on or observes
   """@en ;
   skos:example "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a SystemCapability to the Property the capability is described for."@en ;
   schema:domainIncludes sosa:Procedure ;
