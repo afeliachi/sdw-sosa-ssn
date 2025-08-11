@@ -29,7 +29,6 @@ ssn-common:
 ## Utility terms 
 
 sosa:hasMember 
-  rdfs:subPropertyOf rdfs:member ;
   rdfs:isDefinedBy sosa-common: .
 
 
