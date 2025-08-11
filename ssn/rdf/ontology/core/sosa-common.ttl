@@ -81,7 +81,7 @@ sosa:isFeatureOfInterestOf
   a owl:ObjectProperty ;
   rdfs:label "is feature of interest of"@en ;
   skos:definition """
-  relation from a FeatureOfInterest to an Execution or Deployment operating on it
+  relation from a FeatureOfInterest to an Execution, Execution Collection, or Deployment, operating on it
 
   i.e., to an Observation about it, to an Actuation acting on it, to an act of Sampling that sampled it,
   or to a Deployment for which it is the subject.
@@ -298,7 +298,7 @@ sosa:hasFeatureOfInterest
   a owl:ObjectProperty ;
   rdfs:label "has feature of interest"@en ;
   skos:definition """
-  relation from an Execution to its subject entity
+  relation from an Execution, Execution Collection, or Deployment, to its subject entity
 
   i.e., from an Actuation to the entity whose property was modified;
   from an Observation to the entity whose quality was observed;
