@@ -27,7 +27,6 @@ var respecConfig = {
     {
       name: "Simon J D Cox",
       company: "Timely Logic, AU",
-      note: "formerly CSIRO and OGC",
       orcid: "0000-0002-3884-3420",
       w3cid: 1796
     },
@@ -43,27 +42,28 @@ var respecConfig = {
       companyURL: "https://github.com/GlengarryAg"
     },
     {
+      name: "Rob Atkinson",
+      company: "OGC & Metalinkage, AU",
+      companyURL: "https://www.ogc.org/",
+      orcid: "0000-0002-7815-2472"
+    },
+    {
       name: "Luis Moreira de Sousa",
       company: "Instituto Superior Técnico Lisboa, PT",
       companyURL: "https://tecnico.ulisboa.pt/en/",
       orcid: "0000-0002-5851-2071"
     },
     {
-      name: "Rob Atkinson",
-      company: "Metalinkage, AU",
-      orcid: "0000-0002-7815-2472"
+      name: "Kathi Schleidt",
+      company: "Datacove, AT",
+      companyURL: "https://www.datacove.eu/",
+      orcid: "0000-0002-8011-7350"
     },
     {
       name: "Sylvain Grellet",
       company: "BRGM, FR",
       companyURL: "https://brgm.fr/",
       orcid: "0000-0001-7656-1830"
-    },
-    {
-      name: "Kathi Schleidt",
-      company: "Datacove, AT",
-      companyURL: "https://www.datacove.eu/",
-      orcid: "0000-0002-8011-7350"
     }
   ],
   formerEditors: [
@@ -128,9 +128,9 @@ var respecConfig = {
   ],
   localBiblio: {
     "Description Logics": {
-      href: "http://www.cambridge.org/uk/catalogue/catalogue.asp?isbn=9780521876254",
+      href: "http://www.cambridge.org/9780521150118",
       authors: ["Franz Baader", "Diego Calvanese", "Deborah L. McGuinness", "Daniele Nardi", "Peter F. Patel-Schneider"],
-      title: "The Description Logic Handbook: Theory, Implementation, and Applications, second edition",
+      title: "The Description Logic Handbook: Theory, Implementation, and Applications, 2nd Edition",
       publisher: "Cambridge University Press",
       date: "2007"
     },
