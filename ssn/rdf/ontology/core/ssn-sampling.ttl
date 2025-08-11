@@ -44,7 +44,6 @@ sosa:Sample
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:SampleCollection 
-  rdfs:subClassOf rdf:Bag ;
   rdfs:subClassOf [ 
     a owl:Restriction ; 
     owl:onProperty sosa:hasMember ; 
@@ -81,7 +80,6 @@ sosa:Sampling
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:SamplingCollection 
-  rdfs:subClassOf rdf:Bag ;
   rdfs:subClassOf sosa:ExecutionCollection ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeBySampler ; owl:allValuesFrom sosa:Sampler ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:usedProcedure; owl:allValuesFrom sosa:SamplingProcedure ] ;
@@ -171,7 +169,6 @@ sosa:usedForExecutionHasResult
 #    rdfs:isDefinedBy sosa-sam: .
 
 sosa:SampleCollection 
-  rdfs:subClassOf rdf:Bag ;
   rdfs:subClassOf [ 
     a owl:Restriction ; 
     owl:onProperty sosa:hasMember ; 
@@ -185,7 +182,6 @@ sosa:SampleCollection
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:SamplingCollection 
-  rdfs:subClassOf rdf:Bag ;
   rdfs:subClassOf [ 
     a owl:Restriction ; 
     owl:onProperty sosa:hasMember ; 
@@ -249,7 +245,6 @@ sosa:hasOutput
   rdfs:isDefinedBy sosa-common: .
 
 sosa:usedProcedure 
-  owl:propertyChainAxiom ( sosa:madeBySampler sosa:implements ) ;
   rdfs:isDefinedBy sosa-common: .
 
 ## Executions
