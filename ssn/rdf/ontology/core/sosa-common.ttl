@@ -246,14 +246,15 @@ sosa:ExecutionCollection
   skos:definition """
   set of one or more Executions or ExecutionCollections; collections may be nested
 
-  The following execution properties may appear in an Execution Collection: 
+  All Execution properties may appear in an Execution Collection, including 
   hasFeatureOfInterest , usedProcedure , madeBySystem , endTime, resultTime , startTime . 
-  If it is present, the value of a property summarizes the values of the matching properties of the member executions, where membership is either direct or transitive through one or more member execution collections. 
+  If they are present, the values of these properties summarize the values of the matching properties of the member Executions, where membership is either direct or transitive through one or more member execution collections. 
+
   The following consistency rules apply with respect to the execution properties listed above: 
   
   1. Where an individual Execution Collection omits a property, a member Execution (direct or transitive) MAY have any value for that property.
 
-  2. Where an individual Execution Collection has a single value for a property, each member Execution (direct or transitive) MUST have that same value for the property - i.e., the collection is homogeneous in that property.  That property MAY then be omitted in any member Observation or Observation Collection.
+  2. Where an individual Execution Collection has a single value for a property, each member Execution (direct or transitive) MUST have that same value for the property - i.e., the collection is homogeneous in that property.  That property MAY then be omitted in any member Execution or Execution Collection.
 
   3. Where an individual Execution Collection has more than one value for a property, each member Execution (direct or transitive) MUST have a value for that property that matches one of the values for the property in the collection. 
   

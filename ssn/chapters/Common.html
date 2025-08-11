@@ -948,8 +948,8 @@
                 set of one or more Executions or ExecutionCollections; collections may be nested
             </p>
             <p>
-                The following <a href="#SOSAExecution">Execution</a> properties may appear in an
-                <a href="#SOSAExecutionCollection">ExecutionCollection</a>:
+                All <a href="#SOSAExecution">Execution</a> properties may appear in an
+                <a href="#SOSAExecutionCollection">ExecutionCollection</a>, including
                 <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a>,
                 <a href="#SOSAusedProcedure">usedProcedure</a>,
                 <a href="#SOSAmadeBySystem">madeBySystem</a>,
@@ -979,7 +979,8 @@
                 </li>
                 <li>
                     Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> has
-                    <i>more than one value for a property</i>, each member <a href="#SOSAExecution">Execution</a>(direct or transitive) MUST have a value for that property that matches one of the values for
+                    <i>more than one value for a property</i>, each member <a href="#SOSAExecution">Execution</a>
+                    (direct or transitive) MUST have a value for that property that matches one of the values for
                     the property in the collection.
                 </li>
                 <li>
