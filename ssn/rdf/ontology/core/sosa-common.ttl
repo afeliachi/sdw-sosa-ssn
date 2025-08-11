@@ -434,6 +434,7 @@ sosa:phenomenonOccurred
   """@en ;
   schema:domainIncludes time:TemporalEntity ;
   schema:rangeIncludes sosa:Execution ;
+  schema:rangeIncludes sosa:ExecutionCollection ;
   owl:inverseOf sosa:phenomenonTime ;
   rdfs:isDefinedBy sosa-common: .
 
