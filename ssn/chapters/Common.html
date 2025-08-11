@@ -1631,35 +1631,35 @@
                 <dt>Example</dt>
                 <dd>
                     <pre>
-            sosa:phenomenonTime [
-            a time:Instant ;
-            time:inXSDDateTime "2023-06-20T21:49:18+00:00"^^xsd:dateTime ;
+            &lt;obs1&gt; sosa:phenomenonTime [
+              a time:Instant ;
+              time:inXSDDateTime "2023-06-20T21:49:18+00:00"^^xsd:dateTime ;
             ] ;
-            sosa:phenomenonTime [
-            a time:Interval ;
-            time:hasBeginning [
-            a time:Instant ;
-            time:inXSDDateTime "2017-04-15T23:59:30+00:00"^^xsd:dateTime
+            &lt;obs2&gt; sosa:phenomenonTime [
+              a time:Interval ;
+              time:hasBeginning [
+                a time:Instant ;
+                time:inXSDDateTime "2017-04-15T23:59:30+00:00"^^xsd:dateTime
+              ] ;
+              time:hasEnd [
+                a time:Instant ;
+                time:inXSDDateTime "2017-04-16T00:00:00+00:00"^^xsd:dateTime
+              ] ;
             ] ;
-            time:hasEnd [
-            a time:Instant ;
-            time:inXSDDateTime "2017-04-16T00:00:00+00:00"^^xsd:dateTime
-            ] ;
-            ] ;
-            sosa:phenomenonTime [
-            a time:Interval ;
-            time:hasBeginning [
-            a time:Instant ;
-            time:inTimePosition [
-            time:hasTRS ex:BP ;
-            time:numericPosition 12000 ;
-            ] ;
-            ] ;
-            time:hasDuration [
-            a time:Duration ;
-            time:numericDuration 500 ;
-            time:unitType time:unitYear ;
-            ] ;
+            &lt;obs3&gt; sosa:phenomenonTime [
+              a time:Interval ;
+              time:hasBeginning [
+                a time:Instant ;
+                time:inTimePosition [
+                  time:hasTRS ex:BP ;
+                  time:numericPosition 12000 ;
+                ] ;
+              ] ;
+              time:hasDuration [
+                a time:Duration ;
+                time:numericDuration 500 ;
+                time:unitType time:unitYear ;
+              ] ;
             ] ;
             </pre>
                 </dd>
