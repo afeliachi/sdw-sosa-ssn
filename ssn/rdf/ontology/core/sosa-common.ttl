@@ -108,7 +108,7 @@ sosa:isUltimateFeatureOfInterestOf
   a owl:ObjectProperty ;
   rdfs:label "is ultimate feature of interest of"@en ;
   skos:definition """
-  relation from an ultimate FeatureOfInterest to an Execution or Deployment for which it is the ultimate subject
+  relation from an ultimate FeatureOfInterest to an Execution, ExecutionCollection, or Deployment, for which it is the ultimate subject
   """@en ;
   schema:domainIncludes sosa:FeatureOfInterest ;
   schema:rangeIncludes sosa:Deployment ;
