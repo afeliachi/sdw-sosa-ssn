@@ -46,7 +46,6 @@ sosa:Property
   rdfs:isDefinedBy sosa-common: .
 
 sosa:forProperty 
-  owl:inverseOf sosa:invForProperty ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasProperty 
@@ -54,10 +53,6 @@ sosa:hasProperty
 
 sosa:hasFeatureOfInterest 
   rdfs:isDefinedBy sosa-common: .
-
-sosa:invForProperty
-  a owl:ObjectProperty ;
-  rdfs:isDefinedBy ssn-common: .
 
 sosa:isFeatureOfInterestOf 
   rdfs:isDefinedBy sosa-common: .
@@ -69,7 +64,6 @@ sosa:hasUltimateFeatureOfInterest
   rdfs:isDefinedBy sosa-common: .
 
 sosa:propertyFor 
-  rdfs:subPropertyOf sosa:invForProperty ;
   rdfs:isDefinedBy sosa-common: .
 
 
@@ -89,7 +83,8 @@ sosa:hasOutput
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasProcedure 
-  rdfs:subPropertyOf sosa:invForProperty ;
+  rdfs:subPropertyOf sosa:propertyFor ;
+  owl:inverseOf [ rdfs:subPropertyOf sosa:forProperty ] ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:implementedBy 
@@ -217,13 +212,19 @@ sosa:System
   ] ;
   rdfs:isDefinedBy sosa-common: .
 
+sosa:assetInDeployment 
+  rdfs:isDefinedBy sosa-common: .
+
 sosa:deployedAsset 
   rdfs:isDefinedBy sosa-common: .
 
 sosa:deployedOnPlatform 
+  rdfs:subPropertyOf sosa:deployedAsset ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:deployedSystem 
+  rdfs:subPropertyOf sosa:deployedAsset ;
+  owl:inverseOf [ rdfs:subPropertyOf sosa:hasDeployment ] ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasDeployment 
@@ -240,6 +241,7 @@ sosa:implements
   rdfs:isDefinedBy sosa-common: .
 
 sosa:inDeployment 
+  rdfs:subPropertyOf sosa:hasDeployment ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:isHostedBy 

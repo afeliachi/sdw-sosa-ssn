@@ -64,6 +64,7 @@ sosa:forProperty
   schema:domainIncludes sosa:Procedure ;
   schema:domainIncludes sosa:System ;
   schema:rangeIncludes sosa:Property ;
+  owl:inverseOf sosa:propertyFor ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasProperty 
@@ -123,10 +124,10 @@ sosa:propertyFor
   skos:definition """
   relation from a Property to some Procedure or System that acts on it or observes it
   """@en ;
-  skos:example "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a SystemCapability to the Property the capability is described for."@en ;
   schema:domainIncludes sosa:Property ;
   schema:rangeIncludes sosa:Procedure ;
   schema:rangeIncludes sosa:System ;
+  owl:inverseOf sosa:forProperty ;
   rdfs:isDefinedBy sosa-common: .
 
 
@@ -567,6 +568,7 @@ sosa:deployedAsset
   schema:domainIncludes sosa:Deployment ;
   schema:rangeIncludes sosa:Platform ;
   schema:rangeIncludes sosa:System ;
+  owl:inverseOf sosa:hasDeployment ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:deployedOnPlatform 
@@ -588,7 +590,6 @@ sosa:deployedSystem
   """@en ;
   schema:domainIncludes sosa:Deployment ;
   schema:rangeIncludes sosa:System ;
-  owl:inverseOf sosa:hasDeployment ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasDeployment 
@@ -600,7 +601,7 @@ sosa:hasDeployment
   schema:domainIncludes sosa:System ;
   schema:domainIncludes sosa:Platform ;
   schema:rangeIncludes sosa:Deployment ;
-  owl:inverseOf sosa:deployedSystem ;
+  owl:inverseOf sosa:deployedAsset ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasSubSystem 
