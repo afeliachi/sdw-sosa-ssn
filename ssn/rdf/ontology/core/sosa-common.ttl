@@ -479,7 +479,7 @@ sosa:startTime
   a owl:DatatypeProperty ;
   rdfs:label "start time"@en ;
   skos:definition """
-  instant of time when the Execution or ExecutionCollection or Deployment was initiated or tasked
+  instant of time when the Execution or Deployment was initiated or tasked
   """@en ;
   rdfs:comment "The value would usually be encoded using xsd:dateTime xsd:date xsd:gYearMonth xsd:gYear"@en ;
   schema:domainIncludes sosa:Deployment ;
