@@ -164,7 +164,7 @@ sosa:hasOutput
   a owl:ObjectProperty ;
   rdfs:label "has output"@en ;
   skos:definition """
-  relation from a Procedure to an output or result of its execution
+  relation from a Procedure to an output of its execution
   """@en ;
   skos:note "This property will typically describe the type of the result from executing the Procedure."@en ;
   schema:domainIncludes sosa:Procedure ;
