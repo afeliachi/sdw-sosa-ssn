@@ -367,7 +367,7 @@ sosa:hasUltimateFeatureOfInterest
   a owl:ObjectProperty ;
   rdfs:label "has ultimate feature of interest"@en  ;
   skos:definition """
-  relation from an Execution to its ultimate subject entity
+  relation from a Deployment or Execution to its ultimate subject entity
 
   i.e., from an Actuation to the ultimate entity whose property was modified;
   from an Observation to the ultimate entity whose property was observed;
