@@ -154,7 +154,7 @@ sosa:hasInput
   skos:definition """
   relation from a Procedure to an input required for its execution
   """@en ;
-  skos:scopeNote "An input might be a calibration or conditioning parameter, or the result of a previous execution within an extended processing chain."@en ;
+  skos:scopeNote "An input might be a calibration or conditioning parameter, or the output of a previous procedure within an extended processing chain."@en ;
   skos:note "This property will typically describe the type of the inputs required to execute the Procedure."@en ;
   schema:domainIncludes sosa:Procedure ;
   owl:inverseOf sosa:inputFor ;
