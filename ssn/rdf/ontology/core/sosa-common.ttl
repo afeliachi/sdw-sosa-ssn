@@ -185,7 +185,7 @@ sosa:implementedBy
   a owl:ObjectProperty ;
   rdfs:label "implemented by"@en ;
   skos:definition """
-  relation from a Procedure to a System that implements it
+  relation from a Procedure to a System that is capable of executing it
   """@en ;
   skos:example "For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure."@en ;
   schema:domainIncludes sosa:Procedure ;
