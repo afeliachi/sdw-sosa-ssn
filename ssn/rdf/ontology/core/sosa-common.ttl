@@ -512,7 +512,7 @@ sosa:Deployment
   It MAY involve Platforms, or Systems, or both. 
   A Deployment can be used quite flexibly to describe the use of systems, and platforms that host systems, with respect to a feature of interest. 
   """@en ;
-  skos:example "For example, a temperature Sensor deployed on a wall, or a whole network of Sensors deployed for an Observation campaign."@en ;
+  skos:example "A temperature Sensor deployed on a wall, a network of Sensors deployed for an Observation campaign."@en ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:Platform 
