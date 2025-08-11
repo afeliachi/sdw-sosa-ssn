@@ -217,7 +217,7 @@ sosa:usedForExecution
   a owl:ObjectProperty ;
   rdfs:label "used for execution"@en ;
   skos:definition """
-  relation from a Procedure to an Execution made using it
+  relation from a Procedure to an Execution or ExecutionCollection made using it
   """@en ;
   schema:domainIncludes sosa:Procedure ;
   schema:rangeIncludes sosa:Execution ;
