@@ -324,6 +324,7 @@ sosa:hasInputValue
   skos:note "The input value MUST be consistent with a hasInput definition from the corresponding Procedure"@en ;
   skos:scopeNote "The input might be a calibration or conditioning parameter, or the result of a previous execution within an extended processing chain."@en ;
   schema:domainIncludes sosa:Execution ;
+  schema:domainIncludes sosa:ExecutionCollection ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasResult 
@@ -389,6 +390,7 @@ sosa:inputValueForExecution
   relation from an InputValue to an Execution that used it
   """@en ;
   schema:rangeIncludes sosa:Execution ;
+  schema:rangeIncludes sosa:ExecutionCollection ;
   owl:inverseOf sosa:hasInputValue ;
   rdfs:isDefinedBy sosa-common: .
 
