@@ -614,7 +614,7 @@ sosa:hasSubSystem
   a owl:ObjectProperty ;
   rdfs:label "has subsystem"@en ;
   skos:definition """
-  relation from a System to a component System
+  relation from a System to its component parts
   """@en ;
   schema:domainIncludes sosa:System ;
   schema:rangeIncludes sosa:System ;
