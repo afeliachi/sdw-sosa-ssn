@@ -76,8 +76,6 @@ sosa:propertyFor
 ## Procedures
 
 sosa:Procedure 
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasInput ]  ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasOutput ]  ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:implementedBy ; owl:allValuesFrom sosa:System ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:forProperty ; owl:allValuesFrom sosa:Property ] ;
   rdfs:isDefinedBy sosa-common: .
