@@ -2019,48 +2019,33 @@
                     <a href="#SOSAActuator">Actuator</a>,
                     <a href="#SOSASensor">Sensor</a>, and
                     <a href="#SOSASampler">Sampler</a> classes.
-                    It is included in the ontology to support the definition of a common pattern for executions
-                    and their properties.
+                    It is included in the ontology to support the definition of a common
+                    pattern for executions and their properties.
                     <br>
                     <br>
-                    System MUST be considered to be abstract, so any individual System SHOULD be declared to be
-                    an instance of one a concrete sub-class, and not of the System class.
+                    System MUST be considered to be abstract, so any individual System SHOULD be declared to be an instance of a concrete sub-class, and not of the System class.
                 </dd>
                 <dt>Scope note</dt>
                 <dd>
-                    Specific system
-                    <em>types</em>
-                    may be implemented as
-                    <em>sub-classes</em>
-                    of this class or
-                    its sub-classes.
-                    Their descriptions may capture the properties and characteristics of a whole class of
-                    systems, corresponding with the information typically found in a data-sheet.
-                    Individual system
-                    <em>instances</em>
-                    are
-                    <em>members</em>
+                    Specific system <em>types</em> may be implemented as <em>sub-classes</em>
+                    of this class or its sub-classes.
+                    Their descriptions may capture the properties and characteristics of a
+                    whole class of systems, corresponding with the information typically found
+                    in a data-sheet. Individual system <em>instances</em> are <em>members</em>
                     of this class or its sub-classes.
                 </dd>
                 <dt>Scope note</dt>
                 <dd>
-                    The association of a System (
-                    <a href="#SOSAActuator">Actuator</a>,
-                    <a href="#SOSASensor">Sensor</a>, or
-                    <a href="#SOSASampler">Sampler</a>) with a
-                    <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> is usually in the context of an
-                    <a href="#SOSAExecution">Execution</a> or a
+                    The association of a System (<a href="#SOSAActuator">Actuator</a>,
+                    <a href="#SOSASensor">Sensor</a>, or <a href="#SOSASampler">Sampler</a>)
+                    with a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> is usually
+                    in the context of an <a href="#SOSAExecution">Execution</a> or a
                     <a href="#SOSADeployment">Deployment</a>.
                     <br>
+                    A <a>sosa:System</a> can be hosted by a <a>sosa:Platform</a>.
                     <br>
-                    A
-                    <a>sosa:System</a> can be hosted by a
-                    <a>sosa:Platform</a>.
-                    <br>
-                    <br>
-                    A
-                    <a>sosa:System</a> can be deployed for a specified time interval as part of a
-                    <a>sosa:Deployment</a>.
+                    A <a>sosa:System</a> can be deployed for a specified time interval as
+                    part of a <a>sosa:Deployment</a>.
                 </dd>
                 <dt class="ssn restrictions">Restrictions in SSN</dt>
                 <dd class="ssn">
@@ -2084,15 +2069,15 @@
                     <em><b>ONLY</b></em>
                     <a>sosa:System</a>
                     <br>
+                    <a>sosa:hasDeployment</a>
+                    <em><b>ONLY</b></em>
+                    <a>sosa:Deployment</a>
+                    <br>
                     <a>sosa:madeExecution</a>
                     <em><b>ONLY</b></em>
                     (
                     <a>sosa:Execution</a> OR
                     <a>sosa:ExecutionCollection</a>)
-                    <br>
-                    <a>sosa:hasDeployment</a>
-                    <em><b>ONLY</b></em>
-                    <a>sosa:Deployment</a>
                 </dd>
                 <dt>is Defined By</dt>
                 <dd>

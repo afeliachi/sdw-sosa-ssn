@@ -546,9 +546,9 @@ sosa:System
   """@en ;
   skos:scopeNote """
   System generalizes the Actuator, Sensor, and Sampler classes. 
-  It appears in the ontology to support the description of a common pattern for executions and their properties. 
+  It is included in the ontology to support the definition of a common pattern for executions and their properties.
 
-  System MUST be considered to be abstract, so any individual System SHOULD be declared to be an instance of one of the concrete sub-classes, and not of the System class. 
+  System MUST be considered to be abstract, so any individual System SHOULD be declared to be an instance of a concrete sub-class, and not of the System class. 
   """@en ;
   skos:scopeNote """
   Specific system types may be implemented as sub-classes of this class or its sub-classes.
