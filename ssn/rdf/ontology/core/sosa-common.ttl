@@ -207,7 +207,7 @@ sosa:outputFor
   a owl:ObjectProperty ;
   rdfs:label "output for"@en ;
   skos:definition """
-  relation from an output or result to a Procedure that generates it in an Execution
+  relation from an output to a Procedure that generates it in an Execution
   """@en ;
   schema:rangeIncludes sosa:Procedure ;
   owl:inverseOf sosa:hasOutput ;
