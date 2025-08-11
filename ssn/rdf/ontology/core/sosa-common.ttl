@@ -333,7 +333,7 @@ sosa:hasResult
   skos:definition """
   relation from an Execution to its result
 
-  In the case of an Actuation, the result is the expected value of the Property following the execution of the Procedure by the Actuator. 
+  In the case of an Actuation, the result may be the value of the Property following the execution of the Procedure by the Actuator. 
 
   In the case of an Observation, the result is the value of the Property produced by the execution of the Procedure by the Sensor. 
   
