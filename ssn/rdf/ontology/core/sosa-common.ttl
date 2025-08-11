@@ -38,7 +38,7 @@ sosa:FeatureOfInterest
   or which is being sampled or transformed in an act of Sampling, 
   or which is the target of Executions planned as part of a Deployment.
   """@en ;
-  skos:example "When measuring the height of a tree, the height is the observed Property, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en ;
+  skos:example "When measuring the height of a tree, the height is the observed Property, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuation."@en ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:Property 
