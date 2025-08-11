@@ -299,7 +299,7 @@ sosa:hasFeatureOfInterest
   a owl:ObjectProperty ;
   rdfs:label "has feature of interest"@en ;
   skos:definition """
-  relation from an Execution, Execution Collection, or Deployment, to its subject entity
+  relation from an Execution or Deployment to its subject entity
 
   i.e., from an Actuation to the entity whose property was modified;
   from an Observation to the entity whose quality was observed;
