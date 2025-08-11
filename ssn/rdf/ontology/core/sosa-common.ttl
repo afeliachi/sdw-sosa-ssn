@@ -344,6 +344,7 @@ sosa:hasResult
   skos:note "The result value MUST be consistent with the hasOutput definition from the corresponding Procedure"@en ;
   schema:domainIncludes sosa:Execution ;
   schema:domainIncludes sosa:ExecutionCollection ;
+  schema:rangeIncludes sosa:Sample ;
   owl:inverseOf sosa:isResultOf ;
   rdfs:isDefinedBy sosa-common: .
 
