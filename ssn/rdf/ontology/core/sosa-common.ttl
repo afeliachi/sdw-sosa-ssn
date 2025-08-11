@@ -287,7 +287,7 @@ sosa:endTime
   a owl:DatatypeProperty ;
   rdfs:label "end time"@en ;
   skos:definition """
-  instant of time when the Execution or ExecutionCollection or Deployment was ended or completed
+  instant of time when the Execution or Deployment was ended or completed
   """@en ;
   rdfs:comment "The value would usually be encoded using xsd:dateTime xsd:date xsd:gYearMonth xsd:gYear"@en ;
   schema:domainIncludes sosa:Execution ;
