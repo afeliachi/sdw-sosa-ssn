@@ -496,6 +496,7 @@ sosa:usedProcedure
   schema:domainIncludes sosa:Execution ;
   schema:domainIncludes sosa:ExecutionCollection ;
   schema:rangeIncludes sosa:Procedure ;
+  owl:inverseOf sosa:usedForExecution ;
   rdfs:isDefinedBy sosa-common: .
 
 ## Systems

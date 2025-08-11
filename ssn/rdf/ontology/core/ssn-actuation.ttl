@@ -155,7 +155,6 @@ sosa:hasOutput
   rdfs:isDefinedBy sosa-common: .
 
 sosa:usedProcedure 
-  owl:propertyChainAxiom ( sosa:madeByActuator sosa:implements ) ;
   rdfs:isDefinedBy sosa-common: .
 
 ## Executions
