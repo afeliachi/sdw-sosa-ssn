@@ -387,7 +387,7 @@ sosa:inputValueForExecution
   a owl:ObjectProperty ;
   rdfs:label "input value for execution"@en ;
   skos:definition """
-  relation from an InputValue to an Execution that used it
+  relation from an input value to an Execution that used it
   """@en ;
   schema:rangeIncludes sosa:Execution ;
   schema:rangeIncludes sosa:ExecutionCollection ;
