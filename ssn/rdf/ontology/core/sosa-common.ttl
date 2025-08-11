@@ -505,8 +505,7 @@ sosa:Deployment
   a owl:Class ;
   rdfs:label "Deployment"@en ;
   skos:definition """
-  arrangement of one or more assets (Systems and/or Platforms) to execute Procedures,
-  usually with respect to a designated subject entity (FeatureOfInterest)
+  arrangement of one or more assets (Systems and/or Platforms) to execute Procedures with respect to designated features of interest.
   """@en ;
   skos:note """
   A Deployment will usually be for a specified time interval. 
