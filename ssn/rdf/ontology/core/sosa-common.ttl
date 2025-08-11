@@ -97,7 +97,7 @@ sosa:isPropertyOf
   a owl:ObjectProperty ;
   rdfs:label "is property of"@en ;
   skos:definition """
-  relation from a Property to a FeatureOfInterest that it belongs to
+  relation from a Property to a FeatureOfInterest that it is a quality of
   """@en ;
   schema:domainIncludes sosa:Property ;
   schema:rangeIncludes sosa:FeatureOfInterest ;
