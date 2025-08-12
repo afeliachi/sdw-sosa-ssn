@@ -131,6 +131,10 @@ sosa:hasProxy
   skos:definition """
   relation from an Property to a Stimulus that serves as its proxy
   """@en ;
+  skos:example """
+For example, the expansion of mercury is a Stimulus that serves as a proxy for some temperature Property.
+An increase or decrease in the velocity of spinning cups on a wind Sensor is serving as a proxy for the wind speed.
+  """@en ;
   schema:domainIncludes sosa:Property ;
   schema:rangeIncludes sosa:Stimulus ;
   owl:inverseOf sosa:isProxyFor ;
