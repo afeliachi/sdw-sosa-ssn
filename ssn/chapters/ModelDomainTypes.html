@@ -31,7 +31,7 @@
     `schema:rangeIncludes`.
     For <a href="#SOSAFeatureOfInterest">feature of interest</a>, SOSA has:
 </p>
-<pre>
+<pre class="turtle">
 sosa:hasFeatureOfInterest
   schema:domainIncludes sosa:Execution ;
   schema:domainIncludes sosa:Deployment ;
@@ -47,7 +47,7 @@ sosa:hasFeatureOfInterest
 <p>
     So the 'domain and range' indications in SOSA are functionally harmless.
     The fact that
-<pre>sosa:hasFeatureOfInterest schema:rangeIncludes sosa:FeatureOfInterest .</pre>
+<code class="turtle">sosa:hasFeatureOfInterest schema:rangeIncludes sosa:FeatureOfInterest .</code>
 merely says that things of type
 <a>sosa:FeatureOfInterest</a> might be found as the object of
 hasFeatureOfInterest statements.
@@ -60,7 +60,7 @@ No more, no less.
     when it appears in the context of a member of a specific class.
     Related to the <a href="#SOSAFeatureOfInterest">feature of interest</a>, SSN has:
 </p>
-<pre>
+<pre class="turtle">
 sosa:Execution
   rdfs:subClassOf [
     a owl:Restriction ;
@@ -121,7 +121,7 @@ sosa:Deployment
         <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
     </figcaption>
 </figure>
-<pre>
+<pre class="turtle">
 ex:YarraAboveDightsFalls rdf:type hydro:RiverReach .
 </pre>
 <p>
@@ -136,7 +136,7 @@ ex:YarraAboveDightsFalls rdf:type hydro:RiverReach .
     </figcaption>
 </figure>
 
-<pre>
+<pre class="turtle">
 ex:o345 rdf:type sosa:Observation ;
     sosa:hasFeatureOfInterest ex:YarraAboveDightsFalls ;
     sosa:observedProperty hydro:elevation ;
