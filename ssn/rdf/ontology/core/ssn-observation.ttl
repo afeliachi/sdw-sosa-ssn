@@ -30,7 +30,12 @@ ssn-obs:
 
 sosa:Property 
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isObservedBy ; owl:allValuesFrom sosa:Sensor ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty [ owl:inverseOf sosa:observedProperty ] ; owl:allValuesFrom sosa:Observation ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:wasObservedBy ; owl:allValuesFrom [ 
+      owl:unionOf ( 
+        sosa:Observation 
+        sosa:ObservationCollection 
+      ) ;
+    ]  ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty [ owl:inverseOf sosa:isProxyFor ] ; owl:allValuesFrom sosa:Stimulus ] ;
   rdfs:isDefinedBy sosa-common: .
 
