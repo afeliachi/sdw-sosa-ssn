@@ -253,7 +253,7 @@ sosa:originated
 
 sosa:qualityOf 
   a owl:ObjectProperty ;
-  rdfs:label "result quality of" ;
+  rdfs:label "quality of" ;
   skos:definition """
   link from a quality description to an Observation or ObservationCollection that it relates to
   """@en ;
