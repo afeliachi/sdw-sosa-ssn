@@ -1,3 +1,26 @@
+
+async function loadTurtle() {
+  // load the highlighter for turtle
+  const worker = await new Promise(resolve => {
+    require(["core/worker"], ({ worker }) => resolve(worker));
+  });
+  const action = "highlight-load-lang";
+  const langURL = new URL("./turtle.js", window.location).href;
+  const propName = "hljsDefineTurtle";
+  const lang = "turtle";
+  worker.postMessage({ action, langURL, propName, lang });
+  return new Promise(resolve => {
+    worker.addEventListener("message", function listener({ data }) {
+      console.log(data)
+      const { action: responseAction, lang: responseLang } = data;
+      if (responseAction === action && responseLang === lang) {
+        worker.removeEventListener("message", listener);
+        resolve();
+      }
+    });
+  });
+}
+
 var respecConfig = {
   specStatus: "ED",
   shortName: "vocab-ssn-2023",
@@ -188,5 +211,6 @@ var respecConfig = {
       title: "Sensor Web Enablement (SWE)",
       publisher: "Open Geospatial Consortium"
     }
-  }
+  },
+  preProcess: [ loadTurtle ]
 }
