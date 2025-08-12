@@ -177,7 +177,6 @@ sosa:phenomenonTime
   rdfs:isDefinedBy sosa-common: .
 
 sosa:resultTime 
-  rdfs:subPropertyOf sosa:endTime ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:startTime 
