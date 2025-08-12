@@ -13,19 +13,19 @@ ex:IBSTH2HumidityAccuracy a sosa:Property ;
         sosa:observedProperty sosa-env:AmbientTemperature ;
         sosa:hasResult [ 
           qudt:value 25.0 ;
-          qudt:unit unit:DEG_C ;
+          qudt:hasUnit unit:DEG_C ;
         ] ;
       ] , [
         sosa:observedProperty sosa-env:MinAmbientRelativeHumidity ;
         sosa:hasResult [ 
           qudt:value 20.0 ;
-          qudt:unit unit:PERCENT ;
+          qudt:hasUnit unit:PERCENT ;
         ] ;
       ] , [
         sosa:observedProperty sosa-env:MaxAmbientRelativeHumidity ;
         sosa:hasResult [ 
           qudt:value 80.0 ;
-          qudt:unit unit:PERCENT ;
+          qudt:hasUnit unit:PERCENT ;
         ] ;
       ]
     ]

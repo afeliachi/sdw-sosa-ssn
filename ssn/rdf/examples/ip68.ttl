@@ -48,13 +48,13 @@ ex:IP68_Outdoor_Temperature_Sensor_operatingRange a sosa:ObservationCollection ,
       sosa:observedProperty sosa-env:MinAmbientTemperature ;
       sosa:hasResult [ 
         qudt:value -20.0 ;
-        qudt:unit unit:DEG_C ;
+        qudt:hasUnit unit:DEG_C ;
       ] ;
     ] , [
       sosa:observedProperty sosa-env:MaxAmbientTemperature ;
       sosa:hasResult [ 
         qudt:value 70.0 ;
-        qudt:unit unit:DEG_C ;
+        qudt:hasUnit unit:DEG_C ;
       ] ;
     ]
 .

@@ -13,7 +13,7 @@ ex:observation_233 a sosa:Observation ;
   sosa:resultQuality ex:observation_233_MeasurementAccuracy ;
   sosa:hasResult [ 
     qudt:value 21.4 ;
-    qudt:unit unit:DEG_C ;
+    qudt:hasUnit unit:DEG_C ;
   ] ;
 .
    
@@ -22,6 +22,6 @@ ex:observation_233_MeasurementAccuracy a sosa:Observation ;
   sosa:observedProperty sosa-cap:TemperatureAccuracy ;
   sosa:hasResult [ 
     qudt:value 1.5 ;
-    qudt:unit unit:DEG_C ;
+    qudt:hasUnit unit:DEG_C ;
   ] ;
 .

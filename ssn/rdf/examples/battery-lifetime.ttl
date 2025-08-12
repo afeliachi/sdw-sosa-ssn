@@ -23,6 +23,6 @@ ex:nominalLifetime a sosa:Observation ;
   sosa:observedProperty ex:nominalLifetimeRestriction ;
   sosa:hasResult [ 
     qudt:value 1.0 ;
-    qudt:unit unit:YR ;
+    qudt:hasUnit unit:YR ;
   ] ;
 .

@@ -11,7 +11,7 @@ ex:SensorCapabilityObservation a sosa:Observation ;
   sosa:observedProperty ex:SensorMinimumLimit;
   sosa:hasResult [ 
     qudt:value -40.0 ;
-    qudt:unit unit:DEG_C ;
+    qudt:hasUnit unit:DEG_C ;
   ] ;
 .
 
