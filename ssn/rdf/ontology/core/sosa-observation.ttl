@@ -313,6 +313,7 @@ sosa:wasOriginatedBy
   relation from an Observation to the Stimulus that originated it
   """@en ;
   schema:domainIncludes sosa:Observation ;
+  schema:domainIncludes sosa:ObservationCollection ;
   schema:rangeIncludes sosa:Stimulus ;
   owl:inverseOf sosa:originated ;
   rdfs:isDefinedBy sosa-obs: .
