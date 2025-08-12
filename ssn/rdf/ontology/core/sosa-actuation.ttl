@@ -84,7 +84,7 @@ sosa:Actuator
   a owl:Class ;
   rdfs:label "Actuator"@en ;
   skos:definition """
-  System that implements an ActuatingProcedure to change the value of a actuatable Property
+  System that implements an ActuatingProcedure to change the value of an actuatable Property
 
   This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation)."""@en ;
   skos:example "A window actuator for automatic window control, i.e., opening or closing the window."@en ;
