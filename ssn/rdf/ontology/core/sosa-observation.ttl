@@ -49,11 +49,11 @@ sosa:ObservationCollection
   a owl:Class ;
   rdfs:label "Observation Collection"@en ;
   skos:definition """
-  set of one or more Observations or ObservationCollections &mdash; collections may be nested
+  set of one or more Observations or ObservationCollections; collections may be nested
 
-  The following Observation properties may appear in an Observation Collection: 
-  hasFeatureOfInterest , hasUltimateFeatureOfInterest , usedProcedure , madeBySensor , observedProperty , phenomenonTime , startTime, resultTime , hasResult , hasSimpleResult . 
-  If it is present, the value of a property summarizes the values of the matching properties of the member observations, where membership is either direct or transitive through one or more member observation collections. 
+  Observation properties may appear in an Observation Collection, including: 
+  hasFeatureOfInterest , hasUltimateFeatureOfInterest , usedProcedure , madeBySensor , observedProperty , phenomenonTime , startTime, resultTime , hasResult , hasSimpleResult : 
+  If they are present, the values of these properties summarize the values of the matching properties of the member observations, where membership is either direct or transitive through one or more member observation collections. 
   The following consistency rules apply with respect to the Observation properties listed above: 
   
   1. Where an individual Observation Collection omits a property, a member Observation (direct or transitive) MAY have any value for that property.
