@@ -8,8 +8,6 @@ Description: Terse RDF Triple Language for the semantic web
 Website: https://www.w3.org/TR/turtle/
 */
 
-var module = module ? module : {};     // shim for browser use
-
 function hljsDefineTurtle(hljs) {
   var KEYWORDS = {
     keyword: 'base|10 prefix|10 @base|10 @prefix|10',
@@ -116,9 +114,3 @@ function hljsDefineTurtle(hljs) {
     }
   };
 }
-
-// module.exports = function(hljs) {
-//   hljs.registerLanguage('turtle', hljsDefineTurtle);
-// };
-
-// module.exports.definer = hljsDefineTurtle;

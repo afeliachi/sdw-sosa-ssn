@@ -218,3 +218,7 @@ ul.align-on-symbol li .rhs {
     padding-right: 0.5ch;
   }
 }
+
+pre {
+  white-space: pre-wrap
+}
