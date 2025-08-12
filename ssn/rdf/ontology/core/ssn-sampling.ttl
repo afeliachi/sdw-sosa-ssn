@@ -163,9 +163,11 @@ sosa:madeSampling
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:madeSamplingHasResult 
+  owl:propertyChainAxiom ( sosa:madeSampling sosa:hasResult ) ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:usedForExecutionHasResult 
+  owl:propertyChainAxiom ( sosa:usedForExecution sosa:hasResult ) ;
   rdfs:isDefinedBy sosa-sam: .
 
 #  sosa:hasResultingSample 
