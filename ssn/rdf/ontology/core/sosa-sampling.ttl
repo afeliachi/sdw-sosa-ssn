@@ -314,7 +314,7 @@ sosa:madeSamplingHasResult
 
 sosa:usedForExecutionHasResult 
   a owl:ObjectProperty ;
-  rdfs:label "procedure used for execution having result"@en ;
+  rdfs:label "used for execution has result"@en ;
   skos:definition """
   relation from a Procedure to a Sample or SampleCollection made by it
   """@en ;
