@@ -24,11 +24,13 @@
     and `ogc-ms:implementedBy` its inverse, defined as follows:
   </p>
 
-  <pre>ogc-ms:implements an OWL:ObjectProperty ;
-  rdfs:subPropertyOf dcterms:source , prov:wasDerivedFrom . </pre>
+<pre class="turtle">
+ogc-ms:implements a owl:ObjectProperty ;
+  rdfs:subPropertyOf dcterms:source , prov:wasDerivedFrom .
 
-  <pre>ogc-ms:implementedBy an OWL:ObjectProperty ;
-    owl:inverseOf ogc-ms:implements . </pre>
+ogc-ms:implementedBy a owl:ObjectProperty ;
+  owl:inverseOf ogc-ms:implements .
+</pre>
 
   <p class="note">
     Some classes and properties from OMS are not yet represented in the OMS Extension Module.
