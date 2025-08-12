@@ -216,18 +216,6 @@ sosa:hasSample
   owl:inverseOf sosa:isSampleOf ;
   rdfs:isDefinedBy sosa-sam: .
 
-sosa:isSampleOfUltimateFOI 
-  a owl:ObjectProperty ;
-  rdfs:label "has sampled feature"@en ;
-  skos:definition """
-  relation from a Sample or SampleCollection to the ultimate FeatureOfInterest that it is intended to be representative of; i.e., the end of a chain of isSampleOf relations
-  """@en ;
-  schema:domainIncludes sosa:Sample ;
-  schema:domainIncludes sosa:SampleCollection ;
-  schema:rangeIncludes sosa:FeatureOfInterest ;
-  owl:inverseOf sosa:featureHasUltimateSample ;
-  rdfs:isDefinedBy sosa-sam: .
-
 sosa:isOriginalSampleOf 
   a owl:ObjectProperty ;
   rdfs:label "is original sample  of"@en ;
@@ -274,6 +262,18 @@ sosa:isSampleOf
   schema:domainIncludes sosa:SampleCollection ;
   schema:rangeIncludes sosa:FeatureOfInterest ;
   owl:inverseOf sosa:hasSample ;
+  rdfs:isDefinedBy sosa-sam: .
+
+sosa:isSampleOfUltimateFOI 
+  a owl:ObjectProperty ;
+  rdfs:label "has sampled feature"@en ;
+  skos:definition """
+  relation from a Sample or SampleCollection to the ultimate FeatureOfInterest that it is intended to be representative of; i.e., the end of a chain of isSampleOf relations
+  """@en ;
+  schema:domainIncludes sosa:Sample ;
+  schema:domainIncludes sosa:SampleCollection ;
+  schema:rangeIncludes sosa:FeatureOfInterest ;
+  owl:inverseOf sosa:featureHasUltimateSample ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:madeBySampler 
