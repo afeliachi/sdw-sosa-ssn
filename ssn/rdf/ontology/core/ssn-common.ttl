@@ -36,7 +36,17 @@ sosa:hasMember
 ## Features of interest and Property
 
 sosa:FeatureOfInterest 
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasProperty ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ; 
+  rdfs:subClassOf [ 
+    a owl:Restriction ; 
+    owl:onProperty sosa:isFeatureOfInterestOf ; 
+    owl:someValuesFrom [ 
+      a owl:Class ; 
+      owl:unionOf ( 
+        sosa:Execution
+        sosa:Deployment
+        ) 
+    ]  ;
+  ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasProperty ; owl:allValuesFrom sosa:Property ]  ;
   rdfs:isDefinedBy sosa-common: .
 
