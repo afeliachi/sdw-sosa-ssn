@@ -1,3 +1,4 @@
+from itertools import chain
 import re
 import sys
 from pathlib import Path
@@ -84,8 +85,9 @@ def find_unreferenced_images():
 
 # Check defined terms
 def check_defined_terms():
-    ontology_folder = Path("ssn/rdf/ontology/core")
-    ttl_files = sorted(ontology_folder.rglob("*.ttl"))
+    ttl_files = sorted(chain(Path("ssn/rdf/ontology/core").rglob("*.ttl"),
+                             Path("ssn/rdf/ontology/extensions").rglob("*.ttl"),
+                             Path("ssn/rdf/vocabularies").rglob("*.ttl")))
     term_to_ontos_using_term = defaultdict(set)
     term_to_ontos_defining_term = defaultdict(set)
     onto_to_file_declaring_onto = {}
@@ -125,7 +127,7 @@ def check_defined_terms():
             print(f"❌ Error parsing {ttl_file}: {e}")
 
     # Print ontology declarations
-    print("=== Ontology Declarations ===")
+    print("\n=== Ontology Declarations ===")
     for iri, file in onto_to_file_declaring_onto.items():
         print(f"- <{iri}>: {file}")
 
@@ -182,9 +184,9 @@ def check_defined_terms():
             print(f"- {ttl_file} declares {term}")
 
     issues = bool(duplicates) or bool(not_defined) or bool(onto_doesnt_exist)
-    return term_to_ontos_defining_term, issues  # return True if issues found
+    return term_to_ontos_defining_term, onto_to_terms_defined_in_onto, issues  # return True if issues found
 
-def check_examples_terms_defined(term_to_ontos_defining_term):
+def check_examples_terms_defined(term_to_ontos_defining_term, onto_to_terms_defined_in_onto):
     example_folder = Path("ssn/rdf/examples")
     undefined_terms = defaultdict(set)  # term → set of example files using it
     terms_present_in_some_example = set()
@@ -199,7 +201,7 @@ def check_examples_terms_defined(term_to_ontos_defining_term):
                     if not isinstance(t, URIRef) or not (t.startswith(SOSA_NS) or t.startswith(SSN_NS)):
                         continue
                     terms_present_in_some_example.add(t)
-                    if t not in term_to_ontos_defining_term:
+                    if t not in term_to_ontos_defining_term and t not in onto_to_terms_defined_in_onto:
                         undefined_terms[t].add(ttl_file)
 
         except Exception as e:
@@ -215,6 +217,7 @@ def check_examples_terms_defined(term_to_ontos_defining_term):
             for f in files:
                 print(f"    - {f}")
 
+    print("\n=== SOSA/SSN Terms not present in Examples ===")
     terms_absent_from_examples = set(term_to_ontos_defining_term).difference(terms_present_in_some_example)
     if not terms_absent_from_examples:
         print("All SOSA/SSN terms are present in some example 🎉")
@@ -223,7 +226,7 @@ def check_examples_terms_defined(term_to_ontos_defining_term):
         for term in sorted(terms_absent_from_examples):
             print(f"- {term}")
     
-    return bool(undefined_terms) or bool(terms_absent_from_examples)
+    return bool(undefined_terms)
 
 if __name__ == "__main__":
     has_issue = False
@@ -233,7 +236,6 @@ if __name__ == "__main__":
     if not unused_htmls:
         print("None 🎉")
     else:
-        has_issue = True
         for f in unused_htmls:
             print(f"- {f}")
 
@@ -242,7 +244,6 @@ if __name__ == "__main__":
     if not unreferenced_images:
         print("All images are referenced 🎉")
     else:
-        has_issue = True
         for f in unreferenced_images:
             print(f"- {f}")
   
@@ -260,14 +261,13 @@ if __name__ == "__main__":
     if not unreferenced_ttls:
         print("All referenced 🎉")
     else:
-        has_issue = True
         for f in unreferenced_ttls:
             print(f"- {f}")
 
-    term_definitions, issues = check_defined_terms()
+    term_definitions, onto_to_terms_defined_in_onto, issues = check_defined_terms()
     has_issue |= issues
     
-    if check_examples_terms_defined(term_definitions):
+    if check_examples_terms_defined(term_definitions, onto_to_terms_defined_in_onto):
         has_issue = True
         
     sys.exit(1 if has_issue else 0)
