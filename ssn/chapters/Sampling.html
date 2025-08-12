@@ -62,6 +62,25 @@
             <em>Sample</em> &mdash;
             piece or subset that is intended to be representative of a FeatureOfInterest
         </p>
+        <p>Three specializations of <a>sosa:Sample</a> are provided:</p>
+        <ul>
+            <li><a>sosa:MaterialSample</a></li>
+            <li><a>sosa:SpatialSample</a></li>
+            <li><a>sosa:StatisticalSample</a></li>
+        </ul>
+
+        <figure id="Fig-SampleSpecializations">
+            <embed alt="Sample specializations" src="images/SampleSpecializations.svg" style="width:75%" />
+            <figcaption>
+                Specialized sample types: MaterialSample, SpatialSample, StatisticalSample
+                <br>
+                <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
+            </figcaption>
+        </figure>
+
+        <p class="note">
+            A Sample may have a geographic location.
+            See <a href="#ModelLocation">Location and Geometry</a> for patterns to describe this.</p>
         <p class="note">
             In the previous edition Sample was axiomatized as a sub-class of
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
@@ -69,11 +88,6 @@
             See <a href="#ModelDomainTypes">Domain types and FeatureOfInterest</a> for a discussion of the relationship
             between types and <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
         </p>
-
-        <p class="note">
-            A Sample may have a geographic location.
-            See <a href="#ModelLocation">Location and Geometry</a> for patterns to describe this.</p>
-
         <dl>
             <dt>Comment</dt>
             <dd>Samples are typically subsets or extracts from an entity or feature.
@@ -109,9 +123,7 @@
             </dd>
             <dt class="ssn restrictions">Restrictions in SSN</dt>
             <dd class="ssn">
-                <a>sosa:isResultOf</a> <em><b>ONLY</b></em> <a>sosa:Sampling</a>
-                <br>
-                <a>sosa:isResultOf</a> <em><b>MIN 1</b></em> <a>sosa:Sampling</a>
+                <a>sosa:isResultOf</a> <em><b>ONLY</b></em> <a>sosa:Sampling</a> OR <a>sosa:SamplingCollection</a>
                 <br>
                 <a>sosa:isSampleOf</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                 <br>
@@ -135,23 +147,6 @@
             <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
-
-        <p>Three specializations of <a>sosa:Sample</a> are provided:</p>
-        <ul>
-            <li><a>sosa:MaterialSample</a></li>
-            <li><a>sosa:SpatialSample</a></li>
-            <li><a>sosa:StatisticalSample</a></li>
-        </ul>
-
-        <figure id="Fig-SampleSpecializations">
-            <embed alt="Sample specializations" src="images/SampleSpecializations.svg" style="width:75%" />
-            <figcaption>
-                Specialized sample types: MaterialSample, SpatialSample, StatisticalSample
-                <br>
-                <em><a href="#Class-diagram">Explanation of the notation used in class diagrams</a></em>.
-            </figcaption>
-        </figure>
-
     </section>
 
     <section class="informative specterm sosa" id="SOSAMaterialSample">

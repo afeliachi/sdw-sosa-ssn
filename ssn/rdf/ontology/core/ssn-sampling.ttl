@@ -33,8 +33,13 @@ sosa:MaterialSample
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:Sample 
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOf ; owl:allValuesFrom sosa:Sampling ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOf ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOf ; owl:allValuesFrom [
+      a owl:Class ;
+      owl:unionOf (
+        sosa:Sampling
+        sosa:SamplingCollection
+      ) ;
+    ] ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isSampleOf ; owl:allValuesFrom sosa:FeatureOfInterest ]  ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isSampleOf ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasOriginalSample ; owl:allValuesFrom sosa:Sample ]  ;
