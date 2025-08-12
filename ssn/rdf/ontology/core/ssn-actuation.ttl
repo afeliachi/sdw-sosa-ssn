@@ -31,8 +31,8 @@ ssn-act:
   .
 
 sosa:Property 
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isActedOnBy ; owl:allValuesFrom sosa:Actuation ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty [ owl:inverseOf sosa:actsOnProperty ] ; owl:allValuesFrom sosa:Actuation ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isActedOnBy ; owl:allValuesFrom sosa:Actuator ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:wasActedOnBy ; owl:allValuesFrom sosa:Actuation ] ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:ActuatingProcedure  
