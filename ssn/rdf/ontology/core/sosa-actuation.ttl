@@ -43,10 +43,10 @@ sosa:Actuation
   skos:definition """
   act of carrying out an ActuatingProcedure using an Actuator to change the value of an actuatable Property of a FeatureOfInterest
   
-  In this context hasResult shall indicate the expected value of the Property at the completion of the Actuation
+  In this context hasResult may indicate the value of the Property at the completion of the Actuation
   """@en ;
   skos:scopeNote """
-  An Actuation concerns a single Property of a single FeatureOfInterest. 
+  An Actuation primarily concerns a single Property of a single FeatureOfInterest. 
   Changes to multiple properties, or other combinations of Actuations, may be described in an ActuationCollection.
     
   Alternatively, applications may choose to encapsulate complexity by defining a complex property with multiple individual components, and a corresponding complex result (e.g., a vector). 

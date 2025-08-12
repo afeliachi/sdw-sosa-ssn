@@ -42,9 +42,7 @@ sosa:ActuatingProcedure
 
 sosa:Actuation 
   rdfs:subClassOf sosa:Execution ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeByActuator ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeByActuator ; owl:allValuesFrom sosa:Actuator ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:actsOnProperty ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:actsOnProperty ; owl:allValuesFrom sosa:Property ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:usedProcedure; owl:allValuesFrom sosa:ActuatingProcedure ] ;
   rdfs:isDefinedBy sosa-act: .

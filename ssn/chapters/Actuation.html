@@ -94,13 +94,9 @@
             act of carrying out an ActuatingProcedure using an Actuator to change the value of an actuatable Property
             of a FeatureOfInterest
         </p>
-        <p>
-            In this context hasResult shall indicate the expected value of the Property at the completion of the
-            Actuation
-        </p>
         <ul>
             <li>
-                <a href="#SOSAhasResult">hasResult</a> SHALL indicate the expected value of the
+                <a href="#SOSAhasResult">hasResult</a> MAY indicate the value of the
                 <a href="#SOSAProperty">Property</a> at the completion of the <a href="#SOSAActuation">Actuation</a>
             </li>
             <li>
@@ -131,15 +127,11 @@
             <dd>
                 The activity of automatically closing a window if the temperature
                 in a room drops below 20 degree Celsius.
-                The activity is the
-                <a href="#SOSAActuation">Actuation</a> and the device that closes the
-                window is the
-                <a href="#SOSAActuator">Actuator</a>.
-                The
-                <a href="#SOSAProcedure">Procedure</a> is the rule, plan, or specification that may
+                The activity is the <a href="#SOSAActuation">Actuation</a> and the device that closes the
+                window is the <a href="#SOSAActuator">Actuator</a>.
+                The <a href="#SOSAProcedure">Procedure</a> is the rule, plan, or specification that may
                 define the condition that triggers the
-                <a href="#SOSAActuation">Actuation</a>(a drop in
-                temperature).
+                <a href="#SOSAActuation">Actuation</a> (a drop in temperature).
             </dd>
             <dt class="ssn">Sub class of</dt>
             <dd class="ssn">
@@ -148,9 +140,6 @@
             <dt class="ssn restrictions">Restrictions in SSN</dt>
             <dd class="ssn">
                 <a>sosa:madeByActuator</a>
-                <em><b>EXACTLY 1</b></em>
-                <br>
-                <a>sosa:madeByActuator</a>
                 <em><b>ONLY</b></em>
                 <a>sosa:Actuator</a>
                 <br>
@@ -158,22 +147,9 @@
                 <em><b>ONLY</b></em>
                 <a>sosa:ActuatingProcedure</a>
                 <br>
-                <a>sosa:hasFeatureOfInterest</a>
-                <em><b>EXACTLY 1</b></em>
-                <br>
-                <a>sosa:hasFeatureOfInterest</a>
-                <em><b>ONLY</b></em>
-                <a>sosa:FeatureOfInterest</a>
-                <br>
-                <a>sosa:actsOnProperty</a>
-                <em><b>EXACTLY 1</b></em>
-                <br>
                 <a>sosa:actsOnProperty</a>
                 <em><b>ONLY</b></em>
                 <a>sosa:Property</a>
-                <br>
-                <a>sosa:hasResult</a>
-                <em><b>EXACTLY 1</b></em>
             </dd>
             <dt>is Defined By</dt>
             <dd>
