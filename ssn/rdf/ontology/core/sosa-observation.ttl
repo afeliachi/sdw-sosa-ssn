@@ -283,10 +283,10 @@ sosa:resultQuality
   relation from an Observation or ObservationCollection to some information pertaining to the quality of the result
   """@en ;
   skos:scopeNote """
-  This instance-specific description complements the description of the observation Procedure, which provides information concerning the quality of all observations using this procedure.
+  This instance-specific description complements the description of the observation Procedure, which provides information concerning the quality of all observations using this procedure. Multiple measures can be provided.
   """@en ; 
   skos:note  """
-  The quality of a result can be assessed following the procedures in the ISO 19157 series. Multiple measures can be provided.
+  The quality of a result can be assessed following the procedures in the ISO 19157 series.
   """ ;
   skos:note  """dqv:hasQualityMeasurement from the Data Quality Vocabulary is equivalent""" ;
   schema:domainIncludes sosa:Observation ;
