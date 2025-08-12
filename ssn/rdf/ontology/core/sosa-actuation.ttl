@@ -96,7 +96,7 @@ sosa:actsOn
   skos:definition """
   relation from an Actuator to a Property whose state may be changed by using it
   """@en ;
-  skos:example "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. "@en ;
+  skos:example "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property upon which the Actuator acts is the state of the window as it changes from being open to being closed. "@en ;
   schema:domainIncludes sosa:Actuator ;
   schema:rangeIncludes sosa:Property ;
   owl:inverseOf sosa:isActedOnBy ;
@@ -108,7 +108,7 @@ sosa:actsOnProperty
   skos:definition """
   relation from an Actuation to the Property it acted upon
   """@en ;
-  skos:example "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. "@en ;
+  skos:example "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property upon which the Actuator acts is the state of the window as it changes from being open to being closed. "@en ;
   schema:domainIncludes sosa:Actuation ;
   schema:domainIncludes sosa:ActuationCollection ;
   schema:rangeIncludes sosa:Property ;
@@ -121,7 +121,7 @@ sosa:isActedOnBy
   skos:definition """
   relation from a Property to an Actuator that may change its state
   """@en ;
-  skos:example "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. "@en ;
+  skos:example "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property upon which the Actuator acts is the state of the window as it changes from being open to being closed. "@en ;
   schema:domainIncludes sosa:Property ;
   schema:rangeIncludes sosa:Actuation ;
   owl:inverseOf sosa:actsOn ;
@@ -157,7 +157,7 @@ sosa:wasActedOnBy
   skos:definition """
   relation from a Property to an Actuation that changed its state
   """@en ;
-  skos:example "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. "@en ;
+  skos:example "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property upon which the Actuator acts is the state of the window as it changes from being open to being closed. "@en ;
   schema:domainIncludes sosa:Property ;
   schema:rangeIncludes sosa:Actuator ;
   owl:inverseOf sosa:actsOnProperty ;
