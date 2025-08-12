@@ -60,12 +60,12 @@ sosa:ActuationCollection
   a owl:Class ;
   rdfs:label "Actuation Collection"@en ;
   skos:definition """
-  set of one or more Actuations or ActuationCollections &mdash; collections may be nested
+  set of one or more Actuations or ActuationCollections; collections may be nested
 
-  The following Observation properties may appear in an Actuation Collection: 
+  Actuation properties may appear in an Actuation Collection, including:
   hasFeatureOfInterest , usedProcedure , madeByActuator , actsOnProperty , endTime ,  hasResult , hasSimpleResult . 
-  If it is present, the value of a property summarizes the values of the matching properties of the member actuations, where membership is either direct or transitive through one or more member actuation collections. 
-  The following consistency rules apply with respect to the Actuation properties listed above: 
+  If they are present, the value of a property summarizes the values of the matching properties of the member actuations, where membership is either direct or transitive through one or more member actuation collections. 
+  The following consistency rules apply with respect to the Actuation properties: 
   
   1. Where an individual Actuation Collection omits a property, a member Actuation (direct or transitive) MAY have any value for that property.
 
