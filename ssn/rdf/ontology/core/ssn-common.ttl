@@ -139,7 +139,7 @@ sosa:ExecutionCollection
 
 sosa:Result 
   owl:deprecated true ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOf ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOf ; owl:someValuesFrom sosa:Execution ] ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:endTime 
