@@ -222,7 +222,7 @@ def check_examples_terms_defined(term_to_ontos_defining_term, onto_to_terms_defi
     if not terms_absent_from_examples:
         print("All SOSA/SSN terms are present in some example 🎉")
     else:
-        print(f"❌ some terms are not present in any example:")
+        print(f"⚠️ some terms are not present in any example:")
         for term in sorted(terms_absent_from_examples):
             print(f"- {term}")
     
