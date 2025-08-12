@@ -115,7 +115,8 @@ sosa:Sampler
   skos:definition """
   System that implements a SamplingProcedure to generate a Sample
   """@en ;
-  skos:example "A ball mill, diamond drill, hammer, hypodermic syringe and needle, image Sensor, or a soil auger can all act as sampling devices (i.e., be Samplers). Sometimes, however, the distinction between the Sampler and the Sensor is not evident, as they are packaged as a unit. A Sampler need not be a physical device."@en ;
+  skos:example """A ball mill, diamond drill, hammer, hypodermic syringe and needle, image Sensor, or a soil auger can all act as Samplers. Sometimes, however, the distinction between the Sampler and the Sensor is not evident, if they are packaged as a unit."""@en ;
+  skos:note "A Sampler need not be a physical device."@en ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:Sampling 
