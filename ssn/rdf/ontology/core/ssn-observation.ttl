@@ -91,8 +91,14 @@ sosa:Sensor
   rdfs:isDefinedBy sosa-obs: .
 
 sosa:Stimulus 
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty [ owl:inverseOf sosa:wasOriginatedBy ] ; owl:allValuesFrom sosa:Observation ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty [ owl:inverseOf sosa:detects ] ; owl:allValuesFrom sosa:Sensor ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:originated ; owl:allValuesFrom [
+      a owl:Class ;
+      owl:unionOf (
+        sosa:Observation
+        sosa:ObservationCollection
+      ) ;
+    ] ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isDetectedBy ; owl:allValuesFrom sosa:Sensor ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isProxyFor ; owl:allValuesFrom sosa:Property ] ;
   rdfs:isDefinedBy sosa-obs: .
 
