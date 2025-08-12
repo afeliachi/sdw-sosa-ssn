@@ -123,7 +123,7 @@ sosa:isActedOnBy
   """@en ;
   skos:example "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property upon which the Actuator acts is the state of the window as it changes from being open to being closed. "@en ;
   schema:domainIncludes sosa:Property ;
-  schema:rangeIncludes sosa:Actuation ;
+  schema:rangeIncludes sosa:Actuator ;
   owl:inverseOf sosa:actsOn ;
   rdfs:isDefinedBy sosa-act: .
 
