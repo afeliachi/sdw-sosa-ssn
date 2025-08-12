@@ -86,11 +86,11 @@ sosa:SampleCollection
   a owl:Class ;
   rdfs:label "Sample Collection"@en ;
   skos:definition """
-  set of one or more Samples or SampleCollections &mdash; collections may be nested.
+  set of one or more Samples or SampleCollections; collections may be nested.
 
-  The following Sample properties may appear in a Sample Collection: 
+  Sample properties may appear in a Sample Collection, including: 
   hasOriginalSample , isSampleOfUltimateFOI , isSampleOf , isResultOfUsedProcedure , isResultOfMadeBySampler . 
-  If it is present, the value of a property summarizes the values of the matching properties of the member samples, where membership is either direct or transitive through onw or more member sample collections. 
+  If they are present, the value of these properties summarize the values of the matching properties of the member samples, where membership is either direct or transitive through one or more member sample collections. 
 
   The following consistency rules apply with respect to the Sample properties listed above: 
   
