@@ -59,6 +59,18 @@ sosa:SampleCollection
       ) ; 
     ] 
   ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOf ; owl:allValuesFrom [
+      a owl:Class ;
+      owl:unionOf (
+        sosa:Sampling
+        sosa:SamplingCollection
+      ) ;
+    ] ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isSampleOf ; owl:allValuesFrom sosa:FeatureOfInterest ]  ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasOriginalSample ; owl:allValuesFrom sosa:Sample ]  ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isSampleOfUltimateFOI ; owl:allValuesFrom sosa:FeatureOfInterest ]  ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOfMadeBySampler ; owl:allValuesFrom sosa:Sampler ]  ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOfUsedProcedure ; owl:allValuesFrom sosa:SamplingProcedure ]  ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:Sampler 
