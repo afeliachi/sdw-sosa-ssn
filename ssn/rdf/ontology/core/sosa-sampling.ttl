@@ -35,7 +35,7 @@ sosa:Sample
   rdfs:comment "Physical samples are sometimes known as 'specimens'."@en ;
   skos:scopeNote """
   Samples are typically subsets or extracts from an entity or feature.
-  Every sample is expected to (eventually) be the feature-of-interest of an Observation. 
+  Every sample is expected to (eventually) be the feature of interest of an Observation. 
   
   When the feature of interest cannot be observed directly, a sample of it might be used in Observations as a proxy for it. In such a case the Sample is the proximate Feature of Interest of the Observation, while the Feature of Interest of the act of Sampling (i.e., the entity that the Sample 'isSampleOf') is the ultimate Feature of Interest of the Observation.
   Samples are used in situations where observations cannot be made directly on the ultimate feature of interest, either because the entire feature cannot be observed, or because it is more convenient to use a proxy.
