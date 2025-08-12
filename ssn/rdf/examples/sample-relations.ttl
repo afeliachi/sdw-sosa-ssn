@@ -9,7 +9,7 @@
 
 <https://example.org/data/sample-relations>
   rdf:type owl:Ontology ;
-  owl:imports sosa:sampling ;
+  owl:imports <http://www.w3.org/ns/sosa/sam/> ;
 .
 relex:CSRWA25569
   rdf:type sosa:Sample ;

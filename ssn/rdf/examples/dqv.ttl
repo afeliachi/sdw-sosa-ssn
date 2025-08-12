@@ -3,7 +3,7 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#>.
 @prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix unit: <http://qudt.org/vocab/unit/>.
-@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capabilities-properties#> .
+@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capability-properties#> .
 @prefix sosa-env: <http://www.w3.org/ns/sosa/system-environment-properties#> .
 
 ex:observation_233 a sosa:Observation ;

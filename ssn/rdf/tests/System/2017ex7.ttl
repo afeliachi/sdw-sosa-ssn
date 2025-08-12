@@ -1,3 +1,10 @@
+@prefix ex:   <http://example.org/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix ssn: <http://www.w3.org/ns/ssn/>.
+@prefix owl:     <http://www.w3.org/2002/07/owl#>.
+@prefix system: <http://www.w3.org/ns/ssn/systems/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
+
 ex:TemperatureSensor a owl:Class ;
   rdfs:subClassOf ssn:System .
 

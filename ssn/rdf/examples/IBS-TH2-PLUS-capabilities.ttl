@@ -3,13 +3,14 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qudt: <http://qudt.org/schema/qudt/>.
+@prefix unit: <http://qudt.org/vocab/unit/>.
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sensor: <https://example.org/sensor/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capabilities-properties#> .
+@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capability-properties#> .
 @prefix sosa-env: <http://www.w3.org/ns/sosa/system-environment-properties#> .
 @base <https://example.org/data/TH2-PLUS/> .
 
@@ -46,7 +47,7 @@ sensor:IBS-TH2-Plus-T-systemCapability a sosa:ObservationCollection ;
         qudt:value -40.0 ;
         qudt:hasUnit unit:DEG_C ;
       ] ;
-  ]
+  ] ;
   sosa:hasValidityContext sensor:IBS-TH2-Plus-T-normalHumidityConditions ;
 .
 sensor:IBS-TH2-Plus-T-normalHumidityConditions a sosa:Observation ;

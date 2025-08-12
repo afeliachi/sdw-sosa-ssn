@@ -16,7 +16,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix seas: <https://w3id.org/seas/>.
 @prefix cdt: <http://w3id.org/lindt/custom_datatypes#>.
-@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capabilities-properties#> .
+@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capability-properties#> .
 @prefix sosa-env: <http://www.w3.org/ns/sosa/system-environment-properties#> .
 @base <https://data.grandlyon.com/> .
 
@@ -67,10 +67,10 @@ ex:IP68_Outdoor_Temperature_Sensor_systemCapability a sosa:ObservationCollection
     sosa:observedProperty sosa-cap:TemperatureAccuracy ;
     sosa:hasResult [ qudt:value 0.2 ; qudt:hasUnit unit:DEG_C ] ;
   ] , [ 
-    sosa:observedProperty sosa-cap:TemperatureResolution 
+    sosa:observedProperty sosa-cap:TemperatureResolution ;
     sosa:hasResult [ qudt:value 0.0625 ; qudt:hasUnit unit:DEG_C ] ;
   ] , [ 
-    sosa:observedProperty sosa-cap:BatteryResolution 
+    sosa:observedProperty sosa-cap:BatteryResolution ;
     sosa:hasResult [ qudt:value 3.937e-3 ; qudt:hasUnit unit:PERCENT ] ;
   ] ;
   sosa:hasValidityContext ex:IP68_Outdoor_Temperature_Sensor_operatingRange ;

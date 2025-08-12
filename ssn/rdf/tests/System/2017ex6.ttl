@@ -1,3 +1,8 @@
+@prefix ex:   <http://example.org/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix system: <http://www.w3.org/ns/ssn/systems/> .
+@prefix ssn:     <http://www.w3.org/ns/ssn/>.
+
 ex:TemperatureSensor a ssn:System .
 
 <Observation/1> a sosa:Observation ;
