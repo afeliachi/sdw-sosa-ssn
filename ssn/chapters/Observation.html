@@ -67,7 +67,7 @@
             Property of a FeatureOfInterest
         </p>
         <p>
-            An <a href="#SOSAObservation">Observation</a> concerns a single
+            An <a href="#SOSAObservation">Observation</a> primarily concerns a single
             <a href="#SOSAProperty">Property</a> of a single
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
             Observations of multiple properties, or other combinations of Observations, may be described in an
@@ -98,13 +98,13 @@
             <dt>Examples</dt>
             <dd>
                 The activity of
-                <br>estimating the magnitude or intensity of an earthquake
-                <br>measuring the height of a tree
-                <br>determining the color of a leaf
-                <br>measuring the CO2 concentration in a gas
-                <br>finding the location of a car
-                <br>measuring the temperature of a room
-                <br>capturing an image of a scene
+                <br>- estimating the magnitude or intensity of an earthquake
+                <br>- measuring the height of a tree
+                <br>- determining the color of a leaf
+                <br>- measuring the CO2 concentration in a gas
+                <br>- finding the location of a car
+                <br>- measuring the temperature of a room
+                <br>- capturing an image of a scene
             </dd>
             <dt class="ssn">Sub class of</dt>
             <dd class="ssn">
@@ -112,31 +112,17 @@
             </dd>
             <dt class="ssn restrictions">Restrictions in SSN</dt>
             <dd class="ssn">
-                <a>sosa:madeBySensor</a> <em><b>EXACTLY 1</b></em>
-                <br>
                 <a>sosa:madeBySensor</a> <em><b>ONLY</b></em> <a>sosa:Sensor</a>
                 <br>
                 <a>sosa:usedProcedure</a> <em><b>ONLY</b></em> <a>sosa:ObservingProcedure</a>
                 <br>
-                <a>sosa:hasFeatureOfInterest</a> <em><b>EXACTLY 1</b></em>
-                <br>
                 <a>sosa:hasFeatureOfInterest</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
-                <br>
-                <a>sosa:hasUltimateFeatureOfInterest</a> <em><b>EXACTLY 1</b></em>
                 <br>
                 <a>sosa:hasUltimateFeatureOfInterest</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                 <br>
-                <a>sosa:observedProperty</a> <em><b>EXACTLY 1</b></em>
-                <br>
                 <a>sosa:observedProperty</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                 <br>
-                <a>sosa:wasOriginatedBy</a> <em><b>EXACTLY 1</b></em>
-                <br>
                 <a>sosa:wasOriginatedBy</a> <em><b>ONLY</b></em> <a>sosa:Stimulus</a>
-                <br>
-                <a>sosa:phenomenonTime</a> <em><b>EXACTLY 1</b></em>
-                <br>
-                <a>sosa:hasResult</a> <em><b>EXACTLY 1</b></em>
             </dd>
             <dt>is Defined By</dt>
             <dd>
