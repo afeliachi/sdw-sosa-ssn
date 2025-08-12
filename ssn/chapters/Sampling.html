@@ -532,8 +532,8 @@
             set of one or more Samplings or SamplingCollections; collections may be nested
         </p>
         <p>
-            The following <a href="#SOSASampling">Sampling</a> properties may appear in an
-            <a>sosa:SamplingCollection</a> &mdash;
+            <a href="#SOSASampling">Sampling</a> properties may appear in an
+            <a>sosa:SamplingCollection</a>, including:
             <a>sosa:hasFeatureOfInterest</a>,
             <a>sosa:hasUltimateFeatureOfInterest</a>,
             <a>sosa:madeBySampler</a>,
@@ -543,7 +543,7 @@
             <a>sosa:phenomenonTime</a>,
             <a>sosa:resultTime</a>,
             <a>sosa:hasResult</a>.
-            If it is present, the value of a property summarizes the values of the matching properties of
+            If they are present, the value of these properties summarize the values of the matching properties of
             the member samplings, where membership is either direct or transitive through one or more member
             sampling collections.
         </p>
@@ -557,7 +557,7 @@
             </li>
             <li>
                 Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> has <i>a
-                single value for a property</i>, each member <a href="#SOSASampling">Sampling</a>(direct or transitive) MUST have that same value for that property; i.e., the collection is
+                single value for a property</i>, each member <a href="#SOSASampling">Sampling</a> (direct or transitive) MUST have that same value for that property; i.e., the collection is
                 homogeneous in that property.
                 That property MAY then be omitted in any member <a href="#SOSASampling">Sampling</a> or
                 <a href="#SOSASamplingCollection">SamplingCollection</a>.
@@ -574,7 +574,7 @@
             </li>
             <li>
                 Where an individual <a href="#SOSASamplingCollection">SamplingCollection</a> <i>has more than one value
-                for a property that is a range or interval</i>, each member <a href="#SOSASampling">Sampling</a>(direct or transitive) MUST have a value for that property that matches or falls within one of those
+                for a property that is a range or interval</i>, each member <a href="#SOSASampling">Sampling</a> (direct or transitive) MUST have a value for that property that matches or falls within one of those
                 ranges or intervals.
             </li>
         </ol>
@@ -601,11 +601,11 @@
             <dd class="ssn">
                 <a>sosa:madeBySampler</a> <em><b>ONLY</b></em> <a>sosa:Sampler</a>
                 <br>
-                <a>sosa:usedProcedure</a> <em><b>ONLY</b></em> <a>sosa:SamplingProcedure</a>
-                <br>
                 <a>sosa:hasFeatureOfInterest</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                 <br>
                 <a>sosa:hasResult</a> <em><b>ONLY</b></em> <a>sosa:Sample</a>
+                <br>
+                <a>sosa:usedProcedure</a> <em><b>ONLY</b></em> <a>sosa:SamplingProcedure</a>
                 <br>
                 <a>sosa:hasMember</a> <em><b>ONLY</b></em>
                 (<a>sosa:Sampling</a> <em><b>or</b></em> <a>sosa:SamplingCollection</a> )
