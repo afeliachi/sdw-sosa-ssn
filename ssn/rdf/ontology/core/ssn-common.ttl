@@ -201,6 +201,7 @@ sosa:Platform
               sosa:Platform
             ) ;
         ] ]  ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:inDeployment ; owl:allValuesFrom sosa:Deployment ]  ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:System 
