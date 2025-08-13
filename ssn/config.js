@@ -38,7 +38,7 @@ var respecConfig = {
     },
     {
       name: "Rob Warren",
-      company: "Glengarry Agriculture and Farming, CA",
+      company: "Glengarry Agriculture and Forestry, CA",
       companyURL: "https://github.com/GlengarryAg"
     },
     {
