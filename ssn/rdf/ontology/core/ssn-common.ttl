@@ -29,7 +29,6 @@ ssn-common:
 ## Utility terms 
 
 sosa:hasMember 
-  rdfs:subPropertyOf rdfs:member ;
   rdfs:isDefinedBy sosa-common: .
 
 
@@ -80,8 +79,6 @@ sosa:propertyFor
 ## Procedures
 
 sosa:Procedure 
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasInput ]  ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasOutput ]  ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:implementedBy ; owl:allValuesFrom sosa:System ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:forProperty ; owl:allValuesFrom sosa:Property ] ;
   rdfs:isDefinedBy sosa-common: .
@@ -120,7 +117,6 @@ sosa:Execution
   rdfs:isDefinedBy sosa-common: .
 
 sosa:ExecutionCollection 
-  rdfs:subClassOf rdf:Bag ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeBySystem ; owl:allValuesFrom sosa:System ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:usedProcedure ; owl:allValuesFrom sosa:Procedure ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom sosa:FeatureOfInterest ] ;
