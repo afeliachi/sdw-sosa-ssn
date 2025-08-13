@@ -185,6 +185,20 @@ var respecConfig = {
       href: "https://www.ogc.org/about-ogc/domains/swe/",
       title: "Sensor Web Enablement (SWE)",
       publisher: "Open Geospatial Consortium"
+    },
+    "SAREF": {
+        "href": "http://www.etsi.org/deliver/etsi_ts/103200_103299/103264/04.01.01_60/ts_103264v040101p.pdf",
+        "title": "ETSI TS 103 264 V4.1.1 (2025-03): SmartM2M; Smart Applications; Reference Ontology and oneM2M Mapping",
+        "status": "Technical Specification",
+        "publisher": "ETSI",
+        "rawDate": "2025-03"
+    },
+    "SAREF_Patterns": {
+        "href": "http://www.etsi.org/deliver/etsi_ts/103500_103599/103548/01.02.01_60/ts_103548v010201p.pdf",
+        "title": "ETSI TS 103 548 V1.2.1 (2024-01): SmartM2M; SAREF reference ontology patterns",
+        "status": "Technical Specification",
+        "publisher": "ETSI",
+        "rawDate": "2024-01"
     }
   }
 }
