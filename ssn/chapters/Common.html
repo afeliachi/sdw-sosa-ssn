@@ -5,11 +5,15 @@
     <p>
         The <b>Common</b> module defines terms that are common across Sensing, Observation, Sampling and Actuation
         applications.
-        Some of the classes in the Common module are used as-is in applications (<a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>, <a href="SOSAProperty">Property</a>, <a href="SOSAPlatform">Platform</a>,
+        Some of the classes in the Common module are used as-is in applications
+        (<a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>, <a href="SOSAProperty">Property</a>,
+        <a href="SOSAPlatform">Platform</a>,
         <a href="SOSADeployment">Deployment</a>).
         Other classes in the Common module are super-classes of more specific classes used in the application modules
         (<a href="SOSAProcedure">Procedure</a>, <a href="SOSASystem">System</a>, <a href="SOSAExecution">Execution</a>).
-        They all support the description of <a href="SOSAActuation">Actuation</a>, <a href="SOSAObservation">Observation</a> and <a href="SOSASampling">Sampling</a> instances using patterns that are common
+        They all support the description of <a href="SOSAActuation">Actuation</a>,
+        <a href="SOSAObservation">Observation</a> and <a href="SOSASampling">Sampling</a> instances using patterns that
+        are common
         across the applications.
     </p>
     <p>
@@ -249,8 +253,7 @@
                 </dd>
                 <dt>Inverse property of</dt>
                 <dd>
-                    <a>sosa:propertyFor</a> <em><b>or</b></em>
-                    <a>sosa:hasProcedure</a>
+                    <a>sosa:propertyFor</a>
                 </dd>
                 <dt>is Defined By</dt>
                 <dd>
@@ -394,7 +397,8 @@
                 This term is non-normative, pending further implementation experience</p>
             <p>
                 <em>is ultimate feature of interest of</em> &mdash;
-                relation from an ultimate FeatureOfInterest to an Execution, ExecutionCollection, or Deployment, for which it is the ultimate subject
+                relation from an ultimate FeatureOfInterest to an Execution, ExecutionCollection, or Deployment, for
+                which it is the ultimate subject
             </p>
             <dl>
                 <dt>Domain Includes</dt>
@@ -675,7 +679,7 @@
                 </dd>
                 <dt class="ssn">Inverse property of</dt>
                 <dd class="ssn">
-                    some sub-property of <a>sosa:forProperty</a>
+                    (<em><b>sub-property of</b></em> <a>sosa:forProperty</a>)
                 </dd>
                 <dt>is Defined By</dt>
                 <dd>
@@ -991,7 +995,7 @@
                 </li>
                 <li>
                     Where an individual <a href="#SOSAExecutionCollection">ExecutionCollection</a> has <i>a single value
-                    for a property</i>, each member <a href="#SOSAExecution">Execution</a> (direct or transitive)
+                        for a property</i>, each member <a href="#SOSAExecution">Execution</a> (direct or transitive)
                     MUST have that same value for that property &mdash; i.e., the collection (set) is homogeneous in
                     that property.
                     That property MAY then be omitted in any member <a href="#SOSAExecution">Execution</a> or
@@ -1145,7 +1149,8 @@
             </p>
             <p class="note">
                 The distinction between <a>sosa:hasFeatureOfInterest</a>, and
-                <a>sosa:hasUltimateFeatureOfInterest</a> is explored further in <a href="#ModelFOI">Proximate and Ultimate feature of interest</a>
+                <a>sosa:hasUltimateFeatureOfInterest</a> is explored further in
+                <a href="#ModelFOI">Proximate and Ultimate feature of interest</a>
             </p>
 
             <dl>
@@ -1340,7 +1345,8 @@
                 relation from an Execution to its value expressed as a literal
             </p>
             <p>
-                In the case of an <a>sosa:Actuation</a>, the result may be the value of the <a>sosa:Property</a> following the execution of the <a href="#SOSAProcedure">Procedure</a> by the
+                In the case of an <a>sosa:Actuation</a>, the result may be the value of the <a>sosa:Property</a>
+                following the execution of the <a href="#SOSAProcedure">Procedure</a> by the
                 <a href="#SOSAActuator">Actuator</a>.
             </p>
             <p>
@@ -1411,7 +1417,8 @@
                 or from a Deployment to its ultimate target
             </p>
             <p class="note">
-                The distinction between <a>sosa:hasFeatureOfInterest</a>, and <a>sosa:hasUltimateFeatureOfInterest</a> is explored further in <a href="#ModelFOI">Proximate and Ultimate feature of interest</a>
+                The distinction between <a>sosa:hasFeatureOfInterest</a>, and <a>sosa:hasUltimateFeatureOfInterest</a>
+                is explored further in <a href="#ModelFOI">Proximate and Ultimate feature of interest</a>
             </p>
             <dl>
                 <dt>Note</dt>
@@ -2045,7 +2052,8 @@
                     pattern for executions and their properties.
                     <br>
                     <br>
-                    System MUST be considered to be abstract, so any individual System SHOULD be declared to be an instance of a concrete sub-class, and not of the System class.
+                    System MUST be considered to be abstract, so any individual System SHOULD be declared to be an
+                    instance of a concrete sub-class, and not of the System class.
                 </dd>
                 <dt>Scope note</dt>
                 <dd>
@@ -2132,6 +2140,10 @@
                 <dd>
                     <a>sosa:System</a>,
                     <a>sosa:Platform</a>
+                </dd>
+                <dt>Inverse property of</dt>
+                <dd>
+                    <a>sosa:hasDeployment</a>
                 </dd>
                 <dt>is Defined By</dt>
                 <dd>
@@ -2239,7 +2251,7 @@
                 </dd>
                 <dt>Inverse property of</dt>
                 <dd>
-                    <a>sosa:deployedSystem</a>
+                    <a>sosa:deployedAsset</a>
                 </dd>
                 <dt>is Defined By</dt>
                 <dd>
@@ -2557,7 +2569,8 @@
                 a property for membership of a collection, and its inverse, described in this section
             </li>
             <li>
-                the generic class <a href="#SOSAExecutionCollection">ExecutionCollection</a> and specializations for actuations, observations and samplings
+                the generic class <a href="#SOSAExecutionCollection">ExecutionCollection</a> and specializations for
+                actuations, observations and samplings
             </li>
             <li>
                 the class <a href="#SOSASampleCollection">SampleCollection</a>
