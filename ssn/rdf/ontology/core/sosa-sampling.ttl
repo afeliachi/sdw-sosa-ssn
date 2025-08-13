@@ -88,7 +88,7 @@ sosa:SampleCollection
   skos:definition """
   set of one or more Samples or SampleCollections; collections may be nested.
 
-  Sample properties may appear in a Sample Collection, including: 
+  All Sample properties may appear in a Sample Collection, including: 
   hasOriginalSample , isSampleOfUltimateFOI , isSampleOf , isResultOfUsedProcedure , isResultOfMadeBySampler . 
   If they are present, the value of these properties summarize the values of the matching properties of the member samples, where membership is either direct or transitive through one or more member sample collections. 
 
@@ -144,7 +144,7 @@ sosa:SamplingCollection
   skos:definition """
   set of one or more Samplings or SamplingCollections; collections may be nested
 
-  Sampling properties may appear in a Sampling Collection, including: 
+  All Sampling properties may appear in a Sampling Collection, including: 
   hasFeatureOfInterest , hasUltimateFeatureOfInterest , madeBySampler , usedProcedure , hasInputValue , startTime , phenomenonTime , resultTime , hasResult . 
   If they are present, the value of these properties summarize the values of the matching properties of the member samplings, where membership is either direct or transitive through one or more member sampling collections. 
   The following consistency rules apply with respect to the Sampling properties listed above: 
