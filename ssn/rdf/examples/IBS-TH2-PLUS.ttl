@@ -8,7 +8,7 @@
 @prefix sensor: <https://example.org/sensor/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capabilities-properties#> .
+@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capability-properties#> .
 @base <https://example.org/data/TH2-PLUS/> .
 
 sensor:IBS-TH2-Plus

@@ -31,8 +31,13 @@ ssn-act:
   .
 
 sosa:Property 
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isActedOnBy ; owl:allValuesFrom sosa:Actuation ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty [ owl:inverseOf sosa:actsOnProperty ] ; owl:allValuesFrom sosa:Actuation ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isActedOnBy ; owl:allValuesFrom sosa:Actuator ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:wasActedOnBy ; owl:allValuesFrom [ 
+      owl:unionOf ( 
+        sosa:Actuation 
+        sosa:ActuationCollection 
+      ) ; 
+    ] ] ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:ActuatingProcedure  
@@ -42,19 +47,18 @@ sosa:ActuatingProcedure
 
 sosa:Actuation 
   rdfs:subClassOf sosa:Execution ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeByActuator ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeByActuator ; owl:allValuesFrom sosa:Actuator ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:actsOnProperty ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:actsOnProperty ; owl:allValuesFrom sosa:Property ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:usedProcedure; owl:allValuesFrom sosa:ActuatingProcedure ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest; owl:allValuesFrom sosa:FeatureOfInterest ] ;
   rdfs:isDefinedBy sosa-act: .
 
 sosa:ActuationCollection 
-  rdfs:subClassOf rdf:Bag ;
   rdfs:subClassOf sosa:ExecutionCollection ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeByActuator ; owl:allValuesFrom sosa:Actuator ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:actsOnProperty ; owl:allValuesFrom sosa:Property ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:usedProcedure; owl:allValuesFrom sosa:ActuatingProcedure ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest; owl:allValuesFrom sosa:FeatureOfInterest ] ;
   rdfs:subClassOf [ 
     a owl:Restriction ; 
     owl:onProperty sosa:hasMember ; 
@@ -156,7 +160,6 @@ sosa:hasOutput
   rdfs:isDefinedBy sosa-common: .
 
 sosa:usedProcedure 
-  owl:propertyChainAxiom ( sosa:madeByActuator sosa:implements ) ;
   rdfs:isDefinedBy sosa-common: .
 
 ## Executions

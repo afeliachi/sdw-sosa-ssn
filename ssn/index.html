@@ -6,6 +6,26 @@
   <title>Semantic Sensor Network Ontology - 2023 Edition</title>
   <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c"></script>
   <script class="remove" src="config.js"></script>
+
+  <!-- couldn't find a way to make turtle.js syntax in respec, so I'll do it manually here for now. Seeking help -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/a11y-light.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="./turtle.js"></script>
+  <script>
+    // Register the Turtle language after turtle.js is loaded
+    hljs.registerLanguage("turtle", hljsDefineTurtle);
+  
+    // Highlight all code blocks on page load
+    window.addEventListener("load", function () {
+      console.log("load")
+
+      document.respec.ready.then(function () {
+        console.log(hljs)
+        hljs.highlightAll();
+      });
+    });
+  </script>
+
   <script src="https://www.w3.org/2007/OWL/toggles.js"></script>
   <script type="application/ld+json">TODO: ADD HERE JSON-LD VERSION OF THE ONTOLOGY</script>
   <script>

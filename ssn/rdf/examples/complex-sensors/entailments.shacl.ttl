@@ -1,3 +1,6 @@
+@prefix ex:      <http://example.org/>.
+@prefix sh:      <http://www.w3.org/ns/shacl#>.
+@prefix sosa:    <http://www.w3.org/ns/sosa/>.
 ex:ObservationEntailments
   a sh:NodeShape ;
   sh:targetClass sosa:Observation ;

@@ -21,13 +21,13 @@ ex:IBSTH2SurvivalRange a sosa:ObservationCollection , sosa:SurvivableConditions 
       sosa:observedProperty sosa-env:MinAmbientTemperature ;
       sosa:hasResult [ 
         qudt:value -273.0 ;
-        qudt:unit unit:DEG_C ;
+        qudt:hasUnit unit:DEG_C ;
       ] ;
     ] , [
       sosa:observedProperty sosa-env:MaxAmbientTemperature ;
       sosa:hasResult [ 
         qudt:value 80.0 ;
-        qudt:unit unit:DEG_C ;
+        qudt:hasUnit unit:DEG_C ;
       ] ;
     ]
 .

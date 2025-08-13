@@ -9,7 +9,7 @@ The repo is used for developing editors drafts of some of the Working Group's [d
 <dl>
 <dt>[ssn-extensions](https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn-extensions)</dt>
   <dd>
-    Extensions to the SSN ontology to enable linking directly to the ultimate feature-of-interest alongside the link to the (proximate) feature-of-interest; and homogeneous collections of observations.
+    Extensions to the SSN ontology to enable linking directly to the ultimate feature of interest alongside the link to the (proximate) feature of interest; and homogeneous collections of observations.
     <br>[Editor's Draft](https://w3c.github.io/sdw-sosa-ssn/ssn-extensions/)
     <br>[Working Draft](https://www.w3.org/TR/vocab-ssn-ext/)
   </dd>

@@ -245,7 +245,7 @@ sosa:wasObservedBy
 
 sosa:usedForExecution  
   ogc-ms:implements <http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem> ;
-  rdfs:isDefinedBy sosa-obs: .
+  rdfs:isDefinedBy sosa-common: .
 
 sosa:relatedObservation  
   ogc-ms:implements <http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem> ;

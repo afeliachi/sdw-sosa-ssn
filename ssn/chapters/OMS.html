@@ -10,7 +10,7 @@
     which was a key influence and input in the development of SSN.
   </p>
   <p class="note">
-    OMS was published by ISO 19156:2023 [[iso-19156-2023]], but is freely available as OGC Abstract
+    OMS was published as ISO 19156:2023 [[iso-19156-2023]], but is freely available as OGC Abstract
     Specification &mdash; Topic 20 [[OMS]].
   </p>
   <p>
@@ -24,11 +24,13 @@
     and `ogc-ms:implementedBy` its inverse, defined as follows:
   </p>
 
-  <pre>ogc-ms:implements an OWL:ObjectProperty ;
-  rdfs:subPropertyOf dcterms:source , prov:wasDerivedFrom . </pre>
+<pre class="turtle">
+ogc-ms:implements a owl:ObjectProperty ;
+  rdfs:subPropertyOf dcterms:source , prov:wasDerivedFrom .
 
-  <pre>ogc-ms:implementedBy an OWL:ObjectProperty ;
-    owl:inverseOf ogc-ms:implements . </pre>
+ogc-ms:implementedBy a owl:ObjectProperty ;
+  owl:inverseOf ogc-ms:implements .
+</pre>
 
   <p class="note">
     Some classes and properties from OMS are not yet represented in the OMS Extension Module.

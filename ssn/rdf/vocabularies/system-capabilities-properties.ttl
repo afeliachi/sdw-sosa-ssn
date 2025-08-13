@@ -17,9 +17,9 @@
 
 sosa-cap: a owl:Ontology , voaf:Vocabulary ;
   dcterms:title "Sample vocabulary of properties about system capabilities"@en ;
-  dcterms:description "This vocabulary defines a short list of properties about system capabilities. 
+  dcterms:description """This vocabulary defines a short list of properties about system capabilities. 
 
-  It is only for illustration purposes, as the Spatio-temporal Data on the Web Working Group does not ambition to maintain a living list of properties. Extensions of this list should be led by other organization, and publications done to relevant vocabulary portals."@en ;
+  It is only for illustration purposes, as the Spatio-temporal Data on the Web Working Group does not ambition to maintain a living list of properties. Extensions of this list should be led by other organization, and publications done to relevant vocabulary portals."""@en ;
   dcterms:creator [ a foaf:Agent ; foaf:name "W3C/OGC Spatio-temporal Data on the Web Working Group"@en ] ;
   dcterms:rights "Copyright 2025 W3C/OGC." ;
   dcterms:license <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;

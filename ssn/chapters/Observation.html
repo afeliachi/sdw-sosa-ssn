@@ -67,7 +67,7 @@
             Property of a FeatureOfInterest
         </p>
         <p>
-            An <a href="#SOSAObservation">Observation</a> concerns a single
+            An <a href="#SOSAObservation">Observation</a> primarily concerns a single
             <a href="#SOSAProperty">Property</a> of a single
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
             Observations of multiple properties, or other combinations of Observations, may be described in an
@@ -98,13 +98,13 @@
             <dt>Examples</dt>
             <dd>
                 The activity of
-                <br>estimating the magnitude or intensity of an earthquake
-                <br>measuring the height of a tree
-                <br>determining the color of a leaf
-                <br>measuring the CO2 concentration in a gas
-                <br>finding the location of a car
-                <br>measuring the temperature of a room
-                <br>capturing an image of a scene
+                <br>- estimating the magnitude or intensity of an earthquake
+                <br>- measuring the height of a tree
+                <br>- determining the color of a leaf
+                <br>- measuring the CO2 concentration in a gas
+                <br>- finding the location of a car
+                <br>- measuring the temperature of a room
+                <br>- capturing an image of a scene
             </dd>
             <dt class="ssn">Sub class of</dt>
             <dd class="ssn">
@@ -112,31 +112,17 @@
             </dd>
             <dt class="ssn restrictions">Restrictions in SSN</dt>
             <dd class="ssn">
-                <a>sosa:madeBySensor</a> <em><b>EXACTLY 1</b></em>
-                <br>
                 <a>sosa:madeBySensor</a> <em><b>ONLY</b></em> <a>sosa:Sensor</a>
                 <br>
                 <a>sosa:usedProcedure</a> <em><b>ONLY</b></em> <a>sosa:ObservingProcedure</a>
                 <br>
-                <a>sosa:hasFeatureOfInterest</a> <em><b>EXACTLY 1</b></em>
-                <br>
                 <a>sosa:hasFeatureOfInterest</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
-                <br>
-                <a>sosa:hasUltimateFeatureOfInterest</a> <em><b>EXACTLY 1</b></em>
                 <br>
                 <a>sosa:hasUltimateFeatureOfInterest</a> <em><b>ONLY</b></em> <a>sosa:FeatureOfInterest</a>
                 <br>
-                <a>sosa:observedProperty</a> <em><b>EXACTLY 1</b></em>
-                <br>
                 <a>sosa:observedProperty</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                 <br>
-                <a>sosa:wasOriginatedBy</a> <em><b>EXACTLY 1</b></em>
-                <br>
                 <a>sosa:wasOriginatedBy</a> <em><b>ONLY</b></em> <a>sosa:Stimulus</a>
-                <br>
-                <a>sosa:phenomenonTime</a> <em><b>EXACTLY 1</b></em>
-                <br>
-                <a>sosa:hasResult</a> <em><b>EXACTLY 1</b></em>
             </dd>
             <dt>is Defined By</dt>
             <dd>
@@ -172,8 +158,8 @@
             <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">dcat:Dataset</a> from the Data Catalog Vocabulary [[vocab-dcat-3]].
         </p>
         <p>
-            The following <a href="#SOSAObservation">Observation</a> properties may appear in an
-            <a>sosa:ObservationCollection</a> &mdash;
+            All <a href="#SOSAObservation">Observation</a> properties may appear in an
+            <a>sosa:ObservationCollection</a>, including:
             <a>sosa:hasFeatureOfInterest</a>,
             <a>sosa:hasUltimateFeatureOfInterest</a>,
             <a>sosa:usedProcedure</a>,
@@ -183,7 +169,7 @@
             <a>sosa:resultTime</a>,
             <a>sosa:hasResult</a>,
             <a>sosa:hasSimpleResult</a>.
-            If they are present, the values of these properties summarize the values of the matching properties of
+            If they are present, the value of these properties summarize the values of the matching properties of
             the member observations, where membership is either direct or transitive through one or more member
             observation collections.
         </p>
@@ -206,7 +192,7 @@
             </li>
             <li>
                 Where an individual <a href="#SOSAObservationCollection">ObservationCollection</a> has
-                <i>more than one value for a property</i>, each member <a href="#SOSAObservation">Observation</a>(direct or transitive) MUST have a value for that property that matches one of the values for the
+                <i>more than one value for a property</i>, each member <a href="#SOSAObservation">Observation</a> (direct or transitive) MUST have a value for that property that matches one of the values for the
                 property in the collection.
             </li>
             <li>
@@ -240,15 +226,10 @@
             <a href="#ModelObservationCollection">Homogeneous observation collection</a> for examples.
         </p>
         <dl>
-            <dt>Note</dt>
-            <dd>
-                The members of a collection do not necessarily share a common value for any property.
-            </dd>
             <dt class="ssn">Sub class of</dt>
             <dd class="ssn">
                 <th>Sub class of</th>
                 <td>
-                    <a href="https://www.w3.org/TR/rdf12-schema/#ch_bag">rdf:Bag</a>,
                     <a>sosa:ExecutionCollection</a>
                 </td>
             </dd>
@@ -271,7 +252,7 @@
                 <a>sosa:observedProperty</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                 <br>
                 <a>sosa:hasMember</a> <em><b>ONLY</b></em>
-                (<a>sosa:Observation</a> OR <a>sosa:ObservationCollection</a> )
+                (<a>sosa:Observation</a> <em><b>or</b></em> <a>sosa:ObservationCollection</a>)
             </dd>
             <dt>is Defined By</dt>
             <dd>
@@ -352,7 +333,7 @@
             <strong>an OWL Class</strong>
         </p>
         <p>
-            <em>Sensor</em> &mdash;
+            <em>Sensor</em> or <em>Observer</em> &mdash;
             System that implements an ObservingProcedure to determine the value of an observable Property
         </p>
         <p>
@@ -360,24 +341,22 @@
         </p>
         <p>
             A <a href="#SOSASensor">Sensor</a> responds to a <a href="#SOSAStimulus">Stimulus</a>,
-            e.g., a change in the environment, or input data composed from the results of prior
-            <a href="#SOSAObservation">Observations</a>.
-            This may be a device, a piece of infrastructure, an agent (including humans), or software (simulation).
+            e.g., a change in the environment, or input data composed from the results of prior <a href="#SOSAObservation">Observations</a>.
         </p>
         <p class="note">
             A Sensor may have a geographic location.
-            See <a href="#ModelLocation">Location and Geometry</a> for patterns to describe this.</p>
-
+            See <a href="#ModelLocation">Location and Geometry</a> for patterns to describe this.
+        </p>
+        <p class="note">
+            Specific sensor <em>types</em> may be implemented as <em>sub-classes</em>
+            of this class or its sub-classes.
+            Their descriptions may capture the properties and characteristics of a whole class of sensors, corresponding with the information typically found in a spec-sheet or data-sheet.
+            <br>
+            Individual sensor <em>instances</em> are <em>members</em> of this class or its sub-classes.
+            <br>
+            See <a href="#ModelSystemType">Systems Types and Individuals</a> for patterns to describe this.
+        </p>
         <dl>
-            <dt>Scope note</dt>
-            <dd>
-                Specific sensor <em>types</em> may be implemented as <em>sub-classes</em> of this class
-                or its sub-classes.
-                Their descriptions may capture the properties and characteristics of a whole class of
-                sensors, corresponding with the information typically found in a data-sheet.
-                <br><br>
-                Individual sensor <em>instances</em> are <em>members</em> of this class or its sub-classes.
-            </dd>
             <dt>Note</dt>
             <dd>
                 The UML class 'Observer' from ISO 19156:2023 is implemented in SOSA by the OWL/RDFS class
@@ -397,7 +376,7 @@
             <dt class="ssn restrictions">Restrictions in SSN</dt>
             <dd class="ssn">
                 <a>sosa:madeObservation</a> <em><b>ONLY</b></em>
-                ( <a>sosa:Observation</a> OR <a>sosa:ObservationCollection</a> )
+                (<a>sosa:Observation</a> <em><b>or</b></em> <a>sosa:ObservationCollection</a>)
                 <br>
                 <a>sosa:observes</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                 <br>
@@ -438,10 +417,11 @@
             <dd class="ssn">
                 <a>sosa:isProxyFor</a> <em><b>ONLY</b></em> <a>sosa:Property</a>
                 <br>
-                ( <em><b>inverse Of</b></em> <a>sosa:wasOriginatedBy</a> ) <em><b>ONLY</b></em>
-                <a>sosa:Observation</a>
+                <a>sosa:originated</a> <em><b>ONLY</b></em>
+                (<a>sosa:Observation</a> <em><b>or</b></em>
+                <a>sosa:ObservationCollection</a>)
                 <br>
-                ( <em><b>inverse Of</b></em> <a>sosa:detects</a> ) <em><b>ONLY</b></em> <a>sosa:Sensor</a>
+                <a>sosa:isDetectedBy</a> <em><b>ONLY</b></em> <a>sosa:Sensor</a>
                 <br>
             </dd>
             <dt>is Defined By</dt>
@@ -772,6 +752,9 @@
             <em>observation related to</em> &mdash;
             relation from an Observation or ObservationCollection to another Execution or ExecutionCollection
         </p>
+        <p class="note">
+            This general relationship complements the specific predicates outbound from Observation. It is particularly useful to relate Observations (and collections) to other Executions (and collections)
+        </p>
         <dl>
             <dt>Domain Includes</dt>
             <dd>
@@ -838,7 +821,7 @@
             </dd>
             <dt>Inverse property of</dt>
             <dd>
-                <a href="http://www.w3.org/ns/sosa/wasObservedBy/">sosa:wasObservedBy/</a>
+                <a href="http://www.w3.org/ns/sosa/wasObservedBy/">sosa:wasObservedBy</a>
             </dd>
             <dt>is Defined By</dt>
             <dd>
@@ -988,17 +971,14 @@
             <em>related observation</em> &mdash;
             relation from an Execution or ExecutionCollection to an Observation or ObservationCollection
         </p>
+        <p class="note">
+            This general relationship complements the specific predicates inbound to Observation. It is particularly useful to relate Observations (and collections) to other Executions (and collections)
+        </p>
         <dl>
             <dt>Domain Includes</dt>
             <dd>
                 <a>sosa:Execution</a>,
-                <a>sosa:Actuation</a>,
-                <a>sosa:Observation</a>,
-                <a>sosa:Sampling</a>,
-                <a>sosa:ExecutionCollection</a>,
-                <a>sosa:ActuationCollection</a>,
-                <a>sosa:ObservationCollection</a>,
-                <a>sosa:SamplingCollection</a>
+                <a>sosa:ExecutionCollection</a>
             </dd>
             <dt>Range Includes</dt>
             <dd>
@@ -1096,7 +1076,8 @@
             </dd>
             <dt>Range Includes</dt>
             <dd>
-                <a>sosa:Observation</a>
+                <a>sosa:Observation</a>,
+                <a>sosa:ObservationCollection</a>
             </dd>
             <dt>Inverse property of</dt>
             <dd>
@@ -1129,7 +1110,8 @@
         <dl>
             <dt>Domain Includes</dt>
             <dd>
-                <a>sosa:Observation</a>
+                <a>sosa:Observation</a>,
+                <a>sosa:ObservationCollection</a>
             </dd>
             <dt>Range Includes</dt>
             <dd>

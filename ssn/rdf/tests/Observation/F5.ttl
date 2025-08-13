@@ -5,6 +5,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#>.
 @prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 ex:OF5 a sosa:Observation ;

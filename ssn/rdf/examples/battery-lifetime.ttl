@@ -4,7 +4,8 @@
 @prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix unit: <http://qudt.org/vocab/unit/>.
 @prefix iop:  <https://w3id.org/iadopt/ont/>.
-@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capabilities-module#> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capability-properties#> .
 
 ex:AABattery a sosa:Battery ;
   rdfs:label "An AA battery." .
@@ -13,7 +14,7 @@ ex:sensor a sosa:Sensor;
   sosa:hasSubSystem ex:AABattery .
 
 ex:nominalLifetimeRestriction a iop:Variable, sosa:Property;
-  iop:hasStatisticalModifier nom:average ;
+  iop:hasStatisticalModifier uom:average ;
   iop:hasObjectOfInterest ex:AABattery ;
   iop:hasProperty sosa-cap:BatteryLifetime .
   
@@ -22,6 +23,6 @@ ex:nominalLifetime a sosa:Observation ;
   sosa:observedProperty ex:nominalLifetimeRestriction ;
   sosa:hasResult [ 
     qudt:value 1.0 ;
-    qudt:unit unit:YR ;
+    qudt:hasUnit unit:YR ;
   ] ;
 .

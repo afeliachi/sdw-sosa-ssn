@@ -89,7 +89,7 @@ sosa:SurvivableConditions a owl:Class ;
 sosa:hasSystemCapability a owl:ObjectProperty ;
   schema:domainIncludes sosa:System , sosa:Sensor, sosa:Actuator, sosa:Sampler ;
   schema:rangeIncludes sosa:Observation , sosa:ObservationCollection ;
-  rdfs:label "has system capability"en ;
+  rdfs:label "has system capability"@en ;
   skos:definition "Relation between a System and an ObservationCollection (or Observation) describing the capability of the system. A sensor or system may have more than one set of system capabilities with different validity contexts."@en ;
   rdfs:isDefinedBy sosa-systems: .
   
