@@ -8,6 +8,7 @@ var respecConfig = {
   repoURL: "https://github.com/w3c/sdw-sosa-ssn/",
   edDraftURI: "https://w3c.github.io/sdw-sosa-ssn/ssn/",
   group: "wg/sdw",
+  github: "w3c/sdw-sosa-ssn",
   wgPublicList: "public-sdw-comments",
   // replace with pointer to GitHub issues list
   implementationReportURI: "https://w3c.github.io/sdw-sosa-ssn/ssn-usage/",
