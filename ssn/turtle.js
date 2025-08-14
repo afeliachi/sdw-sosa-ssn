@@ -20,7 +20,10 @@ function hljsDefineTurtle(hljs) {
     relevance: 1, // XML tags look also like relative IRIs
     begin: /</,
     end: />/,
-    illegal: /[^\x00-\x20<>"{}|^`]/, // TODO: https://www.w3.org/TR/turtle/#grammar-production-UCHAR
+    // Patch Note: The following RegExp has been inverted (i.e., [^...] changed to [...]).
+    // The original was lifted directly from the grammar, but the grammar specifies valid syntax,
+    // whereas `illegal` specifies the opposite, so every @prefix line was causing errors.
+    illegal: /[\x00-\x20<>"{}|^`]/, // TODO: https://www.w3.org/TR/turtle/#grammar-production-UCHAR
   };
   
   // https://www.w3.org/TR/turtle/#terminals
