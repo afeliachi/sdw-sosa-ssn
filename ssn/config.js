@@ -34,9 +34,6 @@ var respecConfig = {
   wgPublicList: "public-sdw-comments",
   // replace with pointer to GitHub issues list
   implementationReportURI: "https://w3c.github.io/sdw-sosa-ssn/ssn-usage/",
-  inlineCSS: true,
-  noIDLIn: true,
-  noLegacyStyle: false,
   noRecTrack: false,
   logos: [
     {
