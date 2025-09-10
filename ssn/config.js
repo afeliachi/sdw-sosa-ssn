@@ -23,7 +23,7 @@ async function loadTurtle() {
 var respecConfig = {
   specStatus: "ED",
   shortName: "vocab-ssn-2023",
-  //publishDate:  "2025-08-01",
+  // publishDate:  "2025-09-11",
   prevRecShortname: "vocab-ssn",
   previousPublishDate: "2017-10-19",
   previousMaturity: "TR",
@@ -37,7 +37,7 @@ var respecConfig = {
   noRecTrack: false,
   logos: [
     {
-      src: "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/gh-pages/ssn/images/OGC-0.png",
+      src: "images/OGC-0.png",
       alt: "OGC",
       height: "70",
       width: "62",
@@ -47,41 +47,48 @@ var respecConfig = {
   editors: [
     {
       name: "Simon J D Cox",
+      w3cid: "1796",
       company: "Timely Logic, AU",
       orcid: "0000-0002-3884-3420",
       w3cid: 1796
     },
     {
       name: "Maxime Lefrançois",
+      w3cid: "50604",
       company: "École Nationale Supérieure des Mines de Saint-Étienne, FR",
       companyURL: "https://www.mines-stetienne.fr/",
       orcid: "0000-0001-9814-8991"
     },
     {
       name: "Rob Warren",
+      w3cid: "144476",
       company: "Glengarry Agriculture and Forestry, CA",
       companyURL: "https://github.com/GlengarryAg"
     },
     {
       name: "Rob Atkinson",
+      w3cid: "90763",
       company: "OGC & Metalinkage, AU",
       companyURL: "https://www.ogc.org/",
       orcid: "0000-0002-7815-2472"
     },
     {
       name: "Luis Moreira de Sousa",
+      w3cid: "145885",
       company: "Instituto Superior Técnico Lisboa, PT",
       companyURL: "https://tecnico.ulisboa.pt/en/",
       orcid: "0000-0002-5851-2071"
     },
     {
       name: "Kathi Schleidt",
+      w3cid: "140963",
       company: "Datacove, AT",
       companyURL: "https://www.datacove.eu/",
       orcid: "0000-0002-8011-7350"
     },
     {
       name: "Sylvain Grellet",
+      w3cid: "143334",
       company: "BRGM, FR",
       companyURL: "https://brgm.fr/",
       orcid: "0000-0001-7656-1830"
@@ -148,14 +155,14 @@ var respecConfig = {
     }
   ],
   localBiblio: {
-    "Description Logics": {
+    "Description-Logics": {
       href: "http://www.cambridge.org/9780521150118",
       authors: ["Franz Baader", "Diego Calvanese", "Deborah L. McGuinness", "Daniele Nardi", "Peter F. Patel-Schneider"],
       title: "The Description Logic Handbook: Theory, Implementation, and Applications, 2nd Edition",
       publisher: "Cambridge University Press",
       date: "2007"
     },
-    "Description Logics Home Page": {
+    "Description-Logics-Home-Page": {
       href: "https://dl.kr.org/",
       title: "Description Logics Home Page"
     },
