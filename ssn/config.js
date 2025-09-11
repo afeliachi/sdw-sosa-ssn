@@ -23,7 +23,7 @@ async function loadTurtle() {
 var respecConfig = {
   specStatus: "ED",
   shortName: "vocab-ssn-2023",
-  // publishDate:  "2025-09-11",
+  // publishDate:  "2025-09-16",
   prevRecShortname: "vocab-ssn",
   previousPublishDate: "2017-10-19",
   previousMaturity: "TR",
@@ -33,7 +33,7 @@ var respecConfig = {
   github: "w3c/sdw-sosa-ssn",
   wgPublicList: "public-sdw-comments",
   // replace with pointer to GitHub issues list
-  implementationReportURI: "https://w3c.github.io/sdw-sosa-ssn/ssn-usage/",
+  implementationReportURI: "https://w3c.github.io/sdw-sosa-ssn/ssn/usage/",
   noRecTrack: false,
   logos: [
     {
