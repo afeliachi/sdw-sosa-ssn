@@ -7,34 +7,34 @@ This repository has been factored out as a submodule of the original repository 
 The repo is used for developing editors drafts of some of the Working Group's [deliverables](https://www.w3.org/2021/10/sdw-charter.html#deliverables) and related resources, in particular:
 
 <dl>
-  <dt>[ssn](https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn)</dt>
+  <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn">ssn</a></dt>
   <dd>
     The Semantic Sensor Network Ontology - 2023 Edition
-    <br>[Editor's Draft](https://w3c.github.io/sdw-sosa-ssn/ssn/)
-    <br>[Public working draft](https://www.w3.org/TR/vocab-ssn-2023)
-    <br>[W3C Recommendation from 2017](https://www.w3.org/TR/vocab-ssn/)
+    <br><a href="https://w3c.github.io/sdw-sosa-ssn/ssn/">Editor's Draft</a>
+    <br><a href="https://www.w3.org/TR/vocab-ssn-2023">Public working draft</a>
+    <br><a href="https://www.w3.org/TR/vocab-ssn/">W3C Recommendation from 2017</a>
   </dd>
-  <dt>[ssn/rdf](https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf)</dt>
+  <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf">ssn/rdf</a></dt>
   <dd>
     RDF implementation of the SSN Ontology - 2023 edition, plus supporting resources
   </dd>
-  <dt>[ssn/rdf/ontology](https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology)</dt>
+  <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology">ssn/rdf/ontology</a></dt>
   <dd>
     RDF implementation of the SSN Ontology - 2023 edition
   </dd>
-  <dt>[ssn/rdf/ontology/core](https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology/core)</dt>
+  <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology/core">ssn/rdf/ontology/core</a></dt>
   <dd>
     RDF implementation of the core terms of the SSN Ontology - 2023 edition - in `sosa:` namespace
   </dd>
-  <dt>[ssn/rdf/ontology/extensions](https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology/extensions)</dt>
+  <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology/extensions">ssn/rdf/ontology/extensions</a></dt>
   <dd>
-    RDF implementation of extensions to the SSN Ontology - extensions managed here
+    RDF implementation of extensions to the SSN Ontology - documented in the (draft) Recommendation
   </dd>
-  <dt>[ssn/rdf/ontology/alignments](https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology/alignments)</dt>
+  <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology/alignments">ssn/rdf/ontology/alignments</a></dt>
   <dd>
-    RDF implementation of alignments of the SSN Ontology to external ontologies 
+    RDF implementation of alignments of the SSN Ontology to external ontologies - documented in the (draft)Recommendation
   </dd>
-  <dt>[ssn/rdf/examples](https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/examples)</dt>
+  <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/examples">ssn/rdf/examples</a></dt>
   <dd>
     RDF examples of applications of the SSN Ontology 
   </dd>
