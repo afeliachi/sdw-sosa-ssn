@@ -9,30 +9,30 @@ The repo is used for developing editors drafts of some of the Working Group's [d
 <dl>
   <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn">ssn</a></dt>
   <dd>
-    The Semantic Sensor Network Ontology - 2023 Edition
+    The Semantic Sensor Network Ontology — 2023 Edition
     <br><a href="https://w3c.github.io/sdw-sosa-ssn/ssn/">Editor's Draft</a>
     <br><a href="https://www.w3.org/TR/vocab-ssn-2023">Public working draft</a>
     <br><a href="https://www.w3.org/TR/vocab-ssn/">W3C Recommendation from 2017</a>
   </dd>
   <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf">ssn/rdf</a></dt>
   <dd>
-    RDF implementation of the SSN Ontology - 2023 edition, plus supporting resources
+    RDF implementation of the SSN Ontology — 2023 edition, plus supporting resources
   </dd>
   <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology">ssn/rdf/ontology</a></dt>
   <dd>
-    RDF implementation of the SSN Ontology - 2023 edition
+    RDF implementation of the SSN Ontology — 2023 edition
   </dd>
   <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology/core">ssn/rdf/ontology/core</a></dt>
   <dd>
-    RDF implementation of the core terms of the SSN Ontology - 2023 edition - in `sosa:` namespace
+    RDF implementation of the core terms of the SSN Ontology — 2023 edition — in `sosa:` namespace
   </dd>
   <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology/extensions">ssn/rdf/ontology/extensions</a></dt>
   <dd>
-    RDF implementation of extensions to the SSN Ontology - documented in the (draft) Recommendation
+    RDF implementation of extensions to the SSN Ontology — documented in the (draft) Recommendation
   </dd>
   <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/ontology/alignments">ssn/rdf/ontology/alignments</a></dt>
   <dd>
-    RDF implementation of alignments of the SSN Ontology to external ontologies - documented in the (draft)Recommendation
+    RDF implementation of alignments of the SSN Ontology to external ontologies — documented in the (draft) Recommendation
   </dd>
   <dt><a href="https://github.com/w3c/sdw-sosa-ssn/tree/gh-pages/ssn/rdf/examples">ssn/rdf/examples</a></dt>
   <dd>
