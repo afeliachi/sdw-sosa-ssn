@@ -34,8 +34,11 @@ sosa:
 
 sosa:madeBySystem 
   schema:domainIncludes sosa:Actuation ;
+  schema:domainIncludes sosa:ActuationCollection ;
   schema:domainIncludes sosa:Observation ;
+  schema:domainIncludes sosa:ObservationCollection ;
   schema:domainIncludes sosa:Sampling ;
+  schema:domainIncludes sosa:SamplingCollection ;
   schema:rangeIncludes sosa:Actuator ;
   schema:rangeIncludes sosa:Sensor ;
   schema:rangeIncludes sosa:Sampler ;
@@ -46,21 +49,21 @@ sosa:madeExecution
   schema:domainIncludes sosa:Sensor ;
   schema:domainIncludes sosa:Sampler ;
   schema:rangeIncludes sosa:Actuation ;
+  schema:rangeIncludes sosa:ActuationCollection ;
   schema:rangeIncludes sosa:Observation ;
+  schema:rangeIncludes sosa:ObservationCollection ;
   schema:rangeIncludes sosa:Sampling ;
+  schema:rangeIncludes sosa:SamplingCollection ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:observationRelatedTo 
-  schema:rangeIncludes sosa:Execution ;
   schema:rangeIncludes sosa:Actuation ;
   schema:rangeIncludes sosa:ActuationCollection ;
   schema:rangeIncludes sosa:Sampling ;
   schema:rangeIncludes sosa:SamplingCollection ;
-  owl:inverseOf sosa:relatedObservation ;
   rdfs:isDefinedBy sosa-obs: .
 
 sosa:relatedObservation 
-  schema:domainIncludes sosa:Execution ;
   schema:domainIncludes sosa:Actuation ;
   schema:domainIncludes sosa:ActuationCollection ;
   schema:domainIncludes sosa:Sampling ;
