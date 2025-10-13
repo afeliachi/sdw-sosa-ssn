@@ -17,7 +17,7 @@
         Ontology.
     </p>
     <figure id="Fig-SSN-core-modules">
-        <embed alt="SSN core modules" src="images/SSN-core-modules.svg"  style="width:100%">
+        <embed alt="SSN core modules" src="images/SSN-core-modules.svg" style="width:100%">
         <figcaption>
             The modular SSN ontology &mdash; core packages, showing classes and dependencies.
             <br>
@@ -29,8 +29,10 @@
     <p>
         The <i>SOSA Module</i> (Sensors, Observations, Samples and Actuations) defines the <b>core</b> classes and
         properties, and provides textual definitions and other annotations.
-        Some semantic enrichment is provided using Schema.org [[schema-org]] properties, but there is no formal
-        axiomatization.
+        This module follows the 'lightweight profile' of RDFS/OWL, which includes rdfs:subClassOf and rdfs:subPropertyOf
+        axioms where the object is a named class or property, and owl:inverseOf axioms between pairs of
+        object-properties.
+        Some additional semantic enrichment is provided using Schema.org [[schema-org]] properties.
         SOSA may be used <i>as-is</i> by an audience who wish to use terminology consistent with the SSN Ontology, thus
         ensuring interoperability with SSN-based repositories. </p>
     <p>
@@ -42,13 +44,16 @@
             Actuation, Observation and Sampling applications, documented in section <a href="#Common"></a>
         </li>
         <li>
-            <b>SOSA Actuation</b> imports <b>SOSA Common</b> and defines classes and properties used in Actuations, documented in section <a href="#Actuation"></a>
+            <b>SOSA Actuation</b> imports <b>SOSA Common</b> and defines classes and properties used in Actuations,
+            documented in section <a href="#Actuation"></a>
         </li>
         <li>
-            <b>SOSA Observation</b> imports <b>SOSA Common</b> and defines classes and properties used in Observations, documented in section <a href="#Observation"></a>
+            <b>SOSA Observation</b> imports <b>SOSA Common</b> and defines classes and properties used in Observations,
+            documented in section <a href="#Observation"></a>
         </li>
         <li>
-            <b>SOSA Sampling</b> imports <b>SOSA Common</b> and defines classes and properties used in Samplings, documented in section <a href="#Sampling"></a>
+            <b>SOSA Sampling</b> imports <b>SOSA Common</b> and defines classes and properties used in Samplings,
+            documented in section <a href="#Sampling"></a>
         </li>
     </ol>
     <p>
@@ -61,8 +66,9 @@
 
     <h4 id="ssn-module">SSN</h4>
     <p>
-        The <i>SSN Module</i> adds axioms that formally indicate how properties relate to classes, and how classes relate to each other. SSN may be used in semantic web systems that use inferencing and reasoning, and consistency checking
-        for datasets. </p>
+        The <i>SSN Module</i> adds OWL axioms that formally indicate how properties relate to classes.
+        SSN may be used in semantic web systems that use inferencing and reasoning, and consistency checking for
+        datasets. </p>
     <p>
         The modularization of <b>SSN</b> mirrors <b>SOSA</b>.
         <b>SSN</b> is composed of four lower level modules:
@@ -134,7 +140,8 @@
 
     <h4 id="system-capabilities-module">System Capabilities</h4>
     <p>
-        The <i>System Capabilities module</i> imports <i>SOSA</i> and adds classes and properties required for the description of the
+        The <i>System Capabilities module</i> imports <i>SOSA</i> and adds classes and properties required for the
+        description of the
         operating conditions and capabilities of systems, in particular Sensors and Actuators.
     </p>
     <p>
@@ -187,7 +194,8 @@
 
     <h4 id="sosa-dul-module">DUL</h4>
     <p>
-        The <i>SOSA-DUL module</i> imports <b>SOSA</b>, and adds axioms that position SOSA within <i>DOLCE UltraLite</i>.
+        The <i>SOSA-DUL module</i> imports <b>SOSA</b>, and adds axioms that position SOSA within <i>DOLCE
+            UltraLite</i>.
         <i>SOSA-DUL</i> may be used to integrate data designed using SOSA into systems otherwise built in the
         <i>DOLCE UltraLite</i> framework.
     </p>
