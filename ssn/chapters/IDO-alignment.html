@@ -1,6 +1,6 @@
 <h3>IDO Alignment Module</h3>
-<p>This section introduces the alignment of SOSA to Industrial Data Ontology (IDO), which is standardized
-  as ISO 23726-3. This serves to axiomatically clarify the intended meaning of
+<p>This section introduces the alignment of SOSA to  <a href="https://rds.posccaesar.org/ontology/lis14/ont/core/">Industrial Data Ontology (IDO)</a>, which is standardized
+  as <a href="https://www.iso.org/standard/87560.html">ISO 23726-3</a>. This serves to axiomatically clarify the intended meaning of
    SOSA terms in terms of IDO and enable usage of SOSA/SSN with IDO-aligned ontologies.
 </p>
 <p>
@@ -34,13 +34,6 @@
     The definition of each IDO concept is displayed as a tooltip when hovering over the concept.
   </p>
   <ul class="align-on-symbol">
-    <li>
-    <span class="lhs"><a>sosa:ActuatableProperty</a></span>
-    <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="A potential whose realization is dependent on an object's structure.">lis:Disposition</span>
-    </span>
-  </li>
   <li>
     <span class="lhs"><a>sosa:Actuator</a></span>
     <span class="symbol logic">⊑</span>
@@ -77,13 +70,6 @@
     </span>
   </li>
   <li>
-    <span class="lhs"><a>sosa:ObservableProperty</a></span>
-    <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="A dependent entity that is present any time its bearer exists.">lis:Quality</span>
-    </span>
-  </li>
-  <li>
     <span class="lhs"><a>sosa:Platform</a></span>
     <span class="symbol logic">⊑</span>
     <span class="rhs">
@@ -101,14 +87,14 @@
     <span class="lhs"><a>sosa:Property</a></span>
     <span class="symbol logic">⊑</span>
     <span class="rhs">
-      <span title="An entity that is an inherent quality or realizable potential of an object.">lis:Dependent</span>
+      <span title="A dependent entity that is present any time its bearer exists.">lis:Quality</span>
     </span>
   </li>
   <li>
-    <span class="lhs"><a>sosa:Result</a></span>
+    <span class="lhs"><a>sosa:Sample</a></span>
     <span class="symbol logic">⊑</span>
     <span class="rhs">
-      <span title="An entity that is not dependent on other entities for existence, and which persists through time.">lis:Object</span>
+      <span title=""An entity that is not dependent on other entities for existence, and which persists through time.">lis:Object</span>
     </span>
   </li>
   <li>
@@ -159,14 +145,6 @@
   <p class="note">
     The definition of each IDO property is displayed as a tooltip when hovering over the concept.
   </p>
- <ul>
-  <li>
-    <span class="lhs"><a>sosa:actsOnProperty</a></span>
-    <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span>lis:realizes</span>
-    </span>
-  </li>
   <li>
     <span class="lhs"><a>sosa:deployedAsset</a></span>
     <span class="symbol logic">⊑</span>
@@ -175,88 +153,154 @@
     </span>
   </li>
   <li>
+    <span class="lhs"><a>sosa:hasDeployment</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="inverse of lis:hasPassiveParticipant">lis:passiveParticipantIn</span></span>
+  </li>
+  <li>
     <span class="lhs"><a>sosa:hasFeatureOfInterest</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="If x 'has participant' y, then x is an 'activity', and y is an 'object' that participates in x.">lis:hasParticipant</span>
-    </span>
+    <span class="rhs"><span title="If x 'has participant' y, then x is an 'activity', and y is an 'object' that participates in x.">lis:hasParticipant</span></span>
   </li>
   <li>
     <span class="lhs"><a>sosa:hasInput</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="if x 'has passive participant' y, then x is a passive participant in y.">lis:hasPassiveParticipant</span>
-    </span>
+    <span class="rhs"><span title="If x 'has content part' y, then x and y are information objects, and x 'has part' y.">lis:hasContentPart</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:hasInputValue</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="if x 'has passive participant' y, then x is a passive participant in y.">lis:hasPassiveParticipant</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:hasMember</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="If x 'has part' y, then y is a part of x.">lis:hasPart</span></span>
   </li>
   <li>
     <span class="lhs"><a>sosa:hasOutput</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="if x 'has passive participant' y, then x is a passive participant in y.">lis:hasPassiveParticipant</span>
-    </span>
+    <span class="rhs"><span title="If x 'has content part' y, then x and y are information objects, and x 'has part' y.">lis:hasContentPart</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:hasProperty</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="If x 'has quality' y, then x is an 'object', and y is a 'quality' that is dependent on x.">lis:hasQuality</span></span>
   </li>
   <li>
     <span class="lhs"><a>sosa:hasResult</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="if x 'has passive participant' y, then x is a passive participant in y.">lis:hasPassiveParticipant</span>
-    </span>
+    <span class="rhs"><span title="if x 'has passive participant' y, then x is a passive participant in y.">lis:hasPassiveParticipant</span></span>
   </li>
   <li>
     <span class="lhs"><a>sosa:hasSubSystem</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="If x 'has functional part' y, then x is a 'system' of which y is a part, and y has one or more functions that contribute to the function of x.">lis:hasFunctionalPart</span>
-    </span>
+    <span class="rhs"><span title="If x 'has functional part' y, then x is a 'system' of which y is a part, and y has one or more functions that contribute to the function of x.">lis:hasFunctionalPart</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:hasUltimateFeatureOfInterest</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="If x 'has participant' y, then x is an 'activity', and y is an 'object' that participates in x.">lis:hasParticipant</span></span>
   </li>
   <li>
     <span class="lhs"><a>sosa:hosts</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="If x is 'located relative to' y, then x and y are 'object's with location in space.">lis:locatedRelativeTo</span>
-    </span>
+    <span class="rhs"><span title="If x is 'located relative to' y, then x and y are 'object's with location in space.">lis:locatedRelativeTo</span></span>
   </li>
   <li>
-    <span class="lhs"><a>sosa:implements</a></span>
+    <span class="lhs"><a>sosa:inputFor</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="If x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y, or an 'activity' performance of y.">lis:concretizes</span>
-    </span>
+    <span class="rhs"><span title="inverse of lis:hasContentPart">lis:contentPartOf</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:inputValueForExecution</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="inverse of lis:hasPassiveParticipant">lis:passiveParticipantIn</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:isFeatureOfInterestOf</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="inverse of lis:hasParticipant">lis:participantIn</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:isHostedBy</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="If x is 'located relative to' y, then x and y are 'object's with location in space.">lis:locatedRelativeTo</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:isMemberOf</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="inverse of lis:hasPart">lis:partOf</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:isPropertyOf</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="inverse of lis:hasQuality">lis:qualityOf</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:isResultOf</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="inverse of lis:creates">lis:createdBy</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:isSubSystemOf</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="inverse of lis:hasFunctionalPart">lis:functionalPartOf</span></span>
   </li>
   <li>
     <span class="lhs"><a>sosa:madeBySystem</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="If x 'has active participant' y, then x is an active participant in y.">lis:hasActiveParticipant</span>
-    </span>
+    <span class="rhs"><span title="If x 'has active participant' y, then x is an active participant in y.">lis:hasActiveParticipant</span></span>
   </li>
   <li>
     <span class="lhs"><a>sosa:madeExecution</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span>lis:activeParticipantIn</span>
-    </span>
+    <span class="rhs"><span title="inverse of lis:hasActiveParticipant">lis:activeParticipantIn</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:observationRelatedTo</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="If x 'occurs relative to' y, then x and y are 'temporal' entities, with temporal location.">lis:occursRelativeTo</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:originated</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="If x 'occurs relative to' y, then x and y are 'temporal' entities, with temporal location.">lis:occursRelativeTo</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:outputFor</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="inverse of lis:hasContentPart">lis:contentPartOf</span></span>
   </li>
   <li>
     <span class="lhs"><a>sosa:phenomenonOccurred</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span>lis:temporalExtentOf</span>
-    </span>
+    <span class="rhs"><span title="inverse of lis:hasTemporalExtent">lis:temporalExtentOf</span></span>
   </li>
   <li>
     <span class="lhs"><a>sosa:phenomenonTime</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="If x 'has temporal extent' y, then x is a 'temporal' entity, and y is a temporal region which is the temporal extent of x.">lis:hasTemporalExtent</span>
-    </span>
+    <span class="rhs"><span title="If x 'has temporal extent' y, then x is a 'temporal' entity, and y is a temporal region which is the temporal extent of x.">lis:hasTemporalExtent</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:relatedObservation</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="If x 'occurs relative to' y, then x and y are 'temporal' entities, with temporal location.">lis:occursRelativeTo</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:usedForExecution</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="inverse of lis:concretizes">lis:concretizedBy</span></span>
   </li>
   <li>
     <span class="lhs"><a>sosa:usedProcedure</a></span>
     <span class="symbol logic">⊑</span>
-    <span class="rhs">
-      <span title="If x 'has participant' y, then x is an 'activity', and y is an 'object' that participates in x.">lis:hasParticipant</span>
-    </span>
+    <span class="rhs"><span title="If x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y, or an 'activity' performance of y.">lis:concretizes</span></span>
+  </li>
+  <li>
+    <span class="lhs"><a>sosa:wasOriginatedBy</a></span>
+    <span class="symbol logic">⊑</span>
+    <span class="rhs"><span title="If x 'occurs relative to' y, then x and y are 'temporal' entities, with temporal location.">lis:occursRelativeTo</span></span>
   </li>
 </ul>
 </section>
