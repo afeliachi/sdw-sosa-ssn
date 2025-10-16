@@ -41,11 +41,12 @@ sosa:FeatureOfInterest
     owl:someValuesFrom [ 
       a owl:Class ; 
       owl:unionOf ( 
-        sosa:Execution
         sosa:Deployment
+        sosa:Execution
+        sosa:ExecutionCollection
         ) 
-    ]  ;
-  ] ;
+      ]  ;
+    ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasProperty ; owl:allValuesFrom sosa:Property ]  ;
   rdfs:isDefinedBy sosa-common: .
 

@@ -281,6 +281,7 @@ sosa:phenomenonTime
 
 sosa:phenomenonOccurred 
   schema:rangeIncludes sosa:Actuation ;
+  schema:rangeIncludes sosa:ActuationCollection ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasFeatureOfInterest 
@@ -295,10 +296,12 @@ sosa:hasUltimateFeatureOfInterest
 
 sosa:hasInputValue 
   schema:domainIncludes sosa:Actuation ;
+  schema:domainIncludes sosa:ActuationCollection ;
   rdfs:isDefinedBy sosa-common: .
 
 sosa:inputValueForExecution 
   schema:rangeIncludes sosa:Actuation ;
+  schema:rangeIncludes sosa:ActuationCollection ;
   rdfs:isDefinedBy sosa-common: .
 
 ## Result 
