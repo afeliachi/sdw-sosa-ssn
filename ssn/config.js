@@ -92,13 +92,6 @@ var respecConfig = {
       company: "BRGM, FR",
       companyURL: "https://brgm.fr/",
       orcid: "0000-0001-7656-1830"
-    },
-    {
-      name: "Maja Milicic Brandt",
-      w3cid: "171655",
-      company: "Siemens AG, DE",
-      companyURL: "https://www.siemens.com/",
-      orcid: "0009-0005-8440-2238"
     }
   ],
   formerEditors: [
@@ -133,6 +126,8 @@ var respecConfig = {
       data: [
         {
           value: "Krzysztof Janowicz, Universität Wien, AT"
+        }, {
+          value: "Maja Milicic Brandt, Siemens AG, DE"
         }, {
           value: "Alex Robin, Georobotix, FR"
         }, {
