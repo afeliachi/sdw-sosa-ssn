@@ -92,6 +92,13 @@ var respecConfig = {
       company: "BRGM, FR",
       companyURL: "https://brgm.fr/",
       orcid: "0000-0001-7656-1830"
+    },
+    {
+      name: "Maja Milicic Brandt",
+      w3cid: "171655",
+      company: "Siemens AG, DE",
+      companyURL: "https://www.siemens.com/",
+      orcid: "0009-0005-8440-2238"
     }
   ],
   formerEditors: [
@@ -165,6 +172,13 @@ var respecConfig = {
     "Description-Logics-Home-Page": {
       href: "https://dl.kr.org/",
       title: "Description Logics Home Page"
+    },
+	"ISO23726-3-DIS": {
+        "date": "September 2025",
+        "href": https://www.iso.org/standard/87560.html,
+        "publisher": "International Organization for Standardization (ISO)",
+        "status": "Published",
+        "title": "ISO/DIS 23726-3 Automation systems and integration — Ontology based interoperability - Part 3: Industrial data ontology"
     },
     "Lefrancois-et-al-2017": {
       href: "https://w3id.org/seas/SEAS-D2_2-SEAS-Knowledge-Model.pdf",
