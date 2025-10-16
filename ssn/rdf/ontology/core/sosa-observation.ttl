@@ -249,7 +249,6 @@ sosa:observes
 
 sosa:originated 
   a owl:ObjectProperty ;
-  rdfs:subPropertyOf sosa:forProperty ;
   rdfs:label "originated"@en ;
   skos:definition """
   relation from a Stimulus to an Observation that was originated by it
