@@ -168,12 +168,6 @@ var respecConfig = {
       href: "https://dl.kr.org/",
       title: "Description Logics Home Page"
     },
-	"ISO23726-3-DIS": {
-      date: "September 2025",
-      href: https://www.iso.org/standard/87560.html,
-      publisher: "International Organization for Standardization (ISO)",
-      title: "ISO/DIS 23726-3 Automation systems and integration — Ontology based interoperability - Part 3: Industrial data ontology"
-    },
     "Lefrancois-et-al-2017": {
       href: "https://w3id.org/seas/SEAS-D2_2-SEAS-Knowledge-Model.pdf",
       authors: ["Maxime Lefrançois", "Jarmo Kalaoja", "Takoua Ghariani", "Antoine Zimmermann"],
