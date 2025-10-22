@@ -4,9 +4,10 @@
     The SSN Ontology is distributed in several modules.
     The segmentation allows users to access the knowledge they require, reducing the scope to what is necessary in a
     given use case.
-    Lower level modules are independent of their higher level modules and are logically consistent on their own.</p>
+    Lower level modules are independent of their higher level modules and are logically consistent on their own.
+</p>
 <p class="note">
-    Higher level here is not to be confused with <i>upper level ontologies</i>.
+    Higher level here is not to be confused with <i>upper level ontologies</i> or <i>foundational ontologies</i>.
     Upper level ontologies are <i>general knowledge</i> ontologies that can be directionally imported in many domains.
 </p>
 
@@ -29,12 +30,15 @@
     <p>
         The <i>SOSA Module</i> (Sensors, Observations, Samples and Actuations) defines the <b>core</b> classes and
         properties, and provides textual definitions and other annotations.
-        This module follows the 'lightweight profile' of RDFS/OWL, which includes rdfs:subClassOf and rdfs:subPropertyOf
-        axioms where the object is a named class or property, and owl:inverseOf axioms between pairs of
-        object-properties.
+        This module follows the 'lightweight profile' of RDFS (referred to as RDFS-Plus by
+        <a href="https://docs.cambridgesemantics.com/graphlakehouse/v3.2/userdoc/inferences.htm">Cambridge Semantics</a>
+        and <a href="https://graphdb.ontotext.com/documentation/11.1/reasoning.html#predefined-rulesets">Ontotext</a>),
+        with `rdfs:subClassOf` and `rdfs:subPropertyOf` axioms where the object is a named class or property, and
+        `owl:inverseOf` axioms between pairs of object-properties.
         Some additional semantic enrichment is provided using Schema.org [[schema-org]] properties.
         SOSA may be used <i>as-is</i> by an audience who wish to use terminology consistent with the SSN Ontology, thus
-        ensuring interoperability with SSN-based repositories. </p>
+        ensuring interoperability with SSN-based repositories.
+    </p>
     <p>
         <b>SOSA</b> is composed of four lower level modules:
     </p>
@@ -66,7 +70,8 @@
 
     <h4 id="ssn-module">SSN</h4>
     <p>
-        The <i>SSN Module</i> adds OWL axioms that formally indicate how properties relate to classes.
+        The <i>SSN Module</i> adds OWL axioms that formally indicate how properties relate to classes, with
+        Restriction, Union, and Disjoint axioms .
         SSN may be used in semantic web systems that use inferencing and reasoning, and consistency checking for
         datasets. </p>
     <p>
