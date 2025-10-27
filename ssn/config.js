@@ -201,7 +201,7 @@ var respecConfig = {
     },
     "RDFS-Plus": {
       href: "https://doi.org/10.1016/B978-0-12-385965-5.10008-1",
-      authors: ["Dean Allemang", "Jim Hendler"]
+      authors: ["Dean Allemang", "Jim Hendler"],
       title: "Chapter 8 - RDFS-Plus",
       publisher: "Semantic Web for the Working Ontologist (Second Edition), Morgan Kaufmann",
       date: "2011"
