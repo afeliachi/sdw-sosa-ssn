@@ -20,7 +20,7 @@ sosa:ido rdf:type owl:Ontology ;
   rdfs:comment "Alignment of the the W3C/OGC SOSA Ontology with the Industrial Data Ontology (IDO)"@en ;
   rdfs:label "Alignment of SOSA with IDO"@en ;
             owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/core/4.0> ,
-            <http://www.w3.org/ns/ssn/> .
+            sosa: .
 
 #################################################################
 #    Object Properties
