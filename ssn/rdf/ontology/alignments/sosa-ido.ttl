@@ -4,6 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @base <http://www.w3.org/ns/sosa/ido> .
@@ -13,13 +14,16 @@ sosa:ido rdf:type owl:Ontology ;
   dcterms:creator "Johan Klüwer" ;
   dcterms:creator "Maja Milicic Brandt" ;
   dcterms:contributor "Simon J D Cox" ;
+  dcterms:contributor "Andreas Neumann" ;
+  dcterms:contributor "Caitlin Woods" ;
   dcterms:license <http://www.opengeospatial.org/ogc/Software> ;
   dcterms:license <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
-  dcterms:modified "2025-11-06"^^xsd:date ;
+  dcterms:modified "2025-11-12"^^xsd:date ;
   dcterms:rights "Copyright 2017, 2025 W3C/OGC." ;
-  rdfs:comment "Alignment of the the W3C/OGC SOSA Ontology with the Industrial Data Ontology (IDO)"@en ;
+  rdfs:comment "Alignment of the the W3C/OGC SOSA Ontology with the Industrial Data Ontology (IDO) version 4.0 <http://rds.posccaesar.org/ontology/lis14/ont/core/4.0>"@en ;
+  skos:note "A caution is advised if using the provided alignment with IDO major versions higher than 4.0"@en;
   rdfs:label "Alignment of SOSA with IDO"@en ;
-            owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/core/4.0> ,
+            owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/core/> ,
             sosa: .
 
 #################################################################
