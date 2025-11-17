@@ -236,7 +236,7 @@ ogc-ms:implementedBy a owl:ObjectProperty ;
     </p>
     <p>
       <em>made on platform</em> &mdash;
-      relation from an Observation to the Platform that the Sensor was attached to at the time it was made
+      relation from an Observation to the Platform Platform that is involved in the creation of this Observation or Collection
     </p>
     <dl>
         <dt>Domain Includes</dt>
@@ -248,6 +248,12 @@ ogc-ms:implementedBy a owl:ObjectProperty ;
         <dd>
             <a>sosa:Platform</a>
         </dd>
+        <dt class="ssn">Super property of chain</dt>
+                <dd class="ssn">
+                    <a>sosa:hosts</a> <b>o</b>
+                    <a>sosa:madeSamplingHasResult</a> <b>o</b>
+                    <a>sosa:isFeatureOfInterestOf</a>
+                </dd>
         <dt>is Defined By</dt>
         <dd>
             <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
