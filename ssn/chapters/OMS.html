@@ -123,6 +123,7 @@ ogc-ms:implementedBy a owl:ObjectProperty ;
       <a>sosa-oms:PreparationStep</a>,
       <a>sosa-oms:hasPreparationStep</a>,
       <a>sosa-oms:madeOnPlatform</a>,
+      <a>sosa-oms:observationCollection</a>,
       <a>sosa-oms:metadata</a>,
       <a>sosa-oms:observationType</a>,
       <a>sosa-oms:preparedSample</a>,
@@ -236,7 +237,7 @@ ogc-ms:implementedBy a owl:ObjectProperty ;
     </p>
     <p>
       <em>made on platform</em> &mdash;
-      relation from an Observation to the Platform Platform that is involved in the creation of this Observation or Collection
+      Relation from an Observation to the associated Platform.
     </p>
     <dl>
         <dt>Domain Includes</dt>
@@ -248,11 +249,64 @@ ogc-ms:implementedBy a owl:ObjectProperty ;
         <dd>
             <a>sosa:Platform</a>
         </dd>
+        <dt>Inverse property of</dt>
+        <dd>
+            <a>sosa-oms:observationCollection</a>
+        </dd>
         <dt class="ssn">Super property of chain</dt>
                 <dd class="ssn">
                     <a>sosa:hosts</a> <b>o</b>
                     <a>sosa:madeSamplingHasResult</a> <b>o</b>
                     <a>sosa:isFeatureOfInterestOf</a>
+                </dd>
+        <dt>is Defined By</dt>
+        <dd>
+            <a href="http://www.w3.org/ns/sosa/oms/">http://www.w3.org/ns/sosa/oms/</a>
+        </dd>
+    </dl>
+
+
+    <div class="buttonpanel">
+      <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
+      <span class="back">[<a href="#Overview">Back to top</a>]</span>
+    </div>
+  </section>
+
+  <section class="informative specterm" id="OMSobservationCollection">
+    <h5><dfn>sosa-oms:observationCollection</dfn></h5>
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/omsobservationCollection
+    </p>
+    <p>
+      <strong>an OWL Object Property</strong>
+    </p>
+    <p>
+      <em>observation collection</em> &mdash;
+      Observations stemming from this Platform.
+    </p>
+    <p class="note">
+        In order to indicate potential Observations at a Platform, an empty ObservationCollection can be 
+        provided. This mimics the semantics of the OMS ObservingCapability class.
+    </p>
+    <dl>
+        <dt>Domain Includes</dt>
+        <dd>
+            <a>sosa:Platform</a>
+        </dd>
+        <dt>Range Includes</dt>
+        <dd>
+            <a>sosa:Observation</a>,
+            <a>sosa:ObservationCollection</a>
+        </dd>
+        <dt>Inverse property of</dt>
+        <dd>
+            <a>sosa-oms:madeOnPlatform</a>
+        </dd>
+        <dt class="ssn">Super property of chain</dt>
+                <dd class="ssn">
+                    <a>sosa:hasFeatureOfInterest</a> <b>o</b>
+                    <a>sosa:isResultOfMadeBySampler</a> <b>o</b>
+                    <a>sosa:isHostedBy</a>
                 </dd>
         <dt>is Defined By</dt>
         <dd>
