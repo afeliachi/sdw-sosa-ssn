@@ -53,3 +53,7 @@ sosa:Sample
 sosa-oms:madeOnPlatform
   owl:propertyChainAxiom ( sosa:hosts sosa:madeSamplingHasResult sosa:isFeatureOfInterestOf ) ;
   rdfs:isDefinedBy sosa-oms: .
+
+sosa-oms:observationCollection
+  owl:propertyChainAxiom ( sosa:hasFeatureOfInterest sosa:isResultOfMadeBySampler sosa:isHostedBy ) ;
+  rdfs:isDefinedBy sosa-oms: .
