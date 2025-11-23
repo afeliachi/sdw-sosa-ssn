@@ -113,6 +113,7 @@ sosa-oms:hasPreparationStep
   skos:definition "Link to a preparation step used to prepare the sample"@en ;
   schema:domainIncludes sosa:Sample ;
   schema:rangeIncludes sosa-oms:PreparationStep ;
+  owl:inverseOf sosa-oms:preparedSample ;
   rdfs:isDefinedBy sosa-oms: .
 
 sosa:SpatialSample 
@@ -321,6 +322,7 @@ sosa-oms:preparedSample
   skos:definition "The Sample on which the PreparationProcedure is performed."@en ;
   schema:domainIncludes sosa-oms:PreparationStep ;
   schema:rangeIncludes sosa:Sample ;
+  owl:inverseOf sosa-oms:hasPreparationStep ;
   rdfs:isDefinedBy sosa-oms: .
 
 sosa-oms:processingDetails 
@@ -330,6 +332,7 @@ sosa-oms:processingDetails
   skos:definition "The PreparationProcedure used by the PreparationStep."@en ;
   schema:domainIncludes sosa-oms:PreparationStep ;
   schema:rangeIncludes sosa-oms:PreparationProcedure ;
+  owl:inverseOf sosa-oms:samplePreparationStep ;
   rdfs:isDefinedBy sosa-oms: .
 
 sosa-oms:samplePreparationStep 
@@ -339,6 +342,7 @@ sosa-oms:samplePreparationStep
   skos:definition "A PreparationStep that uses the PreparationProcedure."@en ;
   schema:domainIncludes sosa-oms:PreparationProcedure ;
   schema:rangeIncludes sosa-oms:PreparationStep ;
+  owl:inverseOf sosa-oms:processingDetails ;
   rdfs:isDefinedBy sosa-oms: .
 
 
