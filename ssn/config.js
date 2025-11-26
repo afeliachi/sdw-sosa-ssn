@@ -128,6 +128,8 @@ var respecConfig = {
         {
           value: "Krzysztof Janowicz, Universität Wien, AT"
         }, {
+          value: "Maja Milicic Brandt, Siemens AG, DE"
+        }, {
           value: "Alex Robin, Georobotix, FR"
         }, {
           value: "Hylke van der Schaaf, Fraunhofer IOSB, DE"
