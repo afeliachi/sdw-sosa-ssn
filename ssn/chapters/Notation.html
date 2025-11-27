@@ -87,43 +87,49 @@
         </p>
     </section>
 
-    <section id="Alignment-notation">
-        <h3>Alignment notation</h3>
+</section>
 
-        <p>
-            Alignments of the SSN Ontology to some other ontologies and specifications are provided in
-            <a href="#Alignments"></a>.
-            Alignments use a combination of [[Description-Logics]] notation (see also the
-            [[Description-Logics-Home-Page]]) and the Manchester Syntax [[owl2-manchester-syntax]].
-        </p>
+<section id="Alignment-notation" class="informative">
+    <h3>Alignment notation</h3>
 
-        <p>
+    <p>
+        Alignments of the SSN Ontology to some other ontologies and specifications are provided in
+        <a href="#Alignments"></a>.
+        Alignments use a combination of [[Description-Logics]] notation (see also the
+        [[Description-Logics-Home-Page]]) and the Manchester Syntax [[owl2-manchester-syntax]].
+    </p>
+
+    <ul>
+        <li>
             <span class="logic">⊑</span> denotes either <code>rdfs:subClassOf</code> or <code>rdfs:subPropertyOf</code>,
             depending on the context
-            <br>
+        </li>
+        <li>
             <span class="logic">⊒</span> represents the inverse relation
-            <br>
+        </li>
+        <li>
             <span class="logic">≡</span> indicates equivalence, corresponding to either <code>owl:equivalentClass</code>
-            or
-            <code>owl:equivalentProperty</code>, depending on the context
-            <br>
+            or <code>owl:equivalentProperty</code>, depending on the context
+        </li>
+        <li>
             The expression <code>C1 <span class="logic">or</span> C2</code> represents an <code>owl:unionOf</code> class
             expression
-            <br>
+        </li>
+        <li>
             The expression <code>OP1 <span class="logic">o</span> OP2</code> represents an
             <code>owl:propertyChainAxiom</code>
-            <br>
+        </li>
+        <li>
             The expression <code>OP <span class="logic">only</span> C</code> represents an
-            <code>owl:allValuesFrom</code>
-            property restriction
-            <br>
+            <code>owl:allValuesFrom</code> property restriction
+        </li>
+        <li>
             The expression <code>OP <span class="logic">exactly 1</span></code> represents an
-            <code>owl:cardinality</code>
-            restriction
-            <br>
+            <code>owl:cardinality</code> restriction
+        </li>
+        <li>
             The expression <code>OP <span class="logic">exactly 1</span> C</code> represents an
             <code>owl:qualifiedCardinality</code> restriction
-        </p>
-    </section>
-
+        </li>
+    </ul>
 </section>
