@@ -27,10 +27,10 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.127529"
      inkscape:cx="331.69879"
-     inkscape:cy="267.39889"
+     inkscape:cy="290.45817"
      inkscape:window-width="1920"
      inkscape:window-height="991"
-     inkscape:window-x="1591"
+     inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="g46"
@@ -302,39 +302,6 @@
     <g
        id="g42-2-7"
        transform="translate(-658.51495,-162.33611)" />
-    <g
-       data-cell-id="lkfuW_eSnZmPsQJDEpgx-7"
-       id="g27"
-       transform="translate(471.32169,-185.05141)">
-      <g
-         id="g24-4">
-        <rect
-           x="39"
-           y="203"
-           width="165"
-           height="60"
-           fill="none"
-           stroke="#000000"
-           stroke-width="2"
-           pointer-events="all"
-           id="rect23-1" />
-      </g>
-      <g
-         id="g26">
-        <g
-           fill="#000000"
-           font-family="Helvetica"
-           text-anchor="middle"
-           font-size="16.8px"
-           id="g25">
-          <text
-             x="121.5"
-             y="240.39999"
-             id="text24-1"><tspan
-               id="tspan24">Sampler</tspan></text>
-        </g>
-      </g>
-    </g>
     <g
        data-cell-id="lkfuW_eSnZmPsQJDEpgx-7"
        id="g27-9"
