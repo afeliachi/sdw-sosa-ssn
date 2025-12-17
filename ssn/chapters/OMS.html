@@ -123,7 +123,7 @@ ogc-ms:implementedBy a owl:ObjectProperty ;
       <a>sosa-oms:PreparationStep</a>,
       <a>sosa-oms:hasPreparationStep</a>,
       <a>sosa-oms:madeOnPlatform</a>,
-      <a>sosa-oms:observationCollection</a>,
+      <a>sosa-oms:makesObservationCollection</a>,
       <a>sosa-oms:metadata</a>,
       <a>sosa-oms:observationType</a>,
       <a>sosa-oms:preparedSample</a>,
@@ -255,13 +255,13 @@ ogc-ms:implementedBy a owl:ObjectProperty ;
         </dd>
         <dt>Inverse property of</dt>
         <dd>
-            <a>sosa-oms:observationCollection</a>
+            <a>sosa-oms:makesObservationCollection</a>
         </dd>
         <dt class="ssn">Super property of chain</dt>
                 <dd class="ssn">
-                    <a>sosa:hosts</a> <b>o</b>
-                    <a>sosa:madeSamplingHasResult</a> <b>o</b>
-                    <a>sosa:isFeatureOfInterestOf</a>
+                    <a>sosa:hasFeatureOfInterest</a> <b>o</b>
+                    <a>sosa:isResultOfMadeBySampler</a> <b>o</b>
+                    <a>sosa:isHostedBy</a>                    
                 </dd>
         <dt>is Defined By</dt>
         <dd>
@@ -276,10 +276,10 @@ ogc-ms:implementedBy a owl:ObjectProperty ;
     </div>
   </section>
 
-  <section class="informative specterm" id="OMSobservationCollection">
-    <h5><dfn>sosa-oms:observationCollection</dfn></h5>
+  <section class="informative specterm" id="OMSmakesObservationCollection">
+    <h5><dfn>sosa-oms:makesObservationCollection</dfn></h5>
     <p class="crossreference">
-      <strong>IRI:</strong> http://www.w3.org/ns/sosa/omsobservationCollection
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/makesObservationCollection
     </p>
     <p>
       <strong>an OWL Object Property</strong>
@@ -290,8 +290,17 @@ ogc-ms:implementedBy a owl:ObjectProperty ;
     </p>
     <p class="note">
         In order to indicate potential Observations at a Platform, an empty ObservationCollection can be 
-        provided. This mimics the semantics of the OMS ObservingCapability class.
+        provided. This mimics the semantics of the OMS ObservingCapability class.The property chain is represtented in <a href="#Fig-MadeOnPlateform"></a>
     </p>
+
+    <figure id="Fig-MadeOnPlateform">
+            <embed alt="Made on plateform path" src="images/MadeOnPlateform.svg" style="width:75%" />
+            <figcaption>
+                <em><a href="#OMSmakesObservationCollection">osa-oms:makesObservationCollection</a></em>.
+                and <a href="#OMSMadeOnPlateform">sosa-oms:MadeOnPlateform</a> property chain explanation
+                <br>
+            </figcaption>
+        </figure>
     <dl>
         <dt>Domain Includes</dt>
         <dd>
@@ -308,9 +317,9 @@ ogc-ms:implementedBy a owl:ObjectProperty ;
         </dd>
         <dt class="ssn">Super property of chain</dt>
                 <dd class="ssn">
-                    <a>sosa:hasFeatureOfInterest</a> <b>o</b>
-                    <a>sosa:isResultOfMadeBySampler</a> <b>o</b>
-                    <a>sosa:isHostedBy</a>
+                    <a>sosa:hosts</a> <b>o</b>
+                    <a>sosa:madeSamplingHasResult</a> <b>o</b>
+                    <a>sosa:isFeatureOfInterestOf</a>
                 </dd>
         <dt>is Defined By</dt>
         <dd>
